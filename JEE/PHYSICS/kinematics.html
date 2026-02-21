@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete JEE Physics Kinematics Notes 2025-26 - Motion in 1D, 2D, Projectile Motion, Relative Velocity, Circular Motion with formulas, solved examples and previous year questions.">
+    <meta name="keywords" content="JEE Physics Kinematics, Motion in Straight Line, Projectile Motion JEE, Relative Velocity, Circular Motion Notes, JEE Main Physics">
+    <title>Kinematics - Complete JEE Physics Notes 2025-26 | Motion Study Material</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for LaTeX Rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#f59e0b',
+                        success: '#10b981',
+                        danger: '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .topic-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .topic-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .formula-box { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }
+        .example-box { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
+        .warning-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); }
+        .tip-box { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); }
+        pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.75rem; overflow-x: auto; }
+        code { background: #1e293b; color: #22d3ee; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-family: 'JetBrains Mono', monospace; }
+        .sticky-nav { position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow-y: auto; }
+        .math-display { font-size: 1.1rem; padding: 1rem; margin: 1rem 0; overflow-x: auto; }
+        .diagram-box { background: #f8fafc; border: 2px dashed #cbd5e1; padding: 2rem; text-align: center; }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+        /* Table Styling */
+        .custom-table { border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 12px; }
+        .custom-table thead { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); }
+        .custom-table tbody tr:hover { background: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                        P
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">JEE PREP GUIDE</h1>
+                        <p class="text-sm text-gray-500">Complete JEE Physics Mastery</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-base font-semibold">
+                    <a href="#" class="text-primary hover:text-secondary transition">JEE Main</a>
+                    <a href="#" class="text-primary hover:text-secondary transition">JEE Advanced</a>
+                    <a href="#" class="text-primary hover:text-secondary transition">NEET</a>
+                    <a href="#" class="text-primary hover:text-secondary transition">Practice</a>
+                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary via-blue-600 to-secondary text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+                    Kinematics
+                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                </h2>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
+                    Master motion analysis with comprehensive notes covering 1D/2D motion, projectiles, relative velocity, graphs, and circular motion. Includes 150+ solved problems and all previous year JEE questions.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-10">
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">📚 6 Complete Chapters</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">🎯 PYQ Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+            <!-- Sidebar Navigation -->
+            <aside class="lg:col-span-1">
+                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-primary rounded mr-3"></span>
+                        Table of Contents
+                    </h3>
+                    <ul class="space-y-2 text-base font-medium">
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Fundamental Concepts</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Motion in One Dimension</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Motion Graphs Analysis</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Relative Motion</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Projectile Motion</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Circular Motion</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="lg:col-span-3 space-y-12">
+
+                <!-- Chapter 1: Fundamental Concepts -->
+                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Fundamental Concepts of Motion</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Kinematics is the foundational pillar of mechanics that deals with the mathematical description of motion without analyzing the forces that cause it. Understanding these core concepts is crucial for solving 30-40% of JEE Main Physics questions.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Reference Frame & Point Object</h3>
+                        <p class="text-lg mb-4">
+                            A <strong>reference frame</strong> is a coordinate system from which observations are made. Motion is always relative to the chosen reference frame. A <strong>point object</strong> is one whose dimensions are negligible compared to the distance it travels.
+                        </p>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> JEE Pro Tip
+                            </h4>
+                            <p class="text-lg">
+                                Always clearly identify your reference frame before solving problems. Most errors in relative motion questions occur due to confusion about the reference frame. Practice converting between different frames.
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Position, Displacement & Distance</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Key Definitions & Formulas</h4>
+                            <div class="space-y-4 text-lg">
+                                <div>
+                                    <strong>Position Vector:</strong> 
+                                    <div class="math-display">
+                                        \[\vec{r} = x\hat{i} + y\hat{j} + z\hat{k}\]
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Displacement:</strong> Change in position vector (vector quantity)
+                                    <div class="math-display">
+                                        \[\vec{s} = \Delta\vec{r} = \vec{r}_2 - \vec{r}_1\]
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Distance:</strong> Total path length traveled (scalar quantity)
+                                    <div class="math-display">
+                                        \[\text{Distance} \geq |\text{Displacement}|\]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Velocity - Average & Instantaneous</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Average Velocity</h5>
+                                <div class="math-display">
+                                    \[\vec{v}_{avg} = \frac{\Delta\vec{r}}{\Delta t} = \frac{\vec{r}_2 - \vec{r}_1}{t_2 - t_1}\]
+                                </div>
+                                <p class="text-sm mt-2">Vector quantity directed along displacement</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Instantaneous Velocity</h5>
+                                <div class="math-display">
+                                    \[\vec{v} = \lim_{\Delta t \to 0} \frac{\Delta\vec{r}}{\Delta t} = \frac{d\vec{r}}{dt}\]
+                                </div>
+                                <p class="text-sm mt-2">Velocity at a particular instant</p>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 1
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A particle moves along a circle of radius 10 m with uniform speed completing one revolution in 4 seconds. Find (a) displacement and (b) average velocity in half revolution.
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2">(a) Displacement = Diameter = 2R = 20 m</p>
+                                <p class="mb-2">(b) Time for half revolution = 2 s</p>
+                                <div class="math-display">
+                                    \[v_{avg} = \frac{\text{Displacement}}{\text{Time}} = \frac{20}{2} = 10 \text{ m/s}\]
+                                </div>
+                            </div>
+                            <p class="text-base text-gray-700 mt-3">
+                                <strong>Note:</strong> Average speed = (πR×2)/4 = 5π m/s ≠ average velocity
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Acceleration</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Acceleration Formulas</h4>
+                            <div class="space-y-4 text-lg">
+                                <div>
+                                    <strong>Average Acceleration:</strong>
+                                    <div class="math-display">
+                                        \[\vec{a}_{avg} = \frac{\Delta\vec{v}}{\Delta t} = \frac{\vec{v}_2 - \vec{v}_1}{t_2 - t_1}\]
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Instantaneous Acceleration:</strong>
+                                    <div class="math-display">
+                                        \[\vec{a} = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2}\]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Common Mistake Alert
+                            </h4>
+                            <p class="text-lg">
+                                Many students confuse deceleration with negative acceleration. Remember: 
+                                <strong>Deceleration means speed is decreasing</strong>, which happens when velocity and acceleration are in opposite directions, regardless of their signs.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 2: Motion in One Dimension -->
+                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Motion in One Dimension</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            One-dimensional motion is the simplest form of motion where an object moves along a straight line. This chapter covers uniformly accelerated motion - the foundation for 25% of JEE Physics Mechanics problems.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Equations of Motion (Uniform Acceleration)</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                            <div class="formula-box p-6 text-center border-2 border-secondary rounded-xl">
+                                <p class="text-sm text-gray-600 mb-2">First Equation</p>
+                                <div class="math-display text-3xl font-bold text-secondary">
+                                    \[v = u + at\]
+                                </div>
+                                <p class="text-sm text-gray-600 mt-2">Velocity-time relation</p>
+                            </div>
+                            <div class="formula-box p-6 text-center border-2 border-secondary rounded-xl">
+                                <p class="text-sm text-gray-600 mb-2">Second Equation</p>
+                                <div class="math-display text-3xl font-bold text-secondary">
+                                    \[s = ut + \frac{1}{2}at^2\]
+                                </div>
+                                <p class="text-sm text-gray-600 mt-2">Position-time relation</p>
+                            </div>
+                            <div class="formula-box p-6 text-center border-2 border-secondary rounded-xl">
+                                <p class="text-sm text-gray-600 mb-2">Third Equation</p>
+                                <div class="math-display text-3xl font-bold text-secondary">
+                                    \[v^2 = u^2 + 2as\]
+                                </div>
+                                <p class="text-sm text-gray-600 mt-2">Independent of time</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">🎯</span> Derivation Shortcut for JEE Mains
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Never memorize these equations!</strong> Derive them in 30 seconds using v-t graph:
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                                <li><strong>Slope of v-t graph</strong> = acceleration → v = u + at</li>
+                                <li><strong>Area under v-t graph</strong> = displacement → s = ut + ½at²</li>
+                                <li><strong>Eliminate t</strong> from above two → v² = u² + 2as</li>
+                            </ul>
+                            <p class="text-base text-gray-700 mt-3">
+                                This method fetches you full marks even if you forget formulas during exam!
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Additional Important Formulas</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Formula</th>
+                                        <th class="p-4 text-left">Expression</th>
+                                        <th class="p-4 text-left">Use Case</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Distance in nth second</td>
+                                        <td class="p-4 font-mono">\(s_n = u + \frac{a}{2}(2n-1)\)</td>
+                                        <td class="p-4">Finding displacement in specific time intervals</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Average velocity</td>
+                                        <td class="p-4 font-mono">\(v_{avg} = \frac{u+v}{2}\)</td>
+                                        <td class="p-4">Only for uniform acceleration</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Displacement ratio</td>
+                                        <td class="p-4 font-mono">\(s_1:s_2:s_3:... = 1:3:5:7...\)</td>
+                                        <td class="p-4">Equal time intervals from rest</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Time ratio</td>
+                                        <td class="p-4 font-mono">\(t_1:t_2:t_3:... = 1:\sqrt{2}:\sqrt{3}...\)</td>
+                                        <td class="p-4">Equal distance intervals from rest</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2023 Pattern)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A car accelerates from rest at a constant rate α for some time, after which it decelerates at a constant rate β to come to rest. If the total time elapsed is t, find the maximum velocity achieved.
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2">Let maximum velocity = v<sub>max</sub></p>
+                                <p class="mb-2">Time of acceleration = t₁, Time of deceleration = t₂</p>
+                                <p class="mb-2">Given: t₁ + t₂ = t ... (1)</p>
+                                <div class="math-display">
+                                    \[v_{max} = \alpha t_1 = \beta t_2\]
+                                </div>
+                                <div class="math-display">
+                                    \[t_1 = \frac{v_{max}}{\alpha}, \quad t_2 = \frac{v_{max}}{\beta}\]
+                                </div>
+                                <p class="mb-2">Substituting in equation (1):</p>
+                                <div class="math-display">
+                                    \[\frac{v_{max}}{\alpha} + \frac{v_{max}}{\beta} = t\]
+                                </div>
+                                <div class="math-display">
+                                    \[v_{max}\left(\frac{1}{\alpha} + \frac{1}{\beta}\right) = t\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[v_{max} = \frac{\alpha\beta t}{\alpha + \beta}\]
+                                </div>
+                            </div>
+                            <p class="text-base text-gray-700 mt-3">
+                                <strong>Key Concept:</strong> This is the harmonic mean formula pattern - appears frequently in JEE!
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Motion Under Gravity (Free Fall)</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-secondary">Free Fall Equations (Taking downward as positive)</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="font-semibold mb-2">Velocity after time t:</p>
+                                    <div class="math-display">\[v = u + gt\]</div>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-2">Height fallen:</p>
+                                    <div class="math-display">\[h = ut + \frac{1}{2}gt^2\]</div>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-2">Velocity-height relation:</p>
+                                    <div class="math-display">\[v^2 = u^2 + 2gh\]</div>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-2">Velocity at height h:</p>
+                                    <div class="math-display">\[v = \sqrt{2gh}\]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 3 (Classic JEE Problem)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A stone is dropped from a height h. Another stone is thrown upward from ground with such a velocity that it reaches a height h. When and where will they meet?
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>For stone 1 (dropped from height h):</strong></p>
+                                <div class="math-display">\[y_1 = h - \frac{1}{2}gt^2\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>For stone 2 (thrown upward):</strong></p>
+                                <p class="mb-2">To reach height h: v² = 2gh → v = √(2gh)</p>
+                                <div class="math-display">\[y_2 = vt - \frac{1}{2}gt^2 = \sqrt{2gh} \cdot t - \frac{1}{2}gt^2\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>At meeting point: y₁ = y₂</strong></p>
+                                <div class="math-display">\[h - \frac{1}{2}gt^2 = \sqrt{2gh} \cdot t - \frac{1}{2}gt^2\]</div>
+                                <div class="math-display">\[h = \sqrt{2gh} \cdot t\]</div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[t = \sqrt{\frac{h}{2g}}\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>Height from ground:</strong></p>
+                                <div class="math-display">\[y = \sqrt{2gh} \times \sqrt{\frac{h}{2g}} - \frac{1}{2}g\left(\frac{h}{2g}\right)\]</div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[y = \frac{3h}{4}\]</div>
+                            </div>
+                            <p class="text-base text-gray-700 mt-3">
+                                <strong>Answer:</strong> They meet at height 3h/4 from ground after time √(h/2g)
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 3: Motion Graphs -->
+                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Motion Graphs Analysis</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Graphical analysis is one of the most scoring topics in JEE. Understanding slopes and areas under curves can solve 90% of problems in under 60 seconds. Master this chapter to gain significant advantage in competitive exams.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Position-Time (x-t) Graphs</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-accent">Key Points for x-t Graphs</h4>
+                            <div class="space-y-3 text-lg">
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <div>
+                                        <strong>Slope of x-t graph = Instantaneous velocity</strong>
+                                        <div class="math-display">\[\text{Slope} = \tan\theta = \frac{dx}{dt} = v\]</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Horizontal line</strong> → Object at rest (v = 0)</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Straight line with slope</strong> → Uniform velocity</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Curved line</strong> → Non-uniform velocity (acceleration present)</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Increasing slope</strong> → Increasing velocity (positive acceleration)</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Decreasing slope</strong> → Decreasing velocity (negative acceleration)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Velocity-Time (v-t) Graphs</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-accent">Key Points for v-t Graphs</h4>
+                            <div class="space-y-3 text-lg">
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <div>
+                                        <strong>Slope of v-t graph = Acceleration</strong>
+                                        <div class="math-display">\[\text{Slope} = \frac{dv}{dt} = a\]</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <div>
+                                        <strong>Area under v-t graph = Displacement</strong>
+                                        <div class="math-display">\[\text{Area} = \int v \, dt = s\]</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Horizontal line</strong> → Uniform velocity (a = 0)</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Straight line with positive slope</strong> → Uniform positive acceleration</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Straight line with negative slope</strong> → Uniform negative acceleration</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚡</span> JEE 2024 Graph Trick
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>For any v-t graph problem asking for displacement:</strong>
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                                <li>If graph is above time axis → displacement is positive</li>
+                                <li>If graph is below time axis → displacement is negative</li>
+                                <li><strong>Net displacement = Area above - Area below</strong></li>
+                                <li><strong>Total distance = |Area above| + |Area below|</strong></li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Acceleration-Time (a-t) Graphs</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-accent">Key Points for a-t Graphs</h4>
+                            <div class="space-y-3 text-lg">
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <div>
+                                        <strong>Area under a-t graph = Change in velocity</strong>
+                                        <div class="math-display">\[\text{Area} = \int a \, dt = \Delta v = v - u\]</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Horizontal line above t-axis</strong> → Constant positive acceleration</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-3">📌</span>
+                                    <p><strong>Zero line</strong> → Uniform velocity motion</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Advanced 2022 Pattern)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> The velocity-time graph of a particle moving in a straight line is shown. Find (a) displacement in first 6 seconds (b) total distance traveled.
+                            </p>
+                            <div class="diagram-box my-4">
+                                <p class="text-gray-600 mb-2">[Graph: v-t graph with following points]</p>
+                                <p>t=0, v=20 m/s → t=2s, v=20 m/s → t=4s, v=0 → t=5s, v=-10 m/s → t=6s, v=-10 m/s</p>
+                            </div>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>(a) Displacement = Area under v-t graph</strong></p>
+                                <p class="mb-2">Area from 0 to 2s = 20 × 2 = 40 m (rectangle)</p>
+                                <p class="mb-2">Area from 2s to 4s = ½ × 2 × 20 = 20 m (triangle)</p>
+                                <p class="mb-2">Area from 4s to 5s = ½ × 1 × (-10) = -5 m (triangle below axis)</p>
+                                <p class="mb-2">Area from 5s to 6s = -10 × 1 = -10 m (rectangle below axis)</p>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[\text{Net Displacement} = 40 + 20 - 5 - 10 = 45 \text{ m}\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>(b) Total Distance = Sum of absolute areas</strong></p>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[\text{Total Distance} = 40 + 20 + 5 + 10 = 75 \text{ m}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">🎯</span> Graph Interpretation Masterclass
+                            </h4>
+                            <div class="overflow-x-auto my-4">
+                                <table class="w-full custom-table">
+                                    <thead>
+                                        <tr class="text-white">
+                                            <th class="p-3">Graph Type</th>
+                                            <th class="p-3">Slope Gives</th>
+                                            <th class="p-3">Area Gives</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y">
+                                        <tr>
+                                            <td class="p-3 font-semibold">x-t graph</td>
+                                            <td class="p-3">Velocity (v)</td>
+                                            <td class="p-3">Not used</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold">v-t graph</td>
+                                            <td class="p-3">Acceleration (a)</td>
+                                            <td class="p-3">Displacement (s)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold">a-t graph</td>
+                                            <td class="p-3">Rate of change of acceleration</td>
+                                            <td class="p-3">Change in velocity (Δv)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 4: Relative Motion -->
+                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Relative Motion</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Relative motion is the study of motion of one object with respect to another. This is a high-weightage topic in JEE Advanced with conceptual depth. Questions often combine relative velocity with projectile motion or collisions.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Relative Velocity in 1D</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-success">Fundamental Formula</h4>
+                            <div class="text-lg">
+                                <p class="mb-3">Velocity of A relative to B (or velocity of A as seen by B):</p>
+                                <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                                    \[\vec{v}_{AB} = \vec{v}_A - \vec{v}_B\]
+                                </div>
+                                <p class="mt-4 mb-3">Similarly, velocity of B relative to A:</p>
+                                <div class="math-display">
+                                    \[\vec{v}_{BA} = \vec{v}_B - \vec{v}_A = -\vec{v}_{AB}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
+                                <h5 class="font-bold text-lg mb-3 text-success">When Moving in Same Direction</h5>
+                                <div class="math-display">
+                                    \[v_{AB} = v_A - v_B\]
+                                </div>
+                                <p class="text-sm mt-2">Relative velocity is difference of speeds</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
+                                <h5 class="font-bold text-lg mb-3 text-success">When Moving in Opposite Direction</h5>
+                                <div class="math-display">
+                                    \[v_{AB} = v_A + v_B\]
+                                </div>
+                                <p class="text-sm mt-2">Relative velocity is sum of speeds</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Relative Velocity in 2D</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-success">Vector Form (Most Important for JEE Advanced)</h4>
+                            <div class="text-lg">
+                                <div class="math-display">
+                                    \[\vec{v}_{AB} = \vec{v}_A - \vec{v}_B\]
+                                </div>
+                                <p class="my-3">Magnitude of relative velocity:</p>
+                                <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                                    \[|\vec{v}_{AB}| = \sqrt{v_A^2 + v_B^2 - 2v_Av_B\cos\theta}\]
+                                </div>
+                                <p class="text-sm mt-2">where θ = angle between \(\vec{v}_A\) and \(\vec{v}_B\)</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> Component Method (Easier for JEE)
+                            </h4>
+                            <p class="text-lg mb-3">Break velocities into components along x and y axes:</p>
+                            <div class="math-display">
+                                \[v_{AB,x} = v_{A,x} - v_{B,x}\]
+                            </div>
+                            <div class="math-display">
+                                \[v_{AB,y} = v_{A,y} - v_{B,y}\]
+                            </div>
+                            <div class="math-display">
+                                \[|\vec{v}_{AB}| = \sqrt{v_{AB,x}^2 + v_{AB,y}^2}\]
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 5 (Rain-Man Problem)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> Rain is falling vertically with speed 30 m/s. A man is running on the road with speed 10 m/s. At what angle should he hold his umbrella to protect himself from rain?
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2">Let's find velocity of rain relative to man</p>
+                                <p class="mb-2">\(\vec{v}_{rain} = 30\hat{j}\) m/s (downward)</p>
+                                <p class="mb-2">\(\vec{v}_{man} = 10\hat{i}\) m/s (horizontal)</p>
+                                <div class="math-display">
+                                    \[\vec{v}_{rain,man} = \vec{v}_{rain} - \vec{v}_{man}\]
+                                </div>
+                                <div class="math-display">
+                                    \[\vec{v}_{rain,man} = -10\hat{i} - 30\hat{j}\]
+                                </div>
+                                <p class="mb-2 mt-3">The umbrella should be held along this direction</p>
+                                <div class="math-display">
+                                    \[\tan\theta = \frac{v_{horizontal}}{v_{vertical}} = \frac{10}{30} = \frac{1}{3}\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[\theta = \tan^{-1}\left(\frac{1}{3}\right) \approx 18.43°\text{ from vertical}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.3 Shortest Distance / Closest Approach</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-success">Condition for Closest Approach</h4>
+                            <p class="text-lg mb-3">Two objects will be closest when their relative velocity is perpendicular to the line joining them.</p>
+                            <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                                \[\vec{v}_{AB} \perp \vec{r}_{AB}\]
+                            </div>
+                            <p class="text-lg mt-4 mb-2">Minimum distance formula:</p>
+                            <div class="math-display">
+                                \[d_{min} = \frac{|\vec{r}_{AB} \times \vec{v}_{AB}|}{|\vec{v}_{AB}|}\]
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced Type)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> Two ships A and B are 10 km apart on a line running south to north. Ship A is south of B and is moving north at 20 km/h. Ship B is moving east at 20 km/h. Find the distance of closest approach and time taken.
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2">Let north be +y direction and east be +x direction</p>
+                                <p class="mb-2">\(\vec{v}_A = 20\hat{j}\) km/h</p>
+                                <p class="mb-2">\(\vec{v}_B = 20\hat{i}\) km/h</p>
+                                <p class="mb-2">Initial position: \(\vec{r}_{AB} = 10\hat{j}\) km</p>
+                                
+                                <div class="math-display mt-3">
+                                    \[\vec{v}_{AB} = \vec{v}_A - \vec{v}_B = 20\hat{j} - 20\hat{i} = -20\hat{i} + 20\hat{j}\]
+                                </div>
+                                <div class="math-display">
+                                    \[|\vec{v}_{AB}| = \sqrt{20^2 + 20^2} = 20\sqrt{2} \text{ km/h}\]
+                                </div>
+                                
+                                <p class="mb-2 mt-3"><strong>Minimum distance (using perpendicular component):</strong></p>
+                                <div class="math-display">
+                                    \[d_{min} = |\vec{r}_{AB}| \sin\alpha\]
+                                </div>
+                                <p class="mb-2">where α = angle between \(\vec{r}_{AB}\) and \(\vec{v}_{AB}\)</p>
+                                <div class="math-display">
+                                    \[\cos\alpha = \frac{\vec{r}_{AB} \cdot \vec{v}_{AB}}{|\vec{r}_{AB}||\vec{v}_{AB}|} = \frac{(10\hat{j}) \cdot (-20\hat{i} + 20\hat{j})}{10 \times 20\sqrt{2}} = \frac{200}{200\sqrt{2}} = \frac{1}{\sqrt{2}}\]
+                                </div>
+                                <div class="math-display">
+                                    \[\sin\alpha = \frac{1}{\sqrt{2}}\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[d_{min} = 10 \times \frac{1}{\sqrt{2}} = 5\sqrt{2} \text{ km}\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>Time to reach closest approach:</strong></p>
+                                <div class="math-display">
+                                    \[t = \frac{|\vec{r}_{AB}|\cos\alpha}{|\vec{v}_{AB}|} = \frac{10 \times \frac{1}{\sqrt{2}}}{20\sqrt{2}} = \frac{10}{40} = 0.25 \text{ h} = 15 \text{ min}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Common Mistakes in Relative Motion
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                                <li><strong>Sign convention:</strong> Always subtract in correct order \(\vec{v}_{AB} = \vec{v}_A - \vec{v}_B\)</li>
+                                <li><strong>Don't confuse:</strong> \(\vec{v}_{AB} \neq \vec{v}_{BA}\) (they are opposite)</li>
+                                <li><strong>In 2D problems:</strong> Never add/subtract magnitudes directly - use vector addition</li>
+                                <li><strong>Rain problems:</strong> Man's velocity appears with negative sign in rain's frame</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 5: Projectile Motion -->
+                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Projectile Motion - The Rank Decider</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Projectile motion is the most important topic in kinematics for JEE. Every year 2-4 questions (direct + integrated) appear from this chapter. Mastering projectile motion gives you a competitive edge as it combines concepts from vectors, calculus, and relative motion.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Basic Concepts & Equations</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Fundamental Understanding</h4>
+                            <p class="text-lg mb-4">
+                                Projectile motion is a 2D motion under constant acceleration (gravity). It can be analyzed by breaking into two independent components:
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <p class="font-bold mb-2">Horizontal Motion (x-direction):</p>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Acceleration: a<sub>x</sub> = 0</li>
+                                        <li>Velocity: v<sub>x</sub> = u cos θ (constant)</li>
+                                        <li>Position: x = (u cos θ)t</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <p class="font-bold mb-2">Vertical Motion (y-direction):</p>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Acceleration: a<sub>y</sub> = -g</li>
+                                        <li>Initial velocity: v<sub>y0</sub> = u sin θ</li>
+                                        <li>Position: y = (u sin θ)t - ½gt²</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Key Formulas (Must Remember)</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Parameter</th>
+                                        <th class="p-4 text-left">Formula</th>
+                                        <th class="p-4 text-left">Maximum Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Time of Flight (T)</td>
+                                        <td class="p-4 font-mono">\(T = \frac{2u\sin\theta}{g}\)</td>
+                                        <td class="p-4">At θ = 90° (vertical throw)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Maximum Height (H)</td>
+                                        <td class="p-4 font-mono">\(H = \frac{u^2\sin^2\theta}{2g}\)</td>
+                                        <td class="p-4">At θ = 90°, H<sub>max</sub> = u²/2g</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Range (R)</td>
+                                        <td class="p-4 font-mono">\(R = \frac{u^2\sin 2\theta}{g}\)</td>
+                                        <td class="p-4">At θ = 45°, R<sub>max</sub> = u²/g</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Velocity at time t</td>
+                                        <td class="p-4 font-mono">\(v = \sqrt{u^2 - 2gu\sin\theta \cdot t + g^2t^2}\)</td>
+                                        <td class="p-4">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Equation of Trajectory</td>
+                                        <td class="p-4 font-mono">\(y = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta}\)</td>
+                                        <td class="p-4">Parabola equation</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">🎯</span> Quick Derivation Trick
+                            </h4>
+                            <p class="text-lg mb-3"><strong>Derive all formulas from these two equations in 20 seconds:</strong></p>
+                            <div class="bg-white p-4 rounded-lg space-y-2">
+                                <div class="math-display">1. \(v_y = u\sin\theta - gt\)</div>
+                                <div class="math-display">2. \(y = u\sin\theta \cdot t - \frac{1}{2}gt^2\)</div>
+                            </div>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4 mt-4">
+                                <li>At max height: v<sub>y</sub> = 0 → Find time, substitute in y to get H</li>
+                                <li>At landing: y = 0 → Solve for t to get T</li>
+                                <li>Range: R = (horizontal velocity) × T = u cos θ × T</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Important Results & Shortcuts</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Complementary Angles</h5>
+                                <p class="mb-2">For angles θ and (90° - θ):</p>
+                                <div class="math-display">\[R_\theta = R_{90°-\theta}\]</div>
+                                <p class="text-sm mt-2">Same range for complementary angles</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Relation: H, R, T</h5>
+                                <div class="math-display">\[R = \frac{4H}{\tan\theta}\]</div>
+                                <div class="math-display">\[T = 2\sqrt{\frac{2H}{g}}\]</div>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Velocity at highest point</h5>
+                                <div class="math-display">\[v_H = u\cos\theta\]</div>
+                                <p class="text-sm mt-2">Only horizontal component remains</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Angle of velocity with horizontal</h5>
+                                <div class="math-display">\[\tan\beta = \frac{v_y}{v_x} = \frac{u\sin\theta - gt}{u\cos\theta}\]</div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 7 (Classic JEE Problem)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A projectile is fired at an angle of 30° with horizontal with velocity 40 m/s. Find (a) Maximum height (b) Range (c) Time of flight. [g = 10 m/s²]
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2">Given: u = 40 m/s, θ = 30°, g = 10 m/s²</p>
+                                
+                                <p class="mb-2 mt-3"><strong>(a) Maximum Height:</strong></p>
+                                <div class="math-display">
+                                    \[H = \frac{u^2\sin^2\theta}{2g} = \frac{40^2 \times \sin^2 30°}{2 \times 10}\]
+                                </div>
+                                <div class="math-display">
+                                    \[H = \frac{1600 \times (1/2)^2}{20} = \frac{1600 \times 0.25}{20}\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[H = 20 \text{ m}\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>(b) Range:</strong></p>
+                                <div class="math-display">
+                                    \[R = \frac{u^2\sin 2\theta}{g} = \frac{40^2 \times \sin 60°}{10}\]
+                                </div>
+                                <div class="math-display">
+                                    \[R = \frac{1600 \times \frac{\sqrt{3}}{2}}{10} = \frac{800\sqrt{3}}{10}\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[R = 80\sqrt{3} \approx 138.56 \text{ m}\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>(c) Time of Flight:</strong></p>
+                                <div class="math-display">
+                                    \[T = \frac{2u\sin\theta}{g} = \frac{2 \times 40 \times \sin 30°}{10}\]
+                                </div>
+                                <div class="math-display">
+                                    \[T = \frac{80 \times 0.5}{10}\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[T = 4 \text{ s}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Projectile on Inclined Plane (JEE Advanced Favorite)</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">When thrown up the incline (angle α with horizontal)</h4>
+                            <p class="text-lg mb-3">Projection angle with horizontal = θ</p>
+                            <div class="space-y-3">
+                                <div>
+                                    <strong>Range along incline:</strong>
+                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                        \[R = \frac{u^2\sin 2(\theta - \alpha)}{g\cos^2\alpha}\]
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Maximum range on incline:</strong>
+                                    <div class="math-display">
+                                        \[\text{At } \theta = 45° + \frac{\alpha}{2}\]
+                                    </div>
+                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                        \[R_{max} = \frac{u^2}{g(1 + \sin\alpha)}\]
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>Time of flight:</strong>
+                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                        \[T = \frac{2u\sin(\theta - \alpha)}{g\cos\alpha}\]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 8 (JEE Advanced 2021 Pattern)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A particle is projected up an inclined plane of inclination 30° with velocity 20 m/s at angle 60° with horizontal. Find the range along the plane.
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2">Given: u = 20 m/s, α = 30°, θ = 60°, g = 10 m/s²</p>
+                                <div class="math-display">
+                                    \[R = \frac{u^2\sin 2(\theta - \alpha)}{g\cos^2\alpha}\]
+                                </div>
+                                <div class="math-display">
+                                    \[R = \frac{20^2 \times \sin 2(60° - 30°)}{10 \times \cos^2 30°}\]
+                                </div>
+                                <div class="math-display">
+                                    \[R = \frac{400 \times \sin 60°}{10 \times (\frac{\sqrt{3}}{2})^2}\]
+                                </div>
+                                <div class="math-display">
+                                    \[R = \frac{400 \times \frac{\sqrt{3}}{2}}{10 \times \frac{3}{4}} = \frac{200\sqrt{3}}{7.5}\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[R = \frac{800\sqrt{3}}{30} = \frac{80\sqrt{3}}{3} \approx 46.19 \text{ m}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">🔥</span> JEE 2024-25 Trend Analysis
+                            </h4>
+                            <p class="text-lg mb-3">
+                                Based on last 5 years of JEE Main & Advanced:
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                                <li><strong>Projectile on inclined plane:</strong> 30% of projectile questions</li>
+                                <li><strong>Two projectiles (relative motion):</strong> 25% questions</li>
+                                <li><strong>Hitting a target problems:</strong> 20% questions</li>
+                                <li><strong>Trajectory equation applications:</strong> 15% questions</li>
+                                <li><strong>Energy + Projectile combined:</strong> 10% questions</li>
+                            </ul>
+                            <p class="text-lg mt-4 font-semibold text-danger">
+                                Practice minimum 50 PYQs from projectile on incline and relative projectile motion!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 6: Circular Motion -->
+                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Circular Motion</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Circular motion is motion along a circular path. Despite constant speed, the velocity continuously changes direction, resulting in acceleration. This chapter is crucial as it bridges kinematics with rotational mechanics and appears in 15-20% of JEE questions.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Uniform Circular Motion</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-secondary">Key Definitions</h4>
+                            <div class="space-y-4 text-lg">
+                                <div>
+                                    <strong>Angular Displacement (θ):</strong> Angle swept by radius vector
+                                    <div class="math-display">\[\theta = \frac{s}{r}\]</div>
+                                    <p class="text-sm">where s = arc length, r = radius</p>
+                                </div>
+                                <div>
+                                    <strong>Angular Velocity (ω):</strong> Rate of change of angular displacement
+                                    <div class="math-display">\[\omega = \frac{d\theta}{dt} = \frac{v}{r}\]</div>
+                                    <p class="text-sm">Unit: rad/s</p>
+                                </div>
+                                <div>
+                                    <strong>Time Period (T):</strong> Time for one complete revolution
+                                    <div class="math-display">\[T = \frac{2\pi}{\omega} = \frac{2\pi r}{v}\]</div>
+                                </div>
+                                <div>
+                                    <strong>Frequency (f):</strong> Number of revolutions per second
+                                    <div class="math-display">\[f = \frac{1}{T} = \frac{\omega}{2\pi}\]</div>
+                                    <p class="text-sm">Unit: Hz or s⁻¹</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Centripetal Acceleration</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-secondary">Acceleration in Uniform Circular Motion</h4>
+                            <p class="text-lg mb-4">
+                                Even though speed is constant, velocity changes direction continuously. This causes acceleration directed towards the center called <strong>centripetal acceleration</strong>.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                    <p class="font-semibold mb-2">Form 1</p>
+                                    <div class="math-display text-2xl">\[a_c = \frac{v^2}{r}\]</div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                    <p class="font-semibold mb-2">Form 2</p>
+                                    <div class="math-display text-2xl">\[a_c = \omega^2 r\]</div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                    <p class="font-semibold mb-2">Form 3</p>
+                                    <div class="math-display text-2xl">\[a_c = v\omega\]</div>
+                                </div>
+                            </div>
+                            <p class="text-lg mt-4 font-semibold text-secondary">Direction: Always towards the center of circular path</p>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> Derivation in 30 Seconds
+                            </h4>
+                            <p class="text-lg mb-3">Consider two velocity vectors separated by small angle dθ:</p>
+                            <div class="bg-white p-4 rounded-lg">
+                                <div class="math-display">\[|\Delta\vec{v}| = v \cdot d\theta\]</div>
+                                <div class="math-display">\[a = \frac{|\Delta\vec{v}|}{dt} = v \cdot \frac{d\theta}{dt} = v\omega = \frac{v^2}{r}\]</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Non-Uniform Circular Motion</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-secondary">Two Components of Acceleration</h4>
+                            <p class="text-lg mb-4">When speed also changes (non-uniform circular motion):</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-purple-50 p-5 rounded-lg">
+                                    <p class="font-bold text-lg mb-3 text-secondary">1. Centripetal Acceleration (a<sub>c</sub>)</p>
+                                    <div class="math-display">\[a_c = \frac{v^2}{r}\]</div>
+                                    <p class="text-sm mt-2">• Directed towards center</p>
+                                    <p class="text-sm">• Changes direction of velocity</p>
+                                    <p class="text-sm">• Always present in circular motion</p>
+                                </div>
+                                <div class="bg-purple-50 p-5 rounded-lg">
+                                    <p class="font-bold text-lg mb-3 text-secondary">2. Tangential Acceleration (a<sub>t</sub>)</p>
+                                    <div class="math-display">\[a_t = \frac{dv}{dt} = r\alpha\]</div>
+                                    <p class="text-sm mt-2">• Directed along tangent</p>
+                                    <p class="text-sm">• Changes magnitude of velocity</p>
+                                    <p class="text-sm">• Zero for uniform circular motion</p>
+                                </div>
+                            </div>
+                            <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                                <p class="font-bold text-lg mb-2">Net Acceleration:</p>
+                                <div class="math-display">\[|\vec{a}| = \sqrt{a_c^2 + a_t^2} = \sqrt{\left(\frac{v^2}{r}\right)^2 + \left(\frac{dv}{dt}\right)^2}\]</div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 9
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A particle is moving in a circle of radius 5 m with a constant speed of 10 m/s. Find (a) angular velocity (b) centripetal acceleration (c) time period.
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2">Given: r = 5 m, v = 10 m/s</p>
+                                
+                                <p class="mb-2 mt-3"><strong>(a) Angular velocity:</strong></p>
+                                <div class="math-display">
+                                    \[\omega = \frac{v}{r} = \frac{10}{5} = 2 \text{ rad/s}\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>(b) Centripetal acceleration:</strong></p>
+                                <div class="math-display">
+                                    \[a_c = \frac{v^2}{r} = \frac{10^2}{5} = \frac{100}{5} = 20 \text{ m/s}^2\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>(c) Time period:</strong></p>
+                                <div class="math-display">
+                                    \[T = \frac{2\pi r}{v} = \frac{2\pi \times 5}{10} = \pi \text{ s} \approx 3.14 \text{ s}\]
+                                </div>
+                                
+                                <div class="mt-4 bg-yellow-50 p-3 rounded-lg">
+                                    <p class="font-semibold">Alternative for (c):</p>
+                                    <div class="math-display">\[T = \frac{2\pi}{\omega} = \frac{2\pi}{2} = \pi \text{ s}\]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.4 Important Formulas Summary</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Quantity</th>
+                                        <th class="p-4 text-left">Linear</th>
+                                        <th class="p-4 text-left">Angular</th>
+                                        <th class="p-4 text-left">Relation</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Displacement</td>
+                                        <td class="p-4">s</td>
+                                        <td class="p-4">θ</td>
+                                        <td class="p-4 font-mono">s = rθ</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Velocity</td>
+                                        <td class="p-4">v</td>
+                                        <td class="p-4">ω</td>
+                                        <td class="p-4 font-mono">v = rω</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Acceleration</td>
+                                        <td class="p-4">a<sub>t</sub></td>
+                                        <td class="p-4">α</td>
+                                        <td class="p-4 font-mono">a<sub>t</sub> = rα</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Time Period</td>
+                                        <td class="p-4">T = 2πr/v</td>
+                                        <td class="p-4">T = 2π/ω</td>
+                                        <td class="p-4">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Frequency</td>
+                                        <td class="p-4">f = v/2πr</td>
+                                        <td class="p-4">f = ω/2π</td>
+                                        <td class="p-4">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 10 (JEE Advanced Level)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A particle moves in a circle of radius 20 cm. Its linear speed is given by v = 2t where t is in seconds and v in m/s. Find the radial and tangential acceleration at t = 2s.
+                            </p>
+                            <p class="text-lg mb-2"><strong>Solution:</strong></p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2">Given: r = 20 cm = 0.2 m, v = 2t</p>
+                                
+                                <p class="mb-2 mt-3"><strong>At t = 2s:</strong></p>
+                                <div class="math-display">\[v = 2 \times 2 = 4 \text{ m/s}\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Radial (Centripetal) Acceleration:</strong></p>
+                                <div class="math-display">
+                                    \[a_c = \frac{v^2}{r} = \frac{4^2}{0.2} = \frac{16}{0.2} = 80 \text{ m/s}^2\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>Tangential Acceleration:</strong></p>
+                                <div class="math-display">
+                                    \[a_t = \frac{dv}{dt} = \frac{d(2t)}{dt} = 2 \text{ m/s}^2\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>Net Acceleration:</strong></p>
+                                <div class="math-display">
+                                    \[a_{net} = \sqrt{a_c^2 + a_t^2} = \sqrt{80^2 + 2^2}\]
+                                </div>
+                                <div class="math-display">
+                                    \[a_{net} = \sqrt{6400 + 4} = \sqrt{6404} \approx 80.02 \text{ m/s}^2\]
+                                </div>
+                                
+                                <div class="mt-4 bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <p><strong>Answer:</strong></p>
+                                    <p>Radial acceleration = 80 m/s² (towards center)</p>
+                                    <p>Tangential acceleration = 2 m/s² (along tangent)</p>
+                                    <p>Net acceleration ≈ 80.02 m/s²</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Common Mistakes in Circular Motion
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                                <li><strong>Confusing speed and velocity:</strong> In uniform circular motion, speed is constant but velocity is NOT (direction changes)</li>
+                                <li><strong>Wrong acceleration direction:</strong> Centripetal acceleration is always towards center, never outward</li>
+                                <li><strong>Unit confusion:</strong> Angular velocity ω is in rad/s, NOT revolutions per second (multiply by 2π for that)</li>
+                                <li><strong>Formula selection:</strong> Use a<sub>c</sub> = v²/r when speed is given, ω²r when angular velocity is given</li>
+                                <li><strong>Non-uniform motion:</strong> Don't forget tangential component when speed is changing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Previous Year Questions Section -->
+                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                    <h2 class="text-4xl font-extrabold mb-6 flex items-center">
+                        <span class="text-5xl mr-4">📝</span>
+                        Previous Year Questions Analysis
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
+                            <ul class="space-y-2 text-lg">
+                                <li>✓ Projectile Motion: 35%</li>
+                                <li>✓ Relative Velocity: 25%</li>
+                                <li>✓ Motion Graphs: 20%</li>
+                                <li>✓ Circular Motion: 15%</li>
+                                <li>✓ 1D Motion: 5%</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
+                            <ul class="space-y-2 text-lg">
+                                <li>✓ Projectile on Incline: 30%</li>
+                                <li>✓ Relative Motion (2D): 30%</li>
+                                <li>✓ Non-uniform Circular: 20%</li>
+                                <li>✓ Complex Graphs: 15%</li>
+                                <li>✓ Variable Acceleration: 5%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>Projectile hitting a target at specific angle</li>
+                            <li>Rain-man problem with variable velocities</li>
+                            <li>Two particles meeting/colliding problems</li>
+                            <li>Finding range on inclined plane</li>
+                            <li>Displacement from v-t graph (with area below axis)</li>
+                            <li>Closest approach distance between two objects</li>
+                            <li>Time to cross river with current</li>
+                            <li>Maximum height in projectile with air resistance</li>
+                            <li>Centripetal acceleration at different points in vertical circle</li>
+                            <li>Relative acceleration calculations</li>
+                        </ol>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                            Download Complete PYQ PDF (2015-2024)
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Practice Problems Section -->
+                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                    <h2 class="text-4xl font-extrabold mb-6 flex items-center">
+                        <span class="text-5xl mr-4">🎯</span>
+                        Practice Problem Set
+                    </h2>
+                    
+                    <div class="bg-white text-gray-900 p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>A car accelerates from 10 m/s to 30 m/s in 5 seconds. Find acceleration and distance covered.</li>
+                            <li>A stone is dropped from height 45 m. Find time to reach ground and velocity just before hitting.</li>
+                            <li>Two trains 100 m and 150 m long are running at 40 km/h and 50 km/h in same direction. Find time to cross.</li>
+                            <li>A projectile is thrown at 45° with speed 20 m/s. Find maximum height and range.</li>
+                            <li>A particle moves in circle of radius 10 m with constant speed 5 m/s. Find centripetal acceleration.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>Rain falls at 10 m/s vertically. A man runs at 5 m/s. At what angle should he hold umbrella?</li>
+                            <li>A projectile is fired up a 30° incline with velocity 50 m/s at 60° from horizontal. Find range along plane.</li>
+                            <li>From v-t graph: v = 20 for 0-2s, then linearly decreases to -10 at 5s. Find displacement and distance.</li>
+                            <li>Two particles A and B are 100 m apart. A moves at 10 m/s east, B at 10 m/s north. Find closest approach distance.</li>
+                            <li>A particle moves in circle with v = 3t. At t = 2s, radius is 5m. Find radial and tangential acceleration.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>A projectile clears two walls of equal height h at distances d₁ and d₂ from starting point. Find angle of projection.</li>
+                            <li>A boat crosses a river of width d. Current velocity is u and boat velocity in still water is v. Find condition for minimum drift and the drift distance.</li>
+                            <li>Acceleration of particle is a = -kv where k is constant. If v = v₀ at t = 0, find v(t) and x(t).</li>
+                            <li>A particle moves on trajectory y = 3x - x². Prove it's a projectile and find angle and initial velocity.</li>
+                            <li>In vertical circular motion, prove minimum velocity at top is √(gr) for completing the circle.</li>
+                        </ol>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                            Get Solutions PDF with Step-by-Step Working
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary">PhysicsHub</h3>
+                    <p class="text-gray-400">Complete JEE Physics preparation platform with 100% original content.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">JEE Main Notes</a></li>
+                        <li><a href="#" class="hover:text-white transition">JEE Advanced Notes</a></li>
+                        <li><a href="#" class="hover:text-white transition">Previous Year Papers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Mock Tests</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Popular Topics</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Mechanics</a></li>
+                        <li><a href="#" class="hover:text-white transition">Electromagnetism</a></li>
+                        <li><a href="#" class="hover:text-white transition">Modern Physics</a></li>
+                        <li><a href="#" class="hover:text-white transition">Thermodynamics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: contact@physicshub.com</li>
+                        <li>Phone: +91 98765 43210</li>
+                        <li>Telegram: @PhysicsHub_JEE</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-xl font-bold mb-3 text-primary">100% Original Content • Zero Plagiarism • Updated for JEE 2025-26</p>
+                <p class="text-gray-400 text-sm">© 2024 PhysicsHub. All rights reserved. Not affiliated with any coaching institute.</p>
+                <p class="text-gray-500 text-xs mt-2">Made with ❤️ for JEE Aspirants across India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+        ↑
+    </button>
+
+</body>
+</html>
