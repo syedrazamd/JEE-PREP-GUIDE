@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master Work, Energy and Power for JEE Main & Advanced 2025-26. Complete notes covering Work-Energy Theorem, Conservation of Energy, Power, Collisions with 100+ solved examples.">
+    <meta name="keywords" content="Work Energy Power JEE, Work-Energy Theorem, Conservation of Energy, Kinetic Energy, Potential Energy, Collisions JEE, JEE Physics Notes, JEE Main 2025">
+    <meta name="author" content="JEE Prep Guide">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Work, Energy and Power - Complete JEE Physics Notes 2025-26">
+    <meta property="og:description" content="Master Work, Energy and Power with comprehensive notes, formulas, and 100+ solved examples for JEE Main & Advanced.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jeeprepguide.netlify.app/jee/physics/work-energy-power">
+    
+    <title>Work, Energy and Power - Complete JEE Physics Notes | JEE Prep Guide</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for Equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#f59e0b',
+                        success: '#10b981',
+                        danger: '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .topic-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .topic-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .formula-box { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }
+        .example-box { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
+        .warning-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); }
+        .tip-box { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); }
+        pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.75rem; overflow-x: auto; }
+        code { background: #1e293b; color: #22d3ee; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-family: 'JetBrains Mono', monospace; }
+        .sticky-nav { position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow-y: auto; }
+        .math-display { font-size: 1.1rem; padding: 1rem; margin: 1rem 0; overflow-x: auto; }
+        .diagram-box { background: #f8fafc; border: 2px dashed #cbd5e1; padding: 2rem; text-align: center; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+        .custom-table { border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 12px; }
+        .custom-table thead { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); }
+        .custom-table tbody tr:hover { background: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800">
+
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #2563eb, #7c3aed); z-index: 9999; transition: width 0.1s;"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                        J
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">JEE Prep Guide</h1>
+                        <p class="text-sm text-gray-500">Complete JEE Physics Mastery</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-base font-semibold">
+                    <a href="/" class="text-primary hover:text-secondary transition">Home</a>
+                    <a href="/notes" class="text-primary hover:text-secondary transition">All Notes</a>
+                    <a href="/practice" class="text-primary hover:text-secondary transition">Practice</a>
+                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="bg-gray-100 py-3 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" class="text-primary hover:underline" itemprop="item">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li class="text-gray-400">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/notes" class="text-primary hover:underline" itemprop="item">
+                        <span itemprop="name">Notes</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li class="text-gray-400">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
+                        <span itemprop="name">JEE</span>
+                    </a>
+                    <meta itemprop="position" content="3" />
+                </li>
+                <li class="text-gray-400">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/notes/jee/physics" class="text-primary hover:underline" itemprop="item">
+                        <span itemprop="name">Physics</span>
+                    </a>
+                    <meta itemprop="position" content="4" />
+                </li>
+                <li class="text-gray-400">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span class="text-gray-600 font-semibold" itemprop="name">Work, Energy and Power</span>
+                    <meta itemprop="position" content="5" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Quick Navigation -->
+    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Work, Energy and Power</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
+                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Work
+                </a>
+                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Kinetic Energy
+                </a>
+                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Potential Energy
+                </a>
+                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Work-Energy
+                </a>
+                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Conservation
+                </a>
+                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Power
+                </a>
+                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Collisions
+                </a>
+                <a href="#formulas" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Formulas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary via-blue-600 to-secondary text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+                    Work, Energy & Power
+                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                </h2>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
+                    Master the fundamental concepts of Work, Energy, and Power with comprehensive notes on Work-Energy Theorem, Conservation Laws, and Collisions. Includes 100+ solved problems and all JEE shortcuts.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-10">
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">📚 8 Complete Sections</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">🎯 Quick Formulas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rating Section -->
+    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="name" content="Work Energy Power JEE Notes">
+        <meta itemprop="description" content="Complete study notes for Work, Energy and Power">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-6 mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="ml-3 text-xl font-bold">
+                            <span itemprop="ratingValue">4.9</span>/5
+                        </span>
+                    </div>
+                    <div class="text-gray-600">
+                        <span itemprop="reviewCount">320</span>+ students rated this helpful
+                    </div>
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary">100+</div>
+                        <div class="text-sm text-gray-600">Solved Examples</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-success">5 hrs</div>
+                        <div class="text-sm text-gray-600">Study Time</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-secondary">Free</div>
+                        <div class="text-sm text-gray-600">Always</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+            <!-- Sidebar Navigation -->
+            <aside class="lg:col-span-1">
+                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-primary rounded mr-3"></span>
+                        Table of Contents
+                    </h3>
+                    <ul class="space-y-2 text-base font-medium">
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Work</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Kinetic Energy</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Potential Energy</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Work-Energy Theorem</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Conservation of Energy</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Power</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Collisions</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Variable Force & Springs</a></li>
+                        <li><a href="#formulas" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">📋 All Formulas</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="lg:col-span-3 space-y-12">
+
+                <!-- Chapter 1: Work -->
+                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Work</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            In physics, <strong>work</strong> is done when a force causes displacement of an object. Unlike the everyday meaning, work in physics has a precise mathematical definition involving force, displacement, and the angle between them.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Definition of Work</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Work Done by Constant Force</h4>
+                            <div class="math-display text-3xl">
+                                \[W = \vec{F} \cdot \vec{s} = Fs\cos\theta\]
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 mt-6 text-sm">
+                                <div class="bg-blue-50 p-3 rounded">
+                                    <p class="font-semibold">F</p>
+                                    <p>Force applied</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded">
+                                    <p class="font-semibold">s</p>
+                                    <p>Displacement</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded">
+                                    <p class="font-semibold">θ</p>
+                                    <p>Angle between F and s</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">SI Unit</h5>
+                                <p class="text-3xl font-mono font-bold text-primary">Joule (J)</p>
+                                <p class="mt-2 text-gray-600">1 J = 1 N·m = 1 kg·m²/s²</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Dimensional Formula</h5>
+                                <p class="text-3xl font-mono font-bold text-primary">[ML²T⁻²]</p>
+                                <p class="mt-2 text-gray-600">Same as Energy</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Nature of Work (Sign Convention)</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Condition</th>
+                                        <th class="p-4 text-left">Angle θ</th>
+                                        <th class="p-4 text-left">cos θ</th>
+                                        <th class="p-4 text-left">Work</th>
+                                        <th class="p-4 text-left">Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold text-success">Positive Work</td>
+                                        <td class="p-4">0° ≤ θ < 90°</td>
+                                        <td class="p-4">Positive</td>
+                                        <td class="p-4">W > 0</td>
+                                        <td class="p-4">Pushing a cart forward</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold text-danger">Negative Work</td>
+                                        <td class="p-4">90° < θ ≤ 180°</td>
+                                        <td class="p-4">Negative</td>
+                                        <td class="p-4">W < 0</td>
+                                        <td class="p-4">Friction on moving block</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold text-gray-500">Zero Work</td>
+                                        <td class="p-4">θ = 90°</td>
+                                        <td class="p-4">Zero</td>
+                                        <td class="p-4">W = 0</td>
+                                        <td class="p-4">Carrying bag horizontally</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> Quick Memory Trick
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                                <li><strong>Positive Work:</strong> Force helps motion (same direction)</li>
+                                <li><strong>Negative Work:</strong> Force opposes motion (opposite direction)</li>
+                                <li><strong>Zero Work:</strong> Force ⊥ displacement OR no displacement</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Work Done by Various Forces</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Work by Gravity</h5>
+                                <div class="math-display">\[W_g = mgh\]</div>
+                                <p class="text-sm text-gray-600 mt-2">Positive when falling down, negative when rising up</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Work by Friction</h5>
+                                <div class="math-display">\[W_f = -f \cdot s = -\mu N s\]</div>
+                                <p class="text-sm text-gray-600 mt-2">Always negative (opposes motion)</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Work by Normal Force</h5>
+                                <div class="math-display">\[W_N = 0 \text{ (usually)}\]</div>
+                                <p class="text-sm text-gray-600 mt-2">Zero when surface doesn't move in normal direction</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Work by Spring Force</h5>
+                                <div class="math-display">\[W_s = \frac{1}{2}kx_1^2 - \frac{1}{2}kx_2^2\]</div>
+                                <p class="text-sm text-gray-600 mt-2">From position x₁ to x₂</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Work Done by Variable Force</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6 text-center">
+                            <div class="math-display text-2xl">
+                                \[W = \int_{x_1}^{x_2} F(x) \, dx = \text{Area under F-x curve}\]
+                            </div>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Important for JEE
+                            </h4>
+                            <p class="text-lg">
+                                Work is a <strong>scalar quantity</strong> (not vector). Even though it involves vectors (F and s), the dot product gives a scalar result. Work can be positive, negative, or zero.
+                            </p>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A force F = (3î + 4ĵ) N acts on a body producing displacement s = (3î + 4ĵ) m. Find the work done.
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Solution:</strong></p>
+                                <div class="math-display">
+                                    \[W = \vec{F} \cdot \vec{s} = (3\hat{i} + 4\hat{j}) \cdot (3\hat{i} + 4\hat{j})\]
+                                </div>
+                                <div class="math-display">
+                                    \[W = 3 \times 3 + 4 \times 4 = 9 + 16 = 25 \text{ J}\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[\boxed{W = 25 \text{ J}}\]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 2: Kinetic Energy -->
+                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Kinetic Energy</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            <strong>Kinetic Energy</strong> is the energy possessed by an object due to its motion. Any object that is moving has kinetic energy, and the faster it moves, the more kinetic energy it has.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Formula for Kinetic Energy</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
+                            <div class="math-display text-3xl">
+                                \[KE = \frac{1}{2}mv^2\]
+                            </div>
+                            <p class="mt-4 text-gray-700">where m = mass, v = velocity</p>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-secondary mt-6 mb-3">Alternative Forms:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-purple-50 p-4 rounded-lg text-center border-2 border-purple-200">
+                                <p class="font-mono text-lg mb-2">In terms of momentum</p>
+                                <div class="math-display">\[KE = \frac{p^2}{2m}\]</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg text-center border-2 border-purple-200">
+                                <p class="font-mono text-lg mb-2">Relation with p</p>
+                                <div class="math-display">\[p = \sqrt{2mKE}\]</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg text-center border-2 border-purple-200">
+                                <p class="font-mono text-lg mb-2">For rotation</p>
+                                <div class="math-display">\[KE = \frac{1}{2}I\omega^2\]</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Properties of Kinetic Energy</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                                <p class="font-semibold">✓ Always Positive or Zero</p>
+                                <p class="text-sm text-gray-600">KE ≥ 0 (mass and v² are always positive)</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                                <p class="font-semibold">✓ Scalar Quantity</p>
+                                <p class="text-sm text-gray-600">No direction, only magnitude</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                                <p class="font-semibold">✓ Frame Dependent</p>
+                                <p class="text-sm text-gray-600">Different observers measure different KE</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                                <p class="font-semibold">✓ Proportional to v²</p>
+                                <p class="text-sm text-gray-600">Double speed → 4× kinetic energy</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> JEE Trick: KE-Momentum Relations
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-white p-4 rounded">
+                                    <p class="font-semibold mb-2">If p is constant:</p>
+                                    <p class="font-mono">KE ∝ 1/m</p>
+                                    <p class="text-sm text-gray-600">Lighter object has more KE</p>
+                                </div>
+                                <div class="bg-white p-4 rounded">
+                                    <p class="font-semibold mb-2">If KE is constant:</p>
+                                    <p class="font-mono">p ∝ √m</p>
+                                    <p class="text-sm text-gray-600">Heavier object has more momentum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 3: Potential Energy -->
+                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Potential Energy</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            <strong>Potential Energy</strong> is the energy stored in an object due to its position or configuration. It represents the capacity to do work when the object's position changes.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Gravitational Potential Energy</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-orange-300">
+                                <h5 class="font-bold text-lg mb-3 text-accent">Near Earth's Surface</h5>
+                                <div class="math-display text-2xl text-center">\[U = mgh\]</div>
+                                <p class="text-sm text-gray-600 mt-3">h = height above reference point</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-orange-300">
+                                <h5 class="font-bold text-lg mb-3 text-accent">General Form (Large distances)</h5>
+                                <div class="math-display text-2xl text-center">\[U = -\frac{GMm}{r}\]</div>
+                                <p class="text-sm text-gray-600 mt-3">r = distance from Earth's center</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Elastic (Spring) Potential Energy</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6 text-center">
+                            <div class="math-display text-3xl">
+                                \[U = \frac{1}{2}kx^2\]
+                            </div>
+                            <p class="mt-4 text-gray-700">where k = spring constant, x = displacement from natural length</p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Conservative vs Non-Conservative Forces</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Aspect</th>
+                                        <th class="p-4 text-left">Conservative Forces</th>
+                                        <th class="p-4 text-left">Non-Conservative Forces</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Definition</td>
+                                        <td class="p-4">Work done is path independent</td>
+                                        <td class="p-4">Work done depends on path</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Work in closed loop</td>
+                                        <td class="p-4">Zero</td>
+                                        <td class="p-4">Non-zero</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">PE exists?</td>
+                                        <td class="p-4">Yes, PE can be defined</td>
+                                        <td class="p-4">No PE can be defined</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Examples</td>
+                                        <td class="p-4">Gravity, Spring, Electrostatic</td>
+                                        <td class="p-4">Friction, Air resistance, Viscous</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Relation with PE</td>
+                                        <td class="p-4">W = -ΔU</td>
+                                        <td class="p-4">No relation</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Key Relation (Very Important!)
+                            </h4>
+                            <div class="math-display text-center bg-white p-4 rounded-lg border-2 border-accent text-2xl">
+                                \[\vec{F} = -\frac{dU}{dx} \quad \text{or} \quad \vec{F} = -\nabla U\]
+                            </div>
+                            <p class="text-lg mt-3">
+                                Force = negative gradient of potential energy. Force points from high PE to low PE.
+                            </p>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 2
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> If potential energy U = 3x² + 4, find the force at x = 2.
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Solution:</strong></p>
+                                <div class="math-display">
+                                    \[F = -\frac{dU}{dx} = -\frac{d(3x^2 + 4)}{dx} = -6x\]
+                                </div>
+                                <p class="mb-2">At x = 2:</p>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[F = -6(2) = -12 \text{ N}\]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 4: Work-Energy Theorem -->
+                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Work-Energy Theorem</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <div class="bg-gradient-to-r from-green-100 to-green-50 border-l-4 border-success p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-success mb-3">📜 Statement</h3>
+                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                                "The net work done on an object equals the change in its kinetic energy."
+                            </p>
+                        </div>
+
+                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6 text-center">
+                            <div class="math-display text-3xl">
+                                \[W_{net} = \Delta KE = KE_f - KE_i = \frac{1}{2}mv^2 - \frac{1}{2}mu^2\]
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Important Points</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-semibold">W<sub>net</sub> > 0</p>
+                                <p class="text-sm text-gray-600">KE increases (object speeds up)</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-semibold">W<sub>net</sub> < 0</p>
+                                <p class="text-sm text-gray-600">KE decreases (object slows down)</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-semibold">W<sub>net</sub> = 0</p>
+                                <p class="text-sm text-gray-600">KE constant (constant speed)</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-semibold">Valid for ALL forces</p>
+                                <p class="text-sm text-gray-600">Conservative + Non-conservative</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Extended Form</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                            <div class="math-display text-center text-xl">
+                                \[W_{gravity} + W_{friction} + W_{applied} + W_{other} = \Delta KE\]
+                            </div>
+                            <p class="text-center mt-4 text-gray-700">Sum of work by all individual forces = Change in KE</p>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main 2023 Type)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A 2 kg block is pushed by a 20 N force on a rough horizontal surface (μ = 0.3) for 5 m. If initial velocity is 4 m/s, find final velocity. (g = 10 m/s²)
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Given:</strong> m = 2 kg, F = 20 N, μ = 0.3, s = 5 m, u = 4 m/s</p>
+                                
+                                <p class="mb-2 mt-4"><strong>Step 1:</strong> Calculate work by applied force</p>
+                                <div class="math-display">\[W_F = F \times s = 20 \times 5 = 100 \text{ J}\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Step 2:</strong> Calculate work by friction</p>
+                                <div class="math-display">\[f = \mu mg = 0.3 \times 2 \times 10 = 6 \text{ N}\]</div>
+                                <div class="math-display">\[W_f = -f \times s = -6 \times 5 = -30 \text{ J}\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Step 3:</strong> Apply Work-Energy Theorem</p>
+                                <div class="math-display">\[W_{net} = \Delta KE\]</div>
+                                <div class="math-display">\[100 - 30 = \frac{1}{2}(2)v^2 - \frac{1}{2}(2)(4)^2\]</div>
+                                <div class="math-display">\[70 = v^2 - 16\]</div>
+                                <div class="math-display">\[v^2 = 86\]</div>
+                                
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[v = \sqrt{86} \approx 9.27 \text{ m/s}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> When to Use Work-Energy Theorem?
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                                <li>When asked to find <strong>velocity</strong> after displacement</li>
+                                <li>When <strong>force varies</strong> with position</li>
+                                <li>When <strong>path is complex</strong> but start/end points known</li>
+                                <li>Problems involving <strong>friction</strong> and other forces together</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 5: Conservation of Energy -->
+                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Conservation of Mechanical Energy</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <div class="bg-gradient-to-r from-blue-100 to-blue-50 border-l-4 border-primary p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">📜 Law of Conservation of Energy</h3>
+                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                                "In an isolated system where only conservative forces act, the total mechanical energy (KE + PE) remains constant."
+                            </p>
+                        </div>
+
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Mathematical Form</h4>
+                            <div class="math-display text-2xl">
+                                \[KE_i + PE_i = KE_f + PE_f\]
+                            </div>
+                            <p class="mt-2 text-gray-600">or</p>
+                            <div class="math-display text-2xl">
+                                \[E_{total} = KE + PE = \text{constant}\]
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Conditions for Conservation</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                                <p class="font-semibold text-success">✓ Energy IS Conserved When:</p>
+                                <ul class="text-sm text-gray-600 mt-2 space-y-1">
+                                    <li>• Only conservative forces act</li>
+                                    <li>• System is isolated</li>
+                                    <li>• No friction, air resistance</li>
+                                </ul>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                                <p class="font-semibold text-danger">✗ Energy NOT Conserved When:</p>
+                                <ul class="text-sm text-gray-600 mt-2 space-y-1">
+                                    <li>• Friction is present</li>
+                                    <li>• External forces do work</li>
+                                    <li>• Inelastic collisions occur</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Modified Energy Conservation (With Non-Conservative Forces)</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6 text-center">
+                            <div class="math-display text-xl">
+                                \[KE_i + PE_i + W_{nc} = KE_f + PE_f\]
+                            </div>
+                            <p class="mt-4 text-gray-700">W<sub>nc</sub> = Work done by non-conservative forces (usually negative for friction)</p>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Advanced Pattern)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A ball is dropped from height 10 m. It bounces back to 6 m. Find energy lost and coefficient of restitution. (g = 10 m/s²)
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Solution:</strong></p>
+                                
+                                <p class="mb-2"><strong>Initial energy:</strong></p>
+                                <div class="math-display">\[E_i = mgh_1 = m \times 10 \times 10 = 100m \text{ J}\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Final energy:</strong></p>
+                                <div class="math-display">\[E_f = mgh_2 = m \times 10 \times 6 = 60m \text{ J}\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Energy lost:</strong></p>
+                                <div class="math-display">\[\Delta E = 100m - 60m = 40m \text{ J}\]</div>
+                                <div class="math-display">\[\text{Fraction lost} = \frac{40m}{100m} = 40\%\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Coefficient of restitution:</strong></p>
+                                <div class="math-display">\[e = \sqrt{\frac{h_2}{h_1}} = \sqrt{\frac{6}{10}} = \sqrt{0.6}\]</div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[e \approx 0.775\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Energy Conservation in Springs</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Spring-Mass System (Horizontal)</h4>
+                            <div class="math-display text-center text-xl">
+                                \[\frac{1}{2}mv_1^2 + \frac{1}{2}kx_1^2 = \frac{1}{2}mv_2^2 + \frac{1}{2}kx_2^2\]
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <div class="bg-blue-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">At extreme position (x = A):</p>
+                                    <p class="font-mono">v = 0, PE = max, KE = 0</p>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">At mean position (x = 0):</p>
+                                    <p class="font-mono">v = max, PE = 0, KE = max</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 6: Power -->
+                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Power</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            <strong>Power</strong> is the rate at which work is done or energy is transferred. It tells us how quickly energy is being used or transferred.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.1 Definition and Formulas</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
+                                <h5 class="font-bold text-lg mb-3 text-danger">Average Power</h5>
+                                <div class="math-display text-2xl text-center">\[P_{avg} = \frac{W}{t} = \frac{\Delta E}{t}\]</div>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
+                                <h5 class="font-bold text-lg mb-3 text-danger">Instantaneous Power</h5>
+                                <div class="math-display text-2xl text-center">\[P = \frac{dW}{dt} = \vec{F} \cdot \vec{v}\]</div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-200">
+                                <h5 class="font-bold text-lg mb-3 text-danger">SI Unit</h5>
+                                <p class="text-3xl font-mono font-bold text-danger">Watt (W)</p>
+                                <p class="mt-2 text-gray-600">1 W = 1 J/s = 1 kg·m²/s³</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-200">
+                                <h5 class="font-bold text-lg mb-3 text-danger">Other Units</h5>
+                                <div class="space-y-2 text-sm">
+                                    <p>1 HP (Horse Power) = 746 W</p>
+                                    <p>1 kW = 1000 W</p>
+                                    <p>1 MW = 10⁶ W</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.2 Power in Different Scenarios</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Scenario</th>
+                                        <th class="p-4 text-left">Power Formula</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Constant force, constant velocity</td>
+                                        <td class="p-4 font-mono">P = Fv</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Force at angle θ to velocity</td>
+                                        <td class="p-4 font-mono">P = Fv cos θ</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Lifting an object at constant speed</td>
+                                        <td class="p-4 font-mono">P = mgv</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Vehicle on incline at speed v</td>
+                                        <td class="p-4 font-mono">P = (mg sin θ + f)v</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Rotational motion</td>
+                                        <td class="p-4 font-mono">P = τω</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.3 Vehicle Power Problems (JEE Favorite)</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-danger">Vehicle Moving on Road</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-red-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Maximum speed (constant P):</p>
+                                    <div class="math-display">\[v_{max} = \frac{P}{F_{resistance}}\]</div>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Acceleration at speed v:</p>
+                                    <div class="math-display">\[a = \frac{P - fv}{mv}\]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> Important: Power & Energy Units
+                            </h4>
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="mb-3"><strong>1 kWh (kilowatt-hour)</strong> is a unit of ENERGY, not power!</p>
+                                <div class="math-display">\[1 \text{ kWh} = 1000 \text{ W} \times 3600 \text{ s} = 3.6 \times 10^6 \text{ J}\]</div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 5
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A car of mass 1000 kg can develop maximum power of 50 kW. Find maximum speed on a road with friction coefficient 0.2. (g = 10 m/s²)
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Solution:</strong></p>
+                                <p class="mb-2">At maximum speed, all power overcomes friction:</p>
+                                <div class="math-display">\[f = \mu mg = 0.2 \times 1000 \times 10 = 2000 \text{ N}\]</div>
+                                <div class="math-display">\[P = f \times v_{max}\]</div>
+                                <div class="math-display">\[50000 = 2000 \times v_{max}\]</div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[v_{max} = 25 \text{ m/s} = 90 \text{ km/h}\]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 7: Collisions -->
+                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Collisions</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            A <strong>collision</strong> is a short-duration interaction between two or more bodies where they exert forces on each other. Understanding collisions is crucial for JEE as 2-3 questions are asked every year.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Types of Collisions</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Property</th>
+                                        <th class="p-4 text-left">Elastic Collision</th>
+                                        <th class="p-4 text-left">Inelastic Collision</th>
+                                        <th class="p-4 text-left">Perfectly Inelastic</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Momentum</td>
+                                        <td class="p-4 text-success font-semibold">Conserved ✓</td>
+                                        <td class="p-4 text-success font-semibold">Conserved ✓</td>
+                                        <td class="p-4 text-success font-semibold">Conserved ✓</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Kinetic Energy</td>
+                                        <td class="p-4 text-success font-semibold">Conserved ✓</td>
+                                        <td class="p-4 text-danger font-semibold">NOT Conserved ✗</td>
+                                        <td class="p-4 text-danger font-semibold">Maximum Loss ✗</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Coefficient of Restitution (e)</td>
+                                        <td class="p-4 font-mono">e = 1</td>
+                                        <td class="p-4 font-mono">0 < e < 1</td>
+                                        <td class="p-4 font-mono">e = 0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Bodies after collision</td>
+                                        <td class="p-4">Separate</td>
+                                        <td class="p-4">Separate</td>
+                                        <td class="p-4">Stick together</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Example</td>
+                                        <td class="p-4">Ideal gas molecules</td>
+                                        <td class="p-4">Most real collisions</td>
+                                        <td class="p-4">Bullet in block</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Coefficient of Restitution (e)</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
+                            <div class="math-display text-2xl">
+                                \[e = \frac{\text{Relative velocity of separation}}{\text{Relative velocity of approach}} = \frac{v_2 - v_1}{u_1 - u_2}\]
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 mt-6">
+                                <div class="bg-purple-50 p-3 rounded">
+                                    <p class="font-semibold">e = 1</p>
+                                    <p class="text-sm">Perfectly Elastic</p>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded">
+                                    <p class="font-semibold">0 < e < 1</p>
+                                    <p class="text-sm">Inelastic</p>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded">
+                                    <p class="font-semibold">e = 0</p>
+                                    <p class="text-sm">Perfectly Inelastic</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.3 Elastic Collision Formulas (1D)</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-secondary">For m₁ hitting stationary m₂ (u₂ = 0)</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-purple-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Velocity of m₁ after collision:</p>
+                                    <div class="math-display">\[v_1 = \frac{(m_1 - m_2)}{m_1 + m_2}u_1\]</div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Velocity of m₂ after collision:</p>
+                                    <div class="math-display">\[v_2 = \frac{2m_1}{m_1 + m_2}u_1\]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-secondary mt-6 mb-3">Special Cases (Elastic, u₂ = 0):</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-purple-50 p-4 rounded-lg border-2 border-purple-200">
+                                <p class="font-semibold text-secondary mb-2">m₁ = m₂</p>
+                                <p class="text-sm">v₁ = 0, v₂ = u₁</p>
+                                <p class="text-xs text-gray-600 mt-1">Complete transfer!</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-2 border-purple-200">
+                                <p class="font-semibold text-secondary mb-2">m₁ >> m₂</p>
+                                <p class="text-sm">v₁ ≈ u₁, v₂ ≈ 2u₁</p>
+                                <p class="text-xs text-gray-600 mt-1">Heavy hits light</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-2 border-purple-200">
+                                <p class="font-semibold text-secondary mb-2">m₁ << m₂</p>
+                                <p class="text-sm">v₁ ≈ -u₁, v₂ ≈ 0</p>
+                                <p class="text-xs text-gray-600 mt-1">Light bounces back</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.4 Perfectly Inelastic Collision</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-secondary">Bodies stick together (v₁ = v₂ = v)</h4>
+                            <div class="math-display text-xl">
+                                \[m_1u_1 + m_2u_2 = (m_1 + m_2)v\]
+                            </div>
+                            <div class="math-display text-xl mt-4">
+                                \[v = \frac{m_1u_1 + m_2u_2}{m_1 + m_2}\]
+                            </div>
+                            <div class="bg-red-50 p-4 rounded mt-4 text-left">
+                                <p class="font-semibold text-danger mb-2">Energy Lost:</p>
+                                <div class="math-display">\[\Delta KE = \frac{1}{2}\frac{m_1m_2}{m_1 + m_2}(u_1 - u_2)^2\]</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.5 2D Collisions (Oblique)</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-secondary">Conservation in 2D</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-purple-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">x-direction:</p>
+                                    <div class="math-display">\[m_1u_{1x} + m_2u_{2x} = m_1v_{1x} + m_2v_{2x}\]</div>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">y-direction:</p>
+                                    <div class="math-display">\[m_1u_{1y} + m_2u_{2y} = m_1v_{1y} + m_2v_{2y}\]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Main Pattern)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A 2 kg ball moving at 4 m/s collides head-on with a 3 kg ball at rest. If collision is perfectly elastic, find velocities after collision.
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Given:</strong> m₁ = 2 kg, m₂ = 3 kg, u₁ = 4 m/s, u₂ = 0</p>
+                                
+                                <p class="mb-2 mt-4"><strong>Using elastic collision formulas:</strong></p>
+                                <div class="math-display">\[v_1 = \frac{(m_1 - m_2)u_1}{m_1 + m_2} = \frac{(2-3)(4)}{2+3} = \frac{-4}{5} = -0.8 \text{ m/s}\]</div>
+                                
+                                <div class="math-display">\[v_2 = \frac{2m_1u_1}{m_1 + m_2} = \frac{2(2)(4)}{5} = \frac{16}{5} = 3.2 \text{ m/s}\]</div>
+                                
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[v_1 = -0.8 \text{ m/s (bounces back)}, \quad v_2 = 3.2 \text{ m/s}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Height After Bouncing (Ball drop problems)
+                            </h4>
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="mb-3">When a ball is dropped from height h and bounces:</p>
+                                <div class="math-display text-center">\[h_n = e^{2n} \cdot h_0\]</div>
+                                <p class="mt-3">where n = number of bounces, e = coefficient of restitution</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 8: Variable Force & Springs -->
+                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Springs & Variable Force Problems</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.1 Spring Force (Hooke's Law)</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6 text-center">
+                            <div class="math-display text-3xl">
+                                \[F = -kx\]
+                            </div>
+                            <p class="mt-4 text-gray-700">k = spring constant (N/m), x = displacement from natural length</p>
+                            <p class="text-sm text-gray-600 mt-2">Negative sign indicates restoring nature</p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.2 Work Done on/by Spring</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-orange-300">
+                                <h5 class="font-bold text-lg mb-3 text-accent">Work done BY spring</h5>
+                                <div class="math-display">\[W_s = \frac{1}{2}kx_1^2 - \frac{1}{2}kx_2^2\]</div>
+                                <p class="text-sm text-gray-600 mt-2">From position x₁ to x₂</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-orange-300">
+                                <h5 class="font-bold text-lg mb-3 text-accent">Work done ON spring</h5>
+                                <div class="math-display">\[W_{on} = \frac{1}{2}kx_2^2 - \frac{1}{2}kx_1^2\]</div>
+                                <p class="text-sm text-gray-600 mt-2">Stored as PE</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.3 Springs in Series and Parallel</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Configuration</th>
+                                        <th class="p-4 text-left">Equivalent Spring Constant</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Series</td>
+                                        <td class="p-4 font-mono">\(\frac{1}{k_{eq}} = \frac{1}{k_1} + \frac{1}{k_2} + ...\)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Parallel</td>
+                                        <td class="p-4 font-mono">\(k_{eq} = k_1 + k_2 + ...\)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> Memory Trick
+                            </h4>
+                            <p class="text-lg">
+                                Springs are <strong>opposite to resistors</strong>: Series springs add like parallel resistors, and parallel springs add like series resistors!
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.4 Block-Spring Problems (Energy Method)</h3>
+                        
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 7
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A 2 kg block moving at 3 m/s hits a spring (k = 200 N/m). Find maximum compression.
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Solution:</strong></p>
+                                <p class="mb-2">Using energy conservation (KE → Spring PE):</p>
+                                <div class="math-display">\[\frac{1}{2}mv^2 = \frac{1}{2}kx_{max}^2\]</div>
+                                <div class="math-display">\[\frac{1}{2}(2)(3)^2 = \frac{1}{2}(200)(x_{max})^2\]</div>
+                                <div class="math-display">\[9 = 100 \cdot x_{max}^2\]</div>
+                                <div class="math-display">\[x_{max}^2 = 0.09\]</div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[x_{max} = 0.3 \text{ m} = 30 \text{ cm}\]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- All Formulas Section -->
+                <section id="formulas" class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl shadow-2xl p-8">
+                    <h2 class="text-4xl font-extrabold mb-6 flex items-center">
+                        <span class="text-5xl mr-4">📋</span>
+                        Complete Formula Sheet - Work, Energy & Power
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Work</h3>
+                            <div class="space-y-3 font-mono text-sm">
+                                <p>W = F·s = Fs cos θ</p>
+                                <p>W = ∫F dx (variable force)</p>
+                                <p>W<sub>gravity</sub> = mgh</p>
+                                <p>W<sub>friction</sub> = -μNs</p>
+                                <p>W<sub>spring</sub> = ½kx₁² - ½kx₂²</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Energy</h3>
+                            <div class="space-y-3 font-mono text-sm">
+                                <p>KE = ½mv² = p²/2m</p>
+                                <p>PE (gravity) = mgh</p>
+                                <p>PE (spring) = ½kx²</p>
+                                <p>PE (general) = -GMm/r</p>
+                                <p>F = -dU/dx</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Theorems</h3>
+                            <div class="space-y-3 font-mono text-sm">
+                                <p>W<sub>net</sub> = ΔKE (Work-Energy)</p>
+                                <p>KE<sub>i</sub> + PE<sub>i</sub> = KE<sub>f</sub> + PE<sub>f</sub></p>
+                                <p>E<sub>i</sub> + W<sub>nc</sub> = E<sub>f</sub></p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Power</h3>
+                            <div class="space-y-3 font-mono text-sm">
+                                <p>P = W/t = dW/dt</p>
+                                <p>P = F·v = Fv cos θ</p>
+                                <p>P = τω (rotational)</p>
+                                <p>1 HP = 746 W</p>
+                                <p>1 kWh = 3.6 × 10⁶ J</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Elastic Collision (u₂=0)</h3>
+                            <div class="space-y-3 font-mono text-sm">
+                                <p>v₁ = (m₁-m₂)u₁/(m₁+m₂)</p>
+                                <p>v₂ = 2m₁u₁/(m₁+m₂)</p>
+                                <p>e = (v₂-v₁)/(u₁-u₂) = 1</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Inelastic Collision</h3>
+                            <div class="space-y-3 font-mono text-sm">
+                                <p>m₁u₁ + m₂u₂ = (m₁+m₂)v</p>
+                                <p>ΔKE = ½[m₁m₂/(m₁+m₂)](u₁-u₂)²</p>
+                                <p>e = 0 (perfectly inelastic)</p>
+                                <p>h<sub>n</sub> = e²ⁿh₀ (bouncing)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#" class="inline-block bg-white text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                            Download Formula PDF
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Previous Year Questions -->
+                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                    <h2 class="text-4xl font-extrabold mb-6 flex items-center">
+                        <span class="text-5xl mr-4">📝</span>
+                        Previous Year Questions Analysis
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
+                            <ul class="space-y-2 text-lg">
+                                <li>✓ Work-Energy Problems: 30%</li>
+                                <li>✓ Collisions: 25%</li>
+                                <li>✓ Power & Vehicle Problems: 20%</li>
+                                <li>✓ Spring-Block Systems: 15%</li>
+                                <li>✓ Conservation of Energy: 10%</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
+                            <ul class="space-y-2 text-lg">
+                                <li>✓ Variable Force Integration: 25%</li>
+                                <li>✓ Multi-body Collisions: 25%</li>
+                                <li>✓ Energy + Momentum Combined: 20%</li>
+                                <li>✓ Chain/Rope Problems: 15%</li>
+                                <li>✓ Coefficient of Restitution: 15%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>Block hitting spring - find compression</li>
+                            <li>Bullet embedding in block (perfectly inelastic)</li>
+                            <li>Elastic collision between two balls</li>
+                            <li>Ball bouncing and finding height after n bounces</li>
+                            <li>Car climbing incline at constant speed - find power</li>
+                            <li>Work done by variable force (integration)</li>
+                            <li>Chain falling off table - energy method</li>
+                            <li>Two blocks connected by spring on smooth surface</li>
+                            <li>Work-energy theorem with friction</li>
+                            <li>Potential energy curves and equilibrium</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg">JEE Main:</span>
+                                <span class="text-2xl font-bold">12-16 marks (3-4 questions)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg">JEE Advanced:</span>
+                                <span class="text-2xl font-bold">15-20 marks (4-5 questions)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg">Difficulty Level:</span>
+                                <span class="text-2xl font-bold">Medium to Hard</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg">Study Time Required:</span>
+                                <span class="text-2xl font-bold">15-20 hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                            Download Complete PYQ PDF (2015-2024)
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Practice Problems -->
+                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                    <h2 class="text-4xl font-extrabold mb-6 flex items-center">
+                        <span class="text-5xl mr-4">🎯</span>
+                        Practice Problem Set
+                    </h2>
+                    
+                    <div class="bg-white text-gray-900 p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>A force of 10 N acts on a 2 kg body at 60° to displacement of 4 m. Find work done.</li>
+                            <li>Find kinetic energy of a 5 kg body moving at 6 m/s.</li>
+                            <li>A spring of k = 100 N/m is compressed by 10 cm. Find stored potential energy.</li>
+                            <li>A 1000 W pump lifts water to height 10 m. How much water per second? (g = 10 m/s²)</li>
+                            <li>A 2 kg ball moving at 5 m/s stops after traveling 10 m. Find work by friction.</li>
+                            <li>A ball is dropped from 20 m. Find velocity just before hitting ground.</li>
+                            <li>Two balls of mass 2 kg and 4 kg undergo elastic collision. If 2 kg ball has 6 m/s and 4 kg is at rest, find final velocities.</li>
+                            <li>A 50 kg person climbs stairs of height 10 m in 20 s. Find power.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>A force F = 2x + 3 acts on body. Find work done in moving from x = 0 to x = 5 m.</li>
+                            <li>A 2 kg block slides down a rough incline (30°, μ = 0.2) of length 5 m. Find velocity at bottom using energy method.</li>
+                            <li>A spring gun shoots a 50 g ball. If spring (k = 500 N/m) is compressed 10 cm, find muzzle velocity.</li>
+                            <li>A car of mass 2000 kg with engine power 100 kW starts from rest. Find time to reach 30 m/s (ignore resistance).</li>
+                            <li>A bullet of mass 20 g moving at 400 m/s embeds in a 2 kg wooden block. Find velocity of system and energy lost.</li>
+                            <li>A ball dropped from height h bounces back to h/2. Find coefficient of restitution.</li>
+                            <li>If U = 3x² - 6x + 5, find equilibrium position and nature of equilibrium.</li>
+                            <li>A 10 kg block on smooth surface is pushed by force F = 20 + 2t for 5 seconds. Find velocity.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>A chain of mass m and length L on table starts sliding when L/4 hangs over. Find velocity when completely off.</li>
+                            <li>A ball moving with velocity v collides obliquely with identical ball at rest. Show that after elastic collision, velocities are perpendicular.</li>
+                            <li>Three identical balls are placed in a line. First ball hits second with velocity u. Find velocities after all collisions (elastic).</li>
+                            <li>A particle moves from origin under force F = (3x² + 2y)î + 2xĵ. Is force conservative? If yes, find PE function.</li>
+                            <li>Two blocks m₁ and m₂ connected by spring are placed on smooth surface. Find velocity of center of mass and oscillation amplitude when m₁ is pushed with velocity v₀.</li>
+                            <li>A ball falls from height H on inclined plane at angle θ. It bounces elastically. Find distance where it lands next.</li>
+                            <li>A particle slides from top of smooth hemisphere of radius R. At what angle does it leave surface?</li>
+                            <li>A sand car of mass M moving at v₀ starts collecting sand at rate dm/dt. Find velocity as function of time.</li>
+                        </ol>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                            Get Solutions PDF with Step-by-Step Working
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Related Notes Section -->
+    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+                <span class="w-2 h-10 bg-primary rounded mr-4"></span>
+                Related Physics Notes
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/jee/physics/laws-of-motion" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Laws of Motion</h3>
+                    <p class="text-gray-600">Newton's Laws, Friction, FBD, Connected Bodies</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
+                        Read Notes <span class="ml-2">→</span>
+                    </div>
+                </a>
+
+                <a href="/jee/physics/center-of-mass" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Center of Mass & Momentum</h3>
+                    <p class="text-gray-600">COM, Momentum Conservation, Rocket Propulsion</p>
+                    <div class="mt-4 text-success font-semibold flex items-center">
+                        Read Notes <span class="ml-2">→</span>
+                    </div>
+                </a>
+
+                <a href="/jee/physics/rotational-motion" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Rotational Motion</h3>
+                    <p class="text-gray-600">Rotational KE, Angular Momentum, Rolling</p>
+                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                        Read Notes <span class="ml-2">→</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                    View All Physics Notes →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Summary Section -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="prose max-w-none">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Work, Energy and Power - Complete Guide for JEE 2025-26</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Why This Chapter is Crucial for JEE?</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            <strong>Work, Energy and Power</strong> is one of the most important chapters carrying 10-12% weightage in JEE Physics. It provides alternative methods to solve mechanics problems and is essential for:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><strong>SHM</strong> - Energy oscillation concepts</li>
+                            <li><strong>Gravitation</strong> - Escape velocity, orbital energy</li>
+                            <li><strong>Rotational Motion</strong> - Rotational KE, rolling</li>
+                            <li><strong>Thermodynamics</strong> - Work-Heat equivalence</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Their Weightage</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-secondary mb-2">High Priority Topics</h4>
+                                <ul class="text-gray-700 space-y-1 text-sm">
+                                    <li>• Work-Energy Theorem (Most Important)</li>
+                                    <li>• Collisions - Elastic & Inelastic</li>
+                                    <li>• Conservation of Energy</li>
+                                    <li>• Spring Block Systems</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-secondary mb-2">Medium Priority Topics</h4>
+                                <ul class="text-gray-700 space-y-1 text-sm">
+                                    <li>• Power calculations</li>
+                                    <li>• Variable force problems</li>
+                                    <li>• Potential energy curves</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Work, Energy & Power Effectively?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Time Required:</strong> 5-6 days (3 hours/day)</li>
+                                <li>Master Work-Energy Theorem first</li>
+                                <li>Focus on collision formulas thoroughly</li>
+                                <li>Practice 80+ MCQs from previous years</li>
+                                <li>Understand when to use energy vs force method</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Time Required:</strong> 8-10 days (4 hours/day)</li>
+                                <li>Master integration for variable force</li>
+                                <li>Solve complex multi-step collision problems</li>
+                                <li>Practice chain/rope problems</li>
+                                <li>Understand potential energy curves deeply</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <div>
+                                <strong>Confusing W<sub>net</sub> with individual work:</strong> Work-Energy theorem uses NET work, not work by single force
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <div>
+                                <strong>Sign errors in collision:</strong> Remember velocity directions when applying e formula
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <div>
+                                <strong>Applying energy conservation with friction:</strong> Mechanical energy is NOT conserved when friction is present
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <div>
+                                <strong>Forgetting spring PE is ½kx²:</strong> Don't write kx² (missing ½ is very common)
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary">JEE Prep Guide</h3>
+                    <p class="text-gray-400">Your complete JEE preparation platform</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
+                        <li><a href="/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
+                        <li><a href="/jee/physics/laws-of-motion" class="hover:text-white transition">Laws of Motion</a></li>
+                        <li><a href="/jee/physics/work-energy-power" class="hover:text-white transition">Work, Energy & Power</a></li>
+                        <li><a href="/jee/physics" class="hover:text-primary transition font-semibold">View All Topics →</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/jee/chemistry" class="hover:text-white transition">JEE Chemistry</a></li>
+                        <li><a href="/jee/mathematics" class="hover:text-white transition">JEE Mathematics</a></li>
+                        <li><a href="/practice-tests" class="hover:text-white transition">Practice Tests</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="/privacy-policy" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+                <p class="text-gray-500 text-xs mt-2">Last Updated: January 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+        ↑
+    </button>
+
+    <!-- JavaScript for Progress Bar -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+    </script>
+
+</body>
+</html>

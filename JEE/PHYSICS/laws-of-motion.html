@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master Newton's Laws of Motion for JEE Main & Advanced 2025-26. Complete notes covering Force, Inertia, Friction, Free Body Diagrams, Circular Motion with 100+ solved examples and PYQs.">
+    <meta name="keywords" content="Laws of Motion JEE, Newton's Laws Physics, JEE Physics Notes, Force and Inertia, Friction JEE, Free Body Diagram, JEE Main 2025, JEE Advanced Physics">
+    <meta name="author" content="JEE Prep Guide">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Laws of Motion - Complete JEE Physics Notes 2025-26">
+    <meta property="og:description" content="Master Newton's Laws of Motion with comprehensive notes, formulas, and 100+ solved examples for JEE Main & Advanced.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion">
+    
+    <title>Laws of Motion - Complete JEE Physics Notes | JEE Prep Guide</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for Equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#f59e0b',
+                        success: '#10b981',
+                        danger: '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .topic-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .topic-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .formula-box { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }
+        .example-box { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
+        .warning-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); }
+        .tip-box { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); }
+        pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.75rem; overflow-x: auto; }
+        code { background: #1e293b; color: #22d3ee; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-family: 'JetBrains Mono', monospace; }
+        .sticky-nav { position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow-y: auto; }
+        .math-display { font-size: 1.1rem; padding: 1rem; margin: 1rem 0; overflow-x: auto; }
+        .diagram-box { background: #f8fafc; border: 2px dashed #cbd5e1; padding: 2rem; text-align: center; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+        .custom-table { border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 12px; }
+        .custom-table thead { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); }
+        .custom-table tbody tr:hover { background: #f1f5f9; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800">
+
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #2563eb, #7c3aed); z-index: 9999; transition: width 0.1s;"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                        J
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">JEE Prep Guide</h1>
+                        <p class="text-sm text-gray-500">Complete JEE Physics Mastery</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-base font-semibold">
+                    <a href="/" class="text-primary hover:text-secondary transition">Home</a>
+                    <a href="/notes" class="text-primary hover:text-secondary transition">All Notes</a>
+                    <a href="/practice" class="text-primary hover:text-secondary transition">Practice</a>
+                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="bg-gray-100 py-3 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" class="text-primary hover:underline" itemprop="item">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li class="text-gray-400">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/notes" class="text-primary hover:underline" itemprop="item">
+                        <span itemprop="name">Notes</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li class="text-gray-400">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
+                        <span itemprop="name">JEE</span>
+                    </a>
+                    <meta itemprop="position" content="3" />
+                </li>
+                <li class="text-gray-400">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/notes/jee/physics" class="text-primary hover:underline" itemprop="item">
+                        <span itemprop="name">Physics</span>
+                    </a>
+                    <meta itemprop="position" content="4" />
+                </li>
+                <li class="text-gray-400">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span class="text-gray-600 font-semibold" itemprop="name">Laws of Motion</span>
+                    <meta itemprop="position" content="5" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Quick Navigation -->
+    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Laws of Motion</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
+                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Force & Inertia
+                </a>
+                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    First Law
+                </a>
+                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Second Law
+                </a>
+                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Third Law
+                </a>
+                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    FBD
+                </a>
+                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Friction
+                </a>
+                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Circular Motion
+                </a>
+                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                    Connected Bodies
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary via-blue-600 to-secondary text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+                    Laws of Motion
+                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                </h2>
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
+                    Master Newton's Laws of Motion with complete notes on Force, Inertia, Friction, Free Body Diagrams, and Circular Motion. Includes 100+ solved problems and all JEE shortcuts.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-10">
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">📚 8 Complete Sections</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <span class="font-bold text-lg">🎯 Quick Formulas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rating Section -->
+    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="name" content="Laws of Motion JEE Notes">
+        <meta itemprop="description" content="Complete study notes for Laws of Motion">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-6 mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="ml-3 text-xl font-bold">
+                            <span itemprop="ratingValue">4.9</span>/5
+                        </span>
+                    </div>
+                    <div class="text-gray-600">
+                        <span itemprop="reviewCount">250</span>+ students rated this helpful
+                    </div>
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary">100+</div>
+                        <div class="text-sm text-gray-600">Solved Examples</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-success">4 hrs</div>
+                        <div class="text-sm text-gray-600">Study Time</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-secondary">Free</div>
+                        <div class="text-sm text-gray-600">Always</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+            <!-- Sidebar Navigation -->
+            <aside class="lg:col-span-1">
+                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <span class="w-2 h-8 bg-primary rounded mr-3"></span>
+                        Table of Contents
+                    </h3>
+                    <ul class="space-y-2 text-base font-medium">
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Force & Inertia</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Newton's First Law</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Newton's Second Law</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Newton's Third Law</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Free Body Diagrams</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Friction</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Circular Motion Forces</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Connected Bodies</a></li>
+                        <li><a href="#formulas" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">📋 All Formulas</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="lg:col-span-3 space-y-12">
+
+                <!-- Chapter 1: Force and Inertia -->
+                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Force and Inertia</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Force and Inertia are the foundational concepts of classical mechanics. Understanding these concepts is essential for mastering Newton's Laws of Motion and solving complex JEE problems involving dynamics.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 What is Force?</h3>
+                        
+                        <p class="text-lg leading-relaxed mb-4">
+                            <strong>Force</strong> is a physical quantity that causes or tends to cause a change in the state of rest or uniform motion of an object. It is a vector quantity with both magnitude and direction.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">SI Unit</h5>
+                                <p class="text-3xl font-mono font-bold text-primary">Newton (N)</p>
+                                <p class="mt-2 text-gray-600">1 N = 1 kg·m/s²</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Dimensional Formula</h5>
+                                <p class="text-3xl font-mono font-bold text-primary">[MLT⁻²]</p>
+                                <p class="mt-2 text-gray-600">Mass × Length × Time⁻²</p>
+                            </div>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-primary mt-6 mb-3">Characteristics of Force:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
+                                <span class="text-primary font-bold">✓</span>
+                                <p>Force is a vector quantity (has magnitude and direction)</p>
+                            </div>
+                            <div class="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
+                                <span class="text-primary font-bold">✓</span>
+                                <p>Multiple forces add using vector addition rules</p>
+                            </div>
+                            <div class="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
+                                <span class="text-primary font-bold">✓</span>
+                                <p>Can change speed, direction, or shape of objects</p>
+                            </div>
+                            <div class="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
+                                <span class="text-primary font-bold">✓</span>
+                                <p>Net force determines the acceleration of a body</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 What is Inertia?</h3>
+                        
+                        <p class="text-lg leading-relaxed mb-4">
+                            <strong>Inertia</strong> is the natural tendency of an object to resist any change in its state of rest or uniform motion. It is a fundamental property of matter.
+                        </p>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> Key Points about Inertia
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                                <li>Inertia is directly proportional to mass</li>
+                                <li>Heavier objects have greater inertia</li>
+                                <li>Inertia is NOT a force; it's a property of matter</li>
+                                <li>Mass itself is the measure of inertia (no separate unit)</li>
+                            </ul>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-primary mt-6 mb-4">Types of Inertia:</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Inertia of Rest</h5>
+                                <p class="mb-3">Tendency to remain at rest</p>
+                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                    <strong>Example:</strong> When a bus starts suddenly, passengers jerk backward
+                                </div>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Inertia of Motion</h5>
+                                <p class="mb-3">Tendency to remain in motion</p>
+                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                    <strong>Example:</strong> When a bus stops suddenly, passengers jerk forward
+                                </div>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                                <h5 class="font-bold text-lg mb-3 text-primary">3. Inertia of Direction</h5>
+                                <p class="mb-3">Tendency to maintain direction</p>
+                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                    <strong>Example:</strong> Mud flies off tangentially from a rotating wheel
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 2: Newton's First Law -->
+                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Newton's First Law of Motion</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <div class="bg-gradient-to-r from-purple-100 to-purple-50 border-l-4 border-secondary p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-secondary mb-3">📜 Statement (Law of Inertia)</h3>
+                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                                "Every object continues in its state of rest or uniform motion in a straight line unless compelled by an external unbalanced force to change that state."
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Mathematical Form</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
+                            <div class="math-display text-2xl">
+                                \[\text{If } \sum \vec{F} = 0, \text{ then } \vec{a} = 0\]
+                            </div>
+                            <p class="mt-4 text-gray-700">No net force → No acceleration → Constant velocity (including zero)</p>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-secondary mt-6 mb-3">Important Implications:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                                <p class="font-semibold">Force is NOT required to maintain motion</p>
+                                <p class="text-sm text-gray-600 mt-1">Objects in motion stay in motion naturally</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                                <p class="font-semibold">Force is required to CHANGE motion</p>
+                                <p class="text-sm text-gray-600 mt-1">Starting, stopping, or turning requires force</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                                <p class="font-semibold">Zero net force ≠ Zero velocity</p>
+                                <p class="text-sm text-gray-600 mt-1">Velocity could be any constant value</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                                <p class="font-semibold">Defines Inertial Reference Frames</p>
+                                <p class="text-sm text-gray-600 mt-1">First law is valid in inertial frames only</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Inertial vs Non-Inertial Frames</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Aspect</th>
+                                        <th class="p-4 text-left">Inertial Frame</th>
+                                        <th class="p-4 text-left">Non-Inertial Frame</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Definition</td>
+                                        <td class="p-4">Frame where First Law holds true</td>
+                                        <td class="p-4">Frame that is accelerating</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Acceleration</td>
+                                        <td class="p-4">Zero or constant velocity</td>
+                                        <td class="p-4">Non-zero acceleration</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Newton's Laws</td>
+                                        <td class="p-4">Apply directly</td>
+                                        <td class="p-4">Need pseudo forces</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Examples</td>
+                                        <td class="p-4">Ground, train at constant velocity</td>
+                                        <td class="p-4">Accelerating car, rotating platform</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Pseudo Force (JEE Advanced Important)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                In a non-inertial frame accelerating with <strong>a₀</strong>, a pseudo force must be applied:
+                            </p>
+                            <div class="math-display bg-white p-4 rounded-lg border-2 border-accent">
+                                \[\vec{F}_{pseudo} = -m\vec{a}_0\]
+                            </div>
+                            <p class="text-sm mt-3 text-gray-700">
+                                Pseudo force acts opposite to the frame's acceleration and on every object in that frame.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 3: Newton's Second Law -->
+                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Newton's Second Law of Motion</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <div class="bg-gradient-to-r from-orange-100 to-orange-50 border-l-4 border-accent p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-accent mb-3">📜 Statement</h3>
+                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                                "The rate of change of momentum of a body is directly proportional to the applied force and takes place in the direction of the force."
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Mathematical Formulation</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-orange-300 text-center">
+                                <h5 class="font-bold text-lg mb-3 text-accent">Standard Form</h5>
+                                <div class="math-display text-3xl">
+                                    \[\vec{F} = m\vec{a}\]
+                                </div>
+                                <p class="text-sm mt-3 text-gray-600">Valid when mass is constant</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-orange-300 text-center">
+                                <h5 class="font-bold text-lg mb-3 text-accent">General Form</h5>
+                                <div class="math-display text-3xl">
+                                    \[\vec{F} = \frac{d\vec{p}}{dt}\]
+                                </div>
+                                <p class="text-sm mt-3 text-gray-600">Valid for variable mass (rockets)</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Derivation from Momentum Form</h3>
+                        
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-6">
+                            <div class="bg-white p-4 rounded-lg space-y-3">
+                                <p><strong>Step 1:</strong> Start with momentum: \(\vec{p} = m\vec{v}\)</p>
+                                <p><strong>Step 2:</strong> Apply Newton's statement: \(\vec{F} \propto \frac{d\vec{p}}{dt}\)</p>
+                                <p><strong>Step 3:</strong> \(\vec{F} = k\frac{d\vec{p}}{dt}\) where k = 1 in SI units</p>
+                                <p><strong>Step 4:</strong> \(\vec{F} = \frac{d(m\vec{v})}{dt}\)</p>
+                                <p><strong>Step 5:</strong> For constant mass: \(\vec{F} = m\frac{d\vec{v}}{dt}\)</p>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[\boxed{\vec{F} = m\vec{a}}\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Impulse and Momentum</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-accent">Impulse-Momentum Theorem</h4>
+                            <div class="math-display text-center text-2xl">
+                                \[\vec{J} = \vec{F} \times \Delta t = \Delta \vec{p} = m(\vec{v} - \vec{u})\]
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                                <div class="bg-orange-50 p-3 rounded text-center">
+                                    <p class="font-semibold">J</p>
+                                    <p class="text-sm">Impulse</p>
+                                </div>
+                                <div class="bg-orange-50 p-3 rounded text-center">
+                                    <p class="font-semibold">F·Δt</p>
+                                    <p class="text-sm">Force × Time</p>
+                                </div>
+                                <div class="bg-orange-50 p-3 rounded text-center">
+                                    <p class="font-semibold">Δp</p>
+                                    <p class="text-sm">Change in momentum</p>
+                                </div>
+                                <div class="bg-orange-50 p-3 rounded text-center">
+                                    <p class="font-semibold">N·s or kg·m/s</p>
+                                    <p class="text-sm">SI Unit</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-accent mt-6 mb-3">Applications of Impulse:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-orange-50 p-4 rounded-lg">
+                                <h5 class="font-bold text-accent mb-2">🏏 Catching a Ball</h5>
+                                <p class="text-sm">Pulling hands back increases Δt, reducing F (since J = FΔt = constant)</p>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg">
+                                <h5 class="font-bold text-accent mb-2">🚗 Airbags</h5>
+                                <p class="text-sm">Airbags increase collision time, significantly reducing impact force</p>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg">
+                                <h5 class="font-bold text-accent mb-2">🏃 Sand Pit</h5>
+                                <p class="text-sm">Sand increases stopping time, reducing force on athlete's legs</p>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A ball of mass 0.5 kg moving at 10 m/s is hit by a bat and returns at 15 m/s. If contact time is 0.01 s, find the average force.
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Given:</strong> m = 0.5 kg, u = 10 m/s, v = -15 m/s (opposite direction), Δt = 0.01 s</p>
+                                
+                                <p class="mb-2 mt-4"><strong>Solution:</strong></p>
+                                <div class="math-display">
+                                    \[\Delta p = m(v - u) = 0.5(-15 - 10) = 0.5 \times (-25) = -12.5 \text{ kg·m/s}\]
+                                </div>
+                                <div class="math-display">
+                                    \[F = \frac{\Delta p}{\Delta t} = \frac{-12.5}{0.01} = -1250 \text{ N}\]
+                                </div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[\text{Magnitude of Force} = 1250 \text{ N}\]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 4: Newton's Third Law -->
+                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Newton's Third Law of Motion</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <div class="bg-gradient-to-r from-green-100 to-green-50 border-l-4 border-success p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-success mb-3">📜 Statement (Action-Reaction Law)</h3>
+                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                                "To every action, there is always an equal and opposite reaction."
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Mathematical Form</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6 text-center">
+                            <div class="math-display text-3xl">
+                                \[\vec{F}_{12} = -\vec{F}_{21}\]
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 mt-6">
+                                <div class="bg-green-50 p-4 rounded">
+                                    <p class="font-mono text-lg">F₁₂</p>
+                                    <p class="text-sm">Force on body 1 by body 2</p>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded">
+                                    <p class="font-mono text-lg">F₂₁</p>
+                                    <p class="text-sm">Force on body 2 by body 1</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Key Characteristics</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-success">✓ Act on DIFFERENT bodies</p>
+                                <p class="text-sm text-gray-600">Never on the same object</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-success">✓ Equal in magnitude</p>
+                                <p class="text-sm text-gray-600">|F₁₂| = |F₂₁| always</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-success">✓ Opposite in direction</p>
+                                <p class="text-sm text-gray-600">180° apart</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-success">✓ Act simultaneously</p>
+                                <p class="text-sm text-gray-600">No time delay</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-success">✓ Same type of force</p>
+                                <p class="text-sm text-gray-600">Both gravitational, both contact, etc.</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-success">✓ Do NOT cancel out</p>
+                                <p class="text-sm text-gray-600">They act on different bodies!</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.3 Action-Reaction Pairs</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Situation</th>
+                                        <th class="p-4 text-left">Action</th>
+                                        <th class="p-4 text-left">Reaction</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4 font-semibold">Book on table</td>
+                                        <td class="p-4">Book pushes table down</td>
+                                        <td class="p-4">Table pushes book up</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Earth-Person</td>
+                                        <td class="p-4">Earth pulls person down</td>
+                                        <td class="p-4">Person pulls Earth up</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Rocket</td>
+                                        <td class="p-4">Rocket pushes gas downward</td>
+                                        <td class="p-4">Gas pushes rocket upward</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Swimming</td>
+                                        <td class="p-4">Swimmer pushes water backward</td>
+                                        <td class="p-4">Water pushes swimmer forward</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-semibold">Walking</td>
+                                        <td class="p-4">Foot pushes ground backward</td>
+                                        <td class="p-4">Ground pushes foot forward</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-danger my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-danger">
+                                <span class="text-2xl mr-2">❌</span> Common Misconception
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>"Action and reaction cancel each other"</strong> - This is WRONG!
+                            </p>
+                            <p class="text-lg">
+                                They act on <strong>different bodies</strong>, so they cannot cancel. For forces to cancel, they must act on the <strong>same body</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 5: Free Body Diagrams -->
+                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Free Body Diagrams (FBD)</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            A <strong>Free Body Diagram</strong> is a simplified representation showing all external forces acting on a single isolated object. Mastering FBD is crucial for solving 70% of Laws of Motion problems in JEE.
+                        </p>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">⭐</span> Why FBD is Important for JEE
+                            </h4>
+                            <p class="text-lg">
+                                70% of Laws of Motion problems become straightforward once you draw the correct FBD. It's your roadmap to the solution - if your FBD is wrong, your entire solution will be wrong!
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Steps to Draw FBD</h3>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
+                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                                <div>
+                                    <p class="font-semibold text-primary">Isolate the body</p>
+                                    <p class="text-sm text-gray-600">Draw only the object you're analyzing, remove everything else</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
+                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                                <div>
+                                    <p class="font-semibold text-primary">Draw weight (mg) downward</p>
+                                    <p class="text-sm text-gray-600">Always acts vertically downward from center of mass</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
+                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                                <div>
+                                    <p class="font-semibold text-primary">Draw Normal force perpendicular to surface</p>
+                                    <p class="text-sm text-gray-600">Always 90° to contact surface, pointing away from surface</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
+                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                                <div>
+                                    <p class="font-semibold text-primary">Draw friction along the surface</p>
+                                    <p class="text-sm text-gray-600">Opposes motion or tendency of motion</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
+                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                                <div>
+                                    <p class="font-semibold text-primary">Draw tension along strings/ropes</p>
+                                    <p class="text-sm text-gray-600">Always pulling, never pushing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
+                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                                <div>
+                                    <p class="font-semibold text-primary">Add any applied external forces</p>
+                                    <p class="text-sm text-gray-600">As given in the problem</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Do's and Don'ts</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-green-400">
+                                <h5 class="font-bold text-lg mb-4 text-success flex items-center">
+                                    <span class="text-2xl mr-2">✅</span> DO Include
+                                </h5>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-success">✓</span>
+                                        <span>All external forces</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-success">✓</span>
+                                        <span>Weight (mg)</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-success">✓</span>
+                                        <span>Normal force (N)</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-success">✓</span>
+                                        <span>Friction (f)</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-success">✓</span>
+                                        <span>Tension (T)</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-success">✓</span>
+                                        <span>Applied forces</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-400">
+                                <h5 class="font-bold text-lg mb-4 text-danger flex items-center">
+                                    <span class="text-2xl mr-2">❌</span> DON'T Include
+                                </h5>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-danger">✗</span>
+                                        <span>Forces the body exerts on others</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-danger">✗</span>
+                                        <span>Internal forces</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-danger">✗</span>
+                                        <span>Velocity or acceleration vectors</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-danger">✗</span>
+                                        <span>"ma" as a force</span>
+                                    </li>
+                                    <li class="flex items-center space-x-2">
+                                        <span class="text-danger">✗</span>
+                                        <span>Connected objects</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Common FBD Cases</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="diagram-box rounded-xl">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Block on Horizontal Surface</h5>
+                                <pre class="text-sm bg-gray-800 text-white p-4 rounded">
+       ↑ N (Normal)
+       |
+   ←f  ■  → F (Applied)
+       |
+       ↓ mg (Weight)
+                                </pre>
+                                <p class="text-sm mt-3 text-gray-600">N = mg (if no vertical force)</p>
+                            </div>
+                            <div class="diagram-box rounded-xl">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Block on Inclined Plane (θ)</h5>
+                                <pre class="text-sm bg-gray-800 text-white p-4 rounded">
+     ↑ N (⊥ to surface)
+    /
+   ■ ← f (up incline)
+  /|
+ / |
+   ↓ mg (vertical)
+                                </pre>
+                                <p class="text-sm mt-3 text-gray-600">N = mg cos θ</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 6: Friction -->
+                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Friction</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Friction is the force that opposes relative motion or tendency of relative motion between two surfaces in contact. It's one of the most important topics for JEE with 3-4 questions expected every year.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.1 Types of Friction</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
+                                <h5 class="font-bold text-lg mb-3 text-danger">Static Friction (fs)</h5>
+                                <p class="mb-3">Prevents motion from starting</p>
+                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                    \[0 \leq f_s \leq \mu_s N\]
+                                </div>
+                                <p class="text-sm mt-3 text-gray-600">Self-adjusting force</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
+                                <h5 class="font-bold text-lg mb-3 text-danger">Kinetic Friction (fk)</h5>
+                                <p class="mb-3">Acts during motion</p>
+                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                    \[f_k = \mu_k N\]
+                                </div>
+                                <p class="text-sm mt-3 text-gray-600">Constant magnitude</p>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
+                                <h5 class="font-bold text-lg mb-3 text-danger">Rolling Friction</h5>
+                                <p class="mb-3">During rolling motion</p>
+                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                    \[f_r = \mu_r N\]
+                                </div>
+                                <p class="text-sm mt-3 text-gray-600">μr << μk << μs</p>
+                            </div>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Important: μs > μk (Always!)
+                            </h4>
+                            <p class="text-lg">
+                                It takes more force to start motion than to maintain it. That's why static friction coefficient is always greater than kinetic friction coefficient.
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.2 Laws of Friction</h3>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                                <p class="font-semibold">1. Friction is proportional to Normal force: f ∝ N</p>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                                <p class="font-semibold">2. Friction is independent of area of contact (for rigid bodies)</p>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                                <p class="font-semibold">3. Kinetic friction is independent of velocity (for moderate speeds)</p>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                                <p class="font-semibold">4. Static friction is self-adjusting up to a maximum value</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.3 Angle of Repose & Angle of Friction</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
+                                <h5 class="font-bold text-lg mb-3 text-danger">Angle of Repose (θ)</h5>
+                                <p class="mb-3">Maximum angle of incline at which object stays at rest</p>
+                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                    \[\tan \theta = \mu_s\]
+                                </div>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
+                                <h5 class="font-bold text-lg mb-3 text-danger">Angle of Friction (λ)</h5>
+                                <p class="mb-3">Angle between N and resultant of N and f</p>
+                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                    \[\tan \lambda = \mu\]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center">
+                                <span class="text-2xl mr-2">💡</span> Key Insight
+                            </h4>
+                            <p class="text-lg">
+                                <strong>Angle of Repose = Angle of Friction</strong> (θ = λ)
+                                <br>This is a frequently asked MCQ in JEE Main!
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.4 Motion on Inclined Plane</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-danger">Key Formulas for Incline (angle θ)</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-red-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Normal Force:</p>
+                                    <div class="math-display">\[N = mg\cos\theta\]</div>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Component along incline:</p>
+                                    <div class="math-display">\[F_\parallel = mg\sin\theta\]</div>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Acceleration (sliding down):</p>
+                                    <div class="math-display">\[a = g(\sin\theta - \mu\cos\theta)\]</div>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Condition for sliding:</p>
+                                    <div class="math-display">\[\theta > \tan^{-1}(\mu_s)\]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2023 Type)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> A block of mass 10 kg is on a horizontal surface with μs = 0.4 and μk = 0.3. A horizontal force of 50 N is applied. Find acceleration. (g = 10 m/s²)
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Step 1:</strong> Find Normal force</p>
+                                <div class="math-display">\[N = mg = 10 \times 10 = 100 \text{ N}\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Step 2:</strong> Find maximum static friction</p>
+                                <div class="math-display">\[f_{s(max)} = \mu_s N = 0.4 \times 100 = 40 \text{ N}\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Step 3:</strong> Check if block moves</p>
+                                <p>Applied force (50 N) > fs(max) (40 N) ∴ Block moves!</p>
+                                
+                                <p class="mb-2 mt-4"><strong>Step 4:</strong> Find kinetic friction</p>
+                                <div class="math-display">\[f_k = \mu_k N = 0.3 \times 100 = 30 \text{ N}\]</div>
+                                
+                                <p class="mb-2 mt-4"><strong>Step 5:</strong> Apply F = ma</p>
+                                <div class="math-display">\[50 - 30 = 10 \times a\]</div>
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    \[a = 2 \text{ m/s}^2\]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 7: Circular Motion Forces -->
+                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Circular Motion & Forces</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            When an object moves in a circle, it requires a net force directed toward the center (centripetal force). Understanding what provides this force is key to solving circular motion problems.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Centripetal Force</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
+                            <div class="math-display text-2xl">
+                                \[F_c = \frac{mv^2}{r} = mr\omega^2 = m \cdot a_c\]
+                            </div>
+                            <p class="mt-4 text-gray-700">Always directed toward center of circular path</p>
+                        </div>
+
+                        <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                                <span class="text-2xl mr-2">⚠️</span> Important Concept
+                            </h4>
+                            <p class="text-lg">
+                                <strong>Centripetal force is NOT a new type of force!</strong> It's the NET force toward the center, provided by other forces like tension, friction, gravity, or normal force.
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Sources of Centripetal Force</h3>
+                        
+                        <div class="overflow-x-auto my-6">
+                            <table class="w-full custom-table shadow-lg">
+                                <thead>
+                                    <tr class="text-white">
+                                        <th class="p-4 text-left">Situation</th>
+                                        <th class="p-4 text-left">Centripetal Force Provided By</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y bg-white">
+                                    <tr>
+                                        <td class="p-4">Stone tied to string (horizontal)</td>
+                                        <td class="p-4">Tension in string</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4">Car turning on flat road</td>
+                                        <td class="p-4">Friction between tires and road</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4">Car on banked road (no friction)</td>
+                                        <td class="p-4">Horizontal component of Normal force</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4">Satellite orbiting Earth</td>
+                                        <td class="p-4">Gravitational force</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4">Electron around nucleus</td>
+                                        <td class="p-4">Electrostatic attraction</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.3 Banking of Roads</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
+                            <h4 class="font-bold text-xl mb-4 text-secondary">Optimal Banking Angle (No Friction)</h4>
+                            <div class="math-display text-center text-2xl">
+                                \[\tan\theta = \frac{v^2}{rg}\]
+                            </div>
+                            <p class="text-center mt-3 text-gray-600">θ = banking angle, v = speed, r = radius, g = gravity</p>
+                            
+                            <h4 class="font-bold text-xl mb-4 mt-6 text-secondary">With Friction (Maximum Speed)</h4>
+                            <div class="math-display text-center text-xl">
+                                \[v_{max} = \sqrt{rg\left(\frac{\mu + \tan\theta}{1 - \mu\tan\theta}\right)}\]
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.4 Centrifugal Force (Pseudo Force)</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                                <h5 class="font-bold text-lg mb-3 text-secondary">Inertial Frame</h5>
+                                <p class="mb-3">Only centripetal force exists (toward center)</p>
+                                <div class="bg-purple-50 p-3 rounded text-center">
+                                    Real force providing circular motion
+                                </div>
+                            </div>
+                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                                <h5 class="font-bold text-lg mb-3 text-secondary">Rotating Frame</h5>
+                                <p class="mb-3">Centrifugal force appears (outward)</p>
+                                <div class="bg-purple-50 p-3 rounded text-center">
+                                    Pseudo force = mv²/r (outward)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 8: Connected Bodies -->
+                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900">Connected Bodies & Pulley Systems</h2>
+                    </div>
+
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Problems involving multiple connected objects are JEE favorites. The key is to draw separate FBDs, write F = ma for each, and use constraint relations.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.1 Strategy for Connected Bodies</h3>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start space-x-4 bg-orange-50 p-4 rounded-lg">
+                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                                <p class="font-semibold">Draw separate FBD for each body</p>
+                            </div>
+                            <div class="flex items-start space-x-4 bg-orange-50 p-4 rounded-lg">
+                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                                <p class="font-semibold">Write F = ma for each body in appropriate direction</p>
+                            </div>
+                            <div class="flex items-start space-x-4 bg-orange-50 p-4 rounded-lg">
+                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                                <p class="font-semibold">Identify constraint relations (same string = same |a|)</p>
+                            </div>
+                            <div class="flex items-start space-x-4 bg-orange-50 p-4 rounded-lg">
+                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                                <p class="font-semibold">Solve simultaneous equations</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.2 Atwood Machine</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="diagram-box rounded-xl">
+                                    <pre class="text-sm bg-gray-800 text-white p-4 rounded">
+    ╔═══╗
+    ║   ║ (Pulley)
+    ║   ║
+   ─┴───┴─
+   |     |
+   |     |
+  [m₁]  [m₂]
+   ↓     ↓
+                                    </pre>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-3 text-accent">Formulas (m₂ > m₁)</h5>
+                                    <div class="space-y-4">
+                                        <div class="bg-orange-50 p-3 rounded">
+                                            <p class="font-semibold mb-1">Acceleration:</p>
+                                            <div class="math-display">\[a = \frac{(m_2 - m_1)g}{m_1 + m_2}\]</div>
+                                        </div>
+                                        <div class="bg-orange-50 p-3 rounded">
+                                            <p class="font-semibold mb-1">Tension:</p>
+                                            <div class="math-display">\[T = \frac{2m_1m_2g}{m_1 + m_2}\]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.3 Two Blocks on Horizontal Surface</h3>
+                        
+                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                            <div class="diagram-box mb-4 rounded-xl">
+                                <pre class="text-sm bg-gray-800 text-white p-4 rounded text-center">
+F → [m₁] ─── [m₂]
+    (Connected by string)
+                                </pre>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-orange-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">System Acceleration:</p>
+                                    <div class="math-display">\[a = \frac{F}{m_1 + m_2}\]</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded">
+                                    <p class="font-semibold mb-2">Tension in String:</p>
+                                    <div class="math-display">\[T = \frac{m_2 \cdot F}{m_1 + m_2}\]</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                                <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced Pattern)
+                            </h4>
+                            <p class="text-lg mb-3">
+                                <strong>Question:</strong> Two masses 5 kg and 3 kg are connected by a string over a frictionless pulley. Find acceleration and tension. (g = 10 m/s²)
+                            </p>
+                            <div class="bg-white p-4 rounded-lg my-3">
+                                <p class="mb-2"><strong>Given:</strong> m₁ = 5 kg, m₂ = 3 kg, g = 10 m/s²</p>
+                                
+                                <p class="mb-2 mt-4"><strong>Acceleration:</strong></p>
+                                <div class="math-display">
+                                    \[a = \frac{(m_1 - m_2)g}{m_1 + m_2} = \frac{(5-3) \times 10}{5+3} = \frac{20}{8} = 2.5 \text{ m/s}^2\]
+                                </div>
+                                
+                                <p class="mb-2 mt-4"><strong>Tension:</strong></p>
+                                <div class="math-display">
+                                    \[T = \frac{2m_1m_2g}{m_1 + m_2} = \frac{2 \times 5 \times 3 \times 10}{8} = \frac{300}{8} = 37.5 \text{ N}\]
+                                </div>
+                                
+                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                    \[\boxed{a = 2.5 \text{ m/s}^2, \quad T = 37.5 \text{ N}}\]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- All Formulas Section -->
+                <section id="formulas" class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl shadow-2xl p-8">
+                    <h2 class="text-4xl font-extrabold mb-6 flex items-center">
+                        <span class="text-5xl mr-4">📋</span>
+                        Complete Formula Sheet - Laws of Motion
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Newton's Laws</h3>
+                            <div class="space-y-3 font-mono">
+                                <p>First Law: ΣF = 0 ⟹ a = 0</p>
+                                <p>Second Law: F = ma = dp/dt</p>
+                                <p>Third Law: F₁₂ = -F₂₁</p>
+                                <p>Momentum: p = mv</p>
+                                <p>Impulse: J = FΔt = Δp</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Friction</h3>
+                            <div class="space-y-3 font-mono">
+                                <p>Static: fs ≤ μsN</p>
+                                <p>Kinetic: fk = μkN</p>
+                                <p>Angle of repose: tan θ = μs</p>
+                                <p>Angle of friction: tan λ = μ</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Inclined Plane</h3>
+                            <div class="space-y-3 font-mono">
+                                <p>Normal: N = mg cos θ</p>
+                                <p>Parallel: F∥ = mg sin θ</p>
+                                <p>a (smooth): a = g sin θ</p>
+                                <p>a (rough): a = g(sin θ - μ cos θ)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Circular Motion</h3>
+                            <div class="space-y-3 font-mono">
+                                <p>Fc = mv²/r = mrω²</p>
+                                <p>Banking: tan θ = v²/rg</p>
+                                <p>Max speed: v = √(μrg)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Atwood Machine</h3>
+                            <div class="space-y-3 font-mono">
+                                <p>a = (m₂-m₁)g/(m₁+m₂)</p>
+                                <p>T = 2m₁m₂g/(m₁+m₂)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">Pseudo Force</h3>
+                            <div class="space-y-3 font-mono">
+                                <p>F_pseudo = -ma₀</p>
+                                <p>(in non-inertial frame with acceleration a₀)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#" class="inline-block bg-white text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                            Download Formula PDF
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Previous Year Questions -->
+                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                    <h2 class="text-4xl font-extrabold mb-6 flex items-center">
+                        <span class="text-5xl mr-4">📝</span>
+                        Previous Year Questions Analysis
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
+                            <ul class="space-y-2 text-lg">
+                                <li>✓ Friction Problems: 35%</li>
+                                <li>✓ Connected Bodies/Pulleys: 25%</li>
+                                <li>✓ Inclined Plane: 20%</li>
+                                <li>✓ Circular Motion Forces: 15%</li>
+                                <li>✓ Pseudo Force: 5%</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
+                            <ul class="space-y-2 text-lg">
+                                <li>✓ Multi-body problems: 30%</li>
+                                <li>✓ Constraint motion: 25%</li>
+                                <li>✓ Variable mass systems: 15%</li>
+                                <li>✓ Non-inertial frames: 20%</li>
+                                <li>✓ Circular + friction: 10%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>Block sliding on inclined plane with friction</li>
+                            <li>Atwood machine with different variations</li>
+                            <li>Two blocks connected on horizontal surface</li>
+                            <li>Minimum force to move block on rough surface</li>
+                            <li>Maximum speed on banked curve</li>
+                            <li>Finding coefficient of friction from motion</li>
+                            <li>Block on accelerating wedge (pseudo force)</li>
+                            <li>Vertical circular motion tension problems</li>
+                            <li>Pulley with friction on incline</li>
+                            <li>Finding acceleration when friction changes</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg">JEE Main:</span>
+                                <span class="text-2xl font-bold">8-12 marks (2-3 questions)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg">JEE Advanced:</span>
+                                <span class="text-2xl font-bold">12-18 marks (3-4 questions)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg">Difficulty Level:</span>
+                                <span class="text-2xl font-bold">Medium to Hard</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg">Study Time Required:</span>
+                                <span class="text-2xl font-bold">15-20 hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                            Download Complete PYQ PDF (2015-2024)
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Practice Problems -->
+                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                    <h2 class="text-4xl font-extrabold mb-6 flex items-center">
+                        <span class="text-5xl mr-4">🎯</span>
+                        Practice Problem Set
+                    </h2>
+                    
+                    <div class="bg-white text-gray-900 p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>A force of 20 N acts on a 5 kg mass. Find the acceleration.</li>
+                            <li>Find maximum static friction if μs = 0.5 and N = 100 N.</li>
+                            <li>A 10 kg block is on a 30° incline. Find normal force. (g = 10 m/s²)</li>
+                            <li>Calculate impulse when a 2 kg ball moving at 5 m/s is stopped.</li>
+                            <li>Two forces 3 N and 4 N act perpendicular to each other. Find resultant.</li>
+                            <li>A car of mass 1000 kg accelerates at 2 m/s². Find the net force.</li>
+                            <li>What is the centripetal force on a 0.5 kg stone moving at 4 m/s in circle of radius 2 m?</li>
+                            <li>An Atwood machine has masses 6 kg and 4 kg. Find acceleration. (g = 10 m/s²)</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>A 5 kg block on 37° incline with μ = 0.3. Will it slide? Find acceleration if it does.</li>
+                            <li>Two blocks 3 kg and 5 kg connected by string on smooth surface. 40 N force applied on 3 kg. Find tension.</li>
+                            <li>Find minimum force to move a 20 kg block on rough surface (μ = 0.4). Force applied at 30° to horizontal.</li>
+                            <li>A car takes a turn on flat road. If μ = 0.5 and r = 100 m, find maximum safe speed.</li>
+                            <li>Block of 2 kg on 10 kg block. If μ between blocks = 0.3 and floor is smooth, find max force on lower block so upper doesn't slide.</li>
+                            <li>A pendulum bob of 0.2 kg swings with speed 3 m/s at bottom. If length = 0.5 m, find tension at bottom.</li>
+                            <li>Find acceleration of wedge-block system if wedge angle is 45° and all surfaces smooth.</li>
+                            <li>A 1000 kg car on banked road of 30°. If radius = 50 m, find optimum speed.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-lg">
+                            <li>A block on accelerating wedge. If wedge acceleration a₀ and angle θ, find condition for block to remain stationary relative to wedge.</li>
+                            <li>Two blocks A (5 kg) on B (10 kg). Force F applied on B. μ between A and B = 0.3, μ between B and ground = 0.1. Find range of F for no slipping.</li>
+                            <li>A chain of length L and mass M hangs with L/4 over edge. If μ = 0.4, will it slide? Find time to fall if it does.</li>
+                            <li>Double Atwood machine: One pulley connected to another. Find acceleration of all masses.</li>
+                            <li>A conical pendulum makes angle θ with vertical. Derive expression for angular velocity.</li>
+                            <li>Block on rotating disc at distance r from center. If μ and ω given, find condition for no slipping.</li>
+                            <li>Rocket of initial mass M₀ ejects gas at rate dm/dt with velocity u relative to rocket. Find thrust and acceleration.</li>
+                            <li>Three blocks on frictionless surface connected. Force F on first. Find acceleration and all tensions.</li>
+                        </ol>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                            Get Solutions PDF with Step-by-Step Working
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Related Notes Section -->
+    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+                <span class="w-2 h-10 bg-primary rounded mr-4"></span>
+                Related Physics Notes
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/jee/physics/kinematics" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Kinematics</h3>
+                    <p class="text-gray-600">Motion in 1D/2D, Projectile motion, Relative velocity</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
+                        Read Notes <span class="ml-2">→</span>
+                    </div>
+                </a>
+
+                <a href="/jee/physics/work-energy-power" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Work, Energy & Power</h3>
+                    <p class="text-gray-600">Work-Energy theorem, Conservation laws, Collisions</p>
+                    <div class="mt-4 text-success font-semibold flex items-center">
+                        Read Notes <span class="ml-2">→</span>
+                    </div>
+                </a>
+
+                <a href="/jee/physics/rotational-motion" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Rotational Motion</h3>
+                    <p class="text-gray-600">Moment of Inertia, Angular momentum, Torque</p>
+                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                        Read Notes <span class="ml-2">→</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                    View All Physics Notes →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Summary Section -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="prose max-w-none">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Laws of Motion - Complete Guide for JEE 2025-26</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Why Laws of Motion is Crucial for JEE?</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            <strong>Laws of Motion</strong> is one of the most important chapters in JEE Physics with 8-15% direct weightage. The concepts form the foundation for:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><strong>Rotational Dynamics</strong> - Extension of Newton's Laws to rotating bodies</li>
+                            <li><strong>Gravitation</strong> - Orbital mechanics uses circular motion concepts</li>
+                            <li><strong>Work-Energy</strong> - Force × displacement relationship</li>
+                            <li><strong>SHM</strong> - Restoring force concepts from Newton's Second Law</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Their Weightage</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-secondary mb-2">High Priority Topics</h4>
+                                <ul class="text-gray-700 space-y-1 text-sm">
+                                    <li>• Free Body Diagrams (40% of problems)</li>
+                                    <li>• Friction - Static, Kinetic, Rolling</li>
+                                    <li>• Connected Bodies & Pulley Systems</li>
+                                    <li>• Motion on Inclined Planes</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-secondary mb-2">Medium Priority Topics</h4>
+                                <ul class="text-gray-700 space-y-1 text-sm">
+                                    <li>• Circular Motion & Centripetal Force</li>
+                                    <li>• Banking of Roads</li>
+                                    <li>• Pseudo Forces in Non-inertial Frames</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Laws of Motion Effectively?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Time Required:</strong> 4-5 days (3 hours/day)</li>
+                                <li>Master Free Body Diagrams first</li>
+                                <li>Focus on Friction and Inclined Plane problems</li>
+                                <li>Practice 75+ MCQs from previous years</li>
+                                <li>Memorize all standard formulas</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Time Required:</strong> 7-10 days (4 hours/day)</li>
+                                <li>Deep dive into constraint motion problems</li>
+                                <li>Master pseudo force applications</li>
+                                <li>Solve multi-body complex systems</li>
+                                <li>Practice integer-type and matrix match questions</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <div>
+                                <strong>Wrong FBD:</strong> Not isolating the body properly, including reaction forces on the same body
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <div>
+                                <strong>Friction direction:</strong> Drawing friction in wrong direction - it opposes relative motion/tendency
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <div>
+                                <strong>Normal ≠ mg always:</strong> On incline N = mg cos θ, not mg
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <div>
+                                <strong>Not checking if block moves:</strong> Compare applied force with maximum static friction first
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-primary">JEE Prep Guide</h3>
+                    <p class="text-gray-400">Your complete JEE preparation platform</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
+                        <li><a href="/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
+                        <li><a href="/jee/physics/laws-of-motion" class="hover:text-white transition">Laws of Motion</a></li>
+                        <li><a href="/jee/physics/work-energy-power" class="hover:text-white transition">Work, Energy & Power</a></li>
+                        <li><a href="/jee/physics" class="hover:text-primary transition font-semibold">View All Topics →</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/jee/chemistry" class="hover:text-white transition">JEE Chemistry</a></li>
+                        <li><a href="/jee/mathematics" class="hover:text-white transition">JEE Mathematics</a></li>
+                        <li><a href="/practice-tests" class="hover:text-white transition">Practice Tests</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="/privacy-policy" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+                <p class="text-gray-500 text-xs mt-2">Last Updated: January 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+        ↑
+    </button>
+
+    <!-- JavaScript for Progress Bar -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+    </script>
+
+</body>
+</html>
