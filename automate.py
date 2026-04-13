@@ -1,5 +1,3 @@
-Python
-
 import os
 import sys
 import re
@@ -36,7 +34,7 @@ SUBJECT_CONFIG = {
 
 SITEMAP_PATH = os.path.join(PROJECT_ROOT, "sitemap.xml")
 
-# Emoji mapping for different topics (you can customize this)
+# Emoji mapping for different topics
 TOPIC_EMOJIS = {
     "solutions": "🧪",
     "ionic equilibrium": "🧊",
@@ -45,6 +43,9 @@ TOPIC_EMOJIS = {
     "thermodynamics": "🔥",
     "electrochemistry": "🔋",
     "organic chemistry": "🧬",
+    "redox reactions": "⚡",
+    "coordination compounds": "💎",
+    "polymers": "🔬",
     "binomial theorem": "📊",
     "calculus": "∫",
     "trigonometry": "📐",
@@ -78,7 +79,6 @@ def generate_image(topic, subject, save_path):
 
     genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-    # Updated prompt for Google Discover optimization
     prompt = f"""Generate an image which is suitable for Google Discover for JEE notes of chapter "{topic}".
 
 Requirements:
@@ -120,12 +120,10 @@ def create_placeholder_image(topic, save_path):
     try:
         from PIL import Image, ImageDraw, ImageFont
         
-        # Create 1200x630 image (Google Discover optimized)
         img = Image.new('RGB', (1200, 630), color=(26, 35, 126))
         draw = ImageDraw.Draw(img)
         
         try:
-            # Try to load system fonts
             font = ImageFont.truetype("arial.ttf", 60)
             small_font = ImageFont.truetype("arial.ttf", 32)
         except:
@@ -136,22 +134,18 @@ def create_placeholder_image(topic, save_path):
                 font = ImageFont.load_default()
                 small_font = font
         
-        # Add gradient effect (simple version)
         for y in range(630):
             color_value = int(26 + (y / 630) * 100)
             draw.rectangle([(0, y), (1200, y+1)], fill=(color_value, color_value+20, 126))
         
-        # Add text
         draw.text((100, 250), topic, fill="white", font=font)
         draw.text((100, 350), "JEE Prep Guide - Complete Notes", fill=(200, 200, 255), font=small_font)
         
-        # Save as PNG
         img.save(save_path, 'PNG', quality=95)
         print(f"✅ Placeholder image saved to {save_path}")
     except ImportError:
         print("⚠️ Pillow not installed. Skipping image generation.")
         print(f"   Install with: pip install Pillow")
-        print(f"   Please manually add image at: {save_path}")
 
 
 # ============================================================
@@ -162,11 +156,9 @@ def setup_notes_folder(topic, subject, html_source_path):
     slug = slugify(topic)
     config = SUBJECT_CONFIG[subject]
 
-    # Create folder: jee/chemistry/solutions/
     notes_folder = os.path.join(config["notes_folder"], slug)
     os.makedirs(notes_folder, exist_ok=True)
 
-    # Move HTML file
     html_dest_path = os.path.join(notes_folder, "index.html")
     
     if os.path.exists(html_source_path):
@@ -181,10 +173,10 @@ def setup_notes_folder(topic, subject, html_source_path):
 
 
 # ============================================================
-# STEP 3: UPDATE SUBJECT INDEX PAGE (FIXED - CORRECT HTML)
+# STEP 3: UPDATE SUBJECT INDEX PAGE
 # ============================================================
 def update_subject_index(topic, subject, slug, chapter_num=None, description="", read_time="3 hrs"):
-    """Add a chapter card to the subject's index.html with EXACT format."""
+    """Add a chapter card to the subject's index.html."""
     config = SUBJECT_CONFIG[subject]
     index_path = config["index_path"]
 
@@ -197,7 +189,6 @@ def update_subject_index(topic, subject, slug, chapter_num=None, description="",
 
     emoji = get_emoji(topic)
 
-    # FIXED: Using your exact HTML format
     card_html = f"""                    <!-- Ch {chapter_num or '?'}: {topic} -->
                     <a href="{slug}/" class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
@@ -228,7 +219,6 @@ def update_subject_index(topic, subject, slug, chapter_num=None, description="",
         content = content.replace(marker, card_html + "\n" + marker)
     else:
         print(f"⚠️ Marker '{marker}' not found in {index_path}")
-        print(f"   Please add this marker where new cards should appear.")
         print(f"\n   Add this card manually:")
         print(f"\n{'='*60}")
         print(card_html)
@@ -330,7 +320,7 @@ def main():
     if len(sys.argv) < 4:
         print("Usage: python automate.py \"Topic Name\" subject path/to/notes.html [chapter_num] [description] [read_time]")
         print("\nExample:")
-        print('  python automate.py "Solutions" chemistry .\\solutions.html 7 "Types of solutions, Raoult\'s law" "4 hrs"')
+        print('  python automate.py "Electrochemistry" chemistry .\\electrochemistry.html 8 "Cells, Nernst equation" "4 hrs"')
         sys.exit(1)
 
     topic = sys.argv[1]
@@ -355,23 +345,15 @@ def main():
     print(f"🌐 URL: {SITE_URL}{SUBJECT_CONFIG[subject]['url_prefix']}{slug}/")
     print(f"{'='*60}\n")
 
-    # Step 1: Setup folder and move HTML
     notes_folder, slug = setup_notes_folder(topic, subject, html_source)
-
-    # Step 2: Generate PNG image (not WebP)
+    
     image_path = os.path.join(notes_folder, f"{slug}.png")
     generate_image(topic, subject, image_path)
-
-    # Step 3: Update subject index with proper HTML format
+    
     update_subject_index(topic, subject, slug, chapter_num, description, read_time)
-
-    # Step 4: Update sitemap
     update_sitemap(subject, slug)
-
-    # Step 5: Git push
     git_push(topic, subject)
-
-    # Step 6: Wait and submit to GSC
+    
     print(f"\n⏳ Waiting 60 seconds for Netlify deploy...")
     import time
     time.sleep(60)
