@@ -1,3 +1,5 @@
+Python
+
 import os
 import sys
 import re
@@ -34,6 +36,23 @@ SUBJECT_CONFIG = {
 
 SITEMAP_PATH = os.path.join(PROJECT_ROOT, "sitemap.xml")
 
+# Emoji mapping for different topics (you can customize this)
+TOPIC_EMOJIS = {
+    "solutions": "🧪",
+    "ionic equilibrium": "🧊",
+    "chemical bonding": "🔗",
+    "atomic structure": "⚛️",
+    "thermodynamics": "🔥",
+    "electrochemistry": "🔋",
+    "organic chemistry": "🧬",
+    "binomial theorem": "📊",
+    "calculus": "∫",
+    "trigonometry": "📐",
+    "mechanics": "⚙️",
+    "optics": "🔬",
+    "default": "📚"
+}
+
 
 def slugify(topic_name):
     """Convert topic name to URL slug."""
@@ -44,24 +63,34 @@ def slugify(topic_name):
     return slug
 
 
+def get_emoji(topic):
+    """Get emoji for topic."""
+    topic_lower = topic.lower()
+    return TOPIC_EMOJIS.get(topic_lower, TOPIC_EMOJIS["default"])
+
+
 # ============================================================
-# STEP 1: GENERATE IMAGE USING GEMINI
+# STEP 1: GENERATE IMAGE USING GEMINI (PNG FORMAT)
 # ============================================================
 def generate_image(topic, subject, save_path):
-    """Generate a topic image using Gemini API."""
+    """Generate a topic image using Gemini API in PNG format."""
     import google.generativeai as genai
 
     genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-    prompt = f"""Create an educational illustration/thumbnail for JEE {subject} chapter: "{topic}". 
-    The image should be:
-    - Clean, modern, and professional
-    - Have a gradient background (blue/purple tones)
-    - Include relevant scientific/mathematical symbols or diagrams
-    - Have the text "{topic}" prominently displayed
-    - Suitable as a blog/article thumbnail (1200x630 aspect ratio)
-    - Educational and appealing to Indian engineering students
-    """
+    # Updated prompt for Google Discover optimization
+    prompt = f"""Generate an image which is suitable for Google Discover for JEE notes of chapter "{topic}".
+
+Requirements:
+- High quality, professional educational thumbnail
+- 1200x630 pixels (ideal for Google Discover and social sharing)
+- Modern gradient background (blue/purple/teal tones)
+- Include relevant scientific diagrams, formulas, or symbols related to "{topic}"
+- Bold, clear text showing "{topic}" prominently
+- Clean, minimal design
+- Appealing to Indian JEE/engineering students
+- Suitable for Google Discover feed
+- Professional and trustworthy appearance"""
 
     print(f"🎨 Generating image for '{topic}' using Gemini...")
 
@@ -87,23 +116,41 @@ def generate_image(topic, subject, save_path):
 
 
 def create_placeholder_image(topic, save_path):
-    """Create a simple placeholder image if Gemini fails."""
+    """Create a simple placeholder image if Gemini fails (PNG format)."""
     try:
         from PIL import Image, ImageDraw, ImageFont
+        
+        # Create 1200x630 image (Google Discover optimized)
         img = Image.new('RGB', (1200, 630), color=(26, 35, 126))
         draw = ImageDraw.Draw(img)
+        
         try:
-            font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 48)
-            small_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 28)
+            # Try to load system fonts
+            font = ImageFont.truetype("arial.ttf", 60)
+            small_font = ImageFont.truetype("arial.ttf", 32)
         except:
-            font = ImageFont.load_default()
-            small_font = font
+            try:
+                font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 60)
+                small_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 32)
+            except:
+                font = ImageFont.load_default()
+                small_font = font
+        
+        # Add gradient effect (simple version)
+        for y in range(630):
+            color_value = int(26 + (y / 630) * 100)
+            draw.rectangle([(0, y), (1200, y+1)], fill=(color_value, color_value+20, 126))
+        
+        # Add text
         draw.text((100, 250), topic, fill="white", font=font)
-        draw.text((100, 330), "JEE Prep Guide - Complete Notes", fill=(200, 200, 255), font=small_font)
-        img.save(save_path, 'WEBP', quality=85)
+        draw.text((100, 350), "JEE Prep Guide - Complete Notes", fill=(200, 200, 255), font=small_font)
+        
+        # Save as PNG
+        img.save(save_path, 'PNG', quality=95)
         print(f"✅ Placeholder image saved to {save_path}")
     except ImportError:
         print("⚠️ Pillow not installed. Skipping image generation.")
+        print(f"   Install with: pip install Pillow")
         print(f"   Please manually add image at: {save_path}")
 
 
@@ -115,7 +162,7 @@ def setup_notes_folder(topic, subject, html_source_path):
     slug = slugify(topic)
     config = SUBJECT_CONFIG[subject]
 
-    # Create folder: jee/chemistry/chemical-bonding/
+    # Create folder: jee/chemistry/solutions/
     notes_folder = os.path.join(config["notes_folder"], slug)
     os.makedirs(notes_folder, exist_ok=True)
 
@@ -134,10 +181,10 @@ def setup_notes_folder(topic, subject, html_source_path):
 
 
 # ============================================================
-# STEP 3: UPDATE SUBJECT INDEX PAGE (Add card)
+# STEP 3: UPDATE SUBJECT INDEX PAGE (FIXED - CORRECT HTML)
 # ============================================================
 def update_subject_index(topic, subject, slug, chapter_num=None, description="", read_time="3 hrs"):
-    """Add a chapter card to the subject's index.html."""
+    """Add a chapter card to the subject's index.html with EXACT format."""
     config = SUBJECT_CONFIG[subject]
     index_path = config["index_path"]
 
@@ -148,21 +195,32 @@ def update_subject_index(topic, subject, slug, chapter_num=None, description="",
     with open(index_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Use relative path from subject index
-    card_html = f"""
-<a href="{slug}/" class="chapter-card" style="text-decoration:none;">
-    <div class="chapter-badge">
-        <span class="badge available">Ch. {chapter_num or '?'}</span>
-        <span class="status-badge available">Available</span>
-    </div>
-    <h3>{topic}</h3>
-    <p>{description}</p>
-    <div class="chapter-meta">
-        <span>{read_time}</span>
-        <span>130+ MCQs</span>
-    </div>
-    <span class="read-btn">Read <span>→</span></span>
-</a>
+    emoji = get_emoji(topic)
+
+    # FIXED: Using your exact HTML format
+    card_html = f"""                    <!-- Ch {chapter_num or '?'}: {topic} -->
+                    <a href="{slug}/" class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. {chapter_num or '?'}</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                        </div>
+                        <div class="text-4xl mb-4">{emoji}</div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                            {topic}
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            {description}
+                        </p>
+                        <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center space-x-4 text-gray-500">
+                                <span>⏱️ {read_time}</span>
+                                <span>📝 150+ MCQs</span>
+                            </div>
+                            <span class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform">
+                                Read →
+                            </span>
+                        </div>
+                    </a>
 """
 
     marker = "<!-- ADD_NEW_CHAPTER_HERE -->"
@@ -203,8 +261,7 @@ def update_sitemap(subject, slug):
         print(f"⚠️ URL already in sitemap: {new_url}")
         return
 
-    sitemap_entry = f"""
-  <url>
+    sitemap_entry = f"""  <url>
     <loc>{new_url}</loc>
     <lastmod>{today}</lastmod>
     <changefreq>monthly</changefreq>
@@ -273,7 +330,7 @@ def main():
     if len(sys.argv) < 4:
         print("Usage: python automate.py \"Topic Name\" subject path/to/notes.html [chapter_num] [description] [read_time]")
         print("\nExample:")
-        print('  python automate.py "Chemical Bonding" chemistry ./chemical-bonding.html 7 "VSEPR theory, hybridization" "4 hrs"')
+        print('  python automate.py "Solutions" chemistry .\\solutions.html 7 "Types of solutions, Raoult\'s law" "4 hrs"')
         sys.exit(1)
 
     topic = sys.argv[1]
@@ -301,11 +358,11 @@ def main():
     # Step 1: Setup folder and move HTML
     notes_folder, slug = setup_notes_folder(topic, subject, html_source)
 
-    # Step 2: Generate image
-    image_path = os.path.join(notes_folder, f"{slug}.webp")
+    # Step 2: Generate PNG image (not WebP)
+    image_path = os.path.join(notes_folder, f"{slug}.png")
     generate_image(topic, subject, image_path)
 
-    # Step 3: Update subject index (ONLY THIS, NOT MAIN INDEX)
+    # Step 3: Update subject index with proper HTML format
     update_subject_index(topic, subject, slug, chapter_num, description, read_time)
 
     # Step 4: Update sitemap
