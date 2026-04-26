@@ -10,6 +10,7 @@ from google import genai
 from google.genai import types
 from io import BytesIO
 from google.oauth2 import service_account
+from googleapiclient.discovery import build
 import requests
 from dotenv import load_dotenv
 
@@ -44,14 +45,29 @@ def get_chapters_to_process():
             if not line or line.startswith('#'):
                 continue
                 
-            # Check if it's a section header (e.g. ⚗️ Physical Chemistry)
+            # Check if it's a section header (e.g. ⚗️ Physical Chemistry, 🚀 Mechanics)
             if '|' not in line:
-                if 'physical' in line.lower():
+                line_lower = line.lower()
+                if 'physical' in line_lower:
                     current_section = 'physical'
-                elif 'inorganic' in line.lower():
+                elif 'inorganic' in line_lower:
                     current_section = 'inorganic'
-                elif 'organic' in line.lower():
+                elif 'organic' in line_lower:
                     current_section = 'organic'
+                elif 'mechanics' in line_lower:
+                    current_section = 'mechanics'
+                elif 'thermodynamics' in line_lower:
+                    current_section = 'thermodynamics'
+                elif 'waves' in line_lower:
+                    current_section = 'waves'
+                elif 'electromagnetism' in line_lower:
+                    current_section = 'electromagnetism'
+                elif 'optics' in line_lower:
+                    current_section = 'optics'
+                elif 'modern' in line_lower:
+                    current_section = 'modern'
+                elif 'maths' in line_lower or 'algebra' in line_lower:
+                    current_section = 'maths'
                 continue
                 
             parts = [p.strip() for p in line.split('|')]
@@ -141,19 +157,71 @@ def generate_html_content(subject, chapter_name, explanation, slug):
     
     prompt = f"""
     You are an expert web developer and JEE educator. 
-    I need you to generate a full HTML page for a new JEE {subject} chapter called "{chapter_name}".
+    I need you to generate a full, premium HTML page for a new JEE {subject} chapter called "{chapter_name}".
     The single-line explanation of this chapter is: {explanation}.
-    The URL path will be `/jee/{subject}/{slug}`.
+    The URL path will be `https://jeeprepguide.netlify.app/jee/{subject}/{slug}`.
     The featured image is at `https://jeeprepguide.netlify.app/jee/{subject}/{slug}/{slug}.png`.
     
-    Please output ONLY valid HTML5 code that strictly follows the same structure, Tailwind CSS styling, and SEO schemas as my other pages on jeeprepguide.netlify.app. 
-    Include:
-    - Detailed, engaging study notes and formulas for {chapter_name}.
-    - SEO Meta tags (title, description, canonical).
-    - JSON-LD schemas (Breadcrumb, Article, FAQ).
-    - Table of contents with sticky sidebar navigation.
-    - Tailwind classes for beautiful styling (e.g. bg-gradient-to-br, shadow-xl).
-    Do not include markdown ```html blocks around the output, just the raw HTML code starting with <!DOCTYPE html>.
+    ### IMPORTANT: UI/UX INSTRUCTIONS
+    You MUST strictly follow the exact UI/UX and code structure of my "Units and Dimensions" page. 
+    Use the following skeleton but adapt it for "{chapter_name}":
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{chapter_name} for JEE 2025-26 | Complete Notes with Formulas & Solved Examples</title>
+        <meta name="description" content="Master {chapter_name} for JEE Main & Advanced with complete notes, formulas, shortcuts & PYQ analysis. 100% free study material.">
+        <!-- Include all SEO tags: og:title, og:description, twitter card, canonical (https://jeeprepguide.netlify.app/jee/{subject}/{slug}), etc. -->
+        
+        <!-- Fonts & Scripts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- JSON-LD Schemas -->
+        <!-- Generate accurate BreadcrumbList, Article, LearningResource, FAQPage (with 5-6 FAQs), HowTo, and Course schemas for {chapter_name} -->
+
+        <style>
+            /* Include the custom styles from the template: topic-card, formula-box, example-box, math-display, etc. */
+            body {{ font-family: 'Inter', sans-serif; }}
+            .topic-card {{ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }}
+            .topic-card:hover {{ transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }}
+            .formula-box {{ background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }}
+            .example-box {{ background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }}
+            .math-display {{ font-size: 1.1rem; padding: 1rem; margin: 1rem 0; overflow-x: auto; }}
+        </style>
+    </head>
+    <body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800">
+        <!-- Progress Bar, Header, Breadcrumb (Update to Home > JEE > {subject.capitalize()} > {chapter_name}) -->
+        
+        <!-- Hero Section with bg-gradient-to-br from-primary via-blue-600 to-secondary -->
+        
+        <!-- Main Content Grid (3 columns for content, 1 for sticky sidebar TOC) -->
+        
+        <!-- Content Sections (At least 5-7 detailed chapters/topics) -->
+        <!-- Use formula-box for formulas, example-box for solved problems, and custom-table for data -->
+        
+        <!-- Previous Year Questions Analysis (Detailed weightage and repeated question types) -->
+        
+        <!-- Practice Problem Set (Level 1, 2, and 3) -->
+        
+        <!-- Related Notes Section & Footer -->
+    </body>
+    </html>
+    ```
+
+    ### CONTENT REQUIREMENTS:
+    1. **Depth**: Provide comprehensive, high-quality educational content. Not just a summary.
+    2. **LaTeX**: Use MathJax `\\( ... \\)` for inline and `\\[ ... \\]` for display math.
+    3. **Solved Examples**: Include at least 5-10 detailed solved examples across the page.
+    4. **SEO**: Ensure the JSON-LD schemas are valid and fully populated.
+    5. **Visuals**: Mention the featured image at `https://jeeprepguide.netlify.app/jee/{subject}/{slug}/{slug}.png`.
+    
+    Output ONLY the raw HTML code. No markdown formatting.
     """
     
     try:
@@ -185,31 +253,37 @@ def update_subject_index(subject, chapter_name, explanation, slug, section, emoj
     with open(index_file, 'r', encoding='utf-8') as f:
         content = f.read()
         
-    # Styling varies slightly by subject and section
+    # Determine theme and marker based on subject and section
     if subject == 'chemistry':
         if section == 'physical':
-            theme_class = "cat-physical"
-            hover_class = "group-hover:text-blue-600 text-blue-600"
+            theme_class, hover_class = "cat-physical", "group-hover:text-blue-600 text-blue-600"
             marker = "<!-- ADD_NEW_PHYSICAL_CHAPTER -->"
         elif section == 'inorganic':
-            theme_class = "cat-inorganic"
-            hover_class = "group-hover:text-red-500 text-red-500"
+            theme_class, hover_class = "cat-inorganic", "group-hover:text-red-500 text-red-500"
             marker = "<!-- ADD_NEW_INORGANIC_CHAPTER -->"
         elif section == 'organic':
-            theme_class = "cat-organic"
-            hover_class = "group-hover:text-emerald-600 text-emerald-600"
+            theme_class, hover_class = "cat-organic", "group-hover:text-emerald-600 text-emerald-600"
             marker = "<!-- ADD_NEW_ORGANIC_CHAPTER -->"
         else:
-            theme_class = "cat-physical"
-            hover_class = "group-hover:text-blue-600 text-blue-600"
+            theme_class, hover_class = "cat-physical", "group-hover:text-blue-600 text-blue-600"
             marker = "<!-- ADD_NEW_CHEMISTRY_CHAPTER -->"
     elif subject == 'maths':
-        theme_class = "cat-algebra"
-        hover_class = "group-hover:text-purple-600 text-purple-600"
+        theme_class, hover_class = "cat-algebra", "group-hover:text-purple-600 text-purple-600"
         marker = "<!-- ADD_NEW_MATHS_CHAPTER -->"
+    elif subject == 'physics':
+        # Physics sections mapping
+        sections_map = {
+            'mechanics': ("cat-mechanics", "group-hover:text-primary text-primary"),
+            'thermodynamics': ("cat-thermodynamics", "group-hover:text-danger text-danger"),
+            'waves': ("cat-waves", "group-hover:text-success text-success"),
+            'electromagnetism': ("cat-electromagnetism", "group-hover:text-accent text-accent"),
+            'optics': ("cat-optics", "group-hover:text-purple-500 text-purple-500"),
+            'modern': ("cat-modern", "group-hover:text-pink-500 text-pink-500")
+        }
+        theme_class, hover_class = sections_map.get(section.lower(), ("cat-mechanics", "group-hover:text-primary text-primary"))
+        marker = f"<!-- ADD_NEW_{section.upper()}_CHAPTER -->"
     else:
-        theme_class = "cat-mechanics"
-        hover_class = "group-hover:text-primary text-primary"
+        theme_class, hover_class = "cat-mechanics", "group-hover:text-primary text-primary"
         marker = f"<!-- ADD_NEW_{subject.upper()}_CHAPTER -->"
 
     if marker not in content:
