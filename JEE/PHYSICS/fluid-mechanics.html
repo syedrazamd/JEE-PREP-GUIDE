@@ -409,8 +409,8 @@
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        primary: '#2563eb',
-                        secondary: '#7c3aed',
+                        primary: '#7c3aed',
+                        secondary: '#6d28d9',
                         accent: '#f59e0b',
                         success: '#10b981',
                         danger: '#ef4444',
@@ -419,116 +419,13 @@
             }
         }
     </script>
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .topic-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .topic-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .formula-box {
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-        }
-        
-        .example-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-        }
-        
-        .warning-box {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-        }
-        
-        .tip-box {
-            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
-        }
-        
-        pre {
-            background: #1e293b;
-            color: #e2e8f0;
-            padding: 1rem;
-            border-radius: 0.75rem;
-            overflow-x: auto;
-        }
-        
-        code {
-            background: #1e293b;
-            color: #22d3ee;
-            padding: 0.2rem 0.5rem;
-            border-radius: 0.25rem;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .sticky-nav {
-            position: sticky;
-            top: 80px;
-            max-height: calc(100vh - 100px);
-            overflow-y: auto;
-        }
-        
-        .math-display {
-            font-size: 1.1rem;
-            padding: 1rem;
-            margin: 1rem 0;
-            overflow-x: auto;
-        }
-        
-        .diagram-box {
-            background: #f8fafc;
-            border: 2px dashed #cbd5e1;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #94a3b8;
-            border-radius: 5px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: #64748b;
-        }
-        
-        .custom-table {
-            border-collapse: separate;
-            border-spacing: 0;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-        
-        .custom-table thead {
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-        }
-        
-        .custom-table tbody tr:hover {
-            background: #f1f5f9;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
 
-<body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800">
+<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
     
     <!-- Reading Progress Bar -->
-    <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #2563eb, #7c3aed); z-index: 9999; transition: width 0.1s;"></div>
+    <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
     
     <!-- Header -->
     <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
@@ -629,7 +526,7 @@
     </section>
     
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-blue-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
@@ -2933,40 +2830,7 @@
             class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
-
-    <!-- Scripts -->
-    <script>
-    // Progress Bar
-    window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById('progress-bar').style.width = scrolled + '%';
-    });
-
-    // Active Navigation Highlighting
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.sticky-nav a[href^="#"]');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('bg-primary', 'text-white');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('bg-primary', 'text-white');
-                }
-            });
-        });
-    });
-    </script>
+<!-- Scripts -->
+<script src="../assets/js/notes.js"></script>
 </body>
 </html>
