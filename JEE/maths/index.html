@@ -28,7 +28,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="JEE Maths Notes 2026 | Calculus, Algebra & All Chapters">
     <meta property="og:description" content="Chapter-wise JEE Maths notes for JEE Main & Advanced 2026. Calculus, Algebra, Coordinate Geometry, Trigonometry, Vectors — formulas, PYQs and shortcuts. Free.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="JEE Mathematics Complete Notes - All Chapters">
@@ -39,7 +39,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/maths/">
     <meta name="twitter:title" content="JEE Maths Notes 2026 | Calculus, Algebra & All Chapters">
     <meta name="twitter:description" content="Free JEE Maths notes for all 35+ chapters — Calculus, Algebra, Coordinate Geometry, Trigonometry, Probability. Formulas, PYQs, shortcuts for JEE 2026.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     
     <!-- Additional SEO Meta Tags -->
@@ -47,9 +47,9 @@
     <meta name="apple-mobile-web-app-title" content="JEE Maths Notes">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,8 +59,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -318,25 +318,7 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
+    
 
     <style>
         body { 
@@ -347,18 +329,23 @@
             background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
         }
         .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            border-radius: 30px !important;
+            background: #1c1c20 !important;
+            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
+                        -12px -12px 24px rgba(255, 255, 255, 0.03) !important;
         }
         .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(-8px) !important;
+            box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.6),
+                        -16px -16px 32px rgba(255, 255, 255, 0.04) !important;
         }
         .progress-bar {
             position: fixed;
             top: 0;
             left: 0;
             height: 4px;
-            background: linear-gradient(to right, #7c3aed, #a78bfa);
+            background: linear-gradient(to right, #5e6ad2, #828fff);
             z-index: 9999;
             transition: width 0.1s;
         }
@@ -405,40 +392,41 @@
             transform-origin: 50% 50%;
         }
     </style>
+<link rel="stylesheet" href="../../css/tailwind.min.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-canvas text-ink">
 
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
 
     <!-- Header/Navigation -->
-    <header class="bg-white shadow-lg sticky top-0 z-50 border-b-4 border-purple-600">
+    <header class="bg-canvas border border-hairline fixed top-0 z-50 border-b border-hairline">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 via-violet-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app" aria-label="JEE Prep Guide Home"><img src="https://jeeprepguide.netlify.app/logo.png" alt="JEE Prep Guide - Free Maths Notes for JEE Mains and Advanced" class="w-10 h-10 rounded-lg"></a>
+                    <div class="w-12 h-12 bg-gradient-to-br from-surface-2 via-primary to-primary rounded-xl flex items-center justify-center border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app" aria-label="JEE Prep Guide Home"><img src="/logo-header.webp" alt="JEE Prep Guide - Free Maths Notes for JEE Mains and Advanced" class="w-10 h-10 rounded-lg"></a>
                     </div>
                     <div>
-                        <a href="https://jeeprepguide.netlify.app/" class="text-2xl font-extrabold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
+                        <a href="https://jeeprepguide.netlify.app/" class="text-2xl font-extrabold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
                             JEE Prep Guide
                         </a>
-                        <p class="text-xs text-gray-500">Your Path to IIT</p>
+                        <p class="text-xs text-ink-tertiary">Your Path to IIT</p>
                     </div>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="https://jeeprepguide.netlify.app/" class="text-gray-700 hover:text-purple-600 font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-purple-600 font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-purple-600 font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-purple-600 font-bold transition border-b-2 border-purple-600 pb-1">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-purple-600 font-semibold transition">Blog</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-primary font-semibold transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary font-bold transition border-b-2 border-primary pb-1">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold transition">Blog</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -448,52 +436,52 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="https://jeeprepguide.netlify.app/" class="text-gray-700 hover:text-purple-600 font-semibold">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-purple-600 font-semibold">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-purple-600 font-semibold">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-purple-600 font-bold">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="text-gray-700 hover:text-purple-600 font-semibold">About</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="text-gray-700 hover:text-purple-600 font-semibold">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary font-bold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="text-ink-muted hover:text-primary font-semibold">About</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="text-ink-muted hover:text-primary font-semibold">Contact</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b border-hairline pt-[81px]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm">
-                <li><a href="https://jeeprepguide.netlify.app/" class="text-purple-600 hover:underline">Home</a></li>
-                <li class="text-gray-400">/</li>
-                <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="text-purple-600 hover:underline">JEE MATHS</a></li>
-                <li class="text-gray-400">/</li>
-                <li class="text-gray-600 font-semibold">Mathematics</li>
+                <li><a href="https://jeeprepguide.netlify.app/" class="text-primary hover:underline">Home</a></li>
+                <li class="text-ink-tertiary">/</li>
+                <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary hover:underline">JEE MATHS</a></li>
+                <li class="text-ink-tertiary">/</li>
+                <li class="text-ink-muted font-semibold">Mathematics</li>
             </ol>
         </div>
     </nav>
 
     <!-- SEO-Friendly Table of Contents -->
-    <section class="bg-gradient-to-r from-purple-50 to-violet-50 py-8 border-b">
+    <section class="bg-surface-1 py-8 border-b border-hairline">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">📐 Complete JEE Mathematics Syllabus Coverage</h2>
+            <h2 class="text-2xl font-bold text-ink mb-4">📐 Complete JEE Mathematics Syllabus Coverage</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-sm">
-                <a href="#algebra-section" class="flex items-center space-x-2 text-purple-700 hover:underline font-semibold bg-white p-3 rounded-lg shadow-sm">
+                <a href="#algebra-section" class="flex items-center space-x-2 text-primary hover:underline font-semibold bg-surface-2 p-3 rounded-lg border border-hairline">
                     <span>🔢</span>
                     <span>Algebra (10)</span>
                 </a>
-                <a href="#calculus-section" class="flex items-center space-x-2 text-blue-600 hover:underline font-semibold bg-white p-3 rounded-lg shadow-sm">
+                <a href="#calculus-section" class="flex items-center space-x-2 text-primary hover:underline font-semibold bg-surface-2 p-3 rounded-lg border border-hairline">
                     <span>📈</span>
                     <span>Calculus (8)</span>
                 </a>
-                <a href="#coordinate-section" class="flex items-center space-x-2 text-red-600 hover:underline font-semibold bg-white p-3 rounded-lg shadow-sm">
+                <a href="#coordinate-section" class="flex items-center space-x-2 text-primary hover:underline font-semibold bg-surface-2 p-3 rounded-lg border border-hairline">
                     <span>📍</span>
                     <span>Coordinate (6)</span>
                 </a>
-                <a href="#trigonometry-section" class="flex items-center space-x-2 text-yellow-600 hover:underline font-semibold bg-white p-3 rounded-lg shadow-sm">
+                <a href="#trigonometry-section" class="flex items-center space-x-2 text-primary hover:underline font-semibold bg-surface-2 p-3 rounded-lg border border-hairline">
                     <span>📐</span>
                     <span>Trigonometry (4)</span>
                 </a>
-                <a href="#vectors-section" class="flex items-center space-x-2 text-green-600 hover:underline font-semibold bg-white p-3 rounded-lg shadow-sm">
+                <a href="#vectors-section" class="flex items-center space-x-2 text-primary hover:underline font-semibold bg-surface-2 p-3 rounded-lg border border-hairline">
                     <span>🎯</span>
                     <span>Vectors & 3D (4)</span>
                 </a>
@@ -502,10 +490,10 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white py-16 md:py-20 relative overflow-hidden">
+    <section class="bg-gradient-to-br from-[#0a0a1a] via-[#131316] to-[#1c1c20] text-ink py-16 md:py-20 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl float-animation"></div>
-            <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-[#5e6ad2] rounded-full blur-3xl float-animation"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#828fff] rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -513,38 +501,38 @@
                 <div>
                     <div class="flex items-center mb-4">
                         <span class="text-6xl mr-4">📐</span>
-                        <span class="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold">
+                        <span class="bg-surface-3 border border-hairline backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold">
                             JEE Main & Advanced 2025-26
                         </span>
                     </div>
                     <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
                         JEE Mathematics
-                        <span class="block text-yellow-300">Complete Notes</span>
+                        <span class="block text-primary">Complete Notes</span>
                     </h1>
                     <p class="text-xl opacity-95 leading-relaxed mb-8">
                         All Maths chapters for JEE Main & Advanced 2026 — Calculus, Algebra, Coordinate Geometry, Trigonometry, Vectors, Probability and more
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <div class="bg-surface-3 border border-hairline backdrop-blur-md px-6 py-3 rounded-full">
                             <span class="font-bold">📚 35+ Chapters</span>
                         </div>
-                        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <div class="bg-surface-3 border border-hairline backdrop-blur-md px-6 py-3 rounded-full">
                             <span class="font-bold">✍️ 1500+ Examples</span>
                         </div>
-                        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                        <div class="bg-surface-3 border border-hairline backdrop-blur-md px-6 py-3 rounded-full">
                             <span class="font-bold">🎯 100% Free</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Progress Stats -->
-                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl">
+                <div class="bg-surface-2 border border-hairline backdrop-blur-md p-8 rounded-3xl">
                     <h3 class="text-2xl font-bold mb-6">Your Progress</h3>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center">
                             <div class="relative inline-block">
                                 <svg class="w-24 h-24">
-                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.2)" stroke-width="8" fill="none"/>
+                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
                                     <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#fbbf24" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="215.3"/>
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center">
@@ -556,7 +544,7 @@
                         <div class="text-center">
                             <div class="relative inline-block">
                                 <svg class="w-24 h-24">
-                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.2)" stroke-width="8" fill="none"/>
+                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
                                     <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#fbbf24" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="0"/>
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center">
@@ -566,9 +554,9 @@
                             <p class="mt-2 font-semibold">Free Forever</p>
                         </div>
                     </div>
-                    <div class="mt-6 bg-white/10 p-4 rounded-xl">
+                    <div class="mt-6 bg-surface-3 border border-hairline p-4 rounded-xl">
                         <p class="text-sm opacity-90">
-                            <span class="font-bold text-yellow-300">✨ New:</span> Quadratic Equations & Complex Numbers chapters are now live!
+                            <span class="font-bold text-primary">✨ New:</span> Quadratic Equations & Complex Numbers chapters are now live!
                         </p>
                     </div>
                 </div>
@@ -577,21 +565,21 @@
     </section>
     
     <!-- Rating Section -->
-    <section class="py-8 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-8 bg-canvas border-y border-hairline" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="JEE Mathematics Complete Notes">
         <meta itemprop="description" content="Complete Mathematics study material for JEE">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-3xl">⭐⭐⭐⭐⭐</span>
-                        <span class="ml-3 text-2xl font-bold">
+                        <span class="text-primary text-3xl">⭐⭐⭐⭐⭐</span>
+                        <span class="ml-3 text-2xl font-bold text-ink">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600 text-lg">
+                    <div class="text-ink-muted text-lg">
                         Based on <span itemprop="reviewCount">320</span>+ student reviews
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -600,16 +588,16 @@
                 
                 <div class="flex items-center space-x-8 text-center">
                     <div>
-                        <div class="text-3xl font-bold text-purple-600">5/35</div>
-                        <div class="text-sm text-gray-600">Chapters Live</div>
+                        <div class="text-3xl font-bold text-primary">5/35</div>
+                        <div class="text-sm text-ink-muted">Chapters Live</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-violet-600">1500+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-3xl font-bold text-primary">1500+</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-indigo-600">100%</div>
-                        <div class="text-sm text-gray-600">Free Forever</div>
+                        <div class="text-3xl font-bold text-primary">100%</div>
+                        <div class="text-sm text-ink-muted">Free Forever</div>
                     </div>
                 </div>
             </div>
@@ -617,8 +605,8 @@
     </section>
 
     <!-- Filter & Search Section -->
-    <section class="py-8 bg-white border-b sticky top-[73px] z-40 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="sticky top-[450px] z-40 bg-canvas border-b border-hairline shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <!-- Search -->
                 <div class="relative flex-1 max-w-md">
@@ -626,31 +614,31 @@
                         type="text" 
                         id="searchInput"
                         placeholder="Search chapters... (e.g., Integration, Matrices)" 
-                        class="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-full focus:border-purple-600 focus:outline-none transition"
+                        class="w-full pl-12 pr-4 py-3 bg-surface-2 border-2 border-hairline-strong rounded-full focus:border-primary focus:outline-none transition text-ink placeholder-ink-subtle"
                     >
-                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-ink-subtle" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
 
                 <!-- Category Filters -->
                 <div class="flex flex-wrap gap-2">
-                    <button onclick="filterChapters('all')" class="filter-btn active px-4 py-2 rounded-full font-semibold bg-purple-600 text-white transition" data-filter="all">
+                    <button onclick="filterChapters('all')" class="filter-btn active px-4 py-2 rounded-full font-semibold bg-primary text-ink transition" data-filter="all">
                         All (35+)
                     </button>
-                    <button onclick="filterChapters('algebra')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-purple-600 hover:text-white transition" data-filter="algebra">
+                    <button onclick="filterChapters('algebra')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition" data-filter="algebra">
                         🔢 Algebra
                     </button>
-                    <button onclick="filterChapters('calculus')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition" data-filter="calculus">
+                    <button onclick="filterChapters('calculus')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition" data-filter="calculus">
                         📈 Calculus
                     </button>
-                    <button onclick="filterChapters('coordinate')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-red-500 hover:text-white transition" data-filter="coordinate">
+                    <button onclick="filterChapters('coordinate')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-surface-2 hover:text-ink transition" data-filter="coordinate">
                         📍 Coordinate
                     </button>
-                    <button onclick="filterChapters('trigonometry')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-yellow-500 hover:text-white transition" data-filter="trigonometry">
+                    <button onclick="filterChapters('trigonometry')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-surface-2 hover:text-ink transition" data-filter="trigonometry">
                         📐 Trigonometry
                     </button>
-                    <button onclick="filterChapters('vectors')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-green-600 hover:text-white transition" data-filter="vectors">
+                    <button onclick="filterChapters('vectors')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition" data-filter="vectors">
                         🎯 Vectors & 3D
                     </button>
                 </div>
@@ -659,145 +647,145 @@
     </section>
 
     <!-- Chapters Grid -->
-    <section class="py-16 bg-gray-50">
+    <section class="pt-[81px] pb-16 bg-surface-1">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- ============================================ -->
             <!-- ALGEBRA SECTION -->
             <!-- ============================================ -->
-<div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#f5f3ff;border-radius:1rem;border-left:4px solid #7c3aed;">
-  <h2 style="font-size:1.2rem;font-weight:800;color:#4c1d95;margin-bottom:0.5rem;">
+<div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#1c1c20;border-radius:1rem;border-left:4px solid #5e6ad2;">
+  <h2 style="font-size:1.2rem;font-weight:800;color:#d0d6e0;margin-bottom:0.5rem;">
     JEE Maths Notes — All Chapters 2026
   </h2>
-  <p style="font-size:0.95rem;line-height:1.8;color:#374151;margin:0;">
+  <p style="font-size:0.95rem;line-height:1.8;color:#8a8f98;margin:0;">
     This page covers all 35+ JEE Mathematics chapters with chapter-wise notes, important formulas, PYQs, and shortcuts for JEE Main & Advanced 2026. Chapters are organised across five sections: Algebra (sets, complex numbers, quadratic equations, sequences & series, permutations & combinations, binomial theorem, matrices & determinants), Trigonometry, Coordinate Geometry (straight lines, circles, parabola, ellipse, hyperbola), Calculus (limits, derivatives, integrals, differential equations, applications of derivatives), and Miscellaneous (vectors, 3D geometry, probability, statistics). All notes are free — no login required.
   </p>
 </div>
             <div class="mb-16" id="algebra-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-purple-600 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">🔢 Algebra</h2>
-                        <p class="text-gray-600">Foundation of Mathematics • 10 Chapters • ~30% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">🔢 Algebra</h2>
+                        <p class="text-ink-muted">Foundation of Mathematics • 10 Chapters • ~30% JEE Weightage</p>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="algebra-grid">
                     
                     <!-- Ch 1: Sets, Relations & Functions (Available) -->
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="chapter-card bg-white border-l-4 cat-algebra p-6 rounded-2xl shadow-lg card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 1</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 1</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">📦</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Sets
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                             Set theory, Venn diagrams, unions, intersection
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 100+ MCQs</span>
                             </div>
-                            <span class="text-purple-600 font-bold group-hover:translate-x-2 transition-transform">
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform">
                                 Read →
                             </span>
                         </div>
                     </a>
 
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="chapter-card bg-white border-l-4 cat-algebra p-6 rounded-2xl shadow-lg card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">📦</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Relations & Functions
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                            Types of relations, types of functions, domain, range, composition of functions, inverse
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 100+ MCQs</span>
                             </div>
-                            <span class="text-purple-600 font-bold group-hover:translate-x-2 transition-transform">
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform">
                                 Read →
                             </span>
                         </div>
                     </a>
 
                     <!-- Ch 2: Complex Numbers (Available) -->
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="chapter-card bg-white border-l-4 cat-algebra p-6 rounded-2xl shadow-lg card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 3</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 3</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🌀</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Complex Numbers
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                             Argand plane, modulus, argument, polar form, De Moivre's theorem, roots of unity, geometry of complex numbers
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <span class="text-purple-600 font-bold group-hover:translate-x-2 transition-transform">
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform">
                                 Read →
                             </span>
                         </div>
                     </a>
 
                     <!-- Ch 3: Quadratic Equations (Available) -->
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="chapter-card bg-white border-l-4 cat-algebra p-6 rounded-2xl shadow-lg card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">✖️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Quadratic Equations
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                             Roots, discriminant, Vieta's formulas, nature of roots, quadratic inequalities, location of roots, common roots
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3.5 hrs</span>
                                 <span>📝 130+ MCQs</span>
                             </div>
-                            <span class="text-purple-600 font-bold group-hover:translate-x-2 transition-transform">
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform">
                                 Read →
                             </span>
                         </div>
                     </a>
 
                     <!-- Ch 4: Sequences & Series (Coming Soon) -->
-                     <a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="chapter-card bg-white border-l-4 cat-algebra p-6 rounded-2xl shadow-lg card-hover group" data-category="algebra" data-status="available">
+                     <a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">✖️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Sequences & Series
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                             AP, GP, HP, AGP, special series, sum to n terms, AM-GM-HM inequality, telescoping series
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 130+ MCQs</span>
                             </div>
-                            <span class="text-purple-600 font-bold group-hover:translate-x-2 transition-transform">
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform">
                                 Read →
                             </span>
                         </div>
@@ -805,24 +793,24 @@
 
 
                     <!-- Ch 5: Permutations & Combinations (Coming Soon) -->
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="chapter-card bg-white border-l-4 cat-algebra p-6 rounded-2xl shadow-lg card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">✖️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Permutations & Combinations
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                              Fundamental counting, nPr, nCr, circular permutations, derangements, distribution problems
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3.5 hrs</span>
                                 <span>📝 130+ MCQs</span>
                             </div>
-                            <span class="text-purple-600 font-bold group-hover:translate-x-2 transition-transform">
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform">
                                 Read →
                             </span>
                         </div>
@@ -830,32 +818,32 @@
 
 
                     <!-- Ch 6: Binomial Theorem -->
-                    <div class="chapter-card bg-white border-l-4 cat-algebra p-6 rounded-2xl shadow-lg card-hover group" data-category="algebra" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 6</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 6</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">📐</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">Binomial Theorem</h3>
-                        <p class="text-gray-600 mb-4">Binomial expansion, general term, middle term, properties of coefficients</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Binomial Theorem</h3>
+                        <p class="text-ink-muted mb-4">Binomial expansion, general term, middle term, properties of coefficients</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 1.5 hrs</span><span>🎯 Medium</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 1.5 hrs</span><span>🎯 Medium</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
 
                     <!-- Ch 7: Matrices & Determinants -->
-                    <div class="chapter-card bg-white border-l-4 cat-algebra p-6 rounded-2xl shadow-lg card-hover group" data-category="algebra" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 7</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 7</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">🔢</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition">Matrices &amp; Determinants</h3>
-                        <p class="text-gray-600 mb-4">Types of matrices, operations, inverse, Cramer's rule, rank</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Matrices &amp; Determinants</h3>
+                        <p class="text-ink-muted mb-4">Types of matrices, operations, inverse, Cramer's rule, rank</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                 </div><!-- /algebra-grid -->
@@ -864,53 +852,53 @@
             <!-- TRIGONOMETRY SECTION -->
             <div class="mb-16" id="trigonometry-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-yellow-500 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">📐 Trigonometry</h2>
-                        <p class="text-gray-600">Angles, Identities &amp; Equations • 3 Chapters • ~8% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">📐 Trigonometry</h2>
+                        <p class="text-ink-muted">Angles, Identities &amp; Equations • 3 Chapters • ~8% JEE Weightage</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="trigonometry-grid">
                     <!-- Ch 8: Trig Functions -->
-                    <div class="chapter-card bg-white border-l-4 cat-trigonometry p-6 rounded-2xl shadow-lg card-hover group" data-category="trigonometry" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-trigonometry p-6 rounded-2xl card-hover group" data-category="trigonometry" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 8</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 8</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">📐</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition">Trigonometric Functions &amp; Identities</h3>
-                        <p class="text-gray-600 mb-4">Ratios, identities, compound angles, multiple angles, sub-multiple angles</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Trigonometric Functions &amp; Identities</h3>
+                        <p class="text-ink-muted mb-4">Ratios, identities, compound angles, multiple angles, sub-multiple angles</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 9: Inverse Trig -->
-                    <div class="chapter-card bg-white border-l-4 cat-trigonometry p-6 rounded-2xl shadow-lg card-hover group" data-category="trigonometry" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-trigonometry p-6 rounded-2xl card-hover group" data-category="trigonometry" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 9</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 9</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">🔄</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition">Inverse Trigonometric Functions</h3>
-                        <p class="text-gray-600 mb-4">Domain, range, principal values, properties, equations</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Inverse Trigonometric Functions</h3>
+                        <p class="text-ink-muted mb-4">Domain, range, principal values, properties, equations</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 10: Trig Equations -->
-                    <div class="chapter-card bg-white border-l-4 cat-trigonometry p-6 rounded-2xl shadow-lg card-hover group" data-category="trigonometry" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-trigonometry p-6 rounded-2xl card-hover group" data-category="trigonometry" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 10</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 10</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">⚡</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition">Trigonometric Equations</h3>
-                        <p class="text-gray-600 mb-4">General solutions, principal solutions, methods of solving</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Trigonometric Equations</h3>
+                        <p class="text-ink-muted mb-4">General solutions, principal solutions, methods of solving</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 1.5 hrs</span><span>🎯 Medium</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 1.5 hrs</span><span>🎯 Medium</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                 </div><!-- /trigonometry-grid -->
@@ -919,81 +907,81 @@
             <!-- COORDINATE GEOMETRY SECTION -->
             <div class="mb-16" id="coordinate-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-red-500 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">📍 Coordinate Geometry</h2>
-                        <p class="text-gray-600">Lines, Circles &amp; Conics • 5 Chapters • ~20% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">📍 Coordinate Geometry</h2>
+                        <p class="text-ink-muted">Lines, Circles &amp; Conics • 5 Chapters • ~20% JEE Weightage</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="coordinate-grid">
                     <!-- Ch 11: Straight Lines -->
-                    <div class="chapter-card bg-white border-l-4 cat-coordinate p-6 rounded-2xl shadow-lg card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 11</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 11</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">📏</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition">Straight Lines</h3>
-                        <p class="text-gray-600 mb-4">Slope, forms of line, angle between lines, distance formulas, locus</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Straight Lines</h3>
+                        <p class="text-ink-muted mb-4">Slope, forms of line, angle between lines, distance formulas, locus</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2.5 hrs</span><span>🎯 Medium</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Medium</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 12: Circles -->
-                    <div class="chapter-card bg-white border-l-4 cat-coordinate p-6 rounded-2xl shadow-lg card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 12</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 12</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">⭕</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition">Circles</h3>
-                        <p class="text-gray-600 mb-4">Standard equation, general form, tangent, chord, family of circles</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Circles</h3>
+                        <p class="text-ink-muted mb-4">Standard equation, general form, tangent, chord, family of circles</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 13: Parabola -->
-                    <div class="chapter-card bg-white border-l-4 cat-coordinate p-6 rounded-2xl shadow-lg card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 13</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 13</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">📈</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition">Parabola</h3>
-                        <p class="text-gray-600 mb-4">Standard forms, focus, directrix, tangent, normal, chord of contact</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Parabola</h3>
+                        <p class="text-ink-muted mb-4">Standard forms, focus, directrix, tangent, normal, chord of contact</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 14: Ellipse -->
-                    <div class="chapter-card bg-white border-l-4 cat-coordinate p-6 rounded-2xl shadow-lg card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 14</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 14</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">🥚</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition">Ellipse</h3>
-                        <p class="text-gray-600 mb-4">Standard equation, eccentricity, tangent, normal, auxiliary circle</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Ellipse</h3>
+                        <p class="text-ink-muted mb-4">Standard equation, eccentricity, tangent, normal, auxiliary circle</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 15: Hyperbola -->
-                    <div class="chapter-card bg-white border-l-4 cat-coordinate p-6 rounded-2xl shadow-lg card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 15</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 15</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">〰️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition">Hyperbola</h3>
-                        <p class="text-gray-600 mb-4">Standard form, asymptotes, rectangular hyperbola, tangent &amp; normal</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Hyperbola</h3>
+                        <p class="text-ink-muted mb-4">Standard form, asymptotes, rectangular hyperbola, tangent &amp; normal</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                 </div><!-- /coordinate-grid -->
@@ -1002,95 +990,95 @@
             <!-- CALCULUS SECTION -->
             <div class="mb-16" id="calculus-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-blue-600 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">∫ Calculus</h2>
-                        <p class="text-gray-600">Limits, Derivatives &amp; Integrals • 6 Chapters • ~35% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">∫ Calculus</h2>
+                        <p class="text-ink-muted">Limits, Derivatives &amp; Integrals • 6 Chapters • ~35% JEE Weightage</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="calculus-grid">
                     <!-- Ch 16: Limits -->
-                    <div class="chapter-card bg-white border-l-4 cat-calculus p-6 rounded-2xl shadow-lg card-hover group" data-category="calculus" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 16</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 16</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">🔍</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">Limits, Continuity &amp; Differentiability</h3>
-                        <p class="text-gray-600 mb-4">L'Hopital's rule, indeterminate forms, continuity, differentiability</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Limits, Continuity &amp; Differentiability</h3>
+                        <p class="text-ink-muted mb-4">L'Hopital's rule, indeterminate forms, continuity, differentiability</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 17: Differentiation -->
-                    <div class="chapter-card bg-white border-l-4 cat-calculus p-6 rounded-2xl shadow-lg card-hover group" data-category="calculus" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 17</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 17</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">📉</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">Differentiation</h3>
-                        <p class="text-gray-600 mb-4">Chain rule, implicit, parametric, logarithmic differentiation</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Differentiation</h3>
+                        <p class="text-ink-muted mb-4">Chain rule, implicit, parametric, logarithmic differentiation</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 18: Applications of Derivatives -->
-                    <div class="chapter-card bg-white border-l-4 cat-calculus p-6 rounded-2xl shadow-lg card-hover group" data-category="calculus" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 18</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 18</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">🎯</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">Applications of Derivatives</h3>
-                        <p class="text-gray-600 mb-4">Tangent, normal, maxima &amp; minima, monotonicity, rate of change</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Applications of Derivatives</h3>
+                        <p class="text-ink-muted mb-4">Tangent, normal, maxima &amp; minima, monotonicity, rate of change</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 19: Indefinite Integration -->
-                    <div class="chapter-card bg-white border-l-4 cat-calculus p-6 rounded-2xl shadow-lg card-hover group" data-category="calculus" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 19</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 19</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">∫</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">Indefinite Integration</h3>
-                        <p class="text-gray-600 mb-4">Standard integrals, substitution, integration by parts, partial fractions</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Indefinite Integration</h3>
+                        <p class="text-ink-muted mb-4">Standard integrals, substitution, integration by parts, partial fractions</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 20: Definite Integration & Area -->
-                    <div class="chapter-card bg-white border-l-4 cat-calculus p-6 rounded-2xl shadow-lg card-hover group" data-category="calculus" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 20</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 20</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">📊</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">Definite Integration &amp; Area</h3>
-                        <p class="text-gray-600 mb-4">Properties of definite integrals, area under curves, bounded regions</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Definite Integration &amp; Area</h3>
+                        <p class="text-ink-muted mb-4">Properties of definite integrals, area under curves, bounded regions</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 21: Differential Equations -->
-                    <div class="chapter-card bg-white border-l-4 cat-calculus p-6 rounded-2xl shadow-lg card-hover group" data-category="calculus" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 21</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 21</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">🌊</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">Differential Equations</h3>
-                        <p class="text-gray-600 mb-4">Order, degree, variable separable, homogeneous, linear, Bernoulli</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Differential Equations</h3>
+                        <p class="text-ink-muted mb-4">Order, degree, variable separable, homogeneous, linear, Bernoulli</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                 </div><!-- /calculus-grid -->
@@ -1099,39 +1087,39 @@
             <!-- VECTORS & 3D SECTION -->
             <div class="mb-16" id="vectors-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-green-600 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">🔺 Vectors &amp; 3D Geometry</h2>
-                        <p class="text-gray-600">Space Geometry • 2 Chapters • ~12% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">🔺 Vectors &amp; 3D Geometry</h2>
+                        <p class="text-ink-muted">Space Geometry • 2 Chapters • ~12% JEE Weightage</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="vectors-grid">
                     <!-- Ch 22: Vectors -->
-                    <div class="chapter-card bg-white border-l-4 cat-vectors p-6 rounded-2xl shadow-lg card-hover group" data-category="vectors" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-vectors p-6 rounded-2xl card-hover group" data-category="vectors" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 22</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 22</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">➡️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition">Vectors</h3>
-                        <p class="text-gray-600 mb-4">Dot product, cross product, scalar triple product, vector triple product</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Vectors</h3>
+                        <p class="text-ink-muted mb-4">Dot product, cross product, scalar triple product, vector triple product</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 23: 3D Geometry -->
-                    <div class="chapter-card bg-white border-l-4 cat-vectors p-6 rounded-2xl shadow-lg card-hover group" data-category="vectors" data-status="coming-soon">
+                    <div class="chapter-card bg-surface-2 border border-hairline cat-vectors p-6 rounded-2xl card-hover group" data-category="vectors" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 23</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 23</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">🧊</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition">3D Geometry</h3>
-                        <p class="text-gray-600 mb-4">Direction cosines, lines in 3D, planes, angle between them, distance</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">3D Geometry</h3>
+                        <p class="text-ink-muted mb-4">Direction cosines, lines in 3D, planes, angle between them, distance</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                 </div><!-- /vectors-grid -->
@@ -1140,39 +1128,39 @@
             <!-- PROBABILITY & STATISTICS SECTION -->
             <div class="mb-16" id="probability-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-indigo-500 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">📊 Probability &amp; Statistics</h2>
-                        <p class="text-gray-600">Data &amp; Chance • 2 Chapters • ~8% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">📊 Probability &amp; Statistics</h2>
+                        <p class="text-ink-muted">Data &amp; Chance • 2 Chapters • ~8% JEE Weightage</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="probability-grid">
                     <!-- Ch 24: Probability -->
-                    <div class="chapter-card bg-white border-l-4 border-indigo-500 p-6 rounded-2xl shadow-lg card-hover group" data-category="vectors" data-status="coming-soon">
+                    <div class="chapter-card bg-canvas border-l-4 border-hairline-strong p-6 rounded-2xl border border-hairline card-hover group" data-category="vectors" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 24</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="bg-surface-2 text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 24</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">🎲</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition">Probability</h3>
-                        <p class="text-gray-600 mb-4">Classical, conditional probability, Bayes' theorem, Binomial distribution</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Probability</h3>
+                        <p class="text-ink-muted mb-4">Classical, conditional probability, Bayes' theorem, Binomial distribution</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 2.5 hrs</span><span>🎯 Medium</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Medium</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                     <!-- Ch 25: Statistics -->
-                    <div class="chapter-card bg-white border-l-4 border-indigo-500 p-6 rounded-2xl shadow-lg card-hover group" data-category="vectors" data-status="coming-soon">
+                    <div class="chapter-card bg-canvas border-l-4 border-hairline-strong p-6 rounded-2xl border border-hairline card-hover group" data-category="vectors" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 25</span>
-                            <span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
+                            <span class="bg-surface-2 text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 25</span>
+                            <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
                         </div>
                         <div class="text-4xl mb-4">📉</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition">Statistics</h3>
-                        <p class="text-gray-600 mb-4">Mean, median, mode, variance, standard deviation, skewness</p>
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Statistics</h3>
+                        <p class="text-ink-muted mb-4">Mean, median, mode, variance, standard deviation, skewness</p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500"><span>⏱️ 1.5 hrs</span><span>🎯 Easy</span></div>
-                            <span style="display:inline-block;background:#e5e7eb;color:#9ca3af;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
+                            <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 1.5 hrs</span><span>🎯 Easy</span></div>
+                            <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
                     </div>
                 </div><!-- /probability-grid -->
@@ -1182,7 +1170,7 @@
     </section>
 
     <!-- JEE Weightage Info -->
-    <section class="py-16 bg-gradient-to-br from-purple-600 to-violet-700 text-white">
+    <section class="py-16 bg-gradient-to-br from-[#0a0a1a] via-[#131316] to-[#1c1c20] text-ink">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-extrabold mb-4">📊 JEE Mathematics Weightage Analysis</h2>
@@ -1190,7 +1178,7 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl text-center">
+                <div class="bg-surface-2 border border-hairline backdrop-blur-md p-6 rounded-2xl text-center">
                     <div class="text-5xl font-bold mb-2">35%</div>
                     <div class="text-lg font-semibold mb-1">Calculus</div>
                     <div class="text-sm opacity-80 mb-3">8 chapters</div>
@@ -1200,7 +1188,7 @@
                         <p>🔥 Differential Equations</p>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl text-center">
+                <div class="bg-surface-2 border border-hairline backdrop-blur-md p-6 rounded-2xl text-center">
                     <div class="text-5xl font-bold mb-2">30%</div>
                     <div class="text-lg font-semibold mb-1">Algebra</div>
                     <div class="text-sm opacity-80 mb-3">10 chapters</div>
@@ -1210,7 +1198,7 @@
                         <p>🔥 Complex Numbers</p>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl text-center">
+                <div class="bg-surface-2 border border-hairline backdrop-blur-md p-6 rounded-2xl text-center">
                     <div class="text-5xl font-bold mb-2">20%</div>
                     <div class="text-lg font-semibold mb-1">Coordinate</div>
                     <div class="text-sm opacity-80 mb-3">6 chapters</div>
@@ -1220,7 +1208,7 @@
                         <p>🔥 Straight Lines</p>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl text-center">
+                <div class="bg-surface-2 border border-hairline backdrop-blur-md p-6 rounded-2xl text-center">
                     <div class="text-5xl font-bold mb-2">8%</div>
                     <div class="text-lg font-semibold mb-1">Trigonometry</div>
                     <div class="text-sm opacity-80 mb-3">4 chapters</div>
@@ -1229,7 +1217,7 @@
                         <p>🔥 Trig Equations</p>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl text-center">
+                <div class="bg-surface-2 border border-hairline backdrop-blur-md p-6 rounded-2xl text-center">
                     <div class="text-5xl font-bold mb-2">7%</div>
                     <div class="text-lg font-semibold mb-1">Vectors & 3D</div>
                     <div class="text-sm opacity-80 mb-3">4 chapters</div>
@@ -1243,78 +1231,78 @@
     </section>
 
     <!-- Quick Links -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-canvas">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">⚡ Quick Resources</h2>
-                <p class="text-xl text-gray-600">Additional study material to boost your Mathematics preparation</p>
+                <h2 class="text-4xl font-extrabold text-ink mb-4">⚡ Quick Resources</h2>
+                <p class="text-xl text-ink-muted">Additional study material to boost your Mathematics preparation</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="#" class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl shadow-lg text-center card-hover group">
+                <a href="#" class="bg-surface-2 border border-hairline p-8 rounded-2xl text-center card-hover group">
                     <div class="text-5xl mb-4">📋</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition">Formula Sheet</h3>
-                    <p class="text-gray-600">All Maths formulas & identities in one place</p>
+                    <h3 class="text-2xl font-bold text-ink mb-2 group-hover:text-primary transition">Formula Sheet</h3>
+                    <p class="text-ink-muted">All Maths formulas & identities in one place</p>
                 </a>
 
-                <a href="#" class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg text-center card-hover group">
+                <a href="#" class="bg-surface-2 border border-hairline p-8 rounded-2xl text-center card-hover group">
                     <div class="text-5xl mb-4">📝</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition">PYQ Analysis</h3>
-                    <p class="text-gray-600">Last 10 years JEE Maths questions analyzed</p>
+                    <h3 class="text-2xl font-bold text-ink mb-2 group-hover:text-primary transition">PYQ Analysis</h3>
+                    <p class="text-ink-muted">Last 10 years JEE Maths questions analyzed</p>
                 </a>
 
-                <a href="#" class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl shadow-lg text-center card-hover group">
+                <a href="#" class="bg-surface-2 border border-hairline p-8 rounded-2xl text-center card-hover group">
                     <div class="text-5xl mb-4">🎯</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-red-500 transition">Practice Tests</h3>
-                    <p class="text-gray-600">Chapter-wise mock tests for Maths</p>
+                    <h3 class="text-2xl font-bold text-ink mb-2 group-hover:text-primary transition">Practice Tests</h3>
+                    <p class="text-ink-muted">Chapter-wise mock tests for Maths</p>
                 </a>
 
-                <a href="#" class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg text-center card-hover group">
+                <a href="#" class="bg-surface-2 border border-hairline p-8 rounded-2xl text-center card-hover group">
                     <div class="text-5xl mb-4">⚡</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition">Shortcut Tricks</h3>
-                    <p class="text-gray-600">Time-saving tricks for JEE Maths</p>
+                    <h3 class="text-2xl font-bold text-ink mb-2 group-hover:text-primary transition">Shortcut Tricks</h3>
+                    <p class="text-ink-muted">Time-saving tricks for JEE Maths</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- SEO Content Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-surface-1">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="prose max-w-none">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Complete JEE Mathematics Preparation Guide 2025-26</h2>
+                <h2 class="text-3xl font-bold text-ink mb-6">Complete JEE Mathematics Preparation Guide 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-2xl font-bold text-purple-700 mb-4">Why Choose Our Mathematics Notes?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Why Choose Our Mathematics Notes?</h3>
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             Our comprehensive JEE Mathematics notes cover the entire syllabus for both <strong>JEE Main and JEE Advanced</strong>. Each chapter is meticulously crafted by IIT alumni and experienced JEE educators with over 10 years of teaching experience.
                         </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             The notes include <strong>theory, proofs, solved examples, shortcuts, tricks</strong>, and previous year question analysis. Mathematics is the <strong>most scoring subject</strong> in JEE if you practice enough — our notes provide 1500+ solved examples to build your problem-solving speed.
                         </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             Unlike rote learning, our notes focus on <strong>conceptual understanding</strong> and <strong>pattern recognition</strong> so you can solve even unseen problems with confidence.
                         </p>
                     </div>
                     
                     <div>
-                        <h3 class="text-2xl font-bold text-purple-700 mb-4">Chapter-wise JEE Maths Strategy</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Chapter-wise JEE Maths Strategy</h3>
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Calculus (~35%):</strong> The backbone of JEE Maths. Master Limits first, then Differentiation, followed by Integration. Application of Derivatives and Definite Integration are the most frequently asked topics. Practice at least 50 problems per sub-topic.
                         </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Algebra (~30%):</strong> Matrices & Determinants, Probability, and Complex Numbers are high-scoring. Sequences & Series problems require pattern recognition. PnC and Binomial need practice-based mastery.
                         </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Coordinate Geometry (~20%):</strong> Conic sections (Parabola, Ellipse, Hyperbola) are JEE Advanced favorites. Learn parametric forms and standard results. Circle is the easiest and most scoring chapter.
                         </p>
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-purple-50 p-6 rounded-xl border border-purple-200">
-                    <h3 class="text-2xl font-bold text-purple-700 mb-4">📖 How to Use These Maths Notes Effectively?</h3>
-                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                <div class="mt-8 bg-surface-2 p-6 rounded-xl border border-hairline">
+                    <h3 class="text-2xl font-bold text-primary mb-4">📖 How to Use These Maths Notes Effectively?</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                         <li><strong>Start with Sets, Relations & Functions</strong> — Build foundation for Calculus</li>
                         <li><strong>Master Trigonometry early</strong> — It's used everywhere in Calculus and Coordinate Geometry</li>
                         <li><strong>Complete Calculus systematically:</strong> Limits → Differentiation → Application → Integration → Area → DE</li>
@@ -1330,68 +1318,68 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -1399,12 +1387,12 @@
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -1413,31 +1401,31 @@
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="fixed bottom-8 right-8 bg-purple-600 text-white w-14 h-14 rounded-full shadow-2xl hover:bg-violet-700 transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-primary-hover transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
         ↑
     </button>
 
@@ -1502,17 +1490,17 @@
 
             // Update active button
             buttons.forEach(btn => {
-                btn.classList.remove('bg-purple-600', 'bg-blue-600', 'bg-red-500', 'bg-yellow-500', 'bg-green-600', 'text-white');
-                btn.classList.add('bg-gray-200', 'text-gray-700');
+                btn.classList.remove('bg-primary', 'bg-primary', 'bg-surface-2', 'bg-surface-2', 'bg-primary', 'text-ink');
+                btn.classList.add('bg-surface-2', 'text-ink-muted');
                 
                 if (btn.getAttribute('data-filter') === category) {
-                    btn.classList.remove('bg-gray-200', 'text-gray-700');
-                    if (category === 'all') btn.classList.add('bg-purple-600', 'text-white');
-                    else if (category === 'algebra') btn.classList.add('bg-purple-600', 'text-white');
-                    else if (category === 'calculus') btn.classList.add('bg-blue-600', 'text-white');
-                    else if (category === 'coordinate') btn.classList.add('bg-red-500', 'text-white');
-                    else if (category === 'trigonometry') btn.classList.add('bg-yellow-500', 'text-white');
-                    else if (category === 'vectors') btn.classList.add('bg-green-600', 'text-white');
+                    btn.classList.remove('bg-surface-2', 'text-ink-muted');
+                    if (category === 'all') btn.classList.add('bg-primary', 'text-ink');
+                    else if (category === 'algebra') btn.classList.add('bg-primary', 'text-ink');
+                    else if (category === 'calculus') btn.classList.add('bg-primary', 'text-ink');
+                    else if (category === 'coordinate') btn.classList.add('bg-surface-2', 'text-ink');
+                    else if (category === 'trigonometry') btn.classList.add('bg-surface-2', 'text-ink');
+                    else if (category === 'vectors') btn.classList.add('bg-primary', 'text-ink');
                 }
             });
 

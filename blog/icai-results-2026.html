@@ -59,9 +59,9 @@
     <meta name="coverage" content="India">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,8 +71,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -104,7 +104,7 @@
             "name": "JEE Prep Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://jeeprepguide.netlify.app/logo.png",
+                "url": "/logo-header.webp",
                 "width": 200,
                 "height": 200
             }
@@ -262,17 +262,7 @@
         });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    
 
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
@@ -295,37 +285,38 @@
             50% { opacity: 0.5; }
         }
     </style>
+<link rel="stylesheet" href="../css/tailwind.min.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-canvas text-ink">
 
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-50 border-b-4 border-blue-700">
+    <header class="bg-canvas border border-hairline fixed top-0 z-50 border-b-4 border-primary">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="JEE Prep Guide" class="w-10 h-10 rounded-lg"></a>
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary rounded-xl flex items-center justify-center border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="JEE Prep Guide" class="w-10 h-10 rounded-lg"></a>
                     </div>
                     <div>
-                        <a href="https://jeeprepguide.netlify.app/" class="text-2xl font-extrabold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                        <a href="https://jeeprepguide.netlify.app/" class="text-2xl font-extrabold bg-gradient-to-r from-primary to-surface-20 bg-clip-text text-transparent">
                             JEE Prep Guide
                         </a>
-                        <p class="text-xs text-gray-500">Your Path to Success</p>
+                        <p class="text-xs text-ink-tertiary">Your Path to Success</p>
                     </div>
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="https://jeeprepguide.netlify.app/" class="text-gray-700 hover:text-blue-700 font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-blue-700 font-bold transition">Blog</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-blue-700 font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-blue-700 font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-blue-700 font-semibold transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-primary font-semibold transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-primary font-bold transition">Blog</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold transition">Maths</a>
                 </div>
 
-                <button class="md:hidden text-gray-700" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+                <button class="md:hidden text-ink-muted" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -333,33 +324,33 @@
             </div>
             <div id="mobileMenu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="https://jeeprepguide.netlify.app/" class="text-gray-700 font-semibold">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-blue-700 font-bold">Blog</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 font-semibold">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 font-semibold">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-primary font-bold">Blog</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted font-semibold">Maths</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm">
-                <li><a href="https://jeeprepguide.netlify.app/" class="text-blue-700 hover:underline">Home</a></li>
-                <li class="text-gray-400">/</li>
-                <li><a href="https://jeeprepguide.netlify.app/blog" class="text-blue-700 hover:underline">Blog</a></li>
-                <li class="text-gray-400">/</li>
-                <li class="text-gray-600 font-semibold">ICAI CA Final Result January 2026</li>
+                <li><a href="https://jeeprepguide.netlify.app/" class="text-primary hover:underline">Home</a></li>
+                <li class="text-ink-subtle">/</li>
+                <li><a href="https://jeeprepguide.netlify.app/blog" class="text-primary hover:underline">Blog</a></li>
+                <li class="text-ink-subtle">/</li>
+                <li class="text-ink-muted font-semibold">ICAI CA Final Result January 2026</li>
             </ol>
         </div>
     </nav>
 
     <!-- LIVE Update Banner -->
-    <div class="bg-red-600 text-white py-3">
+    <div class="bg-primary text-ink py-3">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center space-x-3">
-            <span class="pulse-dot inline-block w-3 h-3 bg-white rounded-full"></span>
+            <span class="pulse-dot inline-block w-3 h-3 bg-canvas rounded-full"></span>
             <span class="font-bold text-lg">🔴 LIVE UPDATES:</span>
             <span class="text-sm md:text-base">ICAI CA Final Result January 2026 — Check your result NOW at icai.nic.in</span>
         </div>
@@ -376,50 +367,50 @@
 
             <!-- Tags -->
             <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-bold">🔴 LIVE</span>
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold">ICAI Result</span>
-                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">CA Final Jan 2026</span>
-                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-bold">Breaking News</span>
+                <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">🔴 LIVE</span>
+                <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">ICAI Result</span>
+                <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">CA Final Jan 2026</span>
+                <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">Breaking News</span>
             </div>
 
             <!-- Title -->
-            <h1 itemprop="headline" class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-                ICAI CA Final Result January 2026 <span class="text-red-600 blink">LIVE</span> — Check Your CA Result at icai.nic.in [Direct Link]
+            <h1 itemprop="headline" class="text-3xl md:text-5xl font-extrabold text-ink leading-tight mb-6">
+                ICAI CA Final Result January 2026 <span class="text-primary blink">LIVE</span> — Check Your CA Result at icai.nic.in [Direct Link]
             </h1>
 
             <!-- Article Summary -->
-            <p class="article-summary text-xl text-gray-600 leading-relaxed mb-6 border-l-4 border-blue-600 pl-4 bg-blue-50 py-4 rounded-r-lg">
+            <p class="article-summary text-xl text-ink-muted leading-relaxed mb-6 border-l-4 border-primary pl-4 bg-surface-2 py-4 rounded-r-lg">
                 <strong>ICAI CA Final Result January 2026</strong> has been declared by the Institute of Chartered Accountants of India (ICAI). Candidates who appeared for the CA Final and CA Inter examinations can now check their <strong>ICAI result</strong> at the official website <strong>icai.nic.in</strong>. Read on for direct links, step-by-step guide, toppers list, and pass percentage analysis.
             </p>
             <!-- Hero/Featured Image -->
 <figure class="mb-8">
     <img 
-        src="https://jeeprepguide.netlify.app/blog/icai-results-2026.png" 
+        src="https://jeeprepguide.netlify.app/blog/icai-results-2026.webp" 
         alt="ICAI CA Final Result January 2026 - Check at icai.nic.in" 
         title="ICAI CA Final Result January 2026 LIVE Updates"
         width="1200" 
         height="630" 
         loading="eager"
         fetchpriority="high"
-        class="w-full rounded-2xl shadow-lg border border-gray-200"
+        class="w-full rounded-2xl border border-hairline border border-hairline"
         itemprop="image"
     >
-    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
         ICAI CA Final Result January 2026 — Check your result at icai.nic.in | Image: JEE Prep Guide
     </figcaption>
 </figure>
             <!-- Author & Date Info -->
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 pb-6 border-b border-gray-200">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 pb-6 border-b border-hairline">
                 <div class="flex items-center space-x-3 mb-3 sm:mb-0">
-                    <div class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">JP</span>
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-ink font-bold text-sm">JP</span>
                     </div>
                     <div>
-                        <p class="font-semibold text-gray-900" itemprop="author">JEE Prep Guide Team</p>
-                        <p class="text-sm text-gray-500">Published: January 20, 2026 • Updated: 6:00 PM IST</p>
+                        <p class="font-semibold text-ink" itemprop="author">JEE Prep Guide Team</p>
+                        <p class="text-sm text-ink-subtle">Published: January 20, 2026 • Updated: 6:00 PM IST</p>
                     </div>
                 </div>
-                <div class="flex items-center space-x-3 text-sm text-gray-500">
+                <div class="flex items-center space-x-3 text-sm text-ink-subtle">
                     <span>📖 6 min read</span>
                     <span>•</span>
                     <span>👁️ 50,000+ views</span>
@@ -427,9 +418,9 @@
             </div>
 
             <!-- Table of Contents -->
-            <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-10">
-                <h2 class="text-xl font-bold text-gray-900 mb-4">📋 Table of Contents</h2>
-                <ul class="space-y-2 text-blue-700">
+            <div class="bg-surface-1 border border-hairline rounded-2xl p-6 mb-10">
+                <h2 class="text-xl font-bold text-ink mb-4">📋 Table of Contents</h2>
+                <ul class="space-y-2 text-primary">
                     <li><a href="#overview" class="hover:underline font-medium">1. ICAI CA Final Result Jan 2026 — Overview</a></li>
                     <li><a href="#direct-links" class="hover:underline font-medium">2. Direct Links to Check CA Result</a></li>
                     <li><a href="#how-to-check" class="hover:underline font-medium">3. How to Check CA Final Result at icai.nic.in (Step-by-Step)</a></li>
@@ -444,20 +435,20 @@
             </div>
 
             <!-- Quick Result Check Box -->
-            <div class="bg-gradient-to-r from-blue-700 to-blue-900 text-white p-8 rounded-2xl mb-10 shadow-xl">
+            <div class="bg-gradient-to-r from-primary to-primary text-ink p-8 rounded-2xl mb-10 border border-hairline">
                 <h2 class="text-2xl font-bold mb-4">⚡ Quick Result Check — ICAI CA Final Result Jan 2026</h2>
                 <p class="mb-6 opacity-90">Click on the direct links below to check your CA Final or CA Inter result instantly:</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <a href="https://icai.nic.in" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-800 font-bold py-4 px-6 rounded-xl text-center hover:bg-blue-50 transition shadow-lg text-lg">
+                    <a href="https://icai.nic.in" target="_blank" rel="noopener noreferrer" class="bg-canvas text-primary font-bold py-4 px-6 rounded-xl text-center hover:bg-surface-2 transition border border-hairline text-lg">
                         🔗 icai.nic.in — Check Result
                     </a>
-                    <a href="https://icaiexam.icai.org" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-800 font-bold py-4 px-6 rounded-xl text-center hover:bg-blue-50 transition shadow-lg text-lg">
+                    <a href="https://icaiexam.icai.org" target="_blank" rel="noopener noreferrer" class="bg-canvas text-primary font-bold py-4 px-6 rounded-xl text-center hover:bg-surface-2 transition border border-hairline text-lg">
                         🔗 icaiexam.icai.org — Check Result
                     </a>
-                    <a href="https://caresults.icai.org" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 text-blue-900 font-bold py-4 px-6 rounded-xl text-center hover:bg-yellow-300 transition shadow-lg text-lg">
+                    <a href="https://caresults.icai.org" target="_blank" rel="noopener noreferrer" class="bg-surface-4 text-primary font-bold py-4 px-6 rounded-xl text-center hover:bg-surface-3 transition border border-hairline text-lg">
                         🔗 caresults.icai.org — Direct Link
                     </a>
-                    <a href="https://icai.org" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 text-blue-900 font-bold py-4 px-6 rounded-xl text-center hover:bg-yellow-300 transition shadow-lg text-lg">
+                    <a href="https://icai.org" target="_blank" rel="noopener noreferrer" class="bg-surface-4 text-primary font-bold py-4 px-6 rounded-xl text-center hover:bg-surface-3 transition border border-hairline text-lg">
                         🔗 icai.org — Official Portal
                     </a>
                 </div>
@@ -465,63 +456,63 @@
 
             <!-- Section 1: Overview -->
             <section id="overview" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     1. ICAI CA Final Result January 2026 — Complete Overview
                 </h2>
                 <!-- ICAI Website Screenshot -->
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-ink-muted leading-relaxed mb-4">
                     The <strong>Institute of Chartered Accountants of India (ICAI)</strong> has officially declared the <strong>CA Final Result for January 2026</strong> examination session. Thousands of CA aspirants across India who appeared for the CA Final examination can now check their <strong>ICAI result</strong> on the official website <strong>icai.nic.in</strong>.
                 </p>
 
-                <p class="text-gray-700 leading-relaxed mb-6">
+                <p class="text-ink-muted leading-relaxed mb-6">
                     The <strong>CA Final January 2026 examination</strong> was conducted across multiple centres in India. The result includes both <strong>Group I and Group II</strong> marks, along with the overall pass/fail status. Candidates can also check their <strong>CA Inter result January 2026</strong> on the same portal.
                 </p>
 
                 <!-- Overview Table -->
                 <div class="overflow-x-auto mb-6">
-                    <table class="w-full border-collapse border border-gray-300 rounded-xl overflow-hidden">
+                    <table class="w-full border-collapse border border-hairline-strong rounded-xl overflow-hidden">
                         <thead>
-                            <tr class="bg-blue-700 text-white">
-                                <th class="border border-blue-600 px-4 py-3 text-left font-bold">Particulars</th>
-                                <th class="border border-blue-600 px-4 py-3 text-left font-bold">Details</th>
+                            <tr class="bg-primary text-ink">
+                                <th class="border border-primary px-4 py-3 text-left font-bold">Particulars</th>
+                                <th class="border border-primary px-4 py-3 text-left font-bold">Details</th>
                             </tr>
                         </thead>
-                        <tbody class="text-gray-700">
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Exam Name</td>
-                                <td class="border border-gray-200 px-4 py-3">CA Final Examination January 2026</td>
+                        <tbody class="text-ink-muted">
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Exam Name</td>
+                                <td class="border border-hairline px-4 py-3">CA Final Examination January 2026</td>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Conducting Body</td>
-                                <td class="border border-gray-200 px-4 py-3">Institute of Chartered Accountants of India (ICAI)</td>
+                            <tr class="bg-surface-1">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Conducting Body</td>
+                                <td class="border border-hairline px-4 py-3">Institute of Chartered Accountants of India (ICAI)</td>
                             </tr>
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Exam Session</td>
-                                <td class="border border-gray-200 px-4 py-3">January 2026</td>
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Exam Session</td>
+                                <td class="border border-hairline px-4 py-3">January 2026</td>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Result Date</td>
-                                <td class="border border-gray-200 px-4 py-3"><strong>January 2026 (3rd/4th Week)</strong></td>
+                            <tr class="bg-surface-1">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Result Date</td>
+                                <td class="border border-hairline px-4 py-3"><strong>January 2026 (3rd/4th Week)</strong></td>
                             </tr>
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Result Available At</td>
-                                <td class="border border-gray-200 px-4 py-3">icai.nic.in, icaiexam.icai.org, caresults.icai.org</td>
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Result Available At</td>
+                                <td class="border border-hairline px-4 py-3">icai.nic.in, icaiexam.icai.org, caresults.icai.org</td>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Courses</td>
-                                <td class="border border-gray-200 px-4 py-3">CA Final, CA Inter (Intermediate)</td>
+                            <tr class="bg-surface-1">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Courses</td>
+                                <td class="border border-hairline px-4 py-3">CA Final, CA Inter (Intermediate)</td>
                             </tr>
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Result Mode</td>
-                                <td class="border border-gray-200 px-4 py-3">Online (Website + SMS + Email)</td>
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Result Mode</td>
+                                <td class="border border-hairline px-4 py-3">Online (Website + SMS + Email)</td>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Passing Criteria</td>
-                                <td class="border border-gray-200 px-4 py-3">40% in each paper + 50% aggregate</td>
+                            <tr class="bg-surface-1">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Passing Criteria</td>
+                                <td class="border border-hairline px-4 py-3">40% in each paper + 50% aggregate</td>
                             </tr>
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Official Website</td>
-                                <td class="border border-gray-200 px-4 py-3"><a href="https://icai.nic.in" class="text-blue-700 font-bold hover:underline" target="_blank">icai.nic.in</a></td>
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Official Website</td>
+                                <td class="border border-hairline px-4 py-3"><a href="https://icai.nic.in" class="text-primary font-bold hover:underline" target="_blank">icai.nic.in</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -530,111 +521,111 @@
 
             <!-- Section 2: Direct Links -->
             <section id="direct-links" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     2. Direct Links to Check ICAI CA Result January 2026
                 </h2>
 
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-ink-muted leading-relaxed mb-4">
                     ICAI releases the <strong>CA Final result</strong> and <strong>CA Inter result</strong> on multiple official websites. If one website is down due to heavy traffic, you can try the alternate links. Here are all the official websites where you can check your <strong>ICAI result January 2026</strong>:
                 </p>
 
                 <div class="space-y-4 mb-6">
-                    <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl flex items-center justify-between">
+                    <div class="bg-surface-2 border border-hairline p-4 rounded-xl flex items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-blue-800 text-lg">🌐 icai.nic.in</h3>
-                            <p class="text-sm text-gray-600">Primary ICAI Result Website</p>
+                            <h3 class="font-bold text-primary text-lg">🌐 icai.nic.in</h3>
+                            <p class="text-sm text-ink-muted">Primary ICAI Result Website</p>
                         </div>
-                        <a href="https://icai.nic.in" target="_blank" class="bg-blue-700 text-white px-5 py-2 rounded-lg font-bold hover:bg-blue-800 transition text-sm">
+                        <a href="https://icai.nic.in" target="_blank" class="bg-primary text-ink px-5 py-2 rounded-lg font-bold hover:bg-primary transition text-sm">
                             Check Now →
                         </a>
                     </div>
-                    <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl flex items-center justify-between">
+                    <div class="bg-surface-2 border border-hairline p-4 rounded-xl flex items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-blue-800 text-lg">🌐 icaiexam.icai.org</h3>
-                            <p class="text-sm text-gray-600">ICAI Exam Portal</p>
+                            <h3 class="font-bold text-primary text-lg">🌐 icaiexam.icai.org</h3>
+                            <p class="text-sm text-ink-muted">ICAI Exam Portal</p>
                         </div>
-                        <a href="https://icaiexam.icai.org" target="_blank" class="bg-blue-700 text-white px-5 py-2 rounded-lg font-bold hover:bg-blue-800 transition text-sm">
+                        <a href="https://icaiexam.icai.org" target="_blank" class="bg-primary text-ink px-5 py-2 rounded-lg font-bold hover:bg-primary transition text-sm">
                             Check Now →
                         </a>
                     </div>
-                    <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl flex items-center justify-between">
+                    <div class="bg-surface-2 border border-hairline p-4 rounded-xl flex items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-blue-800 text-lg">🌐 caresults.icai.org</h3>
-                            <p class="text-sm text-gray-600">Dedicated CA Results Portal</p>
+                            <h3 class="font-bold text-primary text-lg">🌐 caresults.icai.org</h3>
+                            <p class="text-sm text-ink-muted">Dedicated CA Results Portal</p>
                         </div>
-                        <a href="https://caresults.icai.org" target="_blank" class="bg-blue-700 text-white px-5 py-2 rounded-lg font-bold hover:bg-blue-800 transition text-sm">
+                        <a href="https://caresults.icai.org" target="_blank" class="bg-primary text-ink px-5 py-2 rounded-lg font-bold hover:bg-primary transition text-sm">
                             Check Now →
                         </a>
                     </div>
-                    <div class="bg-green-50 border border-green-200 p-4 rounded-xl flex items-center justify-between">
+                    <div class="bg-surface-2 border border-hairline p-4 rounded-xl flex items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-green-800 text-lg">📱 SMS Result Service</h3>
-                            <p class="text-sm text-gray-600">Type: CAFNL(SPACE)XXXXXX to 58888</p>
+                            <h3 class="font-bold text-primary text-lg">📱 SMS Result Service</h3>
+                            <p class="text-sm text-ink-muted">Type: CAFNL(SPACE)XXXXXX to 58888</p>
                         </div>
-                        <span class="bg-green-600 text-white px-5 py-2 rounded-lg font-bold text-sm">
+                        <span class="bg-primary text-ink px-5 py-2 rounded-lg font-bold text-sm">
                             SMS Available
                         </span>
                     </div>
-                    <div class="bg-green-50 border border-green-200 p-4 rounded-xl flex items-center justify-between">
+                    <div class="bg-surface-2 border border-hairline p-4 rounded-xl flex items-center justify-between">
                         <div>
-                            <h3 class="font-bold text-green-800 text-lg">📧 Email Result Service</h3>
-                            <p class="text-sm text-gray-600">Register email on ICAI portal for instant result notification</p>
+                            <h3 class="font-bold text-primary text-lg">📧 Email Result Service</h3>
+                            <p class="text-sm text-ink-muted">Register email on ICAI portal for instant result notification</p>
                         </div>
-                        <span class="bg-green-600 text-white px-5 py-2 rounded-lg font-bold text-sm">
+                        <span class="bg-primary text-ink px-5 py-2 rounded-lg font-bold text-sm">
                             Email Available
                         </span>
                     </div>
                 </div>
 
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-xl mb-6">
-                    <p class="text-yellow-800 font-semibold">⚠️ Important: Due to heavy traffic, the ICAI website may be slow. Keep refreshing or try alternate links. Results are also available via email and SMS.</p>
+                <div class="bg-surface-2 border-l-4 border-hairline-strong p-4 rounded-r-xl mb-6">
+                    <p class="text-primary font-semibold">⚠️ Important: Due to heavy traffic, the ICAI website may be slow. Keep refreshing or try alternate links. Results are also available via email and SMS.</p>
                 </div>
             </section>
 
             <!-- Section 3: How to Check -->
             <section id="how-to-check" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     3. How to Check CA Final Result January 2026 at icai.nic.in — Step-by-Step Guide
                 </h2>
 
-                <p class="text-gray-700 leading-relaxed mb-6">
+                <p class="text-ink-muted leading-relaxed mb-6">
                     Follow these simple steps to check your <strong>ICAI CA Final result</strong> or <strong>CA Inter result January 2026</strong> from the official website:
                 </p>
 
                 <div class="space-y-4 mb-6">
-                    <div class="flex items-start space-x-4 bg-white p-5 rounded-xl shadow-sm border">
-                        <div class="w-10 h-10 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                    <div class="flex items-start space-x-4 bg-canvas p-5 rounded-xl border border-hairline border">
+                        <div class="w-10 h-10 bg-primary text-ink rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
                         <div>
-                            <h3 class="font-bold text-gray-900 text-lg">Visit the Official ICAI Website</h3>
-                            <p class="text-gray-600">Open your browser and go to <a href="https://icai.nic.in" class="text-blue-700 font-bold hover:underline" target="_blank">icai.nic.in</a> or <a href="https://icaiexam.icai.org" class="text-blue-700 font-bold hover:underline" target="_blank">icaiexam.icai.org</a> or <a href="https://caresults.icai.org" class="text-blue-700 font-bold hover:underline" target="_blank">caresults.icai.org</a></p>
+                            <h3 class="font-bold text-ink text-lg">Visit the Official ICAI Website</h3>
+                            <p class="text-ink-muted">Open your browser and go to <a href="https://icai.nic.in" class="text-primary font-bold hover:underline" target="_blank">icai.nic.in</a> or <a href="https://icaiexam.icai.org" class="text-primary font-bold hover:underline" target="_blank">icaiexam.icai.org</a> or <a href="https://caresults.icai.org" class="text-primary font-bold hover:underline" target="_blank">caresults.icai.org</a></p>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-4 bg-white p-5 rounded-xl shadow-sm border">
-                        <div class="w-10 h-10 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                    <div class="flex items-start space-x-4 bg-canvas p-5 rounded-xl border border-hairline border">
+                        <div class="w-10 h-10 bg-primary text-ink rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
                         <div>
-                            <h3 class="font-bold text-gray-900 text-lg">Click on the Result Link</h3>
-                            <p class="text-gray-600">On the homepage, look for <strong>"CA Final Result January 2026"</strong> or <strong>"CA Inter Result January 2026"</strong> link and click on it.</p>
+                            <h3 class="font-bold text-ink text-lg">Click on the Result Link</h3>
+                            <p class="text-ink-muted">On the homepage, look for <strong>"CA Final Result January 2026"</strong> or <strong>"CA Inter Result January 2026"</strong> link and click on it.</p>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-4 bg-white p-5 rounded-xl shadow-sm border">
-                        <div class="w-10 h-10 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                    <div class="flex items-start space-x-4 bg-canvas p-5 rounded-xl border border-hairline border">
+                        <div class="w-10 h-10 bg-primary text-ink rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
                         <div>
-                            <h3 class="font-bold text-gray-900 text-lg">Enter Your Credentials</h3>
-                            <p class="text-gray-600">Enter your <strong>Registration Number</strong> or <strong>PIN Number</strong> in the required fields. You may also need to enter your Roll Number.</p>
+                            <h3 class="font-bold text-ink text-lg">Enter Your Credentials</h3>
+                            <p class="text-ink-muted">Enter your <strong>Registration Number</strong> or <strong>PIN Number</strong> in the required fields. You may also need to enter your Roll Number.</p>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-4 bg-white p-5 rounded-xl shadow-sm border">
-                        <div class="w-10 h-10 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
+                    <div class="flex items-start space-x-4 bg-canvas p-5 rounded-xl border border-hairline border">
+                        <div class="w-10 h-10 bg-primary text-ink rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
                         <div>
-                            <h3 class="font-bold text-gray-900 text-lg">Submit and View Result</h3>
-                            <p class="text-gray-600">Click the <strong>"Submit"</strong> button. Your <strong>CA Final result</strong> or <strong>CA Inter result</strong> will appear on the screen with subject-wise marks and pass/fail status.</p>
+                            <h3 class="font-bold text-ink text-lg">Submit and View Result</h3>
+                            <p class="text-ink-muted">Click the <strong>"Submit"</strong> button. Your <strong>CA Final result</strong> or <strong>CA Inter result</strong> will appear on the screen with subject-wise marks and pass/fail status.</p>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-4 bg-white p-5 rounded-xl shadow-sm border">
-                        <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">5</div>
+                    <div class="flex items-start space-x-4 bg-canvas p-5 rounded-xl border border-hairline border">
+                        <div class="w-10 h-10 bg-primary text-ink rounded-full flex items-center justify-center font-bold flex-shrink-0">5</div>
                         <div>
-                            <h3 class="font-bold text-gray-900 text-lg">Download & Save Scorecard</h3>
-                            <p class="text-gray-600">Download your scorecard as <strong>PDF</strong> and take a printout for future reference. The official mark sheet will be sent by post from ICAI.</p>
+                            <h3 class="font-bold text-ink text-lg">Download & Save Scorecard</h3>
+                            <p class="text-ink-muted">Download your scorecard as <strong>PDF</strong> and take a printout for future reference. The official mark sheet will be sent by post from ICAI.</p>
                         </div>
                     </div>
                 </div>
@@ -642,56 +633,56 @@
 
             <!-- Section 4: Details on Scorecard -->
             <section id="details-on-scorecard" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     4. Details Mentioned on ICAI CA Final Scorecard
                 </h2>
                 <!-- How to Check Result - Step by Step -->
 <figure class="my-8">
     <img 
-        src="https://jeeprepguide.netlify.app/blog/ca-final-result.png" 
+        src="https://jeeprepguide.netlify.app/blog/ca-final-result.webp" 
         alt="Step by step guide to check CA Final Result January 2026 at icai.nic.in - Enter registration number and download scorecard" 
         title="How to Check CA Result at icai.nic.in - Step by Step Guide"
         width="1200" 
         height="675" 
         loading="lazy"
-        class="w-full rounded-2xl shadow-md border border-gray-200"
+        class="w-full rounded-2xl border border-hairline border border-hairline"
     >
-    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
         How to check ICAI CA Final Result at icai.nic.in — Step-by-step visual guide
     </figcaption>
 </figure>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-ink-muted leading-relaxed mb-4">
                     The <strong>ICAI CA Final scorecard</strong> available at <strong>icai.nic.in</strong> contains the following important details:
                 </p>
 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border mb-6">
-                    <ul class="space-y-3 text-gray-700">
+                <div class="bg-canvas p-6 rounded-2xl border border-hairline border mb-6">
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start space-x-3">
-                            <span class="text-blue-700 font-bold text-lg">✓</span>
+                            <span class="text-primary font-bold text-lg">✓</span>
                             <span><strong>Candidate's Name</strong> — Full name as per ICAI registration</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <span class="text-blue-700 font-bold text-lg">✓</span>
+                            <span class="text-primary font-bold text-lg">✓</span>
                             <span><strong>Registration Number</strong> — Unique ICAI registration ID</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <span class="text-blue-700 font-bold text-lg">✓</span>
+                            <span class="text-primary font-bold text-lg">✓</span>
                             <span><strong>Roll Number</strong> — Exam roll number for Jan 2026 session</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <span class="text-blue-700 font-bold text-lg">✓</span>
+                            <span class="text-primary font-bold text-lg">✓</span>
                             <span><strong>Subject-wise Marks</strong> — Individual marks for each paper (Group I & II)</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <span class="text-blue-700 font-bold text-lg">✓</span>
+                            <span class="text-primary font-bold text-lg">✓</span>
                             <span><strong>Total Marks & Percentage</strong> — Aggregate score and percentage</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <span class="text-blue-700 font-bold text-lg">✓</span>
+                            <span class="text-primary font-bold text-lg">✓</span>
                             <span><strong>Pass/Fail Status</strong> — Overall result status</span>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <span class="text-blue-700 font-bold text-lg">✓</span>
+                            <span class="text-primary font-bold text-lg">✓</span>
                             <span><strong>Rank (if applicable)</strong> — All India Rank for toppers</span>
                         </li>
                     </ul>
@@ -700,42 +691,42 @@
 
             <!-- Section 5: Passing Criteria -->
             <section id="passing-criteria" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     5. CA Final Passing Criteria — January 2026
                 </h2>
 
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-ink-muted leading-relaxed mb-4">
                     To pass the <strong>CA Final examination</strong>, candidates must fulfil the following criteria set by ICAI:
                 </p>
 
                 <div class="overflow-x-auto mb-6">
-                    <table class="w-full border-collapse border border-gray-300 rounded-xl overflow-hidden">
+                    <table class="w-full border-collapse border border-hairline-strong rounded-xl overflow-hidden">
                         <thead>
-                            <tr class="bg-blue-700 text-white">
-                                <th class="border border-blue-600 px-4 py-3 text-left">Criteria</th>
-                                <th class="border border-blue-600 px-4 py-3 text-left">Requirement</th>
+                            <tr class="bg-primary text-ink">
+                                <th class="border border-primary px-4 py-3 text-left">Criteria</th>
+                                <th class="border border-primary px-4 py-3 text-left">Requirement</th>
                             </tr>
                         </thead>
-                        <tbody class="text-gray-700">
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Minimum per Paper</td>
-                                <td class="border border-gray-200 px-4 py-3"><strong>40 marks out of 100</strong> (40%) in each individual paper</td>
+                        <tbody class="text-ink-muted">
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Minimum per Paper</td>
+                                <td class="border border-hairline px-4 py-3"><strong>40 marks out of 100</strong> (40%) in each individual paper</td>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Minimum Aggregate (Per Group)</td>
-                                <td class="border border-gray-200 px-4 py-3"><strong>50% aggregate</strong> in all papers of the respective group</td>
+                            <tr class="bg-surface-1">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Minimum Aggregate (Per Group)</td>
+                                <td class="border border-hairline px-4 py-3"><strong>50% aggregate</strong> in all papers of the respective group</td>
                             </tr>
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Both Groups (If appearing together)</td>
-                                <td class="border border-gray-200 px-4 py-3">Must pass both groups — 40% per paper + 50% aggregate in each group</td>
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Both Groups (If appearing together)</td>
+                                <td class="border border-hairline px-4 py-3">Must pass both groups — 40% per paper + 50% aggregate in each group</td>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Exemption</td>
-                                <td class="border border-gray-200 px-4 py-3">Scoring <strong>60% or above</strong> in a paper grants exemption for next attempt</td>
+                            <tr class="bg-surface-1">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Exemption</td>
+                                <td class="border border-hairline px-4 py-3">Scoring <strong>60% or above</strong> in a paper grants exemption for next attempt</td>
                             </tr>
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">Maximum Marks</td>
-                                <td class="border border-gray-200 px-4 py-3">100 marks per paper (Total: 400 per group, 800 both groups)</td>
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">Maximum Marks</td>
+                                <td class="border border-hairline px-4 py-3">100 marks per paper (Total: 400 per group, 800 both groups)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -744,133 +735,133 @@
 
             <!-- Section 6: Pass Percentage -->
             <section id="pass-percentage" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     6. CA Final Pass Percentage — Historical Comparison
                 </h2>
 
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-ink-muted leading-relaxed mb-4">
                     The <strong>CA Final pass percentage</strong> has varied across sessions. Here's a comparison of recent sessions to help you understand the trend:
                 </p>
 
                 <div class="overflow-x-auto mb-6">
-                    <table class="w-full border-collapse border border-gray-300 rounded-xl overflow-hidden">
+                    <table class="w-full border-collapse border border-hairline-strong rounded-xl overflow-hidden">
                         <thead>
-                            <tr class="bg-blue-700 text-white">
-                                <th class="border border-blue-600 px-4 py-3 text-left">Session</th>
-                                <th class="border border-blue-600 px-4 py-3 text-center">Group I (%)</th>
-                                <th class="border border-blue-600 px-4 py-3 text-center">Group II (%)</th>
-                                <th class="border border-blue-600 px-4 py-3 text-center">Both Groups (%)</th>
+                            <tr class="bg-primary text-ink">
+                                <th class="border border-primary px-4 py-3 text-left">Session</th>
+                                <th class="border border-primary px-4 py-3 text-center">Group I (%)</th>
+                                <th class="border border-primary px-4 py-3 text-center">Group II (%)</th>
+                                <th class="border border-primary px-4 py-3 text-center">Both Groups (%)</th>
                             </tr>
                         </thead>
-                        <tbody class="text-gray-700">
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">November 2024</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">13.98%</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">16.76%</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">11.28%</td>
+                        <tbody class="text-ink-muted">
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">November 2024</td>
+                                <td class="border border-hairline px-4 py-3 text-center">13.98%</td>
+                                <td class="border border-hairline px-4 py-3 text-center">16.76%</td>
+                                <td class="border border-hairline px-4 py-3 text-center">11.28%</td>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">May 2025</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">14.52%</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">17.34%</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">12.01%</td>
+                            <tr class="bg-surface-1">
+                                <td class="border border-hairline px-4 py-3 font-semibold">May 2025</td>
+                                <td class="border border-hairline px-4 py-3 text-center">14.52%</td>
+                                <td class="border border-hairline px-4 py-3 text-center">17.34%</td>
+                                <td class="border border-hairline px-4 py-3 text-center">12.01%</td>
                             </tr>
-                            <tr class="bg-white">
-                                <td class="border border-gray-200 px-4 py-3 font-semibold">November 2025</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">15.10%</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">18.22%</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center">12.50%</td>
+                            <tr class="bg-canvas">
+                                <td class="border border-hairline px-4 py-3 font-semibold">November 2025</td>
+                                <td class="border border-hairline px-4 py-3 text-center">15.10%</td>
+                                <td class="border border-hairline px-4 py-3 text-center">18.22%</td>
+                                <td class="border border-hairline px-4 py-3 text-center">12.50%</td>
                             </tr>
-                            <tr class="bg-yellow-50 font-bold">
-                                <td class="border border-gray-200 px-4 py-3 font-bold text-blue-700">January 2026 🔴</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center text-blue-700">To be updated</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center text-blue-700">To be updated</td>
-                                <td class="border border-gray-200 px-4 py-3 text-center text-blue-700">To be updated</td>
+                            <tr class="bg-surface-2 font-bold">
+                                <td class="border border-hairline px-4 py-3 font-bold text-primary">January 2026 🔴</td>
+                                <td class="border border-hairline px-4 py-3 text-center text-primary">To be updated</td>
+                                <td class="border border-hairline px-4 py-3 text-center text-primary">To be updated</td>
+                                <td class="border border-hairline px-4 py-3 text-center text-primary">To be updated</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
-                    <p class="text-blue-800 font-semibold">📊 Note: The CA Final pass percentage for January 2026 will be updated as soon as ICAI officially releases the data. Historically, it ranges between 10-15% for both groups combined.</p>
+                <div class="bg-surface-2 border-l-4 border-hairline-strong p-4 rounded-r-xl">
+                    <p class="text-primary font-semibold">📊 Note: The CA Final pass percentage for January 2026 will be updated as soon as ICAI officially releases the data. Historically, it ranges between 10-15% for both groups combined.</p>
                 </div>
             </section>
 
             <!-- Section 7: Toppers -->
             <section id="toppers" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     7. ICAI CA Final Toppers List — January 2026
                 </h2>
 
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-ink-muted leading-relaxed mb-4">
                     ICAI announces the <strong>All India Toppers</strong> for CA Final examination along with the result. Here is the toppers list for <strong>CA Final January 2026</strong>:
                 </p>
 
-                <div class="bg-gradient-to-r from-yellow-50 to-amber-50 border border-yellow-200 p-6 rounded-2xl mb-6">
-                    <h3 class="text-xl font-bold text-yellow-800 mb-4">🏆 CA Final January 2026 — All India Toppers</h3>
+                <div class="bg-gradient-to-r from-surface-2 to-surface-2 border border-hairline p-6 rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold text-primary mb-4">🏆 CA Final January 2026 — All India Toppers</h3>
                     <div class="overflow-x-auto">
-                        <table class="w-full border-collapse border border-yellow-300 rounded-xl overflow-hidden">
+                        <table class="w-full border-collapse border border-hairline-strong rounded-xl overflow-hidden">
                             <thead>
-                                <tr class="bg-yellow-500 text-white">
-                                    <th class="border border-yellow-400 px-4 py-3 text-left">Rank</th>
-                                    <th class="border border-yellow-400 px-4 py-3 text-left">Name</th>
-                                    <th class="border border-yellow-400 px-4 py-3 text-center">Marks</th>
-                                    <th class="border border-yellow-400 px-4 py-3 text-center">Percentage</th>
+                                <tr class="bg-surface-2 text-ink">
+                                    <th class="border border-hairline-strong px-4 py-3 text-left">Rank</th>
+                                    <th class="border border-hairline-strong px-4 py-3 text-left">Name</th>
+                                    <th class="border border-hairline-strong px-4 py-3 text-center">Marks</th>
+                                    <th class="border border-hairline-strong px-4 py-3 text-center">Percentage</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-gray-700">
-                                <tr class="bg-white">
-                                    <td class="border border-yellow-200 px-4 py-3 font-bold text-yellow-600">🥇 AIR 1</td>
-                                    <td class="border border-yellow-200 px-4 py-3 font-semibold">To be announced</td>
-                                    <td class="border border-yellow-200 px-4 py-3 text-center">—</td>
-                                    <td class="border border-yellow-200 px-4 py-3 text-center">—</td>
+                            <tbody class="text-ink-muted">
+                                <tr class="bg-canvas">
+                                    <td class="border border-hairline px-4 py-3 font-bold text-primary">🥇 AIR 1</td>
+                                    <td class="border border-hairline px-4 py-3 font-semibold">To be announced</td>
+                                    <td class="border border-hairline px-4 py-3 text-center">—</td>
+                                    <td class="border border-hairline px-4 py-3 text-center">—</td>
                                 </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="border border-yellow-200 px-4 py-3 font-bold text-gray-500">🥈 AIR 2</td>
-                                    <td class="border border-yellow-200 px-4 py-3 font-semibold">To be announced</td>
-                                    <td class="border border-yellow-200 px-4 py-3 text-center">—</td>
-                                    <td class="border border-yellow-200 px-4 py-3 text-center">—</td>
+                                <tr class="bg-surface-1">
+                                    <td class="border border-hairline px-4 py-3 font-bold text-ink-subtle">🥈 AIR 2</td>
+                                    <td class="border border-hairline px-4 py-3 font-semibold">To be announced</td>
+                                    <td class="border border-hairline px-4 py-3 text-center">—</td>
+                                    <td class="border border-hairline px-4 py-3 text-center">—</td>
                                 </tr>
-                                <tr class="bg-white">
-                                    <td class="border border-yellow-200 px-4 py-3 font-bold text-orange-600">🥉 AIR 3</td>
-                                    <td class="border border-yellow-200 px-4 py-3 font-semibold">To be announced</td>
-                                    <td class="border border-yellow-200 px-4 py-3 text-center">—</td>
-                                    <td class="border border-yellow-200 px-4 py-3 text-center">—</td>
+                                <tr class="bg-canvas">
+                                    <td class="border border-hairline px-4 py-3 font-bold text-primary">🥉 AIR 3</td>
+                                    <td class="border border-hairline px-4 py-3 font-semibold">To be announced</td>
+                                    <td class="border border-hairline px-4 py-3 text-center">—</td>
+                                    <td class="border border-hairline px-4 py-3 text-center">—</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-sm text-yellow-700 mt-3 italic">* Toppers list will be updated immediately after ICAI official announcement</p>
+                    <p class="text-sm text-primary mt-3 italic">* Toppers list will be updated immediately after ICAI official announcement</p>
                 </div>
             </section>
 
             <!-- Section 8: CA Inter Result -->
             <section id="ca-inter" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     8. CA Inter Result January 2026
                 </h2>
                 <figure class="my-8">
     <img 
-        src="https://jeeprepguide.netlify.app/blog/icai-official-website.png" 
+        src="https://jeeprepguide.netlify.app/blog/icai-official-website.webp" 
         alt="ICAI official website icai.nic.in homepage showing CA Final Result January 2026 link" 
         title="icai.nic.in - Official ICAI Result Website"
         width="1200" 
         height="675" 
         loading="lazy"
-        class="w-full rounded-2xl shadow-md border border-gray-200"
+        class="w-full rounded-2xl border border-hairline border border-hairline"
     >
-    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
         Screenshot of icai.nic.in official website — CA Final Result January 2026 link highlighted
     </figcaption>
 </figure>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-ink-muted leading-relaxed mb-4">
                     Along with the CA Final result, <strong>ICAI</strong> has also released the <strong>CA Inter (Intermediate) result for January 2026</strong>. The CA Inter result can be checked on the same official websites:
                 </p>
 
-                <div class="bg-green-50 border border-green-200 p-6 rounded-2xl mb-6">
-                    <h3 class="text-xl font-bold text-green-800 mb-3">📋 CA Inter Result January 2026 — Key Details</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li>✅ <strong>Result Website:</strong> <a href="https://icai.nic.in" class="text-blue-700 font-bold hover:underline" target="_blank">icai.nic.in</a></li>
+                <div class="bg-surface-2 border border-hairline p-6 rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold text-primary mb-3">📋 CA Inter Result January 2026 — Key Details</h3>
+                    <ul class="space-y-2 text-ink-muted">
+                        <li>✅ <strong>Result Website:</strong> <a href="https://icai.nic.in" class="text-primary font-bold hover:underline" target="_blank">icai.nic.in</a></li>
                         <li>✅ <strong>Passing Criteria:</strong> 40% per paper + 50% aggregate per group</li>
                         <li>✅ <strong>Groups:</strong> Group I (4 papers) and Group II (4 papers)</li>
                         <li>✅ <strong>SMS Service:</strong> Type CAIPC(SPACE)XXXXXX to 58888</li>
@@ -878,22 +869,22 @@
                     </ul>
                 </div>
 
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-ink-muted leading-relaxed mb-4">
                     The process to check <strong>CA Inter result</strong> is exactly the same as CA Final. Visit icai.nic.in, click on CA Inter Result January 2026, enter your registration number, and download your scorecard.
                 </p>
             </section>
 
             <!-- Section 9: What After CA Final Result -->
             <section id="what-after" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     9. What After CA Final Result? — Next Steps
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <!-- If Passed -->
-                    <div class="bg-green-50 border border-green-200 p-6 rounded-2xl">
-                        <h3 class="text-xl font-bold text-green-800 mb-4">✅ If You PASSED CA Final</h3>
-                        <ul class="space-y-2 text-gray-700">
+                    <div class="bg-surface-2 border border-hairline p-6 rounded-2xl">
+                        <h3 class="text-xl font-bold text-primary mb-4">✅ If You PASSED CA Final</h3>
+                        <ul class="space-y-2 text-ink-muted">
                             <li>🎉 <strong>Congratulations!</strong> You are now a Chartered Accountant</li>
                             <li>📝 Apply for <strong>ICAI membership</strong> within the specified period</li>
                             <li>📜 Complete <strong>GMCS (General Management & Communication Skills)</strong> training if pending</li>
@@ -904,9 +895,9 @@
                     </div>
 
                     <!-- If Not Passed -->
-                    <div class="bg-red-50 border border-red-200 p-6 rounded-2xl">
-                        <h3 class="text-xl font-bold text-red-800 mb-4">❌ If You Did NOT Pass</h3>
-                        <ul class="space-y-2 text-gray-700">
+                    <div class="bg-surface-2 border border-hairline p-6 rounded-2xl">
+                        <h3 class="text-xl font-bold text-primary mb-4">❌ If You Did NOT Pass</h3>
+                        <ul class="space-y-2 text-ink-muted">
                             <li>💪 <strong>Don't lose hope!</strong> Many toppers cleared in 2nd or 3rd attempt</li>
                             <li>📊 <strong>Analyze your scorecard</strong> — Identify weak areas</li>
                             <li>📝 Check if you got <strong>exemption</strong> (60%+) in any paper</li>
@@ -920,84 +911,84 @@
 
             <!-- Section 10: FAQs -->
             <section id="faqs" class="mb-10">
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-l-4 border-blue-700 pl-4">
+                <h2 class="text-3xl font-extrabold text-ink mb-6 border-l-4 border-primary pl-4">
                     10. FAQs — ICAI CA Final Result January 2026
                 </h2>
 
                 <div class="space-y-4">
                     <!-- FAQ 1 -->
-                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                        <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                    <div class="bg-canvas border border-hairline rounded-xl overflow-hidden">
+                        <button class="w-full text-left p-5 font-bold text-ink flex justify-between items-center hover:bg-surface-1 transition" onclick="toggleFaq(this)">
                             <span>❓ How to check ICAI CA Final Result January 2026?</span>
-                            <span class="text-blue-700 text-2xl">+</span>
+                            <span class="text-primary text-2xl">+</span>
                         </button>
-                        <div class="hidden p-5 pt-0 text-gray-600 leading-relaxed">
+                        <div class="hidden p-5 pt-0 text-ink-muted leading-relaxed">
                             Visit <strong>icai.nic.in</strong> or <strong>icaiexam.icai.org</strong> or <strong>caresults.icai.org</strong>. Click on CA Final Result January 2026 link. Enter your Registration Number or PIN Number and click Submit. Your result will be displayed on screen. Download and save the scorecard as PDF.
                         </div>
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                        <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                    <div class="bg-canvas border border-hairline rounded-xl overflow-hidden">
+                        <button class="w-full text-left p-5 font-bold text-ink flex justify-between items-center hover:bg-surface-1 transition" onclick="toggleFaq(this)">
                             <span>❓ What is the official website to check CA result?</span>
-                            <span class="text-blue-700 text-2xl">+</span>
+                            <span class="text-primary text-2xl">+</span>
                         </button>
-                        <div class="hidden p-5 pt-0 text-gray-600 leading-relaxed">
+                        <div class="hidden p-5 pt-0 text-ink-muted leading-relaxed">
                             The official websites to check ICAI CA result are: <strong>icai.nic.in</strong> (primary), <strong>icaiexam.icai.org</strong> (exam portal), and <strong>caresults.icai.org</strong> (dedicated results portal). All three websites show the same result.
                         </div>
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                        <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                    <div class="bg-canvas border border-hairline rounded-xl overflow-hidden">
+                        <button class="w-full text-left p-5 font-bold text-ink flex justify-between items-center hover:bg-surface-1 transition" onclick="toggleFaq(this)">
                             <span>❓ What are the passing marks for CA Final January 2026?</span>
-                            <span class="text-blue-700 text-2xl">+</span>
+                            <span class="text-primary text-2xl">+</span>
                         </button>
-                        <div class="hidden p-5 pt-0 text-gray-600 leading-relaxed">
+                        <div class="hidden p-5 pt-0 text-ink-muted leading-relaxed">
                             Candidates need a minimum of <strong>40% marks (40 out of 100) in each individual paper</strong> and an <strong>aggregate of 50% across all papers</strong> of the respective group to pass CA Final examination.
                         </div>
                     </div>
 
                     <!-- FAQ 4 -->
-                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                        <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                    <div class="bg-canvas border border-hairline rounded-xl overflow-hidden">
+                        <button class="w-full text-left p-5 font-bold text-ink flex justify-between items-center hover:bg-surface-1 transition" onclick="toggleFaq(this)">
                             <span>❓ Can I get my CA result via SMS?</span>
-                            <span class="text-blue-700 text-2xl">+</span>
+                            <span class="text-primary text-2xl">+</span>
                         </button>
-                        <div class="hidden p-5 pt-0 text-gray-600 leading-relaxed">
+                        <div class="hidden p-5 pt-0 text-ink-muted leading-relaxed">
                             Yes! For CA Final result, type <strong>CAFNL(SPACE)XXXXXX</strong> and send to <strong>58888</strong>. For CA Inter result, type <strong>CAIPC(SPACE)XXXXXX</strong> and send to <strong>58888</strong>. Replace XXXXXX with your registration number.
                         </div>
                     </div>
 
                     <!-- FAQ 5 -->
-                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                        <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                    <div class="bg-canvas border border-hairline rounded-xl overflow-hidden">
+                        <button class="w-full text-left p-5 font-bold text-ink flex justify-between items-center hover:bg-surface-1 transition" onclick="toggleFaq(this)">
                             <span>❓ What if ICAI website is not opening?</span>
-                            <span class="text-blue-700 text-2xl">+</span>
+                            <span class="text-primary text-2xl">+</span>
                         </button>
-                        <div class="hidden p-5 pt-0 text-gray-600 leading-relaxed">
+                        <div class="hidden p-5 pt-0 text-ink-muted leading-relaxed">
                             Due to heavy traffic on result day, ICAI websites may be slow or unresponsive. Try these alternatives: (1) Try all three websites — icai.nic.in, icaiexam.icai.org, caresults.icai.org (2) Use SMS service (3) Wait a few minutes and refresh (4) Try using a different browser or mobile data instead of WiFi (5) Register for email result service on ICAI portal.
                         </div>
                     </div>
 
                     <!-- FAQ 6 -->
-                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                        <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                    <div class="bg-canvas border border-hairline rounded-xl overflow-hidden">
+                        <button class="w-full text-left p-5 font-bold text-ink flex justify-between items-center hover:bg-surface-1 transition" onclick="toggleFaq(this)">
                             <span>❓ How to apply for re-evaluation of CA Final result?</span>
-                            <span class="text-blue-700 text-2xl">+</span>
+                            <span class="text-primary text-2xl">+</span>
                         </button>
-                        <div class="hidden p-5 pt-0 text-gray-600 leading-relaxed">
+                        <div class="hidden p-5 pt-0 text-ink-muted leading-relaxed">
                             If you believe there is an error in your marks, you can apply for <strong>verification of marks</strong> within <strong>30 days</strong> from the date of result declaration. Visit the ICAI website, go to the student section, and apply for verification by paying the prescribed fee (approximately ₹100 per paper). Note: This is verification of marks totalling, not re-evaluation of answer sheets.
                         </div>
                     </div>
 
                     <!-- FAQ 7 -->
-                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                        <button class="w-full text-left p-5 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                    <div class="bg-canvas border border-hairline rounded-xl overflow-hidden">
+                        <button class="w-full text-left p-5 font-bold text-ink flex justify-between items-center hover:bg-surface-1 transition" onclick="toggleFaq(this)">
                             <span>❓ When is the next CA Final exam after January 2026?</span>
-                            <span class="text-blue-700 text-2xl">+</span>
+                            <span class="text-primary text-2xl">+</span>
                         </button>
-                        <div class="hidden p-5 pt-0 text-gray-600 leading-relaxed">
+                        <div class="hidden p-5 pt-0 text-ink-muted leading-relaxed">
                             The next CA Final examination after January 2026 will be held in <strong>May 2026</strong>. Candidates who did not clear January 2026 can register for the May 2026 session on the ICAI official website. Registration typically opens 2-3 months before the exam.
                         </div>
                     </div>
@@ -1005,24 +996,24 @@
             </section>
 
             <!-- Final CTA Box -->
-            <div class="bg-gradient-to-r from-blue-700 to-blue-900 text-white p-8 rounded-2xl mb-10 shadow-xl text-center">
+            <div class="bg-gradient-to-r from-primary to-primary text-ink p-8 rounded-2xl mb-10 border border-hairline text-center">
                 <h2 class="text-3xl font-bold mb-4">📢 Check Your ICAI CA Final Result NOW!</h2>
                 <p class="text-lg opacity-90 mb-6">Click the button below to check your CA Final or CA Inter result for January 2026 session</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://icai.nic.in" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 text-blue-900 font-bold py-4 px-8 rounded-xl hover:bg-yellow-300 transition shadow-lg text-lg">
+                    <a href="https://icai.nic.in" target="_blank" rel="noopener noreferrer" class="bg-surface-4 text-primary font-bold py-4 px-8 rounded-xl hover:bg-surface-3 transition border border-hairline text-lg">
                         🔗 Check Result at icai.nic.in
                     </a>
-                    <a href="https://caresults.icai.org" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-800 font-bold py-4 px-8 rounded-xl hover:bg-blue-50 transition shadow-lg text-lg">
+                    <a href="https://caresults.icai.org" target="_blank" rel="noopener noreferrer" class="bg-canvas text-primary font-bold py-4 px-8 rounded-xl hover:bg-surface-2 transition border border-hairline text-lg">
                         🔗 Check at caresults.icai.org
                     </a>
                 </div>
             </div>
 
             <!-- Disclaimer -->
-            <div class="bg-gray-100 border border-gray-200 p-6 rounded-xl mb-6">
-                <h3 class="font-bold text-gray-900 mb-2">⚠️ Disclaimer</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    This article is for informational purposes only. All information is sourced from official ICAI announcements. For the most accurate and updated information, always refer to the official ICAI website at <a href="https://icai.nic.in" class="text-blue-700 hover:underline font-semibold" target="_blank">icai.nic.in</a>. JEE Prep Guide is not affiliated with ICAI. The pass percentages and toppers list will be updated once officially released by ICAI.
+            <div class="bg-surface-1 border border-hairline p-6 rounded-xl mb-6">
+                <h3 class="font-bold text-ink mb-2">⚠️ Disclaimer</h3>
+                <p class="text-sm text-ink-muted leading-relaxed">
+                    This article is for informational purposes only. All information is sourced from official ICAI announcements. For the most accurate and updated information, always refer to the official ICAI website at <a href="https://icai.nic.in" class="text-primary hover:underline font-semibold" target="_blank">icai.nic.in</a>. JEE Prep Guide is not affiliated with ICAI. The pass percentages and toppers list will be updated once officially released by ICAI.
                 </p>
             </div>
 
@@ -1035,92 +1026,92 @@
     </main>
 
     <!-- Related Articles -->
-    <section class="bg-white py-12 border-t">
+    <section class="bg-canvas py-12 border-t">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">📚 Related Articles</h2>
+            <h2 class="text-3xl font-bold text-ink mb-8">📚 Related Articles</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200+-marks" class="bg-gray-50 p-6 rounded-2xl shadow-sm border hover:shadow-lg transition group">
+                <a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200+-marks" class="bg-surface-1 p-6 rounded-2xl border border-hairline border hover:border border-hairline transition group">
                     <div class="text-3xl mb-3">🎯</div>
-                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition mb-2">JEE Main 2026: Do or Die Chapters to Score 200+ Marks</h3>
-                    <p class="text-sm text-gray-500">Complete chapter-wise strategy for JEE Main 2026</p>
+                    <h3 class="text-lg font-bold text-ink group-hover:text-primary transition mb-2">JEE Main 2026: Do or Die Chapters to Score 200+ Marks</h3>
+                    <p class="text-sm text-ink-subtle">Complete chapter-wise strategy for JEE Main 2026</p>
                 </a>
-                <a href="https://jeeprepguide.netlify.app/blog" class="bg-gray-50 p-6 rounded-2xl shadow-sm border hover:shadow-lg transition group">
+                <a href="https://jeeprepguide.netlify.app/blog" class="bg-surface-1 p-6 rounded-2xl border border-hairline border hover:border border-hairline transition group">
                     <div class="text-3xl mb-3">📖</div>
-                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition mb-2">JEE Advanced vs JEE Main — Complete Difference Guide</h3>
-                    <p class="text-sm text-gray-500">Everything you need to know about JEE exams</p>
+                    <h3 class="text-lg font-bold text-ink group-hover:text-primary transition mb-2">JEE Advanced vs JEE Main — Complete Difference Guide</h3>
+                    <p class="text-sm text-ink-subtle">Everything you need to know about JEE exams</p>
                 </a>
-                <a href="https://jeeprepguide.netlify.app/blog" class="bg-gray-50 p-6 rounded-2xl shadow-sm border hover:shadow-lg transition group">
+                <a href="https://jeeprepguide.netlify.app/blog" class="bg-surface-1 p-6 rounded-2xl border border-hairline border hover:border border-hairline transition group">
                     <div class="text-3xl mb-3">📅</div>
-                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition mb-2">Upcoming Exam Results 2026 — Complete Calendar</h3>
-                    <p class="text-sm text-gray-500">All important exam results dates for 2026</p>
+                    <h3 class="text-lg font-bold text-ink group-hover:text-primary transition mb-2">Upcoming Exam Results 2026 — Complete Calendar</h3>
+                    <p class="text-sm text-ink-subtle">All important exam results dates for 2026</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-   <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+   <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -1128,12 +1119,12 @@
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -1142,32 +1133,32 @@
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top -->
-    <button id="scrollTop" class="fixed bottom-8 right-8 bg-blue-700 text-white w-14 h-14 rounded-full shadow-2xl hover:bg-blue-800 transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-primary transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
         ↑
     </button>
 

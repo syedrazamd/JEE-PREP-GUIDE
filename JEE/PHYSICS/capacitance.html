@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Capacitance - Complete JEE Physics Notes with 200+ Examples">
     <meta property="og:description" content="Master Parallel Plate Capacitor, Series & Parallel Combinations, Energy Storage, Dielectrics & RC Circuits. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Capacitance - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/capacitance">
     <meta name="twitter:title" content="Capacitance - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master capacitance with 200+ solved examples. Complete notes on Capacitors, Dielectrics, Energy Storage & RC Circuits for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -66,17 +66,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555" crossorigin="anonymous"></script>
     
     <!-- Breadcrumb Schema -->
@@ -120,7 +133,7 @@
         "@type": "Article",
         "headline": "Capacitance - Complete JEE Physics Notes 2025-26",
         "description": "Comprehensive notes on Capacitance covering Parallel Plate Capacitor, Series & Parallel Combinations, Energy Stored, Dielectrics, and RC Circuits with 200+ solved examples",
-        "image": "https://jeeprepguide.netlify.app/logo.png",
+        "image": "/logo-header.webp",
         "author": {
             "@type": "Organization",
             "name": "JEE Prep Guide",
@@ -131,7 +144,7 @@
             "name": "JEE Prep Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://jeeprepguide.netlify.app/logo.png"
+                "url": "/logo-header.webp"
             }
         },
         "datePublished": "2024-12-19",
@@ -353,60 +366,62 @@
         });
     </script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
 
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
     
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
     
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
     
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -415,30 +430,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Capacitance</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Capacitance</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -446,32 +461,32 @@
     </nav>
     
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Capacitance</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Capacitance</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Basics
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Parallel Plate
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Types
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Combinations
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Energy
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Dielectrics
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     RC Circuits
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Special Cases
                 </a>
             </div>
@@ -479,28 +494,28 @@
     </section>
     
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Capacitance
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the complete Capacitance chapter with detailed notes on Parallel Plate Capacitor, Series & Parallel Combinations, Energy Storage, Dielectrics, and RC Circuits. Includes 200+ solved problems, all important formulas, derivations, and JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 200+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All Derivations & Shortcuts</span>
                     </div>
                 </div>
@@ -509,21 +524,21 @@
     </section>
     
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Capacitance JEE Notes">
         <meta itemprop="description" content="Complete study notes for Capacitance">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">312</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -533,15 +548,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">200+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">5 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">5 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -553,54 +568,66 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Capacitance Basics</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Parallel Plate Capacitor</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Types of Capacitors</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Series & Parallel</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Energy & Force</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Dielectrics</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. RC Circuits</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Special Cases</a></li>
-                        <li><a href="#formulas" class="block py-3 px-4 rounded-lg bg-secondary text-white hover:bg-secondary/90 transition duration-200">📋 Formula Sheet</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Capacitance Basics</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Parallel Plate Capacitor</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Types of Capacitors</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Series & Parallel</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Energy & Force</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Dielectrics</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. RC Circuits</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Special Cases</a></li>
+                        <li><a href="#formulas" class="block py-3 px-4 rounded-lg bg-secondary text-ink hover:bg-secondary/90 transition duration-200">📋 Formula Sheet</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
             
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./electrostatics.html" class="text-primary font-semibold hover:underline">Electrostatics &rarr;</a>
+                <a href="./current-electricity.html" class="text-primary font-semibold hover:underline">Current Electricity &rarr;</a>
+            </div>
+        </div>
+    </div>
+
                 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/capacitance.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/capacitance.webp"
                         alt="Capacitance JEE notes, Formulas, PYQs"
                         title="Capacitance — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Capacitance JEE Notes, Formulas, PYQs - Complete Chapter
                     </figcaption>
                 </figure>
                 
                 <!-- Chapter 1: Capacitance Basics -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Capacitance - Fundamentals</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Capacitance - Fundamentals</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -610,9 +637,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Definition of Capacitance</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Capacitance Definition</h4>
-                            <div class="math-display text-center bg-blue-50 p-6 rounded-lg">
+                            <div class="math-display text-center bg-surface-2 p-6 rounded-lg">
                                 \[C = \frac{Q}{V}\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -639,14 +666,14 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Units and Dimensions</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Details</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">SI Unit</td>
                                         <td class="p-4 font-mono">Farad (F) = Coulomb/Volt = C/V</td>
@@ -676,14 +703,14 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Capacitance of an Isolated Conductor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Isolated Spherical Conductor</h4>
                             <p class="mb-3">For an isolated spherical conductor of radius R:</p>
-                            <div class="math-display text-center bg-blue-50 p-6 rounded-lg">
+                            <div class="math-display text-center bg-surface-2 p-6 rounded-lg">
                                 \[C = 4\pi\epsilon_0 R\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Derivation:</p>
                                     <div class="math-display text-sm">
                                         \[V = \frac{kQ}{R} = \frac{Q}{4\pi\epsilon_0 R}\]
@@ -692,7 +719,7 @@
                                         \[C = \frac{Q}{V} = 4\pi\epsilon_0 R\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Key Insight:</p>
                                     <ul class="text-sm space-y-1">
                                         <li>C ∝ R (larger sphere → larger C)</li>
@@ -717,14 +744,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A capacitor stores 200 μC of charge when connected to a 50V battery. Find (a) capacitance (b) charge stored at 100V (c) energy stored at 50V.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: Q = 200 μC = 200 × 10⁻⁶ C, V = 50 V</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Capacitance:</strong></p>
@@ -743,7 +770,7 @@
                                     \[U = \frac{1}{2}CV^2 = \frac{1}{2} \times 4 \times 10^{-6} \times (50)^2 = 5 \times 10^{-3} \text{ J} = 5 \text{ mJ}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: (a) } 4 \text{ μF}, \text{ (b) } 400 \text{ μC}, \text{ (c) } 5 \text{ mJ}\]
                                 </div>
                             </div>
@@ -752,10 +779,10 @@
                 </section>
                 
                 <!-- Chapter 2: Parallel Plate Capacitor -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Parallel Plate Capacitor</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Parallel Plate Capacitor</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -763,11 +790,11 @@
                             The <strong><a href="https://en.wikipedia.org/wiki/Capacitor#Parallel-plate_capacitor" target="_blank" rel="noopener noreferrer">parallel plate capacitor</a></strong> is the most fundamental and commonly asked capacitor configuration in JEE. It consists of two large parallel conducting plates separated by a small distance, with opposite charges on each plate.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Capacitance Formula & Derivation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Capacitance Formula & Derivation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Parallel Plate Capacitor Formula</h4>
-                            <div class="math-display text-center bg-purple-50 p-6 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Parallel Plate Capacitor Formula</h4>
+                            <div class="math-display text-center bg-surface-2 p-6 rounded-lg">
                                 \[C = \frac{\epsilon_0 A}{d}\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -782,7 +809,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">With Dielectric (K):</p>
-                                    <div class="math-display bg-purple-100 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-3 p-3 rounded-lg">
                                         \[C = \frac{K\epsilon_0 A}{d} = \frac{\epsilon A}{d}\]
                                     </div>
                                     <p class="text-sm mt-2">where ε = Kε₀ = permittivity of dielectric</p>
@@ -790,30 +817,30 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Complete Derivation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Complete Derivation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Step-by-Step Derivation</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Step-by-Step Derivation</h4>
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Step 1: Surface charge density on plates</p>
                                     <div class="math-display">
                                         \[\sigma = \frac{Q}{A}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Step 2: Electric field between plates (using Gauss law)</p>
                                     <div class="math-display">
                                         \[E = \frac{\sigma}{\epsilon_0} = \frac{Q}{\epsilon_0 A}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Step 3: Potential difference between plates</p>
                                     <div class="math-display">
                                         \[V = E \cdot d = \frac{Qd}{\epsilon_0 A}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Step 4: Capacitance</p>
                                     <div class="math-display">
                                         \[C = \frac{Q}{V} = \frac{Q}{\frac{Qd}{\epsilon_0 A}} = \frac{\epsilon_0 A}{d}\]
@@ -822,18 +849,18 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Important Parameters of Parallel Plate Capacitor</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Important Parameters of Parallel Plate Capacitor</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Parameter</th>
                                         <th class="p-4 text-left">Formula</th>
                                         <th class="p-4 text-left">Notes</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Capacitance</td>
                                         <td class="p-4 font-mono">C = ε₀A/d</td>
@@ -868,40 +895,40 @@
                             </table>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Effect of Changing Parameters</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Effect of Changing Parameters</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Battery Connected (V = constant)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Battery Connected (V = constant)</h5>
                                 <p class="text-sm mb-3">When a parameter changes with battery connected:</p>
                                 <div class="space-y-2 text-sm">
-                                    <div class="flex justify-between items-center p-2 bg-white rounded">
+                                    <div class="flex justify-between items-center p-2 bg-canvas rounded">
                                         <span>If C increases (↑)</span>
                                         <span class="font-mono">Q↑, U↑, V same</span>
                                     </div>
-                                    <div class="flex justify-between items-center p-2 bg-white rounded">
+                                    <div class="flex justify-between items-center p-2 bg-canvas rounded">
                                         <span>If C decreases (↓)</span>
                                         <span class="font-mono">Q↓, U↓, V same</span>
                                     </div>
-                                    <div class="flex justify-between items-center p-2 bg-white rounded">
+                                    <div class="flex justify-between items-center p-2 bg-canvas rounded">
                                         <span>Insert dielectric (K)</span>
                                         <span class="font-mono">C→KC, Q→KQ, U→KU</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Battery Disconnected (Q = constant)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Battery Disconnected (Q = constant)</h5>
                                 <p class="text-sm mb-3">When a parameter changes after battery removal:</p>
                                 <div class="space-y-2 text-sm">
-                                    <div class="flex justify-between items-center p-2 bg-white rounded">
+                                    <div class="flex justify-between items-center p-2 bg-canvas rounded">
                                         <span>If C increases (↑)</span>
                                         <span class="font-mono">V↓, U↓, Q same</span>
                                     </div>
-                                    <div class="flex justify-between items-center p-2 bg-white rounded">
+                                    <div class="flex justify-between items-center p-2 bg-canvas rounded">
                                         <span>If C decreases (↓)</span>
                                         <span class="font-mono">V↑, U↑, Q same</span>
                                     </div>
-                                    <div class="flex justify-between items-center p-2 bg-white rounded">
+                                    <div class="flex justify-between items-center p-2 bg-canvas rounded">
                                         <span>Insert dielectric (K)</span>
                                         <span class="font-mono">C→KC, V→V/K, U→U/K</span>
                                     </div>
@@ -910,7 +937,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Most Common JEE Mistakes
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -922,14 +949,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A parallel plate capacitor has plate area 100 cm² and separation 2 mm. It is connected to a 100V battery. Find: (a) Capacitance (b) Charge (c) Electric field (d) Energy stored.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: A = 100 cm² = 100 × 10⁻⁴ m² = 10⁻² m²</p>
                                 <p class="mb-2">d = 2 mm = 2 × 10⁻³ m, V = 100 V</p>
                                 
@@ -956,21 +983,21 @@
                                     \[U = \frac{1}{2}CV^2 = \frac{1}{2} \times 44.25 \times 10^{-12} \times (100)^2 = 2.21 \times 10^{-7} \text{ J}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: (a) 44.25 pF, (b) 4.425 nC, (c) 50 kV/m, (d) 0.221 μJ}\]
                                 </div>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A parallel plate capacitor of capacitance C₀ is charged to potential V₀. The battery is then disconnected. If the separation between plates is doubled, find the new capacitance, voltage, and energy. Comment on energy change.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Initial: C₀, V₀, Q₀ = C₀V₀, U₀ = ½C₀V₀²</p>
                                 <p class="mb-2">Battery disconnected → <strong>Charge remains constant</strong> (Q = Q₀)</p>
                                 
@@ -994,7 +1021,7 @@
                                     \[U' = \frac{Q^2}{2C'} = \frac{Q_0^2}{2 \times C_0/2} = \frac{Q_0^2}{C_0} = 2U_0\]
                                 </div>
                                 
-                                <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                     <p class="font-semibold mb-2">Results:</p>
                                     <ul class="list-disc list-inside space-y-1">
                                         <li>C → C₀/2 (halved)</li>
@@ -1009,10 +1036,10 @@
                 </section>
                 
                 <!-- Chapter 3: Types of Capacitors -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Types of Capacitors</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Types of Capacitors</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1022,29 +1049,29 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Spherical Capacitor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Spherical Capacitor (Two Concentric Spheres)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="mb-3">Inner sphere of radius <strong>a</strong>, outer sphere of radius <strong>b</strong></p>
-                                    <div class="math-display text-center bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display text-center bg-surface-2 p-4 rounded-lg">
                                         \[C = \frac{4\pi\epsilon_0 ab}{b - a}\]
                                     </div>
                                     <p class="text-sm mt-3">With dielectric K:</p>
-                                    <div class="math-display text-center bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display text-center bg-surface-2 p-3 rounded-lg">
                                         \[C = \frac{4\pi K\epsilon_0 ab}{b - a}\]
                                     </div>
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Special Cases:</p>
                                     <div class="space-y-3 text-sm">
-                                        <div class="bg-white p-3 rounded-lg">
+                                        <div class="bg-canvas p-3 rounded-lg">
                                             <p><strong>If b → ∞ (Isolated sphere):</strong></p>
                                             <div class="math-display">
                                                 \[C = 4\pi\epsilon_0 a\]
                                             </div>
                                         </div>
-                                        <div class="bg-white p-3 rounded-lg">
+                                        <div class="bg-canvas p-3 rounded-lg">
                                             <p><strong>If (b - a) << a (thin shell):</strong></p>
                                             <div class="math-display">
                                                 \[C \approx \frac{4\pi\epsilon_0 a^2}{b-a} = \frac{\epsilon_0 A}{d}\]
@@ -1058,16 +1085,16 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Cylindrical Capacitor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Cylindrical Capacitor (Two Coaxial Cylinders)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="mb-3">Inner radius <strong>a</strong>, outer radius <strong>b</strong>, length <strong>L</strong></p>
-                                    <div class="math-display text-center bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display text-center bg-surface-2 p-4 rounded-lg">
                                         \[C = \frac{2\pi\epsilon_0 L}{\ln(b/a)}\]
                                     </div>
                                     <p class="text-sm mt-3">Capacitance per unit length:</p>
-                                    <div class="math-display text-center bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display text-center bg-surface-2 p-3 rounded-lg">
                                         \[\frac{C}{L} = \frac{2\pi\epsilon_0}{\ln(b/a)}\]
                                     </div>
                                 </div>
@@ -1080,7 +1107,7 @@
                                         <li>ln is natural logarithm</li>
                                     </ul>
                                     <p class="font-semibold mt-4 mb-2">With dielectric K:</p>
-                                    <div class="math-display bg-blue-50 p-2 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-2 rounded-lg">
                                         \[C = \frac{2\pi K\epsilon_0 L}{\ln(b/a)}\]
                                     </div>
                                 </div>
@@ -1090,16 +1117,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Comparison of All Capacitor Types</h3>
                         
                         <div class="overflow-x-auto my-6">
-                                <table class="w-full custom-table shadow-lg">
+                                <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Capacitor Type</th>
                                         <th class="p-4 text-left">Capacitance Formula</th>
                                         <th class="p-4 text-left">Electric Field</th>
                                         <th class="p-4 text-left">Geometry</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Parallel Plate</td>
                                         <td class="p-4 font-mono">C = ε₀A/d</td>
@@ -1129,14 +1156,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A spherical capacitor has inner and outer radii of 10 cm and 12 cm. Find the capacitance. If the outer sphere is earthed, what is the capacitance?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: a = 10 cm = 0.1 m, b = 12 cm = 0.12 m</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Capacitance:</strong></p>
@@ -1153,7 +1180,7 @@
                                 <p class="mb-2 mt-4"><strong>When outer sphere is earthed:</strong></p>
                                 <p class="text-sm mb-2">The capacitance remains the same because earthing only fixes the potential of outer sphere to zero, but doesn't change the geometry.</p>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } C = 66.7 \text{ pF}\]
                                 </div>
                             </div>
@@ -1162,10 +1189,10 @@
                 </section>
                 
                 <!-- Chapter 4: Series and Parallel Combinations -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Series & Parallel Combinations</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Series & Parallel Combinations</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1173,21 +1200,21 @@
                             Capacitors can be connected in <strong>series</strong> or <strong>parallel</strong> (similar to resistors in <a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity">Current Electricity</a>) to achieve desired capacitance values. Understanding these combinations is crucial for JEE as 30-40% of capacitor problems involve finding equivalent capacitance.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.1 Series Combination</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Series Combination</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Capacitors in Series</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Capacitors in Series</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <div class="circuit-diagram mb-4 text-center">
                                         <p class="font-mono">─┤├─┤├─┤├─</p>
                                         <p class="font-mono">C₁  C₂  C₃</p>
                                     </div>
-                                    <div class="math-display text-center bg-purple-50 p-4 rounded-lg">
+                                    <div class="math-display text-center bg-surface-2 p-4 rounded-lg">
                                         \[\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + ...\]
                                     </div>
                                     <p class="text-sm mt-3 font-semibold">For two capacitors:</p>
-                                    <div class="math-display bg-purple-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[C_{eq} = \frac{C_1 C_2}{C_1 + C_2}\]
                                     </div>
                                 </div>
@@ -1199,21 +1226,21 @@
                                         <li>✓ C_eq is <strong>smaller</strong> than smallest capacitor</li>
                                         <li>✓ Voltage across each: V₁ = Q/C₁</li>
                                     </ul>
-                                    <div class="bg-white p-3 rounded-lg mt-4">
+                                    <div class="bg-canvas p-3 rounded-lg mt-4">
                                         <p class="font-semibold mb-2">Voltage Distribution:</p>
                                         <div class="math-display text-sm">
                                             \[V_1 : V_2 : V_3 = \frac{1}{C_1} : \frac{1}{C_2} : \frac{1}{C_3}\]
                                         </div>
-                                        <p class="text-xs text-gray-600">Smaller C gets larger V!</p>
+                                        <p class="text-xs text-ink-muted">Smaller C gets larger V!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.2 Parallel Combination</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Parallel Combination</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Capacitors in Parallel</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Capacitors in Parallel</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <div class="circuit-diagram mb-4 text-center">
@@ -1221,7 +1248,7 @@
                                         <p class="font-mono">├─┤├─┤</p>
                                         <p class="font-mono">└─┤├─┘</p>
                                     </div>
-                                    <div class="math-display text-center bg-purple-50 p-4 rounded-lg">
+                                    <div class="math-display text-center bg-surface-2 p-4 rounded-lg">
                                         \[C_{eq} = C_1 + C_2 + C_3 + ...\]
                                     </div>
                                     <p class="text-sm mt-3">Simple algebraic sum!</p>
@@ -1234,29 +1261,29 @@
                                         <li>✓ C_eq is <strong>larger</strong> than largest capacitor</li>
                                         <li>✓ Charge on each: Q₁ = C₁V</li>
                                     </ul>
-                                    <div class="bg-white p-3 rounded-lg mt-4">
+                                    <div class="bg-canvas p-3 rounded-lg mt-4">
                                         <p class="font-semibold mb-2">Charge Distribution:</p>
                                         <div class="math-display text-sm">
                                             \[Q_1 : Q_2 : Q_3 = C_1 : C_2 : C_3\]
                                         </div>
-                                        <p class="text-xs text-gray-600">Larger C gets larger Q!</p>
+                                        <p class="text-xs text-ink-muted">Larger C gets larger Q!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.3 Comparison: Series vs Parallel</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Comparison: Series vs Parallel</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Series</th>
                                         <th class="p-4 text-left">Parallel</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Equivalent Capacitance</td>
                                         <td class="p-4 font-mono">1/C_eq = Σ(1/Cᵢ)</td>
@@ -1291,7 +1318,7 @@
                             </table>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.4 Mixed Combinations Strategy</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Mixed Combinations Strategy</h3>
                         
                         <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
                             <h4 class="font-bold text-xl mb-3 flex items-center">
@@ -1307,14 +1334,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Three capacitors of 2μF, 3μF, and 6μF are connected in (a) series (b) parallel. Find equivalent capacitance in each case.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: C₁ = 2μF, C₂ = 3μF, C₃ = 6μF</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Series combination:</strong></p>
@@ -1333,14 +1360,14 @@
                                     \[C_{eq} = C_1 + C_2 + C_3 = 2 + 3 + 6 = 11 \text{ μF}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: (a) } 1 \text{ μF (series)}, \text{ (b) } 11 \text{ μF (parallel)}\]
                                 </div>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1354,10 +1381,10 @@
        │     │
        └─┤├─┘
                                 </pre>
-                                <p class="text-center text-sm text-gray-600">(3 capacitors in parallel)</p>
+                                <p class="text-center text-sm text-ink-muted">(3 capacitors in parallel)</p>
                             </div>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">All three capacitors are connected between points A and B directly.</p>
                                 <p class="mb-2">This means they are in <strong>parallel</strong>.</p>
                                 
@@ -1365,21 +1392,21 @@
                                     \[C_{eq} = C + C + C = 3C\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } C_{eq} = 3C\]
                                 </div>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7 (Mixed Combination)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find equivalent capacitance: 2μF in series with (3μF parallel with 6μF).
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2 mt-4"><strong>Step 1: Solve parallel combination first</strong></p>
                                 <div class="math-display">
                                     \[C_{parallel} = 3 + 6 = 9 \text{ μF}\]
@@ -1393,7 +1420,7 @@
                                     \[C_{eq} = \frac{18}{11} \text{ μF} = 1.636 \text{ μF}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } C_{eq} = \frac{18}{11} \text{ μF} \approx 1.64 \text{ μF}\]
                                 </div>
                             </div>
@@ -1402,10 +1429,10 @@
                 </section>
                 
                 <!-- Chapter 5: Energy and Force -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Energy Stored & Force Between Plates</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Energy Stored & Force Between Plates</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1415,24 +1442,24 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Energy Stored in a Capacitor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Three Equivalent Energy Formulas</h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Form 1</p>
                                     <div class="math-display">
                                         \[U = \frac{1}{2}CV^2\]
                                     </div>
                                     <p class="text-xs mt-2">Use when C and V are known</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Form 2</p>
                                     <div class="math-display">
                                         \[U = \frac{1}{2}\frac{Q^2}{C}\]
                                     </div>
                                     <p class="text-xs mt-2">Use when Q is constant</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Form 3</p>
                                     <div class="math-display">
                                         \[U = \frac{1}{2}QV\]
@@ -1440,7 +1467,7 @@
                                     <p class="text-xs mt-2">Use when Q and V are known</p>
                                 </div>
                             </div>
-                            <div class="mt-4 p-4 bg-white rounded-lg">
+                            <div class="mt-4 p-4 bg-canvas rounded-lg">
                                 <p class="font-semibold mb-2">Derivation:</p>
                                 <div class="math-display text-sm">
                                     \[U = \int_0^Q V \, dq = \int_0^Q \frac{q}{C} \, dq = \frac{1}{C} \cdot \frac{q^2}{2}\Big|_0^Q = \frac{Q^2}{2C}\]
@@ -1450,9 +1477,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Energy Density</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Energy Per Unit Volume</h4>
-                            <div class="math-display text-center bg-blue-50 p-6 rounded-lg">
+                            <div class="math-display text-center bg-surface-2 p-6 rounded-lg">
                                 \[u = \frac{U}{Volume} = \frac{1}{2}\epsilon_0 E^2\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -1470,7 +1497,7 @@
                                     <p class="text-xs mt-2">where D = ε₀E (displacement field)</p>
                                 </div>
                             </div>
-                            <div class="mt-4 p-4 bg-white rounded-lg">
+                            <div class="mt-4 p-4 bg-canvas rounded-lg">
                                 <p class="font-semibold mb-2">With Dielectric (K):</p>
                                 <div class="math-display">
                                     \[u = \frac{1}{2}\epsilon_0 K E^2 = \frac{1}{2}\epsilon E^2\]
@@ -1480,26 +1507,26 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Force Between Capacitor Plates</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Electrostatic Force & Pressure</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="font-semibold mb-2">Force on one plate:</p>
-                                    <div class="math-display bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[F = \frac{Q^2}{2\epsilon_0 A} = \frac{\sigma^2 A}{2\epsilon_0}\]
                                     </div>
                                     <p class="text-sm mt-2">Also:</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[F = \frac{1}{2}QE = \frac{\epsilon_0 A E^2}{2}\]
                                     </div>
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Electrostatic Pressure:</p>
-                                    <div class="math-display bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[P = \frac{F}{A} = \frac{\sigma^2}{2\epsilon_0} = \frac{1}{2}\epsilon_0 E^2\]
                                     </div>
                                     <p class="text-sm mt-2">Note: Pressure = Energy density!</p>
-                                    <div class="bg-white p-3 rounded-lg mt-3">
+                                    <div class="bg-canvas p-3 rounded-lg mt-3">
                                         <p class="text-xs"><strong>Key:</strong> Force is always <strong>attractive</strong> (plates attract each other)</p>
                                     </div>
                                 </div>
@@ -1509,16 +1536,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Energy Changes in Different Scenarios</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Scenario</th>
                                         <th class="p-4 text-left">What's Constant</th>
                                         <th class="p-4 text-left">Energy Change</th>
                                         <th class="p-4 text-left">Best Formula</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Battery connected</td>
                                         <td class="p-4">V = constant</td>
@@ -1560,11 +1587,11 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Energy Lost When Capacitors Share Charge
                             </h4>
                             <p class="mb-3">When two capacitors are connected (charge redistribution), <strong>energy is always lost</strong> as heat, even if no resistance is present.</p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Energy loss formula:</p>
                                 <div class="math-display">
                                     \[\Delta U = U_i - U_f = \frac{C_1 C_2 (V_1 - V_2)^2}{2(C_1 + C_2)}\]
@@ -1574,14 +1601,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A 4μF capacitor is charged to 200V. It is then connected to an uncharged 2μF capacitor. Find: (a) Common potential (b) Charge on each (c) Energy loss.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Initial: C₁ = 4μF, V₁ = 200V, Q₁ = 800μC</p>
                                 <p class="mb-2">C₂ = 2μF, V₂ = 0V, Q₂ = 0</p>
                                 
@@ -1615,7 +1642,7 @@
                                     \[\Delta U = \frac{C_1 C_2 (V_1 - V_2)^2}{2(C_1 + C_2)} = \frac{4 \times 2 \times (200-0)^2 \times 10^{-6}}{2 \times 6} = 0.0267 \text{ J}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: (a) 133.33V, (b) 533.33μC \& 266.67μC, (c) 26.7 mJ}\]
                                 </div>
                             </div>
@@ -1624,10 +1651,10 @@
                 </section>
                 
                 <!-- Chapter 6: Dielectrics -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Dielectrics in Capacitors</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Dielectrics in Capacitors</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1635,11 +1662,11 @@
                             A <strong><a href="https://en.wikipedia.org/wiki/Dielectric" target="_blank" rel="noopener noreferrer">dielectric</a></strong> is an insulating material that, when inserted between capacitor plates, increases the capacitance. This is one of the most important and most frequently tested topics in JEE.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Dielectric Constant (K or κ or εᵣ)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Dielectric Constant (K or κ or εᵣ)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Dielectric Constant Definition</h4>
-                            <div class="math-display text-center bg-purple-50 p-6 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Dielectric Constant Definition</h4>
+                            <div class="math-display text-center bg-surface-2 p-6 rounded-lg">
                                 \[K = \frac{C}{C_0} = \frac{E_0}{E} = \frac{V_0}{V} = \frac{\epsilon}{\epsilon_0}\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -1663,98 +1690,98 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Effect of Dielectric - Complete Analysis</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Effect of Dielectric - Complete Analysis</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Quantity</th>
                                         <th class="p-4 text-left">Battery Connected (V constant)</th>
                                         <th class="p-4 text-left">Battery Disconnected (Q constant)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Capacitance C</td>
-                                        <td class="p-4 font-mono text-success">C → KC (increases)</td>
-                                        <td class="p-4 font-mono text-success">C → KC (increases)</td>
+                                        <td class="p-4 font-mono text-primary">C → KC (increases)</td>
+                                        <td class="p-4 font-mono text-primary">C → KC (increases)</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Charge Q</td>
-                                        <td class="p-4 font-mono text-success">Q → KQ (increases)</td>
+                                        <td class="p-4 font-mono text-primary">Q → KQ (increases)</td>
                                         <td class="p-4 font-mono">Q → Q (same)</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Voltage V</td>
                                         <td class="p-4 font-mono">V → V (same)</td>
-                                        <td class="p-4 font-mono text-danger">V → V/K (decreases)</td>
+                                        <td class="p-4 font-mono text-primary">V → V/K (decreases)</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Electric Field E</td>
                                         <td class="p-4 font-mono">E → E (same, in free space)</td>
-                                        <td class="p-4 font-mono text-danger">E → E/K (decreases)</td>
+                                        <td class="p-4 font-mono text-primary">E → E/K (decreases)</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Energy U</td>
-                                        <td class="p-4 font-mono text-success">U → KU (increases)</td>
-                                        <td class="p-4 font-mono text-danger">U → U/K (decreases)</td>
+                                        <td class="p-4 font-mono text-primary">U → KU (increases)</td>
+                                        <td class="p-4 font-mono text-primary">U → U/K (decreases)</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Partial Dielectric Insertion</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Partial Dielectric Insertion</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Dielectric in Series (layers)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Dielectric in Series (layers)</h5>
                                 <p class="text-sm mb-3">Dielectric fills part of the gap (thickness t)</p>
-                                <div class="math-display bg-purple-50 p-3 rounded-lg">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg">
                                     \[C = \frac{\epsilon_0 A}{d - t + \frac{t}{K}}\]
                                 </div>
                                 <p class="text-xs mt-2">Treat as two capacitors in series</p>
-                                <div class="math-display text-sm bg-white p-2 rounded mt-2">
+                                <div class="math-display text-sm bg-canvas p-2 rounded mt-2">
                                     \[\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}\]
                                 </div>
                                 <p class="text-xs">where C₁ = ε₀A/(d-t), C₂ = Kε₀A/t</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Dielectric in Parallel (side by side)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Dielectric in Parallel (side by side)</h5>
                                 <p class="text-sm mb-3">Dielectric covers part of area (A₁)</p>
-                                <div class="math-display bg-purple-50 p-3 rounded-lg">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg">
                                     \[C = \frac{\epsilon_0 A_1}{d} + \frac{K\epsilon_0 A_2}{d}\]
                                 </div>
                                 <p class="text-xs mt-2">Treat as two capacitors in parallel</p>
-                                <div class="math-display text-sm bg-white p-2 rounded mt-2">
+                                <div class="math-display text-sm bg-canvas p-2 rounded mt-2">
                                     \[C = C_1 + C_2\]
                                 </div>
                                 <p class="text-xs">where A₁ + A₂ = A (total area)</p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.4 Multiple Dielectrics</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.4 Multiple Dielectrics</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Multiple Dielectric Layers in Series</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Multiple Dielectric Layers in Series</h4>
                             <p class="mb-3">For n dielectric layers with thicknesses d₁, d₂, ... dₙ and constants K₁, K₂, ... Kₙ:</p>
-                            <div class="math-display text-center bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display text-center bg-surface-2 p-4 rounded-lg">
                                 \[\frac{1}{C} = \frac{1}{\epsilon_0 A}\left(\frac{d_1}{K_1} + \frac{d_2}{K_2} + ... + \frac{d_n}{K_n}\right)\]
                             </div>
                             <p class="mt-4 font-semibold">For two equal halves (d₁ = d₂ = d/2):</p>
-                            <div class="math-display bg-purple-50 p-3 rounded-lg">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg">
                                 \[C = \frac{2\epsilon_0 A K_1 K_2}{d(K_1 + K_2)}\]
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Multiple Dielectrics in Parallel</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Multiple Dielectrics in Parallel</h4>
                             <p class="mb-3">For n dielectrics with areas A₁, A₂, ... Aₙ and constants K₁, K₂, ... Kₙ:</p>
-                            <div class="math-display text-center bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display text-center bg-surface-2 p-4 rounded-lg">
                                 \[C = \frac{\epsilon_0}{d}(K_1 A_1 + K_2 A_2 + ... + K_n A_n)\]
                             </div>
                             <p class="mt-4 font-semibold">For two equal halves (A₁ = A₂ = A/2):</p>
-                            <div class="math-display bg-purple-50 p-3 rounded-lg">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg">
                                 \[C = \frac{\epsilon_0 A(K_1 + K_2)}{2d}\]
                             </div>
                         </div>
@@ -1772,14 +1799,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 9 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A parallel plate capacitor has plate area 200 cm² and separation 4 mm. A dielectric slab of thickness 2 mm and K = 4 is inserted. Find the capacitance.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: A = 200 cm² = 200 × 10⁻⁴ m²</p>
                                 <p class="mb-2">d = 4 mm = 4 × 10⁻³ m</p>
                                 <p class="mb-2">t = 2 mm (thickness of dielectric), K = 4</p>
@@ -1798,21 +1825,21 @@
                                     \[C = 7.08 \times 10^{-11} \text{ F} = 70.8 \text{ pF}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } C = 70.8 \text{ pF}\]
                                 </div>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 10 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A parallel plate capacitor has two dielectrics: one with K₁ = 2 filling the upper half of volume, and K₂ = 4 filling the lower half. If C₀ is capacitance without dielectric, find C.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2 mt-4"><strong>Analysis:</strong> Each dielectric fills half the gap (d/2 each)</p>
                                 <p class="mb-2">This is a <strong>series</strong> combination of two capacitors.</p>
                                 
@@ -1834,7 +1861,7 @@
                                     \[C = \frac{2K_1 K_2 C_0}{K_1 + K_2} = \frac{2 \times 2 \times 4 \times C_0}{2 + 4} = \frac{16C_0}{6} = \frac{8C_0}{3}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } C = \frac{8C_0}{3} = 2.67C_0\]
                                 </div>
                             </div>
@@ -1843,10 +1870,10 @@
                 </section>
                 
                 <!-- Chapter 7: RC Circuits -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">RC Circuits</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">RC Circuits</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1856,9 +1883,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Time Constant (τ)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Time Constant Definition</h4>
-                            <div class="math-display text-center bg-blue-50 p-6 rounded-lg">
+                            <div class="math-display text-center bg-surface-2 p-6 rounded-lg">
                                 \[\tau = RC\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -1885,31 +1912,31 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Charging of Capacitor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Charging Equations</h4>
                             <p class="mb-3">When capacitor is connected to EMF (ε) through resistance R:</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="font-semibold mb-2">Charge on capacitor:</p>
-                                    <div class="math-display bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[q(t) = Q_0(1 - e^{-t/RC})\]
                                     </div>
                                     <p class="text-sm mt-2">where Q₀ = Cε (maximum charge)</p>
                                     
                                     <p class="font-semibold mb-2 mt-4">Voltage across capacitor:</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[V_C(t) = \varepsilon(1 - e^{-t/RC})\]
                                     </div>
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Current in circuit:</p>
-                                    <div class="math-display bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[i(t) = I_0 e^{-t/RC} = \frac{\varepsilon}{R}e^{-t/RC}\]
                                     </div>
                                     <p class="text-sm mt-2">where I₀ = ε/R (initial current)</p>
                                     
                                     <p class="font-semibold mb-2 mt-4">Voltage across resistor:</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[V_R(t) = \varepsilon \cdot e^{-t/RC}\]
                                     </div>
                                 </div>
@@ -1918,24 +1945,24 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Discharging of Capacitor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Discharging Equations</h4>
                             <p class="mb-3">When charged capacitor (initial charge Q₀) discharges through R:</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="font-semibold mb-2">Charge on capacitor:</p>
-                                    <div class="math-display bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[q(t) = Q_0 e^{-t/RC}\]
                                     </div>
                                     
                                     <p class="font-semibold mb-2 mt-4">Voltage across capacitor:</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[V_C(t) = V_0 e^{-t/RC}\]
                                     </div>
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Current (magnitude):</p>
-                                    <div class="math-display bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[|i(t)| = \frac{Q_0}{RC}e^{-t/RC} = \frac{V_0}{R}e^{-t/RC}\]
                                     </div>
                                     <p class="text-sm mt-2">Note: Current flows in opposite direction</p>
@@ -1946,16 +1973,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.4 Important Time Values</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Time</th>
                                         <th class="p-4 text-left">Charging (q/Q₀)</th>
                                         <th class="p-4 text-left">Discharging (q/Q₀)</th>
                                         <th class="p-4 text-left">Percentage</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">t = 0</td>
                                         <td class="p-4 font-mono">0</td>
@@ -2009,14 +2036,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 11
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A 2μF capacitor is charged through a 1MΩ resistor by a 10V battery. Find: (a) Time constant (b) Maximum charge (c) Charge at t = 2s (d) Time to reach 5V.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: C = 2μF = 2×10⁻⁶F, R = 1MΩ = 10⁶Ω, ε = 10V</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Time constant:</strong></p>
@@ -2051,7 +2078,7 @@
                                     \[t = 1.386 \text{ s}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: (a) 2s, (b) 20μC, (c) 12.64μC, (d) 1.39s}\]
                                 </div>
                             </div>
@@ -2060,10 +2087,10 @@
                 </section>
                 
                 <!-- Chapter 8: Special Cases & Advanced Problems -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Special Cases & Advanced Problems</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Special Cases & Advanced Problems</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -2071,15 +2098,15 @@
                             This section covers special configurations and advanced problem types that frequently appear in JEE Advanced. Mastering these will give you an edge in competitive exams.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">8.1 Capacitor with Conducting Slab</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Capacitor with Conducting Slab</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Conducting Slab Inside Capacitor</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Conducting Slab Inside Capacitor</h4>
                             <p class="mb-3">When a conducting slab of thickness t is inserted (not touching plates):</p>
-                            <div class="math-display text-center bg-purple-50 p-6 rounded-lg">
+                            <div class="math-display text-center bg-surface-2 p-6 rounded-lg">
                                 \[C = \frac{\epsilon_0 A}{d - t}\]
                             </div>
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Explanation:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Electric field inside conductor = 0</li>
@@ -2090,10 +2117,10 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">8.2 Guard Ring Capacitor</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Guard Ring Capacitor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Guard Ring Arrangement</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Guard Ring Arrangement</h4>
                             <p class="mb-3">Used to eliminate edge effects (fringing) in experiments:</p>
                             <ul class="list-disc list-inside space-y-2 text-sm">
                                 <li>Main plate surrounded by a "guard ring" at same potential</li>
@@ -2103,22 +2130,22 @@
                             </ul>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">8.3 Variable Capacitor</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 Variable Capacitor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Overlapping Area Change</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Overlapping Area Change</h4>
                             <p class="mb-3">When plates overlap by area A (can be varied):</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-semibold mb-2">Capacitance:</p>
-                                    <div class="math-display bg-purple-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[C = \frac{\epsilon_0 A}{d}\]
                                     </div>
                                     <p class="text-sm">If A → A/2, then C → C/2</p>
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">With n plates overlapping:</p>
-                                    <div class="math-display bg-purple-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[C = \frac{(n-1)\epsilon_0 A}{d}\]
                                     </div>
                                     <p class="text-sm">(n-1) capacitors in parallel</p>
@@ -2126,21 +2153,21 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">8.4 Force on Dielectric Being Inserted</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.4 Force on Dielectric Being Inserted</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Force on Dielectric Slab</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Force on Dielectric Slab</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="font-semibold mb-2">Battery Connected (V constant):</p>
-                                    <div class="math-display bg-purple-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[F = \frac{\epsilon_0(K-1)bV^2}{2d}\]
                                     </div>
                                     <p class="text-sm mt-2">Force is <strong>inward</strong> (pulls dielectric in)</p>
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Battery Disconnected (Q constant):</p>
-                                    <div class="math-display bg-purple-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[F = \frac{Q^2(K-1)}{2\epsilon_0 b(Kx + L - x)^2}\]
                                     </div>
                                     <p class="text-sm mt-2">where x = inserted length, L = plate length</p>
@@ -2149,24 +2176,24 @@
                             <p class="text-sm mt-4"><strong>Note:</strong> b = width of plate, d = separation between plates</p>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">8.5 Redistribution of Charge</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.5 Redistribution of Charge</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">When Two Charged Capacitors are Connected</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">When Two Charged Capacitors are Connected</h4>
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Same polarity connection:</p>
                                     <div class="math-display">
                                         \[V_{common} = \frac{C_1V_1 + C_2V_2}{C_1 + C_2} = \frac{Q_1 + Q_2}{C_1 + C_2}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Opposite polarity connection:</p>
                                     <div class="math-display">
                                         \[V_{common} = \frac{|C_1V_1 - C_2V_2|}{C_1 + C_2} = \frac{|Q_1 - Q_2|}{C_1 + C_2}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Energy loss:</p>
                                     <div class="math-display">
                                         \[\Delta U = \frac{C_1C_2(V_1 - V_2)^2}{2(C_1 + C_2)} = \frac{(Q_1 - Q_2)^2}{2(C_1 + C_2)}\]
@@ -2177,14 +2204,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 12 (JEE Advanced)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A capacitor C₁ = 4μF charged to 100V is connected to another capacitor C₂ = 2μF charged to 50V with opposite polarity. Find common potential and energy loss.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Initial charges: Q₁ = 4 × 100 = 400μC, Q₂ = 2 × 50 = 100μC</p>
                                 <p class="mb-2">Connected with opposite polarity</p>
                                 
@@ -2216,7 +2243,7 @@
                                     \[\Delta U = U_i - U_f = 22500 - 7500 = 15000 \text{ μJ} = 15 \text{ mJ}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: } V_{common} = 50V, \Delta U = 15 \text{ mJ}\]
                                 </div>
                             </div>
@@ -2225,88 +2252,88 @@
                 </section>
                 
                 <!-- Formula Sheet -->
-                <section id="formulas" class="bg-gradient-to-br from-secondary to-purple-700 text-white rounded-2xl shadow-2xl p-8">
+                <section id="formulas" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📋</span>
                         Complete Formula Sheet - Capacitance
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Basic Formulas</h3>
                             <div class="space-y-3 font-mono text-sm">
-                                <div class="bg-white/10 p-3 rounded">C = Q/V</div>
-                                <div class="bg-white/10 p-3 rounded">C (parallel plate) = ε₀A/d</div>
-                                <div class="bg-white/10 p-3 rounded">C (spherical) = 4πε₀ab/(b-a)</div>
-                                <div class="bg-white/10 p-3 rounded">C (cylindrical) = 2πε₀L/ln(b/a)</div>
-                                <div class="bg-white/10 p-3 rounded">C (isolated sphere) = 4πε₀R</div>
+                                <div class="bg-canvas/10 p-3 rounded">C = Q/V</div>
+                                <div class="bg-canvas/10 p-3 rounded">C (parallel plate) = ε₀A/d</div>
+                                <div class="bg-canvas/10 p-3 rounded">C (spherical) = 4πε₀ab/(b-a)</div>
+                                <div class="bg-canvas/10 p-3 rounded">C (cylindrical) = 2πε₀L/ln(b/a)</div>
+                                <div class="bg-canvas/10 p-3 rounded">C (isolated sphere) = 4πε₀R</div>
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Combinations</h3>
                             <div class="space-y-3 font-mono text-sm">
-                                <div class="bg-white/10 p-3 rounded">Series: 1/C_eq = Σ(1/Cᵢ)</div>
-                                <div class="bg-white/10 p-3 rounded">Parallel: C_eq = ΣCᵢ</div>
-                                <div class="bg-white/10 p-3 rounded">Two in series: C_eq = C₁C₂/(C₁+C₂)</div>
-                                <div class="bg-white/10 p-3 rounded">n identical in series: C_eq = C/n</div>
-                                <div class="bg-white/10 p-3 rounded">n identical in parallel: C_eq = nC</div>
+                                <div class="bg-canvas/10 p-3 rounded">Series: 1/C_eq = Σ(1/Cᵢ)</div>
+                                <div class="bg-canvas/10 p-3 rounded">Parallel: C_eq = ΣCᵢ</div>
+                                <div class="bg-canvas/10 p-3 rounded">Two in series: C_eq = C₁C₂/(C₁+C₂)</div>
+                                <div class="bg-canvas/10 p-3 rounded">n identical in series: C_eq = C/n</div>
+                                <div class="bg-canvas/10 p-3 rounded">n identical in parallel: C_eq = nC</div>
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Energy Formulas</h3>
                             <div class="space-y-3 font-mono text-sm">
-                                <div class="bg-white/10 p-3 rounded">U = ½CV² = ½Q²/C = ½QV</div>
-                                <div class="bg-white/10 p-3 rounded">Energy density: u = ½ε₀E²</div>
-                                <div class="bg-white/10 p-3 rounded">Force: F = Q²/(2ε₀A)</div>
-                                <div class="bg-white/10 p-3 rounded">Pressure: P = ½ε₀E² = σ²/(2ε₀)</div>
-                                <div class="bg-white/10 p-3 rounded">Loss: ΔU = C₁C₂(V₁-V₂)²/2(C₁+C₂)</div>
+                                <div class="bg-canvas/10 p-3 rounded">U = ½CV² = ½Q²/C = ½QV</div>
+                                <div class="bg-canvas/10 p-3 rounded">Energy density: u = ½ε₀E²</div>
+                                <div class="bg-canvas/10 p-3 rounded">Force: F = Q²/(2ε₀A)</div>
+                                <div class="bg-canvas/10 p-3 rounded">Pressure: P = ½ε₀E² = σ²/(2ε₀)</div>
+                                <div class="bg-canvas/10 p-3 rounded">Loss: ΔU = C₁C₂(V₁-V₂)²/2(C₁+C₂)</div>
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Dielectrics</h3>
                             <div class="space-y-3 font-mono text-sm">
-                                <div class="bg-white/10 p-3 rounded">K = C/C₀ = E₀/E = V₀/V</div>
-                                <div class="bg-white/10 p-3 rounded">C (with K) = KC₀ = Kε₀A/d</div>
-                                <div class="bg-white/10 p-3 rounded">Partial: C = ε₀A/(d-t+t/K)</div>
-                                <div class="bg-white/10 p-3 rounded">Conductor: C = ε₀A/(d-t)</div>
-                                <div class="bg-white/10 p-3 rounded">Series layers: 1/C = Σ(dᵢ/Kᵢε₀A)</div>
+                                <div class="bg-canvas/10 p-3 rounded">K = C/C₀ = E₀/E = V₀/V</div>
+                                <div class="bg-canvas/10 p-3 rounded">C (with K) = KC₀ = Kε₀A/d</div>
+                                <div class="bg-canvas/10 p-3 rounded">Partial: C = ε₀A/(d-t+t/K)</div>
+                                <div class="bg-canvas/10 p-3 rounded">Conductor: C = ε₀A/(d-t)</div>
+                                <div class="bg-canvas/10 p-3 rounded">Series layers: 1/C = Σ(dᵢ/Kᵢε₀A)</div>
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl md:col-span-2">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl md:col-span-2">
                             <h3 class="text-2xl font-bold mb-4">RC Circuits</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 font-mono text-sm">
-                                <div class="bg-white/10 p-3 rounded">τ = RC (time constant)</div>
-                                <div class="bg-white/10 p-3 rounded">Charging: q = Q₀(1 - e^(-t/RC))</div>
-                                <div class="bg-white/10 p-3 rounded">Discharging: q = Q₀e^(-t/RC)</div>
-                                <div class="bg-white/10 p-3 rounded">Current: i = I₀e^(-t/RC)</div>
-                                <div class="bg-white/10 p-3 rounded">At t = τ: q = 0.632Q₀ (charging)</div>
-                                <div class="bg-white/10 p-3 rounded">At t = τ: q = 0.368Q₀ (discharging)</div>
-                                <div class="bg-white/10 p-3 rounded">Half-life: t₁/₂ = 0.693RC</div>
-                                <div class="bg-white/10 p-3 rounded">At t = 5τ: ~99.3% complete</div>
+                                <div class="bg-canvas/10 p-3 rounded">τ = RC (time constant)</div>
+                                <div class="bg-canvas/10 p-3 rounded">Charging: q = Q₀(1 - e^(-t/RC))</div>
+                                <div class="bg-canvas/10 p-3 rounded">Discharging: q = Q₀e^(-t/RC)</div>
+                                <div class="bg-canvas/10 p-3 rounded">Current: i = I₀e^(-t/RC)</div>
+                                <div class="bg-canvas/10 p-3 rounded">At t = τ: q = 0.632Q₀ (charging)</div>
+                                <div class="bg-canvas/10 p-3 rounded">At t = τ: q = 0.368Q₀ (discharging)</div>
+                                <div class="bg-canvas/10 p-3 rounded">Half-life: t₁/₂ = 0.693RC</div>
+                                <div class="bg-canvas/10 p-3 rounded">At t = 5τ: ~99.3% complete</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-secondary px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Formula Sheet PDF
                         </a>
                     </div>
                 </section>
                 
                 <!-- Previous Year Questions -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Capacitor Combinations: 35%</li>
@@ -2316,7 +2343,7 @@
                                 <li>✓ Basic Formulas: 5%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Complex Networks: 30%</li>
@@ -2328,8 +2355,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Finding equivalent capacitance of complex networks</li>
                             <li>Effect of inserting dielectric with battery connected/disconnected</li>
@@ -2349,7 +2376,7 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -2372,21 +2399,21 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
                 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A parallel plate capacitor has plates of area 200 cm² separated by 2 mm. Find its capacitance.</li>
                             <li>Three capacitors 3μF, 6μF, and 9μF are connected in series. Find equivalent capacitance.</li>
@@ -2399,8 +2426,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A 4μF capacitor charged to 200V is connected to an uncharged 2μF capacitor. Find common potential and energy loss.</li>
                             <li>A parallel plate capacitor has a dielectric slab (K=4) of thickness d/2 inserted. Find the new capacitance in terms of C₀.</li>
@@ -2413,8 +2440,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A capacitor has two dielectric layers: K₁ = 2 (thickness d/3) and K₂ = 6 (thickness 2d/3). Find equivalent K.</li>
                             <li>A capacitor is charged to V₀, then disconnected. If a dielectric slab (K=3) of thickness d/2 is inserted, find new potential and the work done by external agent.</li>
@@ -2428,57 +2455,75 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
                 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./centre-of-mass-and-collision.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Centre Of Mass And Collision</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./current-electricity.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Current Electricity</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./dual-nature-of-radiation-and-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Dual Nature Of Radiation And Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
     
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Prerequisite</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Prerequisite</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Electrostatics</h3>
-                    <p class="text-gray-600">Coulomb's Law, Electric Field, Gauss Law, Electric Potential</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electrostatics</h3>
+                    <p class="text-ink-muted">Coulomb's Law, Electric Field, Gauss Law, Electric Potential</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Current Electricity</h3>
-                    <p class="text-gray-600">Electric current, Ohm's law, Resistance, Kirchhoff's laws</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Current Electricity</h3>
+                    <p class="text-ink-muted">Electric current, Ohm's law, Resistance, Kirchhoff's laws</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Electromagnetic Induction</h3>
-                    <p class="text-gray-600">Faraday's law, Lenz's law, Self and mutual inductance</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electromagnetic Induction</h3>
+                    <p class="text-ink-muted">Faraday's law, Lenz's law, Self and mutual inductance</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -2486,7 +2531,7 @@
             
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2494,62 +2539,62 @@
     </section>
     
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Capacitance - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Capacitance - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Capacitance is Crucial for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Capacitance</strong> is one of the most important chapters in <strong>JEE Physics</strong> with a consistent weightage of 6-8% in JEE Main and 8-10% in JEE Advanced. The concepts are highly scoring because:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Formula-based:</strong> Most problems can be solved with direct formula application</li>
                             <li><strong>Predictable patterns:</strong> Same types of problems repeat every year</li>
                             <li><strong>High accuracy:</strong> Less scope for calculation errors</li>
                             <li><strong>Connected topics:</strong> Links to RC circuits in Current Electricity</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             Capacitor combinations and <a href="https://en.wikipedia.org/wiki/Dielectric" target="_blank" rel="noopener noreferrer">dielectric</a> problems are the <strong>most frequently asked</strong> topics, appearing in almost every JEE exam.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Formulas Must Know</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Capacitance Basics</h4>
-                                <p class="text-gray-700 text-sm">C = Q/V, C = ε₀A/d (parallel plate)</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Capacitance Basics</h4>
+                                <p class="text-ink-muted text-sm">C = Q/V, C = ε₀A/d (parallel plate)</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Combinations (Most Important)</h4>
-                                <p class="text-gray-700 text-sm">Series: 1/C = Σ(1/Cᵢ), Parallel: C = ΣCᵢ</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Combinations (Most Important)</h4>
+                                <p class="text-ink-muted text-sm">Series: 1/C = Σ(1/Cᵢ), Parallel: C = ΣCᵢ</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. Energy Storage</h4>
-                                <p class="text-gray-700 text-sm">U = ½CV² = ½Q²/C = ½QV</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">3. Energy Storage</h4>
+                                <p class="text-ink-muted text-sm">U = ½CV² = ½Q²/C = ½QV</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">4. Dielectrics</h4>
-                                <p class="text-gray-700 text-sm">C = KC₀, Battery on vs off behavior</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">4. Dielectrics</h4>
+                                <p class="text-ink-muted text-sm">C = KC₀, Battery on vs off behavior</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">5. RC Circuits</h4>
-                                <p class="text-gray-700 text-sm">τ = RC, q = Q₀(1-e^(-t/τ)) — see <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction">Electromagnetic Induction</a> for related concepts</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">5. RC Circuits</h4>
+                                <p class="text-ink-muted text-sm">τ = RC, q = Q₀(1-e^(-t/τ)) — see <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction">Electromagnetic Induction</a> for related concepts</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Study Tips -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Capacitance Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 8-10 days (3 hours/day)</li>
                                 <li>Master <strong>series and parallel combinations</strong> - 35% questions</li>
                                 <li>Practice <strong>dielectric problems</strong> with both conditions</li>
@@ -2560,7 +2605,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 12-15 days (4 hours/day)</li>
                                 <li>Master <strong>complex capacitor networks</strong></li>
                                 <li>Understand <strong>charge redistribution</strong> completely</li>
@@ -2574,9 +2619,9 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Top 10 Mistakes to Avoid in JEE Exam</h3>
-                    <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Top 10 Mistakes to Avoid in JEE Exam</h3>
+                    <ol class="list-decimal list-inside space-y-3 text-ink-muted">
                         <li>
                             <strong>Series formula:</strong> Using 1/C_eq = 1/C₁ + 1/C₂ correctly (don't forget reciprocal at end!)
                         </li>
@@ -2611,11 +2656,11 @@
                 </div>
                 
                 <!-- Previous Year Analysis -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -2624,25 +2669,25 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">Dielectric insertion, Energy</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">4 Questions (15 marks)</td>
                                     <td class="p-3">Combinations, RC circuits</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">3 Questions (11 marks)</td>
                                     <td class="p-3">Charge redistribution, Force</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2021</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">4 Questions (14 marks)</td>
@@ -2651,62 +2696,62 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Trend Analysis:</strong> JEE Advanced is increasingly focusing on problems combining capacitors with other concepts (e.g., capacitor in circuit with battery and resistor, force problems). Direct formula questions are becoming rare in Advanced.
                     </p>
                 </div>
                 
                 <!-- Topic-wise Weightage -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📌 Topic-wise Weightage & Priority</h3>
                     <div class="space-y-3">
-                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                        <div class="flex items-center justify-between p-3 bg-surface-2 rounded-lg">
                             <span class="font-semibold">Series & Parallel Combinations</span>
                             <div class="flex items-center">
-                                <div class="w-64 bg-gray-200 rounded-full h-4 mr-3">
+                                <div class="w-64 bg-surface-2 rounded-full h-4 mr-3">
                                     <div class="bg-primary h-4 rounded-full" style="width: 35%"></div>
                                 </div>
                                 <span class="font-bold text-primary">35%</span>
                             </div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                        <div class="flex items-center justify-between p-3 bg-surface-2 rounded-lg">
                             <span class="font-semibold">Dielectric Effects</span>
                             <div class="flex items-center">
-                                <div class="w-64 bg-gray-200 rounded-full h-4 mr-3">
+                                <div class="w-64 bg-surface-2 rounded-full h-4 mr-3">
                                     <div class="bg-primary h-4 rounded-full" style="width: 25%"></div>
                                 </div>
                                 <span class="font-bold text-primary">25%</span>
                             </div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                        <div class="flex items-center justify-between p-3 bg-surface-2 rounded-lg">
                             <span class="font-semibold">Energy & Force</span>
                             <div class="flex items-center">
-                                <div class="w-64 bg-gray-200 rounded-full h-4 mr-3">
+                                <div class="w-64 bg-surface-2 rounded-full h-4 mr-3">
                                     <div class="bg-primary h-4 rounded-full" style="width: 20%"></div>
                                 </div>
                                 <span class="font-bold text-primary">20%</span>
                             </div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                        <div class="flex items-center justify-between p-3 bg-surface-2 rounded-lg">
                             <span class="font-semibold">RC Circuits</span>
                             <div class="flex items-center">
-                                <div class="w-64 bg-gray-200 rounded-full h-4 mr-3">
+                                <div class="w-64 bg-surface-2 rounded-full h-4 mr-3">
                                     <div class="bg-primary h-4 rounded-full" style="width: 15%"></div>
                                 </div>
                                 <span class="font-bold text-primary">15%</span>
                             </div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                        <div class="flex items-center justify-between p-3 bg-surface-2 rounded-lg">
                             <span class="font-semibold">Basic Concepts & Types</span>
                             <div class="flex items-center">
-                                <div class="w-64 bg-gray-200 rounded-full h-4 mr-3">
+                                <div class="w-64 bg-surface-2 rounded-full h-4 mr-3">
                                     <div class="bg-primary h-4 rounded-full" style="width: 5%"></div>
                                 </div>
                                 <span class="font-bold text-primary">5%</span>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm font-semibold">
+                    <p class="text-ink-muted mt-4 text-sm font-semibold">
                         <strong>Strategy:</strong> Focus 60% time on Combinations and Dielectrics, 25% on Energy/Force, 15% on RC Circuits.
                     </p>
                 </div>
@@ -2716,62 +2761,62 @@
     </section>
     
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
             </div>
@@ -2780,44 +2825,44 @@
                 <!-- Articles -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                     </ul>
                 </div>
                 
                 <!-- Important Websites -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
             
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
     
     <!-- Scroll to Top Button -->
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

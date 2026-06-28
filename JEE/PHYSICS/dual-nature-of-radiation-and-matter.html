@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Dual Nature of Radiation and Matter - Complete JEE Physics Notes with 150+ Examples">
     <meta property="og:description" content="Master Photoelectric Effect, De Broglie Waves & Matter Waves. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dual Nature of Radiation and Matter - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation-and-matter">
     <meta name="twitter:title" content="Dual Nature of Radiation and Matter - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master Photoelectric Effect with 150+ solved examples. Complete notes on De Broglie hypothesis & matter waves for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Dual Nature JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Dual Nature of Radiation and Matter - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Dual Nature covering Photoelectric Effect, Einstein's Equation, De Broglie Waves, and Davisson-Germer Experiment with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -356,59 +369,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="JEE Prep Guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="JEE Prep Guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                   <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                   <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -417,30 +432,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Dual Nature of Radiation and Matter</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Dual Nature of Radiation and Matter</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -448,29 +463,29 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Dual Nature of Radiation and Matter</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Dual Nature of Radiation and Matter</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Photon
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Photoelectric
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Einstein's Eq
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Graphs
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     De Broglie
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Davisson-Germer
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Wave-Particle
                 </a>
             </div>
@@ -478,28 +493,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
                     Dual Nature of Radiation
-                    <span class="block text-accent mt-2">and Matter | JEE 2025-26</span>
+                    <span class="block text-primary mt-2">and Matter | JEE 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Modern Physics with complete notes on Photoelectric Effect, Einstein's Equation, De Broglie Waves, and Davisson-Germer Experiment. Includes 150+ solved problems and all JEE formulas.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 7 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Graph Analysis</span>
                     </div>
                 </div>
@@ -508,21 +523,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Dual Nature of Radiation and Matter JEE Notes">
         <meta itemprop="description" content="Complete study notes for Dual Nature">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">278</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -532,15 +547,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -552,52 +567,64 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Photon & Its Properties</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Photoelectric Effect</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Einstein's Equation</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Important Graphs</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. De Broglie Waves</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Davisson-Germer</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Wave-Particle Duality</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Photon & Its Properties</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Photoelectric Effect</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Einstein's Equation</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Important Graphs</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. De Broglie Waves</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Davisson-Germer</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Wave-Particle Duality</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./atoms-and-nuclei.html" class="text-primary font-semibold hover:underline">Atoms And Nuclei &rarr;</a>
+                <a href="./ray-optics.html" class="text-primary font-semibold hover:underline">Ray Optics &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation-and-matter.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation-and-matter.webp"
                         alt="Dual Nature of Radiation and Matter JEE notes, Formulas, PYQs"
                         title="Dual Nature of Radiation and Matter — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Dual Nature of Radiation and Matter - JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Photon and Its Properties -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Photon and Its Properties</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Photon and Its Properties</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -607,12 +634,12 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Properties of Photon</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Fundamental Photon Properties</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="font-semibold mb-3">Energy of Photon:</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded">
+                                    <div class="math-display bg-surface-2 p-3 rounded">
                                         \[E = h\nu = \frac{hc}{\lambda}\]
                                     </div>
                                     <p class="text-sm mt-2">Where:</p>
@@ -625,7 +652,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-3">Momentum of Photon:</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded">
+                                    <div class="math-display bg-surface-2 p-3 rounded">
                                         \[p = \frac{E}{c} = \frac{h\nu}{c} = \frac{h}{\lambda}\]
                                     </div>
                                     <p class="text-sm mt-2">Note: Photon has momentum despite having zero rest mass!</p>
@@ -634,41 +661,41 @@
                         </div>
 
                         <div class="photon-box p-6 rounded-xl my-6">
-                            <h5 class="font-bold text-lg mb-3 text-accent">Complete Photon Formula Set (Must Memorize!)</h5>
+                            <h5 class="font-bold text-lg mb-3 text-primary">Complete Photon Formula Set (Must Memorize!)</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">Energy:</p>
                                     <div class="math-display text-sm">
                                         \[E = h\nu = \frac{hc}{\lambda}\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">Momentum:</p>
                                     <div class="math-display text-sm">
                                         \[p = \frac{h}{\lambda} = \frac{h\nu}{c} = \frac{E}{c}\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">Equivalent Mass:</p>
                                     <div class="math-display text-sm">
                                         \[m = \frac{E}{c^2} = \frac{h\nu}{c^2} = \frac{h}{\lambda c}\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">Rest Mass:</p>
                                     <div class="math-display text-sm">
                                         \[m_0 = 0\]
                                     </div>
                                     <p class="text-xs">Always zero!</p>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">Speed:</p>
                                     <div class="math-display text-sm">
                                         \[v = c = 3 \times 10^8 \text{ m/s}\]
                                     </div>
                                     <p class="text-xs">Always (in vacuum)</p>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">Charge:</p>
                                     <div class="math-display text-sm">
                                         \[q = 0\]
@@ -680,23 +707,23 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Useful Conversion Formulas</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Quick Calculation Formulas (JEE Shortcuts)</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Energy in eV from wavelength:</p>
                                     <div class="math-display">
                                         \[E \text{ (eV)} = \frac{12400}{\lambda \text{ (Å)}} = \frac{1240}{\lambda \text{ (nm)}}\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">hc value (memorize!):</p>
                                     <div class="math-display">
                                         \[hc = 1240 \text{ eV·nm} = 12400 \text{ eV·Å}\]
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-4 bg-white p-4 rounded">
+                            <div class="mt-4 bg-canvas p-4 rounded">
                                 <p class="font-semibold mb-2">Number of Photons:</p>
                                 <div class="math-display">
                                     \[n = \frac{\text{Total Energy}}{E_{\text{photon}}} = \frac{P \cdot t}{h\nu} = \frac{P \cdot t \cdot \lambda}{hc}\]
@@ -706,13 +733,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate the energy and momentum of a photon of wavelength 6000 Å.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Given: λ = 6000 Å = 6000 × 10⁻¹⁰ m</p>
                                 
@@ -734,7 +761,7 @@
                                     \[p = \frac{h}{\lambda} = \frac{6.63 \times 10^{-34}}{6000 \times 10^{-10}} = 1.105 \times 10^{-27} \text{ kg·m/s}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{E = 2.07 \text{ eV} = 3.315 \times 10^{-19} \text{ J}, \quad p = 1.1 \times 10^{-27} \text{ kg·m/s}}\]
                                 </div>
                             </div>
@@ -745,7 +772,7 @@
                                 <span class="text-2xl mr-2">💡</span> Important Constants (Must Memorize!)
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <ul class="text-sm space-y-2">
                                         <li>• h = 6.63 × 10⁻³⁴ J·s</li>
                                         <li>• c = 3 × 10⁸ m/s</li>
@@ -753,7 +780,7 @@
                                         <li>• hc = 1240 eV·nm</li>
                                     </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <ul class="text-sm space-y-2">
                                         <li>• 1 Å = 10⁻¹⁰ m</li>
                                         <li>• 1 nm = 10⁻⁹ m = 10 Å</li>
@@ -767,10 +794,10 @@
                 </section>
 
                 <!-- Chapter 2: Photoelectric Effect -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Photoelectric Effect</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Photoelectric Effect</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -778,12 +805,12 @@
                             The photoelectric effect is the emission of electrons from a metal surface when light of sufficiently high frequency falls on it. Discovered by Hertz (1887) and explained by Einstein (1905), it provided direct evidence for the quantum nature of light.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Experimental Observations</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Experimental Observations</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Key Observations (All are JEE Important!)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Key Observations (All are JEE Important!)</h5>
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">1. Threshold Frequency (ν₀):</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Minimum frequency below which no photoelectrons are emitted</li>
@@ -792,7 +819,7 @@
                                         <li>Related to work function: ν₀ = φ/h</li>
                                     </ul>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">2. Instantaneous Emission:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Photoelectrons are emitted instantaneously (within 10⁻⁹ s)</li>
@@ -800,7 +827,7 @@
                                         <li>This cannot be explained by wave theory!</li>
                                     </ul>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">3. Effect of Intensity:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Number of photoelectrons ∝ intensity (at ν > ν₀)</li>
@@ -809,7 +836,7 @@
                                         <li>Stopping potential is independent of intensity</li>
                                     </ul>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">4. Effect of Frequency:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>KE_max increases linearly with frequency (for ν > ν₀)</li>
@@ -820,18 +847,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Key Terms and Definitions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Key Terms and Definitions</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Term</th>
                                         <th class="p-4 text-left">Definition</th>
                                         <th class="p-4 text-left">Symbol/Formula</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Work Function (φ)</td>
                                         <td class="p-4">Minimum energy needed to eject an electron from metal surface</td>
@@ -867,7 +894,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Failure of Wave Theory
                             </h4>
                             <p class="mb-3">Classical wave theory could NOT explain:</p>
@@ -877,47 +904,47 @@
                                 <li><strong>KE independent of intensity:</strong> Wave theory predicts KE should increase with intensity</li>
                                 <li><strong>KE depends on frequency:</strong> Wave theory cannot explain this</li>
                             </ul>
-                            <p class="mt-3 font-semibold text-accent">This led Einstein to propose the photon theory!</p>
+                            <p class="mt-3 font-semibold text-primary">This led Einstein to propose the photon theory!</p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Work Function Values (Frequently Asked)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Work Function Values (Frequently Asked)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Work Function of Common Metals</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Work Function of Common Metals</h5>
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">Cesium (Cs)</p>
                                     <p class="text-primary font-mono">φ = 1.9 eV</p>
-                                    <p class="text-xs text-gray-500">(Lowest)</p>
+                                    <p class="text-xs text-ink-subtle">(Lowest)</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">Potassium (K)</p>
                                     <p class="text-primary font-mono">φ = 2.3 eV</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">Sodium (Na)</p>
                                     <p class="text-primary font-mono">φ = 2.3 eV</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">Calcium (Ca)</p>
                                     <p class="text-primary font-mono">φ = 2.9 eV</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">Zinc (Zn)</p>
                                     <p class="text-primary font-mono">φ = 4.3 eV</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">Copper (Cu)</p>
                                     <p class="text-primary font-mono">φ = 4.7 eV</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">Silver (Ag)</p>
                                     <p class="text-primary font-mono">φ = 4.7 eV</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">Platinum (Pt)</p>
                                     <p class="text-primary font-mono">φ = 6.3 eV</p>
-                                    <p class="text-xs text-gray-500">(Highest)</p>
+                                    <p class="text-xs text-ink-subtle">(Highest)</p>
                                 </div>
                             </div>
                             <p class="text-sm mt-4 text-center">💡 Lower work function → Easier to emit electrons → Better for photocells</p>
@@ -926,10 +953,10 @@
                 </section>
 
                 <!-- Chapter 3: Einstein's Photoelectric Equation -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Einstein's Photoelectric Equation</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Einstein's Photoelectric Equation</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -939,19 +966,19 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 The Equation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Einstein's Photoelectric Equation</h5>
-                            <div class="math-display bg-blue-50 p-6 rounded-lg text-center text-2xl">
+                            <div class="math-display bg-surface-2 p-6 rounded-lg text-center text-2xl">
                                 \[h\nu = \phi + KE_{max}\]
                             </div>
                             <div class="mt-4 text-center">
                                 <p class="text-lg font-semibold">OR equivalently:</p>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                     \[KE_{max} = h\nu - \phi\]
                                 </div>
-                                <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                     \[KE_{max} = h(\nu - \nu_0)\]
                                 </div>
                             </div>
@@ -969,23 +996,23 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Related Formulas</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Stopping Potential</h5>
-                                <div class="math-display bg-blue-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[eV_0 = KE_{max} = h\nu - \phi\]
                                 </div>
-                                <div class="math-display bg-blue-50 p-3 rounded mt-2">
+                                <div class="math-display bg-surface-2 p-3 rounded mt-2">
                                     \[V_0 = \frac{h\nu}{e} - \frac{\phi}{e}\]
                                 </div>
                                 <p class="text-sm mt-3">V₀ is the minimum retarding potential to stop the fastest photoelectron</p>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Maximum Velocity</h5>
-                                <div class="math-display bg-blue-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[KE_{max} = \frac{1}{2}mv_{max}^2\]
                                 </div>
-                                <div class="math-display bg-blue-50 p-3 rounded mt-2">
+                                <div class="math-display bg-surface-2 p-3 rounded mt-2">
                                     \[v_{max} = \sqrt{\frac{2(h\nu - \phi)}{m}}\]
                                 </div>
                                 <p class="text-sm mt-3">where m = mass of electron = 9.1 × 10⁻³¹ kg</p>
@@ -995,15 +1022,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Special Cases</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Condition</th>
                                         <th class="p-4 text-left">Result</th>
                                         <th class="p-4 text-left">KE_max</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">ν < ν₀ (or λ > λ₀)</td>
                                         <td class="p-4">No emission (hν < φ)</td>
@@ -1029,13 +1056,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2023)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Light of wavelength 4000 Å falls on a metal surface with work function 2 eV. Calculate (a) stopping potential, (b) maximum velocity of photoelectrons.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Given: λ = 4000 Å, φ = 2 eV, m_e = 9.1 × 10⁻³¹ kg</p>
                                 
@@ -1065,20 +1092,20 @@
                                     \[v_{max} = \sqrt{3.87 \times 10^{11}} = 6.22 \times 10^5 \text{ m/s}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{V_0 = 1.1 \text{ V}, \quad v_{max} = 6.22 \times 10^5 \text{ m/s}}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> When light of wavelength λ₁ = 400 nm falls on a metal, stopping potential is 2V. When wavelength λ₂ = 300 nm is used, stopping potential is 4V. Find work function and threshold wavelength.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Using Einstein's equation: eV₀ = hc/λ - φ</p>
                                 
@@ -1099,7 +1126,7 @@
                                 <div class="math-display">
                                     \[2 = \frac{1240}{1200} = 1.033... \]
                                 </div>
-                                <p class="text-sm text-gray-600">(Using hc = 1240 eV·nm and dividing by e)</p>
+                                <p class="text-sm text-ink-muted">(Using hc = 1240 eV·nm and dividing by e)</p>
                                 
                                 <p class="mb-2 mt-3"><strong>From equation (1):</strong></p>
                                 <div class="math-display">
@@ -1111,7 +1138,7 @@
                                     \[\lambda_0 = \frac{hc}{\phi} = \frac{1240}{1.1} = 1127 \text{ nm}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{\phi = 1.1 \text{ eV}, \quad \lambda_0 = 1127 \text{ nm (Infrared)}}\]
                                 </div>
                             </div>
@@ -1120,10 +1147,10 @@
                 </section>
 
                 <!-- Chapter 4: Important Graphs -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Important Graphs in Photoelectric Effect</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Important Graphs in Photoelectric Effect</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1131,7 +1158,7 @@
                             Understanding graphs is crucial for JEE as 2-3 questions are directly based on graph interpretation. Master these graphs thoroughly!
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Stopping Potential vs Frequency (V₀ vs ν)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Stopping Potential vs Frequency (V₀ vs ν)</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <div class="diagram-box rounded-xl">
@@ -1154,8 +1181,8 @@
         │
                 </pre>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Key Features:</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Key Features:</h5>
                                 <ul class="list-disc list-inside text-sm space-y-2">
                                     <li><strong>Equation:</strong> V₀ = (h/e)ν - φ/e</li>
                                     <li><strong>Slope:</strong> h/e (same for ALL metals)</li>
@@ -1167,7 +1194,7 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 KE_max vs Frequency</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 KE_max vs Frequency</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <div class="diagram-box rounded-xl">
@@ -1187,8 +1214,8 @@
         │ (No emission for ν < ν₀)
                 </pre>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Key Features:</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Key Features:</h5>
                                 <ul class="list-disc list-inside text-sm space-y-2">
                                     <li><strong>Equation:</strong> KE_max = h(ν - ν₀)</li>
                                     <li><strong>Slope:</strong> h (Planck's constant)</li>
@@ -1200,7 +1227,7 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Photocurrent vs Applied Voltage</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Photocurrent vs Applied Voltage</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <div class="diagram-box rounded-xl">
@@ -1220,8 +1247,8 @@
    (V₀ is same for both intensities!)
                 </pre>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Key Features:</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Key Features:</h5>
                                 <ul class="list-disc list-inside text-sm space-y-2">
                                     <li><strong>At V = -V₀:</strong> Current = 0 (stopping potential)</li>
                                     <li><strong>At V > 0:</strong> Current saturates</li>
@@ -1233,7 +1260,7 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.4 Photocurrent vs Intensity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Photocurrent vs Intensity</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <div class="diagram-box rounded-xl">
@@ -1255,8 +1282,8 @@
    (Linear relationship, passes through origin)
                 </pre>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Key Features:</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Key Features:</h5>
                                 <ul class="list-disc list-inside text-sm space-y-2">
                                     <li><strong>Linear graph through origin</strong></li>
                                     <li><strong>I ∝ Intensity</strong> (for ν > ν₀)</li>
@@ -1272,7 +1299,7 @@
                                 <span class="text-2xl mr-2">🎯</span> Graph-Based JEE Questions Tricks
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">From V₀ vs ν graph:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li>h = e × slope</li>
@@ -1280,7 +1307,7 @@
                                         <li>ν₀ = X-intercept</li>
                                     </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">From I vs V graph:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li>V₀ from x-intercept (left side)</li>
@@ -1294,10 +1321,10 @@
                 </section>
 
                 <!-- Chapter 5: De Broglie Waves -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">De Broglie Hypothesis & Matter Waves</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">De Broglie Hypothesis & Matter Waves</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1305,11 +1332,11 @@
                             In 1924, Louis de Broglie proposed that just as light exhibits dual nature (wave and particle), all matter should also have wave-like properties. He received the Nobel Prize in 1929 for this revolutionary idea.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.1 De Broglie Wavelength Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 De Broglie Wavelength Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">The De Broglie Equation</h5>
-                            <div class="math-display bg-green-50 p-6 rounded-lg text-center text-2xl">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">The De Broglie Equation</h5>
+                            <div class="math-display bg-surface-2 p-6 rounded-lg text-center text-2xl">
                                 \[\lambda = \frac{h}{p} = \frac{h}{mv}\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -1322,60 +1349,60 @@
                                     <li>v = velocity of particle</li>
                                 </ul>
                             </div>
-                            <div class="bg-white p-4 rounded mt-4">
+                            <div class="bg-canvas p-4 rounded mt-4">
                                 <p class="font-semibold text-sm mb-2">Physical Significance:</p>
                                 <p class="text-sm">Every moving particle has an associated wave (matter wave). Heavier or faster particles have shorter wavelength.</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.2 De Broglie Wavelength for Different Cases</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 De Broglie Wavelength for Different Cases</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">For Charged Particle (KE = qV)</h5>
-                                <div class="math-display bg-green-50 p-3 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">For Charged Particle (KE = qV)</h5>
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[\lambda = \frac{h}{\sqrt{2mqV}}\]
                                 </div>
                                 <p class="text-sm mt-3">For electron accelerated through V volts:</p>
-                                <div class="math-display bg-green-50 p-3 rounded mt-2">
+                                <div class="math-display bg-surface-2 p-3 rounded mt-2">
                                     \[\lambda = \frac{12.27}{\sqrt{V}} \text{ Å}\]
                                 </div>
-                                <p class="text-xs mt-2 text-gray-600">This is the most used formula in JEE!</p>
+                                <p class="text-xs mt-2 text-ink-muted">This is the most used formula in JEE!</p>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">For Particle with KE</h5>
-                                <div class="math-display bg-green-50 p-3 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">For Particle with KE</h5>
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[\lambda = \frac{h}{\sqrt{2mKE}}\]
                                 </div>
                                 <p class="text-sm mt-3">Since p = √(2mKE):</p>
-                                <div class="math-display bg-green-50 p-3 rounded mt-2">
+                                <div class="math-display bg-surface-2 p-3 rounded mt-2">
                                     \[\lambda = \frac{h}{p} = \frac{h}{\sqrt{2mE}}\]
                                 </div>
                             </div>
                         </div>
 
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">For Thermal Particles (at temperature T)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">For Thermal Particles (at temperature T)</h5>
                             <p class="mb-3">Average kinetic energy = (3/2)kT</p>
-                            <div class="math-display bg-green-50 p-4 rounded">
+                            <div class="math-display bg-surface-2 p-4 rounded">
                                 \[\lambda = \frac{h}{\sqrt{3mkT}}\]
                             </div>
                             <p class="text-sm mt-3">where k = Boltzmann constant = 1.38 × 10⁻²³ J/K</p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.3 Comparison of De Broglie Wavelengths</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Comparison of De Broglie Wavelengths</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Particle</th>
                                         <th class="p-4 text-left">Formula</th>
                                         <th class="p-4 text-left">Comparison</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Electron (e⁻)</td>
                                         <td class="p-4 font-mono">λ_e = 12.27/√V Å</td>
@@ -1404,7 +1431,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Key Comparisons for JEE
                             </h4>
-                            <div class="bg-white p-4 rounded">
+                            <div class="bg-canvas p-4 rounded">
                                 <p class="font-semibold mb-3">For same KE:</p>
                                 <div class="math-display">
                                     \[\lambda \propto \frac{1}{\sqrt{m}} \Rightarrow \frac{\lambda_1}{\lambda_2} = \sqrt{\frac{m_2}{m_1}}\]
@@ -1424,13 +1451,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Main 2024 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> An electron is accelerated through a potential difference of 100V. Calculate its de Broglie wavelength.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 
                                 <p class="mb-2"><strong>Method 1 (Direct formula):</strong></p>
@@ -1452,20 +1479,20 @@
                                     \[\lambda = \frac{h}{p} = \frac{6.63 \times 10^{-34}}{5.4 \times 10^{-24}} = 1.23 \times 10^{-10} \text{ m} = 1.23 \text{ Å}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{\lambda = 1.227 \text{ Å} \approx 1.23 \text{ Å}}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (Comparison Problem)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> An electron and a proton have the same kinetic energy. Find the ratio of their de Broglie wavelengths.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">For same KE:</p>
                                 <div class="math-display">
@@ -1478,20 +1505,20 @@
                                     \[\frac{\lambda_e}{\lambda_p} = \sqrt{\frac{m_p}{m_e}} = \sqrt{\frac{1836 m_e}{m_e}} = \sqrt{1836} \approx 42.8\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{\frac{\lambda_e}{\lambda_p} \approx 43}\]
                                 </div>
-                                <p class="text-sm mt-2 text-success">✓ Electron has much larger wavelength (since it's lighter)</p>
+                                <p class="text-sm mt-2 text-primary">✓ Electron has much larger wavelength (since it's lighter)</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Chapter 6: Davisson-Germer Experiment -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Davisson-Germer Experiment</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Davisson-Germer Experiment</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1499,10 +1526,10 @@
                             In 1927, Clinton Davisson and Lester Germer at Bell Labs accidentally discovered electron diffraction, providing the first experimental confirmation of de Broglie's matter wave hypothesis. They won the Nobel Prize in 1937.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Experimental Setup</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Experimental Setup</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Components and Procedure</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Components and Procedure</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-semibold mb-2">Setup:</p>
@@ -1526,22 +1553,22 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Key Observations and Results</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Key Observations and Results</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Main Findings</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Main Findings</h5>
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Observation:</p>
                                     <p class="text-sm">At V = 54V and θ = 50°, a strong peak (maximum intensity) was observed in the scattered electron beam.</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Theoretical Wavelength (de Broglie):</p>
                                     <div class="math-display">
                                         \[\lambda = \frac{12.27}{\sqrt{54}} = \frac{12.27}{7.35} = 1.67 \text{ Å}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Experimental Wavelength (Bragg's Law):</p>
                                     <div class="math-display">
                                         \[n\lambda = 2d\sin\theta\]
@@ -1551,8 +1578,8 @@
                                         \[\lambda = 2 \times 0.91 \times \sin(65°) = 2 \times 0.91 \times 0.906 = 1.65 \text{ Å}\]
                                     </div>
                                 </div>
-                                <div class="bg-green-100 p-4 rounded border-2 border-success">
-                                    <p class="font-semibold mb-2 text-success">✓ Conclusion:</p>
+                                <div class="bg-surface-3 p-4 rounded border-2 border-success">
+                                    <p class="font-semibold mb-2 text-primary">✓ Conclusion:</p>
                                     <p class="text-sm">Theoretical (1.67 Å) ≈ Experimental (1.65 Å)</p>
                                     <p class="text-sm mt-2 font-semibold">This confirmed de Broglie's hypothesis that electrons have wave nature!</p>
                                 </div>
@@ -1560,7 +1587,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Points for JEE
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1575,10 +1602,10 @@
                 </section>
 
                 <!-- Chapter 7: Wave-Particle Duality -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Wave-Particle Duality</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Wave-Particle Duality</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1589,15 +1616,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Summary of Dual Nature</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Entity</th>
                                         <th class="p-4 text-left">Particle Nature Evidence</th>
                                         <th class="p-4 text-left">Wave Nature Evidence</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Light/Radiation</td>
                                         <td class="p-4">Photoelectric effect, Compton effect, Black body radiation</td>
@@ -1620,15 +1647,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Photon vs Electron (Comparison)</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Photon</th>
                                         <th class="p-4 text-left">Electron</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Rest Mass</td>
                                         <td class="p-4 font-mono">m₀ = 0</td>
@@ -1668,24 +1695,24 @@
                             </table>
                         </div>
 
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Important Relation: Same Wavelength</h5>
                             <p class="mb-3">If photon and electron have the same wavelength:</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Photon:</p>
                                     <div class="math-display text-sm">
                                         \[E_{photon} = \frac{hc}{\lambda} = pc\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Electron:</p>
                                     <div class="math-display text-sm">
                                         \[E_{electron} = \frac{p^2}{2m} = \frac{h^2}{2m\lambda^2}\]
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-4 bg-yellow-50 p-4 rounded border-2 border-accent">
+                            <div class="mt-4 bg-surface-2 p-4 rounded border-2 border-accent">
                                 <p class="font-semibold">Ratio (Same λ):</p>
                                 <div class="math-display">
                                     \[\frac{E_{photon}}{E_{electron}} = \frac{hc/\lambda}{h^2/2m\lambda^2} = \frac{2mc\lambda}{h}\]
@@ -1695,13 +1722,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A photon and an electron have the same de Broglie wavelength λ = 1 Å. Compare their energies.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 
                                 <p class="mb-2"><strong>Photon energy:</strong></p>
@@ -1725,7 +1752,7 @@
                                     \[\frac{E_{photon}}{E_{electron}} = \frac{12400}{150.5} \approx 82\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{E_{photon} = 12.4 \text{ keV}, \quad E_{electron} = 150.5 \text{ eV}, \quad \text{Ratio} \approx 82}\]
                                 </div>
                             </div>
@@ -1734,14 +1761,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Photoelectric Effect: 40%</li>
@@ -1750,7 +1777,7 @@
                                 <li>✓ Photon Properties: 10%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Einstein's equation applications: 35%</li>
@@ -1761,8 +1788,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate stopping potential given wavelength and work function</li>
                             <li>Find threshold wavelength from work function</li>
@@ -1782,7 +1809,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1805,21 +1832,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024) with Solutions
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate energy of a photon of wavelength 5000 Å in eV.</li>
                             <li>Find the momentum of a photon of frequency 5 × 10¹⁴ Hz.</li>
@@ -1834,8 +1861,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>When light of wavelength 300 nm falls on a surface, stopping potential is 2V. When wavelength is 200 nm, stopping potential is 4.5V. Find h and work function.</li>
                             <li>An electron and proton have same de Broglie wavelength. Compare their kinetic energies.</li>
@@ -1850,8 +1877,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A metal surface emits photoelectrons when illuminated by light of wavelength λ₁. The stopping potential for wavelengths λ₁ and λ₂ are V₁ and V₂ respectively. Show that the Planck's constant h = e(V₁-V₂)λ₁λ₂/c(λ₂-λ₁).</li>
                             <li>An α-particle and a proton are accelerated from rest through the same potential V. Find the ratio of their de Broglie wavelengths.</li>
@@ -1867,21 +1894,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Complete Solutions PDF with Detailed Steps
                         </a>
                     </div>
                 </section>
 
                 <!-- Quick Formula Reference -->
-                <section class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📋</span>
                         Quick Formula Reference Sheet
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Photon Properties</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>E = hν = hc/λ</li>
@@ -1892,7 +1919,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Photoelectric Effect</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>hν = φ + KE_max</li>
@@ -1903,7 +1930,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">De Broglie Wavelength</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>λ = h/p = h/mv</li>
@@ -1914,7 +1941,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Constants</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>h = 6.63 × 10⁻³⁴ J·s</li>
@@ -1925,7 +1952,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Comparison Formulas</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>Same KE: λ ∝ 1/√m</li>
@@ -1935,7 +1962,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Work Functions</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>Cs: 1.9 eV (lowest)</li>
@@ -1948,58 +1975,76 @@
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./electromagnetic-induction.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Electromagnetic Induction</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./electromagnetic-waves.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Electromagnetic Waves</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./electrostatics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Electrostatics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Atoms and Nuclei</h3>
-                    <p class="text-gray-600">Bohr Model, Radioactivity, Nuclear Reactions, Binding Energy</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Atoms and Nuclei</h3>
+                    <p class="text-ink-muted">Bohr Model, Radioactivity, Nuclear Reactions, Binding Energy</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Electromagnetic Waves</h3>
-                    <p class="text-gray-600">Maxwell Equations, EM Spectrum, Properties of EM Waves</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electromagnetic Waves</h3>
+                    <p class="text-ink-muted">Maxwell Equations, EM Spectrum, Properties of EM Waves</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/semiconductor-electronics" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/semiconductor-electronics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Semiconductor Electronics</h3>
-                    <p class="text-gray-600">PN Junction, Transistors, Logic Gates, Digital Electronics</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Semiconductor Electronics</h3>
+                    <p class="text-ink-muted">PN Junction, Transistors, Logic Gates, Digital Electronics</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2007,50 +2052,50 @@
     </section>
 
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Dual Nature of Radiation and Matter - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Dual Nature of Radiation and Matter - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Dual Nature is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Dual Nature of Radiation and Matter</strong> is one of the highest-scoring chapters in <strong>JEE Physics Modern Physics</strong> section. It carries 8-15% weightage in both JEE Main and Advanced:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Photoelectric Effect</strong> - Guaranteed 1-2 questions in every JEE exam</li>
                             <li><strong>Einstein's Equation</strong> - Direct formula application, easy scoring</li>
                             <li><strong>De Broglie Wavelength</strong> - Numerical problems are straightforward</li>
                             <li><strong>Graph Analysis</strong> - Visual questions for quick marks</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             In <strong>JEE Advanced</strong>, expect conceptual questions comparing photon and electron properties, and multi-step numerical problems.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Must-Know Formulas</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Photon Properties</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Photon Properties</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• E = hν = hc/λ = 12400/λ(Å) eV</li>
                                     <li>• p = h/λ = E/c</li>
                                     <li>• Rest mass = 0</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Photoelectric Effect</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Photoelectric Effect</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• hν = φ + KE_max</li>
                                     <li>• eV₀ = KE_max</li>
                                     <li>• ν₀ = φ/h, λ₀ = hc/φ</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. De Broglie Wavelength</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">3. De Broglie Wavelength</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• λ = h/mv = h/p</li>
                                     <li>• λ = h/√(2mKE)</li>
                                     <li>• λ_e = 12.27/√V Å</li>
@@ -2061,12 +2106,12 @@
                 </div>
                 
                 <!-- Study Strategy -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Master Dual Nature for JEE?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 4-5 days (3 hours/day)</li>
                                 <li>Master <strong>Einstein's photoelectric equation</strong> thoroughly</li>
                                 <li>Memorize hc = 1240 eV·nm for quick calculations</li>
@@ -2077,7 +2122,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 6-7 days (4 hours/day)</li>
                                 <li>Deep understanding of <strong>photon-electron comparisons</strong></li>
                                 <li>Practice problems on same λ, same p, same KE scenarios</li>
@@ -2090,35 +2135,35 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes Students Make in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes Students Make in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing threshold frequency and stopping potential:</strong> Threshold frequency (ν₀) depends on metal only, while stopping potential (V₀) depends on both frequency and metal.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong unit conversion:</strong> Remember 1 Å = 10⁻¹⁰ m, 1 nm = 10⁻⁹ m. Use hc = 1240 eV·nm or 12400 eV·Å
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Intensity vs Frequency confusion:</strong> Intensity affects number of electrons (saturation current), NOT their maximum KE. Frequency affects KE, NOT number of electrons.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>De Broglie wavelength comparison:</strong> For same KE: λ ∝ 1/√m. For same momentum: λ is same for all particles!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Photon rest mass:</strong> Photon has ZERO rest mass, but has non-zero momentum and equivalent mass (m = E/c²).
                             </div>
@@ -2127,11 +2172,11 @@
                 </div>
                 
                 <!-- Weightage Table -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 Topic-wise Weightage Breakdown (Last 10 Years)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Topic</th>
                                     <th class="p-3 text-center">JEE Main %</th>
@@ -2141,28 +2186,28 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Photoelectric Effect</td>
                                     <td class="p-3 text-center">40%</td>
                                     <td class="p-3 text-center">35%</td>
                                     <td class="p-3">Easy</td>
                                     <td class="p-3 text-sm">Master Einstein's equation</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">De Broglie Wavelength</td>
                                     <td class="p-3 text-center">35%</td>
                                     <td class="p-3 text-center">30%</td>
                                     <td class="p-3">Easy-Medium</td>
                                     <td class="p-3 text-sm">Remember λ = 12.27/√V Å</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Graph Analysis</td>
                                     <td class="p-3 text-center">15%</td>
                                     <td class="p-3 text-center">15%</td>
                                     <td class="p-3">Medium</td>
                                     <td class="p-3 text-sm">Practice all 4 graph types</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Photon Properties</td>
                                     <td class="p-3 text-center">10%</td>
                                     <td class="p-3 text-center">20%</td>
@@ -2172,16 +2217,16 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Pro Tip:</strong> Photoelectric effect and de Broglie wavelength together contribute 75% of questions. Focus on these two topics for guaranteed 12-15 marks in JEE.
                     </p>
                 </div>
 
                 <!-- Quick Revision Points -->
-                <div class="mt-8 bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-2xl border-2 border-accent">
-                    <h3 class="text-2xl font-bold text-accent mb-4">⚡ Last Minute Revision Points (24 Hours Before Exam)</h3>
+                <div class="mt-8 bg-gradient-to-r from-surface-2 to-surface-2 p-8 rounded-2xl border-2 border-accent">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚡ Last Minute Revision Points (24 Hours Before Exam)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Critical Formulas</h4>
                             <ul class="text-sm space-y-1">
                                 <li>✓ E = hν = hc/λ</li>
@@ -2192,7 +2237,7 @@
                                 <li>✓ E(eV) = 12400/λ(Å)</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Constants to Remember</h4>
                             <ul class="text-sm space-y-1">
                                 <li>✓ h = 6.63 × 10⁻³⁴ J·s</li>
@@ -2203,7 +2248,7 @@
                                 <li>✓ 1 eV = 1.6 × 10⁻¹⁹ J</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Quick Checks</h4>
                             <ul class="text-sm space-y-1">
                                 <li>✓ Photon: m₀ = 0, q = 0</li>
@@ -2218,10 +2263,10 @@
                 </div>
 
                 <!-- Conceptual Summary -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">🧠 Conceptual Summary for Quick Revision</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-blue-50 p-6 rounded-xl">
+                        <div class="bg-surface-2 p-6 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Wave Nature Evidence</h4>
                             <ul class="space-y-2 text-sm">
                                 <li><strong>Light:</strong> Interference, Diffraction, Polarization</li>
@@ -2229,8 +2274,8 @@
                                 <li><strong>All Matter:</strong> De Broglie wavelength exists</li>
                             </ul>
                         </div>
-                        <div class="bg-purple-50 p-6 rounded-xl">
-                            <h4 class="font-bold text-lg mb-3 text-secondary">Particle Nature Evidence</h4>
+                        <div class="bg-surface-2 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg mb-3 text-primary">Particle Nature Evidence</h4>
                             <ul class="space-y-2 text-sm">
                                 <li><strong>Light:</strong> Photoelectric effect, Compton effect</li>
                                 <li><strong>Electrons:</strong> Cathode rays, e/m experiment</li>
@@ -2238,9 +2283,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="mt-6 bg-green-50 p-6 rounded-xl">
-                        <h4 class="font-bold text-lg mb-3 text-success">Key Insight</h4>
-                        <p class="text-gray-700">
+                    <div class="mt-6 bg-surface-2 p-6 rounded-xl">
+                        <h4 class="font-bold text-lg mb-3 text-primary">Key Insight</h4>
+                        <p class="text-ink-muted">
                             <strong>Wave-Particle Duality:</strong> All matter and radiation exhibit BOTH wave and particle properties. The dominant behavior depends on the experimental setup. Small wavelength (high momentum) → particle behavior. Large wavelength (low momentum) → wave behavior.
                         </p>
                     </div>
@@ -2251,64 +2296,64 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Modern Physics Topics -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Modern Physics</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation-and-matter" class="hover:text-white transition">Dual Nature</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="hover:text-white transition">Atoms and Nuclei</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/semiconductor-electronics" class="hover:text-white transition">Semiconductors</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="hover:text-white transition">EM Waves</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation-and-matter" class="hover:text-ink transition">Dual Nature</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="hover:text-ink transition">Atoms and Nuclei</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/semiconductor-electronics" class="hover:text-ink transition">Semiconductors</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="hover:text-ink transition">EM Waves</a></li>
                     </ul>
                 </div>
 
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#pyq" class="hover:text-white transition">Previous Year Papers</a></li>
-                        <li><a href="#practice" class="hover:text-white transition">Practice Problems</a></li>
-                        <li><a href="#" class="hover:text-white transition">Formula Sheet</a></li>
-                        <li><a href="#" class="hover:text-white transition">Video Lectures</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="#pyq" class="hover:text-ink transition">Previous Year Papers</a></li>
+                        <li><a href="#practice" class="hover:text-ink transition">Practice Problems</a></li>
+                        <li><a href="#" class="hover:text-ink transition">Formula Sheet</a></li>
+                        <li><a href="#" class="hover:text-ink transition">Video Lectures</a></li>
                     </ul>
                 </div>
 
                 <!-- Important Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Important</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE Main Official</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE Advanced Official</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE Main Official</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE Advanced Official</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms</a>
                 </div>
             </div>
         </div>
@@ -2316,7 +2361,7 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

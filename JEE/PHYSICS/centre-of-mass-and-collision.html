@@ -12,14 +12,14 @@
 
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
+<link rel="icon" type="image/x-icon" href="/logo-header.webp">
+<link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
 <!-- Open Graph Enhanced -->
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision">
 <meta property="og:title" content="Centre of Mass & Momentum - Complete JEE Physics Notes with 100+ Solved Examples">
 <meta property="og:description" content="Master Centre of Mass, Linear Momentum & Rocket Propulsion for JEE Main & Advanced. Complete theory, formulas, and 100+ solved problems.">
-<meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+<meta property="og:image" content="/logo-header.webp">
 <meta property="og:site_name" content="JEE Prep Guide">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-15T00:00:00+00:00">
@@ -37,7 +37,7 @@
 <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision">
 <meta name="twitter:title" content="Centre of Mass & Momentum - Complete JEE Physics Notes 2025">
 <meta name="twitter:description" content="Master Centre of Mass & Linear Momentum for JEE with 100+ solved examples, rocket propulsion & conservation laws.">
-<meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+<meta name="twitter:image" content="/logo-header.webp">
 
 <!-- Additional SEO Meta Tags -->
 <meta name="revisit-after" content="7 days">
@@ -74,7 +74,7 @@
   "@type": "Article",
   "headline": "Centre of Mass and Linear Momentum - Complete JEE Physics Notes 2025-26",
   "alternativeHeadline": "Master Centre of Mass, Momentum & Rocket Propulsion for JEE Main & Advanced",
-  "image": "https://jeeprepguide.netlify.app/logo.png",
+  "image": "/logo-header.webp",
   "author": {
     "@type": "Organization",
     "name": "JEE Prep Guide",
@@ -85,7 +85,7 @@
     "name": "JEE Prep Guide",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://jeeprepguide.netlify.app/logo.png",
+      "url": "/logo-header.webp",
       "width": 250,
       "height": 60
     }
@@ -363,71 +363,87 @@
 }
 </script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for Equations -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
         }
-    </script>
+    };
+</script>
+<!-- MathJax for Equations -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    
 
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path To IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path To IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-primary hover:text-secondary transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:text-secondary transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-primary hover:text-secondary transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-primary hover:text-secondary transition">Maths</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-primary hover:text-primary transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:text-primary transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:text-primary transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary hover:text-primary transition">Maths</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
      
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -436,78 +452,78 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Centre of Mass</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Centre of Mass</span>
                     <meta itemprop="position" content="4" />
                 </li>
             </ol>
         </div>
     </nav>
      <!-- Reading Info Bar -->
-<div class="max-w-7xl mx-auto px-4 py-3 bg-white border-b">
-    <div class="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+<div class="max-w-7xl mx-auto px-4 py-3 bg-canvas border-b">
+    <div class="flex flex-wrap items-center gap-6 text-sm text-ink-muted">
         <span class="flex items-center">
             📖 Reading Time: <strong class="ml-1 text-primary">25 minutes</strong>
         </span>
         <span class="flex items-center">
-            ✅ Solved Examples: <strong class="ml-1 text-success">100+</strong>
+            ✅ Solved Examples: <strong class="ml-1 text-primary">100+</strong>
         </span>
         <span class="flex items-center">
-            ⚡ Difficulty: <strong class="ml-1 text-accent">Medium to Hard</strong>
+            ⚡ Difficulty: <strong class="ml-1 text-primary">Medium to Hard</strong>
         </span>
         <span class="flex items-center">
             ⏰ Last Updated: <time datetime="2024-01-15">January 15, 2024</time>
         </span>
         <span class="flex items-center">
-            📊 Weightage: <strong class="ml-1 text-danger">8-12% (JEE Main)</strong>
+            📊 Weightage: <strong class="ml-1 text-primary">8-12% (JEE Main)</strong>
         </span>
         <span class="flex items-center">
-            🎯 Questions: <strong class="ml-1 text-secondary">2-4 per exam</strong>
+            🎯 Questions: <strong class="ml-1 text-primary">2-4 per exam</strong>
         </span>
     </div>
 </div>
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Centre of Mass</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Centre of Mass</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     COM Basics
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     COM Position
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Common Shapes
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     COM Motion
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Momentum
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Conservation
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Rockets
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Impulse
                 </a>
             </div>
@@ -515,28 +531,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Centre of Mass
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the concepts of Centre of Mass, Linear Momentum, Conservation Laws, and Variable Mass Systems. Includes complete notes on Rocket Propulsion with 100+ solved problems and JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -545,7 +561,7 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Centre of Mass JEE Notes">
         <meta itemprop="description" content="Complete study notes for Centre of Mass">
         
@@ -553,12 +569,12 @@
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.8</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">290</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -568,15 +584,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">100+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -588,53 +604,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Introduction to COM</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Position of COM</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. COM of Common Shapes</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Motion of COM</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Linear Momentum</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Conservation of Momentum</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Variable Mass & Rockets</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Impulse</a></li>
-                        <li><a href="#formulas" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">📋 All Formulas</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Introduction to COM</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Position of COM</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. COM of Common Shapes</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Motion of COM</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Linear Momentum</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Conservation of Momentum</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Variable Mass & Rockets</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Impulse</a></li>
+                        <li><a href="#formulas" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">📋 All Formulas</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./work-energy-and-power.html" class="text-primary font-semibold hover:underline">Work Energy And Power &rarr;</a>
+                <a href="./rotational-motion.html" class="text-primary font-semibold hover:underline">Rotational Motion &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision.webp"
                         alt="Centre of Mass and Collision JEE notes, Formulas, PYQs"
                         title="Centre of Mass and Collision — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Centre of Mass and Collision JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Introduction to COM -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Introduction to Centre of Mass</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Introduction to Centre of Mass</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -644,13 +672,13 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 What is Centre of Mass?</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 Centre of Mass is the point at which the entire mass of a body or system of particles can be assumed to be concentrated for analyzing translational motion.
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold text-primary mb-2">Physical Significance</p>
                                     <ul class="text-sm space-y-1">
                                         <li>• Point where external force can be applied</li>
@@ -658,7 +686,7 @@
                                         <li>• Follows Newton's Laws as a point particle</li>
                                     </ul>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold text-primary mb-2">Key Properties</p>
                                     <ul class="text-sm space-y-1">
                                         <li>• May or may not lie inside the body</li>
@@ -672,15 +700,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Centre of Mass vs Centre of Gravity</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Aspect</th>
                                         <th class="p-4 text-left">Centre of Mass (COM)</th>
                                         <th class="p-4 text-left">Centre of Gravity (COG)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Definition</td>
                                         <td class="p-4">Point where total mass is concentrated</td>
@@ -721,46 +749,46 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Examples Where COM Lies Outside the Body</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                            <div class="bg-blue-50 p-4 rounded-lg text-center border-2 border-blue-200">
+                            <div class="bg-surface-2 p-4 rounded-lg text-center border-2 border-hairline">
                                 <div class="text-4xl mb-2">🍩</div>
                                 <p class="font-semibold">Ring/Torus</p>
-                                <p class="text-sm text-gray-600">COM at geometric center</p>
+                                <p class="text-sm text-ink-muted">COM at geometric center</p>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg text-center border-2 border-blue-200">
+                            <div class="bg-surface-2 p-4 rounded-lg text-center border-2 border-hairline">
                                 <div class="text-4xl mb-2">🌙</div>
                                 <p class="font-semibold">Hollow Hemisphere</p>
-                                <p class="text-sm text-gray-600">COM inside hollow region</p>
+                                <p class="text-sm text-ink-muted">COM inside hollow region</p>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg text-center border-2 border-blue-200">
+                            <div class="bg-surface-2 p-4 rounded-lg text-center border-2 border-hairline">
                                 <div class="text-4xl mb-2">🔺</div>
                                 <p class="font-semibold">Boomerang</p>
-                                <p class="text-sm text-gray-600">COM outside material</p>
+                                <p class="text-sm text-ink-muted">COM outside material</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Chapter 2: Position of COM -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Position of Centre of Mass</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Position of Centre of Mass</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Two Particle System</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Two Particle System</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">COM of Two Particles</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">COM of Two Particles</h4>
                             <div class="math-display text-2xl">
                                 \[x_{cm} = \frac{m_1x_1 + m_2x_2}{m_1 + m_2}\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Distance from m₁:</p>
                                     <div class="math-display">\[d_1 = \frac{m_2 \cdot d}{m_1 + m_2}\]</div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Distance from m₂:</p>
                                     <div class="math-display">\[d_2 = \frac{m_1 \cdot d}{m_1 + m_2}\]</div>
                                 </div>
@@ -774,26 +802,26 @@
                             <p class="text-lg">
                                 COM divides the line joining two masses in <strong>inverse ratio of masses</strong>:
                             </p>
-                            <div class="math-display text-center bg-white p-4 rounded-lg mt-3">
+                            <div class="math-display text-center bg-canvas p-4 rounded-lg mt-3">
                                 \[\frac{d_1}{d_2} = \frac{m_2}{m_1}\]
                             </div>
-                            <p class="text-sm text-gray-600 mt-2">COM is always closer to the heavier mass!</p>
+                            <p class="text-sm text-ink-muted mt-2">COM is always closer to the heavier mass!</p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 System of n Particles (Discrete)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 System of n Particles (Discrete)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">General Formula for n Particles</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">General Formula for n Particles</h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">x-coordinate:</p>
                                     <div class="math-display">\[x_{cm} = \frac{\sum m_ix_i}{\sum m_i}\]</div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">y-coordinate:</p>
                                     <div class="math-display">\[y_{cm} = \frac{\sum m_iy_i}{\sum m_i}\]</div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">z-coordinate:</p>
                                     <div class="math-display">\[z_{cm} = \frac{\sum m_iz_i}{\sum m_i}\]</div>
                                 </div>
@@ -806,37 +834,37 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Continuous Mass Distribution</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Continuous Mass Distribution</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Integration Method</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Integration Method</h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">x-coordinate:</p>
                                     <div class="math-display">\[x_{cm} = \frac{\int x \, dm}{\int dm}\]</div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">y-coordinate:</p>
                                     <div class="math-display">\[y_{cm} = \frac{\int y \, dm}{\int dm}\]</div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">z-coordinate:</p>
                                     <div class="math-display">\[z_{cm} = \frac{\int z \, dm}{\int dm}\]</div>
                                 </div>
                             </div>
                         </div>
 
-                        <h4 class="text-xl font-bold text-secondary mt-6 mb-3">Mass Elements for Different Geometries:</h4>
+                        <h4 class="text-xl font-bold text-primary mt-6 mb-3">Mass Elements for Different Geometries:</h4>
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Geometry</th>
                                         <th class="p-4 text-left">Linear Density (λ)</th>
                                         <th class="p-4 text-left">Mass Element (dm)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">1D - Rod/Wire</td>
                                         <td class="p-4 font-mono">λ = M/L (kg/m)</td>
@@ -857,13 +885,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Three particles of masses 1 kg, 2 kg, and 3 kg are placed at (1, 2), (3, 4), and (5, 6) respectively. Find the position of COM.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Total mass M = 1 + 2 + 3 = 6 kg</p>
                                 
@@ -875,7 +903,7 @@
                                     \[y_{cm} = \frac{m_1y_1 + m_2y_2 + m_3y_3}{M} = \frac{1(2) + 2(4) + 3(6)}{6} = \frac{2 + 8 + 18}{6} = \frac{28}{6} = \frac{14}{3}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{COM} = \left(\frac{11}{3}, \frac{14}{3}\right) \approx (3.67, 4.67)\]
                                 </div>
                             </div>
@@ -884,10 +912,10 @@
                 </section>
 
                 <!-- Chapter 3: COM of Common Shapes -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">COM of Common Shapes</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">COM of Common Shapes</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -895,17 +923,17 @@
                             These standard results must be memorized for JEE. They save time and are directly applicable in many problems.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 One-Dimensional Objects</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 One-Dimensional Objects</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Shape</th>
                                         <th class="p-4 text-left">Position of COM</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Uniform Rod (length L)</td>
                                         <td class="p-4">At center: L/2 from either end</td>
@@ -922,17 +950,17 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Two-Dimensional Objects (Laminas)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Two-Dimensional Objects (Laminas)</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Shape</th>
                                         <th class="p-4 text-left">Position of COM</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Triangular Lamina</td>
                                         <td class="p-4">At centroid: h/3 from base (intersection of medians)</td>
@@ -957,17 +985,17 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Three-Dimensional Objects</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Three-Dimensional Objects</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Shape</th>
                                         <th class="p-4 text-left">Position of COM</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Solid Sphere</td>
                                         <td class="p-4">At geometric center</td>
@@ -1001,12 +1029,12 @@
                                 <span class="text-2xl mr-2">💡</span> Memory Pattern
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Semi-shapes (2D vs Wire):</p>
                                     <p class="text-sm">Semicircular wire: 2R/π</p>
                                     <p class="text-sm">Semicircular disc: 4R/3π</p>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Hemisphere (Solid vs Hollow):</p>
                                     <p class="text-sm">Solid Hemisphere: 3R/8</p>
                                     <p class="text-sm">Hollow Hemisphere: R/2</p>
@@ -1014,27 +1042,27 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.4 Cavity Problems (Negative Mass Method)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Cavity Problems (Negative Mass Method)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">When a portion is removed from a body:</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">When a portion is removed from a body:</h4>
                             <div class="math-display text-center text-xl">
                                 \[x_{cm} = \frac{M \cdot x_1 - m \cdot x_2}{M - m}\]
                             </div>
-                            <p class="text-center mt-4 text-gray-700">
+                            <p class="text-center mt-4 text-ink-muted">
                                 M = mass of complete body, m = mass of removed portion<br>
                                 x₁ = COM of complete body, x₂ = COM of removed portion
                             </p>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2022 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A circular disc of radius R has a circular hole of radius R/2 cut from it. If the center of hole is at R/2 from center of disc, find position of new COM from original center.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Let σ = mass per unit area</p>
                                 <p class="mb-2">Mass of complete disc: M = σπR²</p>
@@ -1048,7 +1076,7 @@
                                     \[x_{cm} = \frac{M \cdot 0 - (M/4) \cdot (R/2)}{M - M/4} = \frac{-MR/8}{3M/4} = \frac{-R}{6}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{COM shifts by } \frac{R}{6} \text{ away from the hole}\]
                                 </div>
                             </div>
@@ -1057,10 +1085,10 @@
                 </section>
 
                 <!-- Chapter 4: Motion of COM -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Motion of Centre of Mass</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Motion of Centre of Mass</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1068,34 +1096,34 @@
                             The COM of a system moves as if all the mass were concentrated at that point and all external forces were applied there. This is the most powerful concept in this chapter.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Velocity of COM</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Velocity of COM</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6 text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
                             <div class="math-display text-2xl">
                                 \[\vec{v}_{cm} = \frac{d\vec{r}_{cm}}{dt} = \frac{\sum m_i\vec{v}_i}{\sum m_i} = \frac{m_1\vec{v}_1 + m_2\vec{v}_2 + ...}{M}\]
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Acceleration of COM</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Acceleration of COM</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6 text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
                             <div class="math-display text-2xl">
                                 \[\vec{a}_{cm} = \frac{d\vec{v}_{cm}}{dt} = \frac{\sum m_i\vec{a}_i}{\sum m_i}\]
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.3 Equation of Motion for COM</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Equation of Motion for COM</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6 text-center">
-                            <h4 class="font-bold text-xl mb-4 text-success">Newton's Second Law for System</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Newton's Second Law for System</h4>
                             <div class="math-display text-3xl">
                                 \[\vec{F}_{ext} = M\vec{a}_{cm}\]
                             </div>
-                            <p class="mt-4 text-gray-700">The COM accelerates only due to EXTERNAL forces. Internal forces cannot change COM motion!</p>
+                            <p class="mt-4 text-ink-muted">The COM accelerates only due to EXTERNAL forces. Internal forces cannot change COM motion!</p>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Key Insight (Most Important!)
                             </h4>
                             <div class="space-y-3">
@@ -1110,17 +1138,17 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.4 Applications</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Applications</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="bg-green-50 p-6 rounded-lg border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Man on Boat Problem</h5>
+                            <div class="bg-surface-2 p-6 rounded-lg border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Man on Boat Problem</h5>
                                 <p class="mb-3">When a man walks on a boat (no external horizontal force):</p>
                                 <div class="math-display">\[m_1 \Delta x_1 + m_2 \Delta x_2 = 0\]</div>
-                                <p class="text-sm text-gray-600">Man moves right → Boat moves left</p>
+                                <p class="text-sm text-ink-muted">Man moves right → Boat moves left</p>
                             </div>
-                            <div class="bg-green-50 p-6 rounded-lg border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Explosion in Mid-air</h5>
+                            <div class="bg-surface-2 p-6 rounded-lg border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Explosion in Mid-air</h5>
                                 <p class="mb-3">When a projectile explodes at highest point:</p>
                                 <ul class="text-sm space-y-1">
                                     <li>• COM continues parabolic path</li>
@@ -1131,13 +1159,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A 60 kg man stands on one end of a 40 kg boat of length 10 m. He walks to the other end. How far does the boat move? (Neglect water resistance)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">No external horizontal force → COM remains stationary</p>
                                 <p class="mb-2">Let boat move distance x to left when man moves to right end.</p>
@@ -1154,7 +1182,7 @@
                                     \[100x = 600\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[x = 6 \text{ m (boat moves 6 m opposite to man's motion)}\]
                                 </div>
                             </div>
@@ -1163,26 +1191,26 @@
                 </section>
 
                 <!-- Chapter 5: Linear Momentum -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Linear Momentum</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Linear Momentum</h2>
                     </div>
 
                     <div class="prose max-w-none">
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Definition</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6 text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
                             <h4 class="font-bold text-xl mb-4 text-primary">Linear Momentum</h4>
                             <div class="math-display text-3xl">
                                 \[\vec{p} = m\vec{v}\]
                             </div>
                             <div class="grid grid-cols-2 gap-4 mt-6">
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold">SI Unit</p>
                                     <p class="font-mono">kg·m/s or N·s</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold">Dimensional Formula</p>
                                     <p class="font-mono">[MLT⁻¹]</p>
                                 </div>
@@ -1191,22 +1219,22 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Momentum of System</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="math-display text-center text-xl">
                                 \[\vec{P}_{system} = \sum m_i\vec{v}_i = M\vec{v}_{cm}\]
                             </div>
-                            <p class="text-center mt-4 text-gray-700">
+                            <p class="text-center mt-4 text-ink-muted">
                                 Total momentum of system = (Total mass) × (Velocity of COM)
                             </p>
                         </div>
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Newton's Second Law in Momentum Form</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6 text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
                             <div class="math-display text-3xl">
                                 \[\vec{F} = \frac{d\vec{p}}{dt}\]
                             </div>
-                            <p class="mt-4 text-gray-700">Force = Rate of change of momentum</p>
+                            <p class="mt-4 text-ink-muted">Force = Rate of change of momentum</p>
                         </div>
 
                         <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
@@ -1214,10 +1242,10 @@
                                 <span class="text-2xl mr-2">💡</span> Relation between p and KE
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <div class="math-display">\[p = \sqrt{2mKE}\]</div>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <div class="math-display">\[KE = \frac{p^2}{2m}\]</div>
                                 </div>
                             </div>
@@ -1230,22 +1258,22 @@
                 </section>
 
                 <!-- Chapter 6: Conservation of Momentum -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Conservation of Linear Momentum</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Conservation of Linear Momentum</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="bg-gradient-to-r from-red-100 to-red-50 border-l-4 border-danger p-6 rounded-r-xl mb-6">
-                            <h3 class="text-xl font-bold text-danger mb-3">📜 Law of Conservation of Momentum</h3>
-                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                        <div class="bg-gradient-to-r from-surface-3 to-surface-2 border-l-4 border-danger p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">📜 Law of Conservation of Momentum</h3>
+                            <p class="text-lg italic text-ink leading-relaxed">
                                 "If no external force acts on a system, the total linear momentum of the system remains constant."
                             </p>
                         </div>
 
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6 text-center">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Mathematical Form</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Mathematical Form</h4>
                             <div class="math-display text-2xl">
                                 \[\text{If } \vec{F}_{ext} = 0, \text{ then } \vec{P}_{initial} = \vec{P}_{final}\]
                             </div>
@@ -1254,19 +1282,19 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.1 Conditions for Conservation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Conditions for Conservation</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
-                                <p class="font-bold text-success mb-2">✓ Momentum IS Conserved When:</p>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-primary mb-2">✓ Momentum IS Conserved When:</p>
                                 <ul class="text-sm space-y-1">
                                     <li>• No external force (F<sub>ext</sub> = 0)</li>
                                     <li>• External forces cancel out</li>
                                     <li>• In a particular direction if F<sub>ext</sub> ⊥ that direction</li>
                                 </ul>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
-                                <p class="font-bold text-danger mb-2">✗ Momentum NOT Conserved When:</p>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-danger">
+                                <p class="font-bold text-primary mb-2">✗ Momentum NOT Conserved When:</p>
                                 <ul class="text-sm space-y-1">
                                     <li>• Net external force exists</li>
                                     <li>• In direction of net external force</li>
@@ -1274,22 +1302,22 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.2 Component-wise Conservation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Component-wise Conservation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Momentum can be conserved in one direction but not another!</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Momentum can be conserved in one direction but not another!</h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-red-50 p-4 rounded text-center">
+                                <div class="bg-surface-2 p-4 rounded text-center">
                                     <p class="font-semibold mb-2">x-direction:</p>
                                     <p class="text-sm">If F<sub>x,ext</sub> = 0</p>
                                     <p class="font-mono">Σp<sub>x</sub> = constant</p>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded text-center">
+                                <div class="bg-surface-2 p-4 rounded text-center">
                                     <p class="font-semibold mb-2">y-direction:</p>
                                     <p class="text-sm">If F<sub>y,ext</sub> = 0</p>
                                     <p class="font-mono">Σp<sub>y</sub> = constant</p>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded text-center">
+                                <div class="bg-surface-2 p-4 rounded text-center">
                                     <p class="font-semibold mb-2">z-direction:</p>
                                     <p class="text-sm">If F<sub>z,ext</sub> = 0</p>
                                     <p class="font-mono">Σp<sub>z</sub> = constant</p>
@@ -1297,17 +1325,17 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.3 Applications</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Applications</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Scenario</th>
                                         <th class="p-4 text-left">Application</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Collisions</td>
                                         <td class="p-4">Momentum conserved (both elastic and inelastic)</td>
@@ -1333,13 +1361,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A 5 kg gun fires a 50 g bullet at 400 m/s. Find recoil velocity of gun.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Initial momentum = 0 (system at rest)</p>
                                 <p class="mb-2">By conservation of momentum:</p>
@@ -1353,7 +1381,7 @@
                                     \[v_{gun} = -\frac{20}{5} = -4 \text{ m/s}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Recoil velocity} = 4 \text{ m/s (opposite to bullet)}\]
                                 </div>
                             </div>
@@ -1362,10 +1390,10 @@
                 </section>
 
                 <!-- Chapter 7: Variable Mass Systems & Rockets -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Variable Mass Systems & Rocket Propulsion</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Variable Mass Systems & Rocket Propulsion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1373,45 +1401,45 @@
                             In systems where mass changes with time (like rockets), we cannot directly use F = ma. Instead, we must use the momentum form of Newton's Law. This is a JEE Advanced favorite topic!
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 General Equation for Variable Mass</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 General Equation for Variable Mass</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Variable Mass Equation</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Variable Mass Equation</h4>
                             <div class="math-display text-2xl">
                                 \[\vec{F}_{ext} + \vec{v}_{rel}\frac{dm}{dt} = m\frac{d\vec{v}}{dt}\]
                             </div>
-                            <p class="mt-4 text-gray-700">
+                            <p class="mt-4 text-ink-muted">
                                 v<sub>rel</sub> = velocity of ejected/added mass relative to main body
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Rocket Propulsion</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Rocket Propulsion</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Rocket in Free Space (No Gravity)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Rocket in Free Space (No Gravity)</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Thrust Force:</p>
                                     <div class="math-display">\[F_{thrust} = v_{rel}\left|\frac{dm}{dt}\right| = v_{rel} \cdot \mu\]</div>
-                                    <p class="text-sm text-gray-600 mt-2">μ = rate of fuel burn (kg/s)</p>
+                                    <p class="text-sm text-ink-muted mt-2">μ = rate of fuel burn (kg/s)</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Instantaneous Acceleration:</p>
                                     <div class="math-display">\[a = \frac{v_{rel} \cdot \mu}{m}\]</div>
-                                    <p class="text-sm text-gray-600 mt-2">m = instantaneous mass</p>
+                                    <p class="text-sm text-ink-muted mt-2">m = instantaneous mass</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.3 Rocket Velocity (Tsiolkovsky Equation)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Rocket Velocity (Tsiolkovsky Equation)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Final Velocity of Rocket</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Final Velocity of Rocket</h4>
                             <div class="math-display text-2xl">
                                 \[v = v_0 + v_{rel} \ln\left(\frac{m_0}{m}\right)\]
                             </div>
-                            <p class="mt-4 text-gray-700">
+                            <p class="mt-4 text-ink-muted">
                                 m₀ = initial mass, m = final mass (after fuel burn)
                             </p>
                             
@@ -1421,17 +1449,17 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.4 Rocket with Gravity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.4 Rocket with Gravity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Vertical Launch (against gravity)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Vertical Launch (against gravity)</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Net Force:</p>
                                     <div class="math-display">\[F_{net} = F_{thrust} - mg\]</div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Condition for liftoff:</p>
                                     <div class="math-display">\[F_{thrust} > m_0g\]</div>
                                 </div>
@@ -1444,7 +1472,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Sign Convention
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1455,13 +1483,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A rocket has initial mass 1000 kg. Gas is ejected at 2 km/s relative to rocket at rate 10 kg/s. Find (a) Initial thrust (b) Initial acceleration (c) Velocity after 50 seconds in free space.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Given:</strong> m₀ = 1000 kg, v<sub>rel</sub> = 2000 m/s, μ = 10 kg/s</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Initial Thrust:</strong></p>
@@ -1475,7 +1503,7 @@
                                 <div class="math-display">\[v = v_{rel} \ln\left(\frac{m_0}{m}\right) = 2000 \ln\left(\frac{1000}{500}\right)\]</div>
                                 <div class="math-display">\[v = 2000 \ln(2) = 2000 \times 0.693\]</div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[v \approx 1386 \text{ m/s} \approx 1.4 \text{ km/s}\]
                                 </div>
                             </div>
@@ -1484,61 +1512,61 @@
                 </section>
 
                 <!-- Chapter 8: Impulse -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Impulse</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Impulse</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.1 Definition of Impulse</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Definition of Impulse</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6 text-center">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Impulse</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Impulse</h4>
                             <div class="math-display text-2xl">
                                 \[\vec{J} = \vec{F} \cdot \Delta t = \Delta \vec{p} = m(\vec{v} - \vec{u})\]
                             </div>
                             <div class="grid grid-cols-2 gap-4 mt-6">
-                                <div class="bg-orange-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold">SI Unit</p>
                                     <p class="font-mono">N·s or kg·m/s</p>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold">Dimensional Formula</p>
                                     <p class="font-mono">[MLT⁻¹]</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.2 Impulse for Variable Force</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Impulse for Variable Force</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6 text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
                             <div class="math-display text-2xl">
                                 \[\vec{J} = \int_{t_1}^{t_2} \vec{F} \, dt = \text{Area under F-t curve}\]
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.3 Impulse-Momentum Theorem</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 Impulse-Momentum Theorem</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6 text-center">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Theorem</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Theorem</h4>
                             <div class="math-display text-2xl">
                                 \[\vec{J} = \vec{p}_f - \vec{p}_i = \Delta \vec{p}\]
                             </div>
-                            <p class="mt-4 text-gray-700">Impulse = Change in momentum</p>
+                            <p class="mt-4 text-ink-muted">Impulse = Change in momentum</p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.4 Applications of Impulse</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.4 Applications of Impulse</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="bg-orange-50 p-6 rounded-lg border-2 border-orange-300">
-                                <h5 class="font-bold text-lg mb-3 text-accent">Short Duration Collisions</h5>
+                            <div class="bg-surface-2 p-6 rounded-lg border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Short Duration Collisions</h5>
                                 <p class="mb-3">When force acts for very short time:</p>
                                 <div class="math-display">\[J = F_{avg} \cdot \Delta t\]</div>
-                                <p class="text-sm text-gray-600">Used in bat-ball, hammer-nail problems</p>
+                                <p class="text-sm text-ink-muted">Used in bat-ball, hammer-nail problems</p>
                             </div>
-                            <div class="bg-orange-50 p-6 rounded-lg border-2 border-orange-300">
-                                <h5 class="font-bold text-lg mb-3 text-accent">Impulsive Forces</h5>
+                            <div class="bg-surface-2 p-6 rounded-lg border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Impulsive Forces</h5>
                                 <p class="mb-3">Very large forces acting for very short time:</p>
                                 <ul class="text-sm space-y-1">
                                     <li>• Collision forces</li>
@@ -1566,13 +1594,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A ball of mass 200 g moving at 10 m/s is hit by a bat. It returns at 15 m/s. If contact time is 0.02 s, find (a) Impulse (b) Average force.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Given:</strong> m = 0.2 kg, u = 10 m/s, v = -15 m/s (returns), Δt = 0.02 s</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Impulse:</strong></p>
@@ -1582,7 +1610,7 @@
                                 <p class="mb-2 mt-4"><strong>(b) Average Force:</strong></p>
                                 <div class="math-display">\[F_{avg} = \frac{J}{\Delta t} = \frac{5}{0.02} = 250 \text{ N}\]</div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[J = 5 \text{ N·s}, \quad F_{avg} = 250 \text{ N}\]
                                 </div>
                             </div>
@@ -1591,14 +1619,14 @@
                 </section>
 
                 <!-- All Formulas Section -->
-                <section id="formulas" class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl shadow-2xl p-8">
+                <section id="formulas" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📋</span>
                         Complete Formula Sheet - Centre of Mass
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Position of COM</h3>
                             <div class="space-y-3 font-mono text-sm">
                                 <p>x<sub>cm</sub> = Σm<sub>i</sub>x<sub>i</sub>/Σm<sub>i</sub></p>
@@ -1608,7 +1636,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">COM of Shapes</h3>
                             <div class="space-y-3 font-mono text-sm">
                                 <p>Semicircular wire: 2R/π</p>
@@ -1620,7 +1648,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Motion of COM</h3>
                             <div class="space-y-3 font-mono text-sm">
                                 <p>v<sub>cm</sub> = Σm<sub>i</sub>v<sub>i</sub>/M</p>
@@ -1630,7 +1658,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Momentum</h3>
                             <div class="space-y-3 font-mono text-sm">
                                 <p>p = mv</p>
@@ -1640,7 +1668,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Rocket Propulsion</h3>
                             <div class="space-y-3 font-mono text-sm">
                                 <p>Thrust = v<sub>rel</sub> × |dm/dt|</p>
@@ -1650,7 +1678,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Impulse</h3>
                             <div class="space-y-3 font-mono text-sm">
                                 <p>J = FΔt = Δp</p>
@@ -1662,21 +1690,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Formula PDF
                         </a>
                     </div>
                 </section>
 
                 <!-- Previous Year Questions -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Position of COM: 25%</li>
@@ -1686,7 +1714,7 @@
                                 <li>✓ Impulse: 10%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ COM of continuous bodies: 25%</li>
@@ -1698,8 +1726,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>COM of cavity/cutout problems</li>
                             <li>Man walking on boat (no external force)</li>
@@ -1714,7 +1742,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1737,21 +1765,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Two particles of mass 3 kg and 5 kg are at (2, 3) and (4, 5). Find COM.</li>
                             <li>A uniform rod of length 4 m and mass 2 kg. Find position of COM from one end.</li>
@@ -1764,8 +1792,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Find COM of a non-uniform rod of length L with linear density λ = λ₀(1 + x/L).</li>
                             <li>A disc of radius R has a hole of radius R/3 at distance R/2 from center. Find new COM.</li>
@@ -1778,8 +1806,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A triangular plate with vertices at (0,0), (a,0), (0,b) has density ρ = kxy. Find COM.</li>
                             <li>A sphere of radius R has spherical cavity of radius R/2 with center at R/2 from center. Find COM.</li>
@@ -1793,61 +1821,79 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./current-electricity.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Current Electricity</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./dual-nature-of-radiation-and-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Dual Nature Of Radiation And Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./electromagnetic-induction.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Electromagnetic Induction</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="/jee/physics/work-energy-power" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="/jee/physics/work-energy-power" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Work, Energy & Power</h3>
-                    <p class="text-gray-600">Work-Energy Theorem, Conservation of Energy, Collisions</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Work, Energy & Power</h3>
+                    <p class="text-ink-muted">Work-Energy Theorem, Conservation of Energy, Collisions</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="/jee/physics/rotational-motion" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="/jee/physics/rotational-motion" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Rotational Motion</h3>
-                    <p class="text-gray-600">Moment of Inertia, Torque, Angular Momentum, Rolling</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Rotational Motion</h3>
+                    <p class="text-ink-muted">Moment of Inertia, Torque, Angular Momentum, Rolling</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="/jee/physics/gravitation" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="/jee/physics/gravitation" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Gravitation</h3>
-                    <p class="text-gray-600">Gravitational PE, Orbital Motion, Kepler's Laws</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Gravitation</h3>
+                    <p class="text-ink-muted">Gravitational PE, Orbital Motion, Kepler's Laws</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 
             <div class="text-center mt-10">
-                <a href="/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -1855,18 +1901,18 @@
     </section>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Centre of Mass - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Centre of Mass - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Centre of Mass is Crucial for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Centre of Mass</strong> is a fundamental chapter that bridges particle mechanics with system mechanics. It carries 8-12% weightage and is essential for:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Rotational Motion</strong> - COM is the pivot for rotation concepts</li>
                             <li><strong>Collisions</strong> - Momentum conservation around COM</li>
                             <li><strong>Gravitation</strong> - Orbital mechanics uses COM</li>
@@ -1874,12 +1920,12 @@
                         </ul>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Their Weightage</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">High Priority Topics</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">High Priority Topics</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Position of COM (discrete & continuous)</li>
                                     <li>• Motion of COM (F<sub>ext</sub> = Ma<sub>cm</sub>)</li>
                                     <li>• Conservation of Momentum</li>
@@ -1887,8 +1933,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">Medium Priority Topics</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">Medium Priority Topics</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• COM of standard shapes (memorize!)</li>
                                     <li>• Cavity problems</li>
                                     <li>• Impulse calculations</li>
@@ -1898,12 +1944,12 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Centre of Mass Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 4-5 days (3 hours/day)</li>
                                 <li>Memorize COM of all standard shapes</li>
                                 <li>Master "no external force" problems</li>
@@ -1913,7 +1959,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 6-8 days (4 hours/day)</li>
                                 <li>Master integration for continuous bodies</li>
                                 <li>Solve complex variable mass problems</li>
@@ -1924,29 +1970,29 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing COM and COG:</strong> They're same only in uniform gravitational field
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong sign in cavity problems:</strong> Removed mass is treated as negative mass
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Ignoring direction in momentum:</strong> Momentum is a vector - direction matters!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong v<sub>rel</sub> in rocket:</strong> It's velocity of gas relative to rocket, not ground
                             </div>
@@ -1957,44 +2003,44 @@
         </div>
     </section>
     <!-- Social Proof & Sharing Section -->
-<section class="bg-gradient-to-r from-green-50 to-blue-50 py-10 border-y-4 border-primary">
+<section class="bg-gradient-to-r from-surface-2 to-surface-2 py-10 border-y-4 border-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8">
-            <h3 class="text-3xl font-bold text-gray-900 mb-2">Trusted by 50,000+ JEE Aspirants</h3>
-            <p class="text-gray-600">Join thousands of students mastering Centre of Mass</p>
+            <h3 class="text-3xl font-bold text-ink mb-2">Trusted by 50,000+ JEE Aspirants</h3>
+            <p class="text-ink-muted">Join thousands of students mastering Centre of Mass</p>
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center mb-8">
-            <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition">
+            <div class="bg-canvas p-6 rounded-xl border border-hairline transform hover:scale-105 transition">
                 <div class="text-4xl font-bold text-primary">50K+</div>
-                <div class="text-gray-600 mt-2">Students Helped</div>
+                <div class="text-ink-muted mt-2">Students Helped</div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition">
-                <div class="text-4xl font-bold text-success">4.8/5</div>
-                <div class="text-gray-600 mt-2">Rating</div>
+            <div class="bg-canvas p-6 rounded-xl border border-hairline transform hover:scale-105 transition">
+                <div class="text-4xl font-bold text-primary">4.8/5</div>
+                <div class="text-ink-muted mt-2">Rating</div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition">
-                <div class="text-4xl font-bold text-secondary">100+</div>
-                <div class="text-gray-600 mt-2">Examples</div>
+            <div class="bg-canvas p-6 rounded-xl border border-hairline transform hover:scale-105 transition">
+                <div class="text-4xl font-bold text-primary">100+</div>
+                <div class="text-ink-muted mt-2">Examples</div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition">
-                <div class="text-4xl font-bold text-accent">Free</div>
-                <div class="text-gray-600 mt-2">Always</div>
+            <div class="bg-canvas p-6 rounded-xl border border-hairline transform hover:scale-105 transition">
+                <div class="text-4xl font-bold text-primary">Free</div>
+                <div class="text-ink-muted mt-2">Always</div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition">
-                <div class="text-4xl font-bold text-danger">15H</div>
-                <div class="text-gray-600 mt-2">Study Time</div>
+            <div class="bg-canvas p-6 rounded-xl border border-hairline transform hover:scale-105 transition">
+                <div class="text-4xl font-bold text-primary">15H</div>
+                <div class="text-ink-muted mt-2">Study Time</div>
             </div>
         </div>
 
         <!-- Share Buttons -->
         <div class="text-center">
-            <p class="text-lg font-semibold text-gray-900 mb-4">📢 Share this guide with your JEE friends:</p>
+            <p class="text-lg font-semibold text-ink mb-4">📢 Share this guide with your JEE friends:</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="flex items-center bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition shadow-lg">
+                   class="flex items-center bg-primary text-ink px-6 py-3 rounded-full hover:bg-primary transition border border-hairline">
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
                     Facebook
                 </a>
@@ -2002,7 +2048,7 @@
                 <a href="https://twitter.com/intent/tweet?url=https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision&text=Master%20Centre%20of%20Mass%20for%20JEE%20with%20100%2B%20solved%20examples!&hashtags=JEE2025,JEEPhysics,CentreOfMass" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="flex items-center bg-blue-400 text-white px-6 py-3 rounded-full hover:bg-blue-500 transition shadow-lg">
+                   class="flex items-center bg-surface-4 text-ink px-6 py-3 rounded-full hover:bg-surface-2 transition border border-hairline">
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg>
                     Twitter
                 </a>
@@ -2010,7 +2056,7 @@
                 <a href="https://wa.me/?text=Check%20out%20this%20amazing%20Centre%20of%20Mass%20guide%20for%20JEE%20https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="flex items-center bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition shadow-lg">
+                   class="flex items-center bg-surface-2 text-ink px-6 py-3 rounded-full hover:bg-primary transition border border-hairline">
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
                     WhatsApp
                 </a>
@@ -2018,13 +2064,13 @@
                 <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="flex items-center bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition shadow-lg">
+                   class="flex items-center bg-primary text-ink px-6 py-3 rounded-full hover:bg-primary transition border border-hairline">
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
                     LinkedIn
                 </a>
 
                 <button onclick="copyLink()" 
-                        class="flex items-center bg-gray-600 text-white px-6 py-3 rounded-full hover:bg-gray-700 transition shadow-lg">
+                        class="flex items-center bg-surface-4 text-ink px-6 py-3 rounded-full hover:bg-surface-4 transition border border-hairline">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                     Copy Link
                 </button>
@@ -2040,68 +2086,68 @@ function copyLink() {
 }
 </script>
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -2109,12 +2155,12 @@ function copyLink() {
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -2123,25 +2169,25 @@ function copyLink() {
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
@@ -2149,7 +2195,7 @@ function copyLink() {
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 

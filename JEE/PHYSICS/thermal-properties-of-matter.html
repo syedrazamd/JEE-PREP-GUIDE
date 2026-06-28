@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Thermal Properties of Matter - Complete JEE Physics Notes with 150+ Examples">
     <meta property="og:description" content="Master heat transfer, calorimetry, thermal expansion & all thermal concepts. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Thermal Properties of Matter - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter">
     <meta name="twitter:title" content="Thermal Properties of Matter - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master heat transfer with 150+ solved examples. Complete notes on calorimetry, thermal expansion & radiation for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
 
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Thermal Properties JEE">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Thermal Properties of Matter - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Thermal Properties of Matter covering heat transfer, calorimetry, thermal expansion, and radiation with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -361,7 +374,7 @@
       "@type": "VideoObject",
       "name": "Thermal Properties of Matter - Complete Tutorial",
       "description": "Learn Thermal Properties of Matter for JEE with examples",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT60M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter"
@@ -398,59 +411,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
 <!-- Header -->
-<header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+<header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                    <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                    <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                 </div>
                 <div>
-                    <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                    <p class="text-sm text-gray-500">Path to IIT</p>
+                    <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                    <p class="text-sm text-ink-tertiary">Path to IIT</p>
                 </div>
             </div>
             <nav class="hidden md:flex space-x-8 text-base font-semibold">
-               <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+               <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
             </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
         </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
     </div>
 </header>
 
 <!-- Breadcrumb Navigation -->
-<nav class="bg-gray-100 py-3 border-b">
+<nav class="bg-surface-1 py-3 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -459,30 +474,30 @@
                 </a>
                 <meta itemprop="position" content="1" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/notes" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Notes</span>
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">JEE</span>
                 </a>
                 <meta itemprop="position" content="3" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Physics</span>
                 </a>
                 <meta itemprop="position" content="4" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span class="text-gray-600 font-semibold" itemprop="name">Thermal Properties of Matter</span>
+                <span class="text-ink-muted font-semibold" itemprop="name">Thermal Properties of Matter</span>
                 <meta itemprop="position" content="5" />
             </li>
         </ol>
@@ -490,32 +505,32 @@
 </nav>
 
 <!-- Quick Navigation -->
-<section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+<section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Thermal Properties of Matter</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Thermal Properties of Matter</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Heat & Temperature
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Thermal Expansion
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Calorimetry
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Specific Heat
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Latent Heat
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Heat Transfer
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Radiation
             </a>
-            <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Newton's Cooling
             </a>
         </div>
@@ -523,28 +538,28 @@
 </section>
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center">
             <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                 Thermal Properties of Matter
-                <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
             </h2>
             <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                 Master heat transfer, thermal expansion, calorimetry, and all thermal concepts with complete notes. Includes 150+ solved problems, all formulas, and JEE shortcuts for guaranteed marks.
             </p>
             <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">📚 8 Complete Sections</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">🎯 All Key Formulas</span>
                 </div>
             </div>
@@ -553,21 +568,21 @@
 </section>
 
 <!-- Rating Section -->
-<section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+<section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="name" content="Thermal Properties of Matter JEE Notes">
     <meta itemprop="description" content="Complete study notes for Thermal Properties of Matter">
-    <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta itemprop="image" content="/logo-header.webp">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
         <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center space-x-6 mb-4 md:mb-0">
                 <div class="flex items-center">
-                    <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                    <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                     <span class="ml-3 text-xl font-bold">
                         <span itemprop="ratingValue">4.9</span>/5
                     </span>
                 </div>
-                <div class="text-gray-600">
+                <div class="text-ink-muted">
                     <span itemprop="reviewCount">245</span>+ students rated this helpful
                 </div>
                 <meta itemprop="bestRating" content="5">
@@ -577,15 +592,15 @@
             <div class="flex items-center space-x-6">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-primary">150+</div>
-                    <div class="text-sm text-gray-600">Solved Examples</div>
+                    <div class="text-sm text-ink-muted">Solved Examples</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-success">3 hrs</div>
-                    <div class="text-sm text-gray-600">Study Time</div>
+                    <div class="text-2xl font-bold text-primary">3 hrs</div>
+                    <div class="text-sm text-ink-muted">Study Time</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-secondary">Free</div>
-                    <div class="text-sm text-gray-600">Always</div>
+                    <div class="text-2xl font-bold text-primary">Free</div>
+                    <div class="text-sm text-ink-muted">Always</div>
                 </div>
             </div>
         </div>
@@ -597,53 +612,65 @@
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
         <!-- Sidebar Navigation -->
-        <aside class="lg:col-span-1">
-            <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <aside class="order-2 lg:order-1 lg:col-span-1">
+            <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                     <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                     Table of Contents
                 </h3>
                 <ul class="space-y-2 text-base font-medium">
-                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Heat & Temperature</a></li>
-                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Thermal Expansion</a></li>
-                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Calorimetry</a></li>
-                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Specific Heat</a></li>
-                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Latent Heat</a></li>
-                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Heat Transfer</a></li>
-                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Radiation</a></li>
-                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Newton's Cooling</a></li>
-                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 PYQs Analysis</a></li>
-                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Heat & Temperature</a></li>
+                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Thermal Expansion</a></li>
+                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Calorimetry</a></li>
+                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Specific Heat</a></li>
+                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Latent Heat</a></li>
+                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Heat Transfer</a></li>
+                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Radiation</a></li>
+                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Newton's Cooling</a></li>
+                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 PYQs Analysis</a></li>
+                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                 </ul>
             </div>
         </aside>
 
         <!-- Main Content Area -->
-        <main class="lg:col-span-3 space-y-12">
+        <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./kinetic-theory-of-gases.html" class="text-primary font-semibold hover:underline">Kinetic Theory Of Gases &rarr;</a>
+                <a href="./thermodynamics.html" class="text-primary font-semibold hover:underline">Thermodynamics &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
             <!-- Featured Image -->
             <figure class="mb-8">
                 <img
-                    src="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter.png"
+                    src="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter.webp"
                     alt="Thermal Properties of Matter JEE notes, Formulas, PYQs"
                     title="Thermal Properties of Matter — JEE Notes, Formulas, PYQs"
                     width="1200"
                     height="630"
                     loading="eager"
                     fetchpriority="high"
-                    class="w-full rounded-2xl shadow-lg border border-gray-200"
+                    class="w-full rounded-2xl border border-hairline border border-hairline"
                     itemprop="image"
                 >
-                <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                     Thermal Properties of Matter - Complete JEE Physics Notes
                 </figcaption>
             </figure>
 
             <!-- Chapter 1: Heat and Temperature -->
-            <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Heat and Temperature</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Heat and Temperature</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -654,7 +681,7 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Heat vs Temperature</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Heat (Q)</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>Definition:</strong> Energy in transit due to temperature difference</li>
@@ -665,7 +692,7 @@
                                 <li><strong>Measurement:</strong> Calorimeter</li>
                             </ul>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Temperature (T)</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>Definition:</strong> Measure of average kinetic energy of molecules</li>
@@ -680,25 +707,25 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Temperature Scales & Conversions</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Important Temperature Conversions</h4>
                         
                         <div class="space-y-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Celsius to Kelvin:</p>
                                 <div class="math-display">
                                     \[K = °C + 273.15\]
                                 </div>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Celsius to Fahrenheit:</p>
                                 <div class="math-display">
                                     \[°F = \frac{9}{5}°C + 32\]
                                 </div>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">General Relation (JEE Important):</p>
                                 <div class="math-display">
                                     \[\frac{°C}{5} = \frac{°F - 32}{9} = \frac{K - 273}{5}\]
@@ -708,16 +735,16 @@
                     </div>
 
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Scale</th>
                                     <th class="p-4 text-left">Lower Fixed Point</th>
                                     <th class="p-4 text-left">Upper Fixed Point</th>
                                     <th class="p-4 text-left">Number of Divisions</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Celsius (°C)</td>
                                     <td class="p-4">0°C (Ice point)</td>
@@ -747,21 +774,21 @@
                         <p class="text-lg mb-3">
                             <strong>For same numerical reading on Celsius and Fahrenheit:</strong>
                         </p>
-                        <div class="math-display bg-white p-4 rounded-lg">
+                        <div class="math-display bg-canvas p-4 rounded-lg">
                             \[°C = °F = -40\]
                         </div>
                         <p class="mt-3">This is the only temperature where Celsius and Fahrenheit scales coincide!</p>
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 1
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> At what temperature will the Fahrenheit scale reading be double the Celsius scale reading?
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Given:</strong> °F = 2°C</p>
                             
                             <p class="mb-2 mt-3"><strong>Using conversion formula:</strong></p>
@@ -783,7 +810,7 @@
                                 \[\frac{°C}{5} = 32\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[°C = 160°C\]
                                 \[°F = 320°F\]
                             </div>
@@ -791,7 +818,7 @@
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Common Mistakes
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -805,10 +832,10 @@
             </section>
 
             <!-- Chapter 2: Thermal Expansion -->
-            <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Thermal Expansion</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Thermal Expansion</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -816,95 +843,95 @@
                         When a substance is heated, its molecules vibrate with greater amplitude, causing an increase in the average separation between molecules. This results in expansion - one of the most important concepts for JEE numerical problems.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Types of Thermal Expansion</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Types of Thermal Expansion</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Linear Expansion</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Linear Expansion</h5>
                             <p class="mb-3 text-sm">For solids with one dominant dimension (rods, wires)</p>
-                            <div class="math-display bg-purple-50 p-3 rounded">
+                            <div class="math-display bg-surface-2 p-3 rounded">
                                 \[\Delta L = \alpha L_0 \Delta T\]
                             </div>
                             <p class="text-sm mt-2">where α = coefficient of linear expansion</p>
-                            <div class="math-display bg-purple-50 p-3 rounded mt-3">
+                            <div class="math-display bg-surface-2 p-3 rounded mt-3">
                                 \[L = L_0(1 + \alpha \Delta T)\]
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Area Expansion</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Area Expansion</h5>
                             <p class="mb-3 text-sm">For thin sheets, plates (2D objects)</p>
-                            <div class="math-display bg-purple-50 p-3 rounded">
+                            <div class="math-display bg-surface-2 p-3 rounded">
                                 \[\Delta A = \beta A_0 \Delta T\]
                             </div>
                             <p class="text-sm mt-2">where β = 2α</p>
-                            <div class="math-display bg-purple-50 p-3 rounded mt-3">
+                            <div class="math-display bg-surface-2 p-3 rounded mt-3">
                                 \[A = A_0(1 + \beta \Delta T)\]
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Volume Expansion</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Volume Expansion</h5>
                             <p class="mb-3 text-sm">For 3D objects and liquids</p>
-                            <div class="math-display bg-purple-50 p-3 rounded">
+                            <div class="math-display bg-surface-2 p-3 rounded">
                                 \[\Delta V = \gamma V_0 \Delta T\]
                             </div>
                             <p class="text-sm mt-2">where γ = 3α</p>
-                            <div class="math-display bg-purple-50 p-3 rounded mt-3">
+                            <div class="math-display bg-surface-2 p-3 rounded mt-3">
                                 \[V = V_0(1 + \gamma \Delta T)\]
                             </div>
                         </div>
                     </div>
 
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Relation Between Coefficients (Most Important)</h4>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg text-center text-2xl">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Relation Between Coefficients (Most Important)</h4>
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-2xl">
                             \[\beta = 2\alpha \quad \text{and} \quad \gamma = 3\alpha\]
                         </div>
                         <p class="text-center mt-3 font-semibold">Therefore: α : β : γ = 1 : 2 : 3</p>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Important Values of α (Linear Expansion Coefficient)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Important Values of α (Linear Expansion Coefficient)</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Material</th>
                                     <th class="p-4 text-left">α (×10⁻⁶ /°C)</th>
                                     <th class="p-4 text-left">JEE Importance</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Aluminum</td>
                                     <td class="p-4 font-mono">23</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">High</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Brass</td>
                                     <td class="p-4 font-mono">19</td>
-                                    <td class="p-4"><span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Medium</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">Medium</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Copper</td>
                                     <td class="p-4 font-mono">17</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">High</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Steel/Iron</td>
                                     <td class="p-4 font-mono">12</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">High</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Glass (Pyrex)</td>
                                     <td class="p-4 font-mono">3.2</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">High</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Invar (Fe-Ni alloy)</td>
                                     <td class="p-4 font-mono">0.9</td>
-                                    <td class="p-4"><span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Very High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">Very High</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -915,7 +942,7 @@
                             <span class="text-2xl mr-2">💡</span> JEE Special Cases
                         </h4>
                         <div class="space-y-3">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">1. Expansion of a Cavity/Hole:</p>
                                 <p>A hole in a metal plate expands as if it were made of the same material.</p>
                                 <div class="math-display">
@@ -923,7 +950,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">2. Thermal Stress:</p>
                                 <p>When expansion is prevented, thermal stress develops:</p>
                                 <div class="math-display">
@@ -932,7 +959,7 @@
                                 <p class="text-sm">where Y = Young's modulus</p>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">3. Bimetallic Strip:</p>
                                 <p>Two metals with different α bonded together - bends towards metal with lower α when heated</p>
                             </div>
@@ -940,14 +967,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 2
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A steel rod of length 1 m at 20°C is heated to 120°C. Find the increase in length. (α for steel = 12 × 10⁻⁶ /°C)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Given:</strong></p>
                             <ul class="list-disc list-inside mb-3">
                                 <li>L₀ = 1 m</li>
@@ -967,16 +994,16 @@
                                 \[\Delta L = 12 \times 10^{-4} \text{ m}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\Delta L = 1.2 \text{ mm}\]
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Anomalous Expansion of Water</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Anomalous Expansion of Water</h3>
                     
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">❄️</span> Water's Unique Behavior (JEE Favorite)
                         </h4>
                         <div class="space-y-3">
@@ -986,7 +1013,7 @@
                             <p class="text-lg">
                                 <strong>Water:</strong> Volume decreases from 100°C to 4°C, then INCREASES from 4°C to 0°C
                             </p>
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Key Points:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Maximum density</strong> of water occurs at <strong>4°C</strong></li>
@@ -1001,10 +1028,10 @@
             </section>
 
             <!-- Chapter 3: Calorimetry -->
-            <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Calorimetry</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Calorimetry</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1014,13 +1041,13 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Fundamental Principle of Calorimetry</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Heat Exchange Principle</h4>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-2xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-2xl">
                             \[\text{Heat Lost} = \text{Heat Gained}\]
                         </div>
                         <p class="text-center mt-3 font-semibold">Or equivalently:</p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-xl mt-2">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl mt-2">
                             \[\sum Q = 0\]
                         </div>
                         <p class="text-center text-sm mt-2">(Algebraic sum of all heat changes = 0)</p>
@@ -1028,9 +1055,9 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Heat Transfer Formula</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h5 class="font-bold text-lg mb-3 text-primary">For Temperature Change (No Phase Change)</h5>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[Q = mc\Delta T\]
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -1055,14 +1082,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> 100 g of water at 80°C is mixed with 200 g of water at 20°C in an insulated container. Find the final temperature. (Specific heat of water = 4200 J/kg·K)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Given:</strong></p>
                             <ul class="list-disc list-inside mb-3">
                                 <li>m₁ = 100 g = 0.1 kg (hot water)</li>
@@ -1092,7 +1119,7 @@
                                 \[12 = 0.3T\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[T = 40°C\]
                             </div>
                         </div>
@@ -1105,7 +1132,7 @@
                         <p class="text-lg mb-3">
                             For mixing two quantities of same substance at different temperatures:
                         </p>
-                        <div class="math-display bg-white p-4 rounded-lg">
+                        <div class="math-display bg-canvas p-4 rounded-lg">
                             \[T_{\text{final}} = \frac{m_1T_1 + m_2T_2}{m_1 + m_2}\]
                         </div>
                         <p class="mt-3 text-sm">This is weighted average formula - saves 30 seconds in exam!</p>
@@ -1113,17 +1140,17 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Water Equivalent</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h5 class="font-bold text-lg mb-3 text-primary">Definition & Formula</h5>
                         <p class="mb-3">
                             <strong>Water Equivalent (W):</strong> Mass of water that would absorb or release the same amount of heat as the body for the same temperature change.
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[W = \frac{mc}{c_{\text{water}}} = \frac{mc}{4200}\]
                         </div>
                         <p class="mt-3 text-sm">Where c = specific heat of the body</p>
                         
-                        <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                        <div class="bg-surface-2 p-4 rounded-lg mt-4">
                             <p class="font-semibold mb-2">Heat Capacity:</p>
                             <div class="math-display">
                                 \[H = mc = W \times c_{\text{water}}\]
@@ -1135,10 +1162,10 @@
             </section>
 
             <!-- Chapter 4: Specific Heat Capacity -->
-            <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Specific Heat Capacity</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Specific Heat Capacity</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1146,82 +1173,82 @@
                         Specific heat capacity is a characteristic property of every substance that determines how much heat is required to raise its temperature. Understanding this concept is crucial for solving 40% of calorimetry problems in JEE.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.1 Definition & Formula</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Definition & Formula</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Specific Heat Capacity (c)</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Specific Heat Capacity (c)</h4>
                         <p class="mb-3 text-lg">
                             Heat required to raise the temperature of <strong>1 kg</strong> of substance by <strong>1 Kelvin</strong>.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg text-center text-xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                             \[c = \frac{Q}{m\Delta T}\]
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-purple-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold mb-2">SI Unit:</p>
                                 <p class="font-mono">J/(kg·K) or J/(kg·°C)</p>
                             </div>
-                            <div class="bg-purple-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold mb-2">CGS Unit:</p>
                                 <p class="font-mono">cal/(g·°C)</p>
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.2 Important Specific Heat Values (Must Remember)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Important Specific Heat Values (Must Remember)</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Substance</th>
                                     <th class="p-4 text-left">c (J/kg·K)</th>
                                     <th class="p-4 text-left">c (cal/g·°C)</th>
                                     <th class="p-4 text-left">JEE Frequency</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
-                                <tr class="bg-blue-50">
+                            <tbody class="divide-y bg-canvas">
+                                <tr class="bg-surface-2">
                                     <td class="p-4 font-bold">Water (Liquid)</td>
                                     <td class="p-4 font-mono text-lg">4200</td>
                                     <td class="p-4 font-mono">1.00</td>
-                                    <td class="p-4"><span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-bold">Highest</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">Highest</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Ice</td>
                                     <td class="p-4 font-mono">2100</td>
                                     <td class="p-4 font-mono">0.50</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">High</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Steam</td>
                                     <td class="p-4 font-mono">2010</td>
                                     <td class="p-4 font-mono">0.48</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">High</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Aluminum</td>
                                     <td class="p-4 font-mono">900</td>
                                     <td class="p-4 font-mono">0.215</td>
-                                    <td class="p-4"><span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Medium</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">Medium</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Iron/Steel</td>
                                     <td class="p-4 font-mono">450</td>
                                     <td class="p-4 font-mono">0.107</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">High</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Copper</td>
                                     <td class="p-4 font-mono">390</td>
                                     <td class="p-4 font-mono">0.093</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">High</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">High</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Lead</td>
                                     <td class="p-4 font-mono">130</td>
                                     <td class="p-4 font-mono">0.031</td>
-                                    <td class="p-4"><span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Low</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm">Low</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1240,19 +1267,19 @@
                         </ul>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.3 Molar Specific Heat</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Molar Specific Heat</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                        <h5 class="font-bold text-lg mb-3 text-secondary">Definition</h5>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h5 class="font-bold text-lg mb-3 text-primary">Definition</h5>
                         <p class="mb-3">
                             Heat required to raise the temperature of <strong>1 mole</strong> of substance by <strong>1 Kelvin</strong>.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[C = \frac{Q}{n\Delta T}\]
                         </div>
                         <p class="mt-3 text-sm">where n = number of moles</p>
                         
-                        <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                        <div class="bg-surface-2 p-4 rounded-lg mt-4">
                             <p class="font-semibold mb-2">Relation with specific heat:</p>
                             <div class="math-display">
                                 \[C = c \times M\]
@@ -1261,11 +1288,11 @@
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-white p-3 rounded border-2 border-purple-200">
+                            <div class="bg-canvas p-3 rounded border-2 border-hairline">
                                 <p class="font-semibold mb-2">SI Unit:</p>
                                 <p class="font-mono">J/(mol·K)</p>
                             </div>
-                            <div class="bg-white p-3 rounded border-2 border-purple-200">
+                            <div class="bg-canvas p-3 rounded border-2 border-hairline">
                                 <p class="font-semibold mb-2">CGS Unit:</p>
                                 <p class="font-mono">cal/(mol·°C)</p>
                             </div>
@@ -1273,14 +1300,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 4
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> How much heat is required to raise the temperature of 2 kg of water from 20°C to 80°C? (c_water = 4200 J/kg·K)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Given:</strong></p>
                             <ul class="list-disc list-inside mb-3">
                                 <li>m = 2 kg</li>
@@ -1300,7 +1327,7 @@
                                 \[Q = 504000 \text{ J}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[Q = 504 \text{ kJ} = 120 \text{ kcal}\]
                             </div>
                         </div>
@@ -1309,10 +1336,10 @@
             </section>
 
             <!-- Chapter 5: Latent Heat -->
-            <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Latent Heat & Change of State</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Latent Heat & Change of State</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1323,13 +1350,13 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Latent Heat - Definition & Types</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Latent Heat of Fusion (L_f)</h5>
                             <p class="mb-3 text-sm">Heat required to convert 1 kg solid to liquid at melting point</p>
-                            <div class="math-display bg-blue-50 p-3 rounded">
+                            <div class="math-display bg-surface-2 p-3 rounded">
                                 \[Q = mL_f\]
                             </div>
-                            <div class="bg-white p-3 rounded border-2 border-blue-200 mt-4">
+                            <div class="bg-canvas p-3 rounded border-2 border-hairline mt-4">
                                 <p class="font-semibold mb-2">For Water/Ice:</p>
                                 <p class="font-mono text-lg">L_f = 334 kJ/kg</p>
                                 <p class="font-mono">= 80 cal/g</p>
@@ -1337,13 +1364,13 @@
                             <p class="text-sm mt-3">Melting point = 0°C = 273 K</p>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Latent Heat of Vaporization (L_v)</h5>
                             <p class="mb-3 text-sm">Heat required to convert 1 kg liquid to gas at boiling point</p>
-                            <div class="math-display bg-blue-50 p-3 rounded">
+                            <div class="math-display bg-surface-2 p-3 rounded">
                                 \[Q = mL_v\]
                             </div>
-                            <div class="bg-white p-3 rounded border-2 border-blue-200 mt-4">
+                            <div class="bg-canvas p-3 rounded border-2 border-hairline mt-4">
                                 <p class="font-semibold mb-2">For Water/Steam:</p>
                                 <p class="font-mono text-lg">L_v = 2260 kJ/kg</p>
                                 <p class="font-mono">= 540 cal/g</p>
@@ -1353,7 +1380,7 @@
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Key Points (JEE Important)
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1367,8 +1394,8 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Heating Curve for Water</h3>
                     
-                    <div class="diagram-box my-6 bg-gradient-to-br from-blue-50 to-purple-50">
-                        <div class="bg-white p-6 rounded-lg inline-block">
+                    <div class="diagram-box my-6 bg-gradient-to-br from-surface-2 to-surface-2">
+                        <div class="bg-canvas p-6 rounded-lg inline-block">
                             <svg viewBox="0 0 800 400" class="w-full max-w-3xl">
                                 <!-- Axes -->
                                 <line x1="50" y1="350" x2="750" y2="350" stroke="#1e293b" stroke-width="2"/>
@@ -1401,32 +1428,32 @@
                         </p>
                     </div>
 
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Total Heat Calculation (Ice → Steam)</h4>
                         <p class="mb-3">To convert m kg of ice at -T₁°C to steam at T₂°C (above 100°C):</p>
                         <div class="space-y-3 text-sm">
-                            <div class="bg-blue-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold">Step 1: Heat ice from -T₁ to 0°C</p>
                                 <div class="math-display">\[Q_1 = m \times c_{\text{ice}} \times T_1 = m \times 2100 \times T_1\]</div>
                             </div>
-                            <div class="bg-blue-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold">Step 2: Melt ice at 0°C</p>
                                 <div class="math-display">\[Q_2 = m \times L_f = m \times 334000\]</div>
                             </div>
-                            <div class="bg-blue-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold">Step 3: Heat water from 0 to 100°C</p>
                                 <div class="math-display">\[Q_3 = m \times c_{\text{water}} \times 100 = m \times 420000\]</div>
                             </div>
-                            <div class="bg-blue-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold">Step 4: Boil water at 100°C</p>
                                 <div class="math-display">\[Q_4 = m \times L_v = m \times 2260000\]</div>
                             </div>
-                            <div class="bg-blue-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold">Step 5: Heat steam from 100 to T₂°C</p>
                                 <div class="math-display">\[Q_5 = m \times c_{\text{steam}} \times (T_2-100) = m \times 2010 \times (T_2-100)\]</div>
                             </div>
                         </div>
-                        <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                        <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                             <p class="font-bold mb-2">Total Heat:</p>
                             <div class="math-display text-center">
                                 \[Q_{\text{total}} = Q_1 + Q_2 + Q_3 + Q_4 + Q_5\]
@@ -1435,7 +1462,7 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Advanced Type)
                         </h4>
                         <p class="text-lg mb-3">
@@ -1443,32 +1470,32 @@
                             <br>(c_ice = 2100 J/kg·K, c_water = 4200 J/kg·K, L_f = 334 kJ/kg, L_v = 2260 kJ/kg)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Given:</strong> m = 10 g = 0.01 kg</p>
                             
                             <div class="space-y-3 mt-4">
-                                <div class="bg-gray-50 p-3 rounded">
+                                <div class="bg-surface-1 p-3 rounded">
                                     <p class="font-semibold">Q₁ (Ice -10°C → 0°C):</p>
                                     <div class="math-display">
                                         \[Q_1 = 0.01 \times 2100 \times 10 = 210 \text{ J}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-gray-50 p-3 rounded">
+                                <div class="bg-surface-1 p-3 rounded">
                                     <p class="font-semibold">Q₂ (Melting at 0°C):</p>
                                     <div class="math-display">
                                         \[Q_2 = 0.01 \times 334000 = 3340 \text{ J}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-gray-50 p-3 rounded">
+                                <div class="bg-surface-1 p-3 rounded">
                                     <p class="font-semibold">Q₃ (Water 0°C → 100°C):</p>
                                     <div class="math-display">
                                         \[Q_3 = 0.01 \times 4200 \times 100 = 4200 \text{ J}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-gray-50 p-3 rounded">
+                                <div class="bg-surface-1 p-3 rounded">
                                     <p class="font-semibold">Q₄ (Boiling at 100°C):</p>
                                     <div class="math-display">
                                         \[Q_4 = 0.01 \times 2260000 = 22600 \text{ J}\]
@@ -1476,7 +1503,7 @@
                                 </div>
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                 \[Q_{\text{total}} = 210 + 3340 + 4200 + 22600 = 30350 \text{ J} = 30.35 \text{ kJ}\]
                             </div>
                         </div>
@@ -1489,22 +1516,22 @@
                         <p class="text-lg mb-3">
                             For converting ice at 0°C to steam at 100°C (1 kg):
                         </p>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <p class="mb-2">Q_melting = 334 kJ (≈ 300 kJ)</p>
                             <p class="mb-2">Q_heating = 420 kJ (≈ 400 kJ)</p>
                             <p class="mb-2">Q_boiling = 2260 kJ (≈ 2300 kJ)</p>
                             <p class="font-bold text-lg mt-3 text-primary">Total ≈ 3000 kJ (3 MJ)</p>
-                            <p class="text-sm mt-2 text-gray-600">Use this for quick MCQ elimination!</p>
+                            <p class="text-sm mt-2 text-ink-muted">Use this for quick MCQ elimination!</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Chapter 6: Heat Transfer - Conduction -->
-            <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+            <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                 <div class="flex items-center mb-6">
-                    <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Heat Transfer - Conduction & Convection</h2>
+                    <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Heat Transfer - Conduction & Convection</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1512,14 +1539,14 @@
                         Heat can be transferred through three modes: conduction, convection, and radiation. Understanding heat transfer is crucial as it appears in 25-30% of JEE thermal problems, often combined with other concepts.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.1 Thermal Conduction</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Thermal Conduction</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Fourier's Law of Heat Conduction</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Fourier's Law of Heat Conduction</h4>
                         <p class="mb-3 text-lg">
                             Rate of heat flow through a material is proportional to area and temperature gradient.
                         </p>
-                        <div class="math-display bg-red-50 p-4 rounded-lg text-center text-xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                             \[\frac{dQ}{dt} = kA\frac{(T_1 - T_2)}{L}\]
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -1543,72 +1570,72 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.2 Thermal Conductivity Values</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Thermal Conductivity Values</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Material</th>
                                     <th class="p-4 text-left">k (W/m·K)</th>
                                     <th class="p-4 text-left">Category</th>
                                     <th class="p-4 text-left">Application</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Silver</td>
                                     <td class="p-4 font-mono">420</td>
-                                    <td class="p-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Best Conductor</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-2 py-1 rounded text-xs">Best Conductor</span></td>
                                     <td class="p-4 text-sm">Electrical contacts</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Copper</td>
                                     <td class="p-4 font-mono">385</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Good Conductor</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-2 py-1 rounded text-xs">Good Conductor</span></td>
                                     <td class="p-4 text-sm">Cooking vessels, wires</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Aluminum</td>
                                     <td class="p-4 font-mono">205</td>
-                                    <td class="p-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Good Conductor</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-2 py-1 rounded text-xs">Good Conductor</span></td>
                                     <td class="p-4 text-sm">Heat sinks</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Steel</td>
                                     <td class="p-4 font-mono">50</td>
-                                    <td class="p-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Moderate</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-2 py-1 rounded text-xs">Moderate</span></td>
                                     <td class="p-4 text-sm">Construction</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Water</td>
                                     <td class="p-4 font-mono">0.6</td>
-                                    <td class="p-4"><span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">Poor Conductor</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-2 py-1 rounded text-xs">Poor Conductor</span></td>
                                     <td class="p-4 text-sm">-</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Wood</td>
                                     <td class="p-4 font-mono">0.1-0.2</td>
-                                    <td class="p-4"><span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Insulator</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-2 py-1 rounded text-xs">Insulator</span></td>
                                     <td class="p-4 text-sm">Handles</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Air</td>
                                     <td class="p-4 font-mono">0.024</td>
-                                    <td class="p-4"><span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Best Insulator</span></td>
+                                    <td class="p-4"><span class="bg-surface-3 text-primary px-2 py-1 rounded text-xs">Best Insulator</span></td>
                                     <td class="p-4 text-sm">Double walls</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.3 Compound Bar (Series & Parallel)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Compound Bar (Series & Parallel)</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Series Combination</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Series Combination</h5>
                             <p class="mb-3 text-sm">Same heat flow rate through both rods</p>
-                            <div class="bg-red-50 p-4 rounded mb-3">
+                            <div class="bg-surface-2 p-4 rounded mb-3">
                                 <div class="math-display">
                                     \[\frac{dQ}{dt} = \frac{A(T_1-T_3)}{L_1/k_1 + L_2/k_2}\]
                                 </div>
@@ -1623,10 +1650,10 @@
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Parallel Combination</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Parallel Combination</h5>
                             <p class="mb-3 text-sm">Same temperature difference across both rods</p>
-                            <div class="bg-red-50 p-4 rounded mb-3">
+                            <div class="bg-surface-2 p-4 rounded mb-3">
                                 <div class="math-display">
                                     \[\frac{dQ}{dt} = \frac{dQ_1}{dt} + \frac{dQ_2}{dt}\]
                                 </div>
@@ -1643,14 +1670,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Main Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A copper rod of length 1 m and area 10⁻⁴ m² connects two reservoirs at 100°C and 0°C. Find the rate of heat flow. (k_copper = 385 W/m·K)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Given:</strong></p>
                             <ul class="list-disc list-inside mb-3">
                                 <li>L = 1 m</li>
@@ -1670,21 +1697,21 @@
                                 \[\frac{dQ}{dt} = 385 \times 10^{-4} \times 100\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\frac{dQ}{dt} = 3.85 \text{ W}\]
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.4 Convection</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.4 Convection</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">What is Convection?</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">What is Convection?</h4>
                         <p class="text-lg mb-3">
                             Heat transfer through actual movement of heated material (fluids - liquids and gases).
                         </p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-red-50 p-4 rounded">
+                            <div class="bg-surface-2 p-4 rounded">
                                 <p class="font-semibold mb-2">Natural Convection:</p>
                                 <ul class="text-sm list-disc list-inside space-y-1">
                                     <li>Due to density differences</li>
@@ -1692,7 +1719,7 @@
                                     <li>Hot air rises, cold sinks</li>
                                 </ul>
                             </div>
-                            <div class="bg-red-50 p-4 rounded">
+                            <div class="bg-surface-2 p-4 rounded">
                                 <p class="font-semibold mb-2">Forced Convection:</p>
                                 <ul class="text-sm list-disc list-inside space-y-1">
                                     <li>Due to external force</li>
@@ -1704,7 +1731,7 @@
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> JEE Key Points
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1719,10 +1746,10 @@
             </section>
 
             <!-- Chapter 7: Radiation -->
-            <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Thermal Radiation</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Thermal Radiation</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1730,18 +1757,18 @@
                         Thermal radiation is electromagnetic wave emission by all bodies above absolute zero. Unlike conduction and convection, radiation does NOT require a medium - this is how Sun's heat reaches Earth through vacuum.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Stefan-Boltzmann Law</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Stefan-Boltzmann Law</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Power Radiated by Black Body</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Power Radiated by Black Body</h4>
                         <p class="mb-3 text-lg">
                             Total power radiated by a perfect black body is proportional to fourth power of absolute temperature.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg text-center text-2xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-2xl">
                             \[P = \sigma A T^4\]
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-purple-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold mb-2">Where:</p>
                                 <ul class="text-sm space-y-1">
                                     <li>P = Power radiated (W)</li>
@@ -1751,7 +1778,7 @@
                                     <li>T = Absolute temperature (K)</li>
                                 </ul>
                             </div>
-                            <div class="bg-purple-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold mb-2">For Gray Body:</p>
                                 <div class="math-display">
                                     \[P = e\sigma A T^4\]
@@ -1765,12 +1792,12 @@
                         </div>
                     </div>
 
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Net Rate of Heat Exchange</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Net Rate of Heat Exchange</h4>
                         <p class="mb-3">
                             When a body at temperature T is in surroundings at temperature T₀:
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg text-center text-xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                             \[\frac{dQ}{dt} = e\sigma A(T^4 - T_0^4)\]
                         </div>
                         <p class="text-sm mt-3 text-center">
@@ -1778,20 +1805,20 @@
                         </p>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Wien's Displacement Law</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Wien's Displacement Law</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Wavelength of Maximum Emission</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Wavelength of Maximum Emission</h4>
                         <p class="mb-3 text-lg">
                             As temperature increases, the wavelength at which maximum radiation occurs shifts to shorter wavelengths.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg text-center text-2xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-2xl">
                             \[\lambda_m T = b\]
                         </div>
                         <p class="text-center mt-3">
                             where b = Wien's constant = 2.9 × 10⁻³ m·K
                         </p>
-                        <div class="bg-white p-4 rounded-lg mt-4 border-2 border-purple-200">
+                        <div class="bg-canvas p-4 rounded-lg mt-4 border-2 border-hairline">
                             <p class="font-semibold mb-2">Applications:</p>
                             <ul class="list-disc list-inside space-y-2 text-sm">
                                 <li><strong>Sun (T ≈ 6000 K):</strong> λ_m ≈ 500 nm (visible, yellowish)</li>
@@ -1801,19 +1828,19 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.3 Kirchhoff's Law of Radiation</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Kirchhoff's Law of Radiation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                        <h5 class="font-bold text-lg mb-3 text-secondary">Good Absorber = Good Emitter</h5>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h5 class="font-bold text-lg mb-3 text-primary">Good Absorber = Good Emitter</h5>
                         <p class="text-lg mb-4">
                             At thermal equilibrium, the ratio of emissive power to absorptive power is same for all bodies and equals that of a black body.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[\frac{E}{a} = \text{constant} = E_b\]
                         </div>
                         <p class="text-center text-sm mt-2">where E_b = emissive power of black body</p>
                         
-                        <div class="bg-white p-4 rounded-lg mt-4">
+                        <div class="bg-canvas p-4 rounded-lg mt-4">
                             <p class="font-semibold mb-2">Since a = e for a body:</p>
                             <div class="math-display">
                                 \[\text{Absorptivity} = \text{Emissivity}\]
@@ -1823,14 +1850,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 7
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A sphere of radius 10 cm and emissivity 0.8 is at 727°C. Find the power radiated. (σ = 5.67 × 10⁻⁸ W/m²·K⁴)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Given:</strong></p>
                             <ul class="list-disc list-inside mb-3">
                                 <li>r = 10 cm = 0.1 m</li>
@@ -1855,7 +1882,7 @@
                                 \[P = 0.8 \times 5.67 \times 0.1256 \times 10^4\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[P = 5700 \text{ W} = 5.7 \text{ kW}\]
                             </div>
                         </div>
@@ -1866,19 +1893,19 @@
                             <span class="text-2xl mr-2">💡</span> JEE Special Applications
                         </h4>
                         <div class="space-y-3">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">1. Why we wear white in summer?</p>
                                 <p class="text-sm">White has low absorptivity (reflects), keeps us cool</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">2. Why cooking utensils are black from bottom?</p>
                                 <p class="text-sm">Black has high absorptivity, absorbs more heat</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">3. Thermos flask</p>
                                 <p class="text-sm">Silvered walls (low e) minimize radiation loss, vacuum prevents conduction/convection</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">4. Solar cooker</p>
                                 <p class="text-sm">Black interior (high absorption), glass cover (greenhouse effect)</p>
                             </div>
@@ -1888,10 +1915,10 @@
             </section>
 
             <!-- Chapter 8: Newton's Law of Cooling -->
-            <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Newton's Law of Cooling</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Newton's Law of Cooling</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1901,16 +1928,16 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Newton's Law Statement</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Law Statement</h4>
                         <p class="text-lg mb-4">
                             The rate of cooling of a body is <strong>proportional</strong> to the temperature difference between the body and its surroundings.
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-2xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-2xl">
                             \[\frac{dT}{dt} = -k(T - T_0)\]
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-blue-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold mb-2">Where:</p>
                                 <ul class="text-sm space-y-1">
                                     <li>dT/dt = Rate of cooling</li>
@@ -1919,7 +1946,7 @@
                                     <li>k = Cooling constant (depends on surface area, nature)</li>
                                 </ul>
                             </div>
-                            <div class="bg-blue-50 p-3 rounded">
+                            <div class="bg-surface-2 p-3 rounded">
                                 <p class="font-semibold mb-2">Conditions:</p>
                                 <ul class="text-sm space-y-1">
                                     <li>Valid when (T - T₀) is small</li>
@@ -1933,15 +1960,15 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Temperature-Time Relation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h5 class="font-bold text-lg mb-3 text-primary">Exponential Cooling Formula</h5>
                         <p class="mb-3">Solving the differential equation:</p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                             \[T = T_0 + (T_i - T_0)e^{-kt}\]
                         </div>
                         <p class="text-center text-sm mt-2">where T_i = initial temperature at t = 0</p>
                         
-                        <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                        <div class="bg-surface-2 p-4 rounded-lg mt-4">
                             <p class="font-semibold mb-2">Alternative useful forms:</p>
                             <div class="space-y-2">
                                 <div class="math-display">
@@ -1956,12 +1983,12 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 Average Rate of Cooling</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h5 class="font-bold text-lg mb-3 text-primary">For Small Temperature Difference</h5>
                         <p class="mb-3">
                             When temperature change is small, average rate ≈ instantaneous rate:
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-xl">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                             \[\frac{T_1 - T_2}{t} = k\left(\frac{T_1 + T_2}{2} - T_0\right)\]
                         </div>
                         <p class="text-center text-sm mt-3">
@@ -1970,14 +1997,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 8 (Classic JEE Problem)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A body cools from 80°C to 70°C in 5 minutes. If room temperature is 30°C, how much time will it take to cool from 70°C to 60°C?
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Given:</strong></p>
                             <ul class="list-disc list-inside mb-3">
                                 <li>T₀ = 30°C (room temperature)</li>
@@ -2013,7 +2040,7 @@
                                 \[t_2 = \frac{10 \times 45}{70} = \frac{450}{70}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[t_2 = 6.43 \text{ minutes} \approx 6.4 \text{ min}\]
                             </div>
                         </div>
@@ -2024,7 +2051,7 @@
                             <span class="text-2xl mr-2">💡</span> Quick Tricks for Newton's Cooling
                         </h4>
                         <div class="space-y-3">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">1. For equal temperature drops:</p>
                                 <p class="text-sm">Time increases as average temperature decreases</p>
                                 <div class="math-display text-sm">
@@ -2032,7 +2059,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">2. Half-life cooling:</p>
                                 <p class="text-sm">Time for (T - T₀) to become half:</p>
                                 <div class="math-display text-sm">
@@ -2040,7 +2067,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">3. Temperature graph:</p>
                                 <p class="text-sm">T vs t is exponential decay, approaches T₀ asymptotically (never reaches exactly)</p>
                             </div>
@@ -2048,7 +2075,7 @@
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Common Mistakes in JEE
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -2063,14 +2090,14 @@
             </section>
 
             <!-- Previous Year Questions Analysis -->
-            <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+            <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">📝</span>
                     Previous Year Questions Analysis (2015-2024)
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Main Pattern</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Calorimetry & Mixtures: 35%</li>
@@ -2080,7 +2107,7 @@
                             <li>✓ Radiation (Stefan's law): 5%</li>
                         </ul>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Advanced Pattern</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Complex calorimetry: 30%</li>
@@ -2092,8 +2119,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                    <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Mixing two liquids/substances at different temperatures (Final temperature)</li>
                         <li>Ice-water mixture problems (ice at 0°C + water at T°C)</li>
@@ -2113,7 +2140,7 @@
                     </ol>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                     <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                     <div class="space-y-3">
                         <div class="flex justify-between items-center">
@@ -2135,11 +2162,11 @@
                     </div>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                    <h3 class="text-2xl font-bold mb-4 text-accent">Year-wise Trend Analysis</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Year-wise Trend Analysis</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-accent text-white">
+                            <thead class="bg-accent text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main Focus</th>
@@ -2147,22 +2174,22 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">Calorimetry mixtures, Newton's cooling</td>
                                     <td class="p-3">Compound bar, Radiation + cooling</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">Thermal expansion, Latent heat</td>
                                     <td class="p-3">Multi-step calorimetry, Thermal stress</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">Heat conduction, Stefan's law</td>
                                     <td class="p-3">Complex phase change, Wien's law</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2021</td>
                                     <td class="p-3">Mixing problems, Expansion</td>
                                     <td class="p-3">Series-parallel bars, Cooling</td>
@@ -2173,21 +2200,21 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Download Complete PYQ PDF (2015-2024) with Solutions
                     </a>
                 </div>
             </section>
 
             <!-- Practice Problems -->
-            <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+            <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">🎯</span>
                     Practice Problem Set
                 </h2>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Foundation)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Foundation)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Convert 37°C to Fahrenheit and Kelvin scales.</li>
                         <li>A steel rod of length 2 m is heated from 20°C to 120°C. Find increase in length. (α = 12 × 10⁻⁶ /°C)</li>
@@ -2200,8 +2227,8 @@
                     </ol>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main Standard)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main Standard)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>100 g of ice at -10°C is mixed with 200 g of water at 30°C. Find final temperature and composition. (c_ice = 2100 J/kg·K, L_f = 334 kJ/kg)</li>
                         <li>A steel rod and copper rod of same length and area are joined in series. Ends are at 100°C and 0°C. Find junction temperature. (k_steel = 50, k_copper = 385 W/m·K)</li>
@@ -2214,8 +2241,8 @@
                     </ol>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Three rods of equal length and area are joined to form an equilateral triangle. Two junctions are at 100°C and 0°C. Find temperature of third junction and heat currents. (Thermal conductivities: k, 2k, 3k)</li>
                         <li>A body at temperature T₁ is placed in surroundings at T₀. It cools to temperature T₂ in time t. Derive expression for cooling constant k using Stefan's law and Newton's law.</li>
@@ -2229,57 +2256,75 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Get Complete Solutions PDF with Detailed Working
                     </a>
                 </div>
             </section>
 
-        </main>
+            <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./thermodynamics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Thermodynamics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./units-and-dimensions.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Units And Dimensions</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./wave-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Wave Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
     </div>
 </div>
 
 <!-- Related Notes Section -->
-<section class="bg-white py-12 mt-12 border-t-4 border-primary">
+<section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+        <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
             <span class="w-2 h-10 bg-primary rounded mr-4"></span>
             Related Physics Notes
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Related Note 1 -->
-            <a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+            <a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Related Chapter</span>
+                    <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related Chapter</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Thermodynamics</h3>
-                <p class="text-gray-600">Laws of thermodynamics, Heat engines, Carnot cycle, Entropy</p>
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Thermodynamics</h3>
+                <p class="text-ink-muted">Laws of thermodynamics, Heat engines, Carnot cycle, Entropy</p>
                 <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
 
             <!-- Related Note 2 -->
-            <a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+            <a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                 <div class="flex items-center mb-3">
-                    <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Topic</span>
+                    <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Topic</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Kinetic Theory of Gases</h3>
-                <p class="text-gray-600">Molecular theory, Pressure, Temperature, Degrees of freedom</p>
-                <div class="mt-4 text-success font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Kinetic Theory of Gases</h3>
+                <p class="text-ink-muted">Molecular theory, Pressure, Temperature, Degrees of freedom</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
 
             <!-- Related Note 3 -->
-            <a href="https://jeeprepguide.netlify.app/jee/physics/calorimetry" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+            <a href="https://jeeprepguide.netlify.app/jee/physics/calorimetry" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Deep Dive</span>
+                    <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Deep Dive</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Advanced Calorimetry</h3>
-                <p class="text-gray-600">Complex mixtures, Multi-phase problems, Experimental methods</p>
-                <div class="mt-4 text-secondary font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Advanced Calorimetry</h3>
+                <p class="text-ink-muted">Complex mixtures, Multi-phase problems, Experimental methods</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
@@ -2287,7 +2332,7 @@
 
         <!-- More Notes Link -->
         <div class="text-center mt-10">
-            <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+            <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                 View All Physics Notes →
             </a>
         </div>
@@ -2295,35 +2340,35 @@
 </section>
 
 <!-- SEO-Optimized Summary Section -->
-<section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+<section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <article class="prose max-w-none">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6">Thermal Properties of Matter - Complete Guide for JEE 2025-26</h2>
+            <h2 class="text-4xl font-bold text-ink mb-6">Thermal Properties of Matter - Complete Guide for JEE 2025-26</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Why Thermal Properties is Crucial for JEE?</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-ink-muted leading-relaxed mb-4">
                         <strong>Thermal Properties of Matter</strong> is a high-scoring chapter in <strong>JEE Physics</strong> with consistent 8-12% weightage. The numerical problems are formula-based and scoring if you practice well.
                     </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                         <li><strong>Calorimetry</strong> - Guaranteed 1-2 questions (mixing, phase change)</li>
                         <li><strong>Thermal Expansion</strong> - Railway track, pendulum clock problems</li>
                         <li><strong>Heat Transfer</strong> - Conduction (compound bar) most important</li>
                         <li><strong>Newton's Cooling</strong> - High probability in JEE Advanced</li>
                         <li><strong>Radiation</strong> - Stefan's law, Wien's law applications</li>
                     </ul>
-                    <p class="text-gray-700 leading-relaxed mt-4">
+                    <p class="text-ink-muted leading-relaxed mt-4">
                         In <strong>JEE Advanced</strong>, expect multi-concept questions combining calorimetry with thermodynamics or kinetic theory.
                     </p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Key Formulas & Values to Memorize</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">1. Must-Remember Constants</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">1. Must-Remember Constants</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• c_water = 4200 J/kg·K = 1 cal/g·°C</li>
                                 <li>• L_f (ice) = 334 kJ/kg = 80 cal/g</li>
                                 <li>• L_v (water) = 2260 kJ/kg = 540 cal/g</li>
@@ -2332,8 +2377,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">2. Key Formulas</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">2. Key Formulas</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• Heat: Q = mcΔT</li>
                                 <li>• Latent heat: Q = mL</li>
                                 <li>• Linear expansion: ΔL = αL₀ΔT (β=2α, γ=3α)</li>
@@ -2343,20 +2388,20 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">3. Special Relations</h4>
-                            <p class="text-gray-700 text-sm">Thermal resistance: R = L/(kA) | Series: R_eq = R₁+R₂ | Parallel: 1/R_eq = 1/R₁+1/R₂</p>
+                            <h4 class="font-bold text-lg text-primary mb-2">3. Special Relations</h4>
+                            <p class="text-ink-muted text-sm">Thermal resistance: R = L/(kA) | Series: R_eq = R₁+R₂ | Parallel: 1/R_eq = 1/R₁+1/R₂</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Study Strategy -->
-            <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+            <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Master Thermal Properties for JEE?</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 12-15 days (2 hours/day)</li>
                             <li>Master <strong>calorimetry problems</strong> first (highest weightage)</li>
                             <li>Practice 100+ numerical on mixing and phase change</li>
@@ -2368,7 +2413,7 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 18-20 days (3 hours/day)</li>
                             <li>Deep dive into <strong>multi-step calorimetry</strong> (ice→steam complete)</li>
                             <li>Master complex compound bar problems (3+ rods, triangle arrangement)</li>
@@ -2382,68 +2427,68 @@
             </div>
             
             <!-- Common Mistakes -->
-            <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Top 10 Mistakes to Avoid in JEE Exam</h3>
+            <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Top 10 Mistakes to Avoid in JEE Exam</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <ul class="space-y-3 text-gray-700">
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Not converting units:</strong> Always convert to SI (kg, K, J) before calculation
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Celsius in formulas:</strong> Use Kelvin in Stefan's law, gas equations
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Forgetting phase change:</strong> Heat = sensible + latent (both needed!)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Wrong β, γ relation:</strong> Remember β=2α, γ=3α (not 2, 3 directly)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Mixing sign errors:</strong> Heat lost is negative, heat gained is positive
                             </div>
                         </li>
                     </ul>
-                    <ul class="space-y-3 text-gray-700">
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Newton's law for large ΔT:</strong> Valid only when ΔT is small (<30°C)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Compound bar confusion:</strong> Series → same Q, different T. Parallel → same ΔT, different Q
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Emissivity in Stefan's law:</strong> Don't forget 'e' factor for gray bodies
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Average temperature:</strong> Use (T₁+T₂)/2 in Newton's cooling rate formula
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">❌</span>
+                            <span class="text-primary font-bold mr-3">❌</span>
                             <div>
                                 <strong>Thermal stress:</strong> Remember to use ΔL prevented = αL₀ΔT, then F = YAΔl/l
                             </div>
@@ -2453,33 +2498,33 @@
             </div>
             
             <!-- Chapter Connectivity -->
-            <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+            <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                 <h3 class="text-2xl font-bold text-primary mb-4">🔗 How This Chapter Connects with Other Topics</h3>
                 <div class="space-y-4">
-                    <div class="bg-blue-50 p-4 rounded-lg">
+                    <div class="bg-surface-2 p-4 rounded-lg">
                         <p class="font-semibold mb-2">With Thermodynamics:</p>
-                        <p class="text-sm text-gray-700">First law connects heat and work. Thermal properties provides foundation for understanding heat engines, refrigerators, and entropy changes.</p>
+                        <p class="text-sm text-ink-muted">First law connects heat and work. Thermal properties provides foundation for understanding heat engines, refrigerators, and entropy changes.</p>
                     </div>
-                    <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="bg-surface-2 p-4 rounded-lg">
                         <p class="font-semibold mb-2">With Kinetic Theory:</p>
-                        <p class="text-sm text-gray-700">Specific heat capacities (C_v, C_p) are explained using kinetic theory. Temperature is linked to molecular kinetic energy.</p>
+                        <p class="text-sm text-ink-muted">Specific heat capacities (C_v, C_p) are explained using kinetic theory. Temperature is linked to molecular kinetic energy.</p>
                     </div>
-                    <div class="bg-purple-50 p-4 rounded-lg">
+                    <div class="bg-surface-2 p-4 rounded-lg">
                         <p class="font-semibold mb-2">With Modern Physics:</p>
-                        <p class="text-sm text-gray-700">Black body radiation leads to quantum theory (Planck's law), photoelectric effect. Wien's law connects to quantum nature of light.</p>
+                        <p class="text-sm text-ink-muted">Black body radiation leads to quantum theory (Planck's law), photoelectric effect. Wien's law connects to quantum nature of light.</p>
                     </div>
-                    <div class="bg-yellow-50 p-4 rounded-lg">
+                    <div class="bg-surface-2 p-4 rounded-lg">
                         <p class="font-semibold mb-2">With Waves:</p>
-                        <p class="text-sm text-gray-700">Thermal radiation is electromagnetic waves. Wavelength calculations use wave concepts.</p>
+                        <p class="text-sm text-ink-muted">Thermal radiation is electromagnetic waves. Wavelength calculations use wave concepts.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Quick Revision Points -->
-            <div class="mt-8 bg-gradient-to-r from-green-100 to-blue-100 p-8 rounded-2xl">
+            <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold text-primary mb-4">⚡ Last Minute Revision Points (Day Before Exam)</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white p-4 rounded-lg shadow">
+                    <div class="bg-canvas p-4 rounded-lg border border-hairline">
                         <h4 class="font-bold mb-3 text-primary">Temperature & Heat</h4>
                         <ul class="text-sm space-y-1">
                             <li>• °C = K - 273</li>
@@ -2489,8 +2534,8 @@
                             <li>• Water at 4°C → max density</li>
                         </ul>
                     </div>
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <h4 class="font-bold mb-3 text-success">Expansion & Calorimetry</h4>
+                    <div class="bg-canvas p-4 rounded-lg border border-hairline">
+                        <h4 class="font-bold mb-3 text-primary">Expansion & Calorimetry</h4>
                         <ul class="text-sm space-y-1">
                             <li>• β = 2α, γ = 3α</li>
                             <li>• Q = mcΔT (no phase change)</li>
@@ -2499,8 +2544,8 @@
                             <li>• c_water highest (4200)</li>
                         </ul>
                     </div>
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <h4 class="font-bold mb-3 text-secondary">Heat Transfer</h4>
+                    <div class="bg-canvas p-4 rounded-lg border border-hairline">
+                        <h4 class="font-bold mb-3 text-primary">Heat Transfer</h4>
                         <ul class="text-sm space-y-1">
                             <li>• Conduction: Q/t = kAΔT/L</li>
                             <li>• Radiation: P = σAT⁴</li>
@@ -2517,68 +2562,68 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+<footer class="bg-canvas text-ink py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
             <!-- Quick Links -->
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
 
             <div>
                 <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functions</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functions</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
         </div>
@@ -2586,36 +2631,36 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Bottom Bar -->
-        <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+        <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                 © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
             </p>
-            <div class="flex space-x-6 text-sm text-gray-400">
-                <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+            <div class="flex space-x-6 text-sm text-ink-subtle">
+                <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
             </div>
         </div>
     </div>
@@ -2623,7 +2668,7 @@
 
 <!-- Scroll to Top Button -->
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-        class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+        class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
     ↑
 </button>
 <!-- Scripts -->

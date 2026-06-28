@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Permutations and Combinations - Complete JEE Mathematics Notes with 300+ Examples">
     <meta property="og:description" content="Master nPr, nCr, circular permutations & distributions. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Permutations and Combinations - JEE Mathematics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations">
     <meta name="twitter:title" content="Permutations and Combinations - Complete JEE Mathematics Notes">
     <meta name="twitter:description" content="Master permutations and combinations with 300+ solved examples. Complete notes on nPr, nCr & circular permutations for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="P&C JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Permutations and Combinations - Complete JEE Mathematics Notes 2025-26",
       "description": "Comprehensive notes on Permutations and Combinations covering nPr, nCr, circular permutations, derangements with 300+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -357,7 +370,7 @@
       "@type": "VideoObject",
       "name": "Permutations and Combinations - Complete Tutorial for JEE",
       "description": "Learn Permutations and Combinations for JEE with nPr, nCr formulas and examples",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT150M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations"
@@ -394,59 +407,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#e11d48',
-                        secondary: '#be123c',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-maths.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-maths.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-rose-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #e11d48, #fb7185); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="JEE Prep Guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="JEE Prep Guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -455,30 +470,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Mathematics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Permutations and Combinations</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Permutations and Combinations</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -486,38 +501,38 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Permutations & Combinations</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Permutations & Combinations</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Basics
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Factorial
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Permutations
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Combinations
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Circular
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Restrictions
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Repetitions
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Distributions
                 </a>
-                <a href="#chapter9" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter9" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Derangements
                 </a>
-                <a href="#chapter10" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter10" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Advanced
                 </a>
             </div>
@@ -525,28 +540,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-rose-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Permutations & Combinations
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the art of counting with complete notes on nPr, nCr, Circular Permutations, Derangements, Distributions & all JEE patterns. Includes 300+ solved problems and every possible shortcut.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 10 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 300+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All Formulas</span>
                     </div>
                 </div>
@@ -555,21 +570,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Permutations and Combinations JEE Notes">
         <meta itemprop="description" content="Complete study notes for Permutations and Combinations">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">562</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -579,15 +594,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">300+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">6 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">6 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -599,37 +614,49 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Counting Principles</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Factorial</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Permutations (nPr)</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Combinations (nCr)</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Circular Permutations</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Restrictions</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Repetitions</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Distributions</a></li>
-                        <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">9. Derangements</a></li>
-                        <li><a href="#chapter10" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">10. Advanced Topics</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Counting Principles</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Factorial</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Permutations (nPr)</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Combinations (nCr)</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Circular Permutations</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Restrictions</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Repetitions</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Distributions</a></li>
+                        <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">9. Derangements</a></li>
+                        <li><a href="#chapter10" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">10. Advanced Topics</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./sequences-and-series.html" class="text-primary font-semibold hover:underline">Sequences And Series &rarr;</a>
+                <a href="./sets.html" class="text-primary font-semibold hover:underline">Sets &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Chapter 1: Counting Principles -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Fundamental Counting Principles</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Fundamental Counting Principles</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -639,15 +666,15 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Addition Rule (OR Principle)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Addition Rule (Sum Rule)</h4>
                             <p class="mb-4">
                                 If a task can be performed in <strong>m ways OR n ways</strong> (mutually exclusive events), then the total number of ways to perform the task is:
                             </p>
-                            <div class="math-display bg-gradient-to-r from-blue-100 to-purple-100 p-6 rounded-lg border-4 border-primary">
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-primary">
                                 \[\text{Total Ways} = m + n\]
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Key Points:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Events must be <strong>mutually exclusive</strong> (cannot happen together)</li>
@@ -658,13 +685,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 - Addition Rule
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A student can choose to study either Mathematics (5 different books) OR Physics (3 different books). In how many ways can the student make a choice?
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Analysis:</strong> Student chooses ONE subject (not both)</p>
                                     <p class="ml-4">• Mathematics can be chosen in 5 ways</p>
@@ -674,7 +701,7 @@
                                     <p><strong>Solution:</strong></p>
                                     <p class="ml-4">Total ways = 5 + 3</p>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 8 ways</p>
                                     </div>
                                 </div>
@@ -683,15 +710,15 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Multiplication Rule (AND Principle)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Multiplication Rule (Product Rule)</h4>
                             <p class="mb-4">
                                 If a task consists of two successive steps where step 1 can be done in <strong>m ways AND</strong> for each of these, step 2 can be done in <strong>n ways</strong>, then:
                             </p>
-                            <div class="math-display bg-gradient-to-r from-blue-100 to-purple-100 p-6 rounded-lg border-4 border-primary">
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-primary">
                                 \[\text{Total Ways} = m \times n\]
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Key Points:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Events are <strong>independent</strong></li>
@@ -703,13 +730,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 - Multiplication Rule
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> There are 3 routes from city A to city B and 4 routes from city B to city C. In how many ways can a person travel from A to C via B?
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Analysis:</strong> Two successive tasks</p>
                                     <p class="ml-4">• Step 1: A to B = 3 ways</p>
@@ -719,7 +746,7 @@
                                     <p><strong>Solution:</strong></p>
                                     <p class="ml-4">Total ways = 3 × 4</p>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 12 ways</p>
                                     </div>
                                 </div>
@@ -728,22 +755,22 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Combined Rules</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">When to Use Which Rule?</h4>
                             <div class="overflow-x-auto">
-                                <table class="w-full custom-table shadow-lg">
+                                <table class="w-full custom-table border border-hairline">
                                     <thead>
-                                        <tr class="text-white">
+                                        <tr class="text-ink">
                                             <th class="p-4 text-left">Scenario</th>
                                             <th class="p-4 text-left">Rule</th>
                                             <th class="p-4 text-left">Formula</th>
                                             <th class="p-4 text-left">Example</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y bg-white">
+                                    <tbody class="divide-y bg-canvas">
                                         <tr>
                                             <td class="p-4">Alternative choices</td>
-                                            <td class="p-4 font-semibold text-success">Addition (OR)</td>
+                                            <td class="p-4 font-semibold text-primary">Addition (OR)</td>
                                             <td class="p-4 font-mono">m + n</td>
                                             <td class="p-4">Tea OR Coffee</td>
                                         </tr>
@@ -755,7 +782,7 @@
                                         </tr>
                                         <tr>
                                             <td class="p-4">Mixed operations</td>
-                                            <td class="p-4 font-semibold text-secondary">Both</td>
+                                            <td class="p-4 font-semibold text-primary">Both</td>
                                             <td class="p-4">Combine both</td>
                                             <td class="p-4">Complex problems</td>
                                         </tr>
@@ -765,7 +792,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 - Combined Rules (JEE Pattern)
                             </h4>
                             <p class="text-lg mb-3">
@@ -776,7 +803,7 @@
                                 <br>• 2 routes from C to D
                                 <br>Find total number of ways from A to D.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Analysis:</strong> Two alternative paths</p>
                                     <p class="ml-4 font-semibold">Path 1: A → B → D</p>
@@ -793,7 +820,7 @@
                                     <p class="ml-4">Since paths are alternative (OR):</p>
                                     <p class="ml-4">Total ways = 8 + 6</p>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 14 ways</p>
                                     </div>
                                 </div>
@@ -804,7 +831,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Quick Decision Tree
                             </h4>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <div class="space-y-3">
                                     <p class="font-semibold">Ask yourself:</p>
                                     <div class="ml-4 space-y-2">
@@ -812,7 +839,7 @@
                                         <p class="ml-6">→ YES? Use <span class="text-primary font-bold">MULTIPLICATION (×)</span></p>
                                         
                                         <p>2️⃣ <strong>"Can I choose EITHER task?"</strong></p>
-                                        <p class="ml-6">→ YES? Use <span class="text-success font-bold">ADDITION (+)</span></p>
+                                        <p class="ml-6">→ YES? Use <span class="text-primary font-bold">ADDITION (+)</span></p>
                                         
                                         <p>3️⃣ <strong>"Is it a mix of both?"</strong></p>
                                         <p class="ml-6">→ Break into steps, apply appropriate rule to each</p>
@@ -824,10 +851,10 @@
                 </section>
 
                 <!-- Chapter 2: Factorial -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Factorial and Properties</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Factorial and Properties</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -835,17 +862,17 @@
                             <strong>Factorial</strong> is the building block of permutations and combinations. Mastering factorial properties is essential for solving complex JEE problems efficiently.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Definition of Factorial</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Definition of Factorial</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Factorial (n!)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Factorial (n!)</h4>
                             <p class="mb-4">
                                 The factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n.
                             </p>
-                            <div class="math-display bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-secondary">
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-secondary">
                                 \[n! = n \times (n-1) \times (n-2) \times ... \times 3 \times 2 \times 1\]
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Special Cases:</p>
                                 <div class="space-y-2">
                                     <p><strong>0! = 1</strong> (by definition, very important!)</p>
@@ -857,7 +884,7 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <div class="example-box p-6 rounded-xl border-l-4 border-success">
-                                <h5 class="font-bold text-lg mb-3 text-success">✅ Examples of Factorials</h5>
+                                <h5 class="font-bold text-lg mb-3 text-primary">✅ Examples of Factorials</h5>
                                 <div class="space-y-2">
                                     <p><strong>3!</strong> = 3 × 2 × 1 = <strong>6</strong></p>
                                     <p><strong>4!</strong> = 4 × 3 × 2 × 1 = <strong>24</strong></p>
@@ -868,8 +895,8 @@
                                 </div>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Recursive Definition</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Recursive Definition</h5>
                                 <div class="math-display border-2 border-secondary rounded-lg">
                                     \[n! = n \times (n-1)!\]
                                 </div>
@@ -878,31 +905,31 @@
                                     <p>7! = 7 × 6!</p>
                                     <p>7! = 7 × 6 × 5!</p>
                                     <p>7! = 7 × 6 × 5 × 4!</p>
-                                    <p class="text-xs text-gray-600 mt-2">This property is very useful for simplification</p>
+                                    <p class="text-xs text-ink-muted mt-2">This property is very useful for simplification</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Properties of Factorial</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Properties of Factorial</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">⭐ Important Factorial Properties</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ Important Factorial Properties</h4>
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Basic Recursive Property</p>
                                     <div class="math-display border-2 border-secondary rounded-lg">
                                         \[n! = n \times (n-1)!\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Ratio of Consecutive Factorials</p>
                                     <div class="math-display border-2 border-secondary rounded-lg">
                                         \[\frac{n!}{(n-1)!} = n\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">3. General Ratio Property</p>
                                     <div class="math-display border-2 border-secondary rounded-lg">
                                         \[\frac{n!}{(n-r)!} = n(n-1)(n-2)...(n-r+1)\]
@@ -910,7 +937,7 @@
                                     <p class="text-sm mt-2">Product of r consecutive integers starting from n</p>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">4. Factorial Growth</p>
                                     <p class="text-sm">n! grows extremely fast. For n ≥ 13, n! > 10⁹</p>
                                     <p class="text-sm">Always look for simplification in JEE problems!</p>
@@ -919,18 +946,18 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 - Factorial Simplification
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Simplify: \(\frac{10!}{7! \times 3!}\)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Method 1:</strong> Direct expansion (not recommended for large numbers)</p>
                                     
                                     <p><strong>Method 2:</strong> Using properties (BEST for JEE)</p>
-                                    <div class="ml-4 bg-blue-50 p-3 rounded-lg">
+                                    <div class="ml-4 bg-surface-2 p-3 rounded-lg">
                                         <div class="math-display">
                                             \[\frac{10!}{7! \times 3!} = \frac{10 \times 9 \times 8 \times 7!}{7! \times 3!}\]
                                         </div>
@@ -941,7 +968,7 @@
                                         <p>= \(\frac{720}{6}\) = 120</p>
                                     </div>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 120</p>
                                     </div>
                                 </div>
@@ -949,7 +976,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Factorial Mistakes
                             </h4>
                             <ul class="list-disc list-inside space-y-3 text-lg ml-4">
@@ -966,7 +993,7 @@
                                 <span class="text-2xl mr-2">💡</span> JEE Shortcuts for Factorial
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Memorize These:</p>
                                     <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>0! = 1</li>
@@ -980,7 +1007,7 @@
                                         <li>10! = 3628800</li>
                                     </ul>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Quick Tricks:</p>
                                     <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>n!/n = (n-1)!</li>
@@ -996,10 +1023,10 @@
                 </section>
 
                 <!-- Chapter 3: Permutations (nPr) -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Permutations (nPr)</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Permutations (nPr)</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1007,17 +1034,17 @@
                             <strong>Permutation</strong> refers to the <strong>arrangement</strong> of objects where <strong>order matters</strong>. This is one of the most important concepts in JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Definition and Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Definition and Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">⭐ Permutation Formula</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ Permutation Formula</h4>
                             <p class="mb-4">
                                 The number of ways to arrange <strong>r objects</strong> from <strong>n distinct objects</strong> is denoted by <sup>n</sup>P<sub>r</sub> or P(n,r):
                             </p>
-                            <div class="math-display bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-lg border-4 border-accent">
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-accent">
                                 \[^nP_r = \frac{n!}{(n-r)!}\]
                             </div>
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Expanded Form:</p>
                                 <div class="math-display border-2 border-accent rounded-lg">
                                     \[^nP_r = n(n-1)(n-2)...(n-r+1)\]
@@ -1027,7 +1054,7 @@
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="bg-blue-50 p-6 rounded-xl border-2 border-primary">
+                            <div class="bg-surface-2 p-6 rounded-xl border-2 border-primary">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Special Cases</h5>
                                 <div class="space-y-3">
                                     <div>
@@ -1056,8 +1083,8 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-green-50 p-6 rounded-xl border-2 border-success">
-                                <h5 class="font-bold text-lg mb-3 text-success">Properties of nPr</h5>
+                            <div class="bg-surface-2 p-6 rounded-xl border-2 border-success">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Properties of nPr</h5>
                                 <div class="space-y-3 text-sm">
                                     <div>
                                         <p class="font-semibold">1. Basic Identity:</p>
@@ -1083,13 +1110,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 - Basic Permutation
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> In how many ways can 3 people be seated in a row of 5 chairs?
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Analysis:</strong></p>
                                     <p class="ml-4">• Total chairs (n) = 5</p>
@@ -1097,7 +1124,7 @@
                                     <p class="ml-4">• Order matters (different seatings are different arrangements)</p>
                                     
                                     <p><strong>Solution:</strong></p>
-                                    <div class="ml-4 bg-blue-50 p-3 rounded-lg">
+                                    <div class="ml-4 bg-surface-2 p-3 rounded-lg">
                                         <p>Use permutation formula:</p>
                                         <div class="math-display">
                                             \[^5P_3 = \frac{5!}{(5-3)!} = \frac{5!}{2!}\]
@@ -1108,22 +1135,22 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 60 ways</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Permutations with All Objects</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Permutations with All Objects</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Permutation of n Objects (All Different)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Permutation of n Objects (All Different)</h4>
                             <p class="mb-4">Number of ways to arrange n distinct objects:</p>
-                            <div class="math-display bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-lg border-4 border-accent">
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-accent">
                                 \[^nP_n = n!\]
                             </div>
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Understanding:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>1st position: n choices</li>
@@ -1137,13 +1164,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> How many different words (meaningful or meaningless) can be formed using all letters of the word "MATHS"?
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Analysis:</strong></p>
                                     <p class="ml-4">• Total letters = 5 (all different)</p>
@@ -1151,13 +1178,13 @@
                                     <p class="ml-4">• Order matters (different arrangements = different words)</p>
                                     
                                     <p><strong>Solution:</strong></p>
-                                    <div class="ml-4 bg-blue-50 p-3 rounded-lg">
+                                    <div class="ml-4 bg-surface-2 p-3 rounded-lg">
                                         <p>Number of arrangements = 5!</p>
                                         <p>= 5 × 4 × 3 × 2 × 1</p>
                                         <p>= 120</p>
                                     </div>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 120 words</p>
                                     </div>
                                 </div>
@@ -1168,14 +1195,14 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> When to Use Permutation?
                             </h4>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Use Permutation (nPr) when:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>ORDER MATTERS</strong> - Different arrangements count as different</li>
                                     <li>Keywords: arrange, seat, stand in a row, form words</li>
                                     <li>Example: ABC ≠ BAC ≠ CAB (all different)</li>
                                 </ul>
-                                <p class="font-semibold mt-4 mb-3 text-danger">Don't use when:</p>
+                                <p class="font-semibold mt-4 mb-3 text-primary">Don't use when:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Order doesn't matter (use Combination instead)</li>
                                     <li>Keywords: select, choose, committee, team</li>
@@ -1188,42 +1215,42 @@
 <!-- Due to length, I'll provide remaining chapters in condensed form with key formulas and examples -->
 
                 <!-- Chapter 4: Combinations (nCr) -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Combinations (nCr)</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Combinations (nCr)</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">⭐ Combination Formula</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ Combination Formula</h4>
                             <p class="mb-4">Number of ways to select r objects from n objects (order doesn't matter):</p>
-                            <div class="math-display bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-lg border-4 border-success">
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-success">
                                 \[^nC_r = \frac{n!}{r!(n-r)!} = \frac{^nP_r}{r!}\]
                             </div>
                         </div>
 
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Important Properties of nCr</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Important Properties of nCr</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold">1. Symmetry Property</p>
                                     <div class="math-display">
                                         \[^nC_r = ^nC_{n-r}\]
                                     </div>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold">2. Pascal's Identity</p>
                                     <div class="math-display">
                                         \[^nC_r + ^nC_{r-1} = ^{n+1}C_r\]
                                     </div>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold">3. Special Values</p>
                                     <p class="font-mono text-sm">ⁿC₀ = ⁿCₙ = 1</p>
                                     <p class="font-mono text-sm">ⁿC₁ = ⁿCₙ₋₁ = n</p>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold">4. Sum of All</p>
                                     <div class="math-display">
                                         \[\sum_{r=0}^{n} ^nC_r = 2^n\]
@@ -1233,18 +1260,18 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> In how many ways can a committee of 3 be formed from 7 people?
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p><strong>Solution:</strong> Since order doesn't matter (committee selection):</p>
                                 <div class="math-display">
                                     \[^7C_3 = \frac{7!}{3!4!} = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35\]
                                 </div>
-                                <div class="bg-yellow-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-bold">Answer: 35 ways</p>
                                 </div>
                             </div>
@@ -1253,32 +1280,32 @@
                 </section>
 
                 <!-- Chapter 5: Circular Permutations -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Circular Permutations</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Circular Permutations</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">⭐ Circular Permutation Formulas</h4>
                             
                             <div class="space-y-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. n distinct objects in a circle:</p>
                                     <div class="math-display border-2 border-primary rounded-lg">
                                         \[\text{Arrangements} = (n-1)!\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Beads/Necklace (clockwise = anticlockwise):</p>
                                     <div class="math-display border-2 border-primary rounded-lg">
                                         \[\text{Arrangements} = \frac{(n-1)!}{2}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Why (n-1)! for circular?</p>
                                     <p class="text-sm">Fix one object's position to avoid counting rotations as different</p>
                                 </div>
@@ -1286,17 +1313,17 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> In how many ways can 6 people sit around a circular table?
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p><strong>Solution:</strong></p>
                                 <p>Number of circular arrangements = (6-1)! = 5!</p>
                                 <p>= 5 × 4 × 3 × 2 × 1 = 120</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg mt-3">
+                                <div class="bg-surface-2 p-3 rounded-lg mt-3">
                                     <p class="font-bold">Answer: 120 ways</p>
                                 </div>
                             </div>
@@ -1307,29 +1334,29 @@
                 <!-- Remaining chapters with key formulas -->
 
                 <!-- Chapter 6: Restrictions -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Permutations with Restrictions</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Permutations with Restrictions</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Common Restriction Patterns</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Common Restriction Patterns</h4>
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold">1. Objects Always Together:</p>
                                     <p class="text-sm">Treat them as ONE unit, then arrange</p>
                                     <p class="font-mono text-sm mt-2">If k objects always together in n objects:</p>
                                     <p class="font-mono text-sm">(n-k+1)! × k!</p>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold">2. Objects Never Together:</p>
                                     <p class="text-sm">Total arrangements - (arrangements when together)</p>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold">3. Specific Positions:</p>
                                     <p class="text-sm">Fill restricted positions first, then arrange remaining</p>
                                 </div>
@@ -1339,20 +1366,20 @@
                 </section>
 
                 <!-- Chapter 7: Repetitions -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Permutations with Repetition</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Permutations with Repetition</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">⭐ Permutations of n Objects (Some Identical)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ Permutations of n Objects (Some Identical)</h4>
                             <p class="mb-4">If n objects where p are identical of one type, q identical of another:</p>
-                            <div class="math-display bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-lg border-4 border-accent">
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-accent">
                                 \[\text{Arrangements} = \frac{n!}{p! \times q! \times ...}\]
                             </div>
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold">Example: MISSISSIPPI</p>
                                 <p>Total letters = 11</p>
                                 <p>M-1, I-4, S-4, P-2</p>
@@ -1367,13 +1394,13 @@
                 <!-- Quick summary sections for remaining chapters -->
 
                 <!-- Chapter 8: Distributions -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Distributions and Partitions</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Distributions and Partitions</h2>
                     </div>
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h4 class="font-bold text-xl mb-4">Distribution Types</h4>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>n distinct objects into r groups:</strong> Various formulas based on constraints</li>
@@ -1385,16 +1412,16 @@
                 </section>
 
                 <!-- Chapter 9: Derangements -->
-                <section id="chapter9" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter9" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">9</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Derangements</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">9</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Derangements</h2>
                     </div>
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h4 class="font-bold text-xl mb-4">Derangement Formula</h4>
                             <p>Number of ways n objects can be arranged so that NO object is in its original position:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[D_n = n! \left(1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + ... + (-1)^n\frac{1}{n!}\right)\]
                             </div>
                         </div>
@@ -1402,13 +1429,13 @@
                 </section>
 
                 <!-- Chapter 10: Advanced Topics -->
-                <section id="chapter10" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter10" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">10</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Advanced Topics</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">10</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Advanced Topics</h2>
                     </div>
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h4 class="font-bold text-xl mb-4">Inclusion-Exclusion Principle</h4>
                             <p>For two sets A and B:</p>
                             <div class="math-display">
@@ -1423,14 +1450,14 @@
                 </section>
 
 <!-- PYQ Analysis Section -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Basic nPr and nCr: 25%</li>
@@ -1439,7 +1466,7 @@
                                 <li>✓ Repetitions & Distributions: 25%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Complex Restrictions: 35%</li>
@@ -1450,8 +1477,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 20 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 20 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-2 grid grid-cols-1 md:grid-cols-2 gap-x-6">
                             <li>Word formation problems</li>
                             <li>Circular arrangement of people</li>
@@ -1476,7 +1503,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1500,14 +1527,14 @@
                 </section>
 
                 <!-- Practice Problems Section -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Foundation</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Foundation</h3>
                         <ol class="list-decimal list-inside space-y-2">
                             <li>Find 8P3</li>
                             <li>Find 10C4</li>
@@ -1520,8 +1547,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main)</h3>
                         <ol class="list-decimal list-inside space-y-2">
                             <li>Arrange letters of MATHEMATICS</li>
                             <li>5 men and 5 women in a row, women always together</li>
@@ -1534,8 +1561,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-2">
                             <li>Number of ways to distribute n distinct objects into r identical groups</li>
                             <li>Find derangements of 5 objects</li>
@@ -1549,29 +1576,47 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete Solutions PDF
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./quadratic-equations.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Quadratic Equations</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./relations-functions.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Relations Functions</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./sequences-and-series.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Sequences And Series</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Permutations and Combinations - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Permutations and Combinations - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why P&C is MOST IMPORTANT for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Permutations and Combinations</strong> has the <strong>HIGHEST weightage (7-8%)</strong> in JEE Mathematics:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Direct Questions:</strong> 5-6 questions every year</li>
                             <li><strong>Probability:</strong> Foundation for all probability</li>
                             <li><strong>Binomial Theorem:</strong> Uses nCr extensively</li>
@@ -1580,7 +1625,7 @@
                         </ul>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Critical Formulas</h3>
                         <div class="space-y-3 text-sm">
                             <div>
@@ -1611,101 +1656,101 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+    <footer class="bg-canvas text-ink py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">sitemap</a></li>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
-                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-white transition">Physics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Mathematics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Study Tips</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-ink transition">Physics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Mathematics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Study Tips</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         </ul>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Last Updated: 14 March, 2026</p>
+        <div class="border-t border-hairline pt-8 text-center">
+            <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+            <p class="text-ink-subtle text-xs mt-2">Last Updated: 14 March, 2026</p>
         </div>
     </div>
 </footer>
 
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

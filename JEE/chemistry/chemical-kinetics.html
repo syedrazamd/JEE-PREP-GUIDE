@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Chemical Kinetics - Complete JEE Chemistry Notes with 100+ Examples">
     <meta property="og:description" content="Master rate laws, Arrhenius equation, activation energy & reaction mechanisms. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Chemical Kinetics - JEE Chemistry Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics">
     <meta name="twitter:title" content="Chemical Kinetics - Complete JEE Chemistry Notes">
     <meta name="twitter:description" content="Master Arrhenius equation with 100+ solved examples. Complete notes on rate laws, activation energy & mechanisms for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Chemical Kinetics JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Chemical Kinetics - Complete JEE Chemistry Notes 2025-26",
       "description": "Comprehensive notes on Chemical Kinetics covering rate of reaction, order, integrated rate laws, Arrhenius equation, and reaction mechanisms with 100+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -382,59 +395,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#059669',
-                        secondary: '#047857',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-chemistry.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-chemistry.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-emerald-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #059669, #34d399); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                   <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                   <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -443,62 +458,62 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Chemistry</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Chemical Kinetics</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Chemical Kinetics</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
         </div>
     </nav>
 
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Chemical Kinetics</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Chemical Kinetics</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Rate of Reaction
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Order & Molecularity
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Zero Order
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 First Order
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Second Order
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Arrhenius Equation
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Collision Theory
             </a>
-            <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Mechanisms
             </a>
         </div>
@@ -506,28 +521,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-emerald-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Chemical Kinetics
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Chemical Kinetics with complete notes on Rate of Reaction, Order, Integrated Rate Laws, Arrhenius Equation, and Reaction Mechanisms. Includes 100+ solved problems and all JEE formulas.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -536,21 +551,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Chemical Kinetics JEE Notes">
         <meta itemprop="description" content="Complete study notes for Chemical Kinetics">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">280</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -560,15 +575,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">100+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -580,53 +595,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Rate of Reaction</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Order & Molecularity</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Zero Order Reaction</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. First Order Reaction</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Second Order Reaction</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Arrhenius Equation</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Collision Theory</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Reaction Mechanisms</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Rate of Reaction</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Order & Molecularity</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Zero Order Reaction</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. First Order Reaction</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Second Order Reaction</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Arrhenius Equation</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Collision Theory</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Reaction Mechanisms</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./electrochemistry.html" class="text-primary font-semibold hover:underline">Electrochemistry &rarr;</a>
+                <a href="./surface-chemistry.html" class="text-primary font-semibold hover:underline">Surface Chemistry &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics.png"
+                        src="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics.webp"
                         alt="Chemical Kinetics JEE notes, Formulas, PYQs"
                         title="Chemical Kinetics — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Chemical Kinetics JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Rate of Reaction -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Rate of Reaction</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Rate of Reaction</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -636,16 +663,16 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Definition of Rate</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">General Reaction: aA + bB → cC + dD</h4>
                             
                             <p class="mb-3">Rate can be expressed in terms of any reactant or product:</p>
                             
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[\text{Rate} = -\frac{1}{a}\frac{d[A]}{dt} = -\frac{1}{b}\frac{d[B]}{dt} = +\frac{1}{c}\frac{d[C]}{dt} = +\frac{1}{d}\frac{d[D]}{dt}\]
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Important Notes:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Negative sign</strong> for reactants (concentration decreases)</li>
@@ -659,18 +686,18 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Types of Rate</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Average Rate</h5>
                                 <p class="mb-3">Rate measured over a time interval Δt</p>
-                                <div class="math-display bg-blue-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[r_{\text{avg}} = -\frac{\Delta[A]}{\Delta t}\]
                                 </div>
                                 <p class="text-sm mt-2">Example: Change from t₁ to t₂</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Instantaneous Rate</h5>
                                 <p class="mb-3">Rate at a particular instant (Δt → 0)</p>
-                                <div class="math-display bg-blue-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[r = -\frac{d[A]}{dt}\]
                                 </div>
                                 <p class="text-sm mt-2">Slope of tangent to concentration-time curve</p>
@@ -680,15 +707,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Factors Affecting Rate of Reaction</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Factor</th>
                                         <th class="p-4 text-left">Effect</th>
                                         <th class="p-4 text-left">Explanation</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Concentration</td>
                                         <td class="p-4">Rate ↑ with concentration ↑</td>
@@ -720,16 +747,16 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Rate Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="mb-3">Rate law expresses the relationship between rate and concentration of reactants.</p>
                             
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[\text{For: } aA + bB \rightarrow \text{Products}\]
                                 \[\text{Rate} = k[A]^x[B]^y\]
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Where:</p>
                                 <ul class="space-y-1 text-sm">
                                     <li>k = rate constant (characteristic of reaction at given temperature)</li>
@@ -741,7 +768,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> JEE Important Point
                             </h4>
                             <p class="text-lg">
@@ -752,10 +779,10 @@
                 </section>
 
                 <!-- Chapter 2: Order and Molecularity -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Order and Molecularity</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Order and Molecularity</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -763,20 +790,20 @@
                             Understanding the difference between <strong>order</strong> and <strong>molecularity</strong> is crucial for JEE. These are frequently confused concepts with distinct definitions.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Order of Reaction</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Order of Reaction</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="mb-4">Order is the sum of powers of concentration terms in the experimentally determined rate law.</p>
                             
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 \[\text{Rate} = k[A]^x[B]^y\]
                                 \[\text{Order with respect to A} = x\]
                                 \[\text{Order with respect to B} = y\]
                                 \[\text{Overall Order} = x + y\]
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Characteristics:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Experimental quantity</strong> - determined from rate measurements</li>
@@ -788,13 +815,13 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Molecularity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Molecularity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="mb-4">Molecularity is the number of reacting species (molecules, atoms, or ions) that must collide simultaneously in an <strong>elementary reaction</strong>.</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Characteristics:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Theoretical quantity</strong> - from reaction mechanism</li>
@@ -806,31 +833,31 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Types Based on Molecularity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Types Based on Molecularity</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Unimolecular</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Unimolecular</h5>
                                 <p class="text-sm mb-2">Only one molecule involved</p>
-                                <div class="bg-purple-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="mb-1">Example:</p>
                                     <p>NH₄NO₂ → N₂ + 2H₂O</p>
                                     <p class="mt-2">PCl₅ → PCl₃ + Cl₂</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Bimolecular</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Bimolecular</h5>
                                 <p class="text-sm mb-2">Two molecules collide</p>
-                                <div class="bg-purple-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="mb-1">Example:</p>
                                     <p>2HI → H₂ + I₂</p>
                                     <p class="mt-2">CH₃Br + OH⁻ → CH₃OH + Br⁻</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Trimolecular</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Trimolecular</h5>
                                 <p class="text-sm mb-2">Three molecules collide</p>
-                                <div class="bg-purple-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="mb-1">Example:</p>
                                     <p>2NO + O₂ → 2NO₂</p>
                                     <p class="mt-2 text-xs">(Very rare due to low probability)</p>
@@ -838,18 +865,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Order vs Molecularity - Comparison Table</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Order vs Molecularity - Comparison Table</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Order</th>
                                         <th class="p-4 text-left">Molecularity</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Definition</td>
                                         <td class="p-4">Sum of exponents in rate law</td>
@@ -909,13 +936,13 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.5 Determining Order from Experimental Data</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.5 Determining Order from Experimental Data</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Initial Rate Method</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Initial Rate Method</h4>
                             <p class="mb-3">Compare rates when concentrations are varied</p>
                             
-                            <div class="bg-white p-4 rounded-lg border-2 border-secondary">
+                            <div class="bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 <p class="font-semibold mb-2">For reaction: A + B → Products</p>
                                 <p class="text-sm mb-3">Rate = k[A]<sup>x</sup>[B]<sup>y</sup></p>
                                 
@@ -929,7 +956,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
@@ -937,7 +964,7 @@
                             </p>
                             <div class="overflow-x-auto my-3">
                                 <table class="w-full text-sm border">
-                                    <thead class="bg-gray-100">
+                                    <thead class="bg-surface-1">
                                         <tr>
                                             <th class="p-2 border">Exp.</th>
                                             <th class="p-2 border">[A] (M)</th>
@@ -969,7 +996,7 @@
                             </div>
                             
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Step 1:</strong> Find order w.r.t. A (compare Exp 1 & 2, [B] constant)</p>
                                 <div class="math-display">
                                     \[\frac{r_2}{r_1} = \left(\frac{[A]_2}{[A]_1}\right)^x\]
@@ -984,7 +1011,7 @@
                                     \[2 = 2^y \Rightarrow y = 1\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     <p class="font-semibold">Answer:</p>
                                     <p>Order w.r.t. A = 2</p>
                                     <p>Order w.r.t. B = 1</p>
@@ -997,10 +1024,10 @@
                 </section>
 
                 <!-- Chapter 3: Zero Order Reaction -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Zero Order Reaction</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Zero Order Reaction</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1010,20 +1037,20 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Rate Law and Integrated Form</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">For Reaction: A → Products</h4>
                             
                             <div class="space-y-4">
                                 <div>
                                     <p class="font-semibold mb-2">Rate Law:</p>
-                                    <div class="math-display bg-white p-3 rounded border-2 border-primary">
+                                    <div class="math-display bg-canvas p-3 rounded border-2 border-primary">
                                         \[\text{Rate} = k[A]^0 = k\]
                                     </div>
                                 </div>
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Integrated Rate Law:</p>
-                                    <div class="math-display bg-white p-3 rounded border-2 border-primary">
+                                    <div class="math-display bg-canvas p-3 rounded border-2 border-primary">
                                         \[[A] = [A]_0 - kt\]
                                     </div>
                                     <p class="text-sm mt-2">where [A]₀ = initial concentration, [A] = concentration at time t</p>
@@ -1031,10 +1058,10 @@
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Half-Life:</p>
-                                    <div class="math-display bg-white p-3 rounded border-2 border-primary">
+                                    <div class="math-display bg-canvas p-3 rounded border-2 border-primary">
                                         \[t_{1/2} = \frac{[A]_0}{2k}\]
                                     </div>
-                                    <p class="text-sm mt-2 text-danger"><strong>Depends on initial concentration!</strong></p>
+                                    <p class="text-sm mt-2 text-primary"><strong>Depends on initial concentration!</strong></p>
                                 </div>
                                 
                                 <div>
@@ -1047,17 +1074,17 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Characteristics of Zero Order Reaction</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Graph: [A] vs time</h5>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="text-sm mb-2">Linear graph with negative slope</p>
                                     <p class="text-sm mb-2">Slope = -k</p>
                                     <p class="text-sm">Intercept = [A]₀</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Graph: Rate vs [A]</h5>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="text-sm mb-2">Horizontal line parallel to x-axis</p>
                                     <p class="text-sm mb-2">Rate = constant = k</p>
                                     <p class="text-sm">Independent of concentration</p>
@@ -1067,14 +1094,14 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Examples of Zero Order Reactions</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <span class="text-primary font-bold mr-2">1.</span>
                                     <div>
                                         <p class="font-semibold">Photochemical reactions:</p>
                                         <p class="text-sm">H₂ + Cl₂ → 2HCl (in presence of light)</p>
-                                        <p class="text-sm text-gray-600">Rate depends on light intensity, not reactant concentration</p>
+                                        <p class="text-sm text-ink-muted">Rate depends on light intensity, not reactant concentration</p>
                                     </div>
                                 </li>
                                 <li class="flex items-start">
@@ -1089,14 +1116,14 @@
                                     <div>
                                         <p class="font-semibold">Heterogeneous reactions on metal surface:</p>
                                         <p class="text-sm">2NH₃(g) → N₂(g) + 3H₂(g) on Pt surface</p>
-                                        <p class="text-sm text-gray-600">Surface gets saturated with reactant molecules</p>
+                                        <p class="text-sm text-ink-muted">Surface gets saturated with reactant molecules</p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
@@ -1107,7 +1134,7 @@
                             </p>
                             
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>(a) Concentration after 10 min:</strong></p>
                                 <div class="math-display">
                                     \[[A] = [A]_0 - kt\]
@@ -1130,7 +1157,7 @@
                                     \[t = 30 \text{ min}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     <p><strong>Answers:</strong></p>
                                     <p>(a) 0.6 M</p>
                                     <p>(b) 20 min</p>
@@ -1140,7 +1167,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> JEE Trap
                             </h4>
                             <p class="text-lg">
@@ -1152,10 +1179,10 @@
                 </section>
 
                 <!-- Chapter 4: First Order Reaction (Most Important for JEE) -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">First Order Reaction</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">First Order Reaction</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1163,29 +1190,29 @@
                             <strong>First-order reactions</strong> are the most important for JEE. The rate is directly proportional to the concentration of one reactant. Most radioactive decay and many decomposition reactions follow first-order kinetics.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.1 Rate Law and Integrated Form</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Rate Law and Integrated Form</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">For Reaction: A → Products</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">For Reaction: A → Products</h4>
                             
                             <div class="space-y-4">
                                 <div>
                                     <p class="font-semibold mb-2">Rate Law:</p>
-                                    <div class="math-display bg-white p-3 rounded border-2 border-secondary">
+                                    <div class="math-display bg-canvas p-3 rounded border-2 border-secondary">
                                         \[\text{Rate} = k[A]\]
                                     </div>
                                 </div>
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Integrated Rate Law (Exponential form):</p>
-                                    <div class="math-display bg-white p-3 rounded border-2 border-secondary">
+                                    <div class="math-display bg-canvas p-3 rounded border-2 border-secondary">
                                         \[[A] = [A]_0 e^{-kt}\]
                                     </div>
                                 </div>
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Integrated Rate Law (Logarithmic form - Most Used in JEE):</p>
-                                    <div class="math-display bg-purple-50 p-4 rounded border-2 border-secondary">
+                                    <div class="math-display bg-surface-2 p-4 rounded border-2 border-secondary">
                                         \[\ln[A] = \ln[A]_0 - kt\]
                                         \[\text{or}\]
                                         \[\log[A] = \log[A]_0 - \frac{kt}{2.303}\]
@@ -1196,10 +1223,10 @@
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Half-Life (Independent of initial concentration!):</p>
-                                    <div class="math-display bg-yellow-50 p-4 rounded border-2 border-accent">
+                                    <div class="math-display bg-surface-2 p-4 rounded border-2 border-accent">
                                         \[t_{1/2} = \frac{0.693}{k} = \frac{\ln 2}{k}\]
                                     </div>
-                                    <p class="text-sm mt-2 text-success"><strong>Characteristic property: t₁/₂ is CONSTANT!</strong></p>
+                                    <p class="text-sm mt-2 text-primary"><strong>Characteristic property: t₁/₂ is CONSTANT!</strong></p>
                                 </div>
                                 
                                 <div>
@@ -1209,11 +1236,11 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.2 Important Formulas for First Order</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Important Formulas for First Order</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Time for n half-lives:</p>
                                     <div class="math-display">
                                         \[t_n = n \times t_{1/2}\]
@@ -1221,14 +1248,14 @@
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Time for x% completion:</p>
                                     <div class="math-display">
                                         \[t = \frac{2.303}{k}\log\frac{100}{100-x}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Time for 99% completion:</p>
                                     <div class="math-display">
                                         \[t_{99\%} = 2 \times 2.303 \times t_{1/2}\]
@@ -1236,7 +1263,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Ratio of times for same %:</p>
                                     <div class="math-display">
                                         \[\frac{t_1}{t_2} = \frac{\log([A]_0/[A]_1)}{\log([A]_0/[A]_2)}\]
@@ -1245,21 +1272,21 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.3 Graphical Representation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Graphical Representation</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Graph: ln[A] vs t</h5>
-                                <div class="bg-purple-50 p-4 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Graph: ln[A] vs t</h5>
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="text-sm mb-2">✓ Straight line with negative slope</p>
                                     <p class="text-sm mb-2">✓ Slope = -k</p>
                                     <p class="text-sm mb-2">✓ Intercept = ln[A]₀</p>
-                                    <p class="text-sm text-success">Best way to confirm first-order!</p>
+                                    <p class="text-sm text-primary">Best way to confirm first-order!</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Graph: [A] vs t</h5>
-                                <div class="bg-purple-50 p-4 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Graph: [A] vs t</h5>
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="text-sm mb-2">✓ Exponential decay curve</p>
                                     <p class="text-sm mb-2">✓ Not linear</p>
                                     <p class="text-sm mb-2">✓ Asymptotic to time axis</p>
@@ -1269,7 +1296,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main 2023 Pattern)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1280,7 +1307,7 @@
                             </p>
                             
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>(a) Rate constant:</strong></p>
                                 <p class="text-sm mb-2">20% complete means 80% remains</p>
                                 <p class="text-sm mb-2">Let [A]₀ = 100, then [A] = 80</p>
@@ -1307,7 +1334,7 @@
                                     \[t = 62.16 \text{ min}\]
                                 </div>
                                 
-                                <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                     <p class="font-semibold mb-2">Alternative for (c): Using t₁/₂</p>
                                     <p class="text-sm">75% completion = 2 half-lives (100→50→25)</p>
                                     <p class="text-sm">t = 2 × 31.08 = 62.16 min ✓</p>
@@ -1315,22 +1342,22 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.4 Pseudo First Order Reactions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Pseudo First Order Reactions</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="mb-4">Higher-order reactions that appear to follow first-order kinetics when one or more reactants are present in large excess.</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Classic Example: Acid-catalyzed hydrolysis of ester</p>
                                 <p class="text-sm mb-2">CH₃COOC₂H₅ + H₂O → CH₃COOH + C₂H₅OH</p>
                                 <p class="text-sm mb-2">True rate law: Rate = k[CH₃COOC₂H₅][H₂O]</p>
                                 <p class="text-sm mb-2">Since water is in large excess, [H₂O] ≈ constant</p>
                                 <p class="text-sm">Observed rate law: Rate = k'[CH₃COOC₂H₅] where k' = k[H₂O]</p>
-                                <p class="text-sm mt-3 text-success"><strong>Appears first-order!</strong></p>
+                                <p class="text-sm mt-3 text-primary"><strong>Appears first-order!</strong></p>
                             </div>
                             
-                            <div class="mt-4 p-4 bg-white rounded border-2 border-secondary">
+                            <div class="mt-4 p-4 bg-canvas rounded border-2 border-secondary">
                                 <p class="font-semibold mb-2">Other Examples:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Inversion of cane sugar: C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ + C₆H₁₂O₆</li>
@@ -1339,18 +1366,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.5 Examples of First Order Reactions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.5 Examples of First Order Reactions</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Reaction</th>
                                         <th class="p-4 text-left">Type</th>
                                         <th class="p-4 text-left">Importance</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4">All radioactive decay</td>
                                         <td class="p-4">Nuclear</td>
@@ -1398,37 +1425,37 @@
 <!-- Due to length constraints, I'll provide Chapter 5 (Second Order), Chapter 6 (Arrhenius Equation) in condensed form, and then complete with PYQ and Practice sections -->
 
                 <!-- Chapter 5: Second Order Reaction (Condensed) -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Second Order Reaction</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Second Order Reaction</h2>
                     </div>
 
                     <div class="prose max-w-none">
                         <h3 class="text-2xl font-bold text-primary mt-4 mb-4">5.1 Key Formulas</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="space-y-4">
                                 <div>
                                     <p class="font-semibold">Rate Law: 2A → Products</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded">
+                                    <div class="math-display bg-surface-2 p-3 rounded">
                                         \[\text{Rate} = k[A]^2\]
                                     </div>
                                 </div>
                                 
                                 <div>
                                     <p class="font-semibold">Integrated Rate Law:</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded">
+                                    <div class="math-display bg-surface-2 p-3 rounded">
                                         \[\frac{1}{[A]} = \frac{1}{[A]_0} + kt\]
                                     </div>
                                 </div>
                                 
                                 <div>
                                     <p class="font-semibold">Half-Life:</p>
-                                    <div class="math-display bg-blue-50 p-3 rounded">
+                                    <div class="math-display bg-surface-2 p-3 rounded">
                                         \[t_{1/2} = \frac{1}{k[A]_0}\]
                                     </div>
-                                    <p class="text-sm text-danger mt-2">Depends on initial concentration!</p>
+                                    <p class="text-sm text-primary mt-2">Depends on initial concentration!</p>
                                 </div>
                                 
                                 <div>
@@ -1446,35 +1473,35 @@
                 </section>
 
                 <!-- Chapter 6: Arrhenius Equation (Very Important for JEE) -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Arrhenius Equation & Activation Energy</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Arrhenius Equation & Activation Energy</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <h3 class="text-2xl font-bold text-secondary mt-4 mb-4">6.1 Arrhenius Equation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-4 mb-4">6.1 Arrhenius Equation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Temperature Dependence of Rate Constant</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Temperature Dependence of Rate Constant</h4>
                             
                             <div class="space-y-4">
                                 <div>
                                     <p class="font-semibold mb-2">Exponential Form:</p>
-                                    <div class="math-display bg-purple-50 p-4 rounded border-2 border-secondary">
+                                    <div class="math-display bg-surface-2 p-4 rounded border-2 border-secondary">
                                         \[k = Ae^{-E_a/RT}\]
                                     </div>
                                 </div>
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Logarithmic Form (Most used in JEE):</p>
-                                    <div class="math-display bg-purple-50 p-4 rounded border-2 border-secondary">
+                                    <div class="math-display bg-surface-2 p-4 rounded border-2 border-secondary">
                                         \[\ln k = \ln A - \frac{E_a}{RT}\]
                                         \[\log k = \log A - \frac{E_a}{2.303RT}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Where:</p>
                                     <ul class="space-y-1 text-sm">
                                         <li>A = Pre-exponential factor (frequency factor)</li>
@@ -1486,35 +1513,35 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Two-Temperature Formula (Very Important!)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Two-Temperature Formula (Very Important!)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Comparing Rate Constants at Two Temperatures</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Comparing Rate Constants at Two Temperatures</h4>
                             
-                            <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[\log\frac{k_2}{k_1} = \frac{E_a}{2.303R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-3">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent mt-3">
                                 \[\ln\frac{k_2}{k_1} = \frac{E_a}{R}\left(\frac{T_2 - T_1}{T_1 T_2}\right)\]
                             </div>
                             
-                            <p class="mt-4 text-sm text-gray-600">This is the MOST frequently asked formula in JEE for activation energy calculations!</p>
+                            <p class="mt-4 text-sm text-ink-muted">This is the MOST frequently asked formula in JEE for activation energy calculations!</p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Activation Energy</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Activation Energy</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <p class="mb-3"><strong>Definition:</strong> Minimum energy required for reactants to overcome energy barrier and form products.</p>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Graphical Method:</p>
                                     <p class="text-sm">Plot ln k vs 1/T</p>
                                     <p class="text-sm">Slope = -E<sub>a</sub>/R</p>
                                     <p class="text-sm">Intercept = ln A</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Effect on Rate:</p>
                                     <p class="text-sm">Higher E<sub>a</sub> → Slower reaction</p>
                                     <p class="text-sm">Lower E<sub>a</sub> → Faster reaction</p>
@@ -1524,7 +1551,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1532,7 +1559,7 @@
                             </p>
                             
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Given:</strong></p>
                                 <p class="text-sm">T₁ = 300 K, T₂ = 310 K</p>
                                 <p class="text-sm">k₂/k₁ = 2</p>
@@ -1546,14 +1573,14 @@
                                     \[E_a = \frac{0.301 \times 19.147}{1.075 \times 10^{-4}}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[E_a = 53,580 \text{ J/mol} = 53.58 \text{ kJ/mol}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common JEE Mistakes
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1567,14 +1594,14 @@
                 </section>
 
                 <!-- Chapters 7 & 8 Brief -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Collision Theory</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Collision Theory</h2>
                     </div>
                     <div class="prose max-w-none">
                         <p class="mb-4">Collision theory explains how reactions occur at molecular level.</p>
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <p class="font-semibold mb-2">Key Points:</p>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>Effective collisions:</strong> Must have sufficient energy (E ≥ E<sub>a</sub>) and proper orientation</li>
@@ -1586,13 +1613,13 @@
                     </div>
                 </section>
 
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Reaction Mechanisms</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Reaction Mechanisms</h2>
                     </div>
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <p class="font-semibold mb-3">Elementary vs Complex Reactions</p>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>Elementary reaction:</strong> Single step, molecularity = order</li>
@@ -1606,14 +1633,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ First Order Reactions: 40%</li>
@@ -1623,7 +1650,7 @@
                                 <li>✓ Graphical Questions: 5%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Activation Energy Calculations: 35%</li>
@@ -1635,8 +1662,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculating rate constant from concentration-time data for first-order reactions</li>
                             <li>Determining half-life and time for x% completion (first-order)</li>
@@ -1651,7 +1678,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1674,21 +1701,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A first-order reaction is 75% complete in 60 minutes. Find the half-life.</li>
                             <li>For zero-order reaction with k = 0.05 M/min, calculate time for [A] to change from 0.8 M to 0.2 M.</li>
@@ -1701,8 +1728,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A first-order reaction is 40% complete in 50 min. Calculate: (a) k, (b) t₁/₂, (c) time for 80% completion</li>
                             <li>Rate constant increases from 0.01 to 0.04 s⁻¹ when temperature rises from 27°C to 37°C. Calculate E<sub>a</sub>.</li>
@@ -1715,8 +1742,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>For parallel first-order reactions A →k₁ B and A →k₂ C, derive expression for [B]/[C] at any time.</li>
                             <li>A substance decomposes by first-order with t₁/₂ = 30 min. What fraction remains after 90 min?</li>
@@ -1730,61 +1757,79 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./electrochemistry.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Electrochemistry</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./ionic-equilibrium.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Ionic Equilibrium</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./some-basic-concepts-of-chemistry.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Some Basic Concepts Of Chemistry</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Chemistry Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Electrochemistry</h3>
-                    <p class="text-gray-600">Nernst equation, Faraday's laws, Conductance</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electrochemistry</h3>
+                    <p class="text-ink-muted">Nernst equation, Faraday's laws, Conductance</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Chemical Equilibrium</h3>
-                    <p class="text-gray-600">Le Chatelier's principle, K<sub>eq</sub>, Equilibrium constant</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Chemical Equilibrium</h3>
+                    <p class="text-ink-muted">Le Chatelier's principle, K<sub>eq</sub>, Equilibrium constant</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Thermodynamics</h3>
-                    <p class="text-gray-600">Laws, Enthalpy, Entropy, Gibbs energy</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Thermodynamics</h3>
+                    <p class="text-ink-muted">Laws, Enthalpy, Entropy, Gibbs energy</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Chemistry Notes →
                 </a>
             </div>
@@ -1792,47 +1837,47 @@
     </section>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Chemical Kinetics - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Chemical Kinetics - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Chemical Kinetics is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Chemical Kinetics</strong> carries 12-16% weightage in <strong>JEE Physical Chemistry</strong>. Key reasons:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>First-order reactions</strong> - Most scoring (guaranteed 2-3 questions)</li>
                             <li><strong>Arrhenius equation</strong> - Direct formula-based numericals</li>
                             <li><strong>Graphical questions</strong> - Easy marks if concepts clear</li>
                             <li><strong>Predictable pattern</strong> - Same types repeat every year</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             JEE Advanced loves multi-concept problems combining kinetics with <strong>thermodynamics and equilibrium</strong>.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Must-Remember Formulas</h3>
                         <div class="space-y-3">
                             <div>
-                                <h4 class="font-bold text-secondary mb-1">First Order (Most Important!):</h4>
+                                <h4 class="font-bold text-primary mb-1">First Order (Most Important!):</h4>
                                 <p class="text-sm font-mono">k = (2.303/t) log([A]₀/[A])</p>
                                 <p class="text-sm font-mono">t₁/₂ = 0.693/k</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-secondary mb-1">Arrhenius Equation:</h4>
+                                <h4 class="font-bold text-primary mb-1">Arrhenius Equation:</h4>
                                 <p class="text-sm font-mono">log(k₂/k₁) = (Ea/2.303R)(1/T₁ - 1/T₂)</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-secondary mb-1">Zero Order:</h4>
+                                <h4 class="font-bold text-primary mb-1">Zero Order:</h4>
                                 <p class="text-sm font-mono">[A] = [A]₀ - kt</p>
                                 <p class="text-sm font-mono">t₁/₂ = [A]₀/(2k)</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-secondary mb-1">Second Order:</h4>
+                                <h4 class="font-bold text-primary mb-1">Second Order:</h4>
                                 <p class="text-sm font-mono">1/[A] = 1/[A]₀ + kt</p>
                                 <p class="text-sm font-mono">t₁/₂ = 1/(k[A]₀)</p>
                             </div>
@@ -1840,12 +1885,12 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 Study Strategy</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main (12-16 marks expected)</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li>Master <strong>first-order formulas</strong> - 60% questions</li>
                                 <li>Practice <strong>Arrhenius equation</strong> numericals (50+)</li>
                                 <li>Learn order determination methods thoroughly</li>
@@ -1855,7 +1900,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced (16-20 marks expected)</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li>Derive all integrated rate law equations</li>
                                 <li>Master <strong>reaction mechanisms</strong> and RDS concept</li>
                                 <li>Practice <strong>graphical problems</strong> (ln k vs 1/T plots)</li>
@@ -1866,35 +1911,35 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Top 5 Mistakes to Avoid</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Top 5 Mistakes to Avoid</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing order with molecularity:</strong> Order is experimental (can be fractional), molecularity is theoretical (always whole number 1, 2, or 3)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Using wrong formula for half-life:</strong> t₁/₂ = 0.693/k is ONLY for first-order! For zero-order: t₁/₂ = [A]₀/(2k), for second-order: t₁/₂ = 1/(k[A]₀)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Temperature in Celsius in Arrhenius equation:</strong> ALWAYS convert to Kelvin! T(K) = T(°C) + 273
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong R value in Arrhenius equation:</strong> Use R = 8.314 J/(mol·K) when Ea is in J/mol, or 8.314×10⁻³ kJ/(mol·K) when Ea is in kJ/mol
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Assuming order = stoichiometric coefficient:</strong> Order must be determined experimentally! It's NOT equal to coefficients in balanced equation (unless elementary reaction)
                             </div>
@@ -1902,11 +1947,11 @@
                     </ul>
                 </div>
 
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 Quick Comparison Table - All Orders</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Property</th>
                                     <th class="p-3 text-left">Zero Order</th>
@@ -1915,43 +1960,43 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Rate Law</td>
                                     <td class="p-3 font-mono">r = k</td>
                                     <td class="p-3 font-mono">r = k[A]</td>
                                     <td class="p-3 font-mono">r = k[A]²</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Integrated Form</td>
                                     <td class="p-3 font-mono">[A] = [A]₀ - kt</td>
                                     <td class="p-3 font-mono">ln[A] = ln[A]₀ - kt</td>
                                     <td class="p-3 font-mono">1/[A] = 1/[A]₀ + kt</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Half-Life</td>
                                     <td class="p-3 font-mono">[A]₀/(2k)</td>
                                     <td class="p-3 font-mono">0.693/k</td>
                                     <td class="p-3 font-mono">1/(k[A]₀)</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">t₁/₂ Dependence</td>
                                     <td class="p-3">∝ [A]₀</td>
-                                    <td class="p-3 text-success font-bold">Independent!</td>
+                                    <td class="p-3 text-primary font-bold">Independent!</td>
                                     <td class="p-3">∝ 1/[A]₀</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Unit of k</td>
                                     <td class="p-3 font-mono">M s⁻¹</td>
                                     <td class="p-3 font-mono">s⁻¹</td>
                                     <td class="p-3 font-mono">M⁻¹ s⁻¹</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Linear Plot</td>
                                     <td class="p-3">[A] vs t</td>
                                     <td class="p-3">ln[A] vs t</td>
                                     <td class="p-3">1/[A] vs t</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Examples</td>
                                     <td class="p-3 text-sm">Photochemical H₂+Cl₂</td>
                                     <td class="p-3 text-sm">All radioactive decay, N₂O₅ decomposition</td>
@@ -1962,12 +2007,12 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-gradient-to-r from-green-100 to-blue-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">🎯 JEE Exam Strategy</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h4 class="font-bold text-lg mb-3 text-success">Time Management:</h4>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <h4 class="font-bold text-lg mb-3 text-primary">Time Management:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-ink-muted">
                                 <li>First-order numericals: <strong>2-3 minutes each</strong></li>
                                 <li>Arrhenius equation: <strong>3-4 minutes</strong></li>
                                 <li>Order determination: <strong>3-4 minutes</strong></li>
@@ -1976,8 +2021,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg mb-3 text-success">Accuracy Boosters:</h4>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <h4 class="font-bold text-lg mb-3 text-primary">Accuracy Boosters:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-ink-muted">
                                 <li>Always check: <strong>Is temperature in Kelvin?</strong></li>
                                 <li>Write given data clearly before solving</li>
                                 <li>For log calculations, use log 2 = 0.301, log 3 = 0.477</li>
@@ -1988,42 +2033,42 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg border-2 border-primary">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline border-2 border-primary">
                     <h3 class="text-2xl font-bold text-primary mb-4">🔥 Golden Rules for 100% in Kinetics</h3>
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <span class="text-primary text-3xl font-bold mr-4">1</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Master First-Order Inside-Out</h4>
-                                <p class="text-gray-700">60% of kinetics questions are first-order. If you can solve first-order in sleep, you've secured 8-10 marks!</p>
+                                <p class="text-ink-muted">60% of kinetics questions are first-order. If you can solve first-order in sleep, you've secured 8-10 marks!</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <span class="text-primary text-3xl font-bold mr-4">2</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Memorize Arrhenius Two-Temperature Formula</h4>
-                                <p class="text-gray-700">log(k₂/k₁) = (Ea/2.303R)(1/T₁ - 1/T₂) - Write this 50 times! It's in EVERY JEE paper.</p>
+                                <p class="text-ink-muted">log(k₂/k₁) = (Ea/2.303R)(1/T₁ - 1/T₂) - Write this 50 times! It's in EVERY JEE paper.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <span class="text-primary text-3xl font-bold mr-4">3</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Practice Graphical Questions Daily</h4>
-                                <p class="text-gray-700">JEE Advanced loves asking: "Which graph is linear?" Practice identifying ln[A] vs t, 1/[A] vs t plots.</p>
+                                <p class="text-ink-muted">JEE Advanced loves asking: "Which graph is linear?" Practice identifying ln[A] vs t, 1/[A] vs t plots.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <span class="text-primary text-3xl font-bold mr-4">4</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Solve PYQs Religiously</h4>
-                                <p class="text-gray-700">Same question types repeat with changed numbers. Solve 2015-2024 PYQs at least 3 times.</p>
+                                <p class="text-ink-muted">Same question types repeat with changed numbers. Solve 2015-2024 PYQs at least 3 times.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <span class="text-primary text-3xl font-bold mr-4">5</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Make Formula Flashcards</h4>
-                                <p class="text-gray-700">Write all integrated rate laws, half-life formulas, and Arrhenius equations on flashcards. Revise daily!</p>
+                                <p class="text-ink-muted">Write all integrated rate laws, half-life formulas, and Arrhenius equations on flashcards. Revise daily!</p>
                             </div>
                         </div>
                     </div>
@@ -2034,56 +2079,56 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="hover:text-white transition">Solutions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="hover:text-white transition">Electrochemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="hover:text-white transition">Chemical Kinetics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="hover:text-ink transition">Solutions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="hover:text-ink transition">Electrochemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="hover:text-ink transition">Chemical Kinetics</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Laws of Motion</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Laws of Motion</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms & Conditions</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8 text-center">
-                <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants</p>
+            <div class="border-t border-hairline pt-8 text-center">
+                <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

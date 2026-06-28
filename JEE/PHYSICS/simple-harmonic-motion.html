@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Simple Harmonic Motion - Complete JEE Physics Notes with 150+ Examples">
     <meta property="og:description" content="Master SHM, oscillations, springs, pendulums with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Simple Harmonic Motion - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion">
     <meta name="twitter:title" content="Simple Harmonic Motion - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master SHM with 150+ solved examples. Complete notes on oscillations, springs & pendulums for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
 
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="SHM JEE">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555" crossorigin="anonymous"></script>
 
     <!-- Breadcrumb Schema -->
@@ -120,7 +133,7 @@
         "@type": "Article",
         "headline": "Simple Harmonic Motion - Complete JEE Physics Notes 2025-26",
         "description": "Comprehensive notes on Simple Harmonic Motion covering SHM equations, energy, springs, pendulums, damped and forced oscillations with 150+ solved examples",
-        "image": "https://jeeprepguide.netlify.app/logo.png",
+        "image": "/logo-header.webp",
         "author": {
             "@type": "Organization",
             "name": "JEE Prep Guide",
@@ -131,7 +144,7 @@
             "name": "JEE Prep Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://jeeprepguide.netlify.app/logo.png"
+                "url": "/logo-header.webp"
             }
         },
         "datePublished": "2024-12-19",
@@ -363,7 +376,7 @@
         "@type": "VideoObject",
         "name": "Simple Harmonic Motion - Complete Tutorial",
         "description": "Learn Simple Harmonic Motion for JEE with examples",
-        "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+        "thumbnailUrl": "/logo-header.webp",
         "uploadDate": "2024-12-19",
         "duration": "PT90M",
         "contentUrl": "https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion"
@@ -400,60 +413,62 @@
         });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
 
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -462,30 +477,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Simple Harmonic Motion</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Simple Harmonic Motion</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -493,32 +508,32 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Simple Harmonic Motion</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Simple Harmonic Motion</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     SHM Basics
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     SHM Equations
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Springs
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Pendulums
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Energy
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Damped SHM
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Forced SHM
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Superposition
                 </a>
             </div>
@@ -526,28 +541,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Simple Harmonic Motion
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master oscillations with complete notes on SHM Equations, Spring-Mass Systems, Pendulums, Energy Analysis, Damped & Forced Oscillations, and Resonance. Includes 150+ solved problems and all JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All JEE Formulas</span>
                     </div>
                 </div>
@@ -556,21 +571,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Simple Harmonic Motion JEE Notes">
         <meta itemprop="description" content="Complete study notes for Simple Harmonic Motion">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.8</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">245</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -580,15 +595,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">3 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">3 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -600,53 +615,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. SHM Fundamentals</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. SHM Equations</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Spring-Mass Systems</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Pendulums</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Energy in SHM</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Damped Oscillations</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Forced Oscillations</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Superposition of SHMs</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. SHM Fundamentals</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. SHM Equations</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Spring-Mass Systems</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Pendulums</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Energy in SHM</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Damped Oscillations</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Forced Oscillations</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Superposition of SHMs</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./wave-motion.html" class="text-primary font-semibold hover:underline">Wave Motion &rarr;</a>
+                <a href="./rotational-motion.html" class="text-primary font-semibold hover:underline">Rotational Motion &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion.webp"
                         alt="Simple Harmonic Motion JEE notes, Formulas, PYQs"
                         title="Simple Harmonic Motion — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Simple Harmonic Motion JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: SHM Fundamentals -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Simple Harmonic Motion - Fundamentals</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Simple Harmonic Motion - Fundamentals</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -656,10 +683,10 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Definition and Condition for SHM</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Condition for SHM</h4>
                             <p class="mb-4">A particle is said to execute Simple Harmonic Motion if the restoring force F is:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[F = -kx\]
                             </div>
                             <p class="mt-4">Where:</p>
@@ -674,15 +701,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Important Definitions</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Term</th>
                                         <th class="p-4 text-left">Definition</th>
                                         <th class="p-4 text-left">Symbol & Unit</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Mean Position</td>
                                         <td class="p-4">The equilibrium position where net force is zero</td>
@@ -727,10 +754,10 @@
                                 <span class="text-2xl mr-2">💡</span> Important Relationships
                             </h4>
                             <div class="space-y-3">
-                                <div class="math-display bg-purple-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[f = \frac{1}{T} \quad \text{and} \quad \omega = 2\pi f = \frac{2\pi}{T}\]
                                 </div>
-                                <div class="math-display bg-purple-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[T = \frac{1}{f} = \frac{2\pi}{\omega}\]
                                 </div>
                                 <p class="text-lg mt-3">
@@ -742,7 +769,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Characteristics of SHM</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Properties of SHM</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Motion is <strong>periodic</strong> and <strong>oscillatory</strong></li>
@@ -754,7 +781,7 @@
                                     <li>Path is always a <strong>straight line</strong></li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">SHM vs Other Motions</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Periodic:</strong> Repeats after fixed interval (SHM is periodic)</li>
@@ -767,14 +794,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A particle executes SHM with amplitude 10 cm and time period 4 seconds. Find: (a) Maximum velocity (b) Maximum acceleration
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: A = 10 cm = 0.1 m, T = 4 s</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 1:</strong> Find angular frequency</p>
@@ -792,7 +819,7 @@
                                     \[a_{max} = A\omega^2 = 0.1 \times \left(\frac{\pi}{2}\right)^2 = 0.247 \text{ m/s}^2\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } v_{max} = 0.157 \text{ m/s}, \quad a_{max} = 0.247 \text{ m/s}^2\]
                                 </div>
                             </div>
@@ -801,10 +828,10 @@
                 </section>
 
                 <!-- Chapter 2: SHM Equations -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">SHM Equations & Graphical Representation</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">SHM Equations & Graphical Representation</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -812,13 +839,13 @@
                             The mathematical representation of SHM involves sinusoidal functions (sine or cosine). Understanding these equations and their graphs is crucial for solving 90% of JEE SHM problems.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Standard SHM Equations</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Standard SHM Equations</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Three Fundamental Equations of SHM</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Three Fundamental Equations of SHM</h4>
                             
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Displacement Equation</p>
                                     <div class="math-display">
                                         \[x = A\sin(\omega t + \phi)\]
@@ -826,7 +853,7 @@
                                     <p class="text-sm mt-2">or equivalently: x = A cos(ωt + φ')</p>
                                 </div>
 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Velocity Equation</p>
                                     <div class="math-display">
                                         \[v = \frac{dx}{dt} = A\omega\cos(\omega t + \phi)\]
@@ -836,7 +863,7 @@
                                     </div>
                                 </div>
 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">3. Acceleration Equation</p>
                                     <div class="math-display">
                                         \[a = \frac{dv}{dt} = -A\omega^2\sin(\omega t + \phi)\]
@@ -855,7 +882,7 @@
                             <p class="text-lg mb-3">
                                 The most used formula in JEE for velocity at any position:
                             </p>
-                            <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[v = \omega\sqrt{A^2 - x^2}\]
                             </div>
                             <p class="text-lg mt-3">
@@ -868,18 +895,18 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Phase and Initial Conditions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Phase and Initial Conditions</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Initial Condition</th>
                                         <th class="p-4 text-left">Equation Form</th>
                                         <th class="p-4 text-left">Phase (φ)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4">At t=0, x=0 moving +ve</td>
                                         <td class="p-4 font-mono">x = A sin(ωt)</td>
@@ -904,44 +931,44 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Graphical Representation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Graphical Representation</h3>
                         
                         <div class="diagram-box my-8 rounded-xl">
-                            <h4 class="font-bold text-xl mb-4 text-gray-700">Graphs of x, v, a vs Time</h4>
+                            <h4 class="font-bold text-xl mb-4 text-ink-muted">Graphs of x, v, a vs Time</h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
                                     <p class="font-semibold mb-2 text-primary">Displacement vs Time</p>
-                                    <div class="h-48 flex items-center justify-center bg-blue-50 rounded">
-                                        <p class="text-gray-600">x = A sin(ωt)<br/>Sine wave</p>
+                                    <div class="h-48 flex items-center justify-center bg-surface-2 rounded">
+                                        <p class="text-ink-muted">x = A sin(ωt)<br/>Sine wave</p>
                                     </div>
-                                    <p class="text-sm mt-2 text-gray-600">Oscillates between +A and -A</p>
+                                    <p class="text-sm mt-2 text-ink-muted">Oscillates between +A and -A</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
-                                    <p class="font-semibold mb-2 text-secondary">Velocity vs Time</p>
-                                    <div class="h-48 flex items-center justify-center bg-purple-50 rounded">
-                                        <p class="text-gray-600">v = Aω cos(ωt)<br/>Cosine wave</p>
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
+                                    <p class="font-semibold mb-2 text-primary">Velocity vs Time</p>
+                                    <div class="h-48 flex items-center justify-center bg-surface-2 rounded">
+                                        <p class="text-ink-muted">v = Aω cos(ωt)<br/>Cosine wave</p>
                                     </div>
-                                    <p class="text-sm mt-2 text-gray-600">Leads displacement by π/2</p>
+                                    <p class="text-sm mt-2 text-ink-muted">Leads displacement by π/2</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
-                                    <p class="font-semibold mb-2 text-danger">Acceleration vs Time</p>
-                                    <div class="h-48 flex items-center justify-center bg-red-50 rounded">
-                                        <p class="text-gray-600">a = -Aω² sin(ωt)<br/>Inverted sine</p>
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
+                                    <p class="font-semibold mb-2 text-primary">Acceleration vs Time</p>
+                                    <div class="h-48 flex items-center justify-center bg-surface-2 rounded">
+                                        <p class="text-ink-muted">a = -Aω² sin(ωt)<br/>Inverted sine</p>
                                     </div>
-                                    <p class="text-sm mt-2 text-gray-600">Opposite in phase to x</p>
+                                    <p class="text-sm mt-2 text-ink-muted">Opposite in phase to x</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A particle executes SHM with equation x = 5 sin(4πt) cm. Find: (a) Amplitude (b) Time period (c) Maximum velocity (d) Velocity at x = 3 cm
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: x = 5 sin(4πt) cm</p>
                                 <p class="mb-2">Comparing with x = A sin(ωt)</p>
                                 
@@ -967,14 +994,14 @@
                                     \[v = 16\pi \text{ cm/s} = 0.503 \text{ m/s}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: } A = 5\text{ cm}, T = 0.5\text{ s}, v_{max} = 0.628\text{ m/s}, v = 0.503\text{ m/s}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common JEE Mistakes
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -989,10 +1016,10 @@
                 </section>
 
                 <!-- Chapter 3: Spring-Mass Systems -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Spring-Mass Systems</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Spring-Mass Systems</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1002,15 +1029,15 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Horizontal Spring-Mass System</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Time Period of Horizontal Spring</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="mb-3">For a mass m attached to spring of spring constant k on frictionless surface:</p>
-                                    <div class="math-display bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[T = 2\pi\sqrt{\frac{m}{k}}\]
                                     </div>
-                                    <div class="math-display bg-blue-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[\omega = \sqrt{\frac{k}{m}}\]
                                     </div>
                                 </div>
@@ -1029,27 +1056,27 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Vertical Spring-Mass System</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Time Period of Vertical Spring</h4>
                             <div class="space-y-4">
                                 <p class="mb-2">When mass m is hung from vertical spring:</p>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Extension at equilibrium (x₀):</p>
                                     <div class="math-display">
                                         \[kx_0 = mg \quad \Rightarrow \quad x_0 = \frac{mg}{k}\]
                                     </div>
                                 </div>
 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Time Period:</p>
                                     <div class="math-display">
                                         \[T = 2\pi\sqrt{\frac{m}{k}} = 2\pi\sqrt{\frac{x_0}{g}}\]
                                     </div>
                                 </div>
 
-                                <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent">
-                                    <p class="font-bold text-accent mb-2">⭐ JEE Shortcut:</p>
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent">
+                                    <p class="font-bold text-primary mb-2">⭐ JEE Shortcut:</p>
                                     <div class="math-display">
                                         \[T = 2\pi\sqrt{\frac{\text{Extension}}{g}}\]
                                     </div>
@@ -1063,12 +1090,12 @@
                                 <span class="text-2xl mr-2">💡</span> Important: Mean Position vs Natural Length
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-primary">Horizontal Spring:</p>
                                     <p>Mean position = Natural length position</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
-                                    <p class="font-semibold mb-2 text-secondary">Vertical Spring:</p>
+                                <div class="bg-canvas p-4 rounded-lg">
+                                    <p class="font-semibold mb-2 text-primary">Vertical Spring:</p>
                                     <p>Mean position = Equilibrium (extended by mg/k)</p>
                                 </div>
                             </div>
@@ -1077,15 +1104,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Combination of Springs</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Configuration</th>
                                         <th class="p-4 text-left">Effective Spring Constant (k<sub>eff</sub>)</th>
                                         <th class="p-4 text-left">Time Period</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Springs in Series</td>
                                         <td class="p-4 font-mono">1/k<sub>eff</sub> = 1/k₁ + 1/k₂</td>
@@ -1122,14 +1149,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main 2023 Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A spring of force constant k is cut into two equal parts. One part is connected to a mass m. Find the new time period compared to original.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Original time period:</strong></p>
                                 <div class="math-display">
                                     \[T = 2\pi\sqrt{\frac{m}{k}}\]
@@ -1137,7 +1164,7 @@
                                 
                                 <p class="mb-2 mt-4"><strong>Step 1:</strong> Find spring constant of cut spring</p>
                                 <p class="mb-2">When spring is cut in half, each part has spring constant = 2k</p>
-                                <p class="text-sm text-gray-600 mb-2">(Shorter spring is stiffer: k × L = constant)</p>
+                                <p class="text-sm text-ink-muted mb-2">(Shorter spring is stiffer: k × L = constant)</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 2:</strong> New time period</p>
                                 <div class="math-display">
@@ -1147,21 +1174,21 @@
                                     \[T' = \frac{T}{\sqrt{2}}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: New time period } = \frac{T}{\sqrt{2}} \text{ (decreases)}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Advanced Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Two springs of force constants k₁ = 100 N/m and k₂ = 200 N/m are connected in series and attached to a mass of 2 kg. Find the time period of oscillation. (Take π² = 10)
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: k₁ = 100 N/m, k₂ = 200 N/m, m = 2 kg</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 1:</strong> Find effective spring constant (series)</p>
@@ -1186,7 +1213,7 @@
                                     \[T = 2\pi \times 0.173 \approx 1.09 \text{ s}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } T \approx 1.09 \text{ seconds}\]
                                 </div>
                             </div>
@@ -1195,10 +1222,10 @@
                 </section>
 
                 <!-- Chapter 4: Pendulums -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Pendulum Motion</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Pendulum Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1206,17 +1233,17 @@
                             Pendulum is another classic example of SHM. JEE loves to ask questions on simple pendulum, compound pendulum, and the effect of various parameters on time period. This section is worth 20-25 marks in JEE Advanced.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.1 Simple Pendulum</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Simple Pendulum</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Time Period of Simple Pendulum</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Time Period of Simple Pendulum</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <p class="mb-3">For small angular displacement (θ < 15°):</p>
-                                    <div class="math-display bg-purple-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[T = 2\pi\sqrt{\frac{L}{g}}\]
                                     </div>
-                                    <div class="math-display bg-purple-50 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg">
                                         \[\omega = \sqrt{\frac{g}{L}}\]
                                     </div>
                                 </div>
@@ -1232,18 +1259,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.2 Effect of Various Factors on Time Period</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Effect of Various Factors on Time Period</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Condition</th>
                                         <th class="p-4 text-left">Effect on Time Period</th>
                                         <th class="p-4 text-left">Formula</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Change in length</td>
                                         <td class="p-4">T ∝ √L</td>
@@ -1285,7 +1312,7 @@
                             <p class="text-lg mb-3">
                                 A <strong>seconds pendulum</strong> is a pendulum whose time period is exactly 2 seconds (completes one oscillation in 2 seconds).
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[T = 2 \text{ s} \quad \Rightarrow \quad L = \frac{gT^2}{4\pi^2} = \frac{10 \times 4}{40} \approx 1 \text{ m}\]
                             </div>
                             <p class="text-lg mt-3">
@@ -1293,12 +1320,12 @@
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.3 Compound Pendulum (Physical Pendulum)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Compound Pendulum (Physical Pendulum)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Time Period of Compound Pendulum</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Time Period of Compound Pendulum</h4>
                             <p class="mb-3">A rigid body of any shape suspended from a point and oscillating under gravity:</p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[T = 2\pi\sqrt{\frac{I}{mgh}}\]
                             </div>
                             <p class="mt-3">Where:</p>
@@ -1308,7 +1335,7 @@
                                 <li><strong>h</strong> = Distance of center of mass from suspension point</li>
                                 <li><strong>g</strong> = Acceleration due to gravity</li>
                             </ul>
-                            <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                 <p class="font-bold mb-2">Equivalent Length (L<sub>eq</sub>):</p>
                                 <div class="math-display">
                                     \[L_{eq} = \frac{I}{mh} = \frac{K^2 + h^2}{h}\]
@@ -1318,14 +1345,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A simple pendulum has time period T on Earth. What will be its time period on Moon where gravity is 1/6th of Earth?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: g<sub>moon</sub> = g<sub>earth</sub>/6</p>
                                 
                                 <p class="mb-2 mt-4"><strong>On Earth:</strong></p>
@@ -1344,21 +1371,21 @@
                                     \[T_{moon} = \sqrt{6} \times T_{earth}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } T_{moon} = \sqrt{6}T \approx 2.45T\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A uniform rod of length L is suspended from one end. Find its time period of small oscillations.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">This is a compound pendulum problem.</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 1:</strong> Moment of inertia about end</p>
@@ -1383,20 +1410,20 @@
                                     \[T = 2\pi\sqrt{\frac{2L}{3g}}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: } T = 2\pi\sqrt{\frac{2L}{3g}}\]
                                 </div>
-                                <p class="text-sm text-gray-600 mt-2">Note: This is √(2/3) times the time period of simple pendulum of length L</p>
+                                <p class="text-sm text-ink-muted mt-2">Note: This is √(2/3) times the time period of simple pendulum of length L</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Chapter 5: Energy in SHM -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Energy in Simple Harmonic Motion</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Energy in Simple Harmonic Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1406,11 +1433,11 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Energy Formulas in SHM</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Energy Equations</h4>
                             
                             <div class="space-y-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Potential Energy (PE)</p>
                                     <div class="math-display">
                                         \[PE = \frac{1}{2}kx^2 = \frac{1}{2}m\omega^2 x^2\]
@@ -1418,7 +1445,7 @@
                                     <p class="text-sm mt-2">Where x is displacement from mean position</p>
                                 </div>
 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Kinetic Energy (KE)</p>
                                     <div class="math-display">
                                         \[KE = \frac{1}{2}mv^2 = \frac{1}{2}m\omega^2(A^2 - x^2)\]
@@ -1426,7 +1453,7 @@
                                     <p class="text-sm mt-2">Using v = ω√(A² - x²)</p>
                                 </div>
 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">3. Total Energy (TE)</p>
                                     <div class="math-display">
                                         \[TE = KE + PE = \frac{1}{2}kA^2 = \frac{1}{2}m\omega^2 A^2\]
@@ -1439,16 +1466,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Energy at Different Positions</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Position</th>
                                         <th class="p-4 text-left">Displacement (x)</th>
                                         <th class="p-4 text-left">KE</th>
                                         <th class="p-4 text-left">PE</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Mean Position</td>
                                         <td class="p-4 font-mono">x = 0</td>
@@ -1484,7 +1511,7 @@
                             <p class="text-lg mb-3">
                                 KE and PE are equal when:
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[x = \pm\frac{A}{\sqrt{2}}\]
                             </div>
                             <p class="text-lg mt-3">
@@ -1494,16 +1521,16 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Time-Averaged Values</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Average Values Over One Complete Cycle</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Average KE:</p>
                                     <div class="math-display">
                                         \[\langle KE \rangle = \frac{1}{4}kA^2 = \frac{E}{2}\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Average PE:</p>
                                     <div class="math-display">
                                         \[\langle PE \rangle = \frac{1}{4}kA^2 = \frac{E}{2}\]
@@ -1516,14 +1543,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A particle executes SHM with amplitude 20 cm and spring constant 100 N/m. When displacement is 10 cm, find: (a) PE (b) KE (c) Total Energy
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: A = 20 cm = 0.2 m, k = 100 N/m, x = 10 cm = 0.1 m</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Potential Energy:</strong></p>
@@ -1543,21 +1570,21 @@
                                     \[KE = TE - PE = 2 - 0.5 = 1.5 \text{ J}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: } PE = 0.5\text{ J}, \quad KE = 1.5\text{ J}, \quad TE = 2\text{ J}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8 (JEE Advanced)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A particle in SHM has velocities v₁ and v₂ at positions x₁ and x₂ from mean position. Find the angular frequency and amplitude.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Using energy conservation at both positions:</strong></p>
                                 
                                 <p class="mb-2 mt-3">At position x₁:</p>
@@ -1592,14 +1619,14 @@
                                     \[A = \sqrt{x_1^2 + \frac{v_1^2(x_1^2 - x_2^2)}{v_2^2 - v_1^2}}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\omega = \sqrt{\frac{v_2^2 - v_1^2}{x_1^2 - x_2^2}}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Energy Mistakes in JEE
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1614,10 +1641,10 @@
                 </section>
 
                 <!-- Chapter 6: Damped Oscillations -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Damped Oscillations</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Damped Oscillations</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1625,12 +1652,12 @@
                             In real-world oscillations, energy is gradually lost due to resistive forces (friction, air resistance, etc.). Damped oscillations are crucial for JEE Advanced and form the basis of many engineering applications.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.1 Equation of Damped Oscillation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Equation of Damped Oscillation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Damped SHM Equation</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Damped SHM Equation</h4>
                             <p class="mb-3">When damping force F<sub>d</sub> = -bv (proportional to velocity):</p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[x = A_0 e^{-bt/2m} \cos(\omega' t + \phi)\]
                             </div>
                             <p class="mt-4">Where:</p>
@@ -1640,7 +1667,7 @@
                                 <li><strong>ω'</strong> = Angular frequency of damped oscillation</li>
                                 <li><strong>e<sup>-bt/2m</sup></strong> = Exponential decay factor</li>
                             </ul>
-                            <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                 <p class="font-bold mb-2">Angular Frequency of Damped Oscillation:</p>
                                 <div class="math-display">
                                     \[\omega' = \sqrt{\omega_0^2 - \left(\frac{b}{2m}\right)^2}\]
@@ -1649,11 +1676,11 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.2 Types of Damping</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Types of Damping</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">1. Light Damping</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Light Damping</h5>
                                 <p class="mb-3">b²/4m² < k/m</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>System oscillates</li>
@@ -1662,8 +1689,8 @@
                                     <li>Most practical cases</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">2. Critical Damping</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Critical Damping</h5>
                                 <p class="mb-3">b²/4m² = k/m</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>No oscillation</li>
@@ -1672,8 +1699,8 @@
                                     <li>Used in shock absorbers</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">3. Heavy Damping</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">3. Heavy Damping</h5>
                                 <p class="mb-3">b²/4m² > k/m</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>No oscillation</li>
@@ -1684,16 +1711,16 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.3 Energy Decay in Damped Oscillations</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Energy Decay in Damped Oscillations</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Energy Decay Formula</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Energy Decay Formula</h4>
                             <p class="mb-3">Total mechanical energy decreases exponentially:</p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[E(t) = E_0 e^{-bt/m}\]
                             </div>
                             <p class="mt-3">Since amplitude decays as A(t) = A₀e<sup>-bt/2m</sup>, and E ∝ A²:</p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[E(t) = \frac{1}{2}kA_0^2 e^{-bt/m}\]
                             </div>
                         </div>
@@ -1705,7 +1732,7 @@
                             <p class="text-lg mb-3">
                                 Q-factor measures how underdamped an oscillator is:
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[Q = \frac{\omega_0 m}{b} = \frac{\omega_0}{\gamma}\]
                             </div>
                             <p class="text-lg mt-3">Where γ = b/m is damping coefficient</p>
@@ -1717,14 +1744,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 9
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A damped oscillator has mass 0.5 kg, spring constant 50 N/m, and damping constant b = 2 kg/s. Determine: (a) Type of damping (b) Frequency of oscillation
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: m = 0.5 kg, k = 50 N/m, b = 2 kg/s</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 1:</strong> Find natural angular frequency</p>
@@ -1753,7 +1780,7 @@
                                     \[f' = \frac{\omega'}{2\pi} = \frac{9.8}{2\pi} \approx 1.56 \text{ Hz}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: Light damping, } f' \approx 1.56 \text{ Hz}\]
                                 </div>
                             </div>
@@ -1762,10 +1789,10 @@
                 </section>
 
                 <!-- Chapter 7: Forced Oscillations & Resonance -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Forced Oscillations & Resonance</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Forced Oscillations & Resonance</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1773,32 +1800,32 @@
                             When an external periodic force drives an oscillating system, fascinating phenomena like resonance occur. This is one of the most important topics for JEE Advanced and has applications from musical instruments to bridge failures.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Forced Oscillations</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Forced Oscillations</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Equation of Forced Oscillation</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Equation of Forced Oscillation</h4>
                             <p class="mb-3">When external force F = F₀ sin(ωt) acts on damped oscillator:</p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[x = A\sin(\omega t - \phi)\]
                             </div>
                             <p class="mt-4">Where steady-state amplitude is:</p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[A = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega^2)^2 + (b\omega/m)^2}}\]
                             </div>
                             <p class="mt-3">And phase difference:</p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\tan\phi = \frac{b\omega/m}{\omega_0^2 - \omega^2}\]
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Resonance</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Resonance</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Resonance Condition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Resonance Condition</h4>
                             <p class="mb-3 text-lg font-semibold">
                                 Resonance occurs when driving frequency equals natural frequency:
                             </p>
-                            <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[\omega = \omega_0 \quad \text{(Resonance condition)}\]
                             </div>
                             <p class="mt-4">At resonance:</p>
@@ -1808,7 +1835,7 @@
                                 <li><strong>Energy transfer is maximum</strong></li>
                                 <li><strong>Velocity is in phase with driving force</strong></li>
                             </ul>
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Maximum Amplitude (at resonance):</p>
                                 <div class="math-display">
                                     \[A_{max} = \frac{F_0}{b\omega_0} = \frac{F_0 Q}{m\omega_0^2}\]
@@ -1816,28 +1843,28 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.3 Resonance Curve</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Resonance Curve</h3>
                         
                         <div class="diagram-box my-8 rounded-xl">
-                            <h4 class="font-bold text-xl mb-4 text-gray-700">Amplitude vs Driving Frequency</h4>
-                            <div class="bg-white p-6 rounded-lg">
-                                <div class="h-64 flex items-center justify-center bg-purple-50 rounded mb-4">
-                                    <p class="text-gray-600 text-center">
+                            <h4 class="font-bold text-xl mb-4 text-ink-muted">Amplitude vs Driving Frequency</h4>
+                            <div class="bg-canvas p-6 rounded-lg">
+                                <div class="h-64 flex items-center justify-center bg-surface-2 rounded mb-4">
+                                    <p class="text-ink-muted text-center">
                                         Graph showing amplitude vs ω<br/>
                                         Peak at ω = ω₀ (resonance)<br/>
                                         Sharper peak for lower damping
                                     </p>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                                    <div class="bg-blue-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="font-semibold mb-1">Low Damping (High Q)</p>
                                         <p>Sharp peak, high amplitude</p>
                                     </div>
-                                    <div class="bg-blue-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="font-semibold mb-1">Medium Damping</p>
                                         <p>Moderate peak, moderate amplitude</p>
                                     </div>
-                                    <div class="bg-blue-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="font-semibold mb-1">High Damping (Low Q)</p>
                                         <p>Broad peak, low amplitude</p>
                                     </div>
@@ -1852,7 +1879,7 @@
                             <p class="text-lg mb-3">
                                 The sharpness of resonance peak is measured by Q-factor:
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[Q = \frac{\omega_0}{\Delta\omega}\]
                             </div>
                             <p class="text-lg mt-3">Where Δω is bandwidth (width at A<sub>max</sub>/√2)</p>
@@ -1862,56 +1889,56 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.4 Applications of Resonance</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.4 Applications of Resonance</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Application</th>
                                         <th class="p-4 text-left">Description</th>
                                         <th class="p-4 text-left">Type</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Musical Instruments</td>
                                         <td class="p-4">Strings resonate at specific frequencies producing musical notes</td>
-                                        <td class="p-4 text-success">✓ Useful</td>
+                                        <td class="p-4 text-primary">✓ Useful</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Radio Tuning</td>
                                         <td class="p-4">LC circuits resonate at desired frequency to select radio station</td>
-                                        <td class="p-4 text-success">✓ Useful</td>
+                                        <td class="p-4 text-primary">✓ Useful</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">MRI Machines</td>
                                         <td class="p-4">Nuclear magnetic resonance at specific frequencies</td>
-                                        <td class="p-4 text-success">✓ Useful</td>
+                                        <td class="p-4 text-primary">✓ Useful</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Bridge Collapse</td>
                                         <td class="p-4">Periodic forces (wind, marching) can cause destructive resonance</td>
-                                        <td class="p-4 text-danger">✗ Harmful</td>
+                                        <td class="p-4 text-primary">✗ Harmful</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Earthquake Damage</td>
                                         <td class="p-4">Buildings resonate with earthquake frequency causing collapse</td>
-                                        <td class="p-4 text-danger">✗ Harmful</td>
+                                        <td class="p-4 text-primary">✗ Harmful</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 10 (JEE Advanced)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A forced oscillator has natural frequency 10 Hz and Q-factor of 50. Find the bandwidth of resonance curve.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: f₀ = 10 Hz, Q = 50</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Formula for Q-factor:</strong></p>
@@ -1924,17 +1951,17 @@
                                     \[\Delta f = \frac{f_0}{Q} = \frac{10}{50} = 0.2 \text{ Hz}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answer: Bandwidth } = 0.2 \text{ Hz}\]
                                 </div>
-                                <p class="text-sm text-gray-600 mt-3">
+                                <p class="text-sm text-ink-muted mt-3">
                                     This means the oscillator responds significantly only in the range 9.9 Hz to 10.1 Hz
                                 </p>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> JEE Misconceptions about Resonance
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1949,10 +1976,10 @@
                 </section>
 
                 <!-- Chapter 8: Superposition of SHMs -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Superposition of SHMs</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Superposition of SHMs</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1962,41 +1989,41 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Superposition of Two SHMs in Same Direction</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Case 1: Same Frequency</h4>
                             <p class="mb-3">If x₁ = A₁ sin(ωt) and x₂ = A₂ sin(ωt + φ):</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[x = x_1 + x_2 = A\sin(\omega t + \alpha)\]
                             </div>
                             <p class="mt-3">Where resultant amplitude:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[A = \sqrt{A_1^2 + A_2^2 + 2A_1 A_2 \cos\phi}\]
                             </div>
                             <p class="mt-3">And phase:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\tan\alpha = \frac{A_2 \sin\phi}{A_1 + A_2 \cos\phi}\]
                             </div>
                         </div>
 
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Phase Difference (φ)</th>
                                         <th class="p-4 text-left">Resultant Amplitude (A)</th>
                                         <th class="p-4 text-left">Type</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-mono">φ = 0° (In phase)</td>
                                         <td class="p-4 font-mono">A = A₁ + A₂ (Maximum)</td>
-                                        <td class="p-4 text-success font-semibold">Constructive</td>
+                                        <td class="p-4 text-primary font-semibold">Constructive</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono">φ = 180° (Out of phase)</td>
                                         <td class="p-4 font-mono">A = |A₁ - A₂| (Minimum)</td>
-                                        <td class="p-4 text-danger font-semibold">Destructive</td>
+                                        <td class="p-4 text-primary font-semibold">Destructive</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono">φ = 90°</td>
@@ -2014,27 +2041,27 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Superposition of Perpendicular SHMs</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Lissajous Figures</h4>
                             <p class="mb-3">When x = A sin(ωt) and y = B sin(ωt + φ):</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\frac{x^2}{A^2} + \frac{y^2}{B^2} - \frac{2xy}{AB}\cos\phi = \sin^2\phi\]
                             </div>
                             <p class="mt-4 font-semibold">Special Cases:</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">φ = 0° (In phase)</p>
                                     <p>Straight line: y = (B/A)x</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">φ = 180°</p>
                                     <p>Straight line: y = -(B/A)x</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">φ = 90° & A = B</p>
                                     <p>Circle: x² + y² = A²</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">φ = 90° & A ≠ B</p>
                                     <p>Ellipse: x²/A² + y²/B² = 1</p>
                                 </div>
@@ -2042,14 +2069,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 11
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Two SHMs x₁ = 3 sin(ωt) and x₂ = 4 sin(ωt + 90°) act on same particle. Find resultant amplitude and initial phase.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: A₁ = 3, A₂ = 4, φ = 90°</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Resultant amplitude:</strong></p>
@@ -2074,7 +2101,7 @@
                                     \[\alpha = \tan^{-1}(4/3) \approx 53°\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Answers: } A = 5, \quad \alpha \approx 53°\]
                                 </div>
                             </div>
@@ -2096,14 +2123,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Spring-Mass Systems: 30%</li>
@@ -2113,7 +2140,7 @@
                                 <li>✓ Combination of Springs: 10%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Damped Oscillations: 30%</li>
@@ -2125,8 +2152,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Finding time period of horizontal/vertical spring-mass system</li>
                             <li>Energy conservation in SHM (finding velocity at given position)</li>
@@ -2146,7 +2173,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -2169,21 +2196,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A particle executes SHM with amplitude 0.1 m and time period 2 s. Find maximum velocity and acceleration.</li>
                             <li>A spring-mass system has spring constant 100 N/m and mass 1 kg. Find time period of oscillation.</li>
@@ -2196,8 +2223,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A particle executes SHM with amplitude 10 cm. Find the positions where speed is half of maximum speed.</li>
                             <li>A spring is cut into 3 equal parts. If one part is used with same mass, how does time period change?</li>
@@ -2210,8 +2237,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A damped oscillator has equation x = 10e<sup>-0.5t</sup> cos(5t). Find: (a) Initial amplitude (b) Damping constant (c) Angular frequency</li>
                             <li>Two SHMs x₁ = 4 sin(ωt) and x₂ = 3 cos(ωt) act on same particle. Find resultant amplitude and phase.</li>
@@ -2227,57 +2254,75 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./thermal-properties-of-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Thermal Properties Of Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./thermodynamics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Thermodynamics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./units-and-dimensions.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Units And Dimensions</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/waves" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/waves" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Waves</h3>
-                    <p class="text-gray-600">Wave motion, Standing waves, Sound waves, Doppler effect</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Waves</h3>
+                    <p class="text-ink-muted">Wave motion, Standing waves, Sound waves, Doppler effect</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Rotational Motion</h3>
-                    <p class="text-gray-600">Moment of inertia, Torque, Angular momentum, Rolling motion</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Rotational Motion</h3>
+                    <p class="text-ink-muted">Moment of inertia, Torque, Angular momentum, Rolling motion</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Work Energy and Power</h3>
-                    <p class="text-gray-600">Work-Energy theorem, Conservative forces, Power calculations</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Work Energy and Power</h3>
+                    <p class="text-ink-muted">Work-Energy theorem, Conservative forces, Power calculations</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -2285,7 +2330,7 @@
 
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2293,35 +2338,35 @@
     </section>
 
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Simple Harmonic Motion - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Simple Harmonic Motion - Complete Guide for JEE 2025-26</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Simple Harmonic Motion is Crucial for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Simple Harmonic Motion (SHM)</strong> is one of the most important chapters in <strong>JEE Physics</strong>, carrying significant weightage in both JEE Main (12-16 marks) and JEE Advanced (20-28 marks). SHM concepts appear in:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Mechanics</strong> - Springs, pendulums, oscillating systems</li>
                             <li><strong>Waves</strong> - Wave motion is derived from SHM</li>
                             <li><strong>AC Circuits</strong> - Alternating current follows SHM equations</li>
                             <li><strong>Modern Physics</strong> - Quantum oscillators, atomic vibrations</li>
                             <li><strong>Thermodynamics</strong> - Molecular vibrations in gases</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             Mastering SHM is essential as it forms the foundation for understanding oscillatory phenomena across all branches of physics.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Formulas & Topics to Remember</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Essential SHM Formulas</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Essential SHM Formulas</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Time period (spring): T = 2π√(m/k)</li>
                                     <li>• Time period (pendulum): T = 2π√(L/g)</li>
                                     <li>• Velocity: v = ω√(A² - x²)</li>
@@ -2330,8 +2375,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Most Asked Topics</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Most Asked Topics</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Spring-mass systems (horizontal & vertical)</li>
                                     <li>• Energy conservation in SHM</li>
                                     <li>• Effect of acceleration/gravity on pendulum</li>
@@ -2340,20 +2385,20 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. Graph Interpretation</h4>
-                                <p class="text-gray-700 text-sm">x-t, v-t, a-t, E-x graphs - Practice reading and sketching these for 100% accuracy</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">3. Graph Interpretation</h4>
+                                <p class="text-ink-muted text-sm">x-t, v-t, a-t, E-x graphs - Practice reading and sketching these for 100% accuracy</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Study Tips -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Master Simple Harmonic Motion for JEE?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 5-6 days (3 hours/day)</li>
                                 <li>Focus on <strong>spring-mass systems</strong> and <strong>energy concepts</strong></li>
                                 <li>Master time period formulas for all types of oscillators</li>
@@ -2364,7 +2409,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 8-10 days (4 hours/day)</li>
                                 <li>Deep dive into <strong>damped and forced oscillations</strong></li>
                                 <li>Master compound pendulum and physical oscillators</li>
@@ -2378,65 +2423,65 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Top 10 Mistakes to Avoid in SHM</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Top 10 Mistakes to Avoid in SHM</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing mean position with natural length:</strong> In vertical springs, mean position ≠ natural length position
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong phase relationships:</strong> Velocity leads displacement by π/2, NOT lags
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Forgetting negative sign in a = -ω²x:</strong> Acceleration is always OPPOSITE to displacement
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Energy misconception:</strong> Total energy depends ONLY on amplitude, not on position or velocity at any instant
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Spring combination errors:</strong> Series springs: add reciprocals (1/k_eff = 1/k₁ + 1/k₂), Parallel: direct addition
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Pendulum assumptions:</strong> T = 2π√(L/g) is valid ONLY for small angles (< 15°)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>At resonance misconception:</strong> Amplitude is maximum, NOT displacement (displacement lags by π/2)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Damping in real systems:</strong> All real oscillators are damped; ideal SHM (constant amplitude) is theoretical
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Unit conversion:</strong> Always use SI units (m, kg, s, rad/s) unless specifically asked otherwise
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Graph reading errors:</strong> Carefully note what's plotted on axes - x, v, a, KE, PE, or TE
                             </div>
@@ -2445,11 +2490,11 @@
                 </div>
                 
                 <!-- Previous Year Analysis -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Trend Analysis (2019-2024)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -2458,25 +2503,25 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">5 Questions (24 marks)</td>
                                     <td class="p-3">Damped oscillations, Energy analysis</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
                                     <td class="p-3">4 Questions (20 marks)</td>
                                     <td class="p-3">Spring combinations, Resonance</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">6 Questions (28 marks)</td>
                                     <td class="p-3">Superposition, Compound pendulum</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2021</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
                                     <td class="p-3">5 Questions (22 marks)</td>
@@ -2485,18 +2530,18 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Observation:</strong> JEE Advanced is increasingly asking conceptual and multi-step problems on damped/forced oscillations. JEE Main focuses more on direct formula-based problems on springs and pendulums. Energy-based questions are common in both.
                     </p>
                 </div>
 
                 <!-- Quick Revision Points -->
-                <div class="mt-8 bg-gradient-to-r from-purple-100 to-pink-100 p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold text-secondary mb-4">⚡ Last Minute Quick Revision Points</h3>
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚡ Last Minute Quick Revision Points</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <h4 class="font-bold text-lg mb-3 text-secondary">Must-Remember Formulas:</h4>
-                            <ul class="space-y-2 text-gray-700">
+                            <h4 class="font-bold text-lg mb-3 text-primary">Must-Remember Formulas:</h4>
+                            <ul class="space-y-2 text-ink-muted">
                                 <li>• T = 2π√(m/k) - Spring time period</li>
                                 <li>• T = 2π√(L/g) - Pendulum time period</li>
                                 <li>• E = ½kA² = ½mω²A² - Total energy</li>
@@ -2508,8 +2553,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg mb-3 text-secondary">Golden Rules:</h4>
-                            <ul class="space-y-2 text-gray-700">
+                            <h4 class="font-bold text-lg mb-3 text-primary">Golden Rules:</h4>
+                            <ul class="space-y-2 text-ink-muted">
                                 <li>• At mean position: v = max, a = 0, KE = max, PE = 0</li>
                                 <li>• At extreme: v = 0, a = max, KE = 0, PE = max</li>
                                 <li>• KE = PE at x = ±A/√2</li>
@@ -2527,111 +2572,111 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

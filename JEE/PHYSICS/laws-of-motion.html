@@ -26,14 +26,14 @@
     <link rel="canonical" href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion">
     <meta property="og:title" content="Laws of Motion - Complete JEE Physics Guide with Solved Problems">
     <meta property="og:description" content="Master Laws of Motion for JEE Main & Advanced. Complete theory, formulas, solved numericals & practice questions explained step-by-step.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:site_name" content="JEE Prep Guide">
     
     <!-- Twitter -->
@@ -41,7 +41,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion">
     <meta name="twitter:title" content="Laws of Motion - Complete JEE Physics Guide with Solved Problems">
     <meta name="twitter:description" content="Master Laws of Motion for JEE Main & Advanced. Complete theory, formulas, solved numericals & practice questions explained step-by-step.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -53,7 +53,7 @@
       "@type": "Article",
       "headline": "Laws of Motion - Complete JEE Physics Guide",
       "description": "Master Laws of Motion for JEE Main & Advanced with complete theory, formulas, and solved numericals",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide"
@@ -63,7 +63,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-01-15",
@@ -238,70 +238,86 @@
   "typicalAgeRange": "16-19"
 }
 </script>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for Equations -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
         }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    };
+</script>
+<!-- MathJax for Equations -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path To IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path To IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-primary hover:text-secondary transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:text-secondary transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-primary hover:text-secondary transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-primary hover:text-secondary transition">Maths</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-primary hover:text-primary transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:text-primary transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:text-primary transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary hover:text-primary transition">Maths</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -310,30 +326,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Laws of Motion</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Laws of Motion</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -341,32 +357,32 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Laws of Motion</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Laws of Motion</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Force & Inertia
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     First Law
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Second Law
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Third Law
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     FBD
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Friction
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Circular Motion
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Connected Bodies
                 </a>
             </div>
@@ -374,28 +390,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Laws of Motion
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Newton's Laws of Motion with complete notes on Force, Inertia, Friction, Free Body Diagrams, and Circular Motion. Includes 100+ solved problems and all JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -404,7 +420,7 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Laws of Motion JEE Notes">
         <meta itemprop="description" content="Complete study notes for Laws of Motion">
         
@@ -412,12 +428,12 @@
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">250</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -427,15 +443,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">100+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -447,53 +463,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Force & Inertia</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Newton's First Law</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Newton's Second Law</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Newton's Third Law</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Free Body Diagrams</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Friction</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Circular Motion Forces</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Connected Bodies</a></li>
-                        <li><a href="#formulas" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">📋 All Formulas</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Force & Inertia</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Newton's First Law</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Newton's Second Law</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Newton's Third Law</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Free Body Diagrams</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Friction</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Circular Motion Forces</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Connected Bodies</a></li>
+                        <li><a href="#formulas" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">📋 All Formulas</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./kinematics.html" class="text-primary font-semibold hover:underline">Kinematics &rarr;</a>
+                <a href="./work-energy-and-power.html" class="text-primary font-semibold hover:underline">Work Energy And Power &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion.webp"
                         alt="Laws of Motion JEE notes, Formulas, PYQs"
                         title="Laws of Motion — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Laws of Motion JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Force and Inertia -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Force and Inertia</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Force and Inertia</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -508,33 +536,33 @@
                         </p>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">SI Unit</h5>
                                 <p class="text-3xl font-mono font-bold text-primary">Newton (N)</p>
-                                <p class="mt-2 text-gray-600">1 N = 1 kg·m/s²</p>
+                                <p class="mt-2 text-ink-muted">1 N = 1 kg·m/s²</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Dimensional Formula</h5>
                                 <p class="text-3xl font-mono font-bold text-primary">[MLT⁻²]</p>
-                                <p class="mt-2 text-gray-600">Mass × Length × Time⁻²</p>
+                                <p class="mt-2 text-ink-muted">Mass × Length × Time⁻²</p>
                             </div>
                         </div>
 
                         <h4 class="text-xl font-bold text-primary mt-6 mb-3">Characteristics of Force:</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                            <div class="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-start space-x-3 bg-surface-2 p-4 rounded-lg">
                                 <span class="text-primary font-bold">✓</span>
                                 <p>Force is a vector quantity (has magnitude and direction)</p>
                             </div>
-                            <div class="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-start space-x-3 bg-surface-2 p-4 rounded-lg">
                                 <span class="text-primary font-bold">✓</span>
                                 <p>Multiple forces add using vector addition rules</p>
                             </div>
-                            <div class="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-start space-x-3 bg-surface-2 p-4 rounded-lg">
                                 <span class="text-primary font-bold">✓</span>
                                 <p>Can change speed, direction, or shape of objects</p>
                             </div>
-                            <div class="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-start space-x-3 bg-surface-2 p-4 rounded-lg">
                                 <span class="text-primary font-bold">✓</span>
                                 <p>Net force determines the acceleration of a body</p>
                             </div>
@@ -561,24 +589,24 @@
                         <h4 class="text-xl font-bold text-primary mt-6 mb-4">Types of Inertia:</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">1. Inertia of Rest</h5>
                                 <p class="mb-3">Tendency to remain at rest</p>
-                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <strong>Example:</strong> When a bus starts suddenly, passengers jerk backward
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">2. Inertia of Motion</h5>
                                 <p class="mb-3">Tendency to remain in motion</p>
-                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <strong>Example:</strong> When a bus stops suddenly, passengers jerk forward
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">3. Inertia of Direction</h5>
                                 <p class="mb-3">Tendency to maintain direction</p>
-                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <strong>Example:</strong> Mud flies off tangentially from a rotating wheel
                                 </div>
                             </div>
@@ -587,61 +615,61 @@
                 </section>
 
                 <!-- Chapter 2: Newton's First Law -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Newton's First Law of Motion</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Newton's First Law of Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="bg-gradient-to-r from-purple-100 to-purple-50 border-l-4 border-secondary p-6 rounded-r-xl mb-6">
-                            <h3 class="text-xl font-bold text-secondary mb-3">📜 Statement (Law of Inertia)</h3>
-                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                        <div class="bg-gradient-to-r from-surface-3 to-surface-2 border-l-4 border-secondary p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">📜 Statement (Law of Inertia)</h3>
+                            <p class="text-lg italic text-ink leading-relaxed">
                                 "Every object continues in its state of rest or uniform motion in a straight line unless compelled by an external unbalanced force to change that state."
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Mathematical Form</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Mathematical Form</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
                             <div class="math-display text-2xl">
                                 \[\text{If } \sum \vec{F} = 0, \text{ then } \vec{a} = 0\]
                             </div>
-                            <p class="mt-4 text-gray-700">No net force → No acceleration → Constant velocity (including zero)</p>
+                            <p class="mt-4 text-ink-muted">No net force → No acceleration → Constant velocity (including zero)</p>
                         </div>
 
-                        <h4 class="text-xl font-bold text-secondary mt-6 mb-3">Important Implications:</h4>
+                        <h4 class="text-xl font-bold text-primary mt-6 mb-3">Important Implications:</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-secondary">
                                 <p class="font-semibold">Force is NOT required to maintain motion</p>
-                                <p class="text-sm text-gray-600 mt-1">Objects in motion stay in motion naturally</p>
+                                <p class="text-sm text-ink-muted mt-1">Objects in motion stay in motion naturally</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-secondary">
                                 <p class="font-semibold">Force is required to CHANGE motion</p>
-                                <p class="text-sm text-gray-600 mt-1">Starting, stopping, or turning requires force</p>
+                                <p class="text-sm text-ink-muted mt-1">Starting, stopping, or turning requires force</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-secondary">
                                 <p class="font-semibold">Zero net force ≠ Zero velocity</p>
-                                <p class="text-sm text-gray-600 mt-1">Velocity could be any constant value</p>
+                                <p class="text-sm text-ink-muted mt-1">Velocity could be any constant value</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-secondary">
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-secondary">
                                 <p class="font-semibold">Defines Inertial Reference Frames</p>
-                                <p class="text-sm text-gray-600 mt-1">First law is valid in inertial frames only</p>
+                                <p class="text-sm text-ink-muted mt-1">First law is valid in inertial frames only</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Inertial vs Non-Inertial Frames</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Inertial vs Non-Inertial Frames</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Aspect</th>
                                         <th class="p-4 text-left">Inertial Frame</th>
                                         <th class="p-4 text-left">Non-Inertial Frame</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Definition</td>
                                         <td class="p-4">Frame where First Law holds true</td>
@@ -667,16 +695,16 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Pseudo Force (JEE Advanced Important)
                             </h4>
                             <p class="text-lg mb-3">
                                 In a non-inertial frame accelerating with <strong>a₀</strong>, a pseudo force must be applied:
                             </p>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-accent">
                                 \[\vec{F}_{pseudo} = -m\vec{a}_0\]
                             </div>
-                            <p class="text-sm mt-3 text-gray-700">
+                            <p class="text-sm mt-3 text-ink-muted">
                                 Pseudo force acts opposite to the frame's acceleration and on every object in that frame.
                             </p>
                         </div>
@@ -684,105 +712,105 @@
                 </section>
 
                 <!-- Chapter 3: Newton's Second Law -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Newton's Second Law of Motion</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Newton's Second Law of Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="bg-gradient-to-r from-orange-100 to-orange-50 border-l-4 border-accent p-6 rounded-r-xl mb-6">
-                            <h3 class="text-xl font-bold text-accent mb-3">📜 Statement</h3>
-                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                        <div class="bg-gradient-to-r from-surface-3 to-surface-2 border-l-4 border-accent p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">📜 Statement</h3>
+                            <p class="text-lg italic text-ink leading-relaxed">
                                 "The rate of change of momentum of a body is directly proportional to the applied force and takes place in the direction of the force."
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Mathematical Formulation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Mathematical Formulation</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-orange-300 text-center">
-                                <h5 class="font-bold text-lg mb-3 text-accent">Standard Form</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong text-center">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Standard Form</h5>
                                 <div class="math-display text-3xl">
                                     \[\vec{F} = m\vec{a}\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-600">Valid when mass is constant</p>
+                                <p class="text-sm mt-3 text-ink-muted">Valid when mass is constant</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-orange-300 text-center">
-                                <h5 class="font-bold text-lg mb-3 text-accent">General Form</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong text-center">
+                                <h5 class="font-bold text-lg mb-3 text-primary">General Form</h5>
                                 <div class="math-display text-3xl">
                                     \[\vec{F} = \frac{d\vec{p}}{dt}\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-600">Valid for variable mass (rockets)</p>
+                                <p class="text-sm mt-3 text-ink-muted">Valid for variable mass (rockets)</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Derivation from Momentum Form</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Derivation from Momentum Form</h3>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-6">
-                            <div class="bg-white p-4 rounded-lg space-y-3">
+                            <div class="bg-canvas p-4 rounded-lg space-y-3">
                                 <p><strong>Step 1:</strong> Start with momentum: \(\vec{p} = m\vec{v}\)</p>
                                 <p><strong>Step 2:</strong> Apply Newton's statement: \(\vec{F} \propto \frac{d\vec{p}}{dt}\)</p>
                                 <p><strong>Step 3:</strong> \(\vec{F} = k\frac{d\vec{p}}{dt}\) where k = 1 in SI units</p>
                                 <p><strong>Step 4:</strong> \(\vec{F} = \frac{d(m\vec{v})}{dt}\)</p>
                                 <p><strong>Step 5:</strong> For constant mass: \(\vec{F} = m\frac{d\vec{v}}{dt}\)</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{\vec{F} = m\vec{a}}\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Impulse and Momentum</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Impulse and Momentum</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Impulse-Momentum Theorem</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Impulse-Momentum Theorem</h4>
                             <div class="math-display text-center text-2xl">
                                 \[\vec{J} = \vec{F} \times \Delta t = \Delta \vec{p} = m(\vec{v} - \vec{u})\]
                             </div>
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">J</p>
                                     <p class="text-sm">Impulse</p>
                                 </div>
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">F·Δt</p>
                                     <p class="text-sm">Force × Time</p>
                                 </div>
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">Δp</p>
                                     <p class="text-sm">Change in momentum</p>
                                 </div>
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">N·s or kg·m/s</p>
                                     <p class="text-sm">SI Unit</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h4 class="text-xl font-bold text-accent mt-6 mb-3">Applications of Impulse:</h4>
+                        <h4 class="text-xl font-bold text-primary mt-6 mb-3">Applications of Impulse:</h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                            <div class="bg-orange-50 p-4 rounded-lg">
-                                <h5 class="font-bold text-accent mb-2">🏏 Catching a Ball</h5>
+                            <div class="bg-surface-2 p-4 rounded-lg">
+                                <h5 class="font-bold text-primary mb-2">🏏 Catching a Ball</h5>
                                 <p class="text-sm">Pulling hands back increases Δt, reducing F (since J = FΔt = constant)</p>
                             </div>
-                            <div class="bg-orange-50 p-4 rounded-lg">
-                                <h5 class="font-bold text-accent mb-2">🚗 Airbags</h5>
+                            <div class="bg-surface-2 p-4 rounded-lg">
+                                <h5 class="font-bold text-primary mb-2">🚗 Airbags</h5>
                                 <p class="text-sm">Airbags increase collision time, significantly reducing impact force</p>
                             </div>
-                            <div class="bg-orange-50 p-4 rounded-lg">
-                                <h5 class="font-bold text-accent mb-2">🏃 Sand Pit</h5>
+                            <div class="bg-surface-2 p-4 rounded-lg">
+                                <h5 class="font-bold text-primary mb-2">🏃 Sand Pit</h5>
                                 <p class="text-sm">Sand increases stopping time, reducing force on athlete's legs</p>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A ball of mass 0.5 kg moving at 10 m/s is hit by a bat and returns at 15 m/s. If contact time is 0.01 s, find the average force.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Given:</strong> m = 0.5 kg, u = 10 m/s, v = -15 m/s (opposite direction), Δt = 0.01 s</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Solution:</strong></p>
@@ -792,7 +820,7 @@
                                 <div class="math-display">
                                     \[F = \frac{\Delta p}{\Delta t} = \frac{-12.5}{0.01} = -1250 \text{ N}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Magnitude of Force} = 1250 \text{ N}\]
                                 </div>
                             </div>
@@ -801,79 +829,79 @@
                 </section>
 
                 <!-- Chapter 4: Newton's Third Law -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Newton's Third Law of Motion</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Newton's Third Law of Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="bg-gradient-to-r from-green-100 to-green-50 border-l-4 border-success p-6 rounded-r-xl mb-6">
-                            <h3 class="text-xl font-bold text-success mb-3">📜 Statement (Action-Reaction Law)</h3>
-                            <p class="text-lg italic text-gray-800 leading-relaxed">
+                        <div class="bg-gradient-to-r from-surface-3 to-surface-2 border-l-4 border-success p-6 rounded-r-xl mb-6">
+                            <h3 class="text-xl font-bold text-primary mb-3">📜 Statement (Action-Reaction Law)</h3>
+                            <p class="text-lg italic text-ink leading-relaxed">
                                 "To every action, there is always an equal and opposite reaction."
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Mathematical Form</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Mathematical Form</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6 text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
                             <div class="math-display text-3xl">
                                 \[\vec{F}_{12} = -\vec{F}_{21}\]
                             </div>
                             <div class="grid grid-cols-2 gap-4 mt-6">
-                                <div class="bg-green-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-mono text-lg">F₁₂</p>
                                     <p class="text-sm">Force on body 1 by body 2</p>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-mono text-lg">F₂₁</p>
                                     <p class="text-sm">Force on body 2 by body 1</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Key Characteristics</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Key Characteristics</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
-                                <p class="font-bold text-success">✓ Act on DIFFERENT bodies</p>
-                                <p class="text-sm text-gray-600">Never on the same object</p>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-primary">✓ Act on DIFFERENT bodies</p>
+                                <p class="text-sm text-ink-muted">Never on the same object</p>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
-                                <p class="font-bold text-success">✓ Equal in magnitude</p>
-                                <p class="text-sm text-gray-600">|F₁₂| = |F₂₁| always</p>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-primary">✓ Equal in magnitude</p>
+                                <p class="text-sm text-ink-muted">|F₁₂| = |F₂₁| always</p>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
-                                <p class="font-bold text-success">✓ Opposite in direction</p>
-                                <p class="text-sm text-gray-600">180° apart</p>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-primary">✓ Opposite in direction</p>
+                                <p class="text-sm text-ink-muted">180° apart</p>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
-                                <p class="font-bold text-success">✓ Act simultaneously</p>
-                                <p class="text-sm text-gray-600">No time delay</p>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-primary">✓ Act simultaneously</p>
+                                <p class="text-sm text-ink-muted">No time delay</p>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
-                                <p class="font-bold text-success">✓ Same type of force</p>
-                                <p class="text-sm text-gray-600">Both gravitational, both contact, etc.</p>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-primary">✓ Same type of force</p>
+                                <p class="text-sm text-ink-muted">Both gravitational, both contact, etc.</p>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-success">
-                                <p class="font-bold text-success">✓ Do NOT cancel out</p>
-                                <p class="text-sm text-gray-600">They act on different bodies!</p>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-success">
+                                <p class="font-bold text-primary">✓ Do NOT cancel out</p>
+                                <p class="text-sm text-ink-muted">They act on different bodies!</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.3 Action-Reaction Pairs</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Action-Reaction Pairs</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Situation</th>
                                         <th class="p-4 text-left">Action</th>
                                         <th class="p-4 text-left">Reaction</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Book on table</td>
                                         <td class="p-4">Book pushes table down</td>
@@ -904,7 +932,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-danger my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-danger">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">❌</span> Common Misconception
                             </h4>
                             <p class="text-lg mb-3">
@@ -918,10 +946,10 @@
                 </section>
 
                 <!-- Chapter 5: Free Body Diagrams -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Free Body Diagrams (FBD)</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Free Body Diagrams (FBD)</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -941,46 +969,46 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Steps to Draw FBD</h3>
                         
                         <div class="space-y-3 mb-6">
-                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
-                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-primary text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
                                 <div>
                                     <p class="font-semibold text-primary">Isolate the body</p>
-                                    <p class="text-sm text-gray-600">Draw only the object you're analyzing, remove everything else</p>
+                                    <p class="text-sm text-ink-muted">Draw only the object you're analyzing, remove everything else</p>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
-                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-primary text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
                                 <div>
                                     <p class="font-semibold text-primary">Draw weight (mg) downward</p>
-                                    <p class="text-sm text-gray-600">Always acts vertically downward from center of mass</p>
+                                    <p class="text-sm text-ink-muted">Always acts vertically downward from center of mass</p>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
-                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-primary text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
                                 <div>
                                     <p class="font-semibold text-primary">Draw Normal force perpendicular to surface</p>
-                                    <p class="text-sm text-gray-600">Always 90° to contact surface, pointing away from surface</p>
+                                    <p class="text-sm text-ink-muted">Always 90° to contact surface, pointing away from surface</p>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
-                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-primary text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
                                 <div>
                                     <p class="font-semibold text-primary">Draw friction along the surface</p>
-                                    <p class="text-sm text-gray-600">Opposes motion or tendency of motion</p>
+                                    <p class="text-sm text-ink-muted">Opposes motion or tendency of motion</p>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
-                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-primary text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</span>
                                 <div>
                                     <p class="font-semibold text-primary">Draw tension along strings/ropes</p>
-                                    <p class="text-sm text-gray-600">Always pulling, never pushing</p>
+                                    <p class="text-sm text-ink-muted">Always pulling, never pushing</p>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">
-                                <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-primary text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">6</span>
                                 <div>
                                     <p class="font-semibold text-primary">Add any applied external forces</p>
-                                    <p class="text-sm text-gray-600">As given in the problem</p>
+                                    <p class="text-sm text-ink-muted">As given in the problem</p>
                                 </div>
                             </div>
                         </div>
@@ -988,60 +1016,60 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Do's and Don'ts</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-400">
-                                <h5 class="font-bold text-lg mb-4 text-success flex items-center">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-4 text-primary flex items-center">
                                     <span class="text-2xl mr-2">✅</span> DO Include
                                 </h5>
                                 <ul class="space-y-2">
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-success">✓</span>
+                                        <span class="text-primary">✓</span>
                                         <span>All external forces</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-success">✓</span>
+                                        <span class="text-primary">✓</span>
                                         <span>Weight (mg)</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-success">✓</span>
+                                        <span class="text-primary">✓</span>
                                         <span>Normal force (N)</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-success">✓</span>
+                                        <span class="text-primary">✓</span>
                                         <span>Friction (f)</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-success">✓</span>
+                                        <span class="text-primary">✓</span>
                                         <span>Tension (T)</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-success">✓</span>
+                                        <span class="text-primary">✓</span>
                                         <span>Applied forces</span>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-400">
-                                <h5 class="font-bold text-lg mb-4 text-danger flex items-center">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-4 text-primary flex items-center">
                                     <span class="text-2xl mr-2">❌</span> DON'T Include
                                 </h5>
                                 <ul class="space-y-2">
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-danger">✗</span>
+                                        <span class="text-primary">✗</span>
                                         <span>Forces the body exerts on others</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-danger">✗</span>
+                                        <span class="text-primary">✗</span>
                                         <span>Internal forces</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-danger">✗</span>
+                                        <span class="text-primary">✗</span>
                                         <span>Velocity or acceleration vectors</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-danger">✗</span>
+                                        <span class="text-primary">✗</span>
                                         <span>"ma" as a force</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <span class="text-danger">✗</span>
+                                        <span class="text-primary">✗</span>
                                         <span>Connected objects</span>
                                     </li>
                                 </ul>
@@ -1053,18 +1081,18 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <div class="diagram-box rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Block on Horizontal Surface</h5>
-                                <pre class="text-sm bg-gray-800 text-white p-4 rounded">
+                                <pre class="text-sm bg-surface-4 text-ink p-4 rounded">
        ↑ N (Normal)
        |
    ←f  ■  → F (Applied)
        |
        ↓ mg (Weight)
                                 </pre>
-                                <p class="text-sm mt-3 text-gray-600">N = mg (if no vertical force)</p>
+                                <p class="text-sm mt-3 text-ink-muted">N = mg (if no vertical force)</p>
                             </div>
                             <div class="diagram-box rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Block on Inclined Plane (θ)</h5>
-                                <pre class="text-sm bg-gray-800 text-white p-4 rounded">
+                                <pre class="text-sm bg-surface-4 text-ink p-4 rounded">
      ↑ N (⊥ to surface)
     /
    ■ ← f (up incline)
@@ -1072,17 +1100,17 @@
  / |
    ↓ mg (vertical)
                                 </pre>
-                                <p class="text-sm mt-3 text-gray-600">N = mg cos θ</p>
+                                <p class="text-sm mt-3 text-ink-muted">N = mg cos θ</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Chapter 6: Friction -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Friction</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Friction</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1090,37 +1118,37 @@
                             Friction is the force that opposes relative motion or tendency of relative motion between two surfaces in contact. It's one of the most important topics for JEE with 3-4 questions expected every year.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.1 Types of Friction</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Types of Friction</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Static Friction (fs)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Static Friction (fs)</h5>
                                 <p class="mb-3">Prevents motion from starting</p>
-                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                <div class="math-display bg-surface-2 p-3 rounded text-center">
                                     \[0 \leq f_s \leq \mu_s N\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-600">Self-adjusting force</p>
+                                <p class="text-sm mt-3 text-ink-muted">Self-adjusting force</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Kinetic Friction (fk)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Kinetic Friction (fk)</h5>
                                 <p class="mb-3">Acts during motion</p>
-                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                <div class="math-display bg-surface-2 p-3 rounded text-center">
                                     \[f_k = \mu_k N\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-600">Constant magnitude</p>
+                                <p class="text-sm mt-3 text-ink-muted">Constant magnitude</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Rolling Friction</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Rolling Friction</h5>
                                 <p class="mb-3">During rolling motion</p>
-                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                <div class="math-display bg-surface-2 p-3 rounded text-center">
                                     \[f_r = \mu_r N\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-600">μr << μk << μs</p>
+                                <p class="text-sm mt-3 text-ink-muted">μr << μk << μs</p>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important: μs > μk (Always!)
                             </h4>
                             <p class="text-lg">
@@ -1128,37 +1156,37 @@
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.2 Laws of Friction</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Laws of Friction</h3>
                         
                         <div class="space-y-3 mb-6">
-                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-danger">
                                 <p class="font-semibold">1. Friction is proportional to Normal force: f ∝ N</p>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-danger">
                                 <p class="font-semibold">2. Friction is independent of area of contact (for rigid bodies)</p>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-danger">
                                 <p class="font-semibold">3. Kinetic friction is independent of velocity (for moderate speeds)</p>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-danger">
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-danger">
                                 <p class="font-semibold">4. Static friction is self-adjusting up to a maximum value</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.3 Angle of Repose & Angle of Friction</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Angle of Repose & Angle of Friction</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Angle of Repose (θ)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Angle of Repose (θ)</h5>
                                 <p class="mb-3">Maximum angle of incline at which object stays at rest</p>
-                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                <div class="math-display bg-surface-2 p-3 rounded text-center">
                                     \[\tan \theta = \mu_s\]
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Angle of Friction (λ)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Angle of Friction (λ)</h5>
                                 <p class="mb-3">Angle between N and resultant of N and f</p>
-                                <div class="math-display bg-red-50 p-3 rounded text-center">
+                                <div class="math-display bg-surface-2 p-3 rounded text-center">
                                     \[\tan \lambda = \mu\]
                                 </div>
                             </div>
@@ -1174,24 +1202,24 @@
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.4 Motion on Inclined Plane</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.4 Motion on Inclined Plane</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Key Formulas for Incline (angle θ)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Key Formulas for Incline (angle θ)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-red-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Normal Force:</p>
                                     <div class="math-display">\[N = mg\cos\theta\]</div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Component along incline:</p>
                                     <div class="math-display">\[F_\parallel = mg\sin\theta\]</div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Acceleration (sliding down):</p>
                                     <div class="math-display">\[a = g(\sin\theta - \mu\cos\theta)\]</div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Condition for sliding:</p>
                                     <div class="math-display">\[\theta > \tan^{-1}(\mu_s)\]</div>
                                 </div>
@@ -1199,13 +1227,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2023 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A block of mass 10 kg is on a horizontal surface with μs = 0.4 and μk = 0.3. A horizontal force of 50 N is applied. Find acceleration. (g = 10 m/s²)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Step 1:</strong> Find Normal force</p>
                                 <div class="math-display">\[N = mg = 10 \times 10 = 100 \text{ N}\]</div>
                                 
@@ -1220,7 +1248,7 @@
                                 
                                 <p class="mb-2 mt-4"><strong>Step 5:</strong> Apply F = ma</p>
                                 <div class="math-display">\[50 - 30 = 10 \times a\]</div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[a = 2 \text{ m/s}^2\]
                                 </div>
                             </div>
@@ -1229,10 +1257,10 @@
                 </section>
 
                 <!-- Chapter 7: Circular Motion Forces -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Circular Motion & Forces</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Circular Motion & Forces</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1240,17 +1268,17 @@
                             When an object moves in a circle, it requires a net force directed toward the center (centripetal force). Understanding what provides this force is key to solving circular motion problems.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Centripetal Force</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Centripetal Force</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6 text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6 text-center">
                             <div class="math-display text-2xl">
                                 \[F_c = \frac{mv^2}{r} = mr\omega^2 = m \cdot a_c\]
                             </div>
-                            <p class="mt-4 text-gray-700">Always directed toward center of circular path</p>
+                            <p class="mt-4 text-ink-muted">Always directed toward center of circular path</p>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Concept
                             </h4>
                             <p class="text-lg">
@@ -1258,17 +1286,17 @@
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Sources of Centripetal Force</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Sources of Centripetal Force</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Situation</th>
                                         <th class="p-4 text-left">Centripetal Force Provided By</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4">Stone tied to string (horizontal)</td>
                                         <td class="p-4">Tension in string</td>
@@ -1293,35 +1321,35 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.3 Banking of Roads</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Banking of Roads</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Optimal Banking Angle (No Friction)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Optimal Banking Angle (No Friction)</h4>
                             <div class="math-display text-center text-2xl">
                                 \[\tan\theta = \frac{v^2}{rg}\]
                             </div>
-                            <p class="text-center mt-3 text-gray-600">θ = banking angle, v = speed, r = radius, g = gravity</p>
+                            <p class="text-center mt-3 text-ink-muted">θ = banking angle, v = speed, r = radius, g = gravity</p>
                             
-                            <h4 class="font-bold text-xl mb-4 mt-6 text-secondary">With Friction (Maximum Speed)</h4>
+                            <h4 class="font-bold text-xl mb-4 mt-6 text-primary">With Friction (Maximum Speed)</h4>
                             <div class="math-display text-center text-xl">
                                 \[v_{max} = \sqrt{rg\left(\frac{\mu + \tan\theta}{1 - \mu\tan\theta}\right)}\]
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.4 Centrifugal Force (Pseudo Force)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.4 Centrifugal Force (Pseudo Force)</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Inertial Frame</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Inertial Frame</h5>
                                 <p class="mb-3">Only centripetal force exists (toward center)</p>
-                                <div class="bg-purple-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     Real force providing circular motion
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Rotating Frame</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Rotating Frame</h5>
                                 <p class="mb-3">Centrifugal force appears (outward)</p>
-                                <div class="bg-purple-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     Pseudo force = mv²/r (outward)
                                 </div>
                             </div>
@@ -1330,10 +1358,10 @@
                 </section>
 
                 <!-- Chapter 8: Connected Bodies -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Connected Bodies & Pulley Systems</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Connected Bodies & Pulley Systems</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1341,33 +1369,33 @@
                             Problems involving multiple connected objects are JEE favorites. The key is to draw separate FBDs, write F = ma for each, and use constraint relations.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.1 Strategy for Connected Bodies</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Strategy for Connected Bodies</h3>
                         
                         <div class="space-y-3 mb-6">
-                            <div class="flex items-start space-x-4 bg-orange-50 p-4 rounded-lg">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
                                 <p class="font-semibold">Draw separate FBD for each body</p>
                             </div>
-                            <div class="flex items-start space-x-4 bg-orange-50 p-4 rounded-lg">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
                                 <p class="font-semibold">Write F = ma for each body in appropriate direction</p>
                             </div>
-                            <div class="flex items-start space-x-4 bg-orange-50 p-4 rounded-lg">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
                                 <p class="font-semibold">Identify constraint relations (same string = same |a|)</p>
                             </div>
-                            <div class="flex items-start space-x-4 bg-orange-50 p-4 rounded-lg">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                            <div class="flex items-start space-x-4 bg-surface-2 p-4 rounded-lg">
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
                                 <p class="font-semibold">Solve simultaneous equations</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.2 Atwood Machine</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Atwood Machine</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="diagram-box rounded-xl">
-                                    <pre class="text-sm bg-gray-800 text-white p-4 rounded">
+                                    <pre class="text-sm bg-surface-4 text-ink p-4 rounded">
     ╔═══╗
     ║   ║ (Pulley)
     ║   ║
@@ -1379,13 +1407,13 @@
                                     </pre>
                                 </div>
                                 <div>
-                                    <h5 class="font-bold text-lg mb-3 text-accent">Formulas (m₂ > m₁)</h5>
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Formulas (m₂ > m₁)</h5>
                                     <div class="space-y-4">
-                                        <div class="bg-orange-50 p-3 rounded">
+                                        <div class="bg-surface-2 p-3 rounded">
                                             <p class="font-semibold mb-1">Acceleration:</p>
                                             <div class="math-display">\[a = \frac{(m_2 - m_1)g}{m_1 + m_2}\]</div>
                                         </div>
-                                        <div class="bg-orange-50 p-3 rounded">
+                                        <div class="bg-surface-2 p-3 rounded">
                                             <p class="font-semibold mb-1">Tension:</p>
                                             <div class="math-display">\[T = \frac{2m_1m_2g}{m_1 + m_2}\]</div>
                                         </div>
@@ -1394,21 +1422,21 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.3 Two Blocks on Horizontal Surface</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 Two Blocks on Horizontal Surface</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <div class="diagram-box mb-4 rounded-xl">
-                                <pre class="text-sm bg-gray-800 text-white p-4 rounded text-center">
+                                <pre class="text-sm bg-surface-4 text-ink p-4 rounded text-center">
 F → [m₁] ─── [m₂]
     (Connected by string)
                                 </pre>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-orange-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">System Acceleration:</p>
                                     <div class="math-display">\[a = \frac{F}{m_1 + m_2}\]</div>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Tension in String:</p>
                                     <div class="math-display">\[T = \frac{m_2 \cdot F}{m_1 + m_2}\]</div>
                                 </div>
@@ -1416,13 +1444,13 @@ F → [m₁] ─── [m₂]
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Two masses 5 kg and 3 kg are connected by a string over a frictionless pulley. Find acceleration and tension. (g = 10 m/s²)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Given:</strong> m₁ = 5 kg, m₂ = 3 kg, g = 10 m/s²</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Acceleration:</strong></p>
@@ -1435,7 +1463,7 @@ F → [m₁] ─── [m₂]
                                     \[T = \frac{2m_1m_2g}{m_1 + m_2} = \frac{2 \times 5 \times 3 \times 10}{8} = \frac{300}{8} = 37.5 \text{ N}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\boxed{a = 2.5 \text{ m/s}^2, \quad T = 37.5 \text{ N}}\]
                                 </div>
                             </div>
@@ -1444,14 +1472,14 @@ F → [m₁] ─── [m₂]
                 </section>
 
                 <!-- All Formulas Section -->
-                <section id="formulas" class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl shadow-2xl p-8">
+                <section id="formulas" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📋</span>
                         Complete Formula Sheet - Laws of Motion
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Newton's Laws</h3>
                             <div class="space-y-3 font-mono">
                                 <p>First Law: ΣF = 0 ⟹ a = 0</p>
@@ -1462,7 +1490,7 @@ F → [m₁] ─── [m₂]
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Friction</h3>
                             <div class="space-y-3 font-mono">
                                 <p>Static: fs ≤ μsN</p>
@@ -1472,7 +1500,7 @@ F → [m₁] ─── [m₂]
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Inclined Plane</h3>
                             <div class="space-y-3 font-mono">
                                 <p>Normal: N = mg cos θ</p>
@@ -1482,7 +1510,7 @@ F → [m₁] ─── [m₂]
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Circular Motion</h3>
                             <div class="space-y-3 font-mono">
                                 <p>Fc = mv²/r = mrω²</p>
@@ -1491,7 +1519,7 @@ F → [m₁] ─── [m₂]
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Atwood Machine</h3>
                             <div class="space-y-3 font-mono">
                                 <p>a = (m₂-m₁)g/(m₁+m₂)</p>
@@ -1499,7 +1527,7 @@ F → [m₁] ─── [m₂]
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">Pseudo Force</h3>
                             <div class="space-y-3 font-mono">
                                 <p>F_pseudo = -ma₀</p>
@@ -1509,21 +1537,21 @@ F → [m₁] ─── [m₂]
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Formula PDF
                         </a>
                     </div>
                 </section>
 
                 <!-- Previous Year Questions -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Friction Problems: 35%</li>
@@ -1533,7 +1561,7 @@ F → [m₁] ─── [m₂]
                                 <li>✓ Pseudo Force: 5%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Multi-body problems: 30%</li>
@@ -1545,8 +1573,8 @@ F → [m₁] ─── [m₂]
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Block sliding on inclined plane with friction</li>
                             <li>Atwood machine with different variations</li>
@@ -1561,7 +1589,7 @@ F → [m₁] ─── [m₂]
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1584,21 +1612,21 @@ F → [m₁] ─── [m₂]
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A force of 20 N acts on a 5 kg mass. Find the acceleration.</li>
                             <li>Find maximum static friction if μs = 0.5 and N = 100 N.</li>
@@ -1611,8 +1639,8 @@ F → [m₁] ─── [m₂]
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A 5 kg block on 37° incline with μ = 0.3. Will it slide? Find acceleration if it does.</li>
                             <li>Two blocks 3 kg and 5 kg connected by string on smooth surface. 40 N force applied on 3 kg. Find tension.</li>
@@ -1625,8 +1653,8 @@ F → [m₁] ─── [m₂]
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A block on accelerating wedge. If wedge acceleration a₀ and angle θ, find condition for block to remain stationary relative to wedge.</li>
                             <li>Two blocks A (5 kg) on B (10 kg). Force F applied on B. μ between A and B = 0.3, μ between B and ground = 0.1. Find range of F for no slipping.</li>
@@ -1640,61 +1668,79 @@ F → [m₁] ─── [m₂]
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./magnetic-effect-of-current-and-magnetism.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Magnetic Effect Of Current And Magnetism</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./ray-optics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Ray Optics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./rotational-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Rotational Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Kinematics</h3>
-                    <p class="text-gray-600">Motion in 1D/2D, Projectile motion, Relative velocity</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Kinematics</h3>
+                    <p class="text-ink-muted">Motion in 1D/2D, Projectile motion, Relative velocity</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Work, Energy & Power</h3>
-                    <p class="text-gray-600">Work-Energy theorem, Conservation laws, Collisions</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Work, Energy & Power</h3>
+                    <p class="text-ink-muted">Work-Energy theorem, Conservation laws, Collisions</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Rotational Motion</h3>
-                    <p class="text-gray-600">Moment of Inertia, Angular momentum, Torque</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Rotational Motion</h3>
+                    <p class="text-ink-muted">Moment of Inertia, Angular momentum, Torque</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -1702,18 +1748,18 @@ F → [m₁] ─── [m₂]
     </section>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Laws of Motion - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Laws of Motion - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Laws of Motion is Crucial for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Laws of Motion</strong> is one of the most important chapters in JEE Physics with 8-15% direct weightage. The concepts form the foundation for:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Rotational Dynamics</strong> - Extension of Newton's Laws to rotating bodies</li>
                             <li><strong>Gravitation</strong> - Orbital mechanics uses circular motion concepts</li>
                             <li><strong>Work-Energy</strong> - Force × displacement relationship</li>
@@ -1721,12 +1767,12 @@ F → [m₁] ─── [m₂]
                         </ul>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Their Weightage</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">High Priority Topics</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">High Priority Topics</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Free Body Diagrams (40% of problems)</li>
                                     <li>• Friction - Static, Kinetic, Rolling</li>
                                     <li>• Connected Bodies & Pulley Systems</li>
@@ -1734,8 +1780,8 @@ F → [m₁] ─── [m₂]
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">Medium Priority Topics</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">Medium Priority Topics</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Circular Motion & Centripetal Force</li>
                                     <li>• Banking of Roads</li>
                                     <li>• Pseudo Forces in Non-inertial Frames</li>
@@ -1745,12 +1791,12 @@ F → [m₁] ─── [m₂]
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Laws of Motion Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 4-5 days (3 hours/day)</li>
                                 <li>Master Free Body Diagrams first</li>
                                 <li>Focus on Friction and Inclined Plane problems</li>
@@ -1760,7 +1806,7 @@ F → [m₁] ─── [m₂]
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 7-10 days (4 hours/day)</li>
                                 <li>Deep dive into constraint motion problems</li>
                                 <li>Master pseudo force applications</li>
@@ -1771,29 +1817,29 @@ F → [m₁] ─── [m₂]
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong FBD:</strong> Not isolating the body properly, including reaction forces on the same body
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Friction direction:</strong> Drawing friction in wrong direction - it opposes relative motion/tendency
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Normal ≠ mg always:</strong> On incline N = mg cos θ, not mg
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Not checking if block moves:</strong> Compare applied force with maximum static friction first
                             </div>
@@ -1805,68 +1851,68 @@ F → [m₁] ─── [m₂]
     </section>
 
     <!-- Footer -->
-   <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+   <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -1874,12 +1920,12 @@ F → [m₁] ─── [m₂]
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -1888,25 +1934,25 @@ F → [m₁] ─── [m₂]
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
@@ -1914,7 +1960,7 @@ F → [m₁] ─── [m₂]
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 

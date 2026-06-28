@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Atoms and Nuclei - Complete JEE Physics Notes with 150+ Examples">
     <meta property="og:description" content="Master Bohr model, radioactivity, nuclear reactions & binding energy. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Atoms and Nuclei - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei">
     <meta name="twitter:title" content="Atoms and Nuclei - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master nuclear physics with 150+ solved examples. Complete notes on Bohr model, radioactivity & nuclear reactions for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Atoms & Nuclei JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Atoms and Nuclei - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Atoms and Nuclei covering Bohr model, radioactivity, nuclear reactions, and binding energy with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -378,60 +391,62 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
+    
 
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                   <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                   <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -440,30 +455,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Atoms and Nuclei</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Atoms and Nuclei</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -471,32 +486,32 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Atoms and Nuclei</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Atoms and Nuclei</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Atomic Models
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Bohr Model
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     H-Spectrum
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Radioactivity
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Decay Law
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Nuclear Physics
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Binding Energy
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Reactions
                 </a>
             </div>
@@ -504,28 +519,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Atoms & Nuclei
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Modern Physics with complete notes on Bohr's Model, Hydrogen Spectrum, Radioactivity, Nuclear Reactions, and Binding Energy. Includes 150+ solved problems and all JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All Formulas</span>
                     </div>
                 </div>
@@ -534,21 +549,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Atoms and Nuclei JEE Notes">
         <meta itemprop="description" content="Complete study notes for Atoms and Nuclei">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">245</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -558,15 +573,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -578,53 +593,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Atomic Models</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Bohr's Theory</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Hydrogen Spectrum</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Radioactivity</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Decay Law</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Nuclear Structure</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Binding Energy</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Nuclear Reactions</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Atomic Models</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Bohr's Theory</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Hydrogen Spectrum</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Radioactivity</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Decay Law</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Nuclear Structure</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Binding Energy</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Nuclear Reactions</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./dual-nature-of-radiation-and-matter.html" class="text-primary font-semibold hover:underline">Dual Nature Of Radiation And Matter &rarr;</a>
+                <a href="./semiconductors.html" class="text-primary font-semibold hover:underline">Semiconductors &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei.webp"
                         alt="Atoms and Nuclei JEE notes, Formulas, PYQs"
                         title="Atoms and Nuclei — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Atoms and Nuclei JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Atomic Models -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Atomic Models - Evolution</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Atomic Models - Evolution</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -634,7 +661,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Thomson's Plum Pudding Model (1904)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Key Features</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li>Atom is a positively charged sphere with electrons embedded in it (like plums in pudding)</li>
@@ -642,8 +669,8 @@
                                 <li>Electrons are uniformly distributed throughout the positive sphere</li>
                                 <li>Approximate radius of atom: 10⁻¹⁰ m</li>
                             </ul>
-                            <div class="bg-red-50 p-4 rounded-lg mt-4">
-                                <p class="font-semibold text-danger">❌ Limitations:</p>
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
+                                <p class="font-semibold text-primary">❌ Limitations:</p>
                                 <ul class="list-disc list-inside text-sm mt-2 space-y-1">
                                     <li>Could not explain Rutherford's alpha scattering experiment</li>
                                     <li>Could not explain atomic spectra</li>
@@ -654,7 +681,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Rutherford's Nuclear Model (1911)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Alpha Particle Scattering Experiment</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
@@ -679,18 +706,18 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📐</span> Distance of Closest Approach Formula
                             </h4>
                             <p class="mb-3">The minimum distance between α-particle and nucleus when KE = PE:</p>
-                            <div class="math-display bg-white p-4 rounded-lg">
+                            <div class="math-display bg-canvas p-4 rounded-lg">
                                 \[r_0 = \frac{1}{4\pi\epsilon_0} \cdot \frac{2Ze^2}{K.E.}\]
                             </div>
                             <p class="text-sm mt-3">Where Z = atomic number of nucleus, e = charge of electron, K.E. = kinetic energy of α-particle</p>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Limitations of Rutherford Model
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -703,10 +730,10 @@
                 </section>
 
                 <!-- Chapter 2: Bohr's Model -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Bohr's Atomic Model</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Bohr's Atomic Model</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -714,13 +741,13 @@
                             Niels Bohr (1913) proposed a revolutionary model that successfully explained hydrogen spectrum and resolved the stability problem of Rutherford's model.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Bohr's Three Postulates</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Bohr's Three Postulates</h3>
                         
                         <div class="grid grid-cols-1 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Postulate 1: Stationary Orbits</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Postulate 1: Stationary Orbits</h5>
                                 <p class="mb-3">Electrons revolve in certain discrete circular orbits called <strong>stationary orbits</strong> without radiating energy.</p>
-                                <div class="bg-purple-50 p-3 rounded">
+                                <div class="bg-surface-2 p-3 rounded">
                                     <p class="text-sm font-semibold">Angular momentum is quantized:</p>
                                     <div class="math-display">
                                         \[L = mvr = \frac{nh}{2\pi}\]
@@ -729,19 +756,19 @@
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Postulate 2: Energy Levels</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Postulate 2: Energy Levels</h5>
                                 <p class="mb-3">Each stationary orbit has a definite energy called <strong>energy level</strong>. Energy increases with orbit number.</p>
-                                <div class="bg-purple-50 p-3 rounded">
+                                <div class="bg-surface-2 p-3 rounded">
                                     <p class="text-sm">Ground state (n=1): Lowest energy, most stable</p>
                                     <p class="text-sm">Excited states (n>1): Higher energy, less stable</p>
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Postulate 3: Energy Emission/Absorption</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Postulate 3: Energy Emission/Absorption</h5>
                                 <p class="mb-3">Energy is emitted or absorbed only when electron jumps between orbits:</p>
-                                <div class="math-display bg-purple-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[E_{\text{photon}} = hν = E_i - E_f\]
                                 </div>
                                 <p class="text-sm mt-2">Emission: E_i > E_f (higher to lower energy)</p>
@@ -749,18 +776,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Important Formulas for Hydrogen Atom</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Important Formulas for Hydrogen Atom</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Physical Quantity</th>
                                         <th class="p-4 text-left">Formula</th>
                                         <th class="p-4 text-left">For nth Orbit</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Radius of orbit</td>
                                         <td class="p-4 font-mono text-sm">r_n = n²(ε₀h²/πme²)</td>
@@ -800,7 +827,7 @@
                                 <span class="text-2xl mr-2">💡</span> Important Relations (Must Remember!)
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">For Hydrogen Atom:</p>
                                     <ul class="space-y-1 text-sm">
                                         <li>• r_n ∝ n²</li>
@@ -810,7 +837,7 @@
                                         <li>• T (time period) ∝ n³</li>
                                     </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Energy Relations:</p>
                                     <ul class="space-y-1 text-sm">
                                         <li>• K.E. = -E_n = +13.6/n² eV</li>
@@ -824,20 +851,20 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main 2023 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate the radius of 3rd orbit of hydrogen atom. Given: radius of 1st orbit = 0.529 Å
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">We know: r_n = n² × r₁</p>
                                 <p class="mb-2">For n = 3:</p>
                                 <div class="math-display">
                                     \[r_3 = 3^2 \times 0.529 = 9 \times 0.529 = 4.761 \text{ Å}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{r_3 = 4.76 \text{ Å}}\]
                                 </div>
                             </div>
@@ -846,10 +873,10 @@
                 </section>
 
                 <!-- Chapter 3: Hydrogen Spectrum -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Hydrogen Spectrum</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Hydrogen Spectrum</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -859,9 +886,9 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Rydberg Formula (Universal)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">General Formula for Wavelength</h5>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-xl">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                                 \[\frac{1}{\lambda} = R_H Z^2 \left(\frac{1}{n_f^2} - \frac{1}{n_i^2}\right)\]
                             </div>
                             <div class="mt-4 space-y-2 text-sm">
@@ -879,9 +906,9 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Spectral Series of Hydrogen</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Series Name</th>
                                         <th class="p-4 text-left">n_f</th>
                                         <th class="p-4 text-left">n_i</th>
@@ -889,7 +916,7 @@
                                         <th class="p-4 text-left">Region</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Lyman Series</td>
                                         <td class="p-4 font-mono">1</td>
@@ -935,23 +962,23 @@
                             </h4>
                             <p class="text-lg mb-3"><strong>"Little Babies Play, But Papa Fights"</strong></p>
                             <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-bold text-primary">Little</p>
                                     <p class="text-sm">Lyman (n=1)</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-bold text-primary">Babies</p>
                                     <p class="text-sm">Balmer (n=2)</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-bold text-primary">Play</p>
                                     <p class="text-sm">Paschen (n=3)</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-bold text-primary">But</p>
                                     <p class="text-sm">Brackett (n=4)</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-bold text-primary">Papa</p>
                                     <p class="text-sm">Pfund (n=5)</p>
                                 </div>
@@ -959,13 +986,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate the wavelength of first line of Balmer series. (R_H = 1.097 × 10⁷ m⁻¹)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">First line of Balmer series: n_f = 2, n_i = 3</p>
                                 <div class="math-display">
@@ -980,7 +1007,7 @@
                                 <div class="math-display">
                                     \[\lambda = \frac{36}{5 \times 1.097 \times 10^7} = 6.56 \times 10^{-7} \text{ m}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{\lambda = 656 \text{ nm (H}_\alpha \text{ line, red color)}}\]
                                 </div>
                             </div>
@@ -989,10 +1016,10 @@
                 </section>
 
                 <!-- Chapter 4: Radioactivity -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Radioactivity</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Radioactivity</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1000,18 +1027,18 @@
                             Radioactivity is the spontaneous emission of radiation from unstable atomic nuclei. It was discovered by Henri Becquerel in 1896 and further studied by Marie and Pierre Curie.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Types of Radioactive Decay</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Types of Radioactive Decay</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">α (Alpha) Decay</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">α (Alpha) Decay</h5>
                                 <div class="mb-3">
                                     <p class="font-semibold">Particle: Helium nucleus</p>
                                     <div class="math-display text-sm">
                                         \[^4_2He \text{ or } \alpha\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="mb-2"><strong>Reaction:</strong></p>
                                     <div class="math-display">
                                         \[^A_ZX \rightarrow ^{A-4}_{Z-2}Y + ^4_2He\]
@@ -1027,15 +1054,15 @@
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">β (Beta) Decay</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">β (Beta) Decay</h5>
                                 <div class="mb-3">
                                     <p class="font-semibold">β⁻: Electron emission</p>
                                     <div class="math-display text-sm">
                                         \[^0_{-1}e \text{ or } \beta^-\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="mb-2"><strong>β⁻ Reaction:</strong></p>
                                     <div class="math-display">
                                         \[^A_ZX \rightarrow ^{A}_{Z+1}Y + ^0_{-1}e + \bar{\nu}\]
@@ -1054,15 +1081,15 @@
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">γ (Gamma) Decay</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">γ (Gamma) Decay</h5>
                                 <div class="mb-3">
                                     <p class="font-semibold">Particle: Photon (EM wave)</p>
                                     <div class="math-display text-sm">
                                         \[\gamma \text{ (high energy photon)}\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="mb-2"><strong>Reaction:</strong></p>
                                     <div class="math-display">
                                         \[^A_Z X^* \rightarrow ^A_ZX + \gamma\]
@@ -1081,16 +1108,16 @@
                         </div>
 
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">α-rays</th>
                                         <th class="p-4 text-left">β-rays</th>
                                         <th class="p-4 text-left">γ-rays</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Nature</td>
                                         <td class="p-4">He nucleus</td>
@@ -1128,10 +1155,10 @@
                 </section>
 
                 <!-- Chapter 5: Radioactive Decay Law -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Law of Radioactive Decay</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Law of Radioactive Decay</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1139,11 +1166,11 @@
                             Radioactive decay is a random process, but for large number of nuclei, it follows predictable mathematical laws discovered by Rutherford and Soddy.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.1 Decay Law and Important Formulas</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Decay Law and Important Formulas</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Fundamental Decay Equation</h5>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg text-center text-xl mb-4">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Fundamental Decay Equation</h5>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl mb-4">
                                 \[N(t) = N_0 e^{-\lambda t}\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
@@ -1166,13 +1193,13 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.2 Half-Life and Mean Life</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Half-Life and Mean Life</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Half-Life (t₁/₂)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Half-Life (t₁/₂)</h5>
                                 <p class="mb-3">Time in which half of radioactive nuclei decay</p>
-                                <div class="math-display bg-purple-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[t_{1/2} = \frac{0.693}{\lambda} = \frac{\ln 2}{\lambda}\]
                                 </div>
                                 <div class="mt-4 text-sm">
@@ -1184,10 +1211,10 @@
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Mean Life (τ)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Mean Life (τ)</h5>
                                 <p class="mb-3">Average lifetime of a radioactive nucleus</p>
-                                <div class="math-display bg-purple-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[\tau = \frac{1}{\lambda} = 1.44 \times t_{1/2}\]
                                 </div>
                                 <div class="mt-4 text-sm">
@@ -1200,21 +1227,21 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.3 Activity of Radioactive Sample</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Activity of Radioactive Sample</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Activity (A) or (R)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Activity (A) or (R)</h5>
                             <p class="mb-3">Number of disintegrations per unit time</p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[A = \lambda N = \lambda N_0 e^{-\lambda t} = A_0 e^{-\lambda t}\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">SI Unit:</p>
                                     <p>Becquerel (Bq)</p>
                                     <p class="text-sm">1 Bq = 1 decay/second</p>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Old Unit:</p>
                                     <p>Curie (Ci)</p>
                                     <p class="text-sm">1 Ci = 3.7 × 10¹⁰ Bq</p>
@@ -1223,13 +1250,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main 2022 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> The half-life of a radioactive substance is 20 days. Calculate the time in which 7/8th of the sample will decay.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Given: t₁/₂ = 20 days</p>
                                 <p class="mb-2">If 7/8 decayed, remaining = 1 - 7/8 = 1/8</p>
@@ -1247,7 +1274,7 @@
                                 <div class="math-display">
                                     \[t = n \times t_{1/2} = 3 \times 20 = 60 \text{ days}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{t = 60 \text{ days} = 3 \text{ half-lives}}\]
                                 </div>
                             </div>
@@ -1258,7 +1285,7 @@
                                 <span class="text-2xl mr-2">💡</span> Quick Formulas for JEE
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Number of nuclei:</p>
                                     <ul class="text-sm space-y-1">
                                         <li>• After time t: N = N₀e⁻ᵏᵗ</li>
@@ -1266,7 +1293,7 @@
                                         <li>• Decayed nuclei: N₀ - N</li>
                                     </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Activity relations:</p>
                                     <ul class="text-sm space-y-1">
                                         <li>• A = λN = (0.693/t₁/₂) × N</li>
@@ -1282,10 +1309,10 @@
 <!-- Continuing from Chapter 5... -->
 
                 <!-- Chapter 6: Nuclear Structure -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Nuclear Structure & Composition</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Nuclear Structure & Composition</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1295,9 +1322,9 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Nuclear Notation and Terminology</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Standard Nuclear Notation</h5>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-2xl">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-2xl">
                                 \[^A_Z X_N\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-sm">
@@ -1328,10 +1355,10 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Types of Nuclides</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Isotopes</h5>
                                 <p class="mb-3 text-sm">Same Z, different A (different N)</p>
-                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <ul class="space-y-1">
                                         <li>¹H, ²H (D), ³H (T)</li>
@@ -1347,10 +1374,10 @@
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Isobars</h5>
                                 <p class="mb-3 text-sm">Same A, different Z</p>
-                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <ul class="space-y-1">
                                         <li>¹⁴C, ¹⁴N</li>
@@ -1365,10 +1392,10 @@
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Isotones</h5>
                                 <p class="mb-3 text-sm">Same N, different Z and A</p>
-                                <div class="bg-blue-50 p-3 rounded text-sm">
+                                <div class="bg-surface-2 p-3 rounded text-sm">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <ul class="space-y-1">
                                         <li>¹⁴C, ¹⁵N (both N=8)</li>
@@ -1386,9 +1413,9 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Nuclear Size and Density</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Nuclear Radius Formula</h5>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-xl">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                                 \[R = R_0 A^{1/3}\]
                             </div>
                             <div class="mt-4 space-y-3">
@@ -1399,12 +1426,12 @@
                                     <li>A = mass number</li>
                                 </ul>
                                 
-                                <div class="bg-white p-4 rounded mt-4">
+                                <div class="bg-canvas p-4 rounded mt-4">
                                     <p class="font-semibold mb-2">Nuclear Density:</p>
                                     <div class="math-display">
                                         \[\rho = \frac{3m}{4\pi R_0^3} \approx 2.3 \times 10^{17} \text{ kg/m}^3\]
                                     </div>
-                                    <p class="text-sm mt-2 text-danger font-semibold">⚠️ Nuclear density is independent of A (constant for all nuclei!)</p>
+                                    <p class="text-sm mt-2 text-primary font-semibold">⚠️ Nuclear density is independent of A (constant for all nuclei!)</p>
                                 </div>
                             </div>
                         </div>
@@ -1425,10 +1452,10 @@
                 </section>
 
                 <!-- Chapter 7: Mass Defect and Binding Energy -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Mass Defect & Binding Energy</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Mass Defect & Binding Energy</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1436,12 +1463,12 @@
                             Mass-energy equivalence (E = mc²) reveals that the mass of a nucleus is less than the sum of its constituent nucleons. This "missing mass" appears as binding energy that holds the nucleus together.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.1 Mass Defect (Δm)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Mass Defect (Δm)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">Definition and Formula</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Definition and Formula</h5>
                             <p class="mb-4">The difference between the sum of masses of nucleons and actual mass of nucleus</p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center text-xl">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                                 \[\Delta m = [Zm_p + Nm_n] - M_{\text{nucleus}}\]
                             </div>
                             <div class="mt-4 space-y-2 text-sm">
@@ -1450,7 +1477,7 @@
                                     \[\Delta m = [Zm_H + Nm_n] - M_{\text{atom}}\]
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                    <div class="bg-white p-3 rounded">
+                                    <div class="bg-canvas p-3 rounded">
                                         <p class="font-semibold">Given values:</p>
                                         <ul class="list-disc list-inside mt-2 space-y-1">
                                             <li>m_p = 1.007276 u</li>
@@ -1459,7 +1486,7 @@
                                             <li>1 u = 931.5 MeV/c²</li>
                                         </ul>
                                     </div>
-                                    <div class="bg-white p-3 rounded">
+                                    <div class="bg-canvas p-3 rounded">
                                         <p class="font-semibold">Where:</p>
                                         <ul class="list-disc list-inside mt-2 space-y-1">
                                             <li>Z = proton number</li>
@@ -1472,28 +1499,28 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.2 Binding Energy (BE)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Binding Energy (BE)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">Einstein's Mass-Energy Relation</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Einstein's Mass-Energy Relation</h5>
                             <p class="mb-4">Energy equivalent of mass defect - energy required to break nucleus into individual nucleons</p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center text-xl">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                                 \[BE = \Delta m \times c^2\]
                             </div>
-                            <div class="mt-4 bg-white p-4 rounded">
+                            <div class="mt-4 bg-canvas p-4 rounded">
                                 <p class="font-semibold mb-2">In practical units:</p>
                                 <div class="math-display">
                                     \[BE (\text{MeV}) = \Delta m (\text{u}) \times 931.5\]
                                 </div>
-                                <p class="text-sm mt-3 text-success font-semibold">✓ Higher BE = More stable nucleus</p>
+                                <p class="text-sm mt-3 text-primary font-semibold">✓ Higher BE = More stable nucleus</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.3 Binding Energy Per Nucleon (BE/A)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Binding Energy Per Nucleon (BE/A)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">Most Important Concept!</h5>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center text-xl">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Most Important Concept!</h5>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                                 \[\frac{BE}{A} = \frac{\text{Total Binding Energy}}{\text{Mass Number}}\]
                             </div>
                             <div class="mt-4">
@@ -1510,8 +1537,8 @@
 
                         <div class="diagram-box my-8 rounded-xl">
                             <div class="text-center">
-                                <p class="font-bold text-xl mb-4 text-gray-700">Binding Energy Per Nucleon vs Mass Number</p>
-                                <div class="bg-white p-6 rounded-lg inline-block">
+                                <p class="font-bold text-xl mb-4 text-ink-muted">Binding Energy Per Nucleon vs Mass Number</p>
+                                <div class="bg-canvas p-6 rounded-lg inline-block">
                                     <pre class="text-xs text-left">
     BE/A (MeV)
       9 |                    Fe-56 (8.8 MeV)
@@ -1530,19 +1557,19 @@
           Fusion           Most Stable      Fission
          Possible                          Possible
                     </pre>
-                                    <p class="text-sm mt-3 text-gray-600">Peak at Fe-56 indicates maximum stability</p>
+                                    <p class="text-sm mt-3 text-ink-muted">Peak at Fe-56 indicates maximum stability</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Advanced 2021 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate the binding energy of ⁴₂He nucleus. Given: mass of ⁴He = 4.0026 u, m_p = 1.0073 u, m_n = 1.0087 u
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">For ⁴₂He: Z = 2, N = 2, A = 4</p>
                                 
@@ -1573,14 +1600,14 @@
                                     \[\frac{BE}{A} = \frac{27.39}{4} = 6.85 \text{ MeV/nucleon}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{BE = 27.4 \text{ MeV, } BE/A = 6.85 \text{ MeV/nucleon}}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistakes in JEE
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1594,10 +1621,10 @@
                 </section>
 
                 <!-- Chapter 8: Nuclear Reactions -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Nuclear Reactions</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Nuclear Reactions</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1605,13 +1632,13 @@
                             Nuclear reactions involve changes in the nucleus, converting one element to another. Energy is released or absorbed according to mass-energy equivalence.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">8.1 Types of Nuclear Reactions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Types of Nuclear Reactions</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Nuclear Fission</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Nuclear Fission</h5>
                                 <p class="mb-3 text-sm">Heavy nucleus splits into lighter nuclei</p>
-                                <div class="bg-red-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Example: Uranium fission</p>
                                     <div class="math-display text-sm">
                                         \[^{235}_{92}U + ^1_0n \rightarrow ^{141}_{56}Ba + ^{92}_{36}Kr + 3^1_0n + \text{Energy}\]
@@ -1626,10 +1653,10 @@
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Nuclear Fusion</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Nuclear Fusion</h5>
                                 <p class="mb-3 text-sm">Light nuclei combine to form heavier nucleus</p>
-                                <div class="bg-red-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Example: Sun's energy</p>
                                     <div class="math-display text-sm">
                                         \[^2_1H + ^3_1H \rightarrow ^4_2He + ^1_0n + 17.6 \text{ MeV}\]
@@ -1645,16 +1672,16 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">8.2 Q-Value of Nuclear Reaction</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Q-Value of Nuclear Reaction</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Energy Released or Absorbed</h5>
-                            <div class="math-display bg-red-50 p-4 rounded-lg text-center text-xl">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Energy Released or Absorbed</h5>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                                 \[Q = (M_{\text{reactants}} - M_{\text{products}}) \times c^2\]
                             </div>
                             <div class="mt-4 space-y-3">
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="bg-white p-4 rounded">
+                                    <div class="bg-canvas p-4 rounded">
                                         <p class="font-semibold mb-2">If Q > 0 (Exothermic):</p>
                                         <ul class="list-disc list-inside text-sm space-y-1">
                                             <li>Energy is released</li>
@@ -1663,7 +1690,7 @@
                                             <li>Example: Fission, Fusion</li>
                                         </ul>
                                     </div>
-                                    <div class="bg-white p-4 rounded">
+                                    <div class="bg-canvas p-4 rounded">
                                         <p class="font-semibold mb-2">If Q < 0 (Endothermic):</p>
                                         <ul class="list-disc list-inside text-sm space-y-1">
                                             <li>Energy is absorbed</li>
@@ -1676,12 +1703,12 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">8.3 Conservation Laws in Nuclear Reactions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 Conservation Laws in Nuclear Reactions</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Must be Conserved</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Must be Conserved</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-red-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">✓ Always Conserved:</p>
                                     <ul class="list-disc list-inside space-y-2 text-sm">
                                         <li><strong>Mass-Energy:</strong> Total (mass + energy) conserved</li>
@@ -1691,27 +1718,27 @@
                                         <li><strong>Nucleon Number:</strong> Total baryons conserved</li>
                                     </ul>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">✗ NOT Conserved:</p>
                                     <ul class="list-disc list-inside space-y-2 text-sm">
                                         <li><strong>Mass:</strong> Can convert to energy</li>
                                         <li><strong>Energy:</strong> Can convert to mass</li>
                                         <li><strong>Number of particles:</strong> Can change</li>
                                     </ul>
-                                    <p class="mt-3 text-danger font-semibold">But mass-energy together always conserved!</p>
+                                    <p class="mt-3 text-primary font-semibold">But mass-energy together always conserved!</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Main 2024 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate Q-value for the reaction: ²H + ³H → ⁴He + n
                                 <br>Given: m(²H) = 2.014 u, m(³H) = 3.016 u, m(⁴He) = 4.003 u, m_n = 1.009 u
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 
                                 <p class="mb-2"><strong>Step 1:</strong> Calculate mass of reactants</p>
@@ -1746,10 +1773,10 @@
                                     \[Q = 0.018 \times 931.5 = 16.77 \text{ MeV}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{Q = 17.6 \text{ MeV (Energy Released)}}\]
                                 </div>
-                                <p class="text-sm mt-2 text-success">✓ Positive Q-value indicates exothermic fusion reaction</p>
+                                <p class="text-sm mt-2 text-primary">✓ Positive Q-value indicates exothermic fusion reaction</p>
                             </div>
                         </div>
 
@@ -1758,7 +1785,7 @@
                                 <span class="text-2xl mr-2">🎯</span> JEE Strategy for Nuclear Reactions
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Quick Checks:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li>Always verify charge conservation (ΣZ)</li>
@@ -1767,7 +1794,7 @@
                                         <li>Q < 0 → energy needed</li>
                                     </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Common Questions:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li>Identifying missing particle</li>
@@ -1782,14 +1809,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Radioactive Decay: 35%</li>
@@ -1798,7 +1825,7 @@
                                 <li>✓ Bohr Model & Spectrum: 15%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Binding energy calculations: 40%</li>
@@ -1809,8 +1836,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculating half-life from decay data</li>
                             <li>Finding remaining/decayed fraction after n half-lives</li>
@@ -1830,7 +1857,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1852,11 +1879,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Year-wise Topic Distribution</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Year-wise Topic Distribution</h3>
                         <div class="overflow-x-auto">
                             <table class="w-full border-collapse">
-                                <thead class="bg-accent text-white">
+                                <thead class="bg-accent text-ink">
                                     <tr>
                                         <th class="p-3 text-left">Year</th>
                                         <th class="p-3 text-left">JEE Main Topics</th>
@@ -1890,21 +1917,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024) with Solutions
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate the radius of 2nd Bohr orbit in hydrogen atom. (Given r₁ = 0.529 Å)</li>
                             <li>Find the wavelength of first line of Balmer series.</li>
@@ -1919,8 +1946,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Prove that for hydrogen: velocity in nth orbit v_n = (c/137) × (1/n) where c is speed of light.</li>
                             <li>Calculate the Q-value for reaction: ⁷Li + p → 2⁴He. Given masses: Li=7.016 u, p=1.008 u, He=4.003 u</li>
@@ -1935,8 +1962,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Derive expression for time period of electron in nth Bohr orbit. Show T ∝ n³.</li>
                             <li>In a sample of ²³⁸U, ratio of ²³⁸U to ²⁰⁶Pb is 1:3. Find age of sample (t₁/₂ of U = 4.5×10⁹ years)</li>
@@ -1952,57 +1979,75 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Complete Solutions PDF with Detailed Steps
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./capacitance.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Capacitance</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./centre-of-mass-and-collision.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Centre Of Mass And Collision</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./current-electricity.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Current Electricity</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/semiconductor-electronics" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/semiconductor-electronics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Semiconductor Electronics</h3>
-                    <p class="text-gray-600">PN Junction, Transistors, Logic Gates, Digital Electronics</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Semiconductor Electronics</h3>
+                    <p class="text-ink-muted">PN Junction, Transistors, Logic Gates, Digital Electronics</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Dual Nature of Radiation</h3>
-                    <p class="text-gray-600">Photoelectric Effect, De Broglie Waves, Davisson-Germer</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Dual Nature of Radiation</h3>
+                    <p class="text-ink-muted">Photoelectric Effect, De Broglie Waves, Davisson-Germer</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Electromagnetic Waves</h3>
-                    <p class="text-gray-600">Maxwell Equations, EM Spectrum, Wave Properties</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electromagnetic Waves</h3>
+                    <p class="text-ink-muted">Maxwell Equations, EM Spectrum, Wave Properties</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -2010,7 +2055,7 @@
 
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2018,34 +2063,34 @@
     </section>
 
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Atoms and Nuclei - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Atoms and Nuclei - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Atoms and Nuclei is Crucial for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Atoms and Nuclei</strong> is a high-scoring chapter in <strong>JEE Physics Modern Physics</strong> section. It carries 8-12% weightage in JEE Main and 10-15% in JEE Advanced, making it one of the most important topics:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Bohr's Model</strong> - Foundation for quantum mechanics (3-4 marks guaranteed)</li>
                             <li><strong>Radioactivity</strong> - Decay law problems are formula-based (easy scoring)</li>
                             <li><strong>Binding Energy</strong> - Conceptual questions with calculations</li>
                             <li><strong>Nuclear Reactions</strong> - Q-value and mass-energy problems (JEE Advanced favorite)</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             In <strong>JEE Advanced</strong>, this chapter is often combined with Modern Physics concepts making it a crucial scoring opportunity for top ranks.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Must-Know Formulas</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Bohr Model Essentials</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Bohr Model Essentials</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• r_n = 0.529n² Å (radius)</li>
                                     <li>• E_n = -13.6/n² eV (energy)</li>
                                     <li>• v_n ∝ 1/n (velocity)</li>
@@ -2053,8 +2098,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Radioactive Decay</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Radioactive Decay</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• N = N₀e^(-λt)</li>
                                     <li>• t₁/₂ = 0.693/λ</li>
                                     <li>• τ = 1/λ = 1.44 t₁/₂</li>
@@ -2062,8 +2107,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. Nuclear Physics</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">3. Nuclear Physics</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• BE = Δm × 931.5 MeV</li>
                                     <li>• R = R₀A^(1/3)</li>
                                     <li>• Q = (M_reactants - M_products)c²</li>
@@ -2075,12 +2120,12 @@
                 </div>
                 
                 <!-- Study Strategy -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Master Atoms and Nuclei for JEE?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 4-5 days (3 hours/day)</li>
                                 <li>Master <strong>Bohr model formulas</strong> - most frequently asked</li>
                                 <li>Practice 100+ MCQs on radioactive decay (half-life calculations)</li>
@@ -2091,7 +2136,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 7-8 days (4 hours/day)</li>
                                 <li>Deep understanding of <strong>mass-energy equivalence</strong></li>
                                 <li>Practice multi-step decay chain problems</li>
@@ -2104,35 +2149,35 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes Students Make in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes Students Make in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Energy sign confusion:</strong> Total energy of electron in Bohr orbit is NEGATIVE (-13.6/n² eV), but ionization energy is POSITIVE
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Half-life vs Mean life:</strong> τ = 1.44 × t₁/₂ (not 1.5 or other values)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Mass defect calculation:</strong> Don't forget to subtract electron masses when using atomic masses
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Series identification:</strong> n_f = 1 is Lyman (UV), n_f = 2 is Balmer (Visible) - don't mix up
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Unit conversion:</strong> Always convert u to MeV using 931.5 MeV/c² per u (not 930 or 932)
                             </div>
@@ -2141,11 +2186,11 @@
                 </div>
                 
                 <!-- Weightage Table -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 Chapter-wise Weightage Breakdown (Last 10 Years)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Topic</th>
                                     <th class="p-3 text-center">JEE Main %</th>
@@ -2155,28 +2200,28 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Radioactive Decay</td>
                                     <td class="p-3 text-center">35%</td>
                                     <td class="p-3 text-center">25%</td>
                                     <td class="p-3">Easy</td>
                                     <td class="p-3 text-sm">Master decay law formula</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Binding Energy</td>
                                     <td class="p-3 text-center">30%</td>
                                     <td class="p-3 text-center">35%</td>
                                     <td class="p-3">Medium</td>
                                     <td class="p-3 text-sm">Practice BE/A curve questions</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Nuclear Reactions</td>
                                     <td class="p-3 text-center">20%</td>
                                     <td class="p-3 text-center">30%</td>
                                     <td class="p-3">Medium-Hard</td>
                                     <td class="p-3 text-sm">Focus on Q-value calculations</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Bohr Model & Spectrum</td>
                                     <td class="p-3 text-center">15%</td>
                                     <td class="p-3 text-center">10%</td>
@@ -2186,16 +2231,16 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Analysis:</strong> Radioactive decay and binding energy together contribute 65% of questions. Focus on these two topics for guaranteed 12-15 marks in JEE Main.
                     </p>
                 </div>
 
                 <!-- Quick Revision Points -->
-                <div class="mt-8 bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-2xl border-2 border-accent">
-                    <h3 class="text-2xl font-bold text-accent mb-4">⚡ Last Minute Revision Points (24 Hours Before Exam)</h3>
+                <div class="mt-8 bg-gradient-to-r from-surface-2 to-surface-2 p-8 rounded-2xl border-2 border-accent">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚡ Last Minute Revision Points (24 Hours Before Exam)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Formulas to Memorize</h4>
                             <ul class="text-sm space-y-2">
                                 <li>✓ r_n = 0.529n² Å</li>
@@ -2206,7 +2251,7 @@
                                 <li>✓ 1/λ = R(1/n_f² - 1/n_i²)</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Constants to Remember</h4>
                             <ul class="text-sm space-y-2">
                                 <li>✓ R_H = 1.097 × 10⁷ m⁻¹</li>
@@ -2217,7 +2262,7 @@
                                 <li>✓ h = 6.63 × 10⁻³⁴ J·s</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Quick Checks</h4>
                             <ul class="text-sm space-y-2">
                                 <li>✓ α: -4 mass, -2 charge</li>
@@ -2236,64 +2281,64 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Physics Topics -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Modern Physics</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="hover:text-white transition">Atoms and Nuclei</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation" class="hover:text-white transition">Dual Nature</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/semiconductor-electronics" class="hover:text-white transition">Semiconductors</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="hover:text-white transition">EM Waves</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="hover:text-ink transition">Atoms and Nuclei</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation" class="hover:text-ink transition">Dual Nature</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/semiconductor-electronics" class="hover:text-ink transition">Semiconductors</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="hover:text-ink transition">EM Waves</a></li>
                     </ul>
                 </div>
 
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#pyq" class="hover:text-white transition">Previous Year Papers</a></li>
-                        <li><a href="#practice" class="hover:text-white transition">Practice Problems</a></li>
-                        <li><a href="#" class="hover:text-white transition">Formula Sheet</a></li>
-                        <li><a href="#" class="hover:text-white transition">Video Lectures</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="#pyq" class="hover:text-ink transition">Previous Year Papers</a></li>
+                        <li><a href="#practice" class="hover:text-ink transition">Practice Problems</a></li>
+                        <li><a href="#" class="hover:text-ink transition">Formula Sheet</a></li>
+                        <li><a href="#" class="hover:text-ink transition">Video Lectures</a></li>
                     </ul>
                 </div>
 
                 <!-- Important Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Important</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE Main Official</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE Advanced Official</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE Main Official</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE Advanced Official</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms</a>
                 </div>
             </div>
         </div>
@@ -2301,7 +2346,7 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

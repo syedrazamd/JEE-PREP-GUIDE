@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Sequences and Series - Complete JEE Mathematics Notes with 250+ Examples">
     <meta property="og:description" content="Master AP, GP, HP, AGP & infinite series. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Sequences and Series - JEE Mathematics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series">
     <meta name="twitter:title" content="Sequences and Series - Complete JEE Mathematics Notes">
     <meta name="twitter:description" content="Master sequences and series with 250+ solved examples. Complete notes on AP, GP, HP & infinite series for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Sequences Series JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
@@ -123,7 +136,7 @@
       "@type": "Article",
       "headline": "Sequences and Series - Complete JEE Mathematics Notes 2025-26",
       "description": "Comprehensive notes on Sequences and Series covering AP, GP, HP, AGP, infinite series with 250+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -134,7 +147,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -362,7 +375,7 @@
       "@type": "VideoObject",
       "name": "Sequences and Series - Complete Tutorial for JEE",
       "description": "Learn Sequences and Series for JEE with AP, GP, HP formulas and examples",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT120M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/maths/sequences-and-series"
@@ -399,59 +412,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#e11d48',
-                        secondary: '#be123c',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-maths.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-maths.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-rose-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #e11d48, #fb7185); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="JEE Prep Guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="JEE Prep Guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -460,30 +475,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Mathematics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Sequences and Series</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Sequences and Series</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -491,35 +506,35 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Sequences and Series</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Sequences and Series</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Basics
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     AP
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     GP
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     HP
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     AM-GM-HM
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     AGP
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Special Series
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Infinite Series
                 </a>
-                <a href="#chapter9" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter9" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Applications
                 </a>
             </div>
@@ -527,28 +542,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-rose-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Sequences and Series
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the highest weightage chapter with complete notes on AP, GP, HP, AGP, AM-GM-HM, Infinite Series & Special Summations. Includes 250+ solved problems and all JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 9 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 250+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All Formulas</span>
                     </div>
                 </div>
@@ -557,21 +572,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Sequences and Series JEE Notes">
         <meta itemprop="description" content="Complete study notes for Sequences and Series">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">428</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -581,15 +596,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">250+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">5 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">5 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -601,36 +616,48 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Sequence & Series Basics</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Arithmetic Progression (AP)</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Geometric Progression (GP)</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Harmonic Progression (HP)</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. AM-GM-HM Relations</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. AGP & Mixed Series</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Special Series</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Infinite Series</a></li>
-                        <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">9. Applications</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Sequence & Series Basics</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Arithmetic Progression (AP)</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Geometric Progression (GP)</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Harmonic Progression (HP)</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. AM-GM-HM Relations</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. AGP & Mixed Series</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Special Series</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Infinite Series</a></li>
+                        <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">9. Applications</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./permutations-and-combinations.html" class="text-primary font-semibold hover:underline">Permutations And Combinations &rarr;</a>
+                <a href="./quadratic-equations.html" class="text-primary font-semibold hover:underline">Quadratic Equations &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Chapter 1: Sequence & Series Basics -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Sequence and Series Fundamentals</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Sequence and Series Fundamentals</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -640,12 +667,12 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 What is a Sequence?</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Definition of Sequence</h4>
                             <p class="mb-4">
                                 A <strong>sequence</strong> is an ordered list of numbers arranged according to a definite rule. Each number in the sequence is called a <strong>term</strong>.
                             </p>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-3"><strong>General Form:</strong></p>
                                 <p class="font-mono text-lg mb-3">a₁, a₂, a₃, a₄, ..., aₙ, ...</p>
                                 <p class="text-sm">where:</p>
@@ -660,50 +687,50 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <div class="example-box p-6 rounded-xl border-l-4 border-success">
-                                <h5 class="font-bold text-lg mb-3 text-success">✅ Examples of Sequences</h5>
+                                <h5 class="font-bold text-lg mb-3 text-primary">✅ Examples of Sequences</h5>
                                 <div class="space-y-3 text-sm">
                                     <div>
                                         <p class="font-semibold">1. Even natural numbers:</p>
                                         <p class="font-mono">2, 4, 6, 8, 10, ...</p>
-                                        <p class="text-xs text-gray-600">Rule: aₙ = 2n</p>
+                                        <p class="text-xs text-ink-muted">Rule: aₙ = 2n</p>
                                     </div>
                                     
                                     <div>
                                         <p class="font-semibold">2. Squares:</p>
                                         <p class="font-mono">1, 4, 9, 16, 25, ...</p>
-                                        <p class="text-xs text-gray-600">Rule: aₙ = n²</p>
+                                        <p class="text-xs text-ink-muted">Rule: aₙ = n²</p>
                                     </div>
                                     
                                     <div>
                                         <p class="font-semibold">3. Powers of 2:</p>
                                         <p class="font-mono">2, 4, 8, 16, 32, ...</p>
-                                        <p class="text-xs text-gray-600">Rule: aₙ = 2ⁿ</p>
+                                        <p class="text-xs text-ink-muted">Rule: aₙ = 2ⁿ</p>
                                     </div>
                                     
                                     <div>
                                         <p class="font-semibold">4. Fibonacci:</p>
                                         <p class="font-mono">1, 1, 2, 3, 5, 8, ...</p>
-                                        <p class="text-xs text-gray-600">Rule: aₙ = aₙ₋₁ + aₙ₋₂</p>
+                                        <p class="text-xs text-ink-muted">Rule: aₙ = aₙ₋₁ + aₙ₋₂</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Types of Sequences</h5>
                                 <div class="space-y-3 text-sm">
-                                    <div class="bg-blue-50 p-3 rounded-lg">
+                                    <div class="bg-surface-2 p-3 rounded-lg">
                                         <p class="font-semibold mb-1">Finite Sequence</p>
                                         <p class="text-xs">Has a last term</p>
                                         <p class="font-mono text-xs">1, 2, 3, 4, 5</p>
                                     </div>
                                     
-                                    <div class="bg-blue-50 p-3 rounded-lg">
+                                    <div class="bg-surface-2 p-3 rounded-lg">
                                         <p class="font-semibold mb-1">Infinite Sequence</p>
                                         <p class="text-xs">Continues forever</p>
                                         <p class="font-mono text-xs">1, 2, 3, 4, ...</p>
                                     </div>
                                     
-                                    <div class="bg-blue-50 p-3 rounded-lg">
+                                    <div class="bg-surface-2 p-3 rounded-lg">
                                         <p class="font-semibold mb-1">Constant Sequence</p>
                                         <p class="text-xs">All terms equal</p>
                                         <p class="font-mono text-xs">5, 5, 5, 5, ...</p>
@@ -714,15 +741,15 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 What is a Series?</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Definition of Series</h4>
                             <p class="mb-4">
                                 A <strong>series</strong> is the sum of terms of a sequence. If a₁, a₂, a₃, ... is a sequence, then the corresponding series is:
                             </p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-primary">
                                 \[a_1 + a_2 + a_3 + ... + a_n + ... = \sum_{i=1}^{n} a_i\]
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Key Notation:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Σ (Sigma)</strong> - Summation symbol</li>
@@ -733,11 +760,11 @@
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="bg-green-50 p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Sequence vs Series</h5>
+                            <div class="bg-surface-2 p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Sequence vs Series</h5>
                                 <div class="overflow-x-auto">
                                     <table class="w-full text-sm">
-                                        <thead class="bg-green-100">
+                                        <thead class="bg-surface-3">
                                             <tr>
                                                 <th class="p-2 text-left">Aspect</th>
                                                 <th class="p-2 text-left">Sequence</th>
@@ -765,8 +792,8 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Sigma (Σ) Notation</h5>
+                            <div class="bg-surface-2 p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Sigma (Σ) Notation</h5>
                                 <div class="math-display">
                                     \[\sum_{i=1}^{n} a_i = a_1 + a_2 + ... + a_n\]
                                 </div>
@@ -782,14 +809,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the sum: \(\sum_{k=1}^{5} (2k + 1)\)
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Step 1:</strong> Expand the summation</p>
                                     <div class="ml-4">
@@ -804,7 +831,7 @@
                                     <p class="ml-4">Sum = 3 + 5 + 7 + 9 + 11</p>
                                     <p class="ml-4">Sum = 35</p>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 35</p>
                                     </div>
                                 </div>
@@ -813,31 +840,31 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Important Sigma Properties</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Properties of Summation (Must Know for JEE)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Sum of Constant</p>
                                     <div class="math-display">
                                         \[\sum_{i=1}^{n} c = nc\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Constant Multiple</p>
                                     <div class="math-display">
                                         \[\sum_{i=1}^{n} ca_i = c\sum_{i=1}^{n} a_i\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">3. Sum Property</p>
                                     <div class="math-display">
                                         \[\sum_{i=1}^{n} (a_i + b_i) = \sum_{i=1}^{n} a_i + \sum_{i=1}^{n} b_i\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">4. Difference Property</p>
                                     <div class="math-display">
                                         \[\sum_{i=1}^{n} (a_i - b_i) = \sum_{i=1}^{n} a_i - \sum_{i=1}^{n} b_i\]
@@ -862,10 +889,10 @@
                 </section>
 
                 <!-- Chapter 2: Arithmetic Progression (AP) -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Arithmetic Progression (AP)</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Arithmetic Progression (AP)</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -873,12 +900,12 @@
                             An <strong>Arithmetic Progression (AP)</strong> is a sequence where the difference between consecutive terms is constant. This is one of the most important and frequently tested topics in JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Definition and General Form</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Definition and General Form</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Arithmetic Progression (AP)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Arithmetic Progression (AP)</h4>
                             <p class="mb-4">A sequence is in AP if the difference between any two consecutive terms is constant.</p>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">General Form:</p>
                                 <p class="font-mono text-lg mb-4">a, a+d, a+2d, a+3d, ..., a+(n-1)d</p>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -892,7 +919,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Common Difference Formula:</p>
                                 <div class="math-display border-2 border-secondary rounded-lg">
                                     \[d = a_{n+1} - a_n = a_2 - a_1\]
@@ -900,14 +927,14 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 nth Term Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 nth Term Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">⭐ MOST IMPORTANT - nth Term of AP</h4>
-                            <div class="math-display bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-secondary">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ MOST IMPORTANT - nth Term of AP</h4>
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-secondary">
                                 \[T_n = a + (n-1)d\]
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Variations:</p>
                                 <div class="space-y-2">
                                     <p class="font-mono">• Last term: l = a + (n-1)d</p>
@@ -918,14 +945,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the 20th term of the AP: 5, 8, 11, 14, ...
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Given AP:</strong> 5, 8, 11, 14, ...</p>
                                     
@@ -943,31 +970,31 @@
                                         <p>T<sub>20</sub> = 62</p>
                                     </div>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 20th term = 62</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Sum of n Terms in AP</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Sum of n Terms in AP</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">⭐ Sum Formulas (Extremely Important)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ Sum Formulas (Extremely Important)</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                <div class="math-display bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-secondary">
+                                <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-secondary">
                                     <p class="text-sm mb-2 font-semibold">Formula 1:</p>
                                     \[S_n = \frac{n}{2}[2a + (n-1)d]\]
                                 </div>
                                 
-                                <div class="math-display bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-secondary">
+                                <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-secondary">
                                     <p class="text-sm mb-2 font-semibold">Formula 2:</p>
                                     \[S_n = \frac{n}{2}(a + l)\]
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">When to use which formula:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Formula 1:</strong> When last term is not given (use a, d, n)</li>
@@ -978,19 +1005,19 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the sum of first 50 terms of the AP: 2, 5, 8, 11, ...
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Given:</strong> a = 2, d = 3, n = 50</p>
                                     
                                     <p><strong>Method 1:</strong> Using first formula</p>
-                                    <div class="ml-4 bg-blue-50 p-3 rounded-lg">
+                                    <div class="ml-4 bg-surface-2 p-3 rounded-lg">
                                         <p>S<sub>n</sub> = n/2[2a + (n-1)d]</p>
                                         <p>S<sub>50</sub> = 50/2[2(2) + (50-1)×3]</p>
                                         <p>S<sub>50</sub> = 25[4 + 49×3]</p>
@@ -1000,7 +1027,7 @@
                                     </div>
                                     
                                     <p class="mt-4"><strong>Method 2:</strong> Using second formula</p>
-                                    <div class="ml-4 bg-blue-50 p-3 rounded-lg">
+                                    <div class="ml-4 bg-surface-2 p-3 rounded-lg">
                                         <p>First find last term: l = a + (n-1)d</p>
                                         <p>l = 2 + 49×3 = 2 + 147 = 149</p>
                                         <p class="mt-2">S<sub>n</sub> = n/2(a + l)</p>
@@ -1008,23 +1035,23 @@
                                         <p>S<sub>50</sub> = 25 × 151 = 3775</p>
                                     </div>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: Sum = 3775</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Important Properties of AP</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Important Properties of AP</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Properties (Very Important for JEE)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Properties (Very Important for JEE)</h4>
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Selection of Terms in AP</p>
                                     <div class="overflow-x-auto">
                                         <table class="w-full text-sm">
-                                            <thead class="bg-purple-100">
+                                            <thead class="bg-surface-3">
                                                 <tr>
                                                     <th class="p-2">Number of Terms</th>
                                                     <th class="p-2">Selection</th>
@@ -1052,24 +1079,24 @@
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Three consecutive terms a, b, c are in AP if:</p>
                                     <div class="math-display border-2 border-secondary rounded-lg">
                                         \[2b = a + c \text{ or } b - a = c - b\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">3. If each term is increased/decreased by same constant:</p>
                                     <p class="text-sm">Resulting sequence is also in AP with same common difference</p>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">4. If each term is multiplied/divided by same non-zero constant:</p>
                                     <p class="text-sm">Resulting sequence is in AP with common difference multiplied/divided by that constant</p>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">5. Sum of terms equidistant from beginning and end:</p>
                                     <div class="math-display border-2 border-secondary rounded-lg">
                                         \[T_k + T_{n-k+1} = a + l = \text{constant}\]
@@ -1083,7 +1110,7 @@
                                 <span class="text-2xl mr-2">💡</span> JEE Shortcuts for AP
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Quick Formulas:</p>
                                     <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>T<sub>n</sub> = S<sub>n</sub> - S<sub>n-1</sub></li>
@@ -1093,7 +1120,7 @@
                                         <li>Sum of first n even numbers: n(n+1)</li>
                                     </ul>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Common Patterns:</p>
                                     <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>If d > 0: AP is increasing</li>
@@ -1109,10 +1136,10 @@
                 </section>
 
 <!-- Chapter 3: Geometric Progression (GP) -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Geometric Progression (GP)</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Geometric Progression (GP)</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1120,12 +1147,12 @@
                             A <strong>Geometric Progression (GP)</strong> is a sequence where each term is obtained by multiplying the previous term by a constant. This is crucial for exponential growth/decay problems in JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Definition and General Form</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Definition and General Form</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Geometric Progression (GP)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Geometric Progression (GP)</h4>
                             <p class="mb-4">A sequence is in GP if the ratio of any two consecutive terms is constant.</p>
-                            <div class="bg-orange-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">General Form:</p>
                                 <p class="font-mono text-lg mb-4">a, ar, ar², ar³, ..., arⁿ⁻¹</p>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -1139,7 +1166,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Common Ratio Formula:</p>
                                 <div class="math-display border-2 border-accent rounded-lg">
                                     \[r = \frac{a_{n+1}}{a_n} = \frac{a_2}{a_1}\]
@@ -1147,14 +1174,14 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 nth Term Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 nth Term Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">⭐ nth Term of GP</h4>
-                            <div class="math-display bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-lg border-4 border-accent">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ nth Term of GP</h4>
+                            <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-accent">
                                 \[T_n = ar^{n-1}\]
                             </div>
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Important Cases:</p>
                                 <div class="space-y-2 text-sm">
                                     <p>• If r > 1 and a > 0: GP is increasing</p>
@@ -1167,13 +1194,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the 8th term of the GP: 3, 6, 12, 24, ...
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Given GP:</strong> 3, 6, 12, 24, ...</p>
                                     
@@ -1191,31 +1218,31 @@
                                         <p>T<sub>8</sub> = 384</p>
                                     </div>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: 8th term = 384</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Sum of n Terms in GP</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Sum of n Terms in GP</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">⭐ Sum Formulas (Most Important)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ Sum Formulas (Most Important)</h4>
                             
                             <div class="grid grid-cols-1 gap-4 mb-4">
-                                <div class="math-display bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-lg border-4 border-accent">
+                                <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-accent">
                                     <p class="text-sm mb-2 font-semibold">When r ≠ 1:</p>
                                     \[S_n = \frac{a(r^n - 1)}{r - 1} = \frac{a(1 - r^n)}{1 - r}\]
                                 </div>
                                 
-                                <div class="math-display bg-gradient-to-r from-orange-100 to-yellow-100 p-4 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-4 rounded-lg border-2 border-accent">
                                     <p class="text-sm mb-2 font-semibold">When r = 1:</p>
                                     \[S_n = na\]
                                 </div>
                             </div>
                             
-                            <div class="bg-orange-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">When to use which form:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Use a(rⁿ-1)/(r-1):</strong> When r > 1</li>
@@ -1225,28 +1252,28 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.4 Sum to Infinity (S∞)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Sum to Infinity (S∞)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">⭐ Infinite GP Sum (Very Important for JEE Advanced)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ Infinite GP Sum (Very Important for JEE Advanced)</h4>
                             
-                            <div class="bg-orange-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Convergence Condition:</p>
                                 <p class="text-lg mb-4">An infinite GP converges (has finite sum) <strong>if and only if |r| < 1</strong></p>
                                 
-                                <div class="math-display bg-gradient-to-r from-orange-100 to-yellow-100 p-6 rounded-lg border-4 border-accent">
+                                <div class="math-display bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-accent">
                                     \[S_\infty = \frac{a}{1-r} \quad \text{when } |r| < 1\]
                                 </div>
                                 
                                 <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-                                    <div class="bg-green-50 p-3 rounded-lg border-2 border-success">
-                                        <p class="font-semibold text-success mb-2">✅ Converges (|r| < 1)</p>
+                                    <div class="bg-surface-2 p-3 rounded-lg border-2 border-success">
+                                        <p class="font-semibold text-primary mb-2">✅ Converges (|r| < 1)</p>
                                         <p class="text-sm">Examples:</p>
                                         <p class="font-mono text-xs">1 + 1/2 + 1/4 + 1/8 + ...</p>
                                         <p class="font-mono text-xs">Sum = 2</p>
                                     </div>
-                                    <div class="bg-red-50 p-3 rounded-lg border-2 border-danger">
-                                        <p class="font-semibold text-danger mb-2">❌ Diverges (|r| ≥ 1)</p>
+                                    <div class="bg-surface-2 p-3 rounded-lg border-2 border-danger">
+                                        <p class="font-semibold text-primary mb-2">❌ Diverges (|r| ≥ 1)</p>
                                         <p class="text-sm">Examples:</p>
                                         <p class="font-mono text-xs">1 + 2 + 4 + 8 + ...</p>
                                         <p class="font-mono text-xs">Sum = ∞ (infinite)</p>
@@ -1256,13 +1283,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the sum to infinity: 1 + 1/3 + 1/9 + 1/27 + ...
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="space-y-3">
                                     <p><strong>Given:</strong> 1, 1/3, 1/9, 1/27, ...</p>
                                     
@@ -1275,30 +1302,30 @@
                                     <p class="ml-4">Since |r| < 1, infinite sum exists</p>
                                     
                                     <p><strong>Step 3:</strong> Apply infinite sum formula</p>
-                                    <div class="ml-4 bg-blue-50 p-3 rounded-lg">
+                                    <div class="ml-4 bg-surface-2 p-3 rounded-lg">
                                         <p>S<sub>∞</sub> = a/(1-r)</p>
                                         <p>S<sub>∞</sub> = 1/(1 - 1/3)</p>
                                         <p>S<sub>∞</sub> = 1/(2/3)</p>
                                         <p>S<sub>∞</sub> = 3/2</p>
                                     </div>
                                     
-                                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                                    <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                         <p class="font-bold text-xl">Answer: S∞ = 3/2</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.5 Properties of GP</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.5 Properties of GP</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Important GP Properties</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Important GP Properties</h4>
                             <div class="space-y-4">
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Selection of Terms in GP</p>
                                     <div class="overflow-x-auto">
                                         <table class="w-full text-sm">
-                                            <thead class="bg-orange-100">
+                                            <thead class="bg-surface-3">
                                                 <tr>
                                                     <th class="p-2">Number of Terms</th>
                                                     <th class="p-2">Selection</th>
@@ -1326,26 +1353,26 @@
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Three numbers a, b, c in GP if:</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[b^2 = ac \quad \text{or} \quad \frac{b}{a} = \frac{c}{b}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">3. If each term is multiplied/divided by same constant k:</p>
                                     <p class="text-sm">New sequence is also GP with same ratio r, but first term becomes ak or a/k</p>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">4. Product of terms equidistant from ends:</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[T_k \times T_{n-k+1} = a \times l = \text{constant}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">5. Reciprocals of GP terms:</p>
                                     <p class="text-sm">Form a GP with common ratio 1/r</p>
                                 </div>
@@ -1353,7 +1380,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistakes in GP
                             </h4>
                             <ul class="list-disc list-inside space-y-3 text-lg ml-4">
@@ -1370,17 +1397,17 @@
 <!-- Due to length, I'll provide remaining chapters in condensed form with key formulas -->
 
                 <!-- Chapter 4: Harmonic Progression (HP) -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Harmonic Progression (HP)</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Harmonic Progression (HP)</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Harmonic Progression Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Harmonic Progression Definition</h4>
                             <p class="mb-4">A sequence is in HP if the <strong>reciprocals</strong> of its terms form an AP.</p>
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">If HP: a, b, c, d, ...</p>
                                 <p class="mb-3">Then AP: 1/a, 1/b, 1/c, 1/d, ...</p>
                                 <div class="math-display border-2 border-success rounded-lg mt-3">
@@ -1402,32 +1429,32 @@
                 </section>
 
                 <!-- Chapter 5: AM-GM-HM Relations -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">AM-GM-HM Relations</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">AM-GM-HM Relations</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">⭐ Means and Inequality</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                                <div class="bg-blue-50 p-4 rounded-lg border-2 border-primary">
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-primary">
                                     <p class="font-semibold mb-2">Arithmetic Mean (AM)</p>
                                     <div class="math-display">
                                         \[AM = \frac{a + b}{2}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg border-2 border-primary">
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-primary">
                                     <p class="font-semibold mb-2">Geometric Mean (GM)</p>
                                     <div class="math-display">
                                         \[GM = \sqrt{ab}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg border-2 border-primary">
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-primary">
                                     <p class="font-semibold mb-2">Harmonic Mean (HM)</p>
                                     <div class="math-display">
                                         \[HM = \frac{2ab}{a + b}\]
@@ -1435,7 +1462,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-gradient-to-r from-blue-100 to-purple-100 p-6 rounded-lg border-4 border-primary">
+                            <div class="bg-gradient-to-r from-surface-3 to-surface-3 p-6 rounded-lg border-4 border-primary">
                                 <p class="font-bold text-xl mb-3 text-center">AM-GM-HM Inequality</p>
                                 <div class="math-display">
                                     \[AM \geq GM \geq HM\]
@@ -1443,7 +1470,7 @@
                                 <p class="text-center mt-2 font-semibold">Equality holds when a = b</p>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Important Relation:</p>
                                 <div class="math-display border-2 border-primary rounded-lg">
                                     \[GM^2 = AM \times HM\]
@@ -1454,17 +1481,17 @@
                 </section>
 
                 <!-- Chapter 6: AGP -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Arithmetic-Geometric Progression (AGP)</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Arithmetic-Geometric Progression (AGP)</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">AGP Definition and Sum</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">AGP Definition and Sum</h4>
                             <p class="mb-4">AGP is formed by multiplying corresponding terms of an AP and GP.</p>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">General Form:</p>
                                 <p class="font-mono mb-3">a, (a+d)r, (a+2d)r², (a+3d)r³, ...</p>
                                 
@@ -1483,53 +1510,53 @@
                 </section>
 
                 <!-- Chapter 7: Special Series -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Special Series Formulas</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Special Series Formulas</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">⭐ Must Know Special Series</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">⭐ Must Know Special Series</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Sum of first n natural numbers</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[\sum_{k=1}^{n} k = \frac{n(n+1)}{2}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Sum of squares</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">3. Sum of cubes</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[\sum_{k=1}^{n} k^3 = \left[\frac{n(n+1)}{2}\right]^2\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">4. Sum of first n odd numbers</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[\sum_{k=1}^{n} (2k-1) = n^2\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">5. Sum of first n even numbers</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[\sum_{k=1}^{n} 2k = n(n+1)\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">6. Sum relation</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[\sum_{k=1}^{n} k^3 = \left(\sum_{k=1}^{n} k\right)^2\]
@@ -1543,14 +1570,14 @@
 <!-- PYQ and Practice sections similar to previous documents -->
 
                 <!-- PYQ Analysis Section -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ AP Sum & nth term: 30%</li>
@@ -1559,7 +1586,7 @@
                                 <li>✓ Special Series: 15%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ AGP & Complex Series: 30%</li>
@@ -1570,8 +1597,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-2 text-lg grid grid-cols-1 md:grid-cols-2 gap-x-6">
                             <li>Finding nth term of AP/GP given conditions</li>
                             <li>Sum of first n terms problems</li>
@@ -1591,7 +1618,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1615,14 +1642,14 @@
                 </section>
 
                 <!-- Practice Problems Section -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (Foundation)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (Foundation)</h3>
                         <ol class="list-decimal list-inside space-y-2">
                             <li>Find 15th term of AP: 3, 7, 11, 15, ...</li>
                             <li>Find sum of first 20 terms of AP: 5, 10, 15, ...</li>
@@ -1635,8 +1662,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main)</h3>
                         <ol class="list-decimal list-inside space-y-2">
                             <li>Sum of n terms of AP is 3n² + 5n. Find nth term.</li>
                             <li>Three numbers in GP have sum 21 and product 216. Find them.</li>
@@ -1649,8 +1676,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-2">
                             <li>Find sum to infinity: 1 + 2x + 3x² + 4x³ + ... (|x| < 1)</li>
                             <li>Sum of n terms of AGP: 1·2 + 2·4 + 3·8 + ...</li>
@@ -1664,29 +1691,47 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete Solutions PDF
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./sets.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Sets</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./complex-numbers.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Complex Numbers</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./permutations-and-combinations.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Permutations And Combinations</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Sequences and Series - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Sequences and Series - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Sequences and Series is CRUCIAL for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Sequences and Series</strong> carries the <strong>highest weightage (6-7%)</strong> among all algebra topics:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Direct Questions:</strong> 4-5 questions every year</li>
                             <li><strong>Binomial Theorem:</strong> Uses GP and special series</li>
                             <li><strong>Calculus:</strong> Foundation for limits and series</li>
@@ -1695,7 +1740,7 @@
                         </ul>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Most Important Formulas</h3>
                         <div class="space-y-3 text-sm">
                             <div>
@@ -1730,101 +1775,101 @@
     </section>
 
     <!-- Footer and Scripts same as previous documents -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+    <footer class="bg-canvas text-ink py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">sitemap</a></li>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
-                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-white transition">Physics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Mathematics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Study Tips</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-ink transition">Physics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Mathematics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Study Tips</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         </ul>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Last Updated: 14 March, 2026</p>
+        <div class="border-t border-hairline pt-8 text-center">
+            <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+            <p class="text-ink-subtle text-xs mt-2">Last Updated: 14 March, 2026</p>
         </div>
     </div>
 </footer>
 
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

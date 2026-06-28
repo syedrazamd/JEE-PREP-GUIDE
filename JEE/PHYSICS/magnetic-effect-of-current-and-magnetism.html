@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Magnetic Effects of Current and Magnetism - Complete JEE Physics Notes with 200+ Examples">
     <meta property="og:description" content="Master Biot-Savart Law, Ampere's Law, Lorentz Force & Magnetism. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Magnetic Effects of Current and Magnetism - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/magnetic-effects-of-current-and-magnetism">
     <meta name="twitter:title" content="Magnetic Effects of Current and Magnetism - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master magnetic fields with 200+ solved examples. Complete notes on Biot-Savart Law, Lorentz Force & Magnetism for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -66,17 +66,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555" crossorigin="anonymous"></script>
     
     <!-- Breadcrumb Schema -->
@@ -120,7 +133,7 @@
         "@type": "Article",
         "headline": "Magnetic Effects of Current and Magnetism - Complete JEE Physics Notes 2025-26",
         "description": "Comprehensive notes on Magnetic Effects of Current and Magnetism covering Biot-Savart Law, Ampere's Law, Lorentz Force, Moving Coil Galvanometer, Earth's Magnetism with 200+ solved examples",
-        "image": "https://jeeprepguide.netlify.app/logo.png",
+        "image": "/logo-header.webp",
         "author": {
             "@type": "Organization",
             "name": "JEE Prep Guide",
@@ -131,7 +144,7 @@
             "name": "JEE Prep Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://jeeprepguide.netlify.app/logo.png"
+                "url": "/logo-header.webp"
             }
         },
         "datePublished": "2024-12-19",
@@ -391,60 +404,62 @@
         });
     </script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
 
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
     
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
     
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
     
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -453,30 +468,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Magnetic Effects of Current and Magnetism</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Magnetic Effects of Current and Magnetism</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -484,38 +499,38 @@
     </nav>
     
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Magnetic Effects of Current and Magnetism</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Magnetic Effects of Current and Magnetism</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Magnetic Field
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Biot-Savart Law
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Ampere's Law
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Lorentz Force
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Charged Particle Motion
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Force on Conductor
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Torque & Galvanometer
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Bar Magnets
                 </a>
-                <a href="#chapter9" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter9" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Earth's Magnetism
                 </a>
-                <a href="#chapter10" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter10" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Magnetic Materials
                 </a>
             </div>
@@ -523,9 +538,9 @@
     </section>
     
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         
@@ -533,20 +548,20 @@
             <div class="text-center">
                 <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
                     Magnetic Effects of Current
-                    <span class="block text-accent mt-2">& Magnetism | JEE 2025-26</span>
+                    <span class="block text-primary mt-2">& Magnetism | JEE 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the complete chapter with detailed notes on Biot-Savart Law, Ampere's Law, Lorentz Force, Cyclotron, Moving Coil Galvanometer, and Magnetism. Includes 200+ solved problems, important formulas, and all JEE shortcuts.
                 </p>
                 
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 10 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 200+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -555,21 +570,21 @@
     </section>
     
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Magnetic Effects of Current and Magnetism JEE Notes">
         <meta itemprop="description" content="Complete study notes for Magnetic Effects and Magnetism">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">312</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -579,15 +594,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">200+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -599,55 +614,67 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-sm font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Magnetic Field Basics</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Biot-Savart Law</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Ampere's Circuital Law</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Lorentz Force</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Motion in Magnetic Field</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Force on Conductors</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Torque & Galvanometer</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Bar Magnets & Dipoles</a></li>
-                        <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">9. Earth's Magnetism</a></li>
-                        <li><a href="#chapter10" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">10. Magnetic Materials</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Magnetic Field Basics</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Biot-Savart Law</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Ampere's Circuital Law</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Lorentz Force</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Motion in Magnetic Field</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Force on Conductors</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Torque & Galvanometer</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Bar Magnets & Dipoles</a></li>
+                        <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">9. Earth's Magnetism</a></li>
+                        <li><a href="#chapter10" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">10. Magnetic Materials</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
             
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./current-electricity.html" class="text-primary font-semibold hover:underline">Current Electricity &rarr;</a>
+                <a href="./electromagnetic-induction.html" class="text-primary font-semibold hover:underline">Electromagnetic Induction &rarr;</a>
+            </div>
+        </div>
+    </div>
+
                 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/magnetic-effects-of-current-and-magnetism.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/magnetic-effects-of-current-and-magnetism.webp"
                         alt="Magnetic Effects of Current and Magnetism JEE notes, Formulas, PYQs"
                         title="Magnetic Effects of Current and Magnetism — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Magnetic Effects of Current and Magnetism - JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
                 
                 <!-- Chapter 1: Magnetic Field Basics -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Magnetic Field - Fundamentals</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Magnetic Field - Fundamentals</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -658,7 +685,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Sources of Magnetic Field</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Natural Sources</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Permanent magnets (lodestone)</li>
@@ -666,7 +693,7 @@
                                     <li>Celestial bodies (Sun, planets)</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Artificial Sources</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Current-carrying conductors</li>
@@ -678,12 +705,12 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Magnetic Field (B)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Magnetic Field Definition</h4>
                             <p class="mb-4">
                                 The magnetic field <strong>B</strong> (also called magnetic flux density or magnetic induction) is defined by the force it exerts on a moving charge.
                             </p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{F} = q(\vec{v} \times \vec{B})\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -710,12 +737,12 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Distinction
                             </h4>
                             <div class="overflow-x-auto">
                                 <table class="w-full mt-4">
-                                    <thead class="bg-amber-100">
+                                    <thead class="bg-surface-3">
                                         <tr>
                                             <th class="p-3 text-left">Property</th>
                                             <th class="p-3 text-left">Electric Field Lines</th>
@@ -745,9 +772,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Magnetic Flux</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Magnetic Flux (Φ)</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\Phi = \vec{B} \cdot \vec{A} = BA\cos\theta\]
                             </div>
                             <p class="mt-4">Where θ is the angle between B and area vector (normal to surface)</p>
@@ -756,7 +783,7 @@
                                 <p><strong>Dimension:</strong> [ML²T⁻²A⁻¹]</p>
                             </div>
                             
-                            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Gauss's Law for Magnetism:</p>
                                 <div class="math-display">
                                     \[\oint \vec{B} \cdot d\vec{A} = 0\]
@@ -768,10 +795,10 @@
                 </section>
                 
                 <!-- Chapter 2: Biot-Savart Law -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Biot-Savart Law</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Biot-Savart Law</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -779,20 +806,20 @@
                             Biot-Savart Law is the fundamental law for calculating magnetic fields due to current-carrying conductors. It's the magnetic equivalent of Coulomb's law in electrostatics and is essential for JEE Advanced.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Statement of Biot-Savart Law</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Statement of Biot-Savart Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Biot-Savart Law</h4>
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Biot-Savart Law</h4>
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="text-lg italic">
                                     "The magnetic field dB at a point P due to a small current element Idl is directly proportional to the current I, the length element dl, sine of the angle between dl and r, and inversely proportional to the square of distance r."
                                 </p>
                             </div>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[d\vec{B} = \frac{\mu_0}{4\pi} \frac{I(d\vec{l} \times \hat{r})}{r^2}\]
                             </div>
                             <p class="text-center mt-3">OR in magnitude form:</p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[dB = \frac{\mu_0}{4\pi} \frac{I \cdot dl \cdot \sin\theta}{r^2}\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -820,24 +847,24 @@
                             </p>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Magnetic Field Due to Straight Wire</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Magnetic Field Due to Straight Wire</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Finite Straight Wire</h4>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Finite Straight Wire</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[B = \frac{\mu_0 I}{4\pi d}(\sin\phi_1 + \sin\phi_2)\]
                             </div>
                             <p class="mt-4">Where d is perpendicular distance, φ₁ and φ₂ are angles at point P</p>
                             
                             <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Infinite Straight Wire:</p>
                                     <p class="text-sm mb-2">(φ₁ = φ₂ = 90°)</p>
                                     <div class="math-display">
                                         \[B = \frac{\mu_0 I}{2\pi d}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Semi-infinite Wire:</p>
                                     <p class="text-sm mb-2">(φ₁ = 90°, φ₂ = 0°)</p>
                                     <div class="math-display">
@@ -847,19 +874,19 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Magnetic Field Due to Circular Loop</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Magnetic Field Due to Circular Loop</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Circular Current Loop</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Circular Current Loop</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">At Center (x = 0):</p>
                                     <div class="math-display">
                                         \[B_{\text{center}} = \frac{\mu_0 I}{2R}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">At Axial Point:</p>
                                     <div class="math-display">
                                         \[B_{\text{axis}} = \frac{\mu_0 IR^2}{2(R^2 + x^2)^{3/2}}\]
@@ -867,14 +894,14 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">For N turns (coil):</p>
                                 <div class="math-display">
                                     \[B_{\text{center}} = \frac{\mu_0 NI}{2R}\]
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Far from loop (x >> R):</p>
                                 <div class="math-display">
                                     \[B \approx \frac{\mu_0 IR^2}{2x^3} = \frac{\mu_0}{4\pi} \cdot \frac{2M}{x^3}\]
@@ -883,29 +910,29 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Magnetic Field Due to Arc</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Magnetic Field Due to Arc</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Arc of Circle at Center</h4>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Arc of Circle at Center</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[B = \frac{\mu_0 I \theta}{4\pi R}\]
                             </div>
                             <p class="mt-4">Where θ is the angle subtended in radians</p>
                             
                             <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Full Circle (θ = 2π):</p>
                                     <div class="math-display">
                                         \[B = \frac{\mu_0 I}{2R}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Semicircle (θ = π):</p>
                                     <div class="math-display">
                                         \[B = \frac{\mu_0 I}{4R}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Quarter circle (θ = π/2):</p>
                                     <div class="math-display">
                                         \[B = \frac{\mu_0 I}{8R}\]
@@ -915,14 +942,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A circular coil of 100 turns and radius 10 cm carries a current of 1 A. Calculate the magnetic field at (a) the center (b) a point on axis 10 cm from center.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: N = 100, R = 0.1 m, I = 1 A, x = 0.1 m</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) At center:</strong></p>
@@ -932,7 +959,7 @@
                                 <div class="math-display">
                                     \[B_{\text{center}} = \frac{4\pi \times 10^{-5}}{0.2} = 2\pi \times 10^{-4}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[B_{\text{center}} = 6.28 \times 10^{-4} \text{ T} = 0.628 \text{ mT}\]
                                 </div>
                                 
@@ -947,7 +974,7 @@
                                 <div class="math-display">
                                     \[B_{\text{axis}} = \frac{B_{\text{center}}}{2\sqrt{2}} = \frac{6.28 \times 10^{-4}}{2.83}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[B_{\text{axis}} = 2.22 \times 10^{-4} \text{ T} = 0.222 \text{ mT}\]
                                 </div>
                             </div>
@@ -956,10 +983,10 @@
                 </section>
                 
                 <!-- Chapter 3: Ampere's Circuital Law -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Ampere's Circuital Law</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Ampere's Circuital Law</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -969,18 +996,18 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Statement of Ampere's Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Ampere's Circuital Law</h4>
-                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="text-lg italic">
                                     "The line integral of magnetic field B around any closed loop (Amperian loop) is equal to μ₀ times the total current enclosed by that loop."
                                 </p>
                             </div>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enclosed}}\]
                             </div>
                             
-                            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Physical Basis:</p>
                                 <p>Based on the fact that magnetic field lines form closed loops around current-carrying conductors.</p>
                             </div>
@@ -1001,15 +1028,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Applications of Ampere's Law</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Configuration</th>
                                         <th class="p-4 text-left">Magnetic Field</th>
                                         <th class="p-4 text-left">Where</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Infinite Straight Wire</td>
                                         <td class="p-4 font-mono">B = μ₀I/(2πr)</td>
@@ -1051,19 +1078,19 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Solenoid</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Magnetic Field in Solenoid</h4>
                             <p class="mb-4">A solenoid is a long coil of wire with many turns wound closely together.</p>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Inside (ideal solenoid):</p>
                                     <div class="math-display">
                                         \[B = \mu_0 nI = \frac{\mu_0 NI}{L}\]
                                     </div>
                                     <p class="text-sm mt-2">Uniform field parallel to axis</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">At End (finite solenoid):</p>
                                     <div class="math-display">
                                         \[B_{\text{end}} = \frac{\mu_0 nI}{2} = \frac{B_{\text{center}}}{2}\]
@@ -1072,7 +1099,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Properties of Solenoid:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Field inside is nearly uniform</li>
@@ -1085,11 +1112,11 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Toroid</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Magnetic Field in Toroid</h4>
                             <p class="mb-4">A toroid is a solenoid bent into a circular ring shape.</p>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Inside the toroid (within windings):</p>
                                 <div class="math-display">
                                     \[B = \frac{\mu_0 NI}{2\pi r}\]
@@ -1098,13 +1125,13 @@
                             </div>
                             
                             <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Outside toroid:</p>
                                     <div class="math-display">
                                         \[B = 0\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">In central cavity:</p>
                                     <div class="math-display">
                                         \[B = 0\]
@@ -1112,7 +1139,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">For thin toroid (R >> a):</p>
                                 <div class="math-display">
                                     \[B = \mu_0 nI \text{ where } n = \frac{N}{2\pi R}\]
@@ -1121,14 +1148,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A solenoid 50 cm long has 500 turns and carries a current of 2 A. Calculate: (a) Magnetic field at the center (b) Magnetic field at one end.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: L = 0.5 m, N = 500, I = 2 A</p>
                                 <p class="mb-2">n = N/L = 500/0.5 = 1000 turns/m</p>
                                 
@@ -1136,7 +1163,7 @@
                                 <div class="math-display">
                                     \[B_{\text{center}} = \mu_0 nI = 4\pi \times 10^{-7} \times 1000 \times 2\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[B_{\text{center}} = 8\pi \times 10^{-4} = 2.51 \times 10^{-3} \text{ T} = 2.51 \text{ mT}\]
                                 </div>
                                 
@@ -1144,7 +1171,7 @@
                                 <div class="math-display">
                                     \[B_{\text{end}} = \frac{B_{\text{center}}}{2} = \frac{2.51}{2}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[B_{\text{end}} = 1.26 \text{ mT}\]
                                 </div>
                             </div>
@@ -1153,10 +1180,10 @@
                 </section>
                 
                 <!-- Chapter 4: Lorentz Force -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Lorentz Force</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Lorentz Force</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1164,11 +1191,11 @@
                             The Lorentz Force is the total electromagnetic force experienced by a charged particle moving in electric and magnetic fields. This concept is fundamental for understanding particle motion and forms the basis of many JEE questions.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Lorentz Force Equation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Lorentz Force Equation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Complete Lorentz Force</h4>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Complete Lorentz Force</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{F} = q\vec{E} + q(\vec{v} \times \vec{B})\]
                             </div>
                             <p class="mt-4">Where:</p>
@@ -1178,20 +1205,20 @@
                             </ul>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 Magnetic Force on Moving Charge</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Magnetic Force on Moving Charge</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Magnetic Force</h4>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Magnetic Force</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{F} = q(\vec{v} \times \vec{B})\]
                             </div>
                             <p class="text-center mt-3">In magnitude:</p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[F = qvB\sin\theta\]
                             </div>
                             <p class="mt-4">Where θ is angle between v and B</p>
                             
-                            <div class="mt-6 bg-red-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Special Cases:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>θ = 0° or 180°:</strong> F = 0 (v parallel or antiparallel to B)</li>
@@ -1201,7 +1228,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Key Properties of Magnetic Force
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1213,18 +1240,18 @@
                             </ul>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Direction of Magnetic Force</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Direction of Magnetic Force</h3>
                         
                         <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Right Hand Rules
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">For Positive Charge:</p>
                                     <p class="text-sm">Point fingers along v, curl toward B, thumb gives F direction</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">For Negative Charge:</p>
                                     <p class="text-sm">Use left hand OR right hand rule gives opposite direction</p>
                                 </div>
@@ -1234,10 +1261,10 @@
                 </section>
                 
                 <!-- Chapter 5: Motion of Charged Particle in Magnetic Field -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Motion of Charged Particle in Magnetic Field</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Motion of Charged Particle in Magnetic Field</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1245,20 +1272,20 @@
                             The motion of charged particles in magnetic fields leads to circular or helical paths, depending on the angle of entry. This concept is crucial for understanding devices like cyclotrons and mass spectrometers.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.1 Circular Motion (v ⊥ B)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Circular Motion (v ⊥ B)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">When Velocity is Perpendicular to Magnetic Field</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">When Velocity is Perpendicular to Magnetic Field</h4>
                             <p class="mb-4">The charged particle moves in a circular path.</p>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Radius of circular path:</p>
                                     <div class="math-display">
                                         \[r = \frac{mv}{qB}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Time period:</p>
                                     <div class="math-display">
                                         \[T = \frac{2\pi m}{qB}\]
@@ -1267,13 +1294,13 @@
                             </div>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Frequency:</p>
                                     <div class="math-display">
                                         \[f = \frac{qB}{2\pi m}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Angular frequency:</p>
                                     <div class="math-display">
                                         \[\omega = \frac{qB}{m}\]
@@ -1281,20 +1308,20 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Key Insight:</p>
                                 <p>Time period T and frequency f are <strong>independent of velocity and radius</strong>!</p>
                                 <p class="text-sm mt-2">This property is used in cyclotrons.</p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.2 Helical Motion (v at angle θ to B)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Helical Motion (v at angle θ to B)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">When Velocity is at Angle θ to B</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">When Velocity is at Angle θ to B</h4>
                             <p class="mb-4">The particle moves in a helical (spiral) path.</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="mb-2"><strong>Velocity components:</strong></p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>v<sub>∥</sub> = v cos θ (along B) - causes linear motion</li>
@@ -1303,13 +1330,13 @@
                             </div>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Radius of helix:</p>
                                     <div class="math-display">
                                         \[r = \frac{mv\sin\theta}{qB}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Pitch of helix:</p>
                                     <div class="math-display">
                                         \[p = v_\parallel \times T = \frac{2\pi mv\cos\theta}{qB}\]
@@ -1318,13 +1345,13 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.3 Cyclotron</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Cyclotron</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Cyclotron - Particle Accelerator</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Cyclotron - Particle Accelerator</h4>
                             <p class="mb-4">A cyclotron accelerates charged particles using alternating electric field and magnetic field.</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-2">Working Principle:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Magnetic field keeps particles in circular paths (inside dees)</li>
@@ -1334,13 +1361,13 @@
                             </div>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Cyclotron frequency:</p>
                                     <div class="math-display">
                                         \[f_c = \frac{qB}{2\pi m}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Maximum KE:</p>
                                     <div class="math-display">
                                         \[KE_{max} = \frac{q^2B^2r_{max}^2}{2m}\]
@@ -1348,7 +1375,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Maximum velocity:</p>
                                 <div class="math-display">
                                     \[v_{max} = \frac{qBr_{max}}{m}\]
@@ -1357,7 +1384,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Limitations of Cyclotron
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1368,13 +1395,13 @@
                             </ul>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.4 Velocity Selector</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Velocity Selector</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Velocity Selector (Wien Filter)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Velocity Selector (Wien Filter)</h4>
                             <p class="mb-4">Uses crossed electric and magnetic fields to select particles of specific velocity.</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-2">Condition for undeflected path:</p>
                                 <p class="mb-2">Electric force = Magnetic force</p>
                                 <div class="math-display">
@@ -1382,7 +1409,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Selected velocity:</p>
                                 <div class="math-display">
                                     \[v = \frac{E}{B}\]
@@ -1392,21 +1419,21 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) enters a magnetic field of 0.1 T perpendicular to the field with velocity 10⁶ m/s. Find: (a) Radius of path (b) Time period (c) Frequency.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C, B = 0.1 T, v = 10⁶ m/s</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Radius:</strong></p>
                                 <div class="math-display">
                                     \[r = \frac{mv}{qB} = \frac{1.67 \times 10^{-27} \times 10^6}{1.6 \times 10^{-19} \times 0.1}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[r = \frac{1.67 \times 10^{-21}}{1.6 \times 10^{-20}} = 0.104 \text{ m} = 10.4 \text{ cm}\]
                                 </div>
                                 
@@ -1414,7 +1441,7 @@
                                 <div class="math-display">
                                     \[T = \frac{2\pi m}{qB} = \frac{2\pi \times 1.67 \times 10^{-27}}{1.6 \times 10^{-19} \times 0.1}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[T = 6.56 \times 10^{-7} \text{ s} = 0.656 \text{ μs}\]
                                 </div>
                                 
@@ -1422,7 +1449,7 @@
                                 <div class="math-display">
                                     \[f = \frac{1}{T} = \frac{1}{6.56 \times 10^{-7}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[f = 1.52 \times 10^{6} \text{ Hz} = 1.52 \text{ MHz}\]
                                 </div>
                             </div>
@@ -1431,10 +1458,10 @@
                 </section>
                 
                 <!-- Chapter 6: Force on Current Carrying Conductor -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Force on Current Carrying Conductor</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Force on Current Carrying Conductor</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1444,13 +1471,13 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Force on Straight Conductor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Force Formula</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{F} = I(\vec{L} \times \vec{B})\]
                             </div>
                             <p class="text-center mt-3">In magnitude:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[F = BIL\sin\theta\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -1461,7 +1488,7 @@
                                 <p>• θ = Angle between L and B</p>
                             </div>
                             
-                            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Maximum force:</p>
                                 <p>When θ = 90° (conductor perpendicular to field)</p>
                                 <div class="math-display">
@@ -1472,27 +1499,27 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Force Between Two Parallel Conductors</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Force Between Parallel Wires</h4>
                             <p class="mb-4">Two parallel conductors carrying currents exert forces on each other.</p>
                             
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}\]
                             </div>
                             <p class="mt-4">Force per unit length between two infinite parallel wires</p>
                             
                             <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-green-50 p-4 rounded-lg border-2 border-green-300">
-                                    <p class="font-semibold mb-2 text-success">Same Direction Currents:</p>
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-hairline-strong">
+                                    <p class="font-semibold mb-2 text-primary">Same Direction Currents:</p>
                                     <p class="text-lg font-bold text-center">ATTRACT</p>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg border-2 border-red-300">
-                                    <p class="font-semibold mb-2 text-danger">Opposite Direction Currents:</p>
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-hairline-strong">
+                                    <p class="font-semibold mb-2 text-primary">Opposite Direction Currents:</p>
                                     <p class="text-lg font-bold text-center">REPEL</p>
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Definition of Ampere:</p>
                                 <p class="text-sm">One ampere is that constant current which, when flowing through two parallel infinite conductors placed 1 meter apart in vacuum, produces a force of 2 × 10⁻⁷ N per meter length on each conductor.</p>
                             </div>
@@ -1513,10 +1540,10 @@
                 </section>
                 
                 <!-- Chapter 7: Torque on Current Loop & Galvanometer -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Torque on Current Loop & Moving Coil Galvanometer</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Torque on Current Loop & Moving Coil Galvanometer</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1524,11 +1551,11 @@
                             A current-carrying loop in a magnetic field experiences torque, which is the working principle of electric motors and galvanometers. This is a high-weightage topic in JEE.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Magnetic Dipole Moment</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Magnetic Dipole Moment</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Magnetic Dipole Moment (M)</h4>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Magnetic Dipole Moment (M)</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{M} = NI\vec{A}\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -1541,28 +1568,28 @@
                             <p><strong>Direction:</strong> Perpendicular to plane of loop (by right-hand rule)</p>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Torque on Current Loop</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Torque on Current Loop</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Torque Formula</h4>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Torque Formula</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{\tau} = \vec{M} \times \vec{B} = NI\vec{A} \times \vec{B}\]
                             </div>
                             <p class="text-center mt-3">In magnitude:</p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\tau = NIAB\sin\theta\]
                             </div>
                             <p class="mt-4">Where θ is angle between area vector (M) and B</p>
                             
                             <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Maximum torque:</p>
                                     <p>When θ = 90° (plane of loop parallel to B)</p>
                                     <div class="math-display">
                                         \[\tau_{max} = NIAB\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Zero torque:</p>
                                     <p>When θ = 0° or 180° (plane perpendicular to B)</p>
                                     <div class="math-display">
@@ -1572,13 +1599,13 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.3 Moving Coil Galvanometer</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Moving Coil Galvanometer</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Working Principle</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Working Principle</h4>
                             <p class="mb-4">A moving coil galvanometer measures small currents using the torque on a current loop.</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-2">At Equilibrium:</p>
                                 <p class="mb-2">Magnetic torque = Restoring torque of spring</p>
                                 <div class="math-display">
@@ -1586,7 +1613,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Deflection:</p>
                                 <div class="math-display">
                                     \[\theta = \frac{NAB}{k}I = GI\]
@@ -1595,13 +1622,13 @@
                             </div>
                             
                             <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Current Sensitivity:</p>
                                     <div class="math-display">
                                         \[S_I = \frac{\theta}{I} = \frac{NAB}{k}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Voltage Sensitivity:</p>
                                     <div class="math-display">
                                         \[S_V = \frac{\theta}{V} = \frac{NAB}{kR}\]
@@ -1610,13 +1637,13 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.4 Conversion of Galvanometer</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.4 Conversion of Galvanometer</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">To Ammeter</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">To Ammeter</h5>
                                 <p class="mb-3">Connect low resistance (shunt S) in <strong>parallel</strong></p>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <div class="math-display">
                                         \[S = \frac{I_g G}{I - I_g} = \frac{G}{n-1}\]
                                     </div>
@@ -1625,10 +1652,10 @@
                                 <p class="mt-3 text-sm">Range increases, resistance decreases</p>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">To Voltmeter</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">To Voltmeter</h5>
                                 <p class="mb-3">Connect high resistance R in <strong>series</strong></p>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <div class="math-display">
                                         \[R = \frac{V}{I_g} - G = G(n-1)\]
                                     </div>
@@ -1639,7 +1666,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Points for JEE
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1653,10 +1680,10 @@
                 </section>
                 
                 <!-- Chapter 8: Bar Magnets & Magnetic Dipoles -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Bar Magnets & Magnetic Dipoles</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Bar Magnets & Magnetic Dipoles</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1666,18 +1693,18 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Magnetic Field Due to Bar Magnet</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Magnetic Field at Various Points</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">On Axial Line:</p>
                                     <div class="math-display">
                                         \[B_{\text{axial}} = \frac{\mu_0}{4\pi} \cdot \frac{2M}{r^3}\]
                                     </div>
                                     <p class="text-sm mt-2">(for r >> l)</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">On Equatorial Line:</p>
                                     <div class="math-display">
                                         \[B_{\text{eq}} = \frac{\mu_0}{4\pi} \cdot \frac{M}{r^3}\]
@@ -1686,7 +1713,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Relationship:</p>
                                 <div class="math-display">
                                     \[B_{\text{axial}} = 2B_{\text{eq}}\]
@@ -1694,7 +1721,7 @@
                                 <p class="text-sm mt-2">Axial field is twice the equatorial field at same distance</p>
                             </div>
                             
-                            <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">At General Point (r, θ):</p>
                                 <div class="math-display">
                                     \[B = \frac{\mu_0 M}{4\pi r^3}\sqrt{1 + 3\cos^2\theta}\]
@@ -1704,17 +1731,17 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Bar Magnet in Uniform Magnetic Field</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Torque and Energy</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Torque:</p>
                                     <div class="math-display">
                                         \[\tau = MB\sin\theta\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Potential Energy:</p>
                                     <div class="math-display">
                                         \[U = -MB\cos\theta = -\vec{M} \cdot \vec{B}\]
@@ -1722,7 +1749,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Work done in rotating:</p>
                                 <div class="math-display">
                                     \[W = MB(\cos\theta_1 - \cos\theta_2)\]
@@ -1733,15 +1760,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 Analogy: Electric vs Magnetic Dipole</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Electric Dipole</th>
                                         <th class="p-4 text-left">Magnetic Dipole</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Dipole Moment</td>
                                         <td class="p-4">p = qd</td>
@@ -1774,10 +1801,10 @@
                 </section>
                 
                 <!-- Chapter 9: Earth's Magnetism -->
-                <section id="chapter9" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter9" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">9</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Earth's Magnetism</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">9</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Earth's Magnetism</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1785,21 +1812,21 @@
                             Earth behaves like a giant bar magnet with its magnetic south pole near the geographic north pole. Understanding Earth's magnetism and related terms is important for JEE.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">9.1 Elements of Earth's Magnetism</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">9.1 Elements of Earth's Magnetism</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">1. Magnetic Declination (θ)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Magnetic Declination (θ)</h5>
                                 <p class="mb-3">Angle between geographic meridian and magnetic meridian at a place.</p>
-                                <div class="bg-red-50 p-3 rounded">
+                                <div class="bg-surface-2 p-3 rounded">
                                     <p class="text-sm">It varies from place to place</p>
                                 </div>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">2. Angle of Dip (δ or I)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Angle of Dip (δ or I)</h5>
                                 <p class="mb-3">Angle between Earth's magnetic field and horizontal at a place.</p>
-                                <div class="bg-red-50 p-3 rounded">
+                                <div class="bg-surface-2 p-3 rounded">
                                     <ul class="text-sm space-y-1">
                                         <li>At equator: δ = 0°</li>
                                         <li>At poles: δ = 90°</li>
@@ -1807,10 +1834,10 @@
                                 </div>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">3. Horizontal Component (B<sub>H</sub>)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">3. Horizontal Component (B<sub>H</sub>)</h5>
                                 <p class="mb-3">Component of Earth's field in horizontal direction.</p>
-                                <div class="bg-red-50 p-3 rounded">
+                                <div class="bg-surface-2 p-3 rounded">
                                     <div class="math-display">
                                         \[B_H = B\cos\delta\]
                                     </div>
@@ -1818,23 +1845,23 @@
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Relations between Components</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Relations between Components</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Horizontal component:</p>
                                     <div class="math-display">
                                         \[B_H = B\cos\delta\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Vertical component:</p>
                                     <div class="math-display">
                                         \[B_V = B\sin\delta\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Total field:</p>
                                     <div class="math-display">
                                         \[B = \sqrt{B_H^2 + B_V^2}\]
@@ -1842,7 +1869,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-red-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Angle of dip:</p>
                                 <div class="math-display">
                                     \[\tan\delta = \frac{B_V}{B_H}\]
@@ -1867,10 +1894,10 @@
                 </section>
                 
                 <!-- Chapter 10: Magnetic Properties of Materials -->
-                <section id="chapter10" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter10" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">10</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Magnetic Properties of Materials</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">10</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Magnetic Properties of Materials</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1878,34 +1905,34 @@
                             Materials respond differently to external magnetic fields. Understanding diamagnetic, paramagnetic, and ferromagnetic materials is crucial for JEE, especially the concept of magnetic susceptibility and permeability.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">10.1 Important Magnetic Terms</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.1 Important Magnetic Terms</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definitions</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definitions</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Magnetization (I or M):</p>
                                     <div class="math-display">
                                         \[I = \frac{\text{Magnetic moment}}{\text{Volume}} = \frac{M}{V}\]
                                     </div>
                                     <p class="text-sm mt-2">Unit: A/m</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Magnetic Intensity (H):</p>
                                     <div class="math-display">
                                         \[H = \frac{B}{\mu_0} - I\]
                                     </div>
                                     <p class="text-sm mt-2">Unit: A/m</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Magnetic Susceptibility (χ):</p>
                                     <div class="math-display">
                                         \[\chi = \frac{I}{H}\]
                                     </div>
                                     <p class="text-sm mt-2">Dimensionless</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Relative Permeability (μ<sub>r</sub>):</p>
                                     <div class="math-display">
                                         \[\mu_r = 1 + \chi\]
@@ -1914,7 +1941,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Relation between B, H, and I:</p>
                                 <div class="math-display">
                                     \[B = \mu_0(H + I) = \mu_0 H(1 + \chi) = \mu_0 \mu_r H = \mu H\]
@@ -1922,19 +1949,19 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">10.2 Classification of Magnetic Materials</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.2 Classification of Magnetic Materials</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Diamagnetic</th>
                                         <th class="p-4 text-left">Paramagnetic</th>
                                         <th class="p-4 text-left">Ferromagnetic</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Susceptibility (χ)</td>
                                         <td class="p-4">Negative, small<br>(-10⁻⁵ to -10⁻⁹)</td>
@@ -1975,28 +2002,28 @@
                             </table>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">10.3 Hysteresis</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.3 Hysteresis</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Hysteresis Loop</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Hysteresis Loop</h4>
                             <p class="mb-4">When a ferromagnetic material is magnetized and demagnetized cyclically, the B-H curve forms a loop called hysteresis loop.</p>
                             
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Retentivity (B<sub>r</sub>):</p>
                                     <p class="text-sm">Value of B when H = 0 (magnetic memory)</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Coercivity (H<sub>c</sub>):</p>
                                     <p class="text-sm">Value of H needed to reduce B to zero</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Hysteresis Loss:</p>
                                     <p class="text-sm">Energy lost per cycle = Area of loop</p>
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Applications:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li><strong>Permanent magnets:</strong> High retentivity, high coercivity (steel, alnico)</li>
@@ -2007,18 +2034,18 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Curie's Law & Temperature
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Paramagnetic materials:</p>
                                     <div class="math-display">
                                         \[\chi = \frac{C}{T}\]
                                     </div>
                                     <p class="text-sm">C = Curie constant</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Ferromagnetic materials:</p>
                                     <div class="math-display">
                                         \[\chi = \frac{C}{T - T_c}\]
@@ -2031,14 +2058,14 @@
                 </section>
                 
               <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Biot-Savart Law Applications: 30%</li>
@@ -2048,7 +2075,7 @@
                                 <li>✓ Magnetism & Materials: 10%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Complex B-field Problems: 35%</li>
@@ -2060,8 +2087,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 12 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 12 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Magnetic field at center of circular loop/arc</li>
                             <li>Magnetic field due to straight wire at a point</li>
@@ -2078,7 +2105,7 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -2100,11 +2127,11 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Year-wise Question Distribution</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Year-wise Question Distribution</h3>
                         <div class="overflow-x-auto">
                             <table class="w-full">
-                                <thead class="bg-accent text-white">
+                                <thead class="bg-accent text-ink">
                                     <tr>
                                         <th class="p-3 text-left">Year</th>
                                         <th class="p-3 text-left">JEE Main</th>
@@ -2113,25 +2140,25 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y">
-                                    <tr class="hover:bg-gray-50">
+                                    <tr class="hover:bg-surface-1">
                                         <td class="p-3 font-semibold">2024</td>
                                         <td class="p-3">5 Questions (20 marks)</td>
                                         <td class="p-3">6 Questions (22 marks)</td>
                                         <td class="p-3">Cyclotron, Biot-Savart, Torque</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
+                                    <tr class="hover:bg-surface-1">
                                         <td class="p-3 font-semibold">2023</td>
                                         <td class="p-3">4 Questions (16 marks)</td>
                                         <td class="p-3">5 Questions (18 marks)</td>
                                         <td class="p-3">Helical motion, Solenoid, Galvanometer</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
+                                    <tr class="hover:bg-surface-1">
                                         <td class="p-3 font-semibold">2022</td>
                                         <td class="p-3">5 Questions (20 marks)</td>
                                         <td class="p-3">6 Questions (24 marks)</td>
                                         <td class="p-3">Force on conductor, Ampere's law</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
+                                    <tr class="hover:bg-surface-1">
                                         <td class="p-3 font-semibold">2021</td>
                                         <td class="p-3">4 Questions (16 marks)</td>
                                         <td class="p-3">5 Questions (20 marks)</td>
@@ -2143,21 +2170,21 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
                 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Find the magnetic field at the center of a circular loop of radius 5 cm carrying current 2 A.</li>
                             <li>A wire carrying 10 A current is placed perpendicular to a magnetic field of 0.5 T. Find force per unit length.</li>
@@ -2170,8 +2197,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A charged particle enters a uniform magnetic field at 30° to the field direction. Describe its motion and find pitch if v = 10⁶ m/s, B = 0.5 T, q/m = 10⁸ C/kg.</li>
                             <li>Find the magnetic field at a point on the axis of a circular coil of radius R at distance x from center. Show that at x >> R, B ∝ 1/x³.</li>
@@ -2184,8 +2211,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A charged particle of mass m and charge q starts from rest in combined electric (E) and magnetic (B) fields perpendicular to each other. Derive the equation of its trajectory.</li>
                             <li>Find the magnetic field at the center of a square loop of side 'a' carrying current I. Express in terms of μ₀, I, and a.</li>
@@ -2198,8 +2225,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Numerical Answer Type (NAT) Practice</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Numerical Answer Type (NAT) Practice</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A proton (m = 1.67 × 10⁻²⁷ kg) moves in a circle of radius 20 cm in B = 0.5 T. Find its kinetic energy in MeV. [Answer: ___]</li>
                             <li>A wire carrying 8 A is bent into a circle of radius 4 cm. Find B at center in mT. [Answer: ___]</li>
@@ -2210,21 +2237,21 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
                 
                 <!-- Formula Sheet -->
-                <section class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📋</span>
                         Quick Formula Sheet - Magnetic Effects
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h4 class="font-bold text-xl mb-4">Biot-Savart Law</h4>
                             <div class="space-y-3 text-sm">
                                 <p>dB = (μ₀/4π)(Idl×r̂)/r²</p>
@@ -2235,7 +2262,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h4 class="font-bold text-xl mb-4">Ampere's Law</h4>
                             <div class="space-y-3 text-sm">
                                 <p>∮B⃗·dl⃗ = μ₀I_enclosed</p>
@@ -2246,7 +2273,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h4 class="font-bold text-xl mb-4">Lorentz Force</h4>
                             <div class="space-y-3 text-sm">
                                 <p>F⃗ = q(E⃗ + v⃗×B⃗)</p>
@@ -2256,7 +2283,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h4 class="font-bold text-xl mb-4">Motion in B Field</h4>
                             <div class="space-y-3 text-sm">
                                 <p>Radius: r = mv/qB</p>
@@ -2267,7 +2294,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h4 class="font-bold text-xl mb-4">Torque & Galvanometer</h4>
                             <div class="space-y-3 text-sm">
                                 <p>Magnetic moment: M = NIA</p>
@@ -2278,7 +2305,7 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h4 class="font-bold text-xl mb-4">Magnetism</h4>
                             <div class="space-y-3 text-sm">
                                 <p>Axial: B = (μ₀/4π)(2M/r³)</p>
@@ -2291,57 +2318,75 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Printable Formula Sheet PDF
                         </a>
                     </div>
                 </section>
                 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./ray-optics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Ray Optics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./rotational-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Rotational Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./semiconductors.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Semiconductors</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
     
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Current Electricity</h3>
-                    <p class="text-gray-600">Ohm's Law, Kirchhoff's Laws, RC Circuits, Wheatstone Bridge</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Current Electricity</h3>
+                    <p class="text-ink-muted">Ohm's Law, Kirchhoff's Laws, RC Circuits, Wheatstone Bridge</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Electromagnetic Induction</h3>
-                    <p class="text-gray-600">Faraday's Law, Lenz's Law, Self & Mutual Inductance, AC Circuits</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electromagnetic Induction</h3>
+                    <p class="text-ink-muted">Faraday's Law, Lenz's Law, Self & Mutual Inductance, AC Circuits</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Electrostatics</h3>
-                    <p class="text-gray-600">Coulomb's Law, Electric Field, Gauss's Law, Capacitors</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electrostatics</h3>
+                    <p class="text-ink-muted">Coulomb's Law, Electric Field, Gauss's Law, Capacitors</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -2349,7 +2394,7 @@
             
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2357,35 +2402,35 @@
     </section>
     
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Magnetic Effects of Current and Magnetism - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Magnetic Effects of Current and Magnetism - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why This Chapter is Critical for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Magnetic Effects of Current and Magnetism</strong> is one of the highest-scoring chapters in <strong>JEE Physics</strong>, contributing 8-10% of total physics marks. Key reasons why you must master it:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>High Weightage:</strong> 4-6 questions in JEE Main, 5-7 in JEE Advanced</li>
                             <li><strong>Conceptual Foundation:</strong> Forms base for Electromagnetic Induction & AC</li>
                             <li><strong>Mixed Questions:</strong> Often combined with mechanics (charged particle motion)</li>
                             <li><strong>Experimental Questions:</strong> Galvanometer, magnetism appear in practicals</li>
                             <li><strong>Predictable Patterns:</strong> Similar question types repeat every year</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             In <strong>JEE Advanced</strong>, expect complex problems on motion of charges in non-uniform fields, combination of E and B fields, and multi-concept questions linking with mechanics.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Chapter-wise Important Topics</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">🔴 Must Know (100% Important)</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">🔴 Must Know (100% Important)</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Biot-Savart Law applications (wire, loop, arc)</li>
                                     <li>• Motion of charged particle in B field (circular, helical)</li>
                                     <li>• Force between parallel conductors</li>
@@ -2394,8 +2439,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">🟡 Important (80% Frequency)</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">🟡 Important (80% Frequency)</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Ampere's law (solenoid, toroid)</li>
                                     <li>• Cyclotron and velocity selector</li>
                                     <li>• Earth's magnetism elements</li>
@@ -2403,8 +2448,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">🟢 Good to Know (50% Frequency)</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">🟢 Good to Know (50% Frequency)</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Bar magnet field calculations</li>
                                     <li>• Hysteresis loop analysis</li>
                                     <li>• Curie's law and temperature effects</li>
@@ -2415,12 +2460,12 @@
                 </div>
                 
                 <!-- Study Tips -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study This Chapter Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 8-10 days (3 hours/day)</li>
                                 <li>Start with <strong>Biot-Savart Law</strong> - practice all standard configurations</li>
                                 <li>Master <strong>right-hand rules</strong> for directions</li>
@@ -2432,7 +2477,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 12-15 days (4 hours/day)</li>
                                 <li>Deep dive into <strong>vector calculations</strong> for Biot-Savart</li>
                                 <li>Master <strong>superposition principle</strong> for complex geometries</li>
@@ -2446,41 +2491,41 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong direction using right-hand rule:</strong> Practice extensively - use thumb for current, fingers curl to show B direction
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Forgetting μ₀/4π factor:</strong> Biot-Savart has μ₀/4π, infinite wire has μ₀/2π - don't mix them up!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Sign errors in force direction:</strong> Like currents attract, unlike repel (opposite to charges!)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing θ in torque formula:</strong> θ is angle between M (area vector) and B, not between plane and B
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Using wrong formula for helical motion:</strong> Radius uses v⊥ = vsinθ, pitch uses v∥ = vcosθ
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Ignoring vector nature:</strong> B is a vector - superposition requires vector addition, not scalar
                             </div>
@@ -2489,10 +2534,10 @@
                 </div>
                 
                 <!-- Quick Reference -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">🎯 Quick Reference: Important Values to Remember</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-blue-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <h4 class="font-bold mb-3">Physical Constants</h4>
                             <ul class="text-sm space-y-2">
                                 <li>μ₀ = 4π × 10⁻⁷ T·m/A</li>
@@ -2502,7 +2547,7 @@
                                 <li>mₚ = 1.67 × 10⁻²⁷ kg</li>
                             </ul>
                         </div>
-                        <div class="bg-green-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <h4 class="font-bold mb-3">Earth's Magnetism</h4>
                             <ul class="text-sm space-y-2">
                                 <li>B_Earth ≈ 25-65 μT</li>
@@ -2511,7 +2556,7 @@
                                 <li>Dip at equator = 0°</li>
                             </ul>
                         </div>
-                        <div class="bg-purple-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <h4 class="font-bold mb-3">Unit Conversions</h4>
                             <ul class="text-sm space-y-2">
                                 <li>1 Tesla = 10⁴ Gauss</li>
@@ -2523,12 +2568,12 @@
                 </div>
                 
                 <!-- Video Recommendations -->
-                <div class="mt-8 bg-gradient-to-r from-red-50 to-orange-50 p-8 rounded-2xl border-2 border-accent">
-                    <h3 class="text-2xl font-bold text-accent mb-4">🎬 Recommended Video Lectures</h3>
+                <div class="mt-8 bg-gradient-to-r from-surface-2 to-surface-2 p-8 rounded-2xl border-2 border-accent">
+                    <h3 class="text-2xl font-bold text-primary mb-4">🎬 Recommended Video Lectures</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For Concept Building:</h4>
-                            <ul class="space-y-2 text-gray-700">
+                            <ul class="space-y-2 text-ink-muted">
                                 <li>📺 Physics Wallah - Magnetic Effects One Shot</li>
                                 <li>📺 Unacademy JEE - Biot Savart Complete</li>
                                 <li>📺 Vedantu JEE - Motion in Magnetic Field</li>
@@ -2536,7 +2581,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For Problem Solving:</h4>
-                            <ul class="space-y-2 text-gray-700">
+                            <ul class="space-y-2 text-ink-muted">
                                 <li>📺 Mohit Tyagi - Advanced Problems</li>
                                 <li>📺 IIT JEE Physics by ABJ Sir</li>
                                 <li>📺 Etoos India - PYQ Solutions</li>
@@ -2550,60 +2595,60 @@
     </section>
     
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
             </div>
@@ -2612,43 +2657,43 @@
                 <!-- Articles -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
             
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
     
     <!-- Scroll to Top Button -->
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

@@ -28,7 +28,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="JEE Chemistry Notes 2026 | Physical, Organic & Inorganic Chapters">
     <meta property="og:description" content="Chapter-wise JEE Chemistry notes for JEE Main & Advanced 2026. Physical, Inorganic and Organic Chemistry — short notes, PYQs, formulas. Free, no login.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="JEE Chemistry Complete Notes - All Chapters">
@@ -39,7 +39,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/chemistry/">
     <meta name="twitter:title" content="JEE Chemistry Notes 2026 | Physical, Organic & Inorganic Chapters">
     <meta name="twitter:description" content="Free JEE Chemistry notes for all chapters — Physical, Inorganic and Organic. Short notes, PYQs, revision notes for JEE Mains & Advanced 2026.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     
     <!-- Additional SEO Meta Tags -->
@@ -47,9 +47,9 @@
     <meta name="apple-mobile-web-app-title" content="JEE Chemistry Notes">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,8 +59,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -336,25 +336,7 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#7c3aed',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
+    
 
     <style>
         body { 
@@ -362,21 +344,26 @@
             scroll-behavior: smooth;
         }
         .hero-gradient {
-            background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+            background: linear-gradient(135deg, #131316 0%, #1c1c20 50%, #232328 100%);
         }
         .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            border-radius: 30px !important;
+            background: #1c1c20 !important;
+            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
+                        -12px -12px 24px rgba(255, 255, 255, 0.03) !important;
         }
         .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(-8px) !important;
+            box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.6),
+                        -16px -16px 32px rgba(255, 255, 255, 0.04) !important;
         }
         .progress-bar {
             position: fixed;
             top: 0;
             left: 0;
             height: 4px;
-            background: linear-gradient(to right, #10b981, #059669);
+            background: linear-gradient(to right, #5e6ad2, #828fff);
             z-index: 9999;
             transition: width 0.1s;
         }
@@ -417,40 +404,41 @@
             transform-origin: 50% 50%;
         }
     </style>
+<link rel="stylesheet" href="../../css/tailwind.min.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-canvas text-ink">
 
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
 
     <!-- Header/Navigation -->
-    <header class="bg-white shadow-lg sticky top-0 z-50 border-b-4 border-green-600">
+    <header class="bg-surface-1 border-b border-hairline fixed top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app" aria-label="JEE Prep Guide Home"><img src="https://jeeprepguide.netlify.app/logo.png" alt="JEE Prep Guide - Free Chemistry Notes for JEE Mains and Advanced" class="w-10 h-10 rounded-lg"></a>
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-surface-20 rounded-xl flex items-center justify-center border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app" aria-label="JEE Prep Guide Home"><img src="/logo-header.webp" alt="JEE Prep Guide - Free Chemistry Notes for JEE Mains and Advanced" class="w-10 h-10 rounded-lg"></a>
                     </div>
                     <div>
-                        <a href="https://jeeprepguide.netlify.app/" class="text-2xl font-extrabold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                        <a href="https://jeeprepguide.netlify.app/" class="text-2xl font-extrabold text-ink">
                             JEE Prep Guide
                         </a>
-                        <p class="text-xs text-gray-500">Your Path to IIT</p>
+                        <p class="text-xs text-ink-tertiary">Your Path to IIT</p>
                     </div>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="https://jeeprepguide.netlify.app/" class="text-gray-700 hover:text-green-600 font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-green-600 font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-green-600 font-bold transition border-b-2 border-green-600 pb-1">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-green-600 font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-green-600 font-semibold transition">Blog</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-semibold transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-semibold transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink font-bold border-b-2 border-primary pb-1">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-semibold transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-semibold transition">Blog</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -460,44 +448,44 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="https://jeeprepguide.netlify.app/" class="text-gray-700 hover:text-green-600 font-semibold">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-green-600 font-semibold">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-green-600 font-bold">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-green-600 font-semibold">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="text-gray-700 hover:text-green-600 font-semibold">About</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="text-gray-700 hover:text-green-600 font-semibold">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink font-bold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="text-ink-muted hover:text-ink font-semibold">About</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="text-ink-muted hover:text-ink font-semibold">Contact</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b border-hairline pt-[81px]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm">
-                <li><a href="https://jeeprepguide.netlify.app/" class="text-green-600 hover:underline">Home</a></li>
-                <li class="text-gray-400">/</li>
-                <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-green-600 hover:underline">JEE CHEMISTRY</a></li>
-                <li class="text-gray-400">/</li>
-                <li class="text-gray-600 font-semibold">Chemistry</li>
+                <li><a href="https://jeeprepguide.netlify.app/" class="text-primary hover:underline">Home</a></li>
+                <li class="text-ink-tertiary">/</li>
+                <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:underline">JEE CHEMISTRY</a></li>
+                <li class="text-ink-tertiary">/</li>
+                <li class="text-ink-muted font-semibold">Chemistry</li>
             </ol>
         </div>
     </nav>
 
     <!-- SEO-Friendly Table of Contents -->
-    <section class="bg-gradient-to-r from-green-50 to-emerald-50 py-8 border-b">
+    <section class="bg-surface-1 py-8 border-b border-hairline">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">🧪 Complete JEE Chemistry Syllabus Coverage</h2>
+            <h2 class="text-2xl font-bold text-ink mb-4">🧪 Complete JEE Chemistry Syllabus Coverage</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <a href="#physical-section" class="flex items-center space-x-2 text-green-700 hover:underline font-semibold bg-white p-3 rounded-lg shadow-sm">
+                <a href="#physical-section" class="flex items-center space-x-2 text-primary hover:underline font-semibold bg-surface-2 p-3 rounded-lg border border-hairline">
                     <span>⚗️</span>
                     <span>Physical Chemistry (10 Chapters)</span>
                 </a>
-                <a href="#inorganic-section" class="flex items-center space-x-2 text-red-600 hover:underline font-semibold bg-white p-3 rounded-lg shadow-sm">
+                <a href="#inorganic-section" class="flex items-center space-x-2 text-primary hover:underline font-semibold bg-surface-2 p-3 rounded-lg border border-hairline">
                     <span>🔬</span>
                     <span>Inorganic Chemistry (10 Chapters)</span>
                 </a>
-                <a href="#organic-section" class="flex items-center space-x-2 text-emerald-600 hover:underline font-semibold bg-white p-3 rounded-lg shadow-sm">
+                <a href="#organic-section" class="flex items-center space-x-2 text-primary hover:underline font-semibold bg-surface-2 p-3 rounded-lg border border-hairline">
                     <span>🧬</span>
                     <span>Organic Chemistry (10 Chapters)</span>
                 </a>
@@ -506,10 +494,10 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white py-16 md:py-20 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl float-animation"></div>
-            <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
+    <section class="hero-gradient text-ink py-16 md:py-20 relative overflow-hidden border-b border-hairline">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-primary rounded-full blur-3xl float-animation"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -517,62 +505,62 @@
                 <div>
                     <div class="flex items-center mb-4">
                         <span class="text-6xl mr-4">🧪</span>
-                        <span class="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold">
+                        <span class="bg-surface-3 border border-hairline px-4 py-2 rounded-full text-sm font-bold text-ink-muted">
                             JEE Main & Advanced 2025-26
                         </span>
                     </div>
                     <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
                         JEE Chemistry
-                        <span class="block text-yellow-300">Complete Notes</span>
+                        <span class="block text-primary">Complete Notes</span>
                     </h1>
-                    <p class="text-xl opacity-95 leading-relaxed mb-8">
+                    <p class="text-xl text-ink-muted leading-relaxed mb-8">
                         All Chemistry chapters for JEE Main & Advanced 2026 — Physical Chemistry, Inorganic Chemistry and Organic Chemistry
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
-                            <span class="font-bold">📚 30+ Chapters</span>
+                        <div class="bg-surface-3 border border-hairline px-6 py-3 rounded-full">
+                            <span class="font-bold text-ink-muted">📚 30+ Chapters</span>
                         </div>
-                        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
-                            <span class="font-bold">✍️ 1000+ Examples</span>
+                        <div class="bg-surface-3 border border-hairline px-6 py-3 rounded-full">
+                            <span class="font-bold text-ink-muted">✍️ 1000+ Examples</span>
                         </div>
-                        <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
-                            <span class="font-bold">🎯 100% Free</span>
+                        <div class="bg-surface-3 border border-hairline px-6 py-3 rounded-full">
+                            <span class="font-bold text-ink-muted">🎯 100% Free</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Progress Stats -->
-                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl">
-                    <h3 class="text-2xl font-bold mb-6">Your Progress</h3>
+                <div class="bg-surface-2 border border-hairline p-8 rounded-3xl">
+                    <h3 class="text-2xl font-bold mb-6 text-ink">Your Progress</h3>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center">
                             <div class="relative inline-block">
                                 <svg class="w-24 h-24">
-                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.2)" stroke-width="8" fill="none"/>
-                                    <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#fbbf24" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="209.3"/>
+                                    <circle cx="48" cy="48" r="40" stroke="#2c2c32" stroke-width="8" fill="none"/>
+                                    <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#5e6ad2" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="209.3"/>
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center">
-                                    <span class="text-2xl font-bold">5/30</span>
+                                    <span class="text-2xl font-bold text-ink">5/30</span>
                                 </div>
                             </div>
-                            <p class="mt-2 font-semibold">Chapters Ready</p>
+                            <p class="mt-2 font-semibold text-ink-muted">Chapters Ready</p>
                         </div>
                         <div class="text-center">
                             <div class="relative inline-block">
                                 <svg class="w-24 h-24">
-                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.2)" stroke-width="8" fill="none"/>
-                                    <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#fbbf24" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="0"/>
+                                    <circle cx="48" cy="48" r="40" stroke="#2c2c32" stroke-width="8" fill="none"/>
+                                    <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#5e6ad2" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="0"/>
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center">
-                                    <span class="text-2xl font-bold">100%</span>
+                                    <span class="text-2xl font-bold text-ink">100%</span>
                                 </div>
                             </div>
-                            <p class="mt-2 font-semibold">Free Forever</p>
+                            <p class="mt-2 font-semibold text-ink-muted">Free Forever</p>
                         </div>
                     </div>
-                    <div class="mt-6 bg-white/10 p-4 rounded-xl">
-                        <p class="text-sm opacity-90">
-                            <span class="font-bold text-yellow-300">✨ New:</span> Chemical Bonding & Atomic Structure chapters are now live!
+                    <div class="mt-6 bg-surface-3 border border-hairline p-4 rounded-xl">
+                        <p class="text-sm text-ink-muted">
+                            <span class="font-bold text-primary">✨ New:</span> Chemical Bonding & Atomic Structure chapters are now live!
                         </p>
                     </div>
                 </div>
@@ -581,21 +569,21 @@
     </section>
     
     <!-- Rating Section -->
-    <section class="py-8 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-8 bg-surface-1 border-y border-hairline" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="JEE Chemistry Complete Notes">
         <meta itemprop="description" content="Complete Chemistry study material for JEE">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-3xl">⭐⭐⭐⭐⭐</span>
-                        <span class="ml-3 text-2xl font-bold">
+                        <span class="text-primary text-3xl">⭐⭐⭐⭐⭐</span>
+                        <span class="ml-3 text-2xl font-bold text-ink">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600 text-lg">
+                    <div class="text-ink-muted text-lg">
                         Based on <span itemprop="reviewCount">280</span>+ student reviews
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -604,16 +592,16 @@
                 
                 <div class="flex items-center space-x-8 text-center">
                     <div>
-                        <div class="text-3xl font-bold text-green-600">5/30</div>
-                        <div class="text-sm text-gray-600">Chapters Live</div>
+                        <div class="text-3xl font-bold text-primary">5/30</div>
+                        <div class="text-sm text-ink-muted">Chapters Live</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-emerald-600">1000+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-3xl font-bold text-primary">1000+</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-teal-600">100%</div>
-                        <div class="text-sm text-gray-600">Free Forever</div>
+                        <div class="text-3xl font-bold text-primary">100%</div>
+                        <div class="text-sm text-ink-muted">Free Forever</div>
                     </div>
                 </div>
             </div>
@@ -621,8 +609,8 @@
     </section>
 
     <!-- Filter & Search Section -->
-    <section class="py-8 bg-white border-b sticky top-[73px] z-40 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="sticky top-[450px] z-40 bg-surface-1 border-b border-hairline shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <!-- Search -->
                 <div class="relative flex-1 max-w-md">
@@ -630,25 +618,25 @@
                         type="text" 
                         id="searchInput"
                         placeholder="Search chapters... (e.g., Mole Concept, Bonding)" 
-                        class="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-full focus:border-green-600 focus:outline-none transition"
+                        class="w-full pl-12 pr-4 py-3 border border-hairline rounded-full focus:border-primary focus:outline-none transition bg-surface-2 text-ink placeholder:text-ink-tertiary"
                     >
-                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-ink-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
 
                 <!-- Category Filters -->
                 <div class="flex flex-wrap gap-2">
-                    <button onclick="filterChapters('all')" class="filter-btn active px-4 py-2 rounded-full font-semibold bg-green-600 text-white transition" data-filter="all">
+                    <button onclick="filterChapters('all')" class="filter-btn active px-4 py-2 rounded-full font-semibold bg-primary text-ink transition" data-filter="all">
                         All (30+)
                     </button>
-                    <button onclick="filterChapters('physical')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition" data-filter="physical">
+                    <button onclick="filterChapters('physical')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition border border-hairline" data-filter="physical">
                         ⚗️ Physical
                     </button>
-                    <button onclick="filterChapters('inorganic')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-red-500 hover:text-white transition" data-filter="inorganic">
+                    <button onclick="filterChapters('inorganic')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition border border-hairline" data-filter="inorganic">
                         🔬 Inorganic
                     </button>
-                    <button onclick="filterChapters('organic')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-gray-200 text-gray-700 hover:bg-emerald-600 hover:text-white transition" data-filter="organic">
+                    <button onclick="filterChapters('organic')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition border border-hairline" data-filter="organic">
                         🧬 Organic
                     </button>
                 </div>
@@ -657,74 +645,74 @@
     </section>
 
     <!-- Chapters Grid -->
-    <section class="py-16 bg-gray-50">
+    <section class="pt-[81px] pb-16 bg-canvas">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- ============================================ -->
             <!-- PHYSICAL CHEMISTRY SECTION -->
             <!-- ============================================ -->
-<div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#f0fdf4;border-radius:1rem;border-left:4px solid #10b981;">
-  <h2 style="font-size:1.2rem;font-weight:800;color:#065f46;margin-bottom:0.5rem;">
+<div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#131316;border-radius:1rem;border-left:4px solid #5e6ad2;">
+  <h2 style="font-size:1.2rem;font-weight:800;color:#f7f8f8;margin-bottom:0.5rem;">
     JEE Chemistry Notes — All Chapters 2026
   </h2>
-  <p style="font-size:0.95rem;line-height:1.8;color:#374151;margin:0;">
+  <p style="font-size:0.95rem;line-height:1.8;color:#d0d6e0;margin:0;">
     This page covers all 30+ JEE Chemistry chapters with chapter-wise short notes, important formulas, PYQs, and revision notes for JEE Main & Advanced 2026. Chapters are divided into three sections: Physical Chemistry (mole concept, atomic structure, chemical bonding, thermodynamics, equilibrium, electrochemistry, chemical kinetics, solutions, surface chemistry), Inorganic Chemistry (periodic table, p-block, d-block, coordination compounds, salt analysis), and Organic Chemistry (GOC, hydrocarbons, reactions, biomolecules, polymers). All notes are free — no login required.
   </p>
 </div>
             <div class="mb-16" id="physical-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-blue-600 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">⚗️ Physical Chemistry</h2>
-                        <p class="text-gray-600">Concepts & Calculations • 10 Chapters • ~35% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">⚗️ Physical Chemistry</h2>
+                        <p class="text-ink-muted">Concepts & Calculations • 10 Chapters • ~35% JEE Weightage</p>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="physical-grid">
                     
                     <!-- Ch 1: Some Basic Concepts of Chemistry (Available) -->
-                    <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 1</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 1</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">⚖️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Some Basic Concepts of Chemistry
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                             Mole concept, Dalton's atomic theory, laws of chemical combination, stoichiometry, limiting reagent, percentage yield
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 120+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
                     </div>
 
                     <!-- Ch 2: Atomic Structure (Available) -->
-                    <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">⚛️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Atomic Structure
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                             Bohr model, quantum numbers, electronic configuration, photoelectric effect, de Broglie wavelength, Heisenberg uncertainty
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
@@ -732,142 +720,142 @@
 
                     <!-- Ch 3: States of Matter (Coming Soon) -->
 
-                    <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">💨</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             States of Matter
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                             Gas laws, ideal gas equation, kinetic theory of gases, van der Waals equation, liquefaction
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
                     </div>
 
                     <!-- Ch 4: Chemical Thermodynamics (Coming Soon) -->
-                     <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                     <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🔥</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Chemical Thermodynamics
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                              Enthalpy, entropy, Gibbs free energy, Hess's law, Born-Haber cycle, spontaneity
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
                     </div>
 
                     <!-- Ch 5: Chemical Equilibrium (Coming Soon) -->
-                     <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                     <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">⚖️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Chemical Equilibrium
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                              Law of mass action, Le Chatelier's principle, Kp, Kc, ionic equilibrium, pH, buffers
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
                     </div>
 
                     <!-- Ch 6: Ionic Equilibrium (Coming Soon) -->
-                     <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                     <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🧊</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Ionic Equilibrium
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                               Acids & bases, pH scale, buffer solutions, solubility product, common ion effect, hydrolysis
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
                     </div>
 
-                    <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🧊</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Solutions
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                               Colligative properties, Raoult's law, osmotic pressure, van't Hoff factor, molality, molarity
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
                     </div>
 
-                    <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🧊</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Electrochemistry
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                               Electrochemical cells, Nernst equation, electrolysis, batteries
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
@@ -877,47 +865,47 @@
                     
 
                     <!-- ADD_NEW_PHYSICAL_CHAPTER -->
-                    <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">⏳</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Chemical Kinetics
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                               Rate of reaction, order, molecularity, Arrhenius equation, collision theory
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
                     </div>
 
-                    <div class="chapter-card bg-white border-l-4 cat-physical p-6 rounded-2xl shadow-lg card-hover group" data-category="physical" data-status="available">
+                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="cat-badge text-white px-3 py-1 rounded-full text-sm font-bold">Ch. 5</span>
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 5</span>
+                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🌫️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition">
+                        <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
                             Surface Chemistry
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-ink-muted mb-4">
                               Adsorption, catalysis, colloids, emulsions, Tyndall effect, Brownian movement
                         </p>
                         <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center space-x-4 text-gray-500">
+                            <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry" class="text-blue-600 font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
                                 Read →
                             </a>
                         </div>
@@ -930,10 +918,10 @@
             <!-- ============================================ -->
             <div class="mb-16" id="inorganic-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-red-500 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">🔬 Inorganic Chemistry</h2>
-                        <p class="text-gray-600">Elements & Periodicity • 10 Chapters • ~30% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">🔬 Inorganic Chemistry</h2>
+                        <p class="text-ink-muted">Elements & Periodicity • 10 Chapters • ~30% JEE Weightage</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="inorganic-grid">
@@ -946,10 +934,10 @@
             <!-- ============================================ -->
             <div class="mb-16" id="organic-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-emerald-600 rounded mr-4"></div>
+                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
-                        <h2 class="text-4xl font-extrabold text-gray-900">🧬 Organic Chemistry</h2>
-                        <p class="text-gray-600">Reactions & Mechanisms • 10 Chapters • ~35% JEE Weightage</p>
+                        <h2 class="text-4xl font-extrabold text-ink">🧬 Organic Chemistry</h2>
+                        <p class="text-ink-muted">Reactions & Mechanisms • 10 Chapters • ~35% JEE Weightage</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="organic-grid">
@@ -961,41 +949,41 @@
     </section>
 
     <!-- JEE Weightage Info -->
-    <section class="py-16 bg-gradient-to-br from-green-600 to-emerald-700 text-white">
+    <section class="py-16 bg-surface-1 text-ink">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-extrabold mb-4">📊 JEE Chemistry Weightage Analysis</h2>
-                <p class="text-xl opacity-90">Focus on high-weightage topics for maximum marks</p>
+                <p class="text-xl text-ink-muted">Focus on high-weightage topics for maximum marks</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl text-center">
-                    <div class="text-6xl font-bold mb-2">35%</div>
+                <div class="bg-surface-2 border border-hairline p-8 rounded-2xl text-center">
+                    <div class="text-6xl font-bold mb-2 text-primary">35%</div>
                     <div class="text-2xl font-semibold mb-2">Physical Chemistry</div>
-                    <div class="text-sm opacity-80 mb-4">10 chapters</div>
-                    <div class="text-left text-sm opacity-90 space-y-1">
+                    <div class="text-sm text-ink-subtle mb-4">10 chapters</div>
+                    <div class="text-left text-sm text-ink-muted space-y-1">
                         <p>🔥 Mole Concept & Stoichiometry</p>
                         <p>🔥 Thermodynamics</p>
                         <p>🔥 Electrochemistry</p>
                         <p>🔥 Chemical Equilibrium</p>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl text-center">
-                    <div class="text-6xl font-bold mb-2">30%</div>
+                <div class="bg-surface-2 border border-hairline p-8 rounded-2xl text-center">
+                    <div class="text-6xl font-bold mb-2 text-primary">30%</div>
                     <div class="text-2xl font-semibold mb-2">Inorganic Chemistry</div>
-                    <div class="text-sm opacity-80 mb-4">10 chapters</div>
-                    <div class="text-left text-sm opacity-90 space-y-1">
+                    <div class="text-sm text-ink-subtle mb-4">10 chapters</div>
+                    <div class="text-left text-sm text-ink-muted space-y-1">
                         <p>🔥 Chemical Bonding</p>
                         <p>🔥 Coordination Compounds</p>
                         <p>🔥 p-Block Elements</p>
                         <p>🔥 Periodic Table Trends</p>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl text-center">
-                    <div class="text-6xl font-bold mb-2">35%</div>
+                <div class="bg-surface-2 border border-hairline p-8 rounded-2xl text-center">
+                    <div class="text-6xl font-bold mb-2 text-primary">35%</div>
                     <div class="text-2xl font-semibold mb-2">Organic Chemistry</div>
-                    <div class="text-sm opacity-80 mb-4">10 chapters</div>
-                    <div class="text-left text-sm opacity-90 space-y-1">
+                    <div class="text-sm text-ink-subtle mb-4">10 chapters</div>
+                    <div class="text-left text-sm text-ink-muted space-y-1">
                         <p>🔥 GOC & Isomerism</p>
                         <p>🔥 Aldehydes & Ketones</p>
                         <p>🔥 Haloalkanes (SN1/SN2)</p>
@@ -1007,86 +995,86 @@
     </section>
 
     <!-- Quick Links -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-canvas">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">⚡ Quick Resources</h2>
-                <p class="text-xl text-gray-600">Additional study material to boost your Chemistry preparation</p>
+                <h2 class="text-4xl font-extrabold text-ink mb-4">⚡ Quick Resources</h2>
+                <p class="text-xl text-ink-muted">Additional study material to boost your Chemistry preparation</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="#" class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg text-center card-hover group">
+                <a href="#" class="bg-surface-2 p-8 rounded-2xl border border-hairline text-center card-hover group">
                     <div class="text-5xl mb-4">📋</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition">Formula Sheet</h3>
-                    <p class="text-gray-600">All Chemistry formulas & equations in one place</p>
+                    <h3 class="text-2xl font-bold text-ink mb-2 group-hover:text-primary transition">Formula Sheet</h3>
+                    <p class="text-ink-muted">All Chemistry formulas & equations in one place</p>
                 </a>
 
-                <a href="#" class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl shadow-lg text-center card-hover group">
+                <a href="#" class="bg-surface-2 p-8 rounded-2xl border border-hairline text-center card-hover group">
                     <div class="text-5xl mb-4">🔄</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-red-500 transition">Reaction Sheet</h3>
-                    <p class="text-gray-600">All named reactions & mechanisms at a glance</p>
+                    <h3 class="text-2xl font-bold text-ink mb-2 group-hover:text-primary transition">Reaction Sheet</h3>
+                    <p class="text-ink-muted">All named reactions & mechanisms at a glance</p>
                 </a>
 
-                <a href="#" class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg text-center card-hover group">
+                <a href="#" class="bg-surface-2 p-8 rounded-2xl border border-hairline text-center card-hover group">
                     <div class="text-5xl mb-4">📝</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition">PYQ Analysis</h3>
-                    <p class="text-gray-600">Last 10 years JEE Chemistry questions analyzed</p>
+                    <h3 class="text-2xl font-bold text-ink mb-2 group-hover:text-primary transition">PYQ Analysis</h3>
+                    <p class="text-ink-muted">Last 10 years JEE Chemistry questions analyzed</p>
                 </a>
 
-                <a href="#" class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg text-center card-hover group">
+                <a href="#" class="bg-surface-2 p-8 rounded-2xl border border-hairline text-center card-hover group">
                     <div class="text-5xl mb-4">⚡</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition">Quick Revision</h3>
-                    <p class="text-gray-600">Last minute revision notes for Chemistry</p>
+                    <h3 class="text-2xl font-bold text-ink mb-2 group-hover:text-primary transition">Quick Revision</h3>
+                    <p class="text-ink-muted">Last minute revision notes for Chemistry</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- SEO Content Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-surface-1">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="prose max-w-none">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Complete JEE Chemistry Preparation Guide 2025-26</h2>
+                <h2 class="text-3xl font-bold text-ink mb-6">Complete JEE Chemistry Preparation Guide 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">Why Choose Our Chemistry Notes?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            Our comprehensive JEE Chemistry notes cover the entire syllabus for both <strong>JEE Main and JEE Advanced</strong>. Each chapter is meticulously crafted by IIT alumni and experienced JEE educators with over 10 years of teaching experience.
+                        <h3 class="text-2xl font-bold text-primary mb-4">Why Choose Our Chemistry Notes?</h3>
+                        <p class="text-ink-muted leading-relaxed mb-4">
+                            Our comprehensive JEE Chemistry notes cover the entire syllabus for both <strong class="text-ink">JEE Main and JEE Advanced</strong>. Each chapter is meticulously crafted by IIT alumni and experienced JEE educators with over 10 years of teaching experience.
                         </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            The notes include <strong>theory, reaction mechanisms, solved examples, shortcuts, tricks</strong>, and previous year question analysis. Whether you're preparing for JEE Main or targeting JEE Advanced, our study material provides complete coverage of Physical, Inorganic, and Organic Chemistry.
+                        <p class="text-ink-muted leading-relaxed mb-4">
+                            The notes include <strong class="text-ink">theory, reaction mechanisms, solved examples, shortcuts, tricks</strong>, and previous year question analysis. Whether you're preparing for JEE Main or targeting JEE Advanced, our study material provides complete coverage of Physical, Inorganic, and Organic Chemistry.
                         </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            Chemistry is often considered the <strong>easiest scoring subject</strong> in JEE if prepared well. Our notes help you master concepts systematically and tackle even the trickiest JEE Advanced problems with confidence.
+                        <p class="text-ink-muted leading-relaxed mb-4">
+                            Chemistry is often considered the <strong class="text-ink">easiest scoring subject</strong> in JEE if prepared well. Our notes help you master concepts systematically and tackle even the trickiest JEE Advanced problems with confidence.
                         </p>
                     </div>
                     
                     <div>
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">Chapter-wise JEE Chemistry Strategy</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            <strong>Physical Chemistry (~35%):</strong> Focus on numerical problem-solving. Mole Concept, Thermodynamics, Electrochemistry, and Equilibrium are must-master chapters. Practice calculations daily.
+                        <h3 class="text-2xl font-bold text-primary mb-4">Chapter-wise JEE Chemistry Strategy</h3>
+                        <p class="text-ink-muted leading-relaxed mb-4">
+                            <strong class="text-ink">Physical Chemistry (~35%):</strong> Focus on numerical problem-solving. Mole Concept, Thermodynamics, Electrochemistry, and Equilibrium are must-master chapters. Practice calculations daily.
                         </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            <strong>Organic Chemistry (~35%):</strong> Start with GOC fundamentals, then learn reaction mechanisms. Understanding "why" a reaction happens is more important than memorizing reactions. Named reactions are frequently asked in JEE.
+                        <p class="text-ink-muted leading-relaxed mb-4">
+                            <strong class="text-ink">Organic Chemistry (~35%):</strong> Start with GOC fundamentals, then learn reaction mechanisms. Understanding "why" a reaction happens is more important than memorizing reactions. Named reactions are frequently asked in JEE.
                         </p>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            <strong>Inorganic Chemistry (~30%):</strong> This requires a mix of conceptual understanding and memory. Chemical Bonding, Coordination Compounds, and p-Block elements are high-scoring. Use periodic table trends to reduce memorization.
+                        <p class="text-ink-muted leading-relaxed mb-4">
+                            <strong class="text-ink">Inorganic Chemistry (~30%):</strong> This requires a mix of conceptual understanding and memory. Chemical Bonding, Coordination Compounds, and p-Block elements are high-scoring. Use periodic table trends to reduce memorization.
                         </p>
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-green-50 p-6 rounded-xl border border-green-200">
-                    <h3 class="text-2xl font-bold text-green-700 mb-4">📖 How to Use These Chemistry Notes Effectively?</h3>
-                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                        <li><strong>Start with Basic Concepts & Atomic Structure</strong> - Build strong foundation of mole concept and electronic configuration</li>
-                        <li><strong>Master Chemical Bonding early</strong> - It connects Physical, Inorganic & Organic Chemistry</li>
-                        <li><strong>Learn GOC before specific Organic chapters</strong> - Understanding electronic effects is crucial</li>
-                        <li><strong>Practice numerical problems daily</strong> for Physical Chemistry chapters</li>
-                        <li><strong>Make reaction charts</strong> for Organic Chemistry - Visual learning works best</li>
-                        <li><strong>Use periodic table trends</strong> to understand Inorganic Chemistry logically</li>
-                        <li><strong>Solve previous year questions</strong> after completing each chapter</li>
-                        <li><strong>Revise Inorganic Chemistry weekly</strong> - It requires regular revision</li>
+                <div class="mt-8 bg-surface-2 p-6 rounded-xl border border-hairline">
+                    <h3 class="text-2xl font-bold text-primary mb-4">📖 How to Use These Chemistry Notes Effectively?</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-ink-muted">
+                        <li><strong class="text-ink">Start with Basic Concepts & Atomic Structure</strong> - Build strong foundation of mole concept and electronic configuration</li>
+                        <li><strong class="text-ink">Master Chemical Bonding early</strong> - It connects Physical, Inorganic & Organic Chemistry</li>
+                        <li><strong class="text-ink">Learn GOC before specific Organic chapters</strong> - Understanding electronic effects is crucial</li>
+                        <li><strong class="text-ink">Practice numerical problems daily</strong> for Physical Chemistry chapters</li>
+                        <li><strong class="text-ink">Make reaction charts</strong> for Organic Chemistry - Visual learning works best</li>
+                        <li><strong class="text-ink">Use periodic table trends</strong> to understand Inorganic Chemistry logically</li>
+                        <li><strong class="text-ink">Solve previous year questions</strong> after completing each chapter</li>
+                        <li><strong class="text-ink">Revise Inorganic Chemistry weekly</strong> - It requires regular revision</li>
                     </ol>
                 </div>
             </div>
@@ -1094,102 +1082,102 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+    <footer class="bg-canvas text-ink py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">sitemap</a></li>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-white transition">Physics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Mathematics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Study Tips</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-ink transition">Physics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Mathematics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Study Tips</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         </ul>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Last Updated: 14 March, 2026</p>
+        <div class="border-t border-hairline pt-8 text-center">
+            <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+            <p class="text-ink-tertiary text-xs mt-2">Last Updated: 14 March, 2026</p>
         </div>
     </div>
 </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="fixed bottom-8 right-8 bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl hover:bg-emerald-700 transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-primary-hover transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
         ↑
     </button>
 
@@ -1254,15 +1242,12 @@
 
             // Update active button
             buttons.forEach(btn => {
-                btn.classList.remove('bg-green-600', 'bg-blue-600', 'bg-red-500', 'bg-emerald-600', 'text-white');
-                btn.classList.add('bg-gray-200', 'text-gray-700');
+                btn.classList.remove('bg-primary', 'text-ink');
+                btn.classList.add('bg-surface-2', 'text-ink-muted');
                 
                 if (btn.getAttribute('data-filter') === category) {
-                    btn.classList.remove('bg-gray-200', 'text-gray-700');
-                    if (category === 'all') btn.classList.add('bg-green-600', 'text-white');
-                    else if (category === 'physical') btn.classList.add('bg-blue-600', 'text-white');
-                    else if (category === 'inorganic') btn.classList.add('bg-red-500', 'text-white');
-                    else if (category === 'organic') btn.classList.add('bg-emerald-600', 'text-white');
+                    btn.classList.remove('bg-surface-2', 'text-ink-muted');
+                    btn.classList.add('bg-primary', 'text-ink');
                 }
             });
 

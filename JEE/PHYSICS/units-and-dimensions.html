@@ -35,7 +35,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Units & Dimensions JEE Notes | Formulas, PYQs & Shortcuts 2026">
     <meta property="og:description" content="All important dimensional formulas, error analysis, PYQs and shortcuts for JEE Mains & Advanced 2026. Free notes — no login needed.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Units and Dimensions - JEE Physics Notes">
@@ -51,7 +51,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions">
     <meta name="twitter:title" content="Units and Dimensions - Complete JEE Physics Notes">
     <meta name="twitter:description" content="All important dimensional formulas, JEE PYQs, error analysis & shortcuts for 2026. Free study material for JEE Mains & Advanced.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -60,25 +60,38 @@
     <meta name="apple-mobile-web-app-title" content="Units & Dimensions JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -124,7 +137,7 @@
       "@type": "Article",
       "headline": "Units and Dimensions - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Units and Dimensions covering SI units, dimensional analysis, error analysis, and significant figures with 100+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -135,7 +148,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -379,7 +392,7 @@
       "@type": "VideoObject",
       "name": "Units and Dimensions - Complete Tutorial",
       "description": "Learn Units and Dimensions for JEE with examples",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT45M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions"
@@ -416,59 +429,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app" aria-label="JEE Prep Guide Home"><img src="https://jeeprepguide.netlify.app/logo.png" alt="JEE Prep Guide - Free Notes for JEE Mains and Advanced" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app" aria-label="JEE Prep Guide Home"><img src="/logo-header.webp" alt="JEE Prep Guide - Free Notes for JEE Mains and Advanced" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide — Free Notes</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide — Free Notes</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                   <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                   <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -477,59 +492,59 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Units and Dimensions</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Units and Dimensions</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
         </div>
     </nav>
 
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Units and Dimensions</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Units and Dimensions</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Physical Quantities
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 SI Units
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Dimensions
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Analysis
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Sig. Figures
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Errors
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Conversions
             </a>
         </div>
@@ -537,28 +552,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Units & Dimensions
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2026</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2026</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                   Complete Units & Dimensions notes for JEE Mains & Advanced 2026 — with shortcuts, solved examples, and previous year questions.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 7 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -567,21 +582,21 @@
     </section>
 
     <!-- Add after hero section -->
-<section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+<section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="name" content="Units and Dimensions JEE Notes">
     <meta itemprop="description" content="Complete study notes for Units and Dimensions">
-    <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta itemprop="image" content="/logo-header.webp">
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
         <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center space-x-6 mb-4 md:mb-0">
                 <div class="flex items-center">
-                    <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                    <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                     <span class="ml-3 text-xl font-bold">
                         <span itemprop="ratingValue">4.9</span>/5
                     </span>
                 </div>
-                <div class="text-gray-600">
+                <div class="text-ink-muted">
                     <span itemprop="reviewCount">180</span>+ students rated this helpful
                 </div>
                 <meta itemprop="bestRating" content="5">
@@ -591,15 +606,15 @@
             <div class="flex items-center space-x-6">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-primary">100+</div>
-                    <div class="text-sm text-gray-600">Solved Examples</div>
+                    <div class="text-sm text-ink-muted">Solved Examples</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-success">2 hrs</div>
-                    <div class="text-sm text-gray-600">Study Time</div>
+                    <div class="text-2xl font-bold text-primary">2 hrs</div>
+                    <div class="text-sm text-ink-muted">Study Time</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-secondary">Free</div>
-                    <div class="text-sm text-gray-600">Always</div>
+                    <div class="text-2xl font-bold text-primary">Free</div>
+                    <div class="text-sm text-ink-muted">Always</div>
                 </div>
             </div>
         </div>
@@ -610,50 +625,62 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Physical Quantities</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. SI Units System</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Dimensions & Formulas</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Dimensional Analysis</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Significant Figures</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Error Analysis</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Unit Conversions</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Physical Quantities</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. SI Units System</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Dimensions & Formulas</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Dimensional Analysis</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Significant Figures</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Error Analysis</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Unit Conversions</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./kinematics.html" class="text-primary font-semibold hover:underline">Kinematics &rarr;</a>
+                <a href="./laws-of-motion.html" class="text-primary font-semibold hover:underline">Laws Of Motion &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Chapter 1: Physical Quantities -->
                  <figure class="mb-8">
                 <img
-                    src="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions.png"
+                    src="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions.webp"
                     alt="Units and Dimensions Jee notes, Formulas, PYQs "
                     title="Units and Dimensions — JEE Notes, Formulas, PYQs"
                     width="1200"
                     height="630"
                     loading="eager"
                     fetchpriority="high"
-                    class="w-full rounded-2xl shadow-lg border border-gray-200"
+                    class="w-full rounded-2xl border border-hairline border border-hairline"
                     itemprop="image"
                 >
-                <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                     Units and Dimensions JEE Notes, Formulas, PYQs
                 </figcaption>
             </figure>
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Physical Quantities</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Physical Quantities</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -664,7 +691,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Classification of Physical Quantities</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Fundamental Quantities</h5>
                                 <p class="mb-3">Quantities that are <strong>independent</strong> and cannot be expressed in terms of other quantities.</p>
                                 <ul class="list-disc list-inside space-y-2">
@@ -677,7 +704,7 @@
                                     <li>Luminous Intensity (cd)</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Derived Quantities</h5>
                                 <p class="mb-3">Quantities that are <strong>dependent</strong> and can be expressed in terms of fundamental quantities.</p>
                                 <ul class="list-disc list-inside space-y-2">
@@ -704,15 +731,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Scalar vs Vector Quantities</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Aspect</th>
                                         <th class="p-4 text-left">Scalar Quantity</th>
                                         <th class="p-4 text-left">Vector Quantity</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Definition</td>
                                         <td class="p-4">Has only magnitude</td>
@@ -740,10 +767,10 @@
                 </section>
 
                 <!-- Chapter 2: SI Units System -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">SI Units System</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">SI Units System</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -751,19 +778,19 @@
                             The <a href="https://en.wikipedia.org/wiki/International_System_of_Units" target="_blank" rel="noopener noreferrer">International System of Units (SI)</a> is the modern form of the metric system and is the most widely used system of measurement. It consists of 7 base units from which all other units are derived.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 The Seven SI Base Units</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 The Seven SI Base Units</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Quantity</th>
                                         <th class="p-4 text-left">SI Unit</th>
                                         <th class="p-4 text-left">Symbol</th>
                                         <th class="p-4 text-left">Dimension</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Length</td>
                                         <td class="p-4">meter</td>
@@ -810,19 +837,19 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Important Derived Units (JEE Specific)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Important Derived Units (JEE Specific)</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Physical Quantity</th>
                                         <th class="p-4 text-left">SI Unit</th>
                                         <th class="p-4 text-left">Symbol</th>
                                         <th class="p-4 text-left">In Base Units</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Force</td>
                                         <td class="p-4">newton</td>
@@ -875,11 +902,11 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 SI Prefixes (Powers of 10)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 SI Prefixes (Powers of 10)</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Large Multiples</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Large Multiples</h5>
                                 <div class="space-y-2 font-mono text-sm">
                                     <div class="flex justify-between"><span>deca (da)</span><span>10¹</span></div>
                                     <div class="flex justify-between"><span>hecto (h)</span><span>10²</span></div>
@@ -889,8 +916,8 @@
                                     <div class="flex justify-between"><span>tera (T)</span><span>10¹²</span></div>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Small Multiples</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Small Multiples</h5>
                                 <div class="space-y-2 font-mono text-sm">
                                     <div class="flex justify-between"><span>deci (d)</span><span>10⁻¹</span></div>
                                     <div class="flex justify-between"><span>centi (c)</span><span>10⁻²</span></div>
@@ -903,7 +930,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common JEE Traps
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -917,10 +944,10 @@
                 </section>
 
                 <!-- Chapter 3: Dimensions and Dimensional Formulas -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Dimensions & Dimensional Formulas</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Dimensions & Dimensional Formulas</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -928,198 +955,198 @@
                             The dimension of a physical quantity is the power to which the fundamental units must be raised to represent that quantity. Dimensional formulas are essential for checking equations, deriving relationships, and converting units.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Seven Fundamental Dimensions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Seven Fundamental Dimensions</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <p class="font-bold text-2xl text-accent">[M]</p>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <p class="font-bold text-2xl text-primary">[M]</p>
                                     <p class="text-sm">Mass</p>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <p class="font-bold text-2xl text-accent">[L]</p>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <p class="font-bold text-2xl text-primary">[L]</p>
                                     <p class="text-sm">Length</p>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <p class="font-bold text-2xl text-accent">[T]</p>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <p class="font-bold text-2xl text-primary">[T]</p>
                                     <p class="text-sm">Time</p>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <p class="font-bold text-2xl text-accent">[I]</p>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <p class="font-bold text-2xl text-primary">[I]</p>
                                     <p class="text-sm">Current</p>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <p class="font-bold text-2xl text-accent">[K]</p>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <p class="font-bold text-2xl text-primary">[K]</p>
                                     <p class="text-sm">Temperature</p>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <p class="font-bold text-2xl text-accent">[mol]</p>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <p class="font-bold text-2xl text-primary">[mol]</p>
                                     <p class="text-sm">Amount</p>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <p class="font-bold text-2xl text-accent">[cd]</p>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <p class="font-bold text-2xl text-primary">[cd]</p>
                                     <p class="text-sm">Luminous Int.</p>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg border-2 border-accent">
-                                    <p class="font-bold text-2xl text-accent">[M⁰L⁰T⁰]</p>
+                                <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent">
+                                    <p class="font-bold text-2xl text-primary">[M⁰L⁰T⁰]</p>
                                     <p class="text-sm">Dimensionless</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Dimensional Formulas - Complete List</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Dimensional Formulas - Complete List</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Physical Quantity</th>
                                         <th class="p-4 text-left">Formula/Definition</th>
                                         <th class="p-4 text-left">Dimensional Formula</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Area</td>
                                         <td class="p-4">Length × Breadth</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[M⁰L²T⁰]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[M⁰L²T⁰]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Volume</td>
                                         <td class="p-4">Length × Breadth × Height</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[M⁰L³T⁰]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[M⁰L³T⁰]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Density</td>
                                         <td class="p-4">Mass/Volume</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[ML⁻³T⁰]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[ML⁻³T⁰]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Velocity</td>
                                         <td class="p-4">Displacement/Time</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[M⁰LT⁻¹]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[M⁰LT⁻¹]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Acceleration</td>
                                         <td class="p-4">Velocity/Time</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[M⁰LT⁻²]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[M⁰LT⁻²]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Force</td>
                                         <td class="p-4">Mass × Acceleration</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[MLT⁻²]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[MLT⁻²]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Momentum</td>
                                         <td class="p-4">Mass × Velocity</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[MLT⁻¹]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[MLT⁻¹]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Impulse</td>
                                         <td class="p-4">Force × Time</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[MLT⁻¹]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[MLT⁻¹]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold"><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power">Work/Energy</a></td>
                                         <td class="p-4">Force × Distance</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[ML²T⁻²]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[ML²T⁻²]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Power</td>
                                         <td class="p-4">Work/Time</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[ML²T⁻³]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[ML²T⁻³]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Pressure</td>
                                         <td class="p-4">Force/Area</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[ML⁻¹T⁻²]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[ML⁻¹T⁻²]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Surface Tension</td>
                                         <td class="p-4">Force/Length</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[M¹L⁰T⁻²]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[M¹L⁰T⁻²]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Angular Velocity</td>
                                         <td class="p-4">Angle/Time</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[M⁰L⁰T⁻¹]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[M⁰L⁰T⁻¹]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Torque</td>
                                         <td class="p-4">Force × Distance</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[ML²T⁻²]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[ML²T⁻²]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Moment of Inertia</td>
                                         <td class="p-4">Mass × (Distance)²</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[ML²T⁰]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[ML²T⁰]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold"><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation">Gravitational Constant (G)</a></td>
                                         <td class="p-4">F = Gm₁m₂/r²</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[M⁻¹L³T⁻²]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[M⁻¹L³T⁻²]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold"><a href="https://en.wikipedia.org/wiki/Planck_constant" target="_blank" rel="noopener noreferrer">Planck's Constant (h)</a></td>
                                         <td class="p-4">E = hν</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[ML²T⁻¹]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[ML²T⁻¹]</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold"><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics">Gas Constant (R)</a></td>
                                         <td class="p-4">PV = nRT</td>
-                                        <td class="p-4 font-mono text-accent font-bold">[ML²T⁻²K⁻¹mol⁻¹]</td>
+                                        <td class="p-4 font-mono text-primary font-bold">[ML²T⁻²K⁻¹mol⁻¹]</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Dimensionless Quantities (JEE Favorite)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Dimensionless Quantities (JEE Favorite)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Pure Numbers (No Dimensions)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Pure Numbers (No Dimensions)</h4>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">Angle</p>
-                                    <p class="text-sm text-gray-600">(radian)</p>
+                                    <p class="text-sm text-ink-muted">(radian)</p>
                                 </div>
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">Solid Angle</p>
-                                    <p class="text-sm text-gray-600">(steradian)</p>
+                                    <p class="text-sm text-ink-muted">(steradian)</p>
                                 </div>
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">Strain</p>
-                                    <p class="text-sm text-gray-600">(ΔL/L)</p>
+                                    <p class="text-sm text-ink-muted">(ΔL/L)</p>
                                 </div>
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">Refractive Index</p>
-                                    <p class="text-sm text-gray-600">(c/v)</p>
+                                    <p class="text-sm text-ink-muted">(c/v)</p>
                                 </div>
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">Relative Density</p>
-                                    <p class="text-sm text-gray-600">(ρ/ρ_water)</p>
+                                    <p class="text-sm text-ink-muted">(ρ/ρ_water)</p>
                                 </div>
-                                <div class="bg-orange-50 p-3 rounded text-center">
+                                <div class="bg-surface-2 p-3 rounded text-center">
                                     <p class="font-semibold">π, e, sin θ, cos θ</p>
-                                    <p class="text-sm text-gray-600">(Mathematical)</p>
+                                    <p class="text-sm text-ink-muted">(Mathematical)</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the dimensional formula of (a) Kinetic Energy (b) Coefficient of Viscosity
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>(a) Kinetic Energy:</strong></p>
                                 <div class="math-display">
                                     \[KE = \frac{1}{2}mv^2\]
                                 </div>
                                 <p class="mb-2">Dimensions: [M] × [LT⁻¹]² = [M] × [L²T⁻²]</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[[KE] = [ML²T⁻²]\]
                                 </div>
                                 
@@ -1129,7 +1156,7 @@
                                     \[\eta = \frac{F}{rv}\]
                                 </div>
                                 <p class="mb-2">Dimensions: [MLT⁻²] / ([L] × [LT⁻¹]) = [MLT⁻²] / [L²T⁻¹]</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[[\eta] = [ML⁻¹T⁻¹]\]
                                 </div>
                             </div>
@@ -1150,10 +1177,10 @@
                 </section>
 
                 <!-- Chapter 4: Dimensional Analysis -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Dimensional Analysis</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Dimensional Analysis</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1161,26 +1188,26 @@
                             <a href="https://en.wikipedia.org/wiki/Dimensional_analysis" target="_blank" rel="noopener noreferrer">Dimensional analysis</a> is one of the most powerful tools in Physics. It helps verify equations, derive formulas, and convert units. This is a high-scoring topic in JEE with direct 4-6 marks guaranteed.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Principle of Homogeneity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Principle of Homogeneity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">The Golden Rule</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">The Golden Rule</h4>
                             <p class="text-lg mb-4">
                                 In any correct physical equation, the <strong>dimensions of all terms on both sides must be identical</strong>.
                             </p>
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-2 font-semibold">Example: s = ut + ½at²</p>
                                 <div class="space-y-2">
                                     <p>LHS: [s] = [L]</p>
                                     <p>RHS Term 1: [ut] = [LT⁻¹][T] = [L] ✓</p>
                                     <p>RHS Term 2: [½at²] = [LT⁻²][T²] = [L] ✓</p>
-                                    <p class="text-success font-bold mt-2">All terms have [L] → Equation is dimensionally correct!</p>
+                                    <p class="text-primary font-bold mt-2">All terms have [L] → Equation is dimensionally correct!</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Note
                             </h4>
                             <p class="text-lg">
@@ -1190,37 +1217,37 @@
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Applications of Dimensional Analysis</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Applications of Dimensional Analysis</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300 text-center">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong text-center">
                                 <div class="text-4xl mb-3">✅</div>
-                                <h5 class="font-bold text-lg mb-2 text-success">1. Check Correctness</h5>
+                                <h5 class="font-bold text-lg mb-2 text-primary">1. Check Correctness</h5>
                                 <p class="text-sm">Verify if a given equation is dimensionally valid</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300 text-center">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong text-center">
                                 <div class="text-4xl mb-3">🔄</div>
-                                <h5 class="font-bold text-lg mb-2 text-success">2. Derive Formulas</h5>
+                                <h5 class="font-bold text-lg mb-2 text-primary">2. Derive Formulas</h5>
                                 <p class="text-sm">Find relationships between physical quantities</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300 text-center">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong text-center">
                                 <div class="text-4xl mb-3">🔢</div>
-                                <h5 class="font-bold text-lg mb-2 text-success">3. Convert Units</h5>
+                                <h5 class="font-bold text-lg mb-2 text-primary">3. Convert Units</h5>
                                 <p class="text-sm">Transform quantities between different unit systems</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.3 Method to Derive Formulas</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Method to Derive Formulas</h3>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2022 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: The time period T of a <a href="https://en.wikipedia.org/wiki/Pendulum" target="_blank" rel="noopener noreferrer">simple pendulum</a> depends on length L and acceleration due to gravity g. Derive the formula for T using dimensional analysis.
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Step 1:</strong> Assume T depends on L and g</p>
                                 <div class="math-display">
                                     \[T \propto L^a g^b\]
@@ -1248,30 +1275,30 @@
                                 <div class="math-display">
                                     \[T = k L^{1/2} g^{-1/2}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[T = k\sqrt{\frac{L}{g}}\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-700">
+                                <p class="text-sm mt-3 text-ink-muted">
                                     <strong>Note:</strong> Dimensional analysis gives us k ≈ 1, but actual value k = 2π can only be found by calculus/experiment.
                                 </p>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: The velocity v of a particle depends on time t as v = A sin(Bt + C). Find dimensions of A, B, and C.
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>For A:</strong></p>
                                 <p class="mb-2">Since v = A sin(…), and sin function is dimensionless</p>
                                 <div class="math-display">
                                     \[[v] = [A]\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[[A] = [LT^{-1}]\]
                                 </div>
                                 
@@ -1283,22 +1310,22 @@
                                 <div class="math-display">
                                     \[[B][T] = [M^0L^0T^0]\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[[B] = [T^{-1}]\]
                                 </div>
                                 
                                 <p class="mb-3 mt-4"><strong>For C:</strong></p>
                                 <p class="mb-2">C is added to Bt, so must have same dimension as Bt</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[[C] = [M^0L^0T^0]\text{ (Dimensionless)}\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.4 Limitations of Dimensional Analysis</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Limitations of Dimensional Analysis</h3>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-danger my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-danger">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">❌</span> What Dimensional Analysis CANNOT Do
                             </h4>
                             <ul class="list-disc list-inside space-y-3 text-lg ml-4">
@@ -1313,10 +1340,10 @@
                 </section>
 
                 <!-- Chapter 5: Significant Figures -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Significant Figures</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Significant Figures</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1327,15 +1354,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Rules for Counting Significant Figures</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Rule</th>
                                         <th class="p-4 text-left">Example</th>
                                         <th class="p-4 text-left">Significant Figures</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4">All non-zero digits are significant</td>
                                         <td class="p-4 font-mono">1234</td>
@@ -1386,31 +1413,31 @@
                                 <li><strong>Atlantic (A comes before P):</strong> If decimal is Absent, start counting from Pacific (right) side</li>
                                 <li><strong>Pacific (P comes after A):</strong> If decimal is Present, start counting from Atlantic (left) side</li>
                             </ul>
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="mb-2">Example 1: 0.00340 (decimal Present → start from left)</p>
-                                <p class="text-primary font-mono">0.00<span class="bg-yellow-200">340</span> → 3 S.F.</p>
+                                <p class="text-primary font-mono">0.00<span class="bg-surface-3">340</span> → 3 S.F.</p>
                                 <p class="mb-2 mt-3">Example 2: 34000 (decimal Absent → start from right)</p>
-                                <p class="text-primary font-mono"><span class="bg-yellow-200">34</span>000 → 2 S.F. (ambiguous, use scientific notation)</p>
+                                <p class="text-primary font-mono"><span class="bg-surface-3">34</span>000 → 2 S.F. (ambiguous, use scientific notation)</p>
                             </div>
                         </div>
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Arithmetic Operations with Significant Figures</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Addition & Subtraction</h5>
                                 <p class="mb-3">Result should have decimal places equal to the <strong>least precise measurement</strong></p>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="mb-2 font-mono">12.11 (2 decimal places)</p>
                                     <p class="mb-2 font-mono">+ 18.0 (1 decimal place) ←least</p>
                                     <p class="mb-2 font-mono">+ 1.012 (3 decimal places)</p>
                                     <p class="border-t-2 border-primary pt-2 font-mono font-bold">= 31.1 (1 decimal place)</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Multiplication & Division</h5>
                                 <p class="mb-3">Result should have S.F. equal to the <strong>least number of S.F.</strong> in any factor</p>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="mb-2 font-mono">2.5 (2 S.F.) ←least</p>
                                     <p class="mb-2 font-mono">× 3.42 (3 S.F.)</p>
                                     <p class="mb-2 font-mono">× 4.125 (4 S.F.)</p>
@@ -1420,14 +1447,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: Calculate with proper significant figures: (2.36 × 10⁴) + (4.5 × 10³) - (3.25 × 10²)
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Step 1: Convert to same power of 10</p>
                                 <div class="space-y-2 font-mono">
                                     <p>2.36 × 10⁴ = 23.6 × 10³</p>
@@ -1443,7 +1470,7 @@
                                 
                                 <p class="mb-2 mt-4">Step 3: Round to least decimal places</p>
                                 <p class="mb-2">4.5 has only 1 decimal place (least precise)</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Answer: } 27.8 \times 10^3 = 2.78 \times 10^4\]
                                 </div>
                             </div>
@@ -1451,24 +1478,24 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Rounding Off Rules</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Rounding Rules (JEE Standard)</h4>
                             <div class="space-y-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Rule 1: If digit after rounding position is &lt; 5</p>
                                     <p class="mb-2">Drop it, keep preceding digit same</p>
-                                    <p class="font-mono">3.14<span class="text-danger">2</span> → 3.14 (rounding to 2 decimals)</p>
+                                    <p class="font-mono">3.14<span class="text-primary">2</span> → 3.14 (rounding to 2 decimals)</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Rule 2: If digit after rounding position is &gt; 5</p>
                                     <p class="mb-2">Drop it, increase preceding digit by 1</p>
-                                    <p class="font-mono">3.14<span class="text-success">7</span> → 3.15 (rounding to 2 decimals)</p>
+                                    <p class="font-mono">3.14<span class="text-primary">7</span> → 3.15 (rounding to 2 decimals)</p>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Rule 3: If digit is exactly 5 (or 5000...)</p>
                                     <p class="mb-2">Make preceding digit even (round to nearest even number)</p>
-                                    <p class="font-mono">3.14<span class="text-accent">5</span> → 3.14 (4 is even)</p>
-                                    <p class="font-mono">3.15<span class="text-accent">5</span> → 3.16 (make 5→6 even)</p>
+                                    <p class="font-mono">3.14<span class="text-primary">5</span> → 3.14 (4 is even)</p>
+                                    <p class="font-mono">3.15<span class="text-primary">5</span> → 3.16 (make 5→6 even)</p>
                                 </div>
                             </div>
                         </div>
@@ -1476,10 +1503,10 @@
                 </section>
 
                 <!-- Chapter 6: Error Analysis -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Error Analysis & Measurements</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Error Analysis & Measurements</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1487,11 +1514,11 @@
                             No measurement is perfectly accurate. Understanding errors, their types, and how they propagate is essential for experimental physics and forms 10-15% of JEE Physics numerical questions.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.1 Types of Errors</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Types of Errors</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">1. Systematic Errors</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Systematic Errors</h5>
                                 <p class="mb-3">Consistent errors in the same direction (always + or always -)</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Instrumental errors</li>
@@ -1499,10 +1526,10 @@
                                     <li>Calibration errors</li>
                                     <li>Personal errors</li>
                                 </ul>
-                                <p class="text-sm mt-3 font-semibold text-success">✓ Can be eliminated by correction</p>
+                                <p class="text-sm mt-3 font-semibold text-primary">✓ Can be eliminated by correction</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">2. Random Errors</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Random Errors</h5>
                                 <p class="mb-3">Unpredictable fluctuations (+ or - randomly)</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Environmental changes</li>
@@ -1510,10 +1537,10 @@
                                     <li>Electronic noise</li>
                                     <li>Human limitations</li>
                                 </ul>
-                                <p class="text-sm mt-3 font-semibold text-success">✓ Reduced by repeated measurements</p>
+                                <p class="text-sm mt-3 font-semibold text-primary">✓ Reduced by repeated measurements</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">3. Gross Errors</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">3. Gross Errors</h5>
                                 <p class="mb-3">Human mistakes or negligence</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Wrong reading</li>
@@ -1521,30 +1548,30 @@
                                     <li>Wrong recording</li>
                                     <li>Procedural errors</li>
                                 </ul>
-                                <p class="text-sm mt-3 font-semibold text-danger">✗ Must be avoided by care</p>
+                                <p class="text-sm mt-3 font-semibold text-primary">✗ Must be avoided by care</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.2 Absolute, Relative & Percentage Errors</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Absolute, Relative & Percentage Errors</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div class="bg-red-50 p-4 rounded-lg">
-                                    <h5 class="font-bold mb-3 text-danger">Absolute Error</h5>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-3 text-primary">Absolute Error</h5>
                                     <div class="math-display text-lg">
                                         \[\Delta a = |a_{\text{measured}} - a_{\text{true}}|\]
                                     </div>
                                     <p class="text-sm mt-2">Has same unit as quantity</p>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
-                                    <h5 class="font-bold mb-3 text-danger">Relative Error</h5>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-3 text-primary">Relative Error</h5>
                                     <div class="math-display text-lg">
                                         \[\frac{\Delta a}{a_{\text{true}}}\]
                                     </div>
                                     <p class="text-sm mt-2">Dimensionless (no unit)</p>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
-                                    <h5 class="font-bold mb-3 text-danger">Percentage Error</h5>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-3 text-primary">Percentage Error</h5>
                                     <div class="math-display text-lg">
                                         \[\frac{\Delta a}{a_{\text{true}}} \times 100\%\]
                                     </div>
@@ -1553,18 +1580,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">6.3 Error Propagation Formulas (Most Important)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Error Propagation Formulas (Most Important)</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Operation</th>
                                         <th class="p-4 text-left">Formula</th>
                                         <th class="p-4 text-left">Error Propagation</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Addition</td>
                                         <td class="p-4 font-mono">Z = A + B</td>
@@ -1612,14 +1639,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Main 2023 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: The resistance R = V/I where V = (100 ± 5) volts and I = (10 ± 0.2) amperes. Calculate percentage error in R.
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: V = 100 V, ΔV = 5 V</p>
                                 <p class="mb-2">I = 10 A, ΔI = 0.2 A</p>
                                 <p class="mb-2">R = V/I (division operation)</p>
@@ -1636,21 +1663,21 @@
                                 </div>
                                 
                                 <p class="mb-2 mt-4"><strong>Percentage error:</strong></p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Percentage error} = 0.07 \times 100 = 7\%\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: The period of a <a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion">pendulum</a> is T = 2π√(L/g). If L is measured with 2% error and g with 3% error, find percentage error in T.
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: ΔL/L = 2% = 0.02, Δg/g = 3% = 0.03</p>
                                 
                                 <p class="mb-2 mt-3">Step 1: Rewrite formula without constants</p>
@@ -1662,7 +1689,7 @@
                                 <div class="math-display">
                                     \[\frac{\Delta T}{T} = \frac{1}{2}\frac{\Delta L}{L} + \left|-\frac{1}{2}\right|\frac{\Delta g}{g}\]
                                 </div>
-                                <p class="text-sm text-gray-600">(Take absolute value of power)</p>
+                                <p class="text-sm text-ink-muted">(Take absolute value of power)</p>
                                 
                                 <p class="mb-2 mt-3">Step 3: Substitute values</p>
                                 <div class="math-display">
@@ -1672,7 +1699,7 @@
                                     \[\frac{\Delta T}{T} = 0.01 + 0.015 = 0.025\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Percentage error in T} = 2.5\%\]
                                 </div>
                             </div>
@@ -1681,10 +1708,10 @@
                 </section>
 
                 <!-- Chapter 7: Unit Conversions -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Unit Conversions</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Unit Conversions</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1692,11 +1719,11 @@
                             Converting between different unit systems is a practical skill tested frequently in JEE. Master the conversion factors and dimensional methods to solve these problems in under 30 seconds.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Common Conversion Factors</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Common Conversion Factors</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Length Conversions</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Length Conversions</h5>
                                 <div class="space-y-2 text-sm">
                                     <div class="flex justify-between"><span>1 inch</span><span>= 2.54 cm</span></div>
                                     <div class="flex justify-between"><span>1 foot</span><span>= 30.48 cm</span></div>
@@ -1706,8 +1733,8 @@
                                     <div class="flex justify-between"><span>1 AU</span><span>= 1.496 × 10¹¹ m</span></div>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Mass Conversions</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Mass Conversions</h5>
                                 <div class="space-y-2 text-sm">
                                     <div class="flex justify-between"><span>1 pound (lb)</span><span>= 0.4536 kg</span></div>
                                     <div class="flex justify-between"><span>1 ounce</span><span>= 28.35 g</span></div>
@@ -1716,8 +1743,8 @@
                                     <div class="flex justify-between"><span>1 quintal</span><span>= 100 kg</span></div>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Time Conversions</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Time Conversions</h5>
                                 <div class="space-y-2 text-sm">
                                     <div class="flex justify-between"><span>1 hour</span><span>= 3600 s</span></div>
                                     <div class="flex justify-between"><span>1 day</span><span>= 86400 s</span></div>
@@ -1725,8 +1752,8 @@
                                     <div class="flex justify-between"><span>1 shake</span><span>= 10⁻⁸ s</span></div>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Energy Conversions</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Energy Conversions</h5>
                                 <div class="space-y-2 text-sm">
                                     <div class="flex justify-between"><span>1 eV</span><span>= 1.6 × 10⁻¹⁹ J</span></div>
                                     <div class="flex justify-between"><span>1 calorie</span><span>= 4.186 J</span></div>
@@ -1736,17 +1763,17 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Dimensional Method for Conversion</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Dimensional Method for Conversion</h3>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: Convert 1 newton into dynes using dimensional analysis.
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Step 1: Write dimensional formula</p>
                                 <p class="mb-2">[Force] = [MLT⁻²]</p>
                                 
@@ -1768,7 +1795,7 @@
                                     \[n_2 = 10^3 \times 10^2 \times 1 = 10^5\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[1 \text{ newton} = 10^5 \text{ dynes}\]
                                 </div>
                             </div>
@@ -1790,14 +1817,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Dimensional Analysis: 40%</li>
@@ -1806,7 +1833,7 @@
                                 <li>✓ Unit Conversions: 10%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Deriving formulas: 35%</li>
@@ -1817,8 +1844,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Finding dimensional formula of physical constants (G, h, R)</li>
                             <li>Checking dimensional correctness of given equations</li>
@@ -1833,7 +1860,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1856,21 +1883,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Write the dimensional formula of: (a) Pressure (b) Energy (c) Power (d) Force constant</li>
                             <li>Check if the equation s = ut + ½at² is dimensionally correct.</li>
@@ -1883,8 +1910,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Derive the formula for time period of simple pendulum T = 2π√(L/g) using dimensional analysis.</li>
                             <li>Find dimensional formula of coefficient of viscosity η from Stokes' law F = 6πηrv.</li>
@@ -1897,8 +1924,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Find dimensions of a and b in equation: F = ax + bt² where F is force, x is distance, t is time.</li>
                             <li>Planck's constant h, speed of light c, and gravitational constant G can form a quantity with dimension of length. Find it.</li>
@@ -1912,57 +1939,75 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./wave-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Wave Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./wave-optics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Wave Optics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./work-energy-and-power.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Work Energy And Power</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Kinematics</h3>
-                    <p class="text-gray-600">Motion in 1D/2D, Projectile motion, Relative velocity, Graphs</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Kinematics</h3>
+                    <p class="text-ink-muted">Motion in 1D/2D, Projectile motion, Relative velocity, Graphs</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/vectors" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/vectors" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Vectors</h3>
-                    <p class="text-gray-600">Vector algebra, Dot & Cross product, Resolution of vectors</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Vectors</h3>
+                    <p class="text-ink-muted">Vector algebra, Dot & Cross product, Resolution of vectors</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/mathematical-tools" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/mathematical-tools" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Mathematical Tools</h3>
-                    <p class="text-gray-600">Calculus, Differentiation, Integration for Physics</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Mathematical Tools</h3>
+                    <p class="text-ink-muted">Calculus, Differentiation, Integration for Physics</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -1970,7 +2015,7 @@
 
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -1978,38 +2023,38 @@
     </section>
 
     <!-- SEO-Optimized Summary Section -->
-<section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+<section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <article class="prose max-w-none">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6">Units and Dimensions - Complete Guide for JEE 2025-26</h2>
+            <h2 class="text-4xl font-bold text-ink mb-6">Units and Dimensions - Complete Guide for JEE 2025-26</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Why Units and Dimensions is Important for JEE?</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-ink-muted leading-relaxed mb-4">
                         <strong>Units and Dimensions</strong> is the foundational chapter of <strong>JEE Physics</strong>. Though it carries only 2-3% direct weightage in JEE Main, the concepts are used throughout Physics, especially in:
                     </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                         <li><strong>Dimensional Analysis</strong> - Quick formula derivation (saves 5-10 minutes in exam)</li>
                         <li><a href="https://en.wikipedia.org/wiki/Propagation_of_uncertainty" target="_blank" rel="noopener noreferrer"><strong>Error Calculation</strong></a> - Used in experimental physics questions</li>
                         <li><strong>Significant Figures</strong> - Required in numerical answer questions</li>
                         <li><strong>Unit Conversion</strong> - Essential for solving problems in different unit systems</li>
                     </ul>
-                    <p class="text-gray-700 leading-relaxed mt-4">
+                    <p class="text-ink-muted leading-relaxed mt-4">
                         In <strong>JEE Advanced</strong>, dimensional analysis questions are often combined with complex derivations making this a high-scoring opportunity.
                     </p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Formulas to Remember</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">1. Seven Fundamental Quantities</h4>
-                            <p class="text-gray-700">Length (m), Mass (kg), Time (s), Current (A), Temperature (K), Amount (mol), Luminous Intensity (cd)</p>
+                            <h4 class="font-bold text-lg text-primary mb-2">1. Seven Fundamental Quantities</h4>
+                            <p class="text-ink-muted">Length (m), Mass (kg), Time (s), Current (A), Temperature (K), Amount (mol), Luminous Intensity (cd)</p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">2. Most Asked Dimensional Formulas</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">2. Most Asked Dimensional Formulas</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• Force: [MLT⁻²]</li>
                                 <li>• Energy: [ML²T⁻²]</li>
                                 <li>• Power: [ML²T⁻³]</li>
@@ -2019,20 +2064,20 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">3. Error Propagation Rules</h4>
-                            <p class="text-gray-700 text-sm">Addition/Subtraction: Add absolute errors | Multiplication/Division: Add relative errors | Power: Multiply relative error by power</p>
+                            <h4 class="font-bold text-lg text-primary mb-2">3. Error Propagation Rules</h4>
+                            <p class="text-ink-muted text-sm">Addition/Subtraction: Add absolute errors | Multiplication/Division: Add relative errors | Power: Multiply relative error by power</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Study Tips -->
-            <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+            <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Units and Dimensions Effectively?</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 2-3 days (2 hours/day)</li>
                             <li>Focus on <strong>dimensional analysis</strong> and <strong>significant figures</strong></li>
                             <li>Practice 50+ MCQs from previous year questions</li>
@@ -2042,7 +2087,7 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 4-5 days (3 hours/day)</li>
                             <li>Deep dive into <strong>principle of homogeneity</strong></li>
                             <li>Practice deriving complex formulas using dimensional analysis</li>
@@ -2054,29 +2099,29 @@
             </div>
             
             <!-- Common Mistakes -->
-            <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                <ul class="space-y-3 text-gray-700">
+            <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                <ul class="space-y-3 text-ink-muted">
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Dimensionally correct ≠ Physically correct:</strong> Just because an equation passes dimensional analysis doesn't mean it's correct (numerical constants like π, 1/2 can't be found)
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Angle is NOT dimensionless in calculations:</strong> While angle has no dimension, you must use radians (not degrees) in formulas
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Significant figures in final answer:</strong> Many students lose marks by writing all calculator digits instead of rounding to correct significant figures
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Forgetting to convert units:</strong> Always convert to SI units before solving unless explicitly asked otherwise
                         </div>
@@ -2085,11 +2130,11 @@
             </div>
             
             <!-- Previous Year Analysis -->
-            <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+            <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                 <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                 <div class="overflow-x-auto">
                     <table class="w-full border-collapse">
-                        <thead class="bg-primary text-white">
+                        <thead class="bg-primary text-ink">
                             <tr>
                                 <th class="p-3 text-left">Year</th>
                                 <th class="p-3 text-left">JEE Main</th>
@@ -2098,19 +2143,19 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y">
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2024</td>
                                 <td class="p-3">1 Question (4 marks)</td>
                                 <td class="p-3">2 Questions (6 marks)</td>
                                 <td class="p-3">Error propagation, Dimensional analysis</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2023</td>
                                 <td class="p-3">2 Questions (8 marks)</td>
                                 <td class="p-3">1 Question (3 marks)</td>
                                 <td class="p-3">Significant figures, Unit conversion</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2022</td>
                                 <td class="p-3">1 Question (4 marks)</td>
                                 <td class="p-3">2 Questions (7 marks)</td>
@@ -2119,7 +2164,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="text-gray-700 mt-4 text-sm">
+                <p class="text-ink-muted mt-4 text-sm">
                     <strong>Trend:</strong> JEE Advanced is increasingly asking multi-concept questions where dimensional analysis is combined with calculus or other physics concepts. Pure dimensional analysis questions are becoming rare.
                 </p>
             </div>
@@ -2128,68 +2173,68 @@
     </div>
 </section>
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -2197,12 +2242,12 @@
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -2211,25 +2256,25 @@
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
@@ -2237,7 +2282,7 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

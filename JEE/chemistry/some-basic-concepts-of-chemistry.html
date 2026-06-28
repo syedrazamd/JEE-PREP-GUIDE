@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Some Basic Concepts of Chemistry - Complete JEE Chemistry Notes with 100+ Examples">
     <meta property="og:description" content="Master mole concept, stoichiometry, atomic mass & percentage composition. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Some Basic Concepts of Chemistry - JEE Chemistry Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry">
     <meta name="twitter:title" content="Some Basic Concepts of Chemistry - Complete JEE Chemistry Notes">
     <meta name="twitter:description" content="Master mole concept & stoichiometry with 100+ solved examples. Complete notes on atomic mass, molecular mass & percentage composition for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
 
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Basic Chemistry JEE">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Some Basic Concepts of Chemistry - Complete JEE Chemistry Notes 2025-26",
       "description": "Comprehensive notes on Some Basic Concepts of Chemistry covering mole concept, atomic mass, molecular mass, stoichiometry, and percentage composition with 100+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -365,7 +378,7 @@
       "@type": "VideoObject",
       "name": "Some Basic Concepts of Chemistry - Complete Tutorial",
       "description": "Learn basic concepts of chemistry for JEE with examples",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT50M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry"
@@ -402,59 +415,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#059669',
-                        secondary: '#047857',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-chemistry.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-chemistry.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-emerald-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #059669, #34d399); z-index: 9999; transition: width 0.1s;"></div>
 
 <!-- Header -->
-<header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+<header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                    <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                    <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                 </div>
                 <div>
-                    <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                    <p class="text-sm text-gray-500">Path to IIT</p>
+                    <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                    <p class="text-sm text-ink-tertiary">Path to IIT</p>
                 </div>
             </div>
             <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
             </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
         </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
     </div>
 </header>
 
 <!-- Breadcrumb Navigation -->
-<nav class="bg-gray-100 py-3 border-b">
+<nav class="bg-surface-1 py-3 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -463,30 +478,30 @@
                 </a>
                 <meta itemprop="position" content="1" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/notes" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Notes</span>
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">JEE</span>
                 </a>
                 <meta itemprop="position" content="3" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Chemistry</span>
                 </a>
                 <meta itemprop="position" content="4" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span class="text-gray-600 font-semibold" itemprop="name">Some Basic Concepts of Chemistry</span>
+                <span class="text-ink-muted font-semibold" itemprop="name">Some Basic Concepts of Chemistry</span>
                 <meta itemprop="position" content="5" />
             </li>
         </ol>
@@ -494,32 +509,32 @@
 </nav>
 
 <!-- Quick Navigation -->
-<section class="bg-gradient-to-r from-green-50 to-cyan-50 py-6 border-b">
+<section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Some Basic Concepts of Chemistry</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Some Basic Concepts of Chemistry</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Matter & Nature
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Atomic Mass
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Mole Concept
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Stoichiometry
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 % Composition
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Formulas
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Concentration
             </a>
-            <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Reactions
             </a>
         </div>
@@ -527,28 +542,28 @@
 </section>
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-primary via-emerald-600 to-secondary text-white py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center">
             <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                 Some Basic Concepts of Chemistry
-                <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
             </h2>
             <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                 Master the foundation of Chemistry with complete notes on Mole Concept, Atomic Mass, Molecular Mass, Stoichiometry, Percentage Composition & Concentration Terms. Includes 100+ solved problems and all JEE shortcuts.
             </p>
             <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">📚 8 Complete Sections</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">🎯 Quick Formulas</span>
                 </div>
             </div>
@@ -557,21 +572,21 @@
 </section>
 
 <!-- Rating Section -->
-<section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+<section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="name" content="Some Basic Concepts of Chemistry JEE Notes">
     <meta itemprop="description" content="Complete study notes for basic concepts of chemistry">
-    <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta itemprop="image" content="/logo-header.webp">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
         <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center space-x-6 mb-4 md:mb-0">
                 <div class="flex items-center">
-                    <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                    <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                     <span class="ml-3 text-xl font-bold">
                         <span itemprop="ratingValue">4.8</span>/5
                     </span>
                 </div>
-                <div class="text-gray-600">
+                <div class="text-ink-muted">
                     <span itemprop="reviewCount">215</span>+ students rated this helpful
                 </div>
                 <meta itemprop="bestRating" content="5">
@@ -581,15 +596,15 @@
             <div class="flex items-center space-x-6">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-primary">100+</div>
-                    <div class="text-sm text-gray-600">Solved Examples</div>
+                    <div class="text-sm text-ink-muted">Solved Examples</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-success">2.5 hrs</div>
-                    <div class="text-sm text-gray-600">Study Time</div>
+                    <div class="text-2xl font-bold text-primary">2.5 hrs</div>
+                    <div class="text-sm text-ink-muted">Study Time</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-secondary">Free</div>
-                    <div class="text-sm text-gray-600">Always</div>
+                    <div class="text-2xl font-bold text-primary">Free</div>
+                    <div class="text-sm text-ink-muted">Always</div>
                 </div>
             </div>
         </div>
@@ -601,35 +616,47 @@
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
         <!-- Sidebar Navigation -->
-        <aside class="lg:col-span-1">
-            <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <aside class="order-2 lg:order-1 lg:col-span-1">
+            <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                     <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                     Table of Contents
                 </h3>
                 <ul class="space-y-2 text-base font-medium">
-                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Matter & Its Nature</a></li>
-                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Atomic & Molecular Mass</a></li>
-                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Mole Concept</a></li>
-                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Stoichiometry</a></li>
-                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Percentage Composition</a></li>
-                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Empirical & Molecular Formula</a></li>
-                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Concentration Terms</a></li>
-                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Chemical Reactions</a></li>
-                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Matter & Its Nature</a></li>
+                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Atomic & Molecular Mass</a></li>
+                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Mole Concept</a></li>
+                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Stoichiometry</a></li>
+                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Percentage Composition</a></li>
+                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Empirical & Molecular Formula</a></li>
+                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Concentration Terms</a></li>
+                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Chemical Reactions</a></li>
+                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                 </ul>
             </div>
         </aside>
 
         <!-- Main Content Area -->
-        <main class="lg:col-span-3 space-y-12">
+        <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./states-of-matter.html" class="text-primary font-semibold hover:underline">States Of Matter &rarr;</a>
+                <a href="./atomic-structure.html" class="text-primary font-semibold hover:underline">Atomic Structure &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
             <!-- Chapter 1: Matter and Its Nature -->
-            <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Matter and Its Nature</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Matter and Its Nature</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -640,7 +667,7 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Classification of Matter</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Physical Classification</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>Solid:</strong> Definite shape & volume (e.g., iron, ice)</li>
@@ -649,7 +676,7 @@
                                 <li><strong>Plasma:</strong> Ionized gas state (e.g., stars)</li>
                             </ul>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Chemical Classification</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>Element:</strong> Pure substance (e.g., H, O, Au)</li>
@@ -667,15 +694,15 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Properties of Matter</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Property Type</th>
                                     <th class="p-4 text-left">Definition</th>
                                     <th class="p-4 text-left">Examples</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Physical Properties</td>
                                     <td class="p-4">Observable without changing composition</td>
@@ -717,7 +744,7 @@
                         <div class="formula-box p-6 rounded-xl border-l-4 border-primary">
                             <h5 class="font-bold text-lg mb-2">1. Law of Conservation of Mass (Lavoisier, 1789)</h5>
                             <p class="mb-2">"Mass can neither be created nor destroyed in a chemical reaction"</p>
-                            <div class="bg-white p-3 rounded">
+                            <div class="bg-canvas p-3 rounded">
                                 <p class="font-mono text-sm">Total mass of reactants = Total mass of products</p>
                             </div>
                         </div>
@@ -725,7 +752,7 @@
                         <div class="formula-box p-6 rounded-xl border-l-4 border-primary">
                             <h5 class="font-bold text-lg mb-2">2. Law of Definite Proportions (Proust, 1799)</h5>
                             <p class="mb-2">"A chemical compound always contains same elements in the same proportion by mass"</p>
-                            <div class="bg-white p-3 rounded">
+                            <div class="bg-canvas p-3 rounded">
                                 <p class="text-sm">Example: H₂O always has H:O = 1:8 by mass</p>
                             </div>
                         </div>
@@ -733,7 +760,7 @@
                         <div class="formula-box p-6 rounded-xl border-l-4 border-primary">
                             <h5 class="font-bold text-lg mb-2">3. Law of Multiple Proportions (Dalton, 1803)</h5>
                             <p class="mb-2">"When two elements combine to form two or more compounds, masses of one element bear simple whole number ratio"</p>
-                            <div class="bg-white p-3 rounded">
+                            <div class="bg-canvas p-3 rounded">
                                 <p class="text-sm">Example: CO (C:O = 3:4) and CO₂ (C:O = 3:8)</p>
                                 <p class="text-sm">For fixed mass of C, O masses are in ratio 4:8 = 1:2</p>
                             </div>
@@ -742,7 +769,7 @@
                         <div class="formula-box p-6 rounded-xl border-l-4 border-primary">
                             <h5 class="font-bold text-lg mb-2">4. Gay-Lussac's Law of Gaseous Volumes (1808)</h5>
                             <p class="mb-2">"Gases combine in simple whole number ratios by volume at same T and P"</p>
-                            <div class="bg-white p-3 rounded">
+                            <div class="bg-canvas p-3 rounded">
                                 <p class="text-sm">H₂ + Cl₂ → 2HCl (1 vol : 1 vol : 2 vol)</p>
                             </div>
                         </div>
@@ -750,7 +777,7 @@
                         <div class="formula-box p-6 rounded-xl border-l-4 border-primary">
                             <h5 class="font-bold text-lg mb-2">5. Avogadro's Law (1811)</h5>
                             <p class="mb-2">"Equal volumes of all gases at same T and P contain equal number of molecules"</p>
-                            <div class="bg-white p-3 rounded">
+                            <div class="bg-canvas p-3 rounded">
                                 <p class="text-sm">V ∝ n (at constant T and P)</p>
                             </div>
                         </div>
@@ -759,10 +786,10 @@
             </section>
 
             <!-- Chapter 2: Atomic and Molecular Mass -->
-            <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Atomic and Molecular Mass</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Atomic and Molecular Mass</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -770,41 +797,41 @@
                         Atomic and molecular masses are fundamental concepts for quantitative chemistry. They form the basis for mole concept and stoichiometric calculations - accounting for 15-20% of JEE Chemistry questions.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Atomic Mass Unit (amu or u)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Atomic Mass Unit (amu or u)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-cyan-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-4">
                             One atomic mass unit (u) is defined as exactly 1/12th the mass of one carbon-12 atom.
                         </p>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <div class="math-display">
                                 \[1 \text{ u} = \frac{1}{12} \times \text{mass of one } ^{12}C \text{ atom}\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                 \[1 \text{ u} = 1.66054 \times 10^{-24} \text{ g} = 1.66054 \times 10^{-27} \text{ kg}\]
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Average Atomic Mass</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Average Atomic Mass</h3>
                     
                     <div class="formula-box p-6 rounded-xl border-l-4 border-secondary my-6">
                         <p class="mb-3">For elements with isotopes, average atomic mass is calculated using natural abundance:</p>
-                        <div class="math-display bg-white p-4 rounded-lg">
+                        <div class="math-display bg-canvas p-4 rounded-lg">
                             \[\text{Average Atomic Mass} = \sum (\text{Isotopic mass} \times \text{Fractional abundance})\]
                         </div>
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Chlorine has two isotopes: ³⁵Cl (75% abundance, mass 34.97 u) and ³⁷Cl (25% abundance, mass 36.97 u). Calculate average atomic mass of chlorine.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Convert percentages to fractions</p>
                             <p class="mb-2">³⁵Cl: 75% = 0.75</p>
                             <p class="mb-2">³⁷Cl: 25% = 0.25</p>
@@ -817,39 +844,39 @@
                                 \[= 26.2275 + 9.2425 = 35.47 \text{ u}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\text{Answer: } 35.47 \text{ u (or 35.5 u)}\]
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Molecular Mass and Formula Mass</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Molecular Mass and Formula Mass</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-cyan-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Molecular Mass</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Molecular Mass</h5>
                             <p class="mb-3">Sum of atomic masses of all atoms in a molecule</p>
-                            <div class="bg-white p-3 rounded text-sm">
+                            <div class="bg-canvas p-3 rounded text-sm">
                                 <p class="mb-2"><strong>Example: H₂O</strong></p>
                                 <p>= 2(1) + 1(16)</p>
                                 <p>= 18 u</p>
                             </div>
-                            <p class="text-xs mt-3 text-gray-600">Used for molecular compounds (covalent)</p>
+                            <p class="text-xs mt-3 text-ink-muted">Used for molecular compounds (covalent)</p>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-cyan-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Formula Mass</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Formula Mass</h5>
                             <p class="mb-3">Sum of atomic masses in empirical formula</p>
-                            <div class="bg-white p-3 rounded text-sm">
+                            <div class="bg-canvas p-3 rounded text-sm">
                                 <p class="mb-2"><strong>Example: NaCl</strong></p>
                                 <p>= 23 + 35.5</p>
                                 <p>= 58.5 u</p>
                             </div>
-                            <p class="text-xs mt-3 text-gray-600">Used for ionic compounds</p>
+                            <p class="text-xs mt-3 text-ink-muted">Used for ionic compounds</p>
                         </div>
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Important Distinction
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -863,10 +890,10 @@
             </section>
 
             <!-- Chapter 3: Mole Concept -->
-            <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Mole Concept (The Heart of Chemistry)</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Mole Concept (The Heart of Chemistry)</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -876,13 +903,13 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Definition of Mole</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">What is a Mole?</h4>
                         <p class="text-lg mb-4">
                             One mole is the amount of substance that contains as many elementary entities (atoms, molecules, ions, etc.) as there are atoms in exactly 12 grams of carbon-12.
                         </p>
-                        <div class="bg-green-50 p-4 rounded-lg">
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                        <div class="bg-surface-2 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[1 \text{ mole} = 6.022 \times 10^{23} \text{ particles (Avogadro's number)}\]
                             </div>
                             <p class="text-sm mt-3 text-center font-semibold">
@@ -909,7 +936,7 @@
                     <div class="formula-box p-6 rounded-xl border-l-4 border-primary my-6">
                         <h5 class="font-bold text-lg mb-3">Definition</h5>
                         <p class="mb-3">Molar mass is the mass of one mole of a substance, expressed in grams per mole (g/mol).</p>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <div class="math-display">
                                 \[\text{Molar Mass (M)} = \frac{\text{Mass in grams}}{\text{Number of moles}}\]
                             </div>
@@ -922,24 +949,24 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Mole Concept Formulas (Must Memorize!)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary text-center">The Golden Triangle of Mole Concept</h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2 text-primary">Formula 1</h5>
                                 <div class="math-display text-lg">
                                     \[n = \frac{m}{M}\]
                                 </div>
                                 <p class="text-xs mt-2">n = moles, m = mass, M = molar mass</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2 text-primary">Formula 2</h5>
                                 <div class="math-display text-lg">
                                     \[n = \frac{N}{N_A}\]
                                 </div>
                                 <p class="text-xs mt-2">N = no. of particles, N_A = 6.022×10²³</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2 text-primary">Formula 3 (for gases)</h5>
                                 <div class="math-display text-lg">
                                     \[n = \frac{V}{22.4}\]
@@ -950,15 +977,15 @@
                     </div>
 
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Relationship</th>
                                     <th class="p-4 text-left">Formula</th>
                                     <th class="p-4 text-left">Application</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Moles from mass</td>
                                     <td class="p-4 font-mono">n = m/M</td>
@@ -989,14 +1016,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2023 Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Calculate the number of molecules in 11 g of CO₂.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Calculate molar mass of CO₂</p>
                             <div class="math-display">
                                 \[M_{CO_2} = 12 + 2(16) = 44 \text{ g/mol}\]
@@ -1012,14 +1039,14 @@
                                 \[N = n \times N_A = 0.25 \times 6.022 \times 10^{23}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[N = 1.5055 \times 10^{23} \text{ molecules}\]
                             </div>
                         </div>
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced Pattern)
                         </h4>
                         <p class="text-lg mb-3">
@@ -1028,7 +1055,7 @@
                             <br>(b) 52 u of He
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Part (a): 52 g of He</strong></p>
                             <p class="mb-2">Molar mass of He = 4 g/mol</p>
                             <div class="math-display">
@@ -1045,7 +1072,7 @@
                             </div>
                             
                             <div class="warning-box p-3 rounded-lg mt-3">
-                                <p class="font-semibold text-danger">⚠️ Critical Difference:</p>
+                                <p class="font-semibold text-primary">⚠️ Critical Difference:</p>
                                 <p class="text-sm mt-1">52 <strong>g</strong> contains 10²⁴ atoms (macroscopic)</p>
                                 <p class="text-sm">52 <strong>u</strong> contains just 13 atoms (microscopic)</p>
                             </div>
@@ -1055,10 +1082,10 @@
             </section>
 
             <!-- Chapter 4: Stoichiometry -->
-            <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+            <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                 <div class="flex items-center mb-6">
-                    <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Stoichiometry and Chemical Equations</h2>
+                    <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Stoichiometry and Chemical Equations</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1066,10 +1093,10 @@
                         Stoichiometry deals with quantitative relationships between reactants and products in chemical reactions. This is the MOST important topic for JEE - nearly 40% of numerical problems involve stoichiometry!
                     </p>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Balancing Chemical Equations</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Balancing Chemical Equations</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">Rules for Balancing</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Rules for Balancing</h4>
                         <ol class="list-decimal list-inside space-y-3 text-lg ml-4">
                             <li>Write correct formulas for all reactants and products</li>
                             <li>Balance atoms one element at a time (except H and O)</li>
@@ -1081,14 +1108,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 4
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Balance the equation: C₃H₈ + O₂ → CO₂ + H₂O
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Step 1:</strong> Balance carbon atoms</p>
                             <p class="font-mono mb-3">C₃H₈ + O₂ → 3CO₂ + H₂O</p>
                             
@@ -1099,7 +1126,7 @@
                             <p class="mb-2">O on right side = 3(2) + 4(1) = 10</p>
                             <p class="mb-2">So need 5 O₂ molecules</p>
                             
-                            <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                            <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                 <p class="font-mono text-center font-bold">C₃H₈ + 5O₂ → 3CO₂ + 4H₂O</p>
                             </div>
                             
@@ -1108,7 +1135,7 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Stoichiometric Calculations</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Stoichiometric Calculations</h3>
                     
                     <div class="formula-box p-6 rounded-xl border-l-4 border-success my-6">
                         <h5 class="font-bold text-lg mb-3">General Approach</h5>
@@ -1121,7 +1148,7 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Main Pattern)
                         </h4>
                         <p class="text-lg mb-3">
@@ -1129,7 +1156,7 @@
                             <br>CaCO₃ → CaO + CO₂
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Calculate molar masses</p>
                             <p class="mb-1">M(CaCO₃) = 40 + 12 + 3(16) = 100 g/mol</p>
                             <p class="mb-3">M(CO₂) = 12 + 2(16) = 44 g/mol</p>
@@ -1148,20 +1175,20 @@
                                 \[m_{CO_2} = n \times M = 0.05 \times 44 = 2.2 \text{ g}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\text{Answer: } 2.2 \text{ g of CO}_2\]
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.3 Limiting Reagent</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Limiting Reagent</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">Concept</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Concept</h4>
                         <p class="text-lg mb-4">
                             The limiting reagent is the reactant that is completely consumed first and thus limits the amount of product formed.
                         </p>
-                        <div class="bg-green-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <h5 class="font-bold mb-2">How to identify Limiting Reagent:</h5>
                             <ol class="list-decimal list-inside space-y-2 ml-4">
                                 <li>Calculate moles of each reactant</li>
@@ -1172,7 +1199,7 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced Pattern)
                         </h4>
                         <p class="text-lg mb-3">
@@ -1183,7 +1210,7 @@
                             <br>2H₂ + O₂ → 2H₂O
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Given data:</strong></p>
                             <p class="mb-1">M(H₂) = 2 g/mol, M(O₂) = 32 g/mol, M(H₂O) = 18 g/mol</p>
                             
@@ -1203,7 +1230,7 @@
                             <div class="math-display">
                                 \[\frac{n_{O_2}}{1} = \frac{2.5}{1} = 2.5\]
                             </div>
-                            <p class="mb-3 bg-yellow-100 p-2 rounded">Both are equal, so BOTH are completely consumed (no limiting reagent in this case!)</p>
+                            <p class="mb-3 bg-surface-3 p-2 rounded">Both are equal, so BOTH are completely consumed (no limiting reagent in this case!)</p>
                             
                             <p class="mb-3 mt-4"><strong>(b) Mass of water formed:</strong></p>
                             <p class="mb-2">From equation: 2 mol H₂ → 2 mol H₂O</p>
@@ -1215,7 +1242,7 @@
                             <p class="mb-3 mt-4"><strong>(c) Excess reagent:</strong></p>
                             <p class="mb-2">None (both completely consumed)</p>
                             
-                            <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 <p><strong>Answers:</strong></p>
                                 <p>(a) No limiting reagent (both completely consumed)</p>
                                 <p>(b) 90 g of H₂O formed</p>
@@ -1231,10 +1258,10 @@
                         <p class="text-lg mb-3">
                             For reaction: aA + bB → products
                         </p>
-                        <div class="bg-white p-4 rounded">
+                        <div class="bg-canvas p-4 rounded">
                             <p class="mb-2">Calculate for each reactant: <strong>moles/coefficient</strong></p>
                             <p class="mb-2">Limiting reagent = minimum value</p>
-                            <p class="mt-3 text-sm text-gray-600">
+                            <p class="mt-3 text-sm text-ink-muted">
                                 Example: If n(A)/a = 3 and n(B)/b = 2, then B is limiting reagent
                             </p>
                         </div>
@@ -1243,10 +1270,10 @@
             </section>
 
             <!-- Chapter 5: Percentage Composition -->
-            <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Percentage Composition</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Percentage Composition</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1256,19 +1283,19 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Formula for Percentage Composition</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                        <div class="math-display bg-white p-4 rounded-lg">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <div class="math-display bg-canvas p-4 rounded-lg">
                             \[\text{Percentage of element} = \frac{\text{Mass of element in compound}}{\text{Molar mass of compound}} \times 100\]
                         </div>
                         <p class="text-center mt-3 text-sm">Or, more specifically:</p>
-                        <div class="math-display bg-white p-4 rounded-lg mt-2">
+                        <div class="math-display bg-canvas p-4 rounded-lg mt-2">
                             \[\%\text{ of element} = \frac{n \times \text{Atomic mass of element}}{\text{Molecular mass of compound}} \times 100\]
                         </div>
-                        <p class="text-center text-xs mt-2 text-gray-600">where n = number of atoms of that element in formula</p>
+                        <p class="text-center text-xs mt-2 text-ink-muted">where n = number of atoms of that element in formula</p>
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 7
                         </h4>
                         <p class="text-lg mb-3">
@@ -1276,7 +1303,7 @@
                             <br>(Atomic masses: H = 1, S = 32, O = 16)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Calculate molar mass of H₂SO₄</p>
                             <div class="math-display">
                                 \[M = 2(1) + 1(32) + 4(16) = 2 + 32 + 64 = 98 \text{ g/mol}\]
@@ -1284,28 +1311,28 @@
                             
                             <p class="mb-3 mt-4"><strong>Step 2:</strong> Calculate % of each element</p>
                             
-                            <div class="bg-blue-50 p-3 rounded mb-3">
+                            <div class="bg-surface-2 p-3 rounded mb-3">
                                 <p class="font-semibold mb-2">% of Hydrogen:</p>
                                 <div class="math-display">
                                     \[\%H = \frac{2 \times 1}{98} \times 100 = 2.04\%\]
                                 </div>
                             </div>
                             
-                            <div class="bg-blue-50 p-3 rounded mb-3">
+                            <div class="bg-surface-2 p-3 rounded mb-3">
                                 <p class="font-semibold mb-2">% of Sulfur:</p>
                                 <div class="math-display">
                                     \[\%S = \frac{1 \times 32}{98} \times 100 = 32.65\%\]
                                 </div>
                             </div>
                             
-                            <div class="bg-blue-50 p-3 rounded mb-3">
+                            <div class="bg-surface-2 p-3 rounded mb-3">
                                 <p class="font-semibold mb-2">% of Oxygen:</p>
                                 <div class="math-display">
                                     \[\%O = \frac{4 \times 16}{98} \times 100 = 65.31\%\]
                                 </div>
                             </div>
                             
-                            <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 <p class="font-semibold">Verification: 2.04 + 32.65 + 65.31 = 100% ✓</p>
                             </div>
                         </div>
@@ -1314,7 +1341,7 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Reverse Calculation: Finding Mass from Percentage</h3>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 8 (JEE Main Type)
                         </h4>
                         <p class="text-lg mb-3">
@@ -1322,7 +1349,7 @@
                             <br>(Ca = 40, C = 12, O = 16)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Calculate molar mass of CaCO₃</p>
                             <div class="math-display">
                                 \[M_{CaCO_3} = 40 + 12 + 3(16) = 100 \text{ g/mol}\]
@@ -1338,7 +1365,7 @@
                                 \[m_{Ca} = \frac{40}{100} \times 5 = 2 \text{ g}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\text{Answer: } 2 \text{ g of calcium}\]
                             </div>
                         </div>
@@ -1359,10 +1386,10 @@
             </section>
 
             <!-- Chapter 6: Empirical and Molecular Formula -->
-            <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Empirical and Molecular Formula</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Empirical and Molecular Formula</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1370,23 +1397,23 @@
                         Understanding the difference between empirical and molecular formulas is crucial. This topic appears in nearly every JEE paper!
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Definitions</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Definitions</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-cyan-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Empirical Formula</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Empirical Formula</h5>
                             <p class="mb-3">Shows the <strong>simplest whole number ratio</strong> of atoms in a compound</p>
-                            <div class="bg-white p-3 rounded text-sm">
+                            <div class="bg-canvas p-3 rounded text-sm">
                                 <p class="mb-2"><strong>Examples:</strong></p>
                                 <p>• Glucose: CH₂O</p>
                                 <p>• Benzene: CH</p>
                                 <p>• Hydrogen peroxide: HO</p>
                             </div>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-cyan-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Molecular Formula</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Molecular Formula</h5>
                             <p class="mb-3">Shows the <strong>actual number</strong> of atoms in a molecule</p>
-                            <div class="bg-white p-3 rounded text-sm">
+                            <div class="bg-canvas p-3 rounded text-sm">
                                 <p class="mb-2"><strong>Examples:</strong></p>
                                 <p>• Glucose: C₆H₁₂O₆</p>
                                 <p>• Benzene: C₆H₆</p>
@@ -1397,19 +1424,19 @@
 
                     <div class="formula-box p-6 rounded-xl border-l-4 border-secondary my-6">
                         <h4 class="font-bold text-xl mb-3">Key Relationship</h4>
-                        <div class="math-display bg-white p-4 rounded-lg">
+                        <div class="math-display bg-canvas p-4 rounded-lg">
                             \[\text{Molecular Formula} = n \times \text{Empirical Formula}\]
                         </div>
-                        <div class="math-display bg-white p-4 rounded-lg mt-3">
+                        <div class="math-display bg-canvas p-4 rounded-lg mt-3">
                             \[n = \frac{\text{Molecular Mass}}{\text{Empirical Formula Mass}}\]
                         </div>
                         <p class="text-sm mt-3 text-center">where n is a whole number (1, 2, 3, ...)</p>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 How to Find Empirical Formula</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 How to Find Empirical Formula</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-cyan-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Step-by-Step Method</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Step-by-Step Method</h4>
                         <ol class="list-decimal list-inside space-y-3 text-lg ml-4">
                             <li>Write the percentage (or mass) of each element</li>
                             <li>Divide each by its atomic mass to get moles</li>
@@ -1420,7 +1447,7 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 9 (JEE Main 2022 Type)
                         </h4>
                         <p class="text-lg mb-3">
@@ -1428,10 +1455,10 @@
                             <br>(C = 12, H = 1, O = 16)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <div class="overflow-x-auto">
                                 <table class="w-full border-collapse mt-3">
-                                    <thead class="bg-cyan-100">
+                                    <thead class="bg-surface-3">
                                         <tr>
                                             <th class="border p-2">Element</th>
                                             <th class="border p-2">% by mass</th>
@@ -1470,21 +1497,21 @@
                                 </table>
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\text{Empirical Formula: } CH_2O\]
                             </div>
                         </div>
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 10 (Complete Problem)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A compound has empirical formula CH₂O and molar mass 180 g/mol. Find its molecular formula.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Calculate empirical formula mass</p>
                             <div class="math-display">
                                 \[\text{EFM} = 12 + 2(1) + 16 = 30 \text{ g/mol}\]
@@ -1500,14 +1527,14 @@
                                 \[\text{Molecular Formula} = n \times (CH_2O) = 6 \times (CH_2O)\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\text{Molecular Formula: } C_6H_{12}O_6 \text{ (Glucose)}\]
                             </div>
                         </div>
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Common Mistakes
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1522,7 +1549,7 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">💡</span> Multiplying Factor Guide
                         </h4>
-                        <div class="bg-white p-4 rounded">
+                        <div class="bg-canvas p-4 rounded">
                             <p class="font-semibold mb-2">When you get decimal ratios, multiply by:</p>
                             <ul class="list-disc list-inside space-y-1 ml-4">
                                 <li>If ratio ≈ 0.5 → multiply by 2</li>
@@ -1536,10 +1563,10 @@
             </section>
 
             <!-- Chapter 7: Concentration Terms -->
-            <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Concentration Terms</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Concentration Terms</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1550,16 +1577,16 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Important Concentration Terms</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Term</th>
                                     <th class="p-4 text-left">Definition</th>
                                     <th class="p-4 text-left">Formula</th>
                                     <th class="p-4 text-left">Unit</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Molarity (M)</td>
                                     <td class="p-4">Moles of solute per liter of solution</td>
@@ -1611,10 +1638,10 @@
                     <div class="space-y-4">
                         <div class="formula-box p-6 rounded-xl border-l-4 border-primary">
                             <h5 class="font-bold text-lg mb-3 text-primary">1. Molarity (M)</h5>
-                            <div class="math-display bg-white p-3 rounded">
+                            <div class="math-display bg-canvas p-3 rounded">
                                 \[M = \frac{\text{Moles of solute}}{\text{Volume of solution in L}}\]
                             </div>
-                            <div class="math-display bg-white p-3 rounded mt-2">
+                            <div class="math-display bg-canvas p-3 rounded mt-2">
                                 \[M = \frac{w \times 1000}{M \times V_{(mL)}}\]
                             </div>
                             <p class="text-sm mt-2">• Changes with temperature (volume changes)</p>
@@ -1623,10 +1650,10 @@
 
                         <div class="formula-box p-6 rounded-xl border-l-4 border-primary">
                             <h5 class="font-bold text-lg mb-3 text-primary">2. Molality (m)</h5>
-                            <div class="math-display bg-white p-3 rounded">
+                            <div class="math-display bg-canvas p-3 rounded">
                                 \[m = \frac{\text{Moles of solute}}{\text{Mass of solvent in kg}}\]
                             </div>
-                            <div class="math-display bg-white p-3 rounded mt-2">
+                            <div class="math-display bg-canvas p-3 rounded mt-2">
                                 \[m = \frac{w \times 1000}{M \times W_{solvent(g)}}\]
                             </div>
                             <p class="text-sm mt-2">• Does NOT change with temperature</p>
@@ -1635,7 +1662,7 @@
 
                         <div class="formula-box p-6 rounded-xl border-l-4 border-primary">
                             <h5 class="font-bold text-lg mb-3 text-primary">3. Mole Fraction (χ)</h5>
-                            <div class="math-display bg-white p-3 rounded">
+                            <div class="math-display bg-canvas p-3 rounded">
                                 \[\chi_A = \frac{n_A}{n_A + n_B + n_C + ...}\]
                             </div>
                             <p class="text-sm mt-2">• Sum of all mole fractions = 1</p>
@@ -1645,7 +1672,7 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 11
                         </h4>
                         <p class="text-lg mb-3">
@@ -1653,7 +1680,7 @@
                             <br>(Na = 23, O = 16, H = 1)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Calculate molar mass of NaOH</p>
                             <div class="math-display">
                                 \[M_{NaOH} = 23 + 16 + 1 = 40 \text{ g/mol}\]
@@ -1674,7 +1701,7 @@
                                 \[M = \frac{n}{V} = \frac{0.1}{0.25} = 0.4 \text{ M}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\text{Answer: } 0.4 \text{ M or } 0.4 \text{ mol/L}\]
                             </div>
                         </div>
@@ -1682,10 +1709,10 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Interconversion Formulas (Very Important for JEE)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Key Conversions</h4>
                         
-                        <div class="bg-green-50 p-4 rounded-lg mb-3">
+                        <div class="bg-surface-2 p-4 rounded-lg mb-3">
                             <h5 class="font-bold mb-2">Molarity to Molality:</h5>
                             <div class="math-display">
                                 \[m = \frac{M \times 1000}{1000d - M \times M_B}\]
@@ -1693,7 +1720,7 @@
                             <p class="text-xs mt-1">where d = density of solution, M_B = molar mass of solute</p>
                         </div>
                         
-                        <div class="bg-green-50 p-4 rounded-lg mb-3">
+                        <div class="bg-surface-2 p-4 rounded-lg mb-3">
                             <h5 class="font-bold mb-2">Molality to Mole Fraction:</h5>
                             <div class="math-display">
                                 \[\chi_{\text{solute}} = \frac{m}{m + \frac{1000}{M_A}}\]
@@ -1701,7 +1728,7 @@
                             <p class="text-xs mt-1">where M_A = molar mass of solvent</p>
                         </div>
                         
-                        <div class="bg-green-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <h5 class="font-bold mb-2">Mass % to Molarity:</h5>
                             <div class="math-display">
                                 \[M = \frac{\text{Mass \%} \times d \times 10}{M_B}\]
@@ -1714,7 +1741,7 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">💡</span> Remember the Difference
                         </h4>
-                        <div class="bg-white p-4 rounded">
+                        <div class="bg-canvas p-4 rounded">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-bold text-primary mb-2">Molarity (M)</p>
@@ -1739,10 +1766,10 @@
             </section>
 
             <!-- Chapter 8: Types of Chemical Reactions -->
-            <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+            <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                 <div class="flex items-center mb-6">
-                    <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Types of Chemical Reactions</h2>
+                    <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Types of Chemical Reactions</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1750,52 +1777,52 @@
                         Understanding different types of chemical reactions helps in predicting products and balancing equations - essential for JEE problem solving.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">8.1 Classification of Reactions</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Classification of Reactions</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">1. Combination Reaction</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">1. Combination Reaction</h5>
                             <p class="mb-2">Two or more substances combine to form a single product</p>
-                            <div class="bg-white p-3 rounded text-sm">
+                            <div class="bg-canvas p-3 rounded text-sm">
                                 <p class="font-mono mb-2">A + B → AB</p>
                                 <p class="text-xs">Example: 2H₂ + O₂ → 2H₂O</p>
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">2. Decomposition Reaction</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">2. Decomposition Reaction</h5>
                             <p class="mb-2">Single compound breaks down into two or more products</p>
-                            <div class="bg-white p-3 rounded text-sm">
+                            <div class="bg-canvas p-3 rounded text-sm">
                                 <p class="font-mono mb-2">AB → A + B</p>
                                 <p class="text-xs">Example: 2H₂O → 2H₂ + O₂</p>
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">3. Displacement Reaction</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">3. Displacement Reaction</h5>
                             <p class="mb-2">More reactive element displaces less reactive</p>
-                            <div class="bg-white p-3 rounded text-sm">
+                            <div class="bg-canvas p-3 rounded text-sm">
                                 <p class="font-mono mb-2">A + BC → AC + B</p>
                                 <p class="text-xs">Example: Zn + CuSO₄ → ZnSO₄ + Cu</p>
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">4. Double Displacement</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">4. Double Displacement</h5>
                             <p class="mb-2">Exchange of ions between reactants</p>
-                            <div class="bg-white p-3 rounded text-sm">
+                            <div class="bg-canvas p-3 rounded text-sm">
                                 <p class="font-mono mb-2">AB + CD → AD + CB</p>
                                 <p class="text-xs">Example: NaCl + AgNO₃ → NaNO₃ + AgCl</p>
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">8.2 Redox Reactions</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Redox Reactions</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">Key Concepts</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Key Concepts</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-green-50 p-4 rounded">
+                            <div class="bg-surface-2 p-4 rounded">
                                 <h5 class="font-bold mb-2">Oxidation</h5>
                                 <ul class="text-sm space-y-1">
                                     <li>• Loss of electrons</li>
@@ -1804,7 +1831,7 @@
                                     <li>• Removal of hydrogen</li>
                                 </ul>
                             </div>
-                            <div class="bg-green-50 p-4 rounded">
+                            <div class="bg-surface-2 p-4 rounded">
                                 <h5 class="font-bold mb-2">Reduction</h5>
                                 <ul class="text-sm space-y-1">
                                     <li>• Gain of electrons</li>
@@ -1835,14 +1862,14 @@
             </section>
 
             <!-- Previous Year Questions Analysis -->
-            <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+            <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">📝</span>
                     Previous Year Questions Analysis
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Mole Concept & Stoichiometry: 45%</li>
@@ -1852,7 +1879,7 @@
                             <li>✓ Limiting Reagent: 8%</li>
                         </ul>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Complex Stoichiometry: 40%</li>
@@ -1863,8 +1890,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                    <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Mole concept calculations (mass to moles to particles)</li>
                         <li>Limiting reagent problems with percentage yield</li>
@@ -1879,7 +1906,7 @@
                     </ol>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                     <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                     <div class="space-y-3">
                         <div class="flex justify-between items-center">
@@ -1902,21 +1929,21 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Download Complete PYQ PDF (2015-2024)
                     </a>
                 </div>
             </section>
 
             <!-- Practice Problems -->
-            <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+            <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">🎯</span>
                     Practice Problem Set
                 </h2>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Calculate number of atoms in 23 g of sodium (Na = 23)</li>
                         <li>Find molar mass of H₂SO₄ and calculate moles in 49 g</li>
@@ -1929,8 +1956,8 @@
                     </ol>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>10 g H₂ + 64 g O₂ → H₂O. Find limiting reagent and mass of water</li>
                         <li>A compound's empirical formula is CH₂. Molecular mass is 84. Find molecular formula</li>
@@ -1943,8 +1970,8 @@
                     </ol>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>A mixture of CaCO₃ and MgCO₃ weighs 10 g. On heating, 2.24 L CO₂ (STP) evolved. Find % of each</li>
                         <li>20 g mixture of NaOH and Na₂CO₃ requires 0.2 mol HCl for neutralization. Find composition</li>
@@ -1958,57 +1985,75 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Get Solutions PDF with Step-by-Step Working
                     </a>
                 </div>
             </section>
 
-        </main>
+            <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./states-of-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">States Of Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./surface-chemistry.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Surface Chemistry</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./thermodynamics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Thermodynamics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
     </div>
 </div>
 
 <!-- Related Notes Section -->
-<section class="bg-white py-12 mt-12 border-t-4 border-primary">
+<section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+        <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
             <span class="w-2 h-10 bg-primary rounded mr-4"></span>
             Related Chemistry Notes
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Related Note 1 -->
-            <a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+            <a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                    <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Atomic Structure</h3>
-                <p class="text-gray-600">Thomson, Rutherford, Bohr model, Quantum numbers, Electronic configuration</p>
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Atomic Structure</h3>
+                <p class="text-ink-muted">Thomson, Rutherford, Bohr model, Quantum numbers, Electronic configuration</p>
                 <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
 
             <!-- Related Note 2 -->
-            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-bonding" class="group bg-gradient-to-br from-cyan-50 to-cyan-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-bonding" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Important</span>
+                    <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Important</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Chemical Bonding</h3>
-                <p class="text-gray-600">Ionic, Covalent, Metallic bonds, VSEPR theory, Hybridization</p>
-                <div class="mt-4 text-secondary font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Chemical Bonding</h3>
+                <p class="text-ink-muted">Ionic, Covalent, Metallic bonds, VSEPR theory, Hybridization</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
 
             <!-- Related Note 3 -->
-            <a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="group bg-gradient-to-br from-amber-50 to-amber-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-accent">
+            <a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-accent">
                 <div class="flex items-center mb-3">
-                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                    <span class="bg-accent text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-accent transition">States of Matter</h3>
-                <p class="text-gray-600">Gas laws, Kinetic theory, Liquids and Solids properties</p>
-                <div class="mt-4 text-accent font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">States of Matter</h3>
+                <p class="text-ink-muted">Gas laws, Kinetic theory, Liquids and Solids properties</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
@@ -2016,7 +2061,7 @@
 
         <!-- More Notes Link -->
         <div class="text-center mt-10">
-            <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+            <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                 View All Chemistry Notes →
             </a>
         </div>
@@ -2024,42 +2069,42 @@
 </section>
 
 <!-- SEO-Optimized Summary Section -->
-<section class="py-16 bg-gradient-to-br from-gray-50 to-green-50">
+<section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <article class="prose max-w-none">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6">Some Basic Concepts of Chemistry - Complete Guide for JEE 2025-26</h2>
+            <h2 class="text-4xl font-bold text-ink mb-6">Some Basic Concepts of Chemistry - Complete Guide for JEE 2025-26</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Why Basic Concepts is Crucial for JEE?</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-ink-muted leading-relaxed mb-4">
                         <strong>Some Basic Concepts of Chemistry</strong> is the MOST important chapter in <strong>JEE Chemistry</strong>. It carries 8-12% direct weightage and forms the foundation for:
                     </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                         <li><strong>Mole Concept</strong> - Used in every quantitative chemistry problem</li>
                         <li><strong>Stoichiometry</strong> - Essential for reaction calculations (40% of numerical)</li>
                         <li><strong>Concentration Terms</strong> - Required in solutions, equilibrium, electrochemistry</li>
                         <li><strong>Percentage Composition</strong> - Key for organic chemistry structure determination</li>
                     </ul>
-                    <p class="text-gray-700 leading-relaxed mt-4">
+                    <p class="text-ink-muted leading-relaxed mt-4">
                         In <strong>JEE Advanced</strong>, complex multi-step stoichiometry problems combining limiting reagent, yield, and purity are frequently asked.
                     </p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Key Formulas to Memorize</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">1. Mole Concept Trinity</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">1. Mole Concept Trinity</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• n = m/M (mass to moles)</li>
                                 <li>• n = N/N_A (particles to moles)</li>
                                 <li>• n = V/22.4 (volume to moles at STP)</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">2. Concentration Formulas</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">2. Concentration Formulas</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• Molarity: M = n/V(L)</li>
                                 <li>• Molality: m = n/W(kg)</li>
                                 <li>• Mole fraction: χ_A = n_A/n_total</li>
@@ -2067,8 +2112,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">3. Formula Relationships</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">3. Formula Relationships</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• % composition = (mass element/molar mass) × 100</li>
                                 <li>• Molecular formula = n × Empirical formula</li>
                                 <li>• n = Molecular mass/Empirical mass</li>
@@ -2079,12 +2124,12 @@
             </div>
             
             <!-- Study Tips -->
-            <div class="mt-8 bg-gradient-to-r from-green-100 to-cyan-100 p-8 rounded-2xl">
+            <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Basic Concepts of Chemistry Effectively?</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 3-4 days (3 hours/day)</li>
                             <li>Master <strong>mole concept</strong> completely - solve 50+ problems</li>
                             <li>Practice <strong>stoichiometry</strong> with limiting reagent extensively</li>
@@ -2095,7 +2140,7 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 5-6 days (4 hours/day)</li>
                             <li>Deep dive into <strong>mixture problems</strong> (two components)</li>
                             <li>Practice complex stoichiometry with percentage yield and purity</li>
@@ -2108,35 +2153,35 @@
             </div>
             
             <!-- Common Mistakes -->
-            <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                <ul class="space-y-3 text-gray-700">
+            <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                <ul class="space-y-3 text-ink-muted">
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Confusing molarity with molality:</strong> Remember M = per liter of SOLUTION, m = per kg of SOLVENT
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Not identifying limiting reagent:</strong> Always calculate moles/coefficient for each reactant
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Using grams instead of moles in stoichiometry:</strong> ALWAYS convert to moles first, then use mole ratio
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Forgetting to multiply empirical formula by n:</strong> Check if molecular mass = empirical mass before finalizing
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Rounding off too early:</strong> Keep at least 4 significant figures during calculation, round only in final answer
                         </div>
@@ -2145,11 +2190,11 @@
             </div>
             
             <!-- Previous Year Analysis -->
-            <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+            <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                 <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                 <div class="overflow-x-auto">
                     <table class="w-full border-collapse">
-                        <thead class="bg-primary text-white">
+                        <thead class="bg-primary text-ink">
                             <tr>
                                 <th class="p-3 text-left">Year</th>
                                 <th class="p-3 text-left">JEE Main</th>
@@ -2158,19 +2203,19 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y">
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2024</td>
                                 <td class="p-3">3 Questions (12 marks)</td>
                                 <td class="p-3">4 Questions (14 marks)</td>
                                 <td class="p-3">Limiting reagent, Concentration interconversion</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2023</td>
                                 <td class="p-3">2 Questions (8 marks)</td>
                                 <td class="p-3">3 Questions (12 marks)</td>
                                 <td class="p-3">Mole concept, Mixture problems</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2022</td>
                                 <td class="p-3">3 Questions (12 marks)</td>
                                 <td class="p-3">3 Questions (10 marks)</td>
@@ -2179,7 +2224,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="text-gray-700 mt-4 text-sm">
+                <p class="text-ink-muted mt-4 text-sm">
                     <strong>Trend:</strong> JEE is increasingly testing application-based mole concept problems rather than direct formula-based questions. Mixture analysis and multi-step stoichiometry are becoming more common.
                 </p>
             </div>
@@ -2189,101 +2234,101 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+<footer class="bg-canvas text-ink py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">sitemap</a></li>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
-                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-white transition">Physics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Mathematics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Study Tips</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-ink transition">Physics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Mathematics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Study Tips</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         </ul>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Last Updated: 14 March, 2026</p>
+        <div class="border-t border-hairline pt-8 text-center">
+            <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+            <p class="text-ink-subtle text-xs mt-2">Last Updated: 14 March, 2026</p>
         </div>
     </div>
 </footer>
 <!-- Scroll to Top Button -->
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-        class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+        class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
     ↑
 </button>
 <!-- Scripts -->

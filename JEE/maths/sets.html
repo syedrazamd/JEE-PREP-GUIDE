@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Sets - Complete JEE Mathematics Notes with 150+ Examples">
     <meta property="og:description" content="Master set theory, Venn diagrams, De Morgan's laws & set operations. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Sets - JEE Mathematics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/maths/sets">
     <meta name="twitter:title" content="Sets - Complete JEE Mathematics Notes">
     <meta name="twitter:description" content="Master set theory with 150+ solved examples. Complete notes on Venn diagrams, De Morgan's laws & set operations for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Sets JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Sets - Complete JEE Mathematics Notes 2025-26",
       "description": "Comprehensive notes on Sets covering set theory, operations, Venn diagrams, De Morgan's laws with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -353,7 +366,7 @@
       "@type": "VideoObject",
       "name": "Sets - Complete Tutorial for JEE",
       "description": "Learn Sets for JEE with examples and Venn diagrams",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT60M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/maths/sets"
@@ -390,59 +403,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#e11d48',
-                        secondary: '#be123c',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-maths.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-maths.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-rose-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #e11d48, #fb7185); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -451,30 +466,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Mathematics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Sets</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Sets</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -482,32 +497,32 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Sets</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Sets</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Basics
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Types
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Operations
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Venn Diagrams
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     De Morgan's
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Power Sets
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Cardinality
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Applications
                 </a>
             </div>
@@ -515,28 +530,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-rose-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Sets
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the foundation of Mathematics with complete notes on Set Theory, Operations, Venn Diagrams, De Morgan's Laws, and Power Sets. Includes 150+ solved problems and all JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -545,21 +560,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Sets JEE Notes">
         <meta itemprop="description" content="Complete study notes for Sets">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.8</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">245</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -569,15 +584,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">3 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">3 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -589,35 +604,47 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Set Fundamentals</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Types of Sets</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Set Operations</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Venn Diagrams</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. De Morgan's Laws</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Power Sets</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Cardinality</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Applications</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Set Fundamentals</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Types of Sets</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Set Operations</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Venn Diagrams</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. De Morgan's Laws</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Power Sets</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Cardinality</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Applications</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./relations-functions.html" class="text-primary font-semibold hover:underline">Relations Functions &rarr;</a>
+                <a href="./quadratic-equations.html" class="text-primary font-semibold hover:underline">Quadratic Equations &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Chapter 1: Set Fundamentals -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Set Fundamentals</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Set Fundamentals</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -627,19 +654,19 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 What is a Set?</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 A set is a <strong>well-defined collection</strong> of distinct objects. "Well-defined" means that for any given object, we can definitely say whether it belongs to the set or not.
                             </p>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-2 font-semibold">Examples of Well-Defined Sets:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>The set of natural numbers less than 10</li>
                                     <li>The set of vowels in English alphabet</li>
                                     <li>The set of prime numbers less than 20</li>
                                 </ul>
-                                <p class="mt-4 mb-2 font-semibold text-danger">NOT Well-Defined (Not Sets):</p>
+                                <p class="mt-4 mb-2 font-semibold text-primary">NOT Well-Defined (Not Sets):</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>The collection of beautiful flowers (subjective)</li>
                                     <li>The collection of intelligent students (ambiguous)</li>
@@ -651,34 +678,34 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Representation of Sets</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">1. Roster Form (Tabular Form)</h5>
                                 <p class="mb-3">Elements are listed within curly braces { }, separated by commas.</p>
-                                <div class="bg-blue-50 p-4 rounded-lg space-y-2">
+                                <div class="bg-surface-2 p-4 rounded-lg space-y-2">
                                     <p class="font-mono">A = {1, 2, 3, 4, 5}</p>
                                     <p class="font-mono">B = {a, e, i, o, u}</p>
                                     <p class="font-mono">C = {2, 4, 6, 8, ...}</p>
                                 </div>
-                                <p class="text-sm mt-3 text-gray-700">
+                                <p class="text-sm mt-3 text-ink-muted">
                                     <strong>Note:</strong> Order doesn't matter. {1, 2, 3} = {3, 2, 1}
                                 </p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">2. Set-Builder Form</h5>
                                 <p class="mb-3">Elements are described by a property or rule.</p>
-                                <div class="bg-blue-50 p-4 rounded-lg space-y-2">
+                                <div class="bg-surface-2 p-4 rounded-lg space-y-2">
                                     <p class="font-mono">A = {x : x ∈ ℕ, x ≤ 5}</p>
                                     <p class="font-mono">B = {x : x is a vowel}</p>
                                     <p class="font-mono">C = {x : x = 2n, n ∈ ℕ}</p>
                                 </div>
-                                <p class="text-sm mt-3 text-gray-700">
+                                <p class="text-sm mt-3 text-ink-muted">
                                     <strong>Read as:</strong> "The set of all x such that..."
                                 </p>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
@@ -687,12 +714,12 @@
                                 <br>(b) Set of all prime numbers less than 15
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>(a) Odd natural numbers less than 10:</strong></p>
                                 <div class="space-y-2">
                                     <p><strong>Roster Form:</strong> A = {1, 3, 5, 7, 9}</p>
                                     <p><strong>Set-Builder Form:</strong> A = {x : x ∈ ℕ, x &lt; 10, x is odd}</p>
-                                    <p class="text-sm text-gray-600">or A = {x : x = 2n - 1, n ∈ ℕ, n ≤ 5}</p>
+                                    <p class="text-sm text-ink-muted">or A = {x : x = 2n - 1, n ∈ ℕ, n ≤ 5}</p>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(b) Prime numbers less than 15:</strong></p>
@@ -706,15 +733,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Set Notation and Symbols</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Symbol</th>
                                         <th class="p-4 text-left">Meaning</th>
                                         <th class="p-4 text-left">Example</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-mono text-xl">∈</td>
                                         <td class="p-4">belongs to, is an element of</td>
@@ -785,10 +812,10 @@
                 </section>
 
                 <!-- Chapter 2: Types of Sets -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Types of Sets</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Types of Sets</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -796,13 +823,13 @@
                             Sets are classified based on the number of elements they contain, their relationship with other sets, or special properties. Understanding these types is crucial for solving JEE problems efficiently.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Classification Based on Number of Elements</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Classification Based on Number of Elements</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">1. Finite Set</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Finite Set</h5>
                                 <p class="mb-3">A set with countable number of elements.</p>
-                                <div class="bg-purple-50 p-4 rounded-lg space-y-2">
+                                <div class="bg-surface-2 p-4 rounded-lg space-y-2">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <p class="font-mono">A = {1, 2, 3, 4, 5}</p>
                                     <p class="font-mono">B = {x : x ∈ ℕ, x ≤ 100}</p>
@@ -810,10 +837,10 @@
                                     <p class="mt-3 text-sm">n(A) = 5, n(B) = 100, n(C) = 5</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">2. Infinite Set</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Infinite Set</h5>
                                 <p class="mb-3">A set with uncountable number of elements.</p>
-                                <div class="bg-purple-50 p-4 rounded-lg space-y-2">
+                                <div class="bg-surface-2 p-4 rounded-lg space-y-2">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <p class="font-mono">ℕ = {1, 2, 3, 4, ...}</p>
                                     <p class="font-mono">ℤ = {..., -2, -1, 0, 1, 2, ...}</p>
@@ -821,21 +848,21 @@
                                     <p class="mt-3 text-sm">n(ℕ) = ∞, n(ℤ) = ∞, n(A) = ∞</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">3. Empty Set (Null Set)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">3. Empty Set (Null Set)</h5>
                                 <p class="mb-3">A set with no elements. Denoted by ∅ or { }.</p>
-                                <div class="bg-purple-50 p-4 rounded-lg space-y-2">
+                                <div class="bg-surface-2 p-4 rounded-lg space-y-2">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <p class="font-mono">A = {x : x² = -1, x ∈ ℝ}</p>
                                     <p class="font-mono">B = {x : x ∈ ℕ, 3 &lt; x &lt; 4}</p>
                                     <p class="font-mono">C = {x : x ≠ x}</p>
-                                    <p class="mt-3 text-sm font-bold text-danger">Note: {0} ≠ ∅ (has one element)</p>
+                                    <p class="mt-3 text-sm font-bold text-primary">Note: {0} ≠ ∅ (has one element)</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">4. Singleton Set</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">4. Singleton Set</h5>
                                 <p class="mb-3">A set with exactly one element.</p>
-                                <div class="bg-purple-50 p-4 rounded-lg space-y-2">
+                                <div class="bg-surface-2 p-4 rounded-lg space-y-2">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <p class="font-mono">A = {0}</p>
                                     <p class="font-mono">B = {x : x + 5 = 8}</p>
@@ -845,14 +872,14 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Special Types of Sets</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Special Types of Sets</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Universal Set (U or ξ)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Universal Set (U or ξ)</h4>
                             <p class="text-lg mb-4">
                                 The set containing all objects under consideration for a particular discussion. All other sets are subsets of the universal set.
                             </p>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-2 font-semibold">Example:</p>
                                 <p class="mb-2">If we're studying natural numbers less than 20:</p>
                                 <p class="font-mono mb-3">U = {1, 2, 3, 4, ..., 19}</p>
@@ -863,30 +890,30 @@
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Equal Sets</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Equal Sets</h5>
                                 <p class="mb-3">Two sets A and B are equal if they have exactly the same elements.</p>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="mb-2">A = B ⟺ (A ⊆ B and B ⊆ A)</p>
                                     <p class="font-semibold mt-3 mb-2">Example:</p>
                                     <p class="font-mono">{1, 2, 3} = {3, 2, 1}</p>
                                     <p class="font-mono">{a, b} = {b, a}</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Equivalent Sets</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Equivalent Sets</h5>
                                 <p class="mb-3">Two sets having same number of elements (same cardinality).</p>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="mb-2">A ~ B ⟺ n(A) = n(B)</p>
                                     <p class="font-semibold mt-3 mb-2">Example:</p>
                                     <p class="font-mono">{1, 2, 3} ~ {a, b, c}</p>
                                     <p class="font-mono">{x, y} ~ {5, 10}</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Disjoint Sets</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Disjoint Sets</h5>
                                 <p class="mb-3">Two sets with no common elements.</p>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="mb-2">A ∩ B = ∅</p>
                                     <p class="font-semibold mt-3 mb-2">Example:</p>
                                     <p class="font-mono">A = {1, 2, 3}</p>
@@ -894,10 +921,10 @@
                                     <p class="font-mono">A ∩ B = ∅</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Overlapping Sets</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Overlapping Sets</h5>
                                 <p class="mb-3">Two sets with at least one common element.</p>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="mb-2">A ∩ B ≠ ∅</p>
                                     <p class="font-semibold mt-3 mb-2">Example:</p>
                                     <p class="font-mono">A = {1, 2, 3, 4}</p>
@@ -908,7 +935,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
@@ -919,12 +946,12 @@
                                 <br>(d) D = {x : x is a multiple of 5}
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>(a) A = {x : x ∈ ℕ, x² = 25}</strong></p>
                                 <p class="mb-2">x² = 25 ⟹ x = ±5</p>
                                 <p class="mb-2">Since x ∈ ℕ (natural numbers), only x = 5</p>
                                 <p class="font-mono mb-2">A = {5}</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-bold">Answer: Singleton Set</p>
                                 </div>
                                 
@@ -932,7 +959,7 @@
                                 <p class="mb-2">Integers between -5 and 5 (not including -5 and 5)</p>
                                 <p class="font-mono mb-2">B = {-4, -3, -2, -1, 0, 1, 2, 3, 4}</p>
                                 <p class="mb-2">n(B) = 9</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-bold">Answer: Finite Set</p>
                                 </div>
                                 
@@ -940,21 +967,21 @@
                                 <p class="mb-2">x² + 1 = 0 ⟹ x² = -1</p>
                                 <p class="mb-2">No real number satisfies this equation</p>
                                 <p class="font-mono mb-2">C = ∅</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-bold">Answer: Empty Set</p>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(d) D = {x : x is a multiple of 5}</strong></p>
                                 <p class="mb-2">Multiples of 5 are: ..., -10, -5, 0, 5, 10, 15, ...</p>
                                 <p class="font-mono mb-2">D = {..., -10, -5, 0, 5, 10, 15, ...}</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-bold">Answer: Infinite Set</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistakes to Avoid
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -969,10 +996,10 @@
                 </section>
 
                 <!-- Chapter 3: Set Operations -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Set Operations</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Set Operations</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -980,94 +1007,94 @@
                             Set operations allow us to combine, compare, and manipulate sets. The four fundamental operations are Union, Intersection, Difference, and Complement. These form the basis of solving complex Venn diagram problems in JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.1 Union of Sets (∪)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Union of Sets (∪)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 The union of sets A and B is the set of all elements that are in A <strong>or</strong> in B <strong>or</strong> in both.
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-success">
                                 \[A \cup B = \{x : x \in A \text{ or } x \in B\}\]
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Example:</p>
                                 <p class="mb-2">A = {1, 2, 3, 4}</p>
                                 <p class="mb-2">B = {3, 4, 5, 6}</p>
-                                <p class="mb-2 font-bold text-success">A ∪ B = {1, 2, 3, 4, 5, 6}</p>
-                                <p class="text-sm mt-3 text-gray-700">Note: Common elements (3, 4) appear only once</p>
+                                <p class="mb-2 font-bold text-primary">A ∪ B = {1, 2, 3, 4, 5, 6}</p>
+                                <p class="text-sm mt-3 text-ink-muted">Note: Common elements (3, 4) appear only once</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.2 Intersection of Sets (∩)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Intersection of Sets (∩)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 The intersection of sets A and B is the set of all elements that are in <strong>both</strong> A <strong>and</strong> B.
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-success">
                                 \[A \cap B = \{x : x \in A \text{ and } x \in B\}\]
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Example:</p>
                                 <p class="mb-2">A = {1, 2, 3, 4}</p>
                                 <p class="mb-2">B = {3, 4, 5, 6}</p>
-                                <p class="mb-2 font-bold text-success">A ∩ B = {3, 4}</p>
-                                <p class="text-sm mt-3 text-gray-700">Only common elements</p>
+                                <p class="mb-2 font-bold text-primary">A ∩ B = {3, 4}</p>
+                                <p class="text-sm mt-3 text-ink-muted">Only common elements</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.3 Difference of Sets (A - B or A \ B)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Difference of Sets (A - B or A \ B)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 The difference A - B is the set of all elements that are in A but <strong>not</strong> in B.
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-success">
                                 \[A - B = \{x : x \in A \text{ and } x \notin B\}\]
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Example:</p>
                                 <p class="mb-2">A = {1, 2, 3, 4}</p>
                                 <p class="mb-2">B = {3, 4, 5, 6}</p>
-                                <p class="mb-2 font-bold text-success">A - B = {1, 2}</p>
-                                <p class="mb-2 font-bold text-success">B - A = {5, 6}</p>
-                                <p class="text-sm mt-3 text-danger">Note: A - B ≠ B - A (not commutative)</p>
+                                <p class="mb-2 font-bold text-primary">A - B = {1, 2}</p>
+                                <p class="mb-2 font-bold text-primary">B - A = {5, 6}</p>
+                                <p class="text-sm mt-3 text-primary">Note: A - B ≠ B - A (not commutative)</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.4 Complement of a Set (A' or A<sup>c</sup>)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Complement of a Set (A' or A<sup>c</sup>)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 The complement of set A (with respect to universal set U) is the set of all elements in U that are <strong>not</strong> in A.
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-success">
                                 \[A' = U - A = \{x : x \in U \text{ and } x \notin A\}\]
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Example:</p>
                                 <p class="mb-2">U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
                                 <p class="mb-2">A = {2, 4, 6, 8, 10} (even numbers)</p>
-                                <p class="mb-2 font-bold text-success">A' = {1, 3, 5, 7, 9} (odd numbers)</p>
+                                <p class="mb-2 font-bold text-primary">A' = {1, 3, 5, 7, 9} (odd numbers)</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.5 Properties of Set Operations</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.5 Properties of Set Operations</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Union (∪)</th>
                                         <th class="p-4 text-left">Intersection (∩)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Commutative</td>
                                         <td class="p-4 font-mono">A ∪ B = B ∪ A</td>
@@ -1108,7 +1135,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3
                             </h4>
                             <p class="text-lg mb-3">
@@ -1119,31 +1146,31 @@
                                 <br>(d) A - (B ∩ C)
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>(a) A ∪ B ∪ C</strong></p>
                                 <p class="mb-2">Combine all elements from A, B, and C (no repetition)</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-mono font-bold">A ∪ B ∪ C = {1, 2, 3, 4, 5, 6, 8}</p>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(b) A ∩ B ∩ C</strong></p>
                                 <p class="mb-2">A ∩ B = {2, 4}</p>
                                 <p class="mb-2">(A ∩ B) ∩ C = {2, 4} ∩ {3, 4, 5, 6}</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-mono font-bold">A ∩ B ∩ C = {4}</p>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(c) (A ∪ B) ∩ C</strong></p>
                                 <p class="mb-2">A ∪ B = {1, 2, 3, 4, 5, 6, 8}</p>
                                 <p class="mb-2">(A ∪ B) ∩ C = {1, 2, 3, 4, 5, 6, 8} ∩ {3, 4, 5, 6}</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-mono font-bold">(A ∪ B) ∩ C = {3, 4, 5, 6}</p>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(d) A - (B ∩ C)</strong></p>
                                 <p class="mb-2">B ∩ C = {2, 4, 6, 8} ∩ {3, 4, 5, 6} = {4, 6}</p>
                                 <p class="mb-2">A - (B ∩ C) = {1, 2, 3, 4, 5} - {4, 6}</p>
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-mono font-bold">A - (B ∩ C) = {1, 2, 3, 5}</p>
                                 </div>
                             </div>
@@ -1176,10 +1203,10 @@
                 <!-- Practice Problems Section (similar to physics example) -->
 
 <!-- Chapter 4: Venn Diagrams -->
-<section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+<section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Venn Diagrams</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Venn Diagrams</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1191,7 +1218,7 @@
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
                             <!-- Union Diagram -->
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-4 text-center text-primary">A ∪ B (Union)</h5>
                                 <div class="diagram-box relative h-64 mb-4">
                                     <svg width="100%" height="100%" viewBox="0 0 300 200">
@@ -1208,12 +1235,12 @@
                                         <text x="190" y="105" font-size="16" font-weight="bold">B</text>
                                     </svg>
                                 </div>
-                                <p class="text-sm text-center text-gray-700">Shaded region represents A ∪ B</p>
+                                <p class="text-sm text-center text-ink-muted">Shaded region represents A ∪ B</p>
                                 <p class="text-sm text-center mt-2 font-mono">All of A + All of B</p>
                             </div>
 
                             <!-- Intersection Diagram -->
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-4 text-center text-primary">A ∩ B (Intersection)</h5>
                                 <div class="diagram-box relative h-64 mb-4">
                                     <svg width="100%" height="100%" viewBox="0 0 300 200">
@@ -1233,12 +1260,12 @@
                                         <ellipse cx="135" cy="100" rx="30" ry="40" fill="#3b82f6" opacity="0.8"/>
                                     </svg>
                                 </div>
-                                <p class="text-sm text-center text-gray-700">Shaded region represents A ∩ B</p>
+                                <p class="text-sm text-center text-ink-muted">Shaded region represents A ∩ B</p>
                                 <p class="text-sm text-center mt-2 font-mono">Common elements only</p>
                             </div>
 
                             <!-- Difference A - B -->
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-4 text-center text-primary">A - B (Difference)</h5>
                                 <div class="diagram-box relative h-64 mb-4">
                                     <svg width="100%" height="100%" viewBox="0 0 300 200">
@@ -1254,12 +1281,12 @@
                                         <text x="200" y="105" font-size="16" font-weight="bold">B</text>
                                     </svg>
                                 </div>
-                                <p class="text-sm text-center text-gray-700">Shaded region represents A - B</p>
+                                <p class="text-sm text-center text-ink-muted">Shaded region represents A - B</p>
                                 <p class="text-sm text-center mt-2 font-mono">In A but not in B</p>
                             </div>
 
                             <!-- Complement A' -->
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-4 text-center text-primary">A' (Complement)</h5>
                                 <div class="diagram-box relative h-64 mb-4">
                                     <svg width="100%" height="100%" viewBox="0 0 300 200">
@@ -1272,14 +1299,14 @@
                                         <text x="140" y="105" font-size="16" font-weight="bold">A</text>
                                     </svg>
                                 </div>
-                                <p class="text-sm text-center text-gray-700">Shaded region represents A'</p>
+                                <p class="text-sm text-center text-ink-muted">Shaded region represents A'</p>
                                 <p class="text-sm text-center mt-2 font-mono">In U but not in A</p>
                             </div>
                         </div>
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Venn Diagrams for Three Sets</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary text-center">Three Sets A, B, C with All Regions</h4>
                             <div class="diagram-box relative mb-4" style="height: 400px;">
                                 <svg width="100%" height="100%" viewBox="0 0 400 350">
@@ -1311,7 +1338,7 @@
                                     <text x="195" y="175" font-size="12" font-weight="bold">⑧</text>
                                 </svg>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <h5 class="font-bold mb-3">Region Descriptions:</h5>
                                 <div class="grid grid-cols-2 gap-2 text-sm">
                                     <p><strong>①:</strong> Only A (A - B - C)</p>
@@ -1328,32 +1355,32 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Cardinality Formulas Using Venn Diagrams</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">For Two Sets:</h4>
                             <div class="space-y-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-2">Union Formula (Most Important for JEE):</h5>
                                     <div class="math-display border-2 border-primary rounded-lg">
                                         \[n(A \cup B) = n(A) + n(B) - n(A \cap B)\]
                                     </div>
-                                    <p class="text-sm mt-2 text-gray-700">We subtract n(A ∩ B) because it's counted twice in n(A) + n(B)</p>
+                                    <p class="text-sm mt-2 text-ink-muted">We subtract n(A ∩ B) because it's counted twice in n(A) + n(B)</p>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-2">Disjoint Sets (when A ∩ B = ∅):</h5>
                                     <div class="math-display">
                                         \[n(A \cup B) = n(A) + n(B)\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-2">Difference Formula:</h5>
                                     <div class="math-display">
                                         \[n(A - B) = n(A) - n(A \cap B)\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-2">Symmetric Difference:</h5>
                                     <div class="math-display">
                                         \[n(A \triangle B) = n(A) + n(B) - 2n(A \cap B)\]
@@ -1362,9 +1389,9 @@
                             </div>
                         </div>
 
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">For Three Sets (JEE Advanced Level):</h4>
-                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <h5 class="font-bold mb-3">Inclusion-Exclusion Principle:</h5>
                                 <div class="math-display border-2 border-primary rounded-lg">
                                     \[n(A \cup B \cup C) = n(A) + n(B) + n(C)\]
@@ -1373,8 +1400,8 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-accent">
-                                <h5 class="font-bold mb-2 text-accent">Step-by-Step Logic:</h5>
+                            <div class="bg-surface-2 p-4 rounded-lg border-l-4 border-accent">
+                                <h5 class="font-bold mb-2 text-primary">Step-by-Step Logic:</h5>
                                 <ol class="list-decimal list-inside space-y-2">
                                     <li><strong>Add</strong> all individual sets: n(A) + n(B) + n(C)</li>
                                     <li><strong>Subtract</strong> pairwise intersections (counted twice): - n(A∩B) - n(B∩C) - n(A∩C)</li>
@@ -1384,7 +1411,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Main 2023 Pattern)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1394,7 +1421,7 @@
                                 <br>(c) Number of students who play neither game
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Given:</strong></p>
                                 <ul class="list-disc list-inside mb-4">
                                     <li>Total students = 100</li>
@@ -1410,14 +1437,14 @@
                                 <div class="math-display">
                                     \[= 60 + 50 - 40\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[= 70 \text{ students}\]
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(b) Students playing exactly one game:</strong></p>
                                 <p class="mb-2">Only Cricket = n(C) - n(C ∩ F) = 60 - 40 = 20</p>
                                 <p class="mb-2">Only Football = n(F) - n(C ∩ F) = 50 - 40 = 10</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Total} = 20 + 10 = 30 \text{ students}\]
                                 </div>
                                 
@@ -1428,14 +1455,14 @@
                                 <div class="math-display">
                                     \[= 100 - 70\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[= 30 \text{ students}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Advanced Pattern - 3 Sets)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1450,7 +1477,7 @@
                                 <br>Find: (a) Students studying at least one subject (b) Students studying exactly two subjects
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Given:</strong></p>
                                 <p class="mb-2">n(M) = 120, n(P) = 90, n(C) = 70</p>
                                 <p class="mb-2">n(M ∩ P) = 40, n(P ∩ C) = 30, n(M ∩ C) = 50</p>
@@ -1469,7 +1496,7 @@
                                 <div class="math-display">
                                     \[= 120 + 90 + 70 - 40 - 30 - 50 + 20\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[= 180 \text{ students}\]
                                 </div>
                                 
@@ -1477,7 +1504,7 @@
                                 <p class="mb-2">Only M and P (not C) = n(M ∩ P) - n(M ∩ P ∩ C) = 40 - 20 = 20</p>
                                 <p class="mb-2">Only P and C (not M) = n(P ∩ C) - n(M ∩ P ∩ C) = 30 - 20 = 10</p>
                                 <p class="mb-2">Only M and C (not P) = n(M ∩ C) - n(M ∩ P ∩ C) = 50 - 20 = 30</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Total} = 20 + 10 + 30 = 60 \text{ students}\]
                                 </div>
                             </div>
@@ -1498,7 +1525,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Venn Diagram Mistakes
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1513,10 +1540,10 @@
                 </section>
 
                 <!-- Chapter 5: De Morgan's Laws -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">De Morgan's Laws</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">De Morgan's Laws</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1524,28 +1551,28 @@
                             De Morgan's Laws are fundamental theorems in set theory that relate the complement of unions and intersections. These laws are extensively used in JEE to simplify complex set expressions and prove set identities.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.1 The Two Laws</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 The Two Laws</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger text-center">First Law</h5>
-                                <div class="math-display bg-red-50 p-4 rounded-lg border-2 border-danger mb-4">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary text-center">First Law</h5>
+                                <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-danger mb-4">
                                     \[(A \cup B)' = A' \cap B'\]
                                 </div>
                                 <p class="text-center mb-4 text-lg font-semibold">The complement of a UNION is the INTERSECTION of complements</p>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">In words:</p>
                                     <p class="text-sm">"NOT (A OR B)" is the same as "(NOT A) AND (NOT B)"</p>
                                 </div>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger text-center">Second Law</h5>
-                                <div class="math-display bg-red-50 p-4 rounded-lg border-2 border-danger mb-4">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary text-center">Second Law</h5>
+                                <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-danger mb-4">
                                     \[(A \cap B)' = A' \cup B'\]
                                 </div>
                                 <p class="text-center mb-4 text-lg font-semibold">The complement of an INTERSECTION is the UNION of complements</p>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">In words:</p>
                                     <p class="text-sm">"NOT (A AND B)" is the same as "(NOT A) OR (NOT B)"</p>
                                 </div>
@@ -1556,30 +1583,30 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Easy Way to Remember
                             </h4>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="text-lg mb-4 font-semibold">When you take complement of a set expression:</p>
                                 <ul class="list-disc list-inside space-y-3 text-lg ml-4">
                                     <li><strong>Union (∪) becomes Intersection (∩)</strong></li>
                                     <li><strong>Intersection (∩) becomes Union (∪)</strong></li>
                                     <li><strong>Each set gets complemented</strong></li>
                                 </ul>
-                                <p class="mt-4 text-center font-mono text-xl font-bold text-secondary">
+                                <p class="mt-4 text-center font-mono text-xl font-bold text-primary">
                                     ∪ ⟷ ∩ (Operations swap)
                                 </p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.2 Extended De Morgan's Laws (For Multiple Sets)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Extended De Morgan's Laws (For Multiple Sets)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">For Three Sets:</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">For Three Sets:</h4>
                             <div class="space-y-4">
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <div class="math-display border-2 border-danger rounded-lg">
                                         \[(A \cup B \cup C)' = A' \cap B' \cap C'\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <div class="math-display border-2 border-danger rounded-lg">
                                         \[(A \cap B \cap C)' = A' \cup B' \cup C'\]
                                     </div>
@@ -1587,9 +1614,9 @@
                             </div>
                         </div>
 
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">General Form (n sets):</h4>
-                            <div class="bg-red-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">General Form (n sets):</h4>
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <div class="math-display border-2 border-danger rounded-lg mb-3">
                                     \[\left(\bigcup_{i=1}^{n} A_i\right)' = \bigcap_{i=1}^{n} A_i'\]
                                 </div>
@@ -1599,101 +1626,101 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.3 Proof of De Morgan's Laws</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Proof of De Morgan's Laws</h3>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📐</span> Proof of First Law: (A ∪ B)' = A' ∩ B'
                             </h4>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-4"><strong>Method 1: Element-wise Proof</strong></p>
                                 
                                 <p class="mb-3 font-semibold">To Prove: (A ∪ B)' = A' ∩ B'</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Part 1: Show (A ∪ B)' ⊆ A' ∩ B'</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">Let x ∈ (A ∪ B)'</p>
                                     <p class="mb-2">⟹ x ∉ (A ∪ B)</p>
                                     <p class="mb-2">⟹ x ∉ A and x ∉ B</p>
                                     <p class="mb-2">⟹ x ∈ A' and x ∈ B'</p>
                                     <p class="mb-2">⟹ x ∈ A' ∩ B'</p>
-                                    <p class="font-bold text-success">∴ (A ∪ B)' ⊆ A' ∩ B'</p>
+                                    <p class="font-bold text-primary">∴ (A ∪ B)' ⊆ A' ∩ B'</p>
                                 </div>
                                 
                                 <p class="mb-2 mt-4"><strong>Part 2: Show A' ∩ B' ⊆ (A ∪ B)'</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">Let x ∈ A' ∩ B'</p>
                                     <p class="mb-2">⟹ x ∈ A' and x ∈ B'</p>
                                     <p class="mb-2">⟹ x ∉ A and x ∉ B</p>
                                     <p class="mb-2">⟹ x ∉ (A ∪ B)</p>
                                     <p class="mb-2">⟹ x ∈ (A ∪ B)'</p>
-                                    <p class="font-bold text-success">∴ A' ∩ B' ⊆ (A ∪ B)'</p>
+                                    <p class="font-bold text-primary">∴ A' ∩ B' ⊆ (A ∪ B)'</p>
                                 </div>
                                 
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-bold text-center text-xl">∴ (A ∪ B)' = A' ∩ B' (Proved)</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.4 Applications of De Morgan's Laws</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Applications of De Morgan's Laws</h3>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Simplify: [(A ∪ B)' ∪ (A ∩ B)']'
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Step-by-step simplification:</strong></p>
                                 
                                 <div class="space-y-3">
-                                    <div class="bg-blue-50 p-3 rounded-lg">
+                                    <div class="bg-surface-2 p-3 rounded-lg">
                                         <p class="mb-2"><strong>Step 1:</strong> Apply De Morgan's Law to inner expressions</p>
                                         <p class="font-mono">(A ∪ B)' = A' ∩ B'</p>
                                         <p class="font-mono">(A ∩ B)' = A' ∪ B'</p>
                                     </div>
                                     
-                                    <div class="bg-blue-50 p-3 rounded-lg">
+                                    <div class="bg-surface-2 p-3 rounded-lg">
                                         <p class="mb-2"><strong>Step 2:</strong> Substitute</p>
                                         <p class="font-mono">[(A' ∩ B') ∪ (A' ∪ B')]'</p>
                                     </div>
                                     
-                                    <div class="bg-blue-50 p-3 rounded-lg">
+                                    <div class="bg-surface-2 p-3 rounded-lg">
                                         <p class="mb-2"><strong>Step 3:</strong> Apply De Morgan's Law to outer expression</p>
                                         <p class="font-mono">= (A' ∩ B')' ∩ (A' ∪ B')'</p>
                                     </div>
                                     
-                                    <div class="bg-blue-50 p-3 rounded-lg">
+                                    <div class="bg-surface-2 p-3 rounded-lg">
                                         <p class="mb-2"><strong>Step 4:</strong> Apply De Morgan's Law again</p>
                                         <p class="font-mono">= (A ∪ B) ∩ (A ∩ B)</p>
                                     </div>
                                     
-                                    <div class="bg-blue-50 p-3 rounded-lg">
+                                    <div class="bg-surface-2 p-3 rounded-lg">
                                         <p class="mb-2"><strong>Step 5:</strong> Since (A ∩ B) ⊆ (A ∪ B)</p>
                                         <p class="font-mono">= A ∩ B</p>
                                     </div>
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Final Answer: } A \cap B\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> If U = {1, 2, 3, 4, 5, 6, 7, 8}, A = {1, 2, 3, 4}, B = {3, 4, 5, 6}, verify De Morgan's Law: (A ∪ B)' = A' ∩ B'
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>LHS: (A ∪ B)'</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">A ∪ B = {1, 2, 3, 4} ∪ {3, 4, 5, 6}</p>
                                     <p class="mb-2">A ∪ B = {1, 2, 3, 4, 5, 6}</p>
                                     <p class="mb-2">(A ∪ B)' = U - (A ∪ B)</p>
@@ -1701,54 +1728,54 @@
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>RHS: A' ∩ B'</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">A' = U - A = {5, 6, 7, 8}</p>
                                     <p class="mb-2">B' = U - B = {1, 2, 7, 8}</p>
                                     <p class="mb-2">A' ∩ B' = {5, 6, 7, 8} ∩ {1, 2, 7, 8}</p>
                                     <p class="font-mono font-bold">A' ∩ B' = {7, 8}</p>
                                 </div>
                                 
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p class="font-bold text-center">LHS = RHS = {7, 8}</p>
-                                    <p class="font-bold text-center text-success text-xl mt-2">∴ De Morgan's Law Verified ✓</p>
+                                    <p class="font-bold text-center text-primary text-xl mt-2">∴ De Morgan's Law Verified ✓</p>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.5 Important Set Identities Using De Morgan's Laws</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.5 Important Set Identities Using De Morgan's Laws</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Key Identities to Remember for JEE:</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Key Identities to Remember for JEE:</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-red-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-mono text-sm">(A')' = A</p>
-                                    <p class="text-xs text-gray-600 mt-1">Complement of complement</p>
+                                    <p class="text-xs text-ink-muted mt-1">Complement of complement</p>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-mono text-sm">U' = ∅, ∅' = U</p>
-                                    <p class="text-xs text-gray-600 mt-1">Universal and empty set</p>
+                                    <p class="text-xs text-ink-muted mt-1">Universal and empty set</p>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-mono text-sm">A - B = A ∩ B'</p>
-                                    <p class="text-xs text-gray-600 mt-1">Set difference</p>
+                                    <p class="text-xs text-ink-muted mt-1">Set difference</p>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-mono text-sm">(A - B)' = A' ∪ B</p>
-                                    <p class="text-xs text-gray-600 mt-1">Complement of difference</p>
+                                    <p class="text-xs text-ink-muted mt-1">Complement of difference</p>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-mono text-sm">A ∪ A' = U</p>
-                                    <p class="text-xs text-gray-600 mt-1">Law of excluded middle</p>
+                                    <p class="text-xs text-ink-muted mt-1">Law of excluded middle</p>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-mono text-sm">A ∩ A' = ∅</p>
-                                    <p class="text-xs text-gray-600 mt-1">Law of contradiction</p>
+                                    <p class="text-xs text-ink-muted mt-1">Law of contradiction</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistakes with De Morgan's Laws
                             </h4>
                             <ul class="list-disc list-inside space-y-3 text-lg ml-4">
@@ -1764,7 +1791,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">🎯</span> JEE Strategy for De Morgan's Laws
                             </h4>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <ol class="list-decimal list-inside space-y-3 text-lg ml-4">
                                     <li><strong>Identify the outermost operation</strong> - Apply De Morgan's from outside to inside</li>
                                     <li><strong>Use Venn diagrams</strong> - For verification, draw quick diagrams</li>
@@ -1780,10 +1807,10 @@
 <!-- Continuing with remaining chapters and sections... -->
 
 <!-- Chapter 6: Power Sets -->
-<section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+<section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Power Sets</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Power Sets</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1791,27 +1818,27 @@
                             The power set is one of the most important concepts in advanced set theory and appears frequently in JEE Advanced. Understanding power sets is crucial for counting problems and advanced set operations.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">6.1 Definition of Power Set</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Definition of Power Set</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Power Set P(A)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Power Set P(A)</h4>
                             <p class="text-lg mb-4">
                                 The <strong>power set</strong> of a set A, denoted by P(A) or 2<sup>A</sup>, is the set of <strong>all possible subsets</strong> of A, including the empty set ∅ and A itself.
                             </p>
-                            <div class="math-display bg-orange-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[P(A) = \{B : B \subseteq A\}\]
                             </div>
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-3">Important Formula:</p>
                                 <div class="math-display border-2 border-accent rounded-lg">
                                     \[\text{If } |A| = n, \text{ then } |P(A)| = 2^n\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-700">Where |A| denotes the number of elements (cardinality) of set A</p>
+                                <p class="text-sm mt-3 text-ink-muted">Where |A| denotes the number of elements (cardinality) of set A</p>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8 - Finding Power Sets
                             </h4>
                             <p class="text-lg mb-3">
@@ -1821,9 +1848,9 @@
                                 <br>(c) C = ∅
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>(a) A = {1, 2}</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">n(A) = 2, so |P(A)| = 2² = 4 subsets</p>
                                     <p class="mb-2 font-semibold">All subsets:</p>
                                     <ul class="list-disc list-inside ml-4 space-y-1">
@@ -1832,13 +1859,13 @@
                                         <li>{2} (1 element)</li>
                                         <li>{1, 2} (2 elements - set itself)</li>
                                     </ul>
-                                    <div class="mt-3 bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="mt-3 bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         <p class="font-mono font-bold">P(A) = {∅, {1}, {2}, {1, 2}}</p>
                                     </div>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(b) B = {a, b, c}</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">n(B) = 3, so |P(B)| = 2³ = 8 subsets</p>
                                     <p class="mb-2 font-semibold">All subsets:</p>
                                     <div class="grid grid-cols-2 gap-2 ml-4">
@@ -1859,61 +1886,61 @@
                                             <p class="font-mono text-sm">{a, b, c}</p>
                                         </div>
                                     </div>
-                                    <div class="mt-3 bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="mt-3 bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         <p class="font-mono font-bold text-sm">P(B) = {∅, {a}, {b}, {c}, {a,b}, {b,c}, {a,c}, {a,b,c}}</p>
                                     </div>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(c) C = ∅ (Empty Set)</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">n(C) = 0, so |P(C)| = 2⁰ = 1 subset</p>
                                     <p class="mb-2">The only subset of empty set is empty set itself</p>
-                                    <div class="mt-3 bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="mt-3 bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         <p class="font-mono font-bold">P(∅) = {∅}</p>
-                                        <p class="text-sm mt-2 text-danger">Note: P(∅) ≠ ∅ because P(∅) has one element!</p>
+                                        <p class="text-sm mt-2 text-primary">Note: P(∅) ≠ ∅ because P(∅) has one element!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">6.2 Properties of Power Sets</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Properties of Power Sets</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Important Properties:</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Important Properties:</h4>
                             <div class="space-y-4">
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">1. Cardinality of Power Set:</p>
                                     <div class="math-display">
                                         \[\text{If } |A| = n, \text{ then } |P(A)| = 2^n\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">2. Empty Set is Always a Member:</p>
                                     <p class="font-mono">∅ ∈ P(A) for any set A</p>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">3. Set is Member of its Power Set:</p>
                                     <p class="font-mono">A ∈ P(A) for any set A</p>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">4. Subset Relationship:</p>
                                     <div class="math-display">
                                         \[A \subseteq B \implies P(A) \subseteq P(B)\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">5. Power Set of Union:</p>
                                     <div class="math-display">
                                         \[P(A) \cup P(B) \subseteq P(A \cup B)\]
                                     </div>
-                                    <p class="text-sm text-gray-700">Note: Equality doesn't always hold</p>
+                                    <p class="text-sm text-ink-muted">Note: Equality doesn't always hold</p>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">6. Power Set of Intersection:</p>
                                     <div class="math-display">
                                         \[P(A \cap B) = P(A) \cap P(B)\]
@@ -1922,12 +1949,12 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">6.3 Number of Subsets with Specific Sizes</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Number of Subsets with Specific Sizes</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Combinatorial Formulas (Very Important for JEE):</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Combinatorial Formulas (Very Important for JEE):</h4>
                             <div class="space-y-4">
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-3">Number of subsets with exactly r elements:</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[\binom{n}{r} = \frac{n!}{r!(n-r)!}\]
@@ -1935,14 +1962,14 @@
                                     <p class="text-sm mt-2">This is the binomial coefficient "n choose r"</p>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-3">Total number of subsets (all sizes):</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[\sum_{r=0}^{n} \binom{n}{r} = 2^n\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-3">Number of proper subsets:</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[2^n - 1\]
@@ -1950,7 +1977,7 @@
                                     <p class="text-sm mt-2">(Exclude the set itself)</p>
                                 </div>
                                 
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-3">Number of non-empty subsets:</p>
                                     <div class="math-display border-2 border-accent rounded-lg">
                                         \[2^n - 1\]
@@ -1961,7 +1988,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 9 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1972,21 +1999,21 @@
                                 <br>(d) How many non-empty subsets does A have?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Given:</strong> n(A) = 5</p>
                                 
                                 <p class="mb-3 mt-4"><strong>(a) Total number of subsets = |P(A)|</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <div class="math-display">
                                         \[|P(A)| = 2^n = 2^5\]
                                     </div>
-                                    <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         <p class="font-bold text-xl">= 32 subsets</p>
                                     </div>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(b) Subsets with exactly 3 elements:</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">Use combination formula:</p>
                                     <div class="math-display">
                                         \[\binom{5}{3} = \frac{5!}{3!(5-3)!} = \frac{5!}{3! \cdot 2!}\]
@@ -1994,29 +2021,29 @@
                                     <div class="math-display">
                                         \[= \frac{5 \times 4 \times 3!}{3! \times 2 \times 1} = \frac{20}{2}\]
                                     </div>
-                                    <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         <p class="font-bold text-xl">= 10 subsets</p>
                                     </div>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(c) Number of proper subsets:</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">Proper subsets = Total subsets - 1 (exclude A itself)</p>
                                     <div class="math-display">
                                         \[= 2^5 - 1 = 32 - 1\]
                                     </div>
-                                    <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         <p class="font-bold text-xl">= 31 proper subsets</p>
                                     </div>
                                 </div>
                                 
                                 <p class="mb-3 mt-6"><strong>(d) Number of non-empty subsets:</strong></p>
-                                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                                <div class="bg-surface-2 p-3 rounded-lg mb-4">
                                     <p class="mb-2">Non-empty subsets = Total subsets - 1 (exclude ∅)</p>
                                     <div class="math-display">
                                         \[= 2^5 - 1 = 32 - 1\]
                                     </div>
-                                    <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         <p class="font-bold text-xl">= 31 non-empty subsets</p>
                                     </div>
                                 </div>
@@ -2027,9 +2054,9 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Quick Counting Tricks for Power Sets
                             </h4>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <table class="w-full text-sm">
-                                    <tr class="border-b-2 border-purple-300">
+                                    <tr class="border-b-2 border-hairline-strong">
                                         <th class="p-2 text-left">What to Count</th>
                                         <th class="p-2 text-left">Formula</th>
                                         <th class="p-2 text-left">For n=5</th>
@@ -2064,7 +2091,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Power Set Mistakes
                             </h4>
                             <ul class="list-disc list-inside space-y-3 text-lg ml-4">
@@ -2079,14 +2106,14 @@
                 </section>
 
                 <!-- PYQ Analysis Section -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Venn Diagrams & Cardinality: 45%</li>
@@ -2095,7 +2122,7 @@
                                 <li>✓ De Morgan's Laws: 10%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Complex Venn diagrams (3 sets): 40%</li>
@@ -2106,8 +2133,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Finding n(A ∪ B ∪ C) using inclusion-exclusion principle</li>
                             <li>Venn diagram problems with given cardinalities</li>
@@ -2122,7 +2149,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -2145,21 +2172,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems Section -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Foundation)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Foundation)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>If A = {1, 2, 3, 4} and B = {3, 4, 5, 6}, find A ∪ B, A ∩ B, A - B, and B - A.</li>
                             <li>Write the power set of A = {a, b}.</li>
@@ -2172,8 +2199,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>In a class of 100, 60 play hockey, 50 play cricket, 40 play both. How many play neither?</li>
                             <li>Simplify: (A ∪ B)' ∩ (A ∩ B')'</li>
@@ -2186,8 +2213,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced Pattern)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced Pattern)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>If n(A) = 3, n(B) = 6, and A ⊂ B, how many distinct ordered pairs (x, y) exist where x ∈ A and y ∈ B?</li>
                             <li>Prove using set algebra: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C).</li>
@@ -2201,61 +2228,79 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./complex-numbers.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Complex Numbers</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./permutations-and-combinations.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Permutations And Combinations</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./quadratic-equations.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Quadratic Equations</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Mathematics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://jeeprepguide.netlify.app/jee/maths/relations" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/maths/relations" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Relations and Functions</h3>
-                    <p class="text-gray-600">Types of relations, Functions, Domain & Range, Composite functions</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Relations and Functions</h3>
+                    <p class="text-ink-muted">Types of relations, Functions, Domain & Range, Composite functions</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/maths/trigonometry" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/maths/trigonometry" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Important</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Important</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Trigonometry</h3>
-                    <p class="text-gray-600">Trigonometric ratios, Identities, Equations, Inverse trigonometry</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Trigonometry</h3>
+                    <p class="text-ink-muted">Trigonometric ratios, Identities, Equations, Inverse trigonometry</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Complex Numbers</h3>
-                    <p class="text-gray-600">Algebra of complex numbers, Argand plane, De Moivre's theorem</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Complex Numbers</h3>
+                    <p class="text-ink-muted">Algebra of complex numbers, Argand plane, De Moivre's theorem</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/maths" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/maths" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Mathematics Notes →
                 </a>
             </div>
@@ -2263,56 +2308,56 @@
     </section>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Sets - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Sets - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Sets is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Sets</strong> is the foundation chapter of <strong>JEE Mathematics</strong>. Though it carries 3-4% direct weightage in JEE Main, the concepts are used throughout mathematics:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Relations & Functions</strong> - Built entirely on set theory</li>
                             <li><strong>Probability</strong> - Sample spaces are sets, events are subsets</li>
                             <li><strong>Number Systems</strong> - ℕ, ℤ, ℚ, ℝ are all sets</li>
                             <li><strong>Venn Diagrams</strong> - Visual problem-solving tool used everywhere</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             In <strong>JEE Advanced</strong>, sets questions often involve multiple concepts and are asked in integer/comprehension format.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Formulas to Remember</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Cardinal Formula (Most Important)</h4>
-                                <p class="text-gray-700 font-mono text-sm">n(A ∪ B) = n(A) + n(B) - n(A ∩ B)</p>
-                                <p class="text-gray-700 font-mono text-sm mt-1">n(A ∪ B ∪ C) = n(A) + n(B) + n(C) - n(A∩B) - n(B∩C) - n(A∩C) + n(A∩B∩C)</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Cardinal Formula (Most Important)</h4>
+                                <p class="text-ink-muted font-mono text-sm">n(A ∪ B) = n(A) + n(B) - n(A ∩ B)</p>
+                                <p class="text-ink-muted font-mono text-sm mt-1">n(A ∪ B ∪ C) = n(A) + n(B) + n(C) - n(A∩B) - n(B∩C) - n(A∩C) + n(A∩B∩C)</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. De Morgan's Laws</h4>
-                                <p class="text-gray-700 font-mono text-sm">(A ∪ B)' = A' ∩ B'</p>
-                                <p class="text-gray-700 font-mono text-sm">(A ∩ B)' = A' ∪ B'</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">2. De Morgan's Laws</h4>
+                                <p class="text-ink-muted font-mono text-sm">(A ∪ B)' = A' ∩ B'</p>
+                                <p class="text-ink-muted font-mono text-sm">(A ∩ B)' = A' ∪ B'</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. Power Set</h4>
-                                <p class="text-gray-700 font-mono text-sm">If |A| = n, then |P(A)| = 2ⁿ</p>
-                                <p class="text-gray-700 font-mono text-sm">Number of r-element subsets = ⁿCᵣ</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">3. Power Set</h4>
+                                <p class="text-ink-muted font-mono text-sm">If |A| = n, then |P(A)| = 2ⁿ</p>
+                                <p class="text-ink-muted font-mono text-sm">Number of r-element subsets = ⁿCᵣ</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Sets Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 2-3 days (2 hours/day)</li>
                                 <li>Master <strong>Venn diagrams</strong> for 2 and 3 sets</li>
                                 <li>Practice 50+ cardinality problems (survey-based)</li>
@@ -2322,7 +2367,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 3-4 days (3 hours/day)</li>
                                 <li>Practice <strong>set algebra</strong> and proving identities</li>
                                 <li>Master power set and counting subsets</li>
@@ -2333,29 +2378,29 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Forgetting to subtract intersection:</strong> In n(A ∪ B), students often forget to subtract n(A ∩ B)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>∅ vs {∅}:</strong> Empty set ∅ has 0 elements, but {∅} has 1 element (which is the empty set)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>De Morgan's Laws:</strong> Forgetting to change ∪ to ∩ (or vice versa) when complementing
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Power set counting:</strong> Forgetting that empty set and the set itself are also subsets
                             </div>
@@ -2363,11 +2408,11 @@
                     </ul>
                 </div>
                 
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Trend (2015-2024)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -2376,19 +2421,19 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">1 Question (4 marks)</td>
                                     <td class="p-3">Venn diagrams, De Morgan's laws</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">1 Question (3 marks)</td>
                                     <td class="p-3">3-set problems, Power sets</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">2 Questions (6 marks)</td>
@@ -2397,7 +2442,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Trend:</strong> JEE Main focuses heavily on Venn diagram applications (survey problems). JEE Advanced tests set algebra and proof-based questions.
                     </p>
                 </div>
@@ -2406,102 +2451,102 @@
     </section>
 
     <!-- Footer -->
-   <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+   <footer class="bg-canvas text-ink py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">sitemap</a></li>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
-                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-white transition">Physics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Mathematics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Study Tips</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-ink transition">Physics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Mathematics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Study Tips</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         </ul>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Last Updated: 14 March, 2026</p>
+        <div class="border-t border-hairline pt-8 text-center">
+            <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+            <p class="text-ink-subtle text-xs mt-2">Last Updated: 14 March, 2026</p>
         </div>
     </div>
 </footer>
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

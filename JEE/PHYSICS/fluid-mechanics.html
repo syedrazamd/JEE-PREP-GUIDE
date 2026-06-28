@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Fluid Mechanics JEE Notes 2026 | Formulas, PYQs & Weightage">
     <meta property="og:description" content="Fluid Mechanics notes for JEE Main & Advanced 2026. Covers Pascal's Law, Bernoulli's Theorem, Viscosity, Surface Tension. Formula sheet, PYQs, weightage and shortcuts. Free.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Fluid Mechanics - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics">
     <meta name="twitter:title" content="Fluid Mechanics JEE Notes 2026 | Formulas, PYQs & Weightage">
     <meta name="twitter:description" content="Fluid Mechanics JEE notes 2026 — Pascal's Law, Bernoulli's Theorem, Viscosity, Surface Tension, formula sheet, PYQs and weightage. Free, no login.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Fluid Mechanics JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -362,7 +375,7 @@
         "@type": "VideoObject",
         "name": "Fluid Mechanics - Complete Tutorial",
         "description": "Learn Fluid Mechanics for JEE with examples",
-        "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+        "thumbnailUrl": "/logo-header.webp",
         "uploadDate": "2024-12-19",
         "duration": "PT60M",
         "contentUrl": "https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics"
@@ -399,60 +412,62 @@
         });
     </script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
 
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
     
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
     
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide — Free Notes</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide — Free Notes</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
     
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -461,30 +476,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Fluid Mechanics</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Fluid Mechanics</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -492,32 +507,32 @@
     </nav>
     
     <!-- Quick Navigation Section -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Fluid Mechanics</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Fluid Mechanics</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Intro & Properties
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Pressure
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Pascal's Law
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Archimedes
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Fluid Dynamics
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Viscosity
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Surface Tension
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Applications
                 </a>
             </div>
@@ -525,9 +540,9 @@
     </section>
     
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         
@@ -541,13 +556,13 @@
                 </p>
                 
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All Important Formulas</span>
                     </div>
                 </div>
@@ -556,21 +571,21 @@
     </section>
     
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Fluid Mechanics JEE Notes">
         <meta itemprop="description" content="Complete study notes for Fluid Mechanics">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.8</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">245</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -580,15 +595,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">3 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">3 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -600,53 +615,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Introduction & Properties</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Pressure in Fluids</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Pascal's Law</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Archimedes Principle</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Fluid Dynamics</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Viscosity</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Surface Tension</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Applications</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Introduction & Properties</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Pressure in Fluids</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Pascal's Law</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Archimedes Principle</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Fluid Dynamics</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Viscosity</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Surface Tension</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Applications</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
             
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./work-energy-and-power.html" class="text-primary font-semibold hover:underline">Work Energy And Power &rarr;</a>
+                <a href="./thermal-properties-of-matter.html" class="text-primary font-semibold hover:underline">Thermal Properties Of Matter &rarr;</a>
+            </div>
+        </div>
+    </div>
+
                 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics.webp"
                         alt="Fluid mechanics JEE notes, Formulas, PYQs"
                         title="Fluid mechanics — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Fluid mechanics JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
                 
                 <!-- Chapter 1: Introduction & Fluid Properties -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Introduction & Fluid Properties</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Introduction & Fluid Properties</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -656,12 +683,12 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 What is a Fluid?</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 A <strong>fluid</strong> is a substance that <strong>flows</strong> and <strong>deforms continuously</strong> under the application of shear stress, no matter how small the stress may be.
                             </p>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-2"><strong>Key Characteristics:</strong></p>
                                 <ul class="list-disc list-inside space-y-2 ml-4">
                                     <li>Cannot sustain tangential (shear) stress at rest</li>
@@ -675,7 +702,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Types of Fluids</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Ideal Fluid (Perfect Fluid)</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Incompressible:</strong> Density remains constant</li>
@@ -684,7 +711,7 @@
                                     <li>Used in theoretical analysis (doesn't exist in reality)</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Real Fluid</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Compressible/Incompressible:</strong> Density may vary</li>
@@ -698,16 +725,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Important Fluid Properties</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Definition</th>
                                         <th class="p-4 text-left">Formula</th>
                                         <th class="p-4 text-left">SI Unit</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Density (ρ)</td>
                                         <td class="p-4">Mass per unit volume</td>
@@ -746,7 +773,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Memory Trick - Density Values
                             </h4>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="mb-3 font-semibold">Common Densities (in kg/m³ or g/cm³):</p>
                                 <div class="grid grid-cols-2 gap-3 text-sm">
                                     <div>• Water: 1000 kg/m³ = 1 g/cm³</div>
@@ -762,8 +789,8 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Streamline vs Turbulent Flow</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="example-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Streamline (Laminar) Flow</h5>
+                            <div class="example-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Streamline (Laminar) Flow</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>Fluid particles move in smooth, parallel layers</li>
                                     <li>No mixing between layers</li>
@@ -773,8 +800,8 @@
                                     <li>Example: Slow-moving river, blood flow in capillaries</li>
                                 </ul>
                             </div>
-                            <div class="warning-box p-6 rounded-xl border-2 border-orange-300">
-                                <h5 class="font-bold text-lg mb-3 text-accent">Turbulent Flow</h5>
+                            <div class="warning-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Turbulent Flow</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>Irregular, chaotic fluid motion</li>
                                     <li>Extensive mixing between layers</li>
@@ -786,10 +813,10 @@
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Reynolds Number (Re)</h4>
                             <p class="mb-3">Dimensionless number that predicts flow pattern:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[Re = \frac{\rho v D}{\eta} = \frac{v D}{\nu}\]
                             </div>
                             <p class="text-sm mt-3">Where:</p>
@@ -805,10 +832,10 @@
                 </section>
                 
                 <!-- Chapter 2: Pressure in Fluids -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Pressure in Fluids</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Pressure in Fluids</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -816,17 +843,17 @@
                             Pressure is one of the most fundamental concepts in fluid mechanics, closely related to concepts in <a href="https://jeeprepguide.netlify.app/jee/physics/gravitation">Gravitation</a>. Understanding how pressure varies with depth and how it is transmitted through fluids forms the basis of hydrostatics.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Fluid Pressure - Basic Concept</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Fluid Pressure - Basic Concept</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition of Pressure</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition of Pressure</h4>
                             <p class="text-lg mb-3">
                                 Pressure is the <strong>normal force per unit area</strong> exerted by a fluid on any surface in contact with it.
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[P = \frac{F_{\perp}}{A}\]
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="mb-2"><strong>Key Points:</strong></p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Pressure is a <strong>scalar quantity</strong></li>
@@ -838,14 +865,14 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Pressure Variation with Depth</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Pressure Variation with Depth</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Hydrostatic Pressure Formula</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Hydrostatic Pressure Formula</h4>
                             <p class="text-lg mb-3">
                                 For an incompressible fluid at rest, pressure increases linearly with depth:
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg border-2 border-secondary">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-secondary">
                                 \[P = P_0 + \rho g h\]
                             </div>
                             <p class="text-sm mt-3">Where:</p>
@@ -857,7 +884,7 @@
                                 <li><strong>h</strong> = Depth below the surface (m)</li>
                             </ul>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg mt-4 border-l-4 border-accent">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4 border-l-4 border-accent">
                                 <p class="font-semibold mb-2">Gauge Pressure vs Absolute Pressure:</p>
                                 <div class="space-y-2 text-sm">
                                     <p><strong>Gauge Pressure:</strong> P<sub>gauge</sub> = ρgh (pressure above atmospheric)</p>
@@ -867,14 +894,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 - Pressure at Depth
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A diver is 20 m below the surface of a lake. Find the pressure experienced by the diver. (Take atmospheric pressure = 10⁵ Pa, ρ<sub>water</sub> = 1000 kg/m³, g = 10 m/s²)
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Given:</strong></p>
                                 <ul class="list-disc list-inside space-y-1 mb-4">
                                     <li>Depth, h = 20 m</li>
@@ -893,29 +920,29 @@
                                 <div class="math-display">
                                     \[P = 10^5 + 2 \times 10^5\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[P = 3 \times 10^5 \text{ Pa} = 3 \text{ atm}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Note:</strong> The diver experiences 3 times the atmospheric pressure! This is why deep-sea diving requires special equipment.
                                 </p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Pressure Units & Conversions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Pressure Units & Conversions</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Unit</th>
                                         <th class="p-4 text-left">Symbol</th>
                                         <th class="p-4 text-left">Conversion to Pascal</th>
                                         <th class="p-4 text-left">Common Use</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Pascal</td>
                                         <td class="p-4">Pa</td>
@@ -962,19 +989,19 @@
                             </ul>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Manometer (Pressure Measurement)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Manometer (Pressure Measurement)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">U-Tube Manometer</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">U-Tube Manometer</h4>
                             <p class="mb-4">Device used to measure pressure difference between two points or gauge pressure.</p>
                             
                             <div class="diagram-box my-4">
-                                <p class="text-gray-500 italic">
+                                <p class="text-ink-subtle italic">
                                     [Diagram: U-tube with liquid, showing height difference h]
                                 </p>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">For a U-tube manometer:</p>
                                 <div class="math-display">
                                     \[P_{gas} - P_{atm} = \rho_{liquid} \cdot g \cdot h\]
@@ -986,10 +1013,10 @@
                 </section>
                 
                 <!-- Chapter 3: Pascal's Law -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Pascal's Law</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Pascal's Law</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -997,11 +1024,11 @@
                             <a href="https://en.wikipedia.org/wiki/Pascal%27s_law" target="_blank" rel="noopener noreferrer">Pascal's Law</a> is fundamental to understanding hydraulic systems and forms the basis of many practical applications like hydraulic lifts, brakes, and presses. This is a high-scoring topic in JEE.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.1 Statement of Pascal's Law</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Statement of Pascal's Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Pascal's Law</h4>
-                            <div class="bg-green-50 p-5 rounded-lg border-2 border-success">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Pascal's Law</h4>
+                            <div class="bg-surface-2 p-5 rounded-lg border-2 border-success">
                                 <p class="text-lg font-semibold mb-3">
                                     "Pressure applied to an enclosed fluid is transmitted <strong>undiminished</strong> to every portion of the fluid and to the walls of the containing vessel."
                                 </p>
@@ -1010,7 +1037,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Important Points:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Change in pressure is transmitted equally</li>
@@ -1021,30 +1048,30 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.2 Hydraulic Lift/Press (Most Important Application)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Hydraulic Lift/Press (Most Important Application)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Working Principle</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Working Principle</h4>
                             
                             <div class="diagram-box my-4">
-                                <p class="text-gray-500 italic">
+                                <p class="text-ink-subtle italic">
                                     [Diagram: Two cylinders of different areas A₁ and A₂ connected, with pistons]
                                 </p>
                             </div>
                             
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-3"><strong>Setup:</strong> Two cylinders of different cross-sectional areas connected by a pipe, filled with incompressible liquid.</p>
                                 
                                 <p class="mb-2 font-semibold">Force Relationship:</p>
                                 <div class="math-display">
                                     \[\frac{F_1}{A_1} = \frac{F_2}{A_2}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{\frac{F_2}{F_1} = \frac{A_2}{A_1}}\]
                                 </div>
                                 <p class="text-sm mt-3">This is the <strong>force multiplication principle</strong>!</p>
                                 
-                                <div class="mt-4 p-3 bg-white rounded">
+                                <div class="mt-4 p-3 bg-canvas rounded">
                                     <p class="font-semibold mb-2">Displacement Relationship:</p>
                                     <p class="text-sm mb-2">Volume of liquid displaced is same:</p>
                                     <div class="math-display text-base">
@@ -1053,10 +1080,10 @@
                                     <div class="math-display text-base">
                                         \[\frac{d_2}{d_1} = \frac{A_1}{A_2}\]
                                     </div>
-                                    <p class="text-sm mt-2 text-gray-700">Where d₁, d₂ are displacements of pistons</p>
+                                    <p class="text-sm mt-2 text-ink-muted">Where d₁, d₂ are displacements of pistons</p>
                                 </div>
                                 
-                                <div class="mt-4 p-3 bg-blue-50 rounded border-l-4 border-primary">
+                                <div class="mt-4 p-3 bg-surface-2 rounded border-l-4 border-primary">
                                     <p class="font-semibold">Work Done (Energy Conservation):</p>
                                     <div class="math-display text-base">
                                         \[W_1 = W_2\]
@@ -1064,20 +1091,20 @@
                                     <div class="math-display text-base">
                                         \[F_1 d_1 = F_2 d_2\]
                                     </div>
-                                    <p class="text-sm text-gray-700 mt-2">No energy is gained - force multiplication comes at cost of displacement!</p>
+                                    <p class="text-sm text-ink-muted mt-2">No energy is gained - force multiplication comes at cost of displacement!</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 - Hydraulic Lift (JEE Main Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> In a hydraulic lift, the radius of the small piston is 2 cm and that of the large piston is 20 cm. What force must be applied to the small piston to lift a car of mass 1000 kg placed on the large piston?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Given:</strong></p>
                                 <ul class="list-disc list-inside space-y-1 mb-4">
                                     <li>r₁ = 2 cm = 0.02 m (small piston)</li>
@@ -1110,45 +1137,45 @@
                                     \[F_1 = 10,000 \times \frac{10^{-4}}{10^{-2}} = 10,000 \times 10^{-2}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[F_1 = 100 \text{ N}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Conclusion:</strong> A force of just 100 N can lift a 1000 kg car! This is force multiplication by a factor of 100 (ratio of areas = (20/2)² = 100).
                                 </p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.3 Applications of Pascal's Law</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Applications of Pascal's Law</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">1. Hydraulic Lift</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Hydraulic Lift</h5>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Used in car service stations</li>
                                     <li>Lifts heavy vehicles with small force</li>
                                     <li>Force multiplication = A₂/A₁</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">2. Hydraulic Brakes</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Hydraulic Brakes</h5>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Used in automobiles</li>
                                     <li>Foot pedal applies pressure to master cylinder</li>
                                     <li>Transmitted to all wheels simultaneously</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">3. Hydraulic Press</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">3. Hydraulic Press</h5>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Compress materials (cotton, paper)</li>
                                     <li>Metal sheet forming</li>
                                     <li>Large force from small input</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">4. Hydraulic Jack</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">4. Hydraulic Jack</h5>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Lift heavy loads (cars, trucks)</li>
                                     <li>Portable and convenient</li>
@@ -1160,10 +1187,10 @@
                 </section>
                 
                 <!-- Chapter 4: Archimedes Principle & Buoyancy -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Archimedes Principle & Buoyancy</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Archimedes Principle & Buoyancy</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1173,12 +1200,12 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Buoyant Force (Upthrust)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">What is Buoyant Force?</h4>
                             <p class="text-lg mb-4">
                                 When an object is immersed in a fluid (partially or completely), it experiences an <strong>upward force</strong> called <strong>buoyant force</strong> or <strong>upthrust</strong>.
                             </p>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-2"><strong>Cause of Buoyancy:</strong></p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Pressure at bottom of object > Pressure at top</li>
@@ -1190,18 +1217,18 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Archimedes Principle</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Statement</h4>
-                            <div class="bg-blue-50 p-5 rounded-lg border-2 border-primary">
+                            <div class="bg-surface-2 p-5 rounded-lg border-2 border-primary">
                                 <p class="text-lg font-semibold mb-4">
                                     "When a body is partially or completely immersed in a fluid, it experiences an upward buoyant force equal to the <strong>weight of the fluid displaced</strong> by the body."
                                 </p>
-                                <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                     \[\boxed{F_B = \rho_{fluid} \cdot V_{displaced} \cdot g}\]
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Where:</p>
                                 <ul class="text-sm space-y-1">
                                     <li><strong>F<sub>B</sub></strong> = Buoyant force (N)</li>
@@ -1214,11 +1241,11 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Apparent Weight in Fluid</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Concept of Apparent Weight</h4>
                             <p class="mb-3">When an object is weighed in a fluid, it appears lighter due to buoyant force.</p>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Formula:</p>
                                 <div class="math-display">
                                     \[W_{apparent} = W_{actual} - F_B\]
@@ -1230,12 +1257,12 @@
                                     \[W_{apparent} = V(\rho_{object} - \rho_{fluid})g\]
                                 </div>
                                 
-                                <div class="mt-4 p-3 bg-white rounded">
+                                <div class="mt-4 p-3 bg-canvas rounded">
                                     <p class="font-semibold mb-2">Loss in Weight:</p>
                                     <div class="math-display text-base">
                                         \[\text{Loss in weight} = W_{actual} - W_{apparent} = F_B\]
                                     </div>
-                                    <div class="math-display text-base bg-yellow-50 p-2 rounded">
+                                    <div class="math-display text-base bg-surface-2 p-2 rounded">
                                         \[\text{Loss in weight} = \rho_{fluid} \cdot V_{submerged} \cdot g\]
                                     </div>
                                 </div>
@@ -1245,16 +1272,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Floating Conditions</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Condition</th>
                                         <th class="p-4 text-left">Mathematical Relation</th>
                                         <th class="p-4 text-left">Result</th>
                                         <th class="p-4 text-left">Example</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Sinking</td>
                                         <td class="p-4">ρ<sub>object</sub> > ρ<sub>fluid</sub></td>
@@ -1277,34 +1304,34 @@
                             </table>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Floating Body - Fraction Submerged</h4>
                             <p class="mb-3">For a body floating in equilibrium:</p>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <div class="math-display">
                                     \[W = F_B\]
                                 </div>
                                 <div class="math-display">
                                     \[\rho_{object} \cdot V_{total} \cdot g = \rho_{fluid} \cdot V_{submerged} \cdot g\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{\frac{V_{submerged}}{V_{total}} = \frac{\rho_{object}}{\rho_{fluid}}}\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-700">
+                                <p class="text-sm mt-3 text-ink-muted">
                                     <strong>Fraction submerged = Relative density of object</strong>
                                 </p>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 - Ice Floating (Classic JEE Question)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> An iceberg floats in sea water with 10% of its volume above water. What is the density of ice? (Density of sea water = 1030 kg/m³)
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Given:</strong></p>
                                 <ul class="list-disc list-inside space-y-1 mb-4">
                                     <li>Volume above water = 10% of total = 0.1V</li>
@@ -1326,25 +1353,25 @@
                                     \[\rho_{ice} = 1030 \times 0.9\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\rho_{ice} = 927 \text{ kg/m}^3\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Note:</strong> This explains why 90% of icebergs are underwater - making them dangerous for ships!
                                 </p>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 - Apparent Weight (JEE Advanced Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: A metallic sphere of mass 2 kg and density 8000 kg/m³ is suspended by a string in water (density 1000 kg/m³). Find the tension in the string. (g = 10 m/s²)
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Given:</p>
                                 <ul class="list-disc list-inside space-y-1 mb-4">
                                     <li>Mass, m = 2 kg</li>
@@ -1380,11 +1407,11 @@
                                     \[T = W - F_B = 20 - 2.5\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[T = 17.5 \text{ N}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Alternative Method:</strong> T = V(ρ<sub>s</sub> - ρ<sub>w</sub>)g = 2.5×10⁻⁴ × (8000-1000) × 10 = 17.5 N
                                 </p>
                             </div>
@@ -1406,10 +1433,10 @@
                 </section>
                 
                 <!-- Chapter 5: Fluid Dynamics -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Fluid Dynamics</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Fluid Dynamics</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1417,27 +1444,27 @@
                             Fluid dynamics deals with fluids in motion. This section covers equation of continuity, <a href="https://en.wikipedia.org/wiki/Bernoulli%27s_principle" target="_blank" rel="noopener noreferrer">Bernoulli's theorem</a>, and their applications - the most important topics for JEE Advanced with 15-20% weightage.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.1 Equation of Continuity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Equation of Continuity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Mass Conservation in Fluid Flow</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Mass Conservation in Fluid Flow</h4>
                             <p class="text-lg mb-4">
                                 For an <strong>incompressible fluid</strong> in steady flow, the mass flow rate remains constant throughout the pipe.
                             </p>
                             
-                            <div class="bg-red-50 p-5 rounded-lg border-2 border-danger">
+                            <div class="bg-surface-2 p-5 rounded-lg border-2 border-danger">
                                 <p class="font-semibold mb-3">Mathematical Form:</p>
                                 <div class="math-display">
                                     \[\rho_1 A_1 v_1 = \rho_2 A_2 v_2\]
                                 </div>
                                 <p class="text-sm mb-3">For incompressible fluid (ρ₁ = ρ₂):</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{A_1 v_1 = A_2 v_2 = \text{constant}}\]
                                 </div>
                                 <p class="text-sm mt-3">This is also called <strong>Av = constant</strong></p>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Physical Meaning:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Velocity is <strong>inversely proportional</strong> to cross-sectional area</li>
@@ -1449,14 +1476,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 - Equation of Continuity
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: Water flows through a horizontal pipe of varying cross-section. At section A, area is 40 cm² and velocity is 2 m/s. At section B, area is 20 cm². Find velocity at B and volume flow rate.
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Given:</p>
                                 <ul class="list-disc list-inside space-y-1 mb-4">
                                     <li>A₁ = 40 cm² = 40 × 10⁻⁴ m²</li>
@@ -1471,7 +1498,7 @@
                                 <div class="math-display text-base">
                                     \[v_2 = \frac{A_1 v_1}{A_2} = \frac{40 \times 2}{20}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[v_2 = 4 \text{ m/s}\]
                                 </div>
                                 
@@ -1479,25 +1506,25 @@
                                 <div class="math-display text-base">
                                     \[Q = A_1 v_1 = 40 \times 10^{-4} \times 2\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[Q = 8 \times 10^{-3} \text{ m}^3\text{/s} = 8 \text{ liters/s}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Note:</strong> As area decreases to half, velocity doubles. This is why water comes out faster when you partially block a pipe opening!
                                 </p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.2 Bernoulli's Theorem (Most Important!)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Bernoulli's Theorem (Most Important!)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Statement</h4>
-                            <div class="bg-red-50 p-5 rounded-lg border-2 border-danger">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Statement</h4>
+                            <div class="bg-surface-2 p-5 rounded-lg border-2 border-danger">
                                 <p class="text-lg font-semibold mb-4">
                                     "For an ideal fluid in <a href="https://en.wikipedia.org/wiki/Laminar_flow" target="_blank" rel="noopener noreferrer">streamline flow</a>, the sum of pressure energy, kinetic energy, and potential energy per unit volume remains constant."
                                 </p>
-                                <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                     \[\boxed{P + \frac{1}{2}\rho v^2 + \rho gh = \text{constant}}\]
                                 </div>
                                 <p class="text-sm mt-3">Or equivalently, per unit mass:</p>
@@ -1506,7 +1533,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Energy Interpretation:</p>
                                 <div class="space-y-2 text-sm">
                                     <p><strong>P</strong> → Pressure energy per unit volume (flow energy)</p>
@@ -1515,7 +1542,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4 border-l-4 border-primary">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4 border-l-4 border-primary">
                                 <p class="font-semibold mb-2">Assumptions for Bernoulli's Equation:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Fluid is <strong>ideal</strong> (incompressible, non-viscous)</li>
@@ -1526,25 +1553,25 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.3 Applications of Bernoulli's Theorem</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Applications of Bernoulli's Theorem</h3>
                         
                         <div class="space-y-6">
                             <!-- Application 1: Torricelli's Theorem -->
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-200">
-                                <h5 class="font-bold text-lg mb-3 text-danger">1. Torricelli's Theorem (Efflux Velocity)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Torricelli's Theorem (Efflux Velocity)</h5>
                                 <p class="mb-3">Speed of liquid flowing out from a hole at depth h below the free surface:</p>
                                 
                                 <div class="diagram-box my-4">
-                                    <p class="text-gray-500 italic">
+                                    <p class="text-ink-subtle italic">
                                         [Diagram: Tank with hole at depth h, liquid flowing out]
                                     </p>
                                 </div>
                                 
-                                <div class="bg-red-50 p-4 rounded-lg">
-                                    <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         \[\boxed{v = \sqrt{2gh}}\]
                                     </div>
-                                    <p class="text-sm mt-3 text-gray-700">
+                                    <p class="text-sm mt-3 text-ink-muted">
                                         <strong>Remarkable Result:</strong> Velocity of efflux = Velocity of free fall from height h!
                                     </p>
                                     
@@ -1558,11 +1585,11 @@
                             </div>
                             
                             <!-- Application 2: Venturi Meter -->
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-200">
-                                <h5 class="font-bold text-lg mb-3 text-danger">2. Venturi Meter (Flow Rate Measurement)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Venturi Meter (Flow Rate Measurement)</h5>
                                 <p class="mb-3">Device to measure flow speed in pipes using pressure difference.</p>
                                 
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Formula for flow speed:</p>
                                     <div class="math-display">
                                         \[v_1 = \sqrt{\frac{2(P_1 - P_2)}{\rho(1 - \frac{A_1^2}{A_2^2})}}\]
@@ -1572,11 +1599,11 @@
                             </div>
                             
                             <!-- Application 3: Airfoil Lift -->
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-200">
-                                <h5 class="font-bold text-lg mb-3 text-danger">3. Aeroplane Wing (Airfoil Lift)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline">
+                                <h5 class="font-bold text-lg mb-3 text-primary">3. Aeroplane Wing (Airfoil Lift)</h5>
                                 <p class="mb-3">Bernoulli's principle explains how wings generate lift.</p>
                                 
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <ul class="list-disc list-inside space-y-2 text-sm">
                                         <li>Air flows faster over curved top surface (larger distance)</li>
                                         <li>By continuity, v<sub>top</sub> > v<sub>bottom</sub></li>
@@ -1587,11 +1614,11 @@
                             </div>
                             
                             <!-- Application 4: Atomizer/Sprayer -->
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-200">
-                                <h5 class="font-bold text-lg mb-3 text-danger">4. Atomizer/Sprayer/Carburetor</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline">
+                                <h5 class="font-bold text-lg mb-3 text-primary">4. Atomizer/Sprayer/Carburetor</h5>
                                 <p class="mb-3">High-speed air creates low pressure, drawing liquid up the tube.</p>
                                 
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <ul class="list-disc list-inside space-y-2 text-sm">
                                         <li>Fast-moving air over tube opening → Low pressure</li>
                                         <li>Atmospheric pressure in container → High pressure</li>
@@ -1603,20 +1630,20 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 - Bernoulli's Theorem (JEE Advanced)
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: A large water tank has a small hole at depth 10 m below the water surface. Find: (a) Speed of water emerging from hole (b) Range of water jet if hole is 2 m above ground. (g = 10 m/s²)
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Part (a): Efflux velocity</strong></p>
                                 <p class="mb-2">Using Torricelli's theorem:</p>
                                 <div class="math-display text-base">
                                     \[v = \sqrt{2gh} = \sqrt{2 \times 10 \times 10}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[v = \sqrt{200} = 10\sqrt{2} \approx 14.14 \text{ m/s}\]
                                 </div>
                                 
@@ -1640,11 +1667,11 @@
                                 <div class="math-display text-base">
                                     \[R = v_x \times t = 14.14 \times 0.632\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[R \approx 8.94 \text{ m}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Alternative formula:</strong> R = 2√(h₁h₂) where h₁ = depth of hole = 10 m, h₂ = height above ground = 2 m
                                     <br>R = 2√(10×2) = 2√20 ≈ 8.94 m ✓
                                 </p>
@@ -1652,7 +1679,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistakes in Bernoulli's Theorem
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1667,10 +1694,10 @@
                 </section>
                 
                 <!-- Chapter 6: Viscosity -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Viscosity</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Viscosity</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1678,14 +1705,14 @@
                             <a href="https://en.wikipedia.org/wiki/Viscosity" target="_blank" rel="noopener noreferrer">Viscosity</a> is the internal friction in fluids that opposes their flow. Understanding viscosity is crucial for real fluid behavior - a topic with 10-12% weightage in JEE Advanced.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 What is Viscosity?</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 What is Viscosity?</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 <strong>Viscosity</strong> is the property of a fluid by virtue of which it opposes the <strong>relative motion</strong> between its different layers.
                             </p>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-2"><strong>Physical Picture:</strong></p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>When fluid flows, different layers move at different speeds</li>
@@ -1696,13 +1723,13 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Newton's Law of Viscosity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Newton's Law of Viscosity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Viscous Force Formula</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Viscous Force Formula</h4>
                             <p class="mb-3">For fluid flowing in layers (laminar flow):</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg border-2 border-secondary">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-secondary">
                                 <div class="math-display">
                                     \[F = \eta A \frac{dv}{dx}\]
                                 </div>
@@ -1714,7 +1741,7 @@
                                     <li><strong>dv/dx</strong> = Velocity gradient (s⁻¹)</li>
                                 </ul>
                                 
-                                <div class="bg-white p-3 rounded mt-3">
+                                <div class="bg-canvas p-3 rounded mt-3">
                                     <p class="font-semibold text-sm mb-2">Units of Viscosity:</p>
                                     <p class="text-sm">SI: Pa·s = N·s/m² = kg/(m·s)</p>
                                     <p class="text-sm">CGS: Poise (P) = dyne·s/cm²</p>
@@ -1723,14 +1750,14 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Stoke's Law (Very Important for JEE)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Stoke's Law (Very Important for JEE)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Viscous Force on a Sphere</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Viscous Force on a Sphere</h4>
                             <p class="mb-3">When a small sphere moves through a viscous fluid (see <a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions">Units & Dimensions</a> for dimensional formula of viscosity):</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg border-2 border-secondary">
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-secondary">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{F = 6\pi \eta r v}\]
                                 </div>
                                 <p class="text-sm mt-3">Where:</p>
@@ -1740,7 +1767,7 @@
                                     <li><strong>v</strong> = Velocity of sphere relative to fluid</li>
                                 </ul>
                                 
-                                <div class="bg-white p-3 rounded mt-4">
+                                <div class="bg-canvas p-3 rounded mt-4">
                                     <p class="font-semibold text-sm mb-2">Conditions for Stoke's Law:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li>Sphere must be <strong>small</strong> and <strong>smooth</strong></li>
@@ -1752,15 +1779,15 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.4 Terminal Velocity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.4 Terminal Velocity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Concept</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Concept</h4>
                             <p class="mb-4">
                                 When a sphere falls through a viscous fluid, it eventually reaches a <strong>constant velocity</strong> called <strong>terminal velocity</strong> when:
                             </p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Force Balance:</p>
                                 <div class="math-display">
                                     \[\text{Weight} = \text{Buoyant force} + \text{Viscous force}\]
@@ -1775,11 +1802,11 @@
                                 <p class="text-sm mt-3">Where ρ = density of sphere, σ = density of fluid</p>
                                 
                                 <p class="font-semibold mt-4 mb-2">Solving for terminal velocity:</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{v_t = \frac{2r^2(\rho - \sigma)g}{9\eta}}\]
                                 </div>
                                 
-                                <div class="bg-white p-3 rounded mt-4">
+                                <div class="bg-canvas p-3 rounded mt-4">
                                     <p class="font-semibold text-sm mb-2">Key Points:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li>v<sub>t</sub> ∝ r² (radius squared!)</li>
@@ -1792,14 +1819,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7 - Terminal Velocity (JEE Main)
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: A rain drop of radius 0.3 mm falls through air with terminal velocity 1 m/s. Find the viscosity of air. (Take ρ<sub>water</sub> = 1000 kg/m³, ρ<sub>air</sub> ≈ 0, g = 10 m/s²)
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Given:</p>
                                 <ul class="list-disc list-inside space-y-1 mb-4">
                                     <li>r = 0.3 mm = 0.3 × 10⁻³ m = 3 × 10⁻⁴ m</li>
@@ -1826,22 +1853,22 @@
                                     \[\eta = 2 \times 10^{-4}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\eta = 2 \times 10^{-4} \text{ Pa·s}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     Note: Actual viscosity of air ≈ 1.8 × 10⁻⁵ Pa·s. Our answer is in the right order of magnitude!
                                 </p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.5 Poiseuille's Equation (Flow Through Pipe)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.5 Poiseuille's Equation (Flow Through Pipe)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Volume Flow Rate in Cylindrical Pipe</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Volume Flow Rate in Cylindrical Pipe</h4>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg border-2 border-secondary">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-secondary">
                                 <div class="math-display">
                                     \[Q = \frac{\pi r^4 (P_1 - P_2)}{8\eta L}\]
                                 </div>
@@ -1854,7 +1881,7 @@
                                     <li><strong>L</strong> = Length of pipe</li>
                                 </ul>
                                 
-                                <div class="bg-white p-3 rounded mt-4">
+                                <div class="bg-canvas p-3 rounded mt-4">
                                     <p class="font-semibold text-sm mb-2">Important Observations:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li><strong>Q ∝ r⁴:</strong> Flow rate extremely sensitive to radius!</li>
@@ -1883,10 +1910,10 @@
                 </section>
                 
                 <!-- Chapter 7: Surface Tension -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Surface Tension</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Surface Tension</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1894,18 +1921,18 @@
                             <a href="https://en.wikipedia.org/wiki/Surface_tension" target="_blank" rel="noopener noreferrer">Surface tension</a> is responsible for many everyday phenomena like water droplets, soap bubbles, and capillary action. This topic carries 8-10% weightage in JEE and involves beautiful conceptual questions.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.1 What is Surface Tension?</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 What is Surface Tension?</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Definition</h4>
-                            <div class="bg-orange-50 p-5 rounded-lg border-2 border-accent">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
+                            <div class="bg-surface-2 p-5 rounded-lg border-2 border-accent">
                                 <p class="text-lg font-semibold mb-4">
                                     <strong>Surface Tension (T)</strong> is the property of liquid surface to behave like a <strong>stretched elastic membrane</strong>, tending to contract and occupy minimum surface area.
                                 </p>
                                 
                                 <p class="mb-3">Two equivalent definitions:</p>
                                 
-                                <div class="bg-white p-3 rounded mb-3">
+                                <div class="bg-canvas p-3 rounded mb-3">
                                     <p class="font-semibold mb-2">1. Force Definition:</p>
                                     <div class="math-display text-base">
                                         \[T = \frac{F}{L}\]
@@ -1914,7 +1941,7 @@
                                     <p class="text-sm mt-2"><strong>SI Unit:</strong> N/m</p>
                                 </div>
                                 
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">2. Energy Definition:</p>
                                     <div class="math-display text-base">
                                         \[T = \frac{\text{Surface Energy}}{\text{Area}}\]
@@ -1924,7 +1951,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Physical Cause:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Cohesive forces:</strong> Attractive forces between similar molecules</li>
@@ -1935,18 +1962,18 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.2 Surface Energy</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Surface Energy</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Work Done in Increasing Surface Area</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Work Done in Increasing Surface Area</h4>
                             
-                            <div class="bg-orange-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="mb-3">Work done in creating new surface of area ΔA:</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{W = T \times \Delta A}\]
                                 </div>
                                 
-                                <div class="bg-white p-3 rounded mt-4">
+                                <div class="bg-canvas p-3 rounded mt-4">
                                     <p class="font-semibold text-sm mb-2">Important Cases:</p>
                                     
                                     <p class="text-sm font-semibold mt-3 mb-1">1. Soap Film:</p>
@@ -1965,24 +1992,24 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.3 Excess Pressure (Most Important!)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Excess Pressure (Most Important!)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Pressure Difference Across Curved Surface</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Pressure Difference Across Curved Surface</h4>
                             <p class="mb-4">
                                 Due to surface tension, pressure inside a curved liquid surface is <strong>greater</strong> than outside.
                             </p>
                             
                             <div class="overflow-x-auto my-4">
-                                <table class="w-full custom-table shadow-lg">
+                                <table class="w-full custom-table border border-hairline">
                                     <thead>
-                                        <tr class="text-white bg-accent">
+                                        <tr class="text-ink bg-accent">
                                             <th class="p-4 text-left">Type</th>
                                             <th class="p-4 text-left">Number of Surfaces</th>
                                             <th class="p-4 text-left">Excess Pressure (ΔP)</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y bg-white">
+                                    <tbody class="divide-y bg-canvas">
                                         <tr>
                                             <td class="p-4 font-semibold">Liquid Drop</td>
                                             <td class="p-4">1 (one free surface)</td>
@@ -2014,14 +2041,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8 - Excess Pressure (JEE Main)
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: A soap bubble of radius 3 cm is in equilibrium with atmospheric pressure 10⁵ Pa. If surface tension of soap solution is 0.03 N/m, find pressure inside the bubble.
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Given:</p>
                                 <ul class="list-disc list-inside space-y-1 mb-4">
                                     <li>R = 3 cm = 0.03 m</li>
@@ -2043,26 +2070,26 @@
                                     \[P_{inside} = 10^5 + 4\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[P_{inside} = 100,004 \text{ Pa} \approx 10^5 \text{ Pa}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     Note: Excess pressure (4 Pa) is very small compared to atmospheric pressure (10⁵ Pa), but it's what keeps the bubble from collapsing!
                                 </p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.4 Capillarity (Rise/Fall of Liquid in Tube)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.4 Capillarity (Rise/Fall of Liquid in Tube)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Capillary Rise/Depression</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Capillary Rise/Depression</h4>
                             <p class="mb-4">
                                 When a narrow tube is dipped in a liquid, the liquid level inside tube differs from outside due to surface tension.
                             </p>
                             
-                            <div class="bg-orange-50 p-4 rounded-lg border-2 border-accent">
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\boxed{h = \frac{2T\cos\theta}{\rho g r}}\]
                                 </div>
                                 <p class="text-sm mt-3">Where:</p>
@@ -2074,7 +2101,7 @@
                                     <li><strong>r</strong> = Radius of capillary tube</li>
                                 </ul>
                                 
-                                <div class="bg-white p-3 rounded mt-4">
+                                <div class="bg-canvas p-3 rounded mt-4">
                                     <p class="font-semibold text-sm mb-2">Angle of Contact:</p>
                                     <ul class="text-sm space-y-2 list-disc list-inside">
                                         <li><strong>θ < 90°:</strong> Liquid wets the surface → Capillary RISE</li>
@@ -2084,7 +2111,7 @@
                                     </ul>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-3 rounded mt-4 border-l-4 border-primary">
+                                <div class="bg-surface-2 p-3 rounded mt-4 border-l-4 border-primary">
                                     <p class="font-semibold text-sm mb-2">Important Observations:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li><strong>h ∝ 1/r:</strong> Narrower tube → greater rise</li>
@@ -2097,14 +2124,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 9 - Capillary Rise
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: Water rises to 3 cm in a capillary tube of radius 0.2 mm. Find surface tension of water. (Take θ = 0°, ρ = 1000 kg/m³, g = 10 m/s²)
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Given:</p>
                                 <ul class="list-disc list-inside space-y-1 mb-4">
                                     <li>h = 3 cm = 0.03 m</li>
@@ -2131,46 +2158,46 @@
                                     \[T = 0.03 = 3 \times 10^{-2}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[T = 0.03 \text{ N/m} = 30 \text{ dynes/cm}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     Note: Standard value of surface tension of water ≈ 0.073 N/m at 20°C. Our simplified calculation gives order of magnitude.
                                 </p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.5 Angle of Contact</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.5 Angle of Contact</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="mb-4">
                                 The <strong>angle of contact</strong> is the angle between the tangent to the liquid surface at the point of contact and the solid surface, measured inside the liquid.
                             </p>
                             
                             <div class="overflow-x-auto my-4">
-                                <table class="w-full custom-table shadow-lg">
+                                <table class="w-full custom-table border border-hairline">
                                     <thead>
-                                        <tr class="text-white bg-accent">
+                                        <tr class="text-ink bg-accent">
                                             <th class="p-4 text-left">Liquid-Solid Pair</th>
                                             <th class="p-4 text-left">Angle θ</th>
                                             <th class="p-4 text-left">Meniscus Shape</th>
                                             <th class="p-4 text-left">Wetting</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y bg-white">
+                                    <tbody class="divide-y bg-canvas">
                                         <tr>
                                             <td class="p-4">Water - Glass</td>
                                             <td class="p-4">≈ 0° to 8°</td>
                                             <td class="p-4">Concave (↘)</td>
-                                            <td class="p-4 text-success font-semibold">Wets</td>
+                                            <td class="p-4 text-primary font-semibold">Wets</td>
                                         </tr>
                                         <tr>
                                             <td class="p-4">Mercury - Glass</td>
                                             <td class="p-4">≈ 140°</td>
                                             <td class="p-4">Convex (↗)</td>
-                                            <td class="p-4 text-danger font-semibold">Doesn't wet</td>
+                                            <td class="p-4 text-primary font-semibold">Doesn't wet</td>
                                         </tr>
                                         <tr>
                                             <td class="p-4">Water - Silver</td>
@@ -2182,7 +2209,7 @@
                                 </table>
                             </div>
                             
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Forces at Contact:</p>
                                 <div class="math-display text-base">
                                     \[\cos\theta = \frac{T_{SG} - T_{SL}}{T_{LG}}\]
@@ -2213,10 +2240,10 @@
                 </section>
                 
                 <!-- Chapter 8: Applications & Practical Problems -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Applications & Real-World Examples</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Applications & Real-World Examples</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -2224,11 +2251,11 @@
                             This section covers important applications of fluid mechanics principles that frequently appear in JEE in the form of conceptual and numerical questions.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">8.1 Important Applications</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Important Applications</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">1. Hydraulic Machines</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Hydraulic Machines</h5>
                                 <ul class="list-disc list-inside text-sm space-y-2">
                                     <li><strong>Hydraulic Lift:</strong> Pascal's law, F₂/F₁ = A₂/A₁</li>
                                     <li><strong>Hydraulic Brake:</strong> Equal pressure transmission</li>
@@ -2237,8 +2264,8 @@
                                 </ul>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">2. Buoyancy Applications</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Buoyancy Applications</h5>
                                 <ul class="list-disc list-inside text-sm space-y-2">
                                     <li><strong>Ship Design:</strong> Displaces weight equal to own weight</li>
                                     <li><strong>Submarine:</strong> Adjusts density by filling/emptying tanks</li>
@@ -2247,8 +2274,8 @@
                                 </ul>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">3. Bernoulli Applications</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">3. Bernoulli Applications</h5>
                                 <ul class="list-disc list-inside text-sm space-y-2">
                                     <li><strong>Airplane Wing:</strong> Lift from pressure difference</li>
                                     <li><strong>Carburetor:</strong> Draws fuel into air stream</li>
@@ -2257,8 +2284,8 @@
                                 </ul>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">4. Surface Tension Applications</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">4. Surface Tension Applications</h5>
                                 <ul class="list-disc list-inside text-sm space-y-2">
                                     <li><strong>Detergents:</strong> Reduce surface tension to penetrate dirt</li>
                                     <li><strong>Water Strider:</strong> Insect walks on water surface</li>
@@ -2268,17 +2295,17 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">8.2 Combination Problems (JEE Advanced Level)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Combination Problems (JEE Advanced Level)</h3>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 10 - Complex Problem
                             </h4>
                             <p class="text-lg mb-3">
                                 Question: A U-tube contains water and an oil (ρ<sub>oil</sub> = 800 kg/m³) separated by mercury (ρ<sub>Hg</sub> = 13,600 kg/m³). Water column height is 20 cm and oil column height is 30 cm. Find height of mercury column on each side if the right side has water. (ρ<sub>water</sub> = 1000 kg/m³)
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Concept:</strong> Pressure at same horizontal level in connected fluid is equal</p>
                                 
                                 <p class="mb-2"><strong>Let:</strong></p>
@@ -2308,11 +2335,11 @@
                                     \[h_2 - h_1 = \frac{40}{13600} \approx 0.003 \text{ m} = 3 \text{ mm}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Mercury level on water side is 3 mm higher}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-700">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Explanation:</strong> Since oil is less dense than water, the oil column needs to be taller to balance the water column. This results in mercury being pushed higher on the water side.
                                 </p>
                             </div>
@@ -2321,14 +2348,14 @@
                 </section>
                 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Archimedes Principle & Buoyancy: 35%</li>
@@ -2338,7 +2365,7 @@
                                 <li>✓ Viscosity: 10%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Bernoulli + Continuity: 30%</li>
@@ -2350,8 +2377,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Finding buoyant force on submerged/floating objects</li>
                             <li>Archimedes principle - fraction of volume submerged</li>
@@ -2371,7 +2398,7 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -2394,21 +2421,21 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
                 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Find pressure at 50 m depth in ocean (ρ = 1030 kg/m³)</li>
                             <li>A 500 N object weighs 300 N in water. Find buoyant force and volume of object.</li>
@@ -2421,8 +2448,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A balloon of mass 10 kg is filled with helium (ρ<sub>He</sub> = 0.18 kg/m³, ρ<sub>air</sub> = 1.29 kg/m³). Find minimum volume for lift-off.</li>
                             <li>Oil (ρ = 800) flows through venturi meter. Find velocity if pressure drops 2000 Pa from 4 cm² to 1 cm² section.</li>
@@ -2435,8 +2462,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>U-tube has water and oil (ρ = 800) separated by mercury. Find mercury level difference if water height is 10 cm and oil 15 cm.</li>
                             <li>A wooden cylinder (ρ = 600, length 30 cm) floats vertically in water. Find length above water and time period if pushed down slightly.</li>
@@ -2452,57 +2479,75 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
                 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./gravitation.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Gravitation</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./kinematics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Kinematics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./kinetic-theory-of-gases.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Kinetic Theory Of Gases</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
     
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/properties-of-matter" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/properties-of-matter" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Related Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Properties of Matter</h3>
-                    <p class="text-gray-600">Elasticity, Stress-Strain, Hooke's Law, Bulk Modulus</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Properties of Matter</h3>
+                    <p class="text-ink-muted">Elasticity, Stress-Strain, Hooke's Law, Bulk Modulus</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Thermodynamics</h3>
-                    <p class="text-gray-600">Laws of thermodynamics, Heat engines, PV diagrams</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Thermodynamics</h3>
+                    <p class="text-ink-muted">Laws of thermodynamics, Heat engines, PV diagrams</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Rotational Motion</h3>
-                    <p class="text-gray-600">Moment of Inertia, Torque, Angular Momentum</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Rotational Motion</h3>
+                    <p class="text-ink-muted">Moment of Inertia, Torque, Angular Momentum</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -2510,7 +2555,7 @@
             
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2518,35 +2563,35 @@
     </section>
     
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Fluid Mechanics for JEE Main & Advanced 2026 — Key Topics & Weightage</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Fluid Mechanics for JEE Main & Advanced 2026 — Key Topics & Weightage</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Fluid Mechanics is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Fluid Mechanics</strong> is one of the high-weightage chapters in <strong>JEE Physics</strong>, carrying 12-15% marks in JEE Main and 15-20% in JEE Advanced. Key reasons to master this chapter:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Archimedes Principle</strong> - 30% of questions (easiest scoring topic)</li>
                             <li><strong><a href="https://en.wikipedia.org/wiki/Bernoulli%27s_principle" target="_blank" rel="noopener noreferrer">Bernoulli's Theorem</a></strong> - 25% of questions (most versatile)</li>
                             <li><strong>Surface Tension</strong> - 15% of questions (formulaic and predictable)</li>
                             <li><strong><a href="https://en.wikipedia.org/wiki/Viscosity" target="_blank" rel="noopener noreferrer">Viscosity</a></strong> - 15% of questions (JEE Advanced favorite)</li>
                             <li><strong>Pascal's Law</strong> - 15% of questions (direct applications)</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             fluid mechanics is often combined with <a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion">SHM</a>, <a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion">rotational motion</a>, and <a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics">thermodynamics</a>, making it crucial to have crystal-clear concepts.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Formulas to Remember</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Most Important Formulas</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Most Important Formulas</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Pressure: P = P₀ + ρgh</li>
                                     <li>• Buoyant Force: F<sub>B</sub> = ρ<sub>fluid</sub>Vg</li>
                                     <li>• Pascal's Law: F₂/F₁ = A₂/A₁</li>
@@ -2562,24 +2607,24 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Common Constant Values</h4>
-                                <p class="text-gray-700 text-sm">ρ<sub>water</sub> = 1000 kg/m³, ρ<sub>Hg</sub> = 13,600 kg/m³, P<sub>atm</sub> = 10⁵ Pa, T<sub>water</sub> = 0.073 N/m</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Common Constant Values</h4>
+                                <p class="text-ink-muted text-sm">ρ<sub>water</sub> = 1000 kg/m³, ρ<sub>Hg</sub> = 13,600 kg/m³, P<sub>atm</sub> = 10⁵ Pa, T<sub>water</sub> = 0.073 N/m</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. Must-Remember Concepts</h4>
-                                <p class="text-gray-700 text-sm">Soap bubble (2 surfaces) vs Drop (1 surface), Laminar (Re<2000) vs Turbulent (Re>4000), Floating condition: ρ<sub>obj</sub> < ρ<sub>fluid</sub></p>
+                                <h4 class="font-bold text-lg text-primary mb-2">3. Must-Remember Concepts</h4>
+                                <p class="text-ink-muted text-sm">Soap bubble (2 surfaces) vs Drop (1 surface), Laminar (Re<2000) vs Turbulent (Re>4000), Floating condition: ρ<sub>obj</sub> < ρ<sub>fluid</sub></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Study Tips -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Fluid Mechanics Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 3-4 days (3 hours/day)</li>
                                 <li>Focus on <strong>Archimedes & Bernoulli</strong> (60% questions)</li>
                                 <li>Practice 80+ MCQs from previous years</li>
@@ -2590,7 +2635,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 6-7 days (4 hours/day)</li>
                                 <li>Deep understanding of <strong>Bernoulli derivation</strong></li>
                                 <li>Practice multi-concept problems (Bernoulli + SHM, etc.)</li>
@@ -2603,41 +2648,41 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Soap Bubble vs Drop confusion:</strong> Soap bubble has 2 surfaces (ΔP = 4T/R) while drop has 1 surface (ΔP = 2T/R). This is the #1 mistake!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Forgetting density in buoyancy:</strong> Use ρ<sub>fluid</sub> not ρ<sub>object</sub> in F<sub>B</sub> = ρVg
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong reference level in Bernoulli:</strong> Choose ground or any convenient level and stick to it throughout problem
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Gauge vs Absolute pressure:</strong> Bernoulli uses absolute pressure (P<sub>gauge</sub> + P<sub>atm</sub>)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Terminal velocity formula:</strong> Remember denominator is 9η (not 6 or 8!). Factor comes from derivation.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Capillary angle confusion:</strong> cos θ in formula - for water θ≈0° (rise), for mercury θ≈140° (depression)
                             </div>
@@ -2646,11 +2691,11 @@
                 </div>
                 
                 <!-- Previous Year Analysis -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -2659,19 +2704,19 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">5 Questions (18 marks)</td>
                                     <td class="p-3">Bernoulli, Surface Tension</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
                                     <td class="p-3">4 Questions (15 marks)</td>
                                     <td class="p-3">Archimedes, Viscosity</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">6 Questions (22 marks)</td>
@@ -2680,16 +2725,16 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Trend:</strong> JEE Advanced is focusing more on viscosity (Stoke's law, terminal velocity, Poiseuille) and combination problems. Surface tension excess pressure is becoming a favorite topic.
                     </p>
                 </div>
                 
                 <!-- Quick Revision -->
-                <div class="mt-8 bg-gradient-to-r from-green-100 to-blue-100 p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold text-success mb-4">🚀 Last Day Revision Checklist</h3>
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">🚀 Last Day Revision Checklist</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <h4 class="font-bold mb-2">Formulas (Must Know)</h4>
                             <ul class="text-sm space-y-1">
                                 <li>✓ Pressure variation: P = P₀ + ρgh</li>
@@ -2699,7 +2744,7 @@
                                 <li>✓ Soap bubble: ΔP = 4T/R</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <h4 class="font-bold mb-2">Concepts (Must Understand)</h4>
                             <ul class="text-sm space-y-1">
                                 <li>✓ Floating: Weight = Buoyant force</li>
@@ -2717,54 +2762,54 @@
     </section>
     
     <!-- Frequently Asked Questions (FAQ) Section -->
-    <section class="py-16 bg-white border-t border-gray-200">
+    <section class="py-16 bg-canvas border-t border-hairline">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-12 flex items-center justify-center">
-                <span class="bg-primary text-white p-2 rounded-lg mr-3 shadow-lg">❓</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-ink text-center mb-12 flex items-center justify-center">
+                <span class="bg-primary text-ink p-2 rounded-lg mr-3 border border-hairline">❓</span>
                 Frequently Asked Questions (FAQ)
             </h2>
             
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm transition hover:shadow-md bg-white">
-                    <button class="w-full text-left p-6 font-bold text-lg md:text-xl text-gray-800 flex justify-between items-center bg-gray-50/50 hover:bg-gray-50 transition focus:outline-none" onclick="toggleFaq(1)">
+                <div class="border border-hairline rounded-xl overflow-hidden border border-hairline transition hover:border border-hairline bg-canvas">
+                    <button class="w-full text-left p-6 font-bold text-lg md:text-xl text-ink flex justify-between items-center bg-surface-1/50 hover:bg-surface-1 transition focus:outline-none" onclick="toggleFaq(1)">
                         <span>Is Fluid Mechanics important for JEE Mains?</span>
                         <svg id="faq-icon-1" class="w-6 h-6 text-primary transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div id="faq-answer-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="p-6 text-gray-600 border-t border-gray-200 leading-relaxed text-base">
+                        <div class="p-6 text-ink-muted border-t border-hairline leading-relaxed text-base">
                             Yes, Fluid Mechanics is highly important for JEE Mains. It carries a weightage of 3-4 questions (12-16 marks) in Physics. Mastering Pascal's Law, Archimedes Principle, Bernoulli's Theorem, and Surface Tension is essential for a high score.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm transition hover:shadow-md bg-white">
-                    <button class="w-full text-left p-6 font-bold text-lg md:text-xl text-gray-800 flex justify-between items-center bg-gray-50/50 hover:bg-gray-50 transition focus:outline-none" onclick="toggleFaq(2)">
+                <div class="border border-hairline rounded-xl overflow-hidden border border-hairline transition hover:border border-hairline bg-canvas">
+                    <button class="w-full text-left p-6 font-bold text-lg md:text-xl text-ink flex justify-between items-center bg-surface-1/50 hover:bg-surface-1 transition focus:outline-none" onclick="toggleFaq(2)">
                         <span>What is the weightage of Fluid Mechanics in JEE Advanced?</span>
                         <svg id="faq-icon-2" class="w-6 h-6 text-primary transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div id="faq-answer-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="p-6 text-gray-600 border-t border-gray-200 leading-relaxed text-base">
+                        <div class="p-6 text-ink-muted border-t border-hairline leading-relaxed text-base">
                             In JEE Advanced, Fluid Mechanics carries a weightage of 18-24 marks (4-6 questions). It is one of the most critical chapters, often combined with SHM or Rotational Motion in multi-concept problems.
                         </div>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm transition hover:shadow-md bg-white">
-                    <button class="w-full text-left p-6 font-bold text-lg md:text-xl text-gray-800 flex justify-between items-center bg-gray-50/50 hover:bg-gray-50 transition focus:outline-none" onclick="toggleFaq(3)">
+                <div class="border border-hairline rounded-xl overflow-hidden border border-hairline transition hover:border border-hairline bg-canvas">
+                    <button class="w-full text-left p-6 font-bold text-lg md:text-xl text-ink flex justify-between items-center bg-surface-1/50 hover:bg-surface-1 transition focus:outline-none" onclick="toggleFaq(3)">
                         <span>What is the formula for Terminal Velocity in Fluid Mechanics?</span>
                         <svg id="faq-icon-3" class="w-6 h-6 text-primary transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div id="faq-answer-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="p-6 text-gray-600 border-t border-gray-200 leading-relaxed text-base font-mono bg-gray-50/30">
+                        <div class="p-6 text-ink-muted border-t border-hairline leading-relaxed text-base font-mono bg-surface-1/30">
                             The terminal velocity formula is:<br>
                             <span class="text-lg font-bold block my-2 text-center text-primary font-sans bg-primary/5 p-3 rounded-lg border border-primary/10">v_t = \frac{2r^2(\rho - \sigma)g}{9\eta}</span>
                             Where r is the radius of the sphere, &rho; is the density of the sphere, &sigma; is the density of the fluid, g is acceleration due to gravity, and &eta; is the coefficient of viscosity.
@@ -2790,68 +2835,68 @@
     </script>
     
     <!-- Footer -->
-   <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+   <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -2859,12 +2904,12 @@
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -2873,32 +2918,32 @@
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

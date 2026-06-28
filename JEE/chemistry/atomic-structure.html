@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Atomic Structure - Complete JEE Chemistry Notes with 100+ Examples">
     <meta property="og:description" content="Master Bohr's model, quantum numbers, electronic configuration & orbitals. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Atomic Structure - JEE Chemistry Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure">
     <meta name="twitter:title" content="Atomic Structure - Complete JEE Chemistry Notes">
     <meta name="twitter:description" content="Master Bohr's model & quantum numbers with 100+ solved examples. Complete notes on orbitals, electronic configuration & photoelectric effect for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
 
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Atomic Structure JEE">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Atomic Structure - Complete JEE Chemistry Notes 2025-26",
       "description": "Comprehensive notes on Atomic Structure covering Bohr's model, quantum numbers, electronic configuration, orbitals, and wave-particle duality with 100+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -362,59 +375,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#059669',
-                        secondary: '#047857',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-chemistry.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-chemistry.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-emerald-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #059669, #34d399); z-index: 9999; transition: width 0.1s;"></div>
 
 <!-- Header -->
-<header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+<header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                    <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                    <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                 </div>
                 <div>
-                    <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                    <p class="text-sm text-gray-500">Path to IIT</p>
+                    <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                    <p class="text-sm text-ink-tertiary">Path to IIT</p>
                 </div>
             </div>
             <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
             </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
         </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
     </div>
 </header>
 
 <!-- Breadcrumb Navigation -->
-<nav class="bg-gray-100 py-3 border-b">
+<nav class="bg-surface-1 py-3 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -423,30 +438,30 @@
                 </a>
                 <meta itemprop="position" content="1" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/notes" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Notes</span>
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">JEE</span>
                 </a>
                 <meta itemprop="position" content="3" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Chemistry</span>
                 </a>
                 <meta itemprop="position" content="4" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span class="text-gray-600 font-semibold" itemprop="name">Atomic Structure</span>
+                <span class="text-ink-muted font-semibold" itemprop="name">Atomic Structure</span>
                 <meta itemprop="position" content="5" />
             </li>
         </ol>
@@ -454,32 +469,32 @@
 </nav>
 
 <!-- Quick Navigation -->
-<section class="bg-gradient-to-r from-green-50 to-purple-50 py-6 border-b">
+<section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Atomic Structure</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Atomic Structure</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Subatomic Particles
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Atomic Models
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Bohr's Model
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Quantum Numbers
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Orbitals
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Configuration
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Photoelectric
             </a>
-            <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Wave-Particle
             </a>
         </div>
@@ -487,28 +502,28 @@
 </section>
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-primary via-emerald-600 to-secondary text-white py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center">
             <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                 Atomic Structure
-                <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
             </h2>
             <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                 Master the building blocks of matter with complete notes on Bohr's Model, Quantum Numbers, Electronic Configuration, Orbitals, Photoelectric Effect & de Broglie Wavelength. Includes 100+ solved problems and all JEE formulas.
             </p>
             <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">📚 8 Complete Sections</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">🎯 All JEE Formulas</span>
                 </div>
             </div>
@@ -517,21 +532,21 @@
 </section>
 
 <!-- Rating Section -->
-<section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+<section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="name" content="Atomic Structure JEE Notes">
     <meta itemprop="description" content="Complete study notes for atomic structure">
-    <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta itemprop="image" content="/logo-header.webp">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
         <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center space-x-6 mb-4 md:mb-0">
                 <div class="flex items-center">
-                    <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                    <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                     <span class="ml-3 text-xl font-bold">
                         <span itemprop="ratingValue">4.9</span>/5
                     </span>
                 </div>
-                <div class="text-gray-600">
+                <div class="text-ink-muted">
                     <span itemprop="reviewCount">245</span>+ students rated this helpful
                 </div>
                 <meta itemprop="bestRating" content="5">
@@ -541,15 +556,15 @@
             <div class="flex items-center space-x-6">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-primary">100+</div>
-                    <div class="text-sm text-gray-600">Solved Examples</div>
+                    <div class="text-sm text-ink-muted">Solved Examples</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-success">3 hrs</div>
-                    <div class="text-sm text-gray-600">Study Time</div>
+                    <div class="text-2xl font-bold text-primary">3 hrs</div>
+                    <div class="text-sm text-ink-muted">Study Time</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-secondary">Free</div>
-                    <div class="text-sm text-gray-600">Always</div>
+                    <div class="text-2xl font-bold text-primary">Free</div>
+                    <div class="text-sm text-ink-muted">Always</div>
                 </div>
             </div>
         </div>
@@ -561,35 +576,47 @@
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
         <!-- Sidebar Navigation -->
-        <aside class="lg:col-span-1">
-            <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <aside class="order-2 lg:order-1 lg:col-span-1">
+            <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                     <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                     Table of Contents
                 </h3>
                 <ul class="space-y-2 text-base font-medium">
-                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Subatomic Particles</a></li>
-                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Atomic Models</a></li>
-                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Bohr's Model</a></li>
-                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Quantum Numbers</a></li>
-                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Shapes of Orbitals</a></li>
-                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Electronic Configuration</a></li>
-                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Photoelectric Effect</a></li>
-                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Wave-Particle Duality</a></li>
-                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Subatomic Particles</a></li>
+                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Atomic Models</a></li>
+                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Bohr's Model</a></li>
+                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Quantum Numbers</a></li>
+                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Shapes of Orbitals</a></li>
+                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Electronic Configuration</a></li>
+                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Photoelectric Effect</a></li>
+                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Wave-Particle Duality</a></li>
+                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                 </ul>
             </div>
         </aside>
 
         <!-- Main Content Area -->
-        <main class="lg:col-span-3 space-y-12">
+        <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./some-basic-concepts-of-chemistry.html" class="text-primary font-semibold hover:underline">Some Basic Concepts Of Chemistry &rarr;</a>
+                <a href="./chemical-equilibrium.html" class="text-primary font-semibold hover:underline">Chemical Equilibrium &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
             <!-- Chapter 1: Discovery of Subatomic Particles -->
-            <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Discovery of Subatomic Particles</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Discovery of Subatomic Particles</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -599,9 +626,9 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Discovery of Electron (J.J. Thomson, 1897)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Cathode Ray Experiment</h4>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <h5 class="font-bold mb-2">Key Observations:</h5>
                             <ul class="list-disc list-inside space-y-2 ml-4">
                                 <li>Rays travel in straight lines from cathode to anode</li>
@@ -610,7 +637,7 @@
                                 <li>Properties independent of electrode material and gas used</li>
                             </ul>
                         </div>
-                        <div class="mt-4 bg-green-50 p-4 rounded-lg">
+                        <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                             <h5 class="font-bold mb-2">Charge to Mass Ratio (e/m):</h5>
                             <div class="math-display">
                                 \[\frac{e}{m} = 1.758820 \times 10^{11} \text{ C/kg}\]
@@ -619,16 +646,16 @@
                     </div>
 
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Property</th>
                                     <th class="p-4 text-left">Electron</th>
                                     <th class="p-4 text-left">Proton</th>
                                     <th class="p-4 text-left">Neutron</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Symbol</td>
                                     <td class="p-4 font-mono">e⁻ or ⁰₋₁e</td>
@@ -673,13 +700,13 @@
                     
                     <div class="concept-box p-6 rounded-xl border-l-4 border-secondary my-6">
                         <h4 class="font-bold text-xl mb-3">Purpose: Determination of Charge of Electron</h4>
-                        <div class="math-display bg-white p-4 rounded-lg">
+                        <div class="math-display bg-canvas p-4 rounded-lg">
                             \[e = 1.6022 \times 10^{-19} \text{ C}\]
                         </div>
                         <p class="mt-3">
                             Millikan found that all charges were multiples of a basic unit, proving charge is quantized.
                         </p>
-                        <div class="bg-white p-4 rounded-lg mt-3">
+                        <div class="bg-canvas p-4 rounded-lg mt-3">
                             <p class="font-semibold">From e/m and e values:</p>
                             <div class="math-display">
                                 \[m_e = \frac{e}{e/m} = \frac{1.6 \times 10^{-19}}{1.76 \times 10^{11}} = 9.109 \times 10^{-31} \text{ kg}\]
@@ -690,18 +717,18 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Atomic Terminology</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Atomic Number (Z)</h5>
                             <p class="mb-2">Number of protons in nucleus</p>
-                            <div class="bg-white p-3 rounded text-center">
+                            <div class="bg-canvas p-3 rounded text-center">
                                 <p class="font-mono text-lg">Z = Number of protons</p>
                                 <p class="text-sm mt-2">For neutral atom: Z = Number of electrons</p>
                             </div>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Mass Number (A)</h5>
                             <p class="mb-2">Total nucleons (protons + neutrons)</p>
-                            <div class="bg-white p-3 rounded text-center">
+                            <div class="bg-canvas p-3 rounded text-center">
                                 <p class="font-mono text-lg">A = Z + N</p>
                                 <p class="text-sm mt-2">where N = number of neutrons</p>
                             </div>
@@ -711,16 +738,16 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Isotopes, Isobars, Isotones</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Term</th>
                                     <th class="p-4 text-left">Same</th>
                                     <th class="p-4 text-left">Different</th>
                                     <th class="p-4 text-left">Examples</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Isotopes</td>
                                     <td class="p-4">Atomic number (Z)</td>
@@ -763,10 +790,10 @@
             </section>
 
             <!-- Chapter 2: Atomic Models -->
-            <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Atomic Models</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Atomic Models</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -774,12 +801,12 @@
                         Understanding the evolution of atomic models is crucial for JEE. Each model built upon previous discoveries and had specific limitations that led to newer models.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Thomson's Plum Pudding Model (1898)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Thomson's Plum Pudding Model (1898)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <h4 class="font-bold text-xl mb-3 text-secondary">Postulates</h4>
+                                <h4 class="font-bold text-xl mb-3 text-primary">Postulates</h4>
                                 <ul class="list-disc list-inside space-y-2 ml-4">
                                     <li>Atom is a sphere of positive charge</li>
                                     <li>Electrons embedded in positive charge</li>
@@ -788,7 +815,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-xl mb-3 text-danger">Limitations</h4>
+                                <h4 class="font-bold text-xl mb-3 text-primary">Limitations</h4>
                                 <ul class="list-disc list-inside space-y-2 ml-4">
                                     <li>Could not explain Rutherford's α-scattering experiment</li>
                                     <li>Could not explain atomic spectra</li>
@@ -798,11 +825,11 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Rutherford's Nuclear Model (1911)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Rutherford's Nuclear Model (1911)</h3>
                     
-                    <div class="concept-box p-6 rounded-xl border-2 border-cyan-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">α-Particle Scattering Experiment</h4>
-                        <div class="bg-white p-4 rounded-lg">
+                    <div class="concept-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">α-Particle Scattering Experiment</h4>
+                        <div class="bg-canvas p-4 rounded-lg">
                             <h5 class="font-bold mb-2">Observations:</h5>
                             <ul class="list-disc list-inside space-y-2 ml-4">
                                 <li>Most α-particles passed through undeflected</li>
@@ -814,7 +841,7 @@
                     </div>
 
                     <div class="formula-box p-6 rounded-xl border-l-4 border-secondary my-6">
-                        <h4 class="font-bold text-xl mb-3 text-secondary">Conclusions & Postulates</h4>
+                        <h4 class="font-bold text-xl mb-3 text-primary">Conclusions & Postulates</h4>
                         <ol class="list-decimal list-inside space-y-3 ml-4">
                             <li>Most of atom is empty space (most particles pass through)</li>
                             <li>Positive charge concentrated in a small dense region called <strong>nucleus</strong></li>
@@ -822,17 +849,17 @@
                             <li>Electrons revolve around nucleus in circular orbits</li>
                             <li>Size of nucleus ≈ 10⁻¹⁵ m, Size of atom ≈ 10⁻¹⁰ m</li>
                         </ol>
-                        <div class="bg-white p-4 rounded-lg mt-4">
+                        <div class="bg-canvas p-4 rounded-lg mt-4">
                             <h5 class="font-bold mb-2">Important Formula - Distance of Closest Approach:</h5>
                             <div class="math-display">
                                 \[r_0 = \frac{kZe \cdot 2e}{\frac{1}{2}m_\alpha v^2} = \frac{4kZe^2}{m_\alpha v^2}\]
                             </div>
-                            <p class="text-sm text-gray-600">where k = 9 × 10⁹ N·m²/C²</p>
+                            <p class="text-sm text-ink-muted">where k = 9 × 10⁹ N·m²/C²</p>
                         </div>
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Limitations of Rutherford's Model
                         </h4>
                         <ol class="list-decimal list-inside space-y-2 text-lg ml-4">
@@ -845,10 +872,10 @@
             </section>
 
             <!-- Chapter 3: Bohr's Model -->
-            <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Bohr's Model of Atom (1913)</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Bohr's Model of Atom (1913)</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -858,24 +885,24 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Postulates of Bohr's Model</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <div class="space-y-4">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">Postulate 1: Stationary Orbits</h5>
                                 <p>Electrons revolve around nucleus in certain fixed circular orbits called <strong>stationary orbits</strong> or <strong>energy levels</strong> without radiating energy.</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">Postulate 2: Quantization of Angular Momentum</h5>
                                 <p>Angular momentum of electron is quantized:</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[mvr = n\frac{h}{2\pi} = n\hbar\]
                                 </div>
                                 <p class="text-sm">where n = 1, 2, 3, ... (principal quantum number), ℏ = h/2π</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">Postulate 3: Energy Transition</h5>
                                 <p>Electron absorbs or emits energy when it jumps between orbits:</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\Delta E = E_2 - E_1 = h\nu = \frac{hc}{\lambda}\]
                                 </div>
                             </div>
@@ -884,53 +911,53 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Bohr's Model Formulas (Must Memorize!)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary text-center">🎯 Critical Formulas for JEE</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">1. Radius of nth Orbit</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[r_n = 0.529 \times \frac{n^2}{Z} \text{ Å}\]
                                 </div>
                                 <p class="text-xs mt-1">For H atom (Z=1): r₁ = 0.529 Å (Bohr radius)</p>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">2. Velocity of Electron</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[v_n = 2.18 \times 10^6 \times \frac{Z}{n} \text{ m/s}\]
                                 </div>
                                 <p class="text-xs mt-1">For H atom: v₁ = 2.18 × 10⁶ m/s</p>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">3. Energy of Electron</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[E_n = -13.6 \times \frac{Z^2}{n^2} \text{ eV}\]
                                 </div>
                                 <p class="text-xs mt-1">Also: Eₙ = -2.18 × 10⁻¹⁸ × Z²/n² J</p>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">4. Time Period</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[T_n = 1.52 \times 10^{-16} \times \frac{n^3}{Z^2} \text{ s}\]
                                 </div>
                                 <p class="text-xs mt-1">T ∝ n³/Z²</p>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">5. Frequency of Revolution</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[\nu_n = 6.58 \times 10^{15} \times \frac{Z^2}{n^3} \text{ Hz}\]
                                 </div>
                                 <p class="text-xs mt-1">ν ∝ Z²/n³</p>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2 text-primary">6. Current in Orbit</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[I = e\nu = \frac{ev}{2\pi r}\]
                                 </div>
                                 <p class="text-xs mt-1">I ∝ Z²/n³</p>
@@ -942,24 +969,24 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">💡</span> Quick Memory: Proportionality Relations
                         </h4>
-                        <div class="bg-white p-4 rounded">
+                        <div class="bg-canvas p-4 rounded">
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-                                <div class="p-3 bg-green-50 rounded">
+                                <div class="p-3 bg-surface-2 rounded">
                                     <p class="font-bold">r ∝ n²/Z</p>
                                 </div>
-                                <div class="p-3 bg-green-50 rounded">
+                                <div class="p-3 bg-surface-2 rounded">
                                     <p class="font-bold">v ∝ Z/n</p>
                                 </div>
-                                <div class="p-3 bg-green-50 rounded">
+                                <div class="p-3 bg-surface-2 rounded">
                                     <p class="font-bold">E ∝ Z²/n²</p>
                                 </div>
-                                <div class="p-3 bg-green-50 rounded">
+                                <div class="p-3 bg-surface-2 rounded">
                                     <p class="font-bold">T ∝ n³/Z²</p>
                                 </div>
-                                <div class="p-3 bg-green-50 rounded">
+                                <div class="p-3 bg-surface-2 rounded">
                                     <p class="font-bold">ν ∝ Z²/n³</p>
                                 </div>
-                                <div class="p-3 bg-green-50 rounded">
+                                <div class="p-3 bg-surface-2 rounded">
                                     <p class="font-bold">KE ∝ Z²/n²</p>
                                 </div>
                             </div>
@@ -968,24 +995,24 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Energy Relations</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Kinetic, Potential & Total Energy</h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2">Kinetic Energy</h5>
                                 <div class="math-display">
                                     \[KE = +13.6 \times \frac{Z^2}{n^2} \text{ eV}\]
                                 </div>
                                 <p class="text-xs mt-1">KE is always positive</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2">Potential Energy</h5>
                                 <div class="math-display">
                                     \[PE = -27.2 \times \frac{Z^2}{n^2} \text{ eV}\]
                                 </div>
                                 <p class="text-xs mt-1">PE is always negative</p>
                             </div>
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2">Total Energy</h5>
                                 <div class="math-display">
                                     \[TE = -13.6 \times \frac{Z^2}{n^2} \text{ eV}\]
@@ -993,7 +1020,7 @@
                                 <p class="text-xs mt-1">TE = KE + PE</p>
                             </div>
                         </div>
-                        <div class="bg-yellow-50 p-4 rounded-lg mt-4 border-2 border-accent">
+                        <div class="bg-surface-2 p-4 rounded-lg mt-4 border-2 border-accent">
                             <h5 class="font-bold mb-2 text-center">Important Relationships:</h5>
                             <div class="text-center">
                                 <p class="font-mono text-lg">KE = -TE = -½PE</p>
@@ -1003,14 +1030,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Calculate the radius, velocity, and energy of electron in 3rd orbit of He⁺ ion.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">For He⁺: Z = 2, n = 3</p>
                             
                             <p class="mb-3 mt-4"><strong>1. Radius:</strong></p>
@@ -1035,18 +1062,18 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Hydrogen Spectrum</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Rydberg Formula</h4>
-                        <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent">
                             \[\frac{1}{\lambda} = RZ^2\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)\]
                         </div>
                         <p class="text-center mt-2">where R = Rydberg constant = 1.097 × 10⁷ m⁻¹ = 109677 cm⁻¹</p>
                     </div>
 
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Series</th>
                                     <th class="p-4 text-left">n₁ (Lower)</th>
                                     <th class="p-4 text-left">n₂ (Upper)</th>
@@ -1054,40 +1081,40 @@
                                     <th class="p-4 text-left">First Line</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Lyman</td>
                                     <td class="p-4">1</td>
                                     <td class="p-4">2, 3, 4, ...</td>
-                                    <td class="p-4 font-semibold text-violet-600">UV</td>
+                                    <td class="p-4 font-semibold text-primary">UV</td>
                                     <td class="p-4">Lα (1→2): 121.6 nm</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Balmer</td>
                                     <td class="p-4">2</td>
                                     <td class="p-4">3, 4, 5, ...</td>
-                                    <td class="p-4 font-semibold text-green-600">Visible</td>
+                                    <td class="p-4 font-semibold text-primary">Visible</td>
                                     <td class="p-4">Hα (2→3): 656.3 nm (Red)</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Paschen</td>
                                     <td class="p-4">3</td>
                                     <td class="p-4">4, 5, 6, ...</td>
-                                    <td class="p-4 font-semibold text-red-600">IR</td>
+                                    <td class="p-4 font-semibold text-primary">IR</td>
                                     <td class="p-4">Pα (3→4): 1875 nm</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Brackett</td>
                                     <td class="p-4">4</td>
                                     <td class="p-4">5, 6, 7, ...</td>
-                                    <td class="p-4 font-semibold text-red-600">IR</td>
+                                    <td class="p-4 font-semibold text-primary">IR</td>
                                     <td class="p-4">Bα (4→5)</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Pfund</td>
                                     <td class="p-4">5</td>
                                     <td class="p-4">6, 7, 8, ...</td>
-                                    <td class="p-4 font-semibold text-red-600">Far IR</td>
+                                    <td class="p-4 font-semibold text-primary">Far IR</td>
                                     <td class="p-4">Pfα (5→6)</td>
                                 </tr>
                             </tbody>
@@ -1110,8 +1137,8 @@
                     <div class="formula-box p-6 rounded-xl border-l-4 border-primary my-6">
                         <h4 class="font-bold text-xl mb-3 text-primary">Number of Spectral Lines</h4>
                         <p class="mb-3">When electron falls from nth orbit to ground state:</p>
-                        <div class="bg-white p-4 rounded-lg">
-                            <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                        <div class="bg-canvas p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                 \[\text{Total lines} = \frac{n(n-1)}{2}\]
                             </div>
                             <p class="text-sm mt-2">Lines in a particular series: (n - n₁) where n₁ is lower level of that series</p>
@@ -1119,14 +1146,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2023 Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Calculate the wavelength of first line of Balmer series (Hα line) for hydrogen.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">For Balmer series: n₁ = 2</p>
                             <p class="mb-2">For first line (Hα): n₂ = 3</p>
                             
@@ -1140,7 +1167,7 @@
                             <div class="math-display">
                                 \[\lambda = \frac{36}{5R} = \frac{36}{5 \times 1.097 \times 10^7}\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\lambda = 6.56 \times 10^{-7} \text{ m} = 656 \text{ nm (Red light)}\]
                             </div>
                         </div>
@@ -1149,7 +1176,7 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.5 Limitations of Bohr's Model</h3>
                     
                     <div class="warning-box p-6 rounded-xl border-l-4 border-danger my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-danger">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Limitations (Important for JEE)
                         </h4>
                         <ol class="list-decimal list-inside space-y-2 text-lg ml-4">
@@ -1166,10 +1193,10 @@
             </section>
 
             <!-- Chapter 4: Quantum Numbers -->
-            <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+            <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                 <div class="flex items-center mb-6">
-                    <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Quantum Numbers</h2>
+                    <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Quantum Numbers</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1177,12 +1204,12 @@
                         Quantum numbers are like the "address" of an electron in an atom. Four quantum numbers uniquely identify each electron. This is one of the highest-scoring topics in JEE!
                     </p>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 The Four Quantum Numbers</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 The Four Quantum Numbers</h3>
                     
                     <div class="space-y-6 my-6">
                         <!-- Principal Quantum Number -->
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h4 class="font-bold text-xl mb-3 text-success">1. Principal Quantum Number (n)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h4 class="font-bold text-xl mb-3 text-primary">1. Principal Quantum Number (n)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <h5 class="font-bold mb-2">Determines:</h5>
@@ -1194,20 +1221,20 @@
                                 </div>
                                 <div>
                                     <h5 class="font-bold mb-2">Values & Names:</h5>
-                                    <div class="bg-white p-3 rounded text-sm">
+                                    <div class="bg-canvas p-3 rounded text-sm">
                                         <p>n = 1, 2, 3, 4, ... (positive integers)</p>
                                         <p class="mt-2">n = 1 (K shell), 2 (L shell), 3 (M shell), 4 (N shell)...</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-green-50 p-3 rounded-lg mt-3">
+                            <div class="bg-surface-2 p-3 rounded-lg mt-3">
                                 <p class="font-semibold">Max electrons in shell = 2n²</p>
                             </div>
                         </div>
 
                         <!-- Azimuthal Quantum Number -->
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h4 class="font-bold text-xl mb-3 text-success">2. Azimuthal/Angular Momentum Quantum Number (l)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h4 class="font-bold text-xl mb-3 text-primary">2. Azimuthal/Angular Momentum Quantum Number (l)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <h5 class="font-bold mb-2">Determines:</h5>
@@ -1219,21 +1246,21 @@
                                 </div>
                                 <div>
                                     <h5 class="font-bold mb-2">Values:</h5>
-                                    <div class="bg-white p-3 rounded text-sm">
+                                    <div class="bg-canvas p-3 rounded text-sm">
                                         <p>l = 0, 1, 2, ... (n-1)</p>
                                         <p class="mt-2">l = 0 (s), 1 (p), 2 (d), 3 (f)</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-green-50 p-3 rounded-lg mt-3">
+                            <div class="bg-surface-2 p-3 rounded-lg mt-3">
                                 <p class="font-semibold">Angular momentum = √(l(l+1)) × ℏ</p>
                                 <p class="text-sm mt-1">Max electrons in subshell = 2(2l+1)</p>
                             </div>
                         </div>
 
                         <!-- Magnetic Quantum Number -->
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h4 class="font-bold text-xl mb-3 text-success">3. Magnetic Quantum Number (m or mₗ)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h4 class="font-bold text-xl mb-3 text-primary">3. Magnetic Quantum Number (m or mₗ)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <h5 class="font-bold mb-2">Determines:</h5>
@@ -1245,20 +1272,20 @@
                                 </div>
                                 <div>
                                     <h5 class="font-bold mb-2">Values:</h5>
-                                    <div class="bg-white p-3 rounded text-sm">
+                                    <div class="bg-canvas p-3 rounded text-sm">
                                         <p>m = -l, (-l+1), ... 0, ... (+l-1), +l</p>
                                         <p class="mt-2">Total values = (2l+1)</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-green-50 p-3 rounded-lg mt-3">
+                            <div class="bg-surface-2 p-3 rounded-lg mt-3">
                                 <p class="font-semibold">Number of orbitals in subshell = (2l+1)</p>
                             </div>
                         </div>
 
                         <!-- Spin Quantum Number -->
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h4 class="font-bold text-xl mb-3 text-success">4. Spin Quantum Number (s or mₛ)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h4 class="font-bold text-xl mb-3 text-primary">4. Spin Quantum Number (s or mₛ)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <h5 class="font-bold mb-2">Determines:</h5>
@@ -1269,24 +1296,24 @@
                                 </div>
                                 <div>
                                     <h5 class="font-bold mb-2">Values:</h5>
-                                    <div class="bg-white p-3 rounded text-sm">
+                                    <div class="bg-canvas p-3 rounded text-sm">
                                         <p>s = +½ (↑, clockwise)</p>
                                         <p>s = -½ (↓, anticlockwise)</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-green-50 p-3 rounded-lg mt-3">
+                            <div class="bg-surface-2 p-3 rounded-lg mt-3">
                                 <p class="font-semibold">Spin angular momentum = √(s(s+1)) × ℏ = √3/2 × ℏ</p>
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Summary Table</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Summary Table</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Subshell</th>
                                     <th class="p-4 text-left">l value</th>
                                     <th class="p-4 text-left">m values</th>
@@ -1294,7 +1321,7 @@
                                     <th class="p-4 text-left">Max electrons</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">s</td>
                                     <td class="p-4">0</td>
@@ -1328,14 +1355,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Find all possible quantum numbers for an electron in 3p orbital.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">For 3p orbital:</p>
                             <ul class="list-disc list-inside space-y-2 ml-4">
                                 <li>n = 3 (3rd shell)</li>
@@ -1344,7 +1371,7 @@
                                 <li>s = +½ or -½ (two possible values)</li>
                             </ul>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg mt-4 border-2 border-accent">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4 border-2 border-accent">
                                 <p class="font-semibold">Possible combinations: 6</p>
                                 <p class="mt-2 text-sm">
                                     (3, 1, -1, +½), (3, 1, -1, -½), (3, 1, 0, +½), (3, 1, 0, -½), (3, 1, +1, +½), (3, 1, +1, -½)
@@ -1357,7 +1384,7 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">💡</span> JEE Quick Formulas
                         </h4>
-                        <div class="bg-white p-4 rounded">
+                        <div class="bg-canvas p-4 rounded">
                             <ul class="list-disc list-inside space-y-2 ml-4">
                                 <li>Number of subshells in nth shell = n</li>
                                 <li>Number of orbitals in nth shell = n²</li>
@@ -1371,10 +1398,10 @@
             </section>
 
             <!-- Chapter 5: Shapes of Orbitals -->
-            <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Shapes of Orbitals</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Shapes of Orbitals</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1448,24 +1475,24 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Nodes in Orbitals</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Types of Nodes</h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2">Radial (Spherical) Nodes</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[= n - l - 1\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2">Angular (Planar) Nodes</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[= l\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <h5 class="font-bold mb-2">Total Nodes</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[= n - 1\]
                                 </div>
                             </div>
@@ -1473,14 +1500,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 4
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Find the number of radial and angular nodes in 4d orbital.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">For 4d: n = 4, l = 2</p>
                             <div class="math-display">
                                 \[\text{Radial nodes} = n - l - 1 = 4 - 2 - 1 = 1\]
@@ -1488,7 +1515,7 @@
                             <div class="math-display">
                                 \[\text{Angular nodes} = l = 2\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\text{Total nodes} = n - 1 = 3\]
                             </div>
                         </div>
@@ -1497,10 +1524,10 @@
             </section>
 
             <!-- Chapter 6: Electronic Configuration -->
-            <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Electronic Configuration</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Electronic Configuration</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1508,20 +1535,20 @@
                         Electronic configuration describes the distribution of electrons in various orbitals. Three rules govern this distribution, and exceptions are frequently tested in JEE.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Rules for Electronic Configuration</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Rules for Electronic Configuration</h3>
                     
                     <div class="space-y-6 my-6">
                         <!-- Aufbau Principle -->
                         <div class="formula-box p-6 rounded-xl border-l-4 border-secondary">
-                            <h4 class="font-bold text-xl mb-3 text-secondary">1. Aufbau Principle</h4>
+                            <h4 class="font-bold text-xl mb-3 text-primary">1. Aufbau Principle</h4>
                             <p class="mb-3">"Electrons fill orbitals in order of increasing energy"</p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Order of Filling (using n+l rule):</h5>
                                 <p class="font-mono text-sm leading-loose">
                                     1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d → 7p
                                 </p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg mt-3">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-3">
                                 <h5 class="font-bold mb-2">(n+l) Rule:</h5>
                                 <p>Lower (n+l) value → fills first</p>
                                 <p>If (n+l) same → lower n fills first</p>
@@ -1530,9 +1557,9 @@
 
                         <!-- Pauli's Exclusion Principle -->
                         <div class="formula-box p-6 rounded-xl border-l-4 border-secondary">
-                            <h4 class="font-bold text-xl mb-3 text-secondary">2. Pauli's Exclusion Principle</h4>
+                            <h4 class="font-bold text-xl mb-3 text-primary">2. Pauli's Exclusion Principle</h4>
                             <p class="mb-3">"No two electrons in an atom can have all four quantum numbers identical"</p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Consequence:</h5>
                                 <ul class="list-disc list-inside space-y-1 ml-4">
                                     <li>Maximum 2 electrons per orbital</li>
@@ -1544,9 +1571,9 @@
 
                         <!-- Hund's Rule -->
                         <div class="formula-box p-6 rounded-xl border-l-4 border-secondary">
-                            <h4 class="font-bold text-xl mb-3 text-secondary">3. Hund's Rule of Maximum Multiplicity</h4>
+                            <h4 class="font-bold text-xl mb-3 text-primary">3. Hund's Rule of Maximum Multiplicity</h4>
                             <p class="mb-3">"Electrons prefer to occupy empty orbitals with parallel spins before pairing"</p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Example: Nitrogen (7 electrons)</h5>
                                 <div class="flex items-center space-x-2 mt-2">
                                     <span class="font-mono">1s²</span>
@@ -1558,7 +1585,7 @@
                                         <span class="border-2 px-2">↑</span>
                                         <span class="border-2 px-2">↑</span>
                                     </div>
-                                    <span class="text-success">✓ Correct</span>
+                                    <span class="text-primary">✓ Correct</span>
                                 </div>
                                 <div class="flex items-center space-x-2 mt-2">
                                     <span class="font-mono">1s²</span>
@@ -1570,25 +1597,25 @@
                                         <span class="border-2 px-2">↑</span>
                                         <span class="border-2 px-2"></span>
                                     </div>
-                                    <span class="text-danger">✗ Wrong</span>
+                                    <span class="text-primary">✗ Wrong</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Important Electronic Configurations</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Important Electronic Configurations</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Element</th>
                                     <th class="p-4 text-left">Z</th>
                                     <th class="p-4 text-left">Configuration</th>
                                     <th class="p-4 text-left">Notes</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Hydrogen</td>
                                     <td class="p-4">1</td>
@@ -1613,17 +1640,17 @@
                                     <td class="p-4 font-mono">1s² 2s² 2p⁴</td>
                                     <td class="p-4">-</td>
                                 </tr>
-                                <tr class="bg-yellow-50">
+                                <tr class="bg-surface-2">
                                     <td class="p-4 font-semibold">Chromium</td>
                                     <td class="p-4">24</td>
                                     <td class="p-4 font-mono">[Ar] 3d⁵ 4s¹</td>
-                                    <td class="p-4 text-danger font-bold">Exception!</td>
+                                    <td class="p-4 text-primary font-bold">Exception!</td>
                                 </tr>
-                                <tr class="bg-yellow-50">
+                                <tr class="bg-surface-2">
                                     <td class="p-4 font-semibold">Copper</td>
                                     <td class="p-4">29</td>
                                     <td class="p-4 font-mono">[Ar] 3d¹⁰ 4s¹</td>
-                                    <td class="p-4 text-danger font-bold">Exception!</td>
+                                    <td class="p-4 text-primary font-bold">Exception!</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">Iron</td>
@@ -1641,10 +1668,10 @@
                         </table>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Exceptions to Aufbau Principle</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Exceptions to Aufbau Principle</h3>
                     
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Important Exceptions (JEE Favorite!)
                         </h4>
                         <p class="mb-3"><strong>Reason:</strong> Half-filled and fully-filled subshells are extra stable due to:</p>
@@ -1652,29 +1679,29 @@
                             <li>Symmetrical electron distribution</li>
                             <li>Maximum exchange energy</li>
                         </ul>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <h5 class="font-bold mb-2 text-primary">Chromium (Z = 24)</h5>
-                                    <p class="text-danger line-through">Expected: [Ar] 3d⁴ 4s²</p>
-                                    <p class="text-success font-bold">Actual: [Ar] 3d⁵ 4s¹ (half-filled d)</p>
+                                    <p class="text-primary line-through">Expected: [Ar] 3d⁴ 4s²</p>
+                                    <p class="text-primary font-bold">Actual: [Ar] 3d⁵ 4s¹ (half-filled d)</p>
                                 </div>
                                 <div>
                                     <h5 class="font-bold mb-2 text-primary">Copper (Z = 29)</h5>
-                                    <p class="text-danger line-through">Expected: [Ar] 3d⁹ 4s²</p>
-                                    <p class="text-success font-bold">Actual: [Ar] 3d¹⁰ 4s¹ (fully-filled d)</p>
+                                    <p class="text-primary line-through">Expected: [Ar] 3d⁹ 4s²</p>
+                                    <p class="text-primary font-bold">Actual: [Ar] 3d¹⁰ 4s¹ (fully-filled d)</p>
                                 </div>
                             </div>
                             <p class="mt-4 text-sm">Other exceptions: Mo, Ag, Au, Pd, etc.</p>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.4 Configuration of Ions</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.4 Configuration of Ions</h3>
                     
                     <div class="formula-box p-6 rounded-xl border-l-4 border-secondary my-6">
                         <h4 class="font-bold text-xl mb-3">Rule for Ion Formation</h4>
                         <p class="mb-3">When forming cations, electrons are removed from the <strong>outermost shell first</strong> (highest n value), NOT from the orbital that was filled last.</p>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <h5 class="font-bold mb-2">Example: Fe²⁺ and Fe³⁺</h5>
                             <p class="mb-2">Fe (Z=26): [Ar] 3d⁶ 4s²</p>
                             <p class="mb-2">Fe²⁺: [Ar] 3d⁶ (remove 2 electrons from 4s, NOT 3d)</p>
@@ -1683,19 +1710,19 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Main Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Write electronic configuration of Cu²⁺ and find number of unpaired electrons.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Cu (Z=29): [Ar] 3d¹⁰ 4s¹ (exception)</p>
                             <p class="mb-2">Cu²⁺: Remove 2 electrons from outermost</p>
                             <p class="mb-2">First remove from 4s¹ → 1 electron removed</p>
                             <p class="mb-2">Then remove from 3d¹⁰ → 1 electron removed</p>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 Cu²⁺: [Ar] 3d⁹
                             </div>
                             <p class="mt-3">3d⁹ has 1 unpaired electron</p>
@@ -1705,10 +1732,10 @@
             </section>
 
             <!-- Chapter 7: Photoelectric Effect -->
-            <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Photoelectric Effect</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Photoelectric Effect</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1718,12 +1745,12 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Phenomenon</h3>
                     
-                    <div class="concept-box p-6 rounded-xl border-2 border-cyan-200 my-6">
+                    <div class="concept-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-3 text-primary">What is Photoelectric Effect?</h4>
                         <p class="mb-3">
                             When light of sufficient frequency falls on a metal surface, electrons are emitted. These emitted electrons are called <strong>photoelectrons</strong>.
                         </p>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <h5 class="font-bold mb-2">Key Observations:</h5>
                             <ol class="list-decimal list-inside space-y-2 ml-4">
                                 <li>Below threshold frequency (ν₀), no emission regardless of intensity</li>
@@ -1736,24 +1763,24 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Einstein's Photoelectric Equation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary text-center">The Fundamental Equation</h4>
-                        <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent text-center">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent text-center">
                             \[h\nu = \phi + KE_{max}\]
                         </div>
-                        <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent text-center mt-3">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent text-center mt-3">
                             \[h\nu = h\nu_0 + \frac{1}{2}mv_{max}^2\]
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                            <div class="bg-white p-3 rounded text-center">
+                            <div class="bg-canvas p-3 rounded text-center">
                                 <p class="font-bold text-primary">hν</p>
                                 <p class="text-sm">Energy of incident photon</p>
                             </div>
-                            <div class="bg-white p-3 rounded text-center">
+                            <div class="bg-canvas p-3 rounded text-center">
                                 <p class="font-bold text-primary">φ = hν₀</p>
                                 <p class="text-sm">Work function (threshold energy)</p>
                             </div>
-                            <div class="bg-white p-3 rounded text-center">
+                            <div class="bg-canvas p-3 rounded text-center">
                                 <p class="font-bold text-primary">½mv²ₘₐₓ</p>
                                 <p class="text-sm">Maximum kinetic energy</p>
                             </div>
@@ -1763,25 +1790,25 @@
                     <div class="formula-box p-6 rounded-xl border-l-4 border-primary my-6">
                         <h4 class="font-bold text-xl mb-3 text-primary">Related Formulas</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Energy of Photon</h5>
                                 <div class="math-display">
                                     \[E = h\nu = \frac{hc}{\lambda}\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Threshold Wavelength</h5>
                                 <div class="math-display">
                                     \[\lambda_0 = \frac{hc}{\phi}\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Stopping Potential</h5>
                                 <div class="math-display">
                                     \[eV_0 = \frac{1}{2}mv_{max}^2\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Energy in eV</h5>
                                 <div class="math-display">
                                     \[E(eV) = \frac{12400}{\lambda(Å)}\]
@@ -1791,14 +1818,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Main Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Light of wavelength 4000 Å falls on a metal surface. If threshold wavelength is 5000 Å, find the maximum kinetic energy of emitted electrons in eV.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Calculate energies</p>
                             <div class="math-display">
                                 \[E_{incident} = \frac{12400}{4000} = 3.1 \text{ eV}\]
@@ -1811,7 +1838,7 @@
                             <div class="math-display">
                                 \[KE_{max} = E - \phi = 3.1 - 2.48\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[KE_{max} = 0.62 \text{ eV}\]
                             </div>
                         </div>
@@ -1824,7 +1851,7 @@
                         <p class="text-lg">
                             This is a super useful shortcut for JEE! Works when wavelength is in Ångströms and you want energy in eV.
                         </p>
-                        <div class="bg-white p-3 rounded mt-3">
+                        <div class="bg-canvas p-3 rounded mt-3">
                             <p class="text-sm">Also: E(eV) = 1240/λ(nm)</p>
                         </div>
                     </div>
@@ -1832,10 +1859,10 @@
             </section>
 
             <!-- Chapter 8: Wave-Particle Duality -->
-            <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+            <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                 <div class="flex items-center mb-6">
-                    <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Wave-Particle Duality</h2>
+                    <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Wave-Particle Duality</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1843,41 +1870,41 @@
                         De Broglie proposed that matter, like light, has both wave and particle properties. Heisenberg's uncertainty principle sets fundamental limits on our knowledge. These concepts form the foundation of quantum mechanics.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">8.1 de Broglie Wavelength</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 de Broglie Wavelength</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success text-center">de Broglie Hypothesis</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary text-center">de Broglie Hypothesis</h4>
                         <p class="text-center mb-4">"Every moving particle has an associated wave"</p>
-                        <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent text-center">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent text-center">
                             \[\lambda = \frac{h}{mv} = \frac{h}{p}\]
                         </div>
                         <p class="text-center mt-2">where λ = de Broglie wavelength, h = Planck's constant, m = mass, v = velocity, p = momentum</p>
                     </div>
 
                     <div class="formula-box p-6 rounded-xl border-l-4 border-success my-6">
-                        <h4 class="font-bold text-xl mb-3 text-success">Important de Broglie Formulas</h4>
+                        <h4 class="font-bold text-xl mb-3 text-primary">Important de Broglie Formulas</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">For Electron accelerated by V volts</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[\lambda = \frac{12.27}{\sqrt{V}} \text{ Å}\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">In terms of Kinetic Energy</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[\lambda = \frac{h}{\sqrt{2mKE}}\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">In terms of Temperature (for gases)</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[\lambda = \frac{h}{\sqrt{3mkT}}\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">For electron in nth orbit</h5>
-                                <div class="math-display bg-yellow-50 p-3 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border-2 border-accent">
                                     \[2\pi r_n = n\lambda\]
                                 </div>
                                 <p class="text-xs mt-1">Circumference = n × de Broglie wavelengths</p>
@@ -1886,62 +1913,62 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 7 (JEE Advanced Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Calculate de Broglie wavelength of an electron accelerated through 100 V.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3">Using the formula for electron accelerated through V volts:</p>
                             <div class="math-display">
                                 \[\lambda = \frac{12.27}{\sqrt{V}} = \frac{12.27}{\sqrt{100}} = \frac{12.27}{10}\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\lambda = 1.227 \text{ Å}\]
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">8.2 Heisenberg's Uncertainty Principle</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Heisenberg's Uncertainty Principle</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success text-center">The Uncertainty Principle</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary text-center">The Uncertainty Principle</h4>
                         <p class="text-center mb-4">"It is impossible to simultaneously determine both position and momentum of a particle with absolute precision"</p>
-                        <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent text-center">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent text-center">
                             \[\Delta x \cdot \Delta p \geq \frac{h}{4\pi}\]
                         </div>
                         <p class="text-center mt-2">or equivalently:</p>
-                        <div class="math-display bg-yellow-50 p-4 rounded-lg border-2 border-accent text-center">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent text-center">
                             \[\Delta x \cdot m\Delta v \geq \frac{h}{4\pi}\]
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                            <div class="bg-white p-3 rounded text-center">
-                                <p class="font-bold text-success">Δx</p>
+                            <div class="bg-canvas p-3 rounded text-center">
+                                <p class="font-bold text-primary">Δx</p>
                                 <p class="text-sm">Uncertainty in position</p>
                             </div>
-                            <div class="bg-white p-3 rounded text-center">
-                                <p class="font-bold text-success">Δp = mΔv</p>
+                            <div class="bg-canvas p-3 rounded text-center">
+                                <p class="font-bold text-primary">Δp = mΔv</p>
                                 <p class="text-sm">Uncertainty in momentum</p>
                             </div>
-                            <div class="bg-white p-3 rounded text-center">
-                                <p class="font-bold text-success">h/4π</p>
+                            <div class="bg-canvas p-3 rounded text-center">
+                                <p class="font-bold text-primary">h/4π</p>
                                 <p class="text-sm">≈ 0.528 × 10⁻³⁴ J·s</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="formula-box p-6 rounded-xl border-l-4 border-success my-6">
-                        <h4 class="font-bold text-xl mb-3 text-success">Other Forms of Uncertainty Principle</h4>
+                        <h4 class="font-bold text-xl mb-3 text-primary">Other Forms of Uncertainty Principle</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Energy-Time Uncertainty</h5>
                                 <div class="math-display">
                                     \[\Delta E \cdot \Delta t \geq \frac{h}{4\pi}\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <h5 class="font-bold mb-2">Angular versions</h5>
                                 <div class="math-display">
                                     \[\Delta \theta \cdot \Delta L \geq \frac{h}{4\pi}\]
@@ -1951,7 +1978,7 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 8
                         </h4>
                         <p class="text-lg mb-3">
@@ -1959,7 +1986,7 @@
                             <br>(mass of electron = 9.1 × 10⁻³¹ kg, h = 6.6 × 10⁻³⁴ J·s)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Given: Δx = 0.1 Å = 0.1 × 10⁻¹⁰ m = 10⁻¹¹ m</p>
                             
                             <p class="mb-3 mt-4">Using Heisenberg's principle:</p>
@@ -1972,7 +1999,7 @@
                             <div class="math-display">
                                 \[\Delta v \geq \frac{6.6 \times 10^{-34}}{4 \times 3.14 \times 9.1 \times 10^{-31} \times 10^{-11}}\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\Delta v \geq 5.77 \times 10^6 \text{ m/s}\]
                             </div>
                         </div>
@@ -1993,14 +2020,14 @@
             </section>
 
             <!-- Previous Year Questions Analysis -->
-            <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+            <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">📝</span>
                     Previous Year Questions Analysis
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Bohr's Model Calculations: 35%</li>
@@ -2010,7 +2037,7 @@
                             <li>✓ de Broglie & Uncertainty: 10%</li>
                         </ul>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Bohr Model + Spectral Lines: 30%</li>
@@ -2022,8 +2049,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                    <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Calculate radius, velocity, energy in nth orbit for H-like species</li>
                         <li>Number of spectral lines when electron falls from nth level</li>
@@ -2038,7 +2065,7 @@
                     </ol>
                 </div>
 
-                 <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                 <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                     <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                     <div class="space-y-3">
                         <div class="flex justify-between items-center">
@@ -2061,21 +2088,21 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Download Complete PYQ PDF (2015-2024)
                     </a>
                 </div>
             </section>
 
             <!-- Practice Problems -->
-            <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+            <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">🎯</span>
                     Practice Problem Set
                 </h2>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Calculate the radius and energy of electron in 2nd orbit of He⁺ ion.</li>
                         <li>Find the wavelength of first line of Lyman series for hydrogen atom.</li>
@@ -2090,8 +2117,8 @@
                     </ol>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Calculate the ionization energy of Li²⁺ ion from ground state in eV and kJ/mol.</li>
                         <li>An electron in H-atom jumps from n=5 to n=2. Find wavelength of radiation emitted.</li>
@@ -2106,8 +2133,8 @@
                     </ol>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>In Bohr's model, the ratio of time period of electron in 2nd orbit of He⁺ to that in 3rd orbit of H is?</li>
                         <li>The wavelength of first line of Balmer series of H is 6563 Å. Calculate wavelength of first line of Lyman series.</li>
@@ -2123,14 +2150,14 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Get Solutions PDF with Step-by-Step Working
                     </a>
                 </div>
             </section>
 
             <!-- Formula Sheet -->
-            <section class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl shadow-2xl p-8 mt-12">
+            <section class="bg-gradient-to-br from-canvas to-surface-1 text-ink rounded-2xl border border-hairline p-8 mt-12">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">📋</span>
                     Quick Formula Sheet - Atomic Structure
@@ -2138,8 +2165,8 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Bohr Model Formulas -->
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 text-accent">Bohr Model Formulas</h3>
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Bohr Model Formulas</h3>
                         <div class="space-y-3 text-sm font-mono">
                             <p>r_n = 0.529 × n²/Z Å</p>
                             <p>v_n = 2.18 × 10⁶ × Z/n m/s</p>
@@ -2152,8 +2179,8 @@
                     </div>
 
                     <!-- Spectral Lines -->
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 text-accent">Spectral Lines</h3>
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Spectral Lines</h3>
                         <div class="space-y-3 text-sm font-mono">
                             <p>1/λ = RZ²(1/n₁² - 1/n₂²)</p>
                             <p>R = 1.097 × 10⁷ m⁻¹</p>
@@ -2165,8 +2192,8 @@
                     </div>
 
                     <!-- Quantum Numbers -->
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 text-accent">Quantum Numbers</h3>
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Quantum Numbers</h3>
                         <div class="space-y-3 text-sm font-mono">
                             <p>n = 1, 2, 3, ... (shells)</p>
                             <p>l = 0 to (n-1) (subshells)</p>
@@ -2179,8 +2206,8 @@
                     </div>
 
                     <!-- Nodes -->
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 text-accent">Nodes in Orbitals</h3>
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Nodes in Orbitals</h3>
                         <div class="space-y-3 text-sm font-mono">
                             <p>Radial nodes = n - l - 1</p>
                             <p>Angular nodes = l</p>
@@ -2191,8 +2218,8 @@
                     </div>
 
                     <!-- Photoelectric Effect -->
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 text-accent">Photoelectric Effect</h3>
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Photoelectric Effect</h3>
                         <div class="space-y-3 text-sm font-mono">
                             <p>hν = φ + ½mv²_max</p>
                             <p>φ = hν₀ (work function)</p>
@@ -2202,8 +2229,8 @@
                     </div>
 
                     <!-- Wave-Particle Duality -->
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
-                        <h3 class="text-xl font-bold mb-4 text-accent">Wave-Particle Duality</h3>
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Wave-Particle Duality</h3>
                         <div class="space-y-3 text-sm font-mono">
                             <p>λ = h/mv = h/p (de Broglie)</p>
                             <p>λ = 12.27/√V Å (for e⁻)</p>
@@ -2216,57 +2243,75 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-accent text-white px-10 py-4 rounded-full text-xl font-bold hover:bg-yellow-500 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-accent text-ink px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-2 transition border border-hairline">
                         📥 Download Printable Formula Sheet PDF
                     </a>
                 </div>
             </section>
 
-        </main>
+            <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./chemical-equilibrium.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Chemical Equilibrium</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./chemical-kinetics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Chemical Kinetics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./electrochemistry.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Electrochemistry</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
     </div>
 </div>
 
 <!-- Related Notes Section -->
-<section class="bg-white py-12 mt-12 border-t-4 border-primary">
+<section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+        <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
             <span class="w-2 h-10 bg-primary rounded mr-4"></span>
             Related Chemistry Notes
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Related Note 1 -->
-            <a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+            <a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                    <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Some Basic Concepts of Chemistry</h3>
-                <p class="text-gray-600">Mole concept, Stoichiometry, Percentage composition, Concentration terms</p>
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Some Basic Concepts of Chemistry</h3>
+                <p class="text-ink-muted">Mole concept, Stoichiometry, Percentage composition, Concentration terms</p>
                 <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
 
             <!-- Related Note 2 -->
-            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-bonding" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-bonding" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                    <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Chemical Bonding & Molecular Structure</h3>
-                <p class="text-gray-600">Ionic bond, Covalent bond, VSEPR theory, Hybridization, MOT</p>
-                <div class="mt-4 text-secondary font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Chemical Bonding & Molecular Structure</h3>
+                <p class="text-ink-muted">Ionic bond, Covalent bond, VSEPR theory, Hybridization, MOT</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
 
             <!-- Related Note 3 -->
-            <a href="https://jeeprepguide.netlify.app/jee/chemistry/periodic-table" class="group bg-gradient-to-br from-cyan-50 to-cyan-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+            <a href="https://jeeprepguide.netlify.app/jee/chemistry/periodic-table" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                 <div class="flex items-center mb-3">
-                    <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                    <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Classification of Elements & Periodicity</h3>
-                <p class="text-gray-600">Periodic table, Periodic trends, Ionization energy, Electron affinity</p>
-                <div class="mt-4 text-success font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Classification of Elements & Periodicity</h3>
+                <p class="text-ink-muted">Periodic table, Periodic trends, Ionization energy, Electron affinity</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
@@ -2274,7 +2319,7 @@
 
         <!-- More Notes Link -->
         <div class="text-center mt-10">
-            <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+            <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                 View All Chemistry Notes →
             </a>
         </div>
@@ -2282,34 +2327,34 @@
 </section>
 
 <!-- SEO-Optimized Summary Section -->
-<section class="py-16 bg-gradient-to-br from-gray-50 to-green-50">
+<section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <article class="prose max-w-none">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6">Atomic Structure - Complete Guide for JEE 2025-26</h2>
+            <h2 class="text-4xl font-bold text-ink mb-6">Atomic Structure - Complete Guide for JEE 2025-26</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Why Atomic Structure is Crucial for JEE?</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-ink-muted leading-relaxed mb-4">
                         <strong>Atomic Structure</strong> is one of the most important chapters in <strong>JEE Chemistry</strong> with 8-12% weightage. It forms the foundation for:
                     </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                         <li><strong>Chemical Bonding</strong> - Understanding orbitals and electronic configuration</li>
                         <li><strong>Periodic Properties</strong> - Explaining trends using atomic structure</li>
                         <li><strong>Coordination Chemistry</strong> - d-orbital splitting and bonding</li>
                         <li><strong>Organic Chemistry</strong> - Hybridization concepts</li>
                     </ul>
-                    <p class="text-gray-700 leading-relaxed mt-4">
+                    <p class="text-ink-muted leading-relaxed mt-4">
                         In <strong>JEE Advanced</strong>, complex problems combining Bohr model, spectral lines, and wave-particle duality are common. Mastering this chapter can guarantee 15-20 marks across both papers.
                     </p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Key Formulas to Memorize</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">1. Bohr Model (Most Important)</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">1. Bohr Model (Most Important)</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• r_n = 0.529 × n²/Z Å</li>
                                 <li>• v_n = 2.18 × 10⁶ × Z/n m/s</li>
                                 <li>• E_n = -13.6 × Z²/n² eV</li>
@@ -2317,16 +2362,16 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">2. Quantum Numbers</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">2. Quantum Numbers</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• Max electrons in shell = 2n²</li>
                                 <li>• Max electrons in subshell = 2(2l+1)</li>
                                 <li>• Total nodes = n - 1</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">3. Wave-Particle Duality</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">3. Wave-Particle Duality</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• λ = h/mv (de Broglie)</li>
                                 <li>• λ = 12.27/√V Å (for electrons)</li>
                                 <li>• Δx·Δp ≥ h/4π (Heisenberg)</li>
@@ -2337,12 +2382,12 @@
             </div>
             
             <!-- Study Tips -->
-            <div class="mt-8 bg-gradient-to-r from-green-100 to-purple-100 p-8 rounded-2xl">
+            <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Atomic Structure Effectively?</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 4-5 days (3 hours/day)</li>
                             <li>Master <strong>Bohr model formulas</strong> - solve 50+ numerical problems</li>
                             <li>Learn all <strong>spectral series</strong> with their regions</li>
@@ -2353,7 +2398,7 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 6-7 days (4 hours/day)</li>
                             <li>Deep dive into <strong>spectral line problems</strong> (comparison type)</li>
                             <li>Master <strong>de Broglie and Heisenberg</strong> with derivations</li>
@@ -2366,35 +2411,35 @@
             </div>
             
             <!-- Common Mistakes -->
-            <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                <ul class="space-y-3 text-gray-700">
+            <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                <ul class="space-y-3 text-ink-muted">
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Confusing n₁ and n₂ in Rydberg formula:</strong> Remember n₁ is always lower orbit (where electron goes), n₂ is higher orbit (where electron comes from)
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Forgetting exceptions in electronic configuration:</strong> Cr is [Ar]3d⁵4s¹ NOT [Ar]3d⁴4s², Cu is [Ar]3d¹⁰4s¹ NOT [Ar]3d⁹4s²
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Wrong ion configuration:</strong> For cations, remove electrons from outermost shell (4s before 3d for transition metals)
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Mixing up KE and PE signs:</strong> KE = -TE (positive), PE = 2TE (negative)
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Using wrong units in de Broglie formula:</strong> λ = 12.27/√V gives Å only when V is in volts
                         </div>
@@ -2403,11 +2448,11 @@
             </div>
             
             <!-- Previous Year Analysis -->
-            <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+            <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                 <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                 <div class="overflow-x-auto">
                     <table class="w-full border-collapse">
-                        <thead class="bg-primary text-white">
+                        <thead class="bg-primary text-ink">
                             <tr>
                                 <th class="p-3 text-left">Year</th>
                                 <th class="p-3 text-left">JEE Main</th>
@@ -2416,31 +2461,31 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y">
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2024</td>
                                 <td class="p-3">3 Questions (12 marks)</td>
                                 <td class="p-3">4 Questions (15 marks)</td>
                                 <td class="p-3">Bohr model, Electronic configuration, de Broglie</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2023</td>
                                 <td class="p-3">2 Questions (8 marks)</td>
                                 <td class="p-3">3 Questions (12 marks)</td>
                                 <td class="p-3">Spectral lines, Quantum numbers, Photoelectric</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2022</td>
                                 <td class="p-3">3 Questions (12 marks)</td>
                                 <td class="p-3">5 Questions (18 marks)</td>
                                 <td class="p-3">H-like species comparison, Wave-particle duality</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2021</td>
                                 <td class="p-3">2 Questions (8 marks)</td>
                                 <td class="p-3">3 Questions (11 marks)</td>
                                 <td class="p-3">Nodes in orbitals, Energy calculations</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2020</td>
                                 <td class="p-3">2 Questions (8 marks)</td>
                                 <td class="p-3">4 Questions (14 marks)</td>
@@ -2449,44 +2494,44 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="text-gray-700 mt-4 text-sm">
+                <p class="text-ink-muted mt-4 text-sm">
                     <strong>Trend:</strong> JEE is increasingly asking conceptual questions and multi-step numerical problems. Questions comparing properties of H, He⁺, Li²⁺ are very common. Electronic configuration of ions (especially transition metals) is asked every year.
                 </p>
             </div>
 
             <!-- Important Constants -->
-            <div class="mt-8 bg-gradient-to-r from-gray-800 to-gray-900 text-white p-8 rounded-2xl">
+            <div class="mt-8 bg-gradient-to-r from-surface-1 to-canvas text-ink p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold mb-4">📌 Important Constants for Quick Reference</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-white/10 p-4 rounded-lg text-center">
+                    <div class="bg-canvas/10 p-4 rounded-lg text-center">
                         <p class="text-sm opacity-80">Planck's Constant</p>
                         <p class="font-mono font-bold">h = 6.626 × 10⁻³⁴ J·s</p>
                     </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center">
+                    <div class="bg-canvas/10 p-4 rounded-lg text-center">
                         <p class="text-sm opacity-80">Rydberg Constant</p>
                         <p class="font-mono font-bold">R = 1.097 × 10⁷ m⁻¹</p>
                     </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center">
+                    <div class="bg-canvas/10 p-4 rounded-lg text-center">
                         <p class="text-sm opacity-80">Electron Mass</p>
                         <p class="font-mono font-bold">mₑ = 9.1 × 10⁻³¹ kg</p>
                     </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center">
+                    <div class="bg-canvas/10 p-4 rounded-lg text-center">
                         <p class="text-sm opacity-80">Electron Charge</p>
                         <p class="font-mono font-bold">e = 1.6 × 10⁻¹⁹ C</p>
                     </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center">
+                    <div class="bg-canvas/10 p-4 rounded-lg text-center">
                         <p class="text-sm opacity-80">Speed of Light</p>
                         <p class="font-mono font-bold">c = 3 × 10⁸ m/s</p>
                     </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center">
+                    <div class="bg-canvas/10 p-4 rounded-lg text-center">
                         <p class="text-sm opacity-80">Bohr Radius</p>
                         <p class="font-mono font-bold">a₀ = 0.529 Å</p>
                     </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center">
+                    <div class="bg-canvas/10 p-4 rounded-lg text-center">
                         <p class="text-sm opacity-80">Avogadro's Number</p>
                         <p class="font-mono font-bold">Nₐ = 6.022 × 10²³</p>
                     </div>
-                    <div class="bg-white/10 p-4 rounded-lg text-center">
+                    <div class="bg-canvas/10 p-4 rounded-lg text-center">
                         <p class="text-sm opacity-80">1 eV</p>
                         <p class="font-mono font-bold">= 1.6 × 10⁻¹⁹ J</p>
                     </div>
@@ -2498,17 +2543,17 @@
 </section>
 
 <!-- FAQ Section for SEO -->
-<section class="py-12 bg-white">
+<section class="py-12 bg-canvas">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions - Atomic Structure</h2>
+        <h2 class="text-3xl font-bold text-ink mb-8 text-center">Frequently Asked Questions - Atomic Structure</h2>
         
         <div class="space-y-4">
-            <details class="bg-gray-50 rounded-xl p-6 group">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-gray-900">
+            <details class="bg-surface-1 rounded-xl p-6 group">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-ink">
                     What are the four quantum numbers?
                     <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div class="mt-4 text-gray-700">
+                <div class="mt-4 text-ink-muted">
                     <p>The four quantum numbers are:</p>
                     <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
                         <li><strong>Principal quantum number (n):</strong> Determines shell and energy level (n = 1, 2, 3...)</li>
@@ -2519,12 +2564,12 @@
                 </div>
             </details>
 
-            <details class="bg-gray-50 rounded-xl p-6 group">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-gray-900">
+            <details class="bg-surface-1 rounded-xl p-6 group">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-ink">
                     What is the formula for energy of electron in Bohr's model?
                     <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div class="mt-4 text-gray-700">
+                <div class="mt-4 text-ink-muted">
                     <p>The energy of electron in nth orbit is given by: <strong>E_n = -13.6 × Z²/n² eV</strong></p>
                     <p class="mt-2">Where Z is atomic number and n is principal quantum number.</p>
                     <p class="mt-2">For hydrogen atom (Z=1), ground state energy (n=1) is -13.6 eV.</p>
@@ -2532,12 +2577,12 @@
                 </div>
             </details>
 
-            <details class="bg-gray-50 rounded-xl p-6 group">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-gray-900">
+            <details class="bg-surface-1 rounded-xl p-6 group">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-ink">
                     Why are Cr and Cu exceptions to Aufbau principle?
                     <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div class="mt-4 text-gray-700">
+                <div class="mt-4 text-ink-muted">
                     <p>Chromium (Z=24) and Copper (Z=29) are exceptions because <strong>half-filled and fully-filled d-orbitals are extra stable</strong> due to:</p>
                     <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
                         <li>Symmetrical distribution of electrons</li>
@@ -2548,12 +2593,12 @@
                 </div>
             </details>
 
-            <details class="bg-gray-50 rounded-xl p-6 group">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-gray-900">
+            <details class="bg-surface-1 rounded-xl p-6 group">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-ink">
                     How to calculate de Broglie wavelength?
                     <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div class="mt-4 text-gray-700">
+                <div class="mt-4 text-ink-muted">
                     <p>de Broglie wavelength is calculated using: <strong>λ = h/mv = h/p</strong></p>
                     <p class="mt-2">Where h = Planck's constant, m = mass, v = velocity, p = momentum</p>
                     <p class="mt-2"><strong>For electron accelerated through V volts:</strong> λ = 12.27/√V Ångströms</p>
@@ -2561,12 +2606,12 @@
                 </div>
             </details>
 
-            <details class="bg-gray-50 rounded-xl p-6 group">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-gray-900">
+            <details class="bg-surface-1 rounded-xl p-6 group">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-ink">
                     What are the limitations of Bohr's model?
                     <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div class="mt-4 text-gray-700">
+                <div class="mt-4 text-ink-muted">
                     <p>Major limitations of Bohr's model include:</p>
                     <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
                         <li>Cannot explain spectra of multi-electron atoms (only works for H-like species)</li>
@@ -2579,12 +2624,12 @@
                 </div>
             </details>
 
-            <details class="bg-gray-50 rounded-xl p-6 group">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-gray-900">
+            <details class="bg-surface-1 rounded-xl p-6 group">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-lg text-ink">
                     How many electrons can each subshell hold?
                     <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div class="mt-4 text-gray-700">
+                <div class="mt-4 text-ink-muted">
                     <p>Each subshell can hold maximum <strong>2(2l+1) electrons</strong>:</p>
                     <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
                         <li><strong>s-subshell (l=0):</strong> 2(2×0+1) = 2 electrons</li>
@@ -2599,102 +2644,102 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+<footer class="bg-canvas text-ink py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">sitemap</a></li>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
-                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-white transition">Physics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Mathematics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Study Tips</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-ink transition">Physics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Mathematics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Study Tips</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         </ul>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Last Updated: 14 March, 2026</p>
+        <div class="border-t border-hairline pt-8 text-center">
+            <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+            <p class="text-ink-subtle text-xs mt-2">Last Updated: 14 March, 2026</p>
         </div>
     </div>
 </footer>
 
 <!-- Scroll to Top Button -->
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-        class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+        class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
     ↑
 </button>
 <!-- Scripts -->

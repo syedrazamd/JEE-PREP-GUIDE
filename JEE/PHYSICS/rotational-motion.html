@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Rotational Motion - Complete JEE Physics Notes with 150+ Examples">
     <meta property="og:description" content="Master moment of inertia, torque, angular momentum & rolling motion. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Rotational Motion - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/rotational-motion">
     <meta name="twitter:title" content="Rotational Motion - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master rotational motion with 150+ solved examples. Complete notes on moment of inertia, torque & angular momentum for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Rotational Motion JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Rotational Motion - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Rotational Motion covering moment of inertia, torque, angular momentum, rolling motion with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -359,7 +372,7 @@
       "@type": "VideoObject",
       "name": "Rotational Motion - Complete Tutorial",
       "description": "Learn Rotational Motion for JEE with examples",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT90M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/physics/rotational-motion"
@@ -396,59 +409,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -457,30 +472,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Rotational Motion</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Rotational Motion</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -488,32 +503,32 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Rotational Motion</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Rotational Motion</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Kinematics
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Moment of Inertia
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Theorems
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Torque
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Angular Momentum
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Dynamics
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Rolling Motion
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Energy
                 </a>
             </div>
@@ -521,28 +536,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Rotational Motion
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the complete rotational mechanics with detailed notes on Moment of Inertia, Torque, Angular Momentum, and Rolling Motion. Includes 150+ solved problems, all theorems, and JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All MI Formulas</span>
                     </div>
                 </div>
@@ -551,21 +566,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Rotational Motion JEE Notes">
         <meta itemprop="description" content="Complete study notes for Rotational Motion">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.8</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">245</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -575,15 +590,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -595,52 +610,64 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Rotational Kinematics</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Moment of Inertia</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. MI Theorems</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Torque</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Angular Momentum</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Rotational Dynamics</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Rolling Motion</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Energy in Rotation</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Rotational Kinematics</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Moment of Inertia</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. MI Theorems</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Torque</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Angular Momentum</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Rotational Dynamics</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Rolling Motion</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Energy in Rotation</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./centre-of-mass-and-collision.html" class="text-primary font-semibold hover:underline">Centre Of Mass And Collision &rarr;</a>
+                <a href="./gravitation.html" class="text-primary font-semibold hover:underline">Gravitation &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/rotational-motion.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/rotational-motion.webp"
                         alt="Rotational Motion JEE notes, Formulas, PYQs"
                         title="Rotational Motion — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Rotational Motion JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Rotational Kinematics -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Rotational Kinematics</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Rotational Kinematics</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -651,30 +678,30 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Angular Quantities</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Angular Displacement (θ)</h5>
                                 <p class="mb-3">Angle through which a body rotates about an axis</p>
-                                <div class="math-display bg-white p-3 rounded">
+                                <div class="math-display bg-canvas p-3 rounded">
                                     \[\theta = \frac{s}{r}\]
                                 </div>
                                 <p class="text-sm mt-2">Unit: radian (dimensionless)</p>
                                 <p class="text-sm">1 revolution = 2π rad = 360°</p>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Angular Velocity (ω)</h5>
                                 <p class="mb-3">Rate of change of angular displacement</p>
-                                <div class="math-display bg-white p-3 rounded">
+                                <div class="math-display bg-canvas p-3 rounded">
                                     \[\omega = \frac{d\theta}{dt}\]
                                 </div>
                                 <p class="text-sm mt-2">Unit: rad/s</p>
                                 <p class="text-sm">Direction: Right hand rule</p>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Angular Acceleration (α)</h5>
                                 <p class="mb-3">Rate of change of angular velocity</p>
-                                <div class="math-display bg-white p-3 rounded">
+                                <div class="math-display bg-canvas p-3 rounded">
                                     \[\alpha = \frac{d\omega}{dt}\]
                                 </div>
                                 <p class="text-sm mt-2">Unit: rad/s²</p>
@@ -684,29 +711,29 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Relationship Between Linear and Angular Quantities</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Important Relationships (Must Memorize!)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Displacement</p>
                                     <div class="math-display text-base">
                                         \[s = r\theta\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Velocity</p>
                                     <div class="math-display text-base">
                                         \[v = r\omega\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Acceleration</p>
                                     <div class="math-display text-base">
                                         \[a_t = r\alpha\]
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-yellow-50 p-4 rounded-lg mt-4 border-l-4 border-accent">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4 border-l-4 border-accent">
                                 <p class="font-semibold mb-2">Centripetal Acceleration:</p>
                                 <div class="math-display text-base">
                                     \[a_c = \frac{v^2}{r} = r\omega^2\]
@@ -717,15 +744,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Equations of Rotational Motion</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Linear Motion</th>
                                         <th class="p-4 text-left">Rotational Motion</th>
                                         <th class="p-4 text-left">Condition</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-mono">v = u + at</td>
                                         <td class="p-4 font-mono">ω = ω₀ + αt</td>
@@ -762,14 +789,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main 2023)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A wheel rotating at 900 rpm slows down uniformly to 300 rpm in 20 seconds. Find (a) angular acceleration, (b) number of revolutions in this time.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Given:</strong></p>
                                 <p>Initial speed: n₀ = 900 rpm = 900/60 = 15 rps</p>
                                 <p>Final speed: n = 300 rpm = 5 rps</p>
@@ -790,7 +817,7 @@
                                 <div class="math-display">
                                     \[10\pi = 30\pi + \alpha(20)\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\alpha = -\pi \text{ rad/s}^2 = -3.14 \text{ rad/s}^2\]
                                 </div>
                                 
@@ -804,7 +831,7 @@
                                 <div class="math-display">
                                     \[\theta = 600\pi - 200\pi = 400\pi \text{ rad}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Number of revolutions} = \frac{400\pi}{2\pi} = 200\]
                                 </div>
                             </div>
@@ -813,10 +840,10 @@
                 </section>
 
                 <!-- Chapter 2: Moment of Inertia -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Moment of Inertia</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Moment of Inertia</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -824,14 +851,14 @@
                             Moment of Inertia (MI) is the rotational analogue of mass. It measures how difficult it is to change the rotational state of a body. This is one of the highest-scoring topics in JEE rotational motion.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Definition and Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Definition and Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Moment of Inertia (I)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Moment of Inertia (I)</h4>
                             <p class="text-lg mb-4">
                                 For a system of particles:
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[I = \sum_{i=1}^{n} m_i r_i^2\]
                             </div>
                             <p class="text-sm mt-3">where m<sub>i</sub> is mass of i<sup>th</sup> particle, r<sub>i</sub> is perpendicular distance from axis</p>
@@ -839,14 +866,14 @@
                             <p class="text-lg mb-4 mt-6">
                                 For a continuous body:
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[I = \int r^2 \, dm\]
                             </div>
                             <p class="text-sm mt-3"><strong>Unit:</strong> kg·m² | <strong>Dimension:</strong> [ML²]</p>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Key Points About MI
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -858,35 +885,35 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Radius of Gyration (k)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Radius of Gyration (k)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 Radius of gyration is the distance from the axis at which the entire mass can be assumed to be concentrated to give the same moment of inertia.
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[I = Mk^2\]
                             </div>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg mt-3">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg mt-3">
                                 \[k = \sqrt{\frac{I}{M}}\]
                             </div>
                             <p class="text-sm mt-3">where M is total mass, k has unit of length (meter)</p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 MI of Standard Bodies (Must Memorize!)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 MI of Standard Bodies (Must Memorize!)</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Object</th>
                                         <th class="p-4 text-left">Axis</th>
                                         <th class="p-4 text-left">Moment of Inertia</th>
                                         <th class="p-4 text-left">Radius of Gyration</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Thin Rod</td>
                                         <td class="p-4">Through center, ⊥ to length</td>
@@ -965,14 +992,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Advanced 2022)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the moment of inertia of a uniform rod of mass M and length L about an axis passing through a point at distance L/4 from one end and perpendicular to the rod.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Method 1: Using Parallel Axis Theorem (Covered in next chapter)</strong></p>
                                 <p class="mb-2">MI about center: I<sub>cm</sub> = ML²/12</p>
                                 <p class="mb-2">Distance from center to given point: d = L/4</p>
@@ -985,7 +1012,7 @@
                                 <div class="math-display">
                                     \[I = \frac{ML^2}{12} + \frac{ML^2}{16}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[I = \frac{4ML^2 + 3ML^2}{48} = \frac{7ML^2}{48}\]
                                 </div>
 
@@ -1001,7 +1028,7 @@
                                 <div class="math-display">
                                     \[I = \frac{M}{L} \times \frac{1}{3}\left[\left(\frac{3L}{4}\right)^3 - \left(-\frac{L}{4}\right)^3\right]\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[I = \frac{7ML^2}{48}\]
                                 </div>
                             </div>
@@ -1010,10 +1037,10 @@
                 </section>
 
                 <!-- Chapter 3: Theorems of Moment of Inertia -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Theorems of Moment of Inertia</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Theorems of Moment of Inertia</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1021,26 +1048,26 @@
                             Two fundamental theorems allow us to calculate MI about any axis if we know MI about certain standard axes. These theorems are extremely important for JEE and save enormous calculation time.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.1 Parallel Axis Theorem</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Parallel Axis Theorem</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Statement</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Statement</h4>
                             <p class="text-lg mb-4">
                                 The moment of inertia about any axis is equal to the moment of inertia about a parallel axis through the center of mass plus the product of mass and square of distance between the two axes.
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[I = I_{cm} + Md^2\]
                             </div>
                             <div class="grid grid-cols-3 gap-4 mt-4 text-sm">
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">I</p>
                                     <p>MI about given axis</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">I<sub>cm</sub></p>
                                     <p>MI about parallel axis through CM</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">d</p>
                                     <p>Distance between axes</p>
                                 </div>
@@ -1060,10 +1087,10 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Proof of Parallel Axis Theorem
                             </h4>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Consider a body rotating about axis AB at distance d from CM axis.</p>
                                 <p class="mb-3">For any particle at position r from CM:</p>
                                 <div class="math-display">
@@ -1077,20 +1104,20 @@
                                     \[= \sum m_i r'^2_i + 2d\sum m_i r'_i + d^2\sum m_i\]
                                 </div>
                                 <p class="mb-2 mt-3">Note: Σm<sub>i</sub>r'<sub>i</sub> = 0 (definition of center of mass)</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[I_{AB} = I_{cm} + Md^2\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.2 Perpendicular Axis Theorem</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Perpendicular Axis Theorem</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Statement</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Statement</h4>
                             <p class="text-lg mb-4">
                                 For a planar body (lamina), the moment of inertia about an axis perpendicular to the plane is equal to the sum of moments of inertia about two perpendicular axes in the plane that intersect at the point where the perpendicular axis passes.
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[I_z = I_x + I_y\]
                             </div>
                             <p class="text-sm mt-4 text-center">
@@ -1099,7 +1126,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Critical Points
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1112,10 +1139,10 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Application: MI of Ring about Diameter
                             </h4>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">For a ring of mass M and radius R:</p>
                                 
                                 <p class="mb-2"><strong>Known:</strong> I<sub>z</sub> (perpendicular to plane) = MR²</p>
@@ -1130,22 +1157,22 @@
                                 <div class="math-display">
                                     \[MR^2 = I_x + I_x = 2I_x\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[I_x = \frac{MR^2}{2}\]
                                 </div>
-                                <p class="text-sm mt-3 text-gray-600">This formula is frequently used in JEE problems!</p>
+                                <p class="text-sm mt-3 text-ink-muted">This formula is frequently used in JEE problems!</p>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main 2024 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A uniform square plate of side 'a' and mass M has moment of inertia I about an axis passing through center and perpendicular to plane. Find MI about a diagonal.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Step 1:</strong> Find I about perpendicular axis</p>
                                 <p class="mb-2">By perpendicular axis theorem for two edges parallel to sides:</p>
                                 <div class="math-display">
@@ -1168,7 +1195,7 @@
                                 <div class="math-display">
                                     \[\frac{Ma^2}{6} = I_d + I_d = 2I_d\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[I_d = \frac{Ma^2}{12}\]
                                 </div>
                             </div>
@@ -1177,10 +1204,10 @@
                 </section>
 
                 <!-- Chapter 4: Torque -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Torque</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Torque</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1188,32 +1215,32 @@
                             Torque is the rotational analogue of force. Just as force causes linear acceleration, torque causes angular acceleration. Understanding torque is crucial for solving equilibrium and dynamics problems.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Definition of Torque</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Definition of Torque</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Mathematical Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Mathematical Definition</h4>
                             <p class="text-lg mb-4">
                                 Torque is the cross product of position vector and force:
                             </p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{\tau} = \vec{r} \times \vec{F}\]
                             </div>
                             <p class="text-lg mb-4 mt-4">
                                 Magnitude:
                             </p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\tau = rF\sin\theta = r_{\perp}F = rF_{\perp}\]
                             </div>
                             <div class="grid grid-cols-3 gap-4 mt-4">
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold text-center">r</p>
                                     <p class="text-sm text-center">Distance from axis</p>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold text-center">F</p>
                                     <p class="text-sm text-center">Applied force</p>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold text-center">θ</p>
                                     <p class="text-sm text-center">Angle between r and F</p>
                                 </div>
@@ -1234,18 +1261,18 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 Torque and Angular Acceleration</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Torque and Angular Acceleration</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Newton's Second Law for Rotation</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Newton's Second Law for Rotation</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Linear Motion</p>
                                     <div class="math-display text-lg">
                                         \[F = ma\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Rotational Motion</p>
                                     <div class="math-display text-lg">
                                         \[\tau = I\alpha\]
@@ -1256,14 +1283,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Main 2023)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A force F = 10 N is applied tangentially to a disc of radius R = 0.5 m and mass M = 2 kg. Find the angular acceleration of the disc.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Given:</strong></p>
                                 <p>F = 10 N (tangential force)</p>
                                 <p>R = 0.5 m</p>
@@ -1288,25 +1315,25 @@
                                 <div class="math-display">
                                     \[\alpha = \frac{\tau}{I} = \frac{5}{0.25}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\alpha = 20 \text{ rad/s}^2\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Equilibrium Conditions</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Equilibrium Conditions</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Conditions for Equilibrium</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Conditions for Equilibrium</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-semibold mb-3 text-center">Translational Equilibrium</h5>
                                     <div class="math-display text-lg">
                                         \[\sum \vec{F} = 0\]
                                     </div>
                                     <p class="text-sm text-center mt-2">Net force = 0</p>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-semibold mb-3 text-center">Rotational Equilibrium</h5>
                                     <div class="math-display text-lg">
                                         \[\sum \vec{\tau} = 0\]
@@ -1314,20 +1341,20 @@
                                     <p class="text-sm text-center mt-2">Net torque = 0</p>
                                 </div>
                             </div>
-                            <p class="mt-4 p-4 bg-yellow-50 rounded-lg border-l-4 border-accent">
+                            <p class="mt-4 p-4 bg-surface-2 rounded-lg border-l-4 border-accent">
                                 <strong>For complete equilibrium:</strong> Both conditions must be satisfied simultaneously!
                             </p>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Advanced 2022)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A uniform rod of length L and mass M is hinged at one end. A force F is applied at the free end making angle θ with the rod. Find the initial angular acceleration.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Step 1:</strong> Identify forces and torques</p>
                                 <p class="mb-2">Forces: Applied force F, Weight Mg, Hinge reaction</p>
                                 <p class="mb-2">Hinge reaction passes through axis → zero torque</p>
@@ -1355,7 +1382,7 @@
                                 <div class="math-display">
                                     \[\alpha = \frac{\tau_{net}}{I} = \frac{FL\sin\theta - \frac{MgL}{2}}{\frac{ML^2}{3}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\alpha = \frac{3}{ML}\left(F\sin\theta - \frac{Mg}{2}\right)\]
                                 </div>
                             </div>
@@ -1364,10 +1391,10 @@
                 </section>
 
                 <!-- Chapter 5: Angular Momentum -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Angular Momentum</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Angular Momentum</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1377,19 +1404,19 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Definition and Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Angular Momentum (L)</h4>
                             <p class="text-lg mb-4">For a particle:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{L} = \vec{r} \times \vec{p} = \vec{r} \times m\vec{v}\]
                             </div>
                             <p class="text-lg mb-4 mt-4">Magnitude:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[L = rp\sin\theta = mvr\sin\theta = mvr_{\perp}\]
                             </div>
                             
                             <p class="text-lg mb-4 mt-6">For a rotating rigid body:</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\vec{L} = I\vec{\omega}\]
                             </div>
                             <p class="text-sm mt-4"><strong>Unit:</strong> kg·m²/s or J·s | <strong>Dimension:</strong> [ML²T⁻¹]</p>
@@ -1397,16 +1424,16 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Relation Between Torque and Angular Momentum</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Fundamental Relation</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Linear</p>
                                     <div class="math-display text-lg">
                                         \[\vec{F} = \frac{d\vec{p}}{dt}\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Rotational</p>
                                     <div class="math-display text-lg">
                                         \[\vec{\tau} = \frac{d\vec{L}}{dt}\]
@@ -1418,15 +1445,15 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Conservation of Angular Momentum</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Law of Conservation</h4>
                             <p class="text-lg mb-4">
                                 If the net external torque on a system is zero, the total angular momentum remains constant.
                             </p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[\text{If } \vec{\tau}_{ext} = 0 \text{, then } \vec{L} = \text{constant}\]
                             </div>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center mt-3">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center mt-3">
                                 \[I_1\omega_1 = I_2\omega_2\]
                             </div>
                         </div>
@@ -1445,14 +1472,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced 2023)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A person stands on a rotating platform holding two weights. Initially rotating at ω₁ = 2 rad/s with arms extended (I₁ = 6 kg·m²). When arms are brought close (I₂ = 2 kg·m²), find new angular velocity and change in kinetic energy.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Part (a): Find ω₂</strong></p>
                                 <p class="mb-2">No external torque → Angular momentum conserved</p>
                                 <div class="math-display">
@@ -1464,7 +1491,7 @@
                                 <div class="math-display">
                                     \[6 \times 2 = 2 \times \omega_2\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\omega_2 = 6 \text{ rad/s}\]
                                 </div>
                                 
@@ -1480,18 +1507,18 @@
                                 </div>
                                 
                                 <p class="mb-2 mt-3">Change in KE:</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\Delta KE = 36 - 12 = 24 \text{ J (increase)}\]
                                 </div>
                                 
-                                <p class="mt-4 p-3 bg-blue-50 rounded-lg text-sm">
+                                <p class="mt-4 p-3 bg-surface-2 rounded-lg text-sm">
                                     <strong>Note:</strong> KE increases even though L is conserved! The person does work by pulling arms in against centrifugal force. This extra work appears as increased rotational KE.
                                 </p>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Misconception
                             </h4>
                             <p class="text-lg">
@@ -1506,10 +1533,10 @@
                 </section>
 
                 <!-- Chapter 6: Rotational Dynamics -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Rotational Dynamics</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Rotational Dynamics</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1517,23 +1544,23 @@
                             Rotational dynamics combines concepts of torque, angular momentum, and moment of inertia to solve complex problems involving rotating systems, pulleys, and coupled motions.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Equation of Motion for Rotation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Equation of Motion for Rotation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Fundamental Equation</h4>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Fundamental Equation</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[\sum \vec{\tau}_{ext} = I\vec{\alpha}\]
                             </div>
                             <p class="text-center mt-4 text-lg">Sum of all external torques = Moment of inertia × Angular acceleration</p>
                             
                             <div class="grid grid-cols-2 gap-6 mt-6">
-                                <div class="bg-white p-4 rounded-lg border-2 border-purple-200">
+                                <div class="bg-canvas p-4 rounded-lg border-2 border-hairline">
                                     <p class="font-semibold mb-2 text-center">For Fixed Axis Rotation</p>
                                     <div class="math-display text-base">
                                         \[\tau = I\alpha\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg border-2 border-purple-200">
+                                <div class="bg-canvas p-4 rounded-lg border-2 border-hairline">
                                     <p class="font-semibold mb-2 text-center">For Variable I</p>
                                     <div class="math-display text-base">
                                         \[\tau = \frac{dL}{dt} = \frac{d(I\omega)}{dt}\]
@@ -1542,7 +1569,7 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Combined Translation and Rotation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Combined Translation and Rotation</h3>
                         
                         <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
                             <h4 class="font-bold text-xl mb-3 flex items-center">
@@ -1557,7 +1584,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7 (JEE Advanced Classic)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1566,7 +1593,7 @@
                                 <br>(b) Thread is pulled from bottom
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Case (a): Thread pulled from top</strong></p>
                                 
                                 <p class="mb-2 font-semibold">For translation:</p>
@@ -1634,7 +1661,7 @@
                                     \[2(F - f) = Ma + \frac{Ma}{2} = \frac{3Ma}{2}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[a = \frac{2F}{3M}, \quad \alpha = \frac{a}{R} = \frac{2F}{3MR}\]
                                 </div>
                                 
@@ -1663,11 +1690,11 @@
                                 </div>
                                 <p class="text-sm mb-2">Add: 0 = Ma + Ma/2 = 3Ma/2</p>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[a = 0 \text{ (disc doesn't move!)}\]
                                 </div>
                                 
-                                <p class="mt-4 p-3 bg-blue-50 rounded-lg text-sm">
+                                <p class="mt-4 p-3 bg-surface-2 rounded-lg text-sm">
                                     <strong>Physical Interpretation:</strong> When pulled from bottom, the force F tries to move disc forward but also rotates it backward. These effects exactly cancel out for pure rolling condition!
                                 </p>
                             </div>
@@ -1676,10 +1703,10 @@
                 </section>
 
                 <!-- Chapter 7: Rolling Motion -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Rolling Motion</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Rolling Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1687,52 +1714,52 @@
                             Rolling motion is a combination of translational and rotational motion. Understanding pure rolling is crucial as it appears in 40% of JEE rotational motion problems.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.1 Condition for Pure Rolling</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Condition for Pure Rolling</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Pure Rolling Condition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Pure Rolling Condition</h4>
                             <p class="text-lg mb-4">
                                 For a body of radius R rolling without slipping:
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[v_{cm} = \omega R\]
                             </div>
                             <p class="text-lg mb-4 mt-4">Differentiating:</p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[a_{cm} = \alpha R\]
                             </div>
-                            <p class="mt-4 p-4 bg-yellow-50 rounded-lg border-l-4 border-accent">
+                            <p class="mt-4 p-4 bg-surface-2 rounded-lg border-l-4 border-accent">
                                 <strong>Key Point:</strong> At the point of contact, velocity = 0 (no slipping condition)
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.2 Velocity Distribution in Rolling</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Velocity Distribution in Rolling</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Velocity at Different Points</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Velocity at Different Points</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Point of Contact</p>
                                     <div class="math-display text-base">
                                         \[v = 0\]
                                     </div>
                                     <p class="text-sm mt-2">Instantaneous rest</p>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Center of Mass</p>
                                     <div class="math-display text-base">
                                         \[v = v_{cm} = \omega R\]
                                     </div>
                                     <p class="text-sm mt-2">Translation velocity</p>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Topmost Point</p>
                                     <div class="math-display text-base">
                                         \[v = 2v_{cm} = 2\omega R\]
                                     </div>
                                     <p class="text-sm mt-2">Maximum velocity</p>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">General Point (angle θ from bottom)</p>
                                     <div class="math-display text-base">
                                         \[v = v_{cm}\sqrt{2(1-\cos\theta)}\]
@@ -1757,19 +1784,19 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.3 Friction in Rolling Motion</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Friction in Rolling Motion</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Role of Friction</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Role of Friction</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-semibold mb-3">Rolling on Horizontal Surface</h5>
                                     <p class="text-sm mb-2">• Friction is <strong>static</strong> (no relative motion at contact)</p>
                                     <p class="text-sm mb-2">• f ≤ μ<sub>s</sub>N (can be less than maximum)</p>
                                     <p class="text-sm mb-2">• Friction does <strong>no work</strong> (point of application has v = 0)</p>
                                     <p class="text-sm">• Maintains v<sub>cm</sub> = ωR condition</p>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-semibold mb-3">Rolling Down Incline</h5>
                                     <p class="text-sm mb-2">• Friction acts <strong>upward</strong> along incline</p>
                                     <p class="text-sm mb-2">• Opposes sliding, enables pure rolling</p>
@@ -1780,14 +1807,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8 (JEE Main 2024 Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A solid sphere, hollow sphere, disc, and ring, all having same mass M and radius R, roll down an incline of height h. Find the ratio of their speeds at bottom.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Using Energy Conservation:</strong></p>
                                 <p class="mb-2">Initial energy = Potential energy = Mgh</p>
                                 <p class="mb-2">Final energy = Translational KE + Rotational KE</p>
@@ -1813,71 +1840,71 @@
                                 
                                 <p class="mb-3 mt-4"><strong>For different objects:</strong></p>
                                 <div class="overflow-x-auto">
-                                    <table class="w-full border-collapse border border-gray-300">
-                                        <thead class="bg-green-100">
+                                    <table class="w-full border-collapse border border-hairline-strong">
+                                        <thead class="bg-surface-3">
                                             <tr>
-                                                <th class="border border-gray-300 p-2">Object</th>
-                                                <th class="border border-gray-300 p-2">k value</th>
-                                                <th class="border border-gray-300 p-2">1+k</th>
-                                                <th class="border border-gray-300 p-2">v</th>
+                                                <th class="border border-hairline-strong p-2">Object</th>
+                                                <th class="border border-hairline-strong p-2">k value</th>
+                                                <th class="border border-hairline-strong p-2">1+k</th>
+                                                <th class="border border-hairline-strong p-2">v</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="border border-gray-300 p-2">Solid Sphere</td>
-                                                <td class="border border-gray-300 p-2">2/5</td>
-                                                <td class="border border-gray-300 p-2">7/5</td>
-                                                <td class="border border-gray-300 p-2 font-mono">√(10gh/7)</td>
+                                                <td class="border border-hairline-strong p-2">Solid Sphere</td>
+                                                <td class="border border-hairline-strong p-2">2/5</td>
+                                                <td class="border border-hairline-strong p-2">7/5</td>
+                                                <td class="border border-hairline-strong p-2 font-mono">√(10gh/7)</td>
                                             </tr>
                                             <tr>
-                                                <td class="border border-gray-300 p-2">Hollow Sphere</td>
-                                                <td class="border border-gray-300 p-2">2/3</td>
-                                                <td class="border border-gray-300 p-2">5/3</td>
-                                                <td class="border border-gray-300 p-2 font-mono">√(6gh/5)</td>
+                                                <td class="border border-hairline-strong p-2">Hollow Sphere</td>
+                                                <td class="border border-hairline-strong p-2">2/3</td>
+                                                <td class="border border-hairline-strong p-2">5/3</td>
+                                                <td class="border border-hairline-strong p-2 font-mono">√(6gh/5)</td>
                                             </tr>
                                             <tr>
-                                                <td class="border border-gray-300 p-2">Disc</td>
-                                                <td class="border border-gray-300 p-2">1/2</td>
-                                                <td class="border border-gray-300 p-2">3/2</td>
-                                                <td class="border border-gray-300 p-2 font-mono">√(4gh/3)</td>
+                                                <td class="border border-hairline-strong p-2">Disc</td>
+                                                <td class="border border-hairline-strong p-2">1/2</td>
+                                                <td class="border border-hairline-strong p-2">3/2</td>
+                                                <td class="border border-hairline-strong p-2 font-mono">√(4gh/3)</td>
                                             </tr>
                                             <tr>
-                                                <td class="border border-gray-300 p-2">Ring</td>
-                                                <td class="border border-gray-300 p-2">1</td>
-                                                <td class="border border-gray-300 p-2">2</td>
-                                                <td class="border border-gray-300 p-2 font-mono">√(gh)</td>
+                                                <td class="border border-hairline-strong p-2">Ring</td>
+                                                <td class="border border-hairline-strong p-2">1</td>
+                                                <td class="border border-hairline-strong p-2">2</td>
+                                                <td class="border border-hairline-strong p-2 font-mono">√(gh)</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Ratio } v_{\text{solid}} : v_{\text{hollow}} : v_{\text{disc}} : v_{\text{ring}}\]
                                     \[= \sqrt{\frac{10}{7}} : \sqrt{\frac{6}{5}} : \sqrt{\frac{4}{3}} : 1\]
                                     \[≈ 1.195 : 1.095 : 1.155 : 1\]
                                 </div>
                                 
-                                <p class="mt-4 p-3 bg-blue-50 rounded-lg text-sm">
+                                <p class="mt-4 p-3 bg-surface-2 rounded-lg text-sm">
                                     <strong>Order of speeds:</strong> Solid sphere (fastest) > Disc > Hollow sphere > Ring (slowest)
                                     <br><strong>Reason:</strong> Objects with lower MI (mass closer to axis) convert more PE to translational KE
                                 </p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.4 Acceleration of Rolling Objects on Incline</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.4 Acceleration of Rolling Objects on Incline</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">General Formula</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">General Formula</h4>
                             <p class="text-lg mb-4">
                                 For an object with I = kMR² rolling down an incline of angle θ:
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[a = \frac{g\sin\theta}{1 + k}\]
                             </div>
                             <p class="text-lg mb-4 mt-4">
                                 Friction force required:
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[f = \frac{kMg\sin\theta}{1 + k}\]
                             </div>
                         </div>
@@ -1885,10 +1912,10 @@
                 </section>
 
                 <!-- Chapter 8: Rotational Kinetic Energy -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Rotational Kinetic Energy</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Rotational Kinetic Energy</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1896,18 +1923,18 @@
                             Rotational kinetic energy is the energy possessed by a rotating body. For objects undergoing both translation and rotation, total KE is the sum of translational and rotational components.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.1 Rotational KE Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Rotational KE Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Kinetic Energy Formulas</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Kinetic Energy Formulas</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Pure Rotation</p>
                                     <div class="math-display text-base">
                                         \[KE = \frac{1}{2}I\omega^2\]
                                     </div>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Pure Translation</p>
                                     <div class="math-display text-base">
                                         \[KE = \frac{1}{2}Mv_{cm}^2\]
@@ -1915,7 +1942,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2 text-center">Combined Motion (Rolling)</p>
                                 <div class="math-display text-base">
                                     \[KE_{total} = \frac{1}{2}Mv_{cm}^2 + \frac{1}{2}I_{cm}\omega^2\]
@@ -1928,19 +1955,19 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.2 Energy Distribution in Rolling</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Energy Distribution in Rolling</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Object</th>
                                         <th class="p-4 text-left">k value</th>
                                         <th class="p-4 text-left">KE<sub>rot</sub>/KE<sub>trans</sub></th>
                                         <th class="p-4 text-left">% Rotational</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Ring/Hollow Cylinder</td>
                                         <td class="p-4 font-mono">1</td>
@@ -1970,14 +1997,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 9 (JEE Advanced 2021)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A solid sphere of mass M and radius R is rolling with velocity v on a horizontal surface. It then rolls up an incline. Find the maximum height it can reach.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Initial state:</strong> Rolling on horizontal surface</p>
                                 <p class="mb-2">Total KE = Translational + Rotational</p>
                                 <div class="math-display">
@@ -2004,23 +2031,23 @@
                                 <div class="math-display">
                                     \[\frac{7}{10}Mv^2 = Mgh\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[h = \frac{7v^2}{10g}\]
                                 </div>
                                 
-                                <p class="mt-4 p-3 bg-blue-50 rounded-lg text-sm">
+                                <p class="mt-4 p-3 bg-surface-2 rounded-lg text-sm">
                                     <strong>Note:</strong> Compare with sliding object (no rotation): h = v²/2g
                                     <br>Rolling object reaches 70% of height (7/10 vs 1/2) because some energy is in rotation
                                 </p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.3 Work-Energy Theorem for Rotation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 Work-Energy Theorem for Rotation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Work-Energy Relations</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Work-Energy Relations</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Linear Motion</p>
                                     <div class="math-display text-base">
                                         \[W = \Delta KE_{trans}\]
@@ -2029,7 +2056,7 @@
                                         \[W = \frac{1}{2}M(v_f^2 - v_i^2)\]
                                     </div>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Rotational Motion</p>
                                     <div class="math-display text-base">
                                         \[W = \Delta KE_{rot}\]
@@ -2040,7 +2067,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-orange-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2 text-center">Work done by torque:</p>
                                 <div class="math-display text-base">
                                     \[W = \int \tau \, d\theta\]
@@ -2055,14 +2082,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Rolling Motion: 35%</li>
@@ -2072,7 +2099,7 @@
                                 <li>✓ MI Theorems: 5%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Combined motion problems: 30%</li>
@@ -2084,8 +2111,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Solid sphere/cylinder/ring rolling down incline - find acceleration/velocity</li>
                             <li>Object rolling with initial velocity - find height reached on incline</li>
@@ -2105,7 +2132,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -2127,42 +2154,42 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Year-wise Trend Analysis</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Year-wise Trend Analysis</h3>
                         <div class="overflow-x-auto">
                             <table class="w-full border-collapse">
-                                <thead class="bg-orange-100">
+                                <thead class="bg-surface-3">
                                     <tr>
-                                        <th class="border border-gray-300 p-3">Year</th>
-                                        <th class="border border-gray-300 p-3">JEE Main</th>
-                                        <th class="border border-gray-300 p-3">JEE Advanced</th>
-                                        <th class="border border-gray-300 p-3">Hot Topics</th>
+                                        <th class="border border-hairline-strong p-3">Year</th>
+                                        <th class="border border-hairline-strong p-3">JEE Main</th>
+                                        <th class="border border-hairline-strong p-3">JEE Advanced</th>
+                                        <th class="border border-hairline-strong p-3">Hot Topics</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border border-gray-300 p-3 font-semibold">2024</td>
-                                        <td class="border border-gray-300 p-3">4 questions</td>
-                                        <td class="border border-gray-300 p-3">5 questions</td>
-                                        <td class="border border-gray-300 p-3">Rolling, L conservation</td>
+                                        <td class="border border-hairline-strong p-3 font-semibold">2024</td>
+                                        <td class="border border-hairline-strong p-3">4 questions</td>
+                                        <td class="border border-hairline-strong p-3">5 questions</td>
+                                        <td class="border border-hairline-strong p-3">Rolling, L conservation</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-300 p-3 font-semibold">2023</td>
-                                        <td class="border border-gray-300 p-3">3 questions</td>
-                                        <td class="border border-gray-300 p-3">6 questions</td>
-                                        <td class="border border-gray-300 p-3">MI theorems, Energy</td>
+                                        <td class="border border-hairline-strong p-3 font-semibold">2023</td>
+                                        <td class="border border-hairline-strong p-3">3 questions</td>
+                                        <td class="border border-hairline-strong p-3">6 questions</td>
+                                        <td class="border border-hairline-strong p-3">MI theorems, Energy</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-300 p-3 font-semibold">2022</td>
-                                        <td class="border border-gray-300 p-3">4 questions</td>
-                                        <td class="border border-gray-300 p-3">4 questions</td>
-                                        <td class="border border-gray-300 p-3">Torque, Rolling down incline</td>
+                                        <td class="border border-hairline-strong p-3 font-semibold">2022</td>
+                                        <td class="border border-hairline-strong p-3">4 questions</td>
+                                        <td class="border border-hairline-strong p-3">4 questions</td>
+                                        <td class="border border-hairline-strong p-3">Torque, Rolling down incline</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-300 p-3 font-semibold">2021</td>
-                                        <td class="border border-gray-300 p-3">3 questions</td>
-                                        <td class="border border-gray-300 p-3">5 questions</td>
-                                        <td class="border border-gray-300 p-3">Combined motion, Collision</td>
+                                        <td class="border border-hairline-strong p-3 font-semibold">2021</td>
+                                        <td class="border border-hairline-strong p-3">3 questions</td>
+                                        <td class="border border-hairline-strong p-3">5 questions</td>
+                                        <td class="border border-hairline-strong p-3">Combined motion, Collision</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -2170,21 +2197,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024) with Solutions
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate moment of inertia of: (a) Thin rod about center (b) Disc about diameter (c) Ring about tangent</li>
                             <li>A wheel of radius 0.5 m rotates at 300 rpm. Find linear velocity of a point on rim.</li>
@@ -2197,8 +2224,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A rod of length L, mass M rotates about one end. Find MI using parallel axis theorem.</li>
                             <li>A disc (M, R) rolls without slipping. If v<sub>cm</sub> = 10 m/s, find total KE.</li>
@@ -2213,8 +2240,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Derive formula for acceleration of cylinder rolling down incline using τ = Iα.</li>
                             <li>A sphere rolls with velocity v. It encounters a step of height h = R/4. Will it climb?</li>
@@ -2232,57 +2259,75 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Complete Solutions PDF with Detailed Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./semiconductors.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Semiconductors</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./simple-harmonic-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Simple Harmonic Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./thermal-properties-of-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Thermal Properties Of Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Centre of Mass & Collision</h3>
-                    <p class="text-gray-600">COM motion, collision types, momentum conservation</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Centre of Mass & Collision</h3>
+                    <p class="text-ink-muted">COM motion, collision types, momentum conservation</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Gravitation</h3>
-                    <p class="text-gray-600">Kepler's laws, Gravitational field, Satellites, Escape velocity</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Gravitation</h3>
+                    <p class="text-ink-muted">Kepler's laws, Gravitational field, Satellites, Escape velocity</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Simple Harmonic Motion</h3>
-                    <p class="text-gray-600">SHM equations, Oscillations, Spring-mass system, Pendulum</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Simple Harmonic Motion</h3>
+                    <p class="text-ink-muted">SHM equations, Oscillations, Spring-mass system, Pendulum</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -2290,7 +2335,7 @@
 
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2298,38 +2343,38 @@
     </section>
 
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Rotational Motion - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Rotational Motion - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Rotational Motion is Crucial for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Rotational Motion</strong> is one of the highest-weightage chapters in <strong>JEE Physics</strong>, accounting for 12-16 marks in JEE Main and 18-24 marks in JEE Advanced. Key reasons for importance:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>High Scoring:</strong> Concepts are formula-based and predictable</li>
                             <li><strong>Connects Multiple Topics:</strong> Links with mechanics, energy, momentum</li>
                             <li><strong>Application-Based:</strong> Real-world problems (wheels, pulleys, satellites)</li>
                             <li><strong>Builds Foundation:</strong> Essential for advanced physics and engineering</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             In <strong>JEE Advanced</strong>, rotational motion is often combined with collision, energy conservation, and gravitation, making it a multi-concept problem type.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Must-Remember Formulas</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Rotational Kinematics</h4>
-                                <p class="text-gray-700 text-sm">ω = dθ/dt, α = dω/dt, v = rω, a<sub>t</sub> = rα, a<sub>c</sub> = rω²</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Rotational Kinematics</h4>
+                                <p class="text-ink-muted text-sm">ω = dθ/dt, α = dω/dt, v = rω, a<sub>t</sub> = rα, a<sub>c</sub> = rω²</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Moment of Inertia (MI)</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Moment of Inertia (MI)</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Ring: I = MR²</li>
                                     <li>• Disc: I = MR²/2</li>
                                     <li>• Solid Sphere: I = 2MR²/5</li>
@@ -2339,28 +2384,28 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. Important Theorems</h4>
-                                <p class="text-gray-700 text-sm">Parallel: I = I<sub>cm</sub> + Md² | Perpendicular: I<sub>z</sub> = I<sub>x</sub> + I<sub>y</sub></p>
+                                <h4 class="font-bold text-lg text-primary mb-2">3. Important Theorems</h4>
+                                <p class="text-ink-muted text-sm">Parallel: I = I<sub>cm</sub> + Md² | Perpendicular: I<sub>z</sub> = I<sub>x</sub> + I<sub>y</sub></p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">4. Dynamics</h4>
-                                <p class="text-gray-700 text-sm">τ = Iα, L = Iω, τ = dL/dt, KE = ½Iω²</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">4. Dynamics</h4>
+                                <p class="text-ink-muted text-sm">τ = Iα, L = Iω, τ = dL/dt, KE = ½Iω²</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">5. Rolling Motion</h4>
-                                <p class="text-gray-700 text-sm">v<sub>cm</sub> = ωR, KE<sub>total</sub> = ½Mv² + ½Iω², a = gsinθ/(1+k)</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">5. Rolling Motion</h4>
+                                <p class="text-ink-muted text-sm">v<sub>cm</sub> = ωR, KE<sub>total</sub> = ½Mv² + ½Iω², a = gsinθ/(1+k)</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Study Tips -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Master Rotational Motion for JEE?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 1 week (3-4 hours/day)</li>
                                 <li>Memorize all MI formulas with derivations</li>
                                 <li>Master parallel and perpendicular axis theorems</li>
@@ -2371,7 +2416,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 10-12 days (4-5 hours/day)</li>
                                 <li>Deep understanding of all theorems with proofs</li>
                                 <li>Practice variable MI and complex rolling problems</li>
@@ -2384,65 +2429,65 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Top 10 Common Mistakes in Rotational Motion</h3>
-                    <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Top 10 Common Mistakes in Rotational Motion</h3>
+                    <ol class="list-decimal list-inside space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">1.</span>
+                            <span class="text-primary font-bold mr-3">1.</span>
                             <div>
                                 <strong>Using wrong MI formula:</strong> Always check if axis is through center, end, or arbitrary point
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">2.</span>
+                            <span class="text-primary font-bold mr-3">2.</span>
                             <div>
                                 <strong>Forgetting pure rolling condition:</strong> v<sub>cm</sub> = ωR must be verified/used
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">3.</span>
+                            <span class="text-primary font-bold mr-3">3.</span>
                             <div>
                                 <strong>Confusing k values:</strong> Ring (1), Disc (1/2), Solid sphere (2/5), Hollow sphere (2/3)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">4.</span>
+                            <span class="text-primary font-bold mr-3">4.</span>
                             <div>
                                 <strong>Wrong torque calculation:</strong> Remember τ = r × F (cross product), not rF always
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">5.</span>
+                            <span class="text-primary font-bold mr-3">5.</span>
                             <div>
                                 <strong>Ignoring rotational KE:</strong> Total KE = ½Mv² + ½Iω² for rolling objects
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">6.</span>
+                            <span class="text-primary font-bold mr-3">6.</span>
                             <div>
                                 <strong>Misapplying parallel axis theorem:</strong> Can only be used when one axis passes through CM
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">7.</span>
+                            <span class="text-primary font-bold mr-3">7.</span>
                             <div>
                                 <strong>Direction of friction in rolling:</strong> On incline, friction acts upward (opposes sliding down)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">8.</span>
+                            <span class="text-primary font-bold mr-3">8.</span>
                             <div>
                                 <strong>Assuming KE is conserved:</strong> Only L is conserved when τ<sub>ext</sub> = 0, not KE
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">9.</span>
+                            <span class="text-primary font-bold mr-3">9.</span>
                             <div>
                                 <strong>Wrong velocity at different points:</strong> Bottom = 0, Center = v<sub>cm</sub>, Top = 2v<sub>cm</sub>
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3">10.</span>
+                            <span class="text-primary font-bold mr-3">10.</span>
                             <div>
                                 <strong>Unit confusion:</strong> Angular quantities (θ in radians, ω in rad/s) vs linear (v in m/s)
                             </div>
@@ -2451,11 +2496,11 @@
                 </div>
                 
                 <!-- Topic-wise Weightage -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 Topic-wise Weightage Breakdown</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Topic</th>
                                     <th class="p-3 text-left">JEE Main %</th>
@@ -2465,40 +2510,40 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Rolling Motion</td>
                                     <td class="p-3">35%</td>
                                     <td class="p-3">30%</td>
                                     <td class="p-3">Medium-High</td>
-                                    <td class="p-3 text-danger font-bold">VERY HIGH</td>
+                                    <td class="p-3 text-primary font-bold">VERY HIGH</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Moment of Inertia</td>
                                     <td class="p-3">25%</td>
                                     <td class="p-3">20%</td>
                                     <td class="p-3">Medium</td>
-                                    <td class="p-3 text-danger font-bold">VERY HIGH</td>
+                                    <td class="p-3 text-primary font-bold">VERY HIGH</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Angular Momentum</td>
                                     <td class="p-3">20%</td>
                                     <td class="p-3">25%</td>
                                     <td class="p-3">Medium-High</td>
-                                    <td class="p-3 text-accent font-bold">HIGH</td>
+                                    <td class="p-3 text-primary font-bold">HIGH</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Torque & Dynamics</td>
                                     <td class="p-3">15%</td>
                                     <td class="p-3">15%</td>
                                     <td class="p-3">Medium</td>
-                                    <td class="p-3 text-accent font-bold">HIGH</td>
+                                    <td class="p-3 text-primary font-bold">HIGH</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">MI Theorems</td>
                                     <td class="p-3">5%</td>
                                     <td class="p-3">10%</td>
                                     <td class="p-3">Easy-Medium</td>
-                                    <td class="p-3 text-success font-bold">MEDIUM</td>
+                                    <td class="p-3 text-primary font-bold">MEDIUM</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2506,13 +2551,13 @@
                 </div>
 
                 <!-- Quick Revision Formula Sheet -->
-                <div class="mt-8 bg-gradient-to-r from-purple-100 to-pink-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">⚡ Quick Revision Formula Sheet</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-white p-4 rounded-lg">
-                            <h4 class="font-bold mb-3 text-secondary">Analogy Table</h4>
+                        <div class="bg-canvas p-4 rounded-lg">
+                            <h4 class="font-bold mb-3 text-primary">Analogy Table</h4>
                             <table class="w-full text-sm">
-                                <thead class="bg-gray-100">
+                                <thead class="bg-surface-1">
                                     <tr>
                                         <th class="p-2 text-left">Linear</th>
                                         <th class="p-2 text-left">Rotational</th>
@@ -2530,8 +2575,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="bg-white p-4 rounded-lg">
-                            <h4 class="font-bold mb-3 text-secondary">Quick Facts</h4>
+                        <div class="bg-canvas p-4 rounded-lg">
+                            <h4 class="font-bold mb-3 text-primary">Quick Facts</h4>
                             <ul class="list-disc list-inside space-y-2 text-sm">
                                 <li>Hollow objects have higher MI than solid</li>
                                 <li>Friction in pure rolling does zero work</li>
@@ -2551,68 +2596,68 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -2620,12 +2665,12 @@
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -2634,25 +2679,25 @@
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
@@ -2660,7 +2705,7 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

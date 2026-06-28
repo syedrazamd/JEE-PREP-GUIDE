@@ -25,29 +25,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#7c3aed',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
+    
 
     <style>
         body {
@@ -96,42 +79,43 @@
             counter-increment: section;
         }
     </style>
+<link rel="stylesheet" href="css/tailwind.min.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-canvas text-ink">
 
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
 
     <!-- Header/Navigation -->
-    <header class="bg-white shadow-lg sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-primary rounded-md flex items-center justify-center border border-hairline">
                         <span class="text-white font-bold text-2xl">J</span>
                     </div>
                     <div>
-                        <a href="/" class="text-2xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        <a href="/" class="text-2xl font-extrabold text-ink">
                             JEE Prep Guide
                         </a>
-                        <p class="text-xs text-gray-500">Your Path to IIT</p>
+                        <p class="text-xs text-ink-tertiary">Your Path to IIT</p>
                     </div>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="https://jeeprepguide.netlify.app"><button class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full font-semibold hover:shadow-xl transition">
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="https://jeeprepguide.netlify.app"><button class="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-primary-hover transition">
                         Start Learning
                     </button></a>
                 </div>
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -141,12 +125,12 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="https://jeeprepguide.netlify.app"><button class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full font-semibold hover:shadow-xl transition">
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="https://jeeprepguide.netlify.app"><button class="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-primary-hover transition">
                         Start Learning
                     </button></a>
                 </div>
@@ -163,37 +147,37 @@
     </section>
 
     <!-- Main Content -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-surface-1">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
                 <!-- Table of Contents (Sidebar) -->
                 <aside class="lg:col-span-1">
-                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl shadow-lg toc-sticky">
-                        <h2 class="text-xl font-bold text-gray-900 mb-4">Quick Navigation</h2>
+                    <div class="bg-surface-2 p-6 rounded-2xl border border-hairline toc-sticky">
+                        <h2 class="text-xl font-bold text-ink mb-4">Quick Navigation</h2>
                         <nav class="space-y-2">
                             <a href="#introduction" class="block text-primary hover:underline font-semibold py-2">Introduction</a>
-                            <a href="#acceptance" class="block text-gray-700 hover:text-primary py-2">Acceptance of Terms</a>
-                            <a href="#user-obligations" class="block text-gray-700 hover:text-primary py-2">User Obligations</a>
-                            <a href="#intellectual-property" class="block text-gray-700 hover:text-primary py-2">Intellectual Property</a>
-                            <a href="#disclaimers" class="block text-gray-700 hover:text-primary py-2">Disclaimers</a>
-                            <a href="#limitations" class="block text-gray-700 hover:text-primary py-2">Limitations of Liability</a>
-                            <a href="#third-party" class="block text-gray-700 hover:text-primary py-2">Third-Party Content</a>
-                            <a href="#prohibited" class="block text-gray-700 hover:text-primary py-2">Prohibited Activities</a>
-                            <a href="#termination" class="block text-gray-700 hover:text-primary py-2">Termination</a>
-                            <a href="#governing-law" class="block text-gray-700 hover:text-primary py-2">Governing Law</a>
-                            <a href="#changes" class="block text-gray-700 hover:text-primary py-2">Changes to Terms</a>
-                            <a href="#contact-terms" class="block text-gray-700 hover:text-primary py-2">Contact Us</a>
+                            <a href="#acceptance" class="block text-ink-muted hover:text-primary py-2">Acceptance of Terms</a>
+                            <a href="#user-obligations" class="block text-ink-muted hover:text-primary py-2">User Obligations</a>
+                            <a href="#intellectual-property" class="block text-ink-muted hover:text-primary py-2">Intellectual Property</a>
+                            <a href="#disclaimers" class="block text-ink-muted hover:text-primary py-2">Disclaimers</a>
+                            <a href="#limitations" class="block text-ink-muted hover:text-primary py-2">Limitations of Liability</a>
+                            <a href="#third-party" class="block text-ink-muted hover:text-primary py-2">Third-Party Content</a>
+                            <a href="#prohibited" class="block text-ink-muted hover:text-primary py-2">Prohibited Activities</a>
+                            <a href="#termination" class="block text-ink-muted hover:text-primary py-2">Termination</a>
+                            <a href="#governing-law" class="block text-ink-muted hover:text-primary py-2">Governing Law</a>
+                            <a href="#changes" class="block text-ink-muted hover:text-primary py-2">Changes to Terms</a>
+                            <a href="#contact-terms" class="block text-ink-muted hover:text-primary py-2">Contact Us</a>
                         </nav>
                     </div>
                 </aside>
 
                 <!-- Terms Content -->
-                <main class="lg:col-span-3 terms-content">
+                <main class="lg:col-span-3 terms-content pt-[81px]">
 
                     <!-- Introduction -->
                     <section id="introduction" class="mb-12">
-                        <div class="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-2xl shadow-xl mb-8">
+                        <div class="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-2xl border border-hairline-strong mb-8">
                             <h2 class="text-3xl font-bold mb-4">Welcome to JEE Prep Guide</h2>
                             <p class="text-lg leading-relaxed opacity-95">
                                 These Terms and Conditions ("Terms") govern your use of JEE Prep Guide website and all related services. By accessing or using our platform, you agree to comply with and be bound by these Terms.
@@ -201,12 +185,12 @@
                         </div>
 
                         <div class="prose max-w-none">
-                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            <p class="text-lg text-ink-muted leading-relaxed mb-4">
                                 JEE Prep Guide provides free educational resources to help students prepare for JEE Main and Advanced examinations. These Terms outline your rights and responsibilities when using our services.
                             </p>
-                            <div class="bg-yellow-50 border-l-4 border-accent p-6 rounded-lg my-6">
-                                <p class="text-lg font-semibold text-gray-900 mb-2">📜 Important Notice</p>
-                                <p class="text-gray-700">
+                            <div class="bg-surface-2 border-l-4 border-accent p-6 rounded-lg my-6">
+                                <p class="text-lg font-semibold text-ink mb-2">📜 Important Notice</p>
+                                <p class="text-ink-muted">
                                     If you do not agree with these Terms, please do not use our website or services. Your continued use constitutes acceptance of these Terms.
                                 </p>
                             </div>
@@ -215,31 +199,31 @@
 
                     <!-- Acceptance of Terms -->
                     <section id="acceptance" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                             Acceptance of Terms
                         </h2>
 
                         <div class="space-y-6">
-                            <div class="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Binding Agreement</h3>
-                                <p class="text-lg text-gray-700 mb-4">
+                            <div class="bg-surface-2 border-2 border-hairline p-6 rounded-xl">
+                                <h3 class="text-2xl font-bold text-ink mb-4">Binding Agreement</h3>
+                                <p class="text-lg text-ink-muted mb-4">
                                     By accessing or using JEE Prep Guide, you agree to be bound by these Terms and all applicable laws and regulations.
                                 </p>
-                                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                                <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                                     <li>These Terms apply to all visitors, users, and others who access our services</li>
                                     <li>You must be at least 13 years old to use our services</li>
                                     <li>If you are under 18, you must have parental consent</li>
                                 </ul>
                             </div>
 
-                            <div class="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Modifications</h3>
-                                <p class="text-lg text-gray-700 mb-4">
+                            <div class="bg-surface-2 border-2 border-hairline p-6 rounded-xl">
+                                <h3 class="text-2xl font-bold text-ink mb-4">Modifications</h3>
+                                <p class="text-lg text-ink-muted mb-4">
                                     We reserve the right to modify these Terms at any time. We will notify users of significant changes:
                                 </p>
-                                <div class="bg-blue-50 p-4 rounded-lg">
-                                    <ul class="text-sm text-gray-700 space-y-1">
+                                <div class="bg-surface-3 p-4 rounded-lg">
+                                    <ul class="text-sm text-ink-muted space-y-1">
                                         <li>• Updated "Last Updated" date will be displayed</li>
                                         <li>• Major changes will be announced via email (if subscribed)</li>
                                         <li>• Continued use after changes constitutes acceptance</li>
@@ -251,39 +235,39 @@
 
                     <!-- User Obligations -->
                     <section id="user-obligations" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-secondary rounded mr-4"></span>
                             User Obligations
                         </h2>
 
-                        <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl mb-6">
-                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        <div class="bg-surface-2 p-8 rounded-2xl border border-hairline mb-6">
+                            <p class="text-lg text-ink-muted leading-relaxed mb-4">
                                 When using JEE Prep Guide, you agree to:
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-surface-3 p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-primary mb-2">📚 Educational Use Only</h4>
-                                    <p class="text-sm text-gray-700">Use our resources solely for JEE preparation</p>
+                                    <p class="text-sm text-ink-muted">Use our resources solely for JEE preparation</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-surface-3 p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-primary mb-2">🔍 Accurate Information</h4>
-                                    <p class="text-sm text-gray-700">Provide truthful information when contacting us</p>
+                                    <p class="text-sm text-ink-muted">Provide truthful information when contacting us</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-surface-3 p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-primary mb-2">🚫 No Unauthorized Access</h4>
-                                    <p class="text-sm text-gray-700">Not attempt to hack or bypass security measures</p>
+                                    <p class="text-sm text-ink-muted">Not attempt to hack or bypass security measures</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-surface-3 p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-primary mb-2">📋 Compliance with Laws</h4>
-                                    <p class="text-sm text-gray-700">Follow all applicable laws and regulations</p>
+                                    <p class="text-sm text-ink-muted">Follow all applicable laws and regulations</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-surface-3 p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-primary mb-2">🛡️ Respect Others</h4>
-                                    <p class="text-sm text-gray-700">Not harass, abuse, or harm other users</p>
+                                    <p class="text-sm text-ink-muted">Not harass, abuse, or harm other users</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-surface-3 p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-primary mb-2">📢 No Spam</h4>
-                                    <p class="text-sm text-gray-700">Not send unsolicited messages or advertisements</p>
+                                    <p class="text-sm text-ink-muted">Not send unsolicited messages or advertisements</p>
                                 </div>
                             </div>
                         </div>
@@ -291,20 +275,20 @@
 
                     <!-- Intellectual Property -->
                     <section id="intellectual-property" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-accent rounded mr-4"></span>
                             Intellectual Property Rights
                         </h2>
 
                         <div class="space-y-6">
-                            <div class="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Content Ownership</h3>
-                                <p class="text-lg text-gray-700 mb-4">
+                            <div class="bg-surface-2 border-2 border-hairline p-6 rounded-xl">
+                                <h3 class="text-2xl font-bold text-ink mb-4">Content Ownership</h3>
+                                <p class="text-lg text-ink-muted mb-4">
                                     All content on JEE Prep Guide is protected by copyright laws and is the property of JEE Prep Guide or its licensors.
                                 </p>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-3 p-4 rounded-lg">
                                     <p class="font-semibold text-primary mb-2">Protected Content Includes:</p>
-                                    <ul class="space-y-2 text-gray-700">
+                                    <ul class="space-y-2 text-ink-muted">
                                         <li>• Study materials and notes</li>
                                         <li>• Practice questions and solutions</li>
                                         <li>• Website design and layout</li>
@@ -314,13 +298,13 @@
                                 </div>
                             </div>
 
-                            <div class="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Permitted Uses</h3>
-                                <p class="text-lg text-gray-700 mb-4">
+                            <div class="bg-canvas border-2 border-hairline p-6 rounded-xl">
+                                <h3 class="text-2xl font-bold text-ink mb-4">Permitted Uses</h3>
+                                <p class="text-lg text-ink-muted mb-4">
                                     You may use our content for personal, non-commercial educational purposes only:
                                 </p>
-                                <div class="bg-green-50 p-4 rounded-lg">
-                                    <ul class="space-y-2 text-gray-700">
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-ink-muted">
                                         <li class="flex items-start">
                                             <span class="text-success font-bold mr-2">✓</span>
                                             <span>View and download materials for personal study</span>
@@ -337,10 +321,10 @@
                                 </div>
                             </div>
 
-                            <div class="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Prohibited Uses</h3>
-                                <div class="bg-red-50 p-4 rounded-lg">
-                                    <ul class="space-y-2 text-gray-700">
+                            <div class="bg-canvas border-2 border-hairline p-6 rounded-xl">
+                                <h3 class="text-2xl font-bold text-ink mb-4">Prohibited Uses</h3>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-ink-muted">
                                         <li class="flex items-start">
                                             <span class="text-danger font-bold mr-2">✗</span>
                                             <span>Reproduce, distribute, or sell our content</span>
@@ -369,22 +353,22 @@
 
                     <!-- Disclaimers -->
                     <section id="disclaimers" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-success rounded mr-4"></span>
                             Disclaimers and Limitations
                         </h2>
 
-                        <div class="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl mb-6">
+                        <div class="bg-gradient-to-br from-surface-2 to-surface-2 p-8 rounded-2xl mb-6">
                             <div class="flex items-start mb-4">
                                 <span class="text-4xl mr-4">⚠️</span>
                                 <div>
-                                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Educational Purpose Only</h3>
-                                    <p class="text-lg text-gray-700">
+                                    <h3 class="text-2xl font-bold text-ink mb-3">Educational Purpose Only</h3>
+                                    <p class="text-lg text-ink-muted">
                                         Our materials are provided for educational purposes only. We make no warranties about:
                                     </p>
                                 </div>
                             </div>
-                            <ul class="space-y-2 text-gray-700 ml-14">
+                            <ul class="space-y-2 text-ink-muted ml-14">
                                 <li>✓ The accuracy or completeness of our content</li>
                                 <li>✓ Your performance in actual JEE examinations</li>
                                 <li>✓ The suitability of our materials for your specific needs</li>
@@ -392,10 +376,10 @@
                             </ul>
                         </div>
 
-                        <div class="bg-white border-2 border-gray-200 p-6 rounded-xl">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">No Professional Advice</h3>
-                            <div class="bg-yellow-50 p-4 rounded-lg">
-                                <p class="text-gray-700">
+                        <div class="bg-canvas border-2 border-hairline p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold text-ink mb-4">No Professional Advice</h3>
+                            <div class="bg-surface-2 p-4 rounded-lg">
+                                <p class="text-ink-muted">
                                     Our content is not a substitute for professional educational advice. Always consult with qualified teachers or counselors for personalized guidance regarding your JEE preparation.
                                 </p>
                             </div>
@@ -404,43 +388,43 @@
 
                     <!-- Limitations of Liability -->
                     <section id="limitations" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-danger rounded mr-4"></span>
                             Limitations of Liability
                         </h2>
 
-                        <div class="bg-white border-2 border-danger p-8 rounded-2xl">
-                            <p class="text-lg text-gray-700 mb-6">
+                        <div class="bg-canvas border-2 border-danger p-8 rounded-2xl">
+                            <p class="text-lg text-ink-muted mb-6">
                                 To the fullest extent permitted by law, JEE Prep Guide shall not be liable for:
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-red-50 p-6 rounded-xl">
+                                <div class="bg-surface-2 p-6 rounded-xl">
                                     <h4 class="font-bold text-danger text-lg mb-3">💔 Indirect Damages</h4>
-                                    <p class="text-gray-700">
+                                    <p class="text-ink-muted">
                                         Any indirect, incidental, special, or consequential damages
                                     </p>
                                 </div>
-                                <div class="bg-red-50 p-6 rounded-xl">
+                                <div class="bg-surface-2 p-6 rounded-xl">
                                     <h4 class="font-bold text-danger text-lg mb-3">📉 Lost Opportunities</h4>
-                                    <p class="text-gray-700">
+                                    <p class="text-ink-muted">
                                         Loss of profits, revenue, or business opportunities
                                     </p>
                                 </div>
-                                <div class="bg-red-50 p-6 rounded-xl">
+                                <div class="bg-surface-2 p-6 rounded-xl">
                                     <h4 class="font-bold text-danger text-lg mb-3">📱 Data Loss</h4>
-                                    <p class="text-gray-700">
+                                    <p class="text-ink-muted">
                                         Loss of data or information stored on our services
                                     </p>
                                 </div>
-                                <div class="bg-red-50 p-6 rounded-xl">
+                                <div class="bg-surface-2 p-6 rounded-xl">
                                     <h4 class="font-bold text-danger text-lg mb-3">🔗 Third-Party Actions</h4>
-                                    <p class="text-gray-700">
+                                    <p class="text-ink-muted">
                                         Actions or omissions of third-party services we link to
                                     </p>
                                 </div>
                             </div>
                             <div class="mt-6 text-center">
-                                <p class="text-gray-700 mb-4">
+                                <p class="text-ink-muted mb-4">
                                     Our total liability for any claims arising from these Terms shall not exceed ₹100.
                                 </p>
                             </div>
@@ -449,42 +433,42 @@
 
                     <!-- Third-Party Content -->
                     <section id="third-party" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-success rounded mr-4"></span>
                             Third-Party Content
                         </h2>
 
-                        <p class="text-lg text-gray-700 mb-6">
+                        <p class="text-lg text-ink-muted mb-6">
                             Our website may contain links to third-party websites or services that are not owned or controlled by JEE Prep Guide.
                         </p>
 
                         <div class="space-y-4">
-                            <div class="bg-white border-l-4 border-primary p-6 rounded-r-xl shadow">
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">External Links</h3>
-                                <p class="text-gray-700 mb-2">
+                            <div class="bg-canvas border-l-4 border-primary p-6 rounded-r-xl border border-hairline">
+                                <h3 class="text-xl font-bold text-ink mb-2">External Links</h3>
+                                <p class="text-ink-muted mb-2">
                                     We provide links to external resources for educational purposes only.
                                 </p>
-                                <p class="text-sm text-gray-600">
+                                <p class="text-sm text-ink-subtle">
                                     We are not responsible for the content, privacy policies, or practices of any third-party websites.
                                 </p>
                             </div>
 
-                            <div class="bg-white border-l-4 border-secondary p-6 rounded-r-xl shadow">
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">User-Generated Content</h3>
-                                <p class="text-gray-700 mb-2">
+                            <div class="bg-canvas border-l-4 border-secondary p-6 rounded-r-xl border border-hairline">
+                                <h3 class="text-xl font-bold text-ink mb-2">User-Generated Content</h3>
+                                <p class="text-ink-muted mb-2">
                                     Any content you submit (comments, feedback) may be publicly visible.
                                 </p>
-                                <p class="text-sm text-gray-600">
+                                <p class="text-sm text-ink-subtle">
                                     You grant us a non-exclusive, royalty-free license to use, reproduce, and display your submissions.
                                 </p>
                             </div>
 
-                            <div class="bg-white border-l-4 border-success p-6 rounded-r-xl shadow">
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Advertisements</h3>
-                                <p class="text-gray-700 mb-2">
+                            <div class="bg-canvas border-l-4 border-success p-6 rounded-r-xl border border-hairline">
+                                <h3 class="text-xl font-bold text-ink mb-2">Advertisements</h3>
+                                <p class="text-ink-muted mb-2">
                                     We may display advertisements from third parties to support our free services.
                                 </p>
-                                <p class="text-sm text-gray-600">
+                                <p class="text-sm text-ink-subtle">
                                     We are not responsible for the products or services advertised, nor do we endorse them.
                                 </p>
                             </div>
@@ -493,43 +477,43 @@
 
                     <!-- Prohibited Activities -->
                     <section id="prohibited" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-danger rounded mr-4"></span>
                             Prohibited Activities
                         </h2>
 
-                        <div class="bg-red-50 border-2 border-danger p-8 rounded-2xl">
-                            <p class="text-lg text-gray-700 mb-6">
+                        <div class="bg-surface-2 border-2 border-danger p-8 rounded-2xl">
+                            <p class="text-lg text-ink-muted mb-6">
                                 You agree not to engage in any of the following prohibited activities:
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-danger mb-2">🚫 Content Theft</h4>
-                                    <p class="text-sm text-gray-700">Copying, reproducing, or distributing our materials without permission</p>
+                                    <p class="text-sm text-ink-muted">Copying, reproducing, or distributing our materials without permission</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-danger mb-2">🤖 Automated Access</h4>
-                                    <p class="text-sm text-gray-700">Using bots, scrapers, or automated tools to access our services</p>
+                                    <p class="text-sm text-ink-muted">Using bots, scrapers, or automated tools to access our services</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-danger mb-2">🔓 Security Violations</h4>
-                                    <p class="text-sm text-gray-700">Attempting to gain unauthorized access to any part of our website</p>
+                                    <p class="text-sm text-ink-muted">Attempting to gain unauthorized access to any part of our website</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-danger mb-2">🦠 Malware Distribution</h4>
-                                    <p class="text-sm text-gray-700">Uploading or transmitting viruses, malware, or harmful code</p>
+                                    <p class="text-sm text-ink-muted">Uploading or transmitting viruses, malware, or harmful code</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-danger mb-2">🕵️‍♂️ Impersonation</h4>
-                                    <p class="text-sm text-gray-700">Pretending to be someone else or misrepresenting your affiliation</p>
+                                    <p class="text-sm text-ink-muted">Pretending to be someone else or misrepresenting your affiliation</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
+                                <div class="bg-canvas p-4 rounded-lg border border-hairline">
                                     <h4 class="font-bold text-danger mb-2">💰 Commercial Use</h4>
-                                    <p class="text-sm text-gray-700">Using our services for commercial purposes without authorization</p>
+                                    <p class="text-sm text-ink-muted">Using our services for commercial purposes without authorization</p>
                                 </div>
                             </div>
-                            <div class="mt-6 bg-white p-6 rounded-xl">
-                                <p class="text-gray-700">
+                            <div class="mt-6 bg-canvas p-6 rounded-xl">
+                                <p class="text-ink-muted">
                                     Violation of these prohibitions may result in immediate termination of your access and legal action.
                                 </p>
                             </div>
@@ -538,43 +522,43 @@
 
                     <!-- Termination -->
                     <section id="termination" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                             Termination
                         </h2>
 
-                        <div class="bg-white border-2 border-primary p-8 rounded-2xl">
-                            <p class="text-lg text-gray-700 mb-6">
+                        <div class="bg-canvas border-2 border-primary p-8 rounded-2xl">
+                            <p class="text-lg text-ink-muted mb-6">
                                 We reserve the right to terminate or suspend your access to our services immediately, without prior notice or liability, for any reason, including:
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-blue-50 p-6 rounded-xl">
+                                <div class="bg-surface-2 p-6 rounded-xl">
                                     <h4 class="font-bold text-primary text-lg mb-3">🚫 Terms Violation</h4>
-                                    <p class="text-gray-700">
+                                    <p class="text-ink-muted">
                                         Breach of these Terms and Conditions
                                     </p>
                                 </div>
-                                <div class="bg-blue-50 p-6 rounded-xl">
+                                <div class="bg-surface-2 p-6 rounded-xl">
                                     <h4 class="font-bold text-primary text-lg mb-3">🛡️ Security Threats</h4>
-                                    <p class="text-gray-700">
+                                    <p class="text-ink-muted">
                                         Engaging in activities that threaten our security
                                     </p>
                                 </div>
-                                <div class="bg-blue-50 p-6 rounded-xl">
+                                <div class="bg-surface-2 p-6 rounded-xl">
                                     <h4 class="font-bold text-primary text-lg mb-3">📛️ Legal Requirements</h4>
-                                    <p class="text-gray-700">
+                                    <p class="text-ink-muted">
                                         When required by law or legal process
                                     </p>
                                 </div>
-                                <div class="bg-blue-50 p-6 rounded-xl">
+                                <div class="bg-surface-2 p-6 rounded-xl">
                                     <h4 class="font-bold text-primary text-lg mb-3">🔄 Service Changes</h4>
-                                    <p class="text-gray-700">
+                                    <p class="text-ink-muted">
                                         Discontinuation or modification of our services
                                     </p>
                                 </div>
                             </div>
                             <div class="mt-6 text-center">
-                                <p class="text-gray-700">
+                                <p class="text-ink-muted">
                                     Upon termination, your right to use our services will immediately cease.
                                 </p>
                             </div>
@@ -583,27 +567,27 @@
 
                     <!-- Governing Law -->
                     <section id="governing-law" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-secondary rounded mr-4"></span>
                             Governing Law and Disputes
                         </h2>
 
-                        <div class="bg-purple-50 border-2 border-secondary p-8 rounded-2xl">
+                        <div class="bg-surface-2 border-2 border-secondary p-8 rounded-2xl">
                             <div class="flex items-start">
                                 <span class="text-5xl mr-4">⚖️</span>
                                 <div>
-                                    <p class="text-lg text-gray-700 mb-4">
+                                    <p class="text-lg text-ink-muted mb-4">
                                         These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions.
                                     </p>
-                                    <div class="bg-white p-6 rounded-xl">
-                                        <h3 class="font-bold text-xl text-gray-900 mb-3">Dispute Resolution:</h3>
-                                        <ul class="space-y-2 text-gray-700">
+                                    <div class="bg-canvas p-6 rounded-xl">
+                                        <h3 class="font-bold text-xl text-ink mb-3">Dispute Resolution:</h3>
+                                        <ul class="space-y-2 text-ink-muted">
                                             <li>• Any disputes will be subject to the exclusive jurisdiction of the courts in India</li>
                                             <li>• We will attempt to resolve disputes informally before any legal action</li>
                                             <li>• You agree to first contact us to resolve any disputes before filing any claims</li>
                                         </ul>
                                     </div>
-                                    <p class="text-sm text-gray-600 mt-4">
+                                    <p class="text-sm text-ink-subtle mt-4">
                                         If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full force and effect.
                                     </p>
                                 </div>
@@ -613,24 +597,24 @@
 
                     <!-- Changes to Terms -->
                     <section id="changes" class="mb-12 terms-section">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+                        <h2 class="text-4xl font-bold text-ink mb-6 flex items-center">
                             <span class="w-2 h-10 bg-accent rounded mr-4"></span>
                             Changes to These Terms
                         </h2>
 
-                        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-2xl">
-                            <p class="text-lg text-gray-700 mb-4">
+                        <div class="bg-gradient-to-r from-surface-2 to-surface-2 p-8 rounded-2xl">
+                            <p class="text-lg text-ink-muted mb-4">
                                 We may update these Terms from time to time to reflect changes in our services, legal requirements, or operational practices.
                             </p>
-                            <div class="bg-white p-6 rounded-xl mb-4">
-                                <h3 class="font-bold text-lg text-gray-900 mb-3">Notification of Changes:</h3>
-                                <ul class="space-y-2 text-gray-700">
+                            <div class="bg-canvas p-6 rounded-xl mb-4">
+                                <h3 class="font-bold text-lg text-ink mb-3">Notification of Changes:</h3>
+                                <ul class="space-y-2 text-ink-muted">
                                     <li>✓ We will update the "Last Updated" date at the top of this page</li>
                                     <li>✓ Significant changes will be announced via email (if subscribed)</li>
                                     <li>✓ Your continued use after changes constitutes acceptance</li>
                                 </ul>
                             </div>
-                            <p class="text-gray-700">
+                            <p class="text-ink-muted">
                                 We encourage you to review these Terms periodically to stay informed about your rights and obligations.
                             </p>
                         </div>
@@ -638,17 +622,17 @@
 
                     <!-- Contact Section -->
                     <section id="contact-terms" class="mb-12">
-                        <div class="bg-gradient-to-r from-primary to-secondary text-white p-10 rounded-3xl shadow-2xl">
+                        <div class="bg-gradient-to-r from-primary to-secondary text-white p-10 rounded-3xl border border-hairline">
                             <h2 class="text-4xl font-bold mb-6">Questions About Our Terms?</h2>
                             <p class="text-xl mb-8 opacity-95">
                                 If you have any questions, concerns, or requests regarding these Terms and Conditions, please contact us:
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                                <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                                     <h3 class="font-bold text-xl mb-3">📧 Email</h3>
                                     <a href="mailto:legal@jeeprepguide.com" class="text-lg hover:underline">legal@jeeprepguide.com</a>
                                 </div>
-                                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                                <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                                     <h3 class="font-bold text-xl mb-3">📝 Contact Form</h3>
                                     <a href="/contact-us" class="text-lg hover:underline">Visit Contact Page</a>
                                 </div>
@@ -660,16 +644,16 @@
                     </section>
 
                     <!-- Acknowledgment -->
-                    <section class="bg-gray-100 p-8 rounded-2xl">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Acknowledgment and Agreement</h3>
-                        <p class="text-lg text-gray-700 leading-relaxed">
+                    <section class="bg-surface-1 p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-ink mb-4">Acknowledgment and Agreement</h3>
+                        <p class="text-lg text-ink-muted leading-relaxed">
                             By using JEE Prep Guide, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with these terms, please discontinue use of our website immediately.
                         </p>
                         <div class="mt-6 flex flex-wrap gap-4">
                             <a href="/" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-secondary transition">
                                 Back to Homepage
                             </a>
-                            <a href="/privacy-policy" class="bg-white text-primary border-2 border-primary px-6 py-3 rounded-full font-bold hover:bg-primary hover:text-white transition">
+                            <a href="/privacy-policy" class="bg-canvas text-primary border-2 border-primary px-6 py-3 rounded-full font-bold hover:bg-primary hover:text-ink transition">
                                 View Privacy Policy
                             </a>
                         </div>
@@ -681,7 +665,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div class="md:col-span-2">
@@ -691,7 +675,7 @@
                         </div>
                         <h3 class="text-2xl font-bold">JEE Prep Guide</h3>
                     </div>
-                    <p class="text-gray-400 mb-4 leading-relaxed">
+                    <p class="text-ink-subtle mb-4 leading-relaxed">
                         Your complete free resource for JEE Main & Advanced preparation. Making quality education accessible to everyone.
                     </p>
                 </div>
@@ -699,73 +683,73 @@
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
                  <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -774,30 +758,30 @@
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
         ↑
     </button>
 
@@ -859,10 +843,10 @@
 
             tocLinks.forEach(link => {
                 link.classList.remove('font-bold', 'text-primary');
-                link.classList.add('text-gray-700');
+                link.classList.add('text-ink-muted');
                 if (link.getAttribute('href') === '#' + current) {
                     link.classList.add('font-bold', 'text-primary');
-                    link.classList.remove('text-gray-700');
+                    link.classList.remove('text-ink-muted');
                 }
             });
         });

@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Electrochemistry - Complete JEE Chemistry Notes with 100+ Examples">
     <meta property="og:description" content="Master Nernst equation, electrochemical cells, electrolysis & conductance. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Electrochemistry - JEE Chemistry Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry">
     <meta name="twitter:title" content="Electrochemistry - Complete JEE Chemistry Notes">
     <meta name="twitter:description" content="Master Nernst equation with 100+ solved examples. Complete notes on electrochemical cells, electrolysis & conductance for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Electrochemistry JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Electrochemistry - Complete JEE Chemistry Notes 2025-26",
       "description": "Comprehensive notes on Electrochemistry covering redox reactions, electrochemical cells, Nernst equation, electrolysis, and conductance with 100+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -382,60 +395,62 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#059669',
-                        secondary: '#047857',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
+    
 
-    <link rel="stylesheet" href="../assets/css/notes-chemistry.css">
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-chemistry.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-emerald-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #059669, #34d399); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                   <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                   <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -444,62 +459,62 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Chemistry</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Electrochemistry</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Electrochemistry</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
         </div>
     </nav>
 
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Electrochemistry</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Electrochemistry</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Redox Reactions
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Electrochemical Cells
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Electrode Potential
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Nernst Equation
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Electrolysis
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Conductance
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Batteries
             </a>
-            <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Corrosion
             </a>
         </div>
@@ -507,28 +522,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-emerald-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Electrochemistry
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Electrochemistry with complete notes on Redox Reactions, Nernst Equation, Electrochemical Cells, Electrolysis, and Conductance. Includes 100+ solved problems and all JEE formulas.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -537,21 +552,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Electrochemistry JEE Notes">
         <meta itemprop="description" content="Complete study notes for Electrochemistry">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">320</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -561,15 +576,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">100+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -581,53 +596,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Redox Reactions</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Electrochemical Cells</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Electrode Potential</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Nernst Equation</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Electrolysis</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Conductance</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Batteries & Fuel Cells</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Corrosion</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Redox Reactions</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Electrochemical Cells</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Electrode Potential</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Nernst Equation</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Electrolysis</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Conductance</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Batteries & Fuel Cells</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Corrosion</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./ionic-equilibrium.html" class="text-primary font-semibold hover:underline">Ionic Equilibrium &rarr;</a>
+                <a href="./chemical-kinetics.html" class="text-primary font-semibold hover:underline">Chemical Kinetics &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry/electrochemistry.png"
+                        src="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry.webp"
                         alt="Electrochemistry JEE notes, Formulas, PYQs"
                         title="Electrochemistry — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Electrochemistry JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Redox Reactions -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Redox Reactions</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Redox Reactions</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -638,7 +665,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Oxidation and Reduction</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Oxidation</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Loss of electrons</strong></li>
@@ -646,11 +673,11 @@
                                     <li>Occurs at <strong>Anode</strong> (negative electrode in galvanic cell)</li>
                                     <li>Example: Zn → Zn²⁺ + 2e⁻</li>
                                 </ul>
-                                <div class="mt-4 p-3 bg-blue-50 rounded">
+                                <div class="mt-4 p-3 bg-surface-2 rounded">
                                     <p class="text-sm font-semibold">Memory: OIL (Oxidation Is Loss)</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Reduction</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Gain of electrons</strong></li>
@@ -658,7 +685,7 @@
                                     <li>Occurs at <strong>Cathode</strong> (positive electrode in galvanic cell)</li>
                                     <li>Example: Cu²⁺ + 2e⁻ → Cu</li>
                                 </ul>
-                                <div class="mt-4 p-3 bg-blue-50 rounded">
+                                <div class="mt-4 p-3 bg-surface-2 rounded">
                                     <p class="text-sm font-semibold">Memory: RIG (Reduction Is Gain)</p>
                                 </div>
                             </div>
@@ -667,15 +694,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Oxidation Number Rules</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Rule</th>
                                         <th class="p-4 text-left">Oxidation Number</th>
                                         <th class="p-4 text-left">Examples</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4">Free element</td>
                                         <td class="p-4 font-mono font-bold">0</td>
@@ -727,7 +754,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Balancing Redox Reactions</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Ion-Electron Method (Half-Reaction Method)</h4>
                             <div class="space-y-3">
                                 <p class="font-semibold mb-2">Steps:</p>
@@ -745,31 +772,31 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Balance the following redox reaction in acidic medium: MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Step 1:</strong> Oxidation half-reaction</p>
-                                <div class="math-display bg-blue-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[\text{Fe}^{2+} \rightarrow \text{Fe}^{3+} + \text{e}^-\]
                                 </div>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 2:</strong> Reduction half-reaction</p>
-                                <div class="math-display bg-blue-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[\text{MnO}_4^- + 8\text{H}^+ + 5\text{e}^- \rightarrow \text{Mn}^{2+} + 4\text{H}_2\text{O}\]
                                 </div>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 3:</strong> Multiply to equalize electrons (5 × oxidation)</p>
-                                <div class="math-display bg-blue-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[5\text{Fe}^{2+} \rightarrow 5\text{Fe}^{3+} + 5\text{e}^-\]
                                 </div>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 4:</strong> Add both half-reactions</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{MnO}_4^- + 5\text{Fe}^{2+} + 8\text{H}^+ \rightarrow \text{Mn}^{2+} + 5\text{Fe}^{3+} + 4\text{H}_2\text{O}\]
                                 </div>
                             </div>
@@ -790,10 +817,10 @@
                 </section>
 
                 <!-- Chapter 2: Electrochemical Cells -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Electrochemical Cells</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Electrochemical Cells</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -801,13 +828,13 @@
                             <strong>Electrochemical cells</strong> are devices that convert chemical energy to electrical energy (galvanic cells) or electrical energy to chemical energy (electrolytic cells).
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Galvanic Cell (Voltaic Cell)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Galvanic Cell (Voltaic Cell)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition & Components</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition & Components</h4>
                             <p class="mb-4">A galvanic cell converts <strong>chemical energy → electrical energy</strong> through spontaneous redox reactions.</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-2">Key Features:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Spontaneous reaction (ΔG < 0, E°<sub>cell</sub> > 0)</li>
@@ -818,7 +845,7 @@
                                 </ul>
                             </div>
 
-                            <div class="bg-white p-4 rounded-lg border-2 border-secondary">
+                            <div class="bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 <p class="font-semibold mb-2">Example: Daniell Cell</p>
                                 <div class="space-y-2 text-sm">
                                     <p><strong>Anode:</strong> Zn(s) | ZnSO₄(aq)</p>
@@ -832,30 +859,30 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Salt Bridge</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Salt Bridge</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Functions of Salt Bridge</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Functions of Salt Bridge</h4>
                             <ul class="list-disc list-inside space-y-3 text-lg">
                                 <li><strong>Completes the circuit:</strong> Allows flow of ions between two half-cells</li>
                                 <li><strong>Maintains electrical neutrality:</strong> Prevents charge buildup in half-cells</li>
                                 <li><strong>Contains inert electrolyte:</strong> Usually KCl, KNO₃, NH₄NO₃ (ions don't react with cell components)</li>
                                 <li><strong>Prevents mixing:</strong> Keeps solutions in separate compartments</li>
                             </ul>
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">How it works:</p>
                                 <p class="text-sm">Anions from salt bridge move toward anode (to neutralize excess positive charge from Zn²⁺)</p>
                                 <p class="text-sm mt-1">Cations from salt bridge move toward cathode (to neutralize excess negative charge from consumed Cu²⁺)</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Electrolytic Cell</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Electrolytic Cell</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition & Characteristics</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition & Characteristics</h4>
                             <p class="mb-4">An electrolytic cell converts <strong>electrical energy → chemical energy</strong> through non-spontaneous reactions.</p>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-2">Key Features:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Non-spontaneous reaction (ΔG > 0, E°<sub>cell</sub> < 0)</li>
@@ -867,18 +894,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Galvanic vs Electrolytic Cell</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Galvanic vs Electrolytic Cell</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Galvanic Cell</th>
                                         <th class="p-4 text-left">Electrolytic Cell</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Energy Conversion</td>
                                         <td class="p-4">Chemical → Electrical</td>
@@ -924,7 +951,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common JEE Misconception
                             </h4>
                             <p class="text-lg mb-3">
@@ -939,10 +966,10 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.5 Cell Notation (IUPAC Convention)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.5 Cell Notation (IUPAC Convention)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Rules for Writing Cell Notation</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Rules for Writing Cell Notation</h4>
                             <div class="space-y-3">
                                 <p><strong>1.</strong> Anode (oxidation) written on left</p>
                                 <p><strong>2.</strong> Cathode (reduction) written on right</p>
@@ -951,9 +978,9 @@
                                 <p><strong>5.</strong> Concentrations written in parentheses (optional)</p>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg border-2 border-secondary mt-4">
+                            <div class="bg-canvas p-4 rounded-lg border-2 border-secondary mt-4">
                                 <p class="font-semibold mb-3">General Format:</p>
-                                <div class="math-display bg-purple-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[\text{Anode} | \text{Anode solution} || \text{Cathode solution} | \text{Cathode}\]
                                 </div>
                                 
@@ -969,10 +996,10 @@
                 </section>
 
                 <!-- Chapter 3: Electrode Potential -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Electrode Potential & EMF</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Electrode Potential & EMF</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -982,7 +1009,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Standard Electrode Potential (E°)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Definition & Standard Conditions</h4>
                             <p class="mb-3">Standard electrode potential (E°) is measured under standard conditions:</p>
                             <ul class="list-disc list-inside space-y-2 ml-4">
@@ -992,7 +1019,7 @@
                                 <li>Pure solids and liquids in their standard states</li>
                             </ul>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Standard Hydrogen Electrode (SHE) - Reference</p>
                                 <p class="text-sm">Pt(s) | H₂(g, 1 atm) | H⁺(aq, 1M)</p>
                                 <p class="text-sm mt-2"><strong>E° = 0.00 V</strong> (by convention)</p>
@@ -1003,18 +1030,18 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Standard Reduction Potentials Table (Important for JEE)</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Half-Reaction (Reduction)</th>
                                         <th class="p-4 text-left">E° (V)</th>
                                         <th class="p-4 text-left">Remark</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-mono text-sm">F₂ + 2e⁻ → 2F⁻</td>
-                                        <td class="p-4 font-bold text-success">+2.87</td>
+                                        <td class="p-4 font-bold text-primary">+2.87</td>
                                         <td class="p-4 text-sm">Strongest oxidizing agent</td>
                                     </tr>
                                     <tr>
@@ -1052,44 +1079,44 @@
                                         <td class="p-4 font-bold">+0.34</td>
                                         <td class="p-4 text-sm">Daniell cell cathode</td>
                                     </tr>
-                                    <tr class="bg-yellow-50">
+                                    <tr class="bg-surface-2">
                                         <td class="p-4 font-mono text-sm font-bold">2H⁺ + 2e⁻ → H₂</td>
-                                        <td class="p-4 font-bold text-accent">0.00</td>
+                                        <td class="p-4 font-bold text-primary">0.00</td>
                                         <td class="p-4 text-sm font-semibold">Reference electrode (SHE)</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono text-sm">Pb²⁺ + 2e⁻ → Pb</td>
-                                        <td class="p-4 font-bold text-danger">-0.13</td>
+                                        <td class="p-4 font-bold text-primary">-0.13</td>
                                         <td class="p-4 text-sm">Lead-acid battery</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono text-sm">Ni²⁺ + 2e⁻ → Ni</td>
-                                        <td class="p-4 font-bold text-danger">-0.25</td>
+                                        <td class="p-4 font-bold text-primary">-0.25</td>
                                         <td class="p-4 text-sm">-</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono text-sm">Fe²⁺ + 2e⁻ → Fe</td>
-                                        <td class="p-4 font-bold text-danger">-0.44</td>
+                                        <td class="p-4 font-bold text-primary">-0.44</td>
                                         <td class="p-4 text-sm">Rusting of iron</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono text-sm">Zn²⁺ + 2e⁻ → Zn</td>
-                                        <td class="p-4 font-bold text-danger">-0.76</td>
+                                        <td class="p-4 font-bold text-primary">-0.76</td>
                                         <td class="p-4 text-sm">Daniell cell anode</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono text-sm">Al³⁺ + 3e⁻ → Al</td>
-                                        <td class="p-4 font-bold text-danger">-1.66</td>
+                                        <td class="p-4 font-bold text-primary">-1.66</td>
                                         <td class="p-4 text-sm">Strong reducing agent</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono text-sm">Na⁺ + e⁻ → Na</td>
-                                        <td class="p-4 font-bold text-danger">-2.71</td>
+                                        <td class="p-4 font-bold text-primary">-2.71</td>
                                         <td class="p-4 text-sm">Very strong reducing agent</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-mono text-sm">Li⁺ + e⁻ → Li</td>
-                                        <td class="p-4 font-bold text-danger">-3.05</td>
+                                        <td class="p-4 font-bold text-primary">-3.05</td>
                                         <td class="p-4 text-sm">Strongest reducing agent</td>
                                     </tr>
                                 </tbody>
@@ -1110,19 +1137,19 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Calculating Cell EMF</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Formula</h4>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[E°_{\text{cell}} = E°_{\text{cathode}} - E°_{\text{anode}}\]
                             </div>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary mt-3">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary mt-3">
                                 \[E°_{\text{cell}} = E°_{\text{reduction}} - E°_{\text{oxidation}}\]
                             </div>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary mt-3">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary mt-3">
                                 \[E°_{\text{cell}} = E°_{\text{right}} - E°_{\text{left}} \text{ (from cell notation)}\]
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Important Notes:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>For spontaneous reaction: E°<sub>cell</sub> > 0</li>
@@ -1133,7 +1160,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
@@ -1141,7 +1168,7 @@
                                 <br>Given: E°(Zn²⁺/Zn) = -0.76 V, E°(Cu²⁺/Cu) = +0.34 V
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Step 1:</strong> Identify cathode and anode</p>
                                 <p class="mb-2">Cathode (reduction): Cu²⁺ + 2e⁻ → Cu (higher E°)</p>
                                 <p class="mb-2">Anode (oxidation): Zn → Zn²⁺ + 2e⁻ (lower E°)</p>
@@ -1153,11 +1180,11 @@
                                     \[E°_{\text{cell}} = 0.34 - (-0.76) = 0.34 + 0.76\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[E°_{\text{cell}} = 1.10 \text{ V}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-600">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     Since E°<sub>cell</sub> > 0, the reaction is spontaneous.
                                 </p>
                             </div>
@@ -1165,18 +1192,18 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Relationship between ΔG° and E°<sub>cell</sub></h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Gibbs Free Energy and Cell Potential</h4>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[\Delta G° = -nFE°_{\text{cell}}\]
                             </div>
-                            <p class="mt-4 text-gray-700">
+                            <p class="mt-4 text-ink-muted">
                                 where n = number of electrons transferred, F = Faraday's constant = 96,485 C/mol ≈ 96,500 C/mol
                             </p>
                             
                             <div class="overflow-x-auto mt-4">
                                 <table class="w-full text-sm">
-                                    <thead class="bg-blue-100">
+                                    <thead class="bg-surface-3">
                                         <tr>
                                             <th class="p-3 text-left">Condition</th>
                                             <th class="p-3 text-left">ΔG°</th>
@@ -1187,8 +1214,8 @@
                                     <tbody class="divide-y">
                                         <tr>
                                             <td class="p-3">Spontaneous</td>
-                                            <td class="p-3 font-bold text-success">< 0 (negative)</td>
-                                            <td class="p-3 font-bold text-success">> 0 (positive)</td>
+                                            <td class="p-3 font-bold text-primary">< 0 (negative)</td>
+                                            <td class="p-3 font-bold text-primary">> 0 (positive)</td>
                                             <td class="p-3">Proceeds forward</td>
                                         </tr>
                                         <tr>
@@ -1199,8 +1226,8 @@
                                         </tr>
                                         <tr>
                                             <td class="p-3">Non-spontaneous</td>
-                                            <td class="p-3 font-bold text-danger">> 0 (positive)</td>
-                                            <td class="p-3 font-bold text-danger">< 0 (negative)</td>
+                                            <td class="p-3 font-bold text-primary">> 0 (positive)</td>
+                                            <td class="p-3 font-bold text-primary">< 0 (negative)</td>
                                             <td class="p-3">Does not proceed</td>
                                         </tr>
                                     </tbody>
@@ -1210,17 +1237,17 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.5 Relationship between K<sub>eq</sub> and E°<sub>cell</sub></h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Equilibrium Constant and Cell Potential</h4>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[E°_{\text{cell}} = \frac{RT}{nF} \ln K = \frac{2.303RT}{nF} \log K\]
                             </div>
-                            <p class="mt-3 text-gray-700">At 298 K:</p>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <p class="mt-3 text-ink-muted">At 298 K:</p>
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[E°_{\text{cell}} = \frac{0.0591}{n} \log K\]
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Interpretation:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>E°<sub>cell</sub> > 0 → K > 1 → Products favored</li>
@@ -1233,10 +1260,10 @@
                 </section>
 
                 <!-- Chapter 4: Nernst Equation -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Nernst Equation</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Nernst Equation</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1244,25 +1271,25 @@
                             The <strong>Nernst equation</strong> relates the cell potential at any condition to the standard electrode potential and the concentration of reactants and products. This is one of the most important equations for JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.1 Nernst Equation Derivation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Nernst Equation Derivation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">General Form</h4>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">General Form</h4>
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 \[E_{\text{cell}} = E°_{\text{cell}} - \frac{RT}{nF} \ln Q\]
                             </div>
                             
                             <p class="mt-4 mb-3">Converting to base-10 logarithm:</p>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 \[E_{\text{cell}} = E°_{\text{cell}} - \frac{2.303RT}{nF} \log Q\]
                             </div>
                             
                             <p class="mt-4 mb-3"><strong>At 298 K (25°C):</strong></p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg border-2 border-secondary">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-secondary">
                                 \[E_{\text{cell}} = E°_{\text{cell}} - \frac{0.0591}{n} \log Q\]
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Where:</p>
                                 <ul class="space-y-1 text-sm">
                                     <li>E<sub>cell</sub> = cell potential at given conditions</li>
@@ -1276,15 +1303,15 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.2 Calculating Reaction Quotient (Q)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Calculating Reaction Quotient (Q)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">General Reaction: aA + bB → cC + dD</h4>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">General Reaction: aA + bB → cC + dD</h4>
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 \[Q = \frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b}\]
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Important Rules:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Aqueous ions:</strong> Use molar concentrations [M]</li>
@@ -1297,14 +1324,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate the cell potential for the Daniell cell at 298 K when [Zn²⁺] = 0.1 M and [Cu²⁺] = 0.01 M. Given E°<sub>cell</sub> = 1.10 V
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Cell reaction:</strong> Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s)</p>
                                 <p class="mb-2">n = 2 electrons transferred</p>
                                 
@@ -1312,7 +1339,7 @@
                                 <div class="math-display">
                                     \[Q = \frac{[\text{Zn}^{2+}]}{[\text{Cu}^{2+}]} = \frac{0.1}{0.01} = 10\]
                                 </div>
-                                <p class="text-sm text-gray-600">(Pure solids Zn and Cu not included)</p>
+                                <p class="text-sm text-ink-muted">(Pure solids Zn and Cu not included)</p>
                                 
                                 <p class="mb-2 mt-4"><strong>Step 2:</strong> Apply Nernst equation</p>
                                 <div class="math-display">
@@ -1322,24 +1349,24 @@
                                     \[E_{\text{cell}} = 1.10 - 0.02955\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[E_{\text{cell}} = 1.07 \text{ V}\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.3 Nernst Equation for Single Electrode</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Nernst Equation for Single Electrode</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Half-Cell Reaction: M<sup>n+</sup> + ne<sup>-</sup> → M</h4>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Half-Cell Reaction: M<sup>n+</sup> + ne<sup>-</sup> → M</h4>
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 \[E = E° - \frac{0.0591}{n} \log \frac{1}{[\text{M}^{n+}]}\]
                             </div>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary mt-3">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary mt-3">
                                 \[E = E° + \frac{0.0591}{n} \log [\text{M}^{n+}]\]
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Examples:</p>
                                 <div class="space-y-3">
                                     <div>
@@ -1358,27 +1385,27 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.4 Concentration Cells</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Concentration Cells</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="mb-4">A concentration cell consists of two half-cells with the <strong>same electrodes but different concentrations</strong> of electrolyte.</p>
                             
-                            <div class="bg-white p-4 rounded-lg border-2 border-secondary">
+                            <div class="bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 <p class="font-semibold mb-2">Example: Zn | Zn²⁺(C₁) || Zn²⁺(C₂) | Zn</p>
                                 <p class="text-sm mb-3">where C₁ < C₂</p>
                                 
                                 <p class="font-semibold mb-2">Cell potential:</p>
-                                <div class="math-display bg-purple-50 p-3 rounded">
+                                <div class="math-display bg-surface-2 p-3 rounded">
                                     \[E_{\text{cell}} = E°_{\text{cell}} - \frac{0.0591}{n} \log \frac{C_1}{C_2}\]
                                 </div>
                                 <p class="text-sm mt-2">Since E°<sub>cell</sub> = 0 (same electrodes):</p>
-                                <div class="math-display bg-purple-50 p-3 rounded mt-2">
+                                <div class="math-display bg-surface-2 p-3 rounded mt-2">
                                     \[E_{\text{cell}} = \frac{0.0591}{n} \log \frac{C_2}{C_1}\]
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Important Points:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>Cathode: Higher concentration side (reduction occurs)</li>
@@ -1390,14 +1417,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate EMF of concentration cell at 25°C: Ag | Ag⁺(0.01 M) || Ag⁺(0.1 M) | Ag
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">C₁ = 0.01 M (anode, lower concentration)</p>
                                 <p class="mb-2">C₂ = 0.1 M (cathode, higher concentration)</p>
                                 <p class="mb-2">n = 1 (Ag⁺ + e⁻ → Ag)</p>
@@ -1410,14 +1437,14 @@
                                     \[E_{\text{cell}} = 0.0591 \times 1\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[E_{\text{cell}} = 0.0591 \text{ V} = 59.1 \text{ mV}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistakes in JEE
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1432,10 +1459,10 @@
                 </section>
 
 <!-- Chapter 5: Electrolysis & Faraday's Laws -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Electrolysis & Faraday's Laws</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Electrolysis & Faraday's Laws</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1445,16 +1472,16 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Faraday's First Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Statement</h4>
                             <p class="mb-4">The mass of a substance deposited or liberated at an electrode is <strong>directly proportional</strong> to the quantity of electricity (charge) passed through the electrolyte.</p>
                             
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[m \propto Q\]
                                 \[m = Z \times Q = Z \times I \times t\]
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Where:</p>
                                 <ul class="space-y-1 text-sm">
                                     <li>m = mass deposited (g)</li>
@@ -1468,15 +1495,15 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Faraday's Second Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Statement</h4>
                             <p class="mb-4">When the same quantity of electricity is passed through different electrolytes, the masses of substances deposited are proportional to their <strong>equivalent weights</strong>.</p>
                             
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[\frac{m_1}{m_2} = \frac{E_1}{E_2} = \frac{Z_1}{Z_2}\]
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Where:</p>
                                 <ul class="space-y-1 text-sm">
                                     <li>E = equivalent weight = Molar mass / n</li>
@@ -1489,13 +1516,13 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Important Formulas for Electrolysis</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Master Formula</h4>
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-primary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-primary">
                                 \[m = \frac{M \times I \times t}{n \times F}\]
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Where:</p>
                                 <ul class="space-y-1 text-sm">
                                     <li>m = mass deposited (g)</li>
@@ -1507,7 +1534,7 @@
                                 </ul>
                             </div>
                             
-                            <div class="mt-4 p-4 bg-white rounded-lg border-2 border-primary">
+                            <div class="mt-4 p-4 bg-canvas rounded-lg border-2 border-primary">
                                 <p class="font-semibold mb-2">Alternative Forms:</p>
                                 <div class="space-y-2 text-sm">
                                     <p>Number of moles deposited: \(n_{\text{moles}} = \frac{I \times t}{n \times F}\)</p>
@@ -1518,14 +1545,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A current of 5 A is passed through CuSO₄ solution for 30 minutes. Calculate the mass of copper deposited at cathode. (Atomic mass of Cu = 63.5)
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Given:</strong></p>
                                 <ul class="list-disc list-inside space-y-1 ml-4">
                                     <li>I = 5 A</li>
@@ -1542,7 +1569,7 @@
                                     \[m = \frac{571500}{193000}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[m = 2.96 \text{ g}\]
                                 </div>
                             </div>
@@ -1551,16 +1578,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Products of Electrolysis</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Electrolyte</th>
                                         <th class="p-4 text-left">Electrode</th>
                                         <th class="p-4 text-left">Product at Cathode</th>
                                         <th class="p-4 text-left">Product at Anode</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4">Molten NaCl</td>
                                         <td class="p-4">Inert</td>
@@ -1629,8 +1656,8 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.5 Applications of Electrolysis</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="example-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">⚙️ Electroplating</h5>
+                            <div class="example-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">⚙️ Electroplating</h5>
                                 <p class="text-sm mb-2">Coating one metal with another using electrolysis</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Object to be plated = Cathode</li>
@@ -1640,8 +1667,8 @@
                                 </ul>
                             </div>
                             
-                            <div class="example-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">🔬 Electrorefining</h5>
+                            <div class="example-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">🔬 Electrorefining</h5>
                                 <p class="text-sm mb-2">Purification of metals</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Impure metal = Anode (dissolves)</li>
@@ -1651,8 +1678,8 @@
                                 </ul>
                             </div>
                             
-                            <div class="example-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">⚡ Extraction of Metals</h5>
+                            <div class="example-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">⚡ Extraction of Metals</h5>
                                 <p class="text-sm mb-2">Obtaining metals from their ores</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Na, K, Ca, Mg, Al extracted by electrolysis</li>
@@ -1661,8 +1688,8 @@
                                 </ul>
                             </div>
                             
-                            <div class="example-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">🧪 Production of Chemicals</h5>
+                            <div class="example-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">🧪 Production of Chemicals</h5>
                                 <p class="text-sm mb-2">Industrial chemical synthesis</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>NaOH, Cl₂ (Chlor-alkali process)</li>
@@ -1675,10 +1702,10 @@
                 </section>
 
                 <!-- Chapter 6: Conductance (Compact version due to length) -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Conductance</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Conductance</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1686,19 +1713,19 @@
                             <strong>Conductance</strong> is the ability of a solution to conduct electricity. It's the reciprocal of resistance and is crucial for understanding electrolytic solutions.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Types of Conductance</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Types of Conductance</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Type</th>
                                         <th class="p-4 text-left">Symbol</th>
                                         <th class="p-4 text-left">Formula</th>
                                         <th class="p-4 text-left">Unit</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Conductance</td>
                                         <td class="p-4 font-mono">G</td>
@@ -1727,17 +1754,17 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Kohlrausch's Law</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Kohlrausch's Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Law of Independent Migration of Ions</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Law of Independent Migration of Ions</h4>
                             <p class="mb-3">At <strong>infinite dilution</strong>, each ion contributes independently to the total molar conductivity.</p>
                             
-                            <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                            <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                 \[\Lambda°_m = \nu_+ \lambda°_+ + \nu_- \lambda°_-\]
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Applications:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>Calculate Λ°<sub>m</sub> for weak electrolytes</li>
@@ -1752,7 +1779,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Quick Formula: Degree of Dissociation
                             </h4>
-                            <div class="math-display bg-purple-50 p-3 rounded">
+                            <div class="math-display bg-surface-2 p-3 rounded">
                                 \[\alpha = \frac{\Lambda_m}{\Lambda°_m}\]
                             </div>
                             <p class="mt-3 text-sm">For weak electrolyte: K<sub>a</sub> = (Cα²)/(1-α) ≈ Cα² (if α << 1)</p>
@@ -1762,17 +1789,17 @@
 
                 <!-- Chapters 7 & 8 Brief (Due to space constraints, providing essential content) -->
                 
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Batteries & Fuel Cells</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Batteries & Fuel Cells</h2>
                     </div>
 
                     <div class="prose max-w-none">
                         <h3 class="text-2xl font-bold text-primary mt-4 mb-4">Important Batteries for JEE</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">🔋 Primary Batteries</h5>
                                 <p class="mb-3"><strong>Dry Cell (Leclanche Cell):</strong></p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
@@ -1784,7 +1811,7 @@
                                 </ul>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">🔄 Secondary Batteries</h5>
                                 <p class="mb-3"><strong>Lead-Acid Battery:</strong></p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
@@ -1799,10 +1826,10 @@
                     </div>
                 </section>
 
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Corrosion</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Corrosion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1828,14 +1855,14 @@
                 <!-- PYQ and Practice sections remain same as Solutions template -->
                 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Nernst Equation: 35%</li>
@@ -1845,7 +1872,7 @@
                                 <li>✓ Batteries & Corrosion: 5%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Numerical on Nernst equation: 30%</li>
@@ -1857,8 +1884,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculating cell EMF using Nernst equation at non-standard conditions</li>
                             <li>Determining products and mass deposited during electrolysis</li>
@@ -1873,7 +1900,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1896,21 +1923,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate E°<sub>cell</sub> for: Mg(s) | Mg²⁺(aq) || Ag⁺(aq) | Ag(s). Given E°(Mg²⁺/Mg) = -2.37 V, E°(Ag⁺/Ag) = +0.80 V</li>
                             <li>How much copper will be deposited when 2 A current passes through CuSO₄ for 1 hour?</li>
@@ -1923,8 +1950,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate ΔG° and K<sub>eq</sub> for Daniell cell at 298 K. E°<sub>cell</sub> = 1.10 V</li>
                             <li>Two solutions of CuSO₄ and AgNO₃ are connected in series and same current is passed. If 2.0 g Ag deposits, what mass of Cu will deposit?</li>
@@ -1937,8 +1964,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Derive the relationship between E°<sub>cell</sub> and equilibrium constant K. Calculate K for cell with E°<sub>cell</sub> = 1.10 V, n = 2</li>
                             <li>Three electrolytic cells A, B, C containing ZnSO₄, AgNO₃, and CuSO₄ respectively are connected in series. If 1.45 g Ag deposits in B, calculate masses deposited in A and C</li>
@@ -1952,61 +1979,79 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./ionic-equilibrium.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Ionic Equilibrium</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./some-basic-concepts-of-chemistry.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Some Basic Concepts Of Chemistry</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./states-of-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">States Of Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Chemistry Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Solutions</h3>
-                    <p class="text-gray-600">Colligative properties, Raoult's law, Concentration terms</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Solutions</h3>
+                    <p class="text-ink-muted">Colligative properties, Raoult's law, Concentration terms</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Chemical Kinetics</h3>
-                    <p class="text-gray-600">Rate of reaction, Order, Rate laws, Activation energy</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Chemical Kinetics</h3>
+                    <p class="text-ink-muted">Rate of reaction, Order, Rate laws, Activation energy</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Chemical Equilibrium</h3>
-                    <p class="text-gray-600">Le Chatelier's principle, K<sub>eq</sub>, Equilibrium calculations</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Chemical Equilibrium</h3>
+                    <p class="text-ink-muted">Le Chatelier's principle, K<sub>eq</sub>, Equilibrium calculations</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Chemistry Notes →
                 </a>
             </div>
@@ -2014,65 +2059,65 @@
     </section>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Electrochemistry - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Electrochemistry - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Electrochemistry is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Electrochemistry</strong> is the highest-weightage chapter in <strong>JEE Physical Chemistry</strong>, carrying 12-16% weightage. Key reasons:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Nernst Equation</strong> - Most scoring numerical topic (guaranteed 1-2 questions)</li>
                             <li><strong>Faraday's Laws</strong> - Simple calculations with high success rate</li>
                             <li><strong>Electrode Potentials</strong> - Directly tests conceptual understanding</li>
                             <li><strong>Multi-concept Integration</strong> - Links with thermodynamics, equilibrium</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             JEE Advanced often combines electrochemistry with <strong>chemical equilibrium and thermodynamics</strong> in complex multi-part questions.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Formulas - Quick Revision</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Nernst Equation</h4>
-                                <p class="text-gray-700 text-sm">E<sub>cell</sub> = E°<sub>cell</sub> - (0.0591/n) log Q</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Nernst Equation</h4>
+                                <p class="text-ink-muted text-sm">E<sub>cell</sub> = E°<sub>cell</sub> - (0.0591/n) log Q</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Faraday's Law</h4>
-                                <p class="text-gray-700 text-sm">m = (M×I×t)/(n×96500)</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Faraday's Law</h4>
+                                <p class="text-ink-muted text-sm">m = (M×I×t)/(n×96500)</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. Cell EMF</h4>
-                                <p class="text-gray-700 text-sm">E°<sub>cell</sub> = E°<sub>cathode</sub> - E°<sub>anode</sub></p>
+                                <h4 class="font-bold text-lg text-primary mb-2">3. Cell EMF</h4>
+                                <p class="text-ink-muted text-sm">E°<sub>cell</sub> = E°<sub>cathode</sub> - E°<sub>anode</sub></p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">4. Gibbs Energy</h4>
-                                <p class="text-gray-700 text-sm">ΔG° = -nFE°<sub>cell</sub></p>
+                                <h4 class="font-bold text-lg text-primary mb-2">4. Gibbs Energy</h4>
+                                <p class="text-ink-muted text-sm">ΔG° = -nFE°<sub>cell</sub></p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">5. Equilibrium Constant</h4>
-                                <p class="text-gray-700 text-sm">E°<sub>cell</sub> = (0.0591/n) log K</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">5. Equilibrium Constant</h4>
+                                <p class="text-ink-muted text-sm">E°<sub>cell</sub> = (0.0591/n) log K</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">6. Conductance</h4>
-                                <p class="text-gray-700 text-sm">Λ<sub>m</sub> = κ×1000/M</p>
+                                <h4 class="font-bold text-lg text-primary mb-2">6. Conductance</h4>
+                                <p class="text-ink-muted text-sm">Λ<sub>m</sub> = κ×1000/M</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 Study Strategy</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main (Target: 100%ile)</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li>Master <strong>Nernst equation</strong> - solve 50+ numericals</li>
                                 <li>Memorize standard reduction potential table (top 15)</li>
                                 <li>Practice <strong>Faraday's law</strong> calculations (mass, time, current)</li>
@@ -2082,7 +2127,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced (AIR < 1000)</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li>Deep dive into <strong>derivations</strong> (Nernst, Kohlrausch)</li>
                                 <li>Master <strong>concentration cells</strong> and pH calculations</li>
                                 <li>Practice multi-concept problems (electrochemistry + thermo)</li>
@@ -2093,35 +2138,35 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Top 5 Mistakes to Avoid</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Top 5 Mistakes to Avoid</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Sign errors in Nernst equation:</strong> Always use reduction potentials. E°<sub>cell</sub> = E°<sub>cathode</sub> - E°<sub>anode</sub> (NOT addition!)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong reaction quotient (Q):</strong> Q = Products/Reactants, exclude pure solids and liquids!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Forgetting to balance electrons:</strong> In Faraday's law, use correct 'n' value after balancing half-reactions
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Anode-cathode confusion:</strong> In galvanic cell: Anode (-), Cathode (+). In electrolytic cell: reverse!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Using 0.0591 at wrong temperature:</strong> This value is ONLY for 298 K! Use (2.303RT/nF) for other temperatures
                             </div>
@@ -2133,53 +2178,53 @@
     </section>
 
     <!-- Footer (Same as previous templates) -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="hover:text-white transition">Solutions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="hover:text-white transition">Electrochemistry</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="hover:text-ink transition">Solutions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="hover:text-ink transition">Electrochemistry</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8 text-center">
-                <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants</p>
+            <div class="border-t border-hairline pt-8 text-center">
+                <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 

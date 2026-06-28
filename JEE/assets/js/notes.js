@@ -3,21 +3,30 @@
    Shared across Physics, Chemistry & Maths
    ============================================ */
 
-// ── Reading Progress Bar ──────────────────────
-window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    const bar = document.getElementById('progress-bar');
-    if (bar) bar.style.width = scrolled + '%';
-});
+// ── Mobile Menu Toggle ────────────────────────
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu) menu.classList.toggle('hidden');
+}
 
-// ── Active Navigation Highlighting ────────────
+// ── Scroll Handler (throttled via requestAnimationFrame) ─────
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.sticky-nav a[href^="#"]');
+    const progressBar = document.getElementById('progress-bar');
 
-    window.addEventListener('scroll', () => {
+    let ticking = false;
+
+    const updateOnScroll = () => {
+        // Reading Progress Bar
+        if (progressBar) {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+            progressBar.style.width = scrolled + '%';
+        }
+
+        // Active Navigation Highlighting
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -32,7 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 link.classList.add('bg-primary', 'text-white');
             }
         });
-    });
+
+        ticking = false;
+    };
+
+    const requestTick = () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateOnScroll);
+            ticking = true;
+        }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
 });
 
 // ── Print / PDF ───────────────────────────────
@@ -44,21 +64,6 @@ function printNotes() {
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 }
-
-// ── MathJax Configuration ─────────────────────
-window.MathJax = {
-    tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true
-    },
-    svg: {
-        fontCache: 'global'
-    },
-    options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-};
 
 // ── Lazy-Load Images ──────────────────────────
 document.addEventListener('DOMContentLoaded', function () {

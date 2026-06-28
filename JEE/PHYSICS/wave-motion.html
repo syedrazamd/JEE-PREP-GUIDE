@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Wave Motion - Complete JEE Physics Notes with 200+ Examples">
     <meta property="og:description" content="Master wave equation, standing waves, Doppler effect & sound waves. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Wave Motion - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/wave-motion">
     <meta name="twitter:title" content="Wave Motion - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master wave motion with 200+ solved examples. Complete notes on wave equation, Doppler effect & sound waves for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Wave Motion JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555" crossorigin="anonymous"></script>
     
     <!-- Breadcrumb Schema -->
@@ -120,7 +133,7 @@
         "@type": "Article",
         "headline": "Wave Motion - Complete JEE Physics Notes 2025-26",
         "description": "Comprehensive notes on Wave Motion covering wave equation, standing waves, Doppler effect, sound waves, beats, and resonance with 200+ solved examples",
-        "image": "https://jeeprepguide.netlify.app/logo.png",
+        "image": "/logo-header.webp",
         "author": {
             "@type": "Organization",
             "name": "JEE Prep Guide",
@@ -131,7 +144,7 @@
             "name": "JEE Prep Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://jeeprepguide.netlify.app/logo.png"
+                "url": "/logo-header.webp"
             }
         },
         "datePublished": "2024-12-19",
@@ -342,60 +355,62 @@
         });
     </script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
 
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
 <!-- Header -->
-<header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+<header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                    <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                    <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                 </div>
                 <div>
-                    <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                    <p class="text-sm text-gray-500">Path to IIT</p>
+                    <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                    <p class="text-sm text-ink-tertiary">Path to IIT</p>
                 </div>
             </div>
             <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
             </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
         </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
     </div>
 </header>
 
 <!-- Breadcrumb Navigation -->
-<nav class="bg-gray-100 py-3 border-b">
+<nav class="bg-surface-1 py-3 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -404,30 +419,30 @@
                 </a>
                 <meta itemprop="position" content="1" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/notes" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Notes</span>
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">JEE</span>
                 </a>
                 <meta itemprop="position" content="3" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Physics</span>
                 </a>
                 <meta itemprop="position" content="4" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span class="text-gray-600 font-semibold" itemprop="name">Wave Motion</span>
+                <span class="text-ink-muted font-semibold" itemprop="name">Wave Motion</span>
                 <meta itemprop="position" content="5" />
             </li>
         </ol>
@@ -435,32 +450,32 @@
 </nav>
 
 <!-- Quick Navigation -->
-<section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+<section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Wave Motion</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Wave Motion</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Introduction
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Wave Types
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Wave Equation
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Superposition
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Standing Waves
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Sound Waves
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Doppler Effect
             </a>
-            <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Beats
             </a>
         </div>
@@ -468,28 +483,28 @@
 </section>
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center">
             <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                 Wave Motion
-                <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
             </h2>
             <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                 Master the physics of waves with complete notes on Wave Equation, Standing Waves, Doppler Effect, Sound Waves, Beats, and Resonance. Includes 200+ solved problems and all JEE shortcuts.
             </p>
             <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">📚 10 Complete Sections</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">✍️ 200+ Solved Examples</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">🎯 All Important Formulas</span>
                 </div>
             </div>
@@ -498,21 +513,21 @@
 </section>
 
 <!-- Rating Section -->
-<section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+<section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="name" content="Wave Motion JEE Notes">
     <meta itemprop="description" content="Complete study notes for Wave Motion">
-    <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta itemprop="image" content="/logo-header.webp">
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
         <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center space-x-6 mb-4 md:mb-0">
                 <div class="flex items-center">
-                    <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                    <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                     <span class="ml-3 text-xl font-bold">
                         <span itemprop="ratingValue">4.9</span>/5
                     </span>
                 </div>
-                <div class="text-gray-600">
+                <div class="text-ink-muted">
                     <span itemprop="reviewCount">312</span>+ students rated this helpful
                 </div>
                 <meta itemprop="bestRating" content="5">
@@ -522,15 +537,15 @@
             <div class="flex items-center space-x-6">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-primary">200+</div>
-                    <div class="text-sm text-gray-600">Solved Examples</div>
+                    <div class="text-sm text-ink-muted">Solved Examples</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-success">4 hrs</div>
-                    <div class="text-sm text-gray-600">Study Time</div>
+                    <div class="text-2xl font-bold text-primary">4 hrs</div>
+                    <div class="text-sm text-ink-muted">Study Time</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-secondary">Free</div>
-                    <div class="text-sm text-gray-600">Always</div>
+                    <div class="text-2xl font-bold text-primary">Free</div>
+                    <div class="text-sm text-ink-muted">Always</div>
                 </div>
             </div>
         </div>
@@ -542,55 +557,67 @@
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
         
         <!-- Sidebar Navigation -->
-        <aside class="lg:col-span-1">
-            <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <aside class="order-2 lg:order-1 lg:col-span-1">
+            <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                     <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                     Table of Contents
                 </h3>
                 <ul class="space-y-2 text-base font-medium">
-                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Introduction to Waves</a></li>
-                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Types of Waves</a></li>
-                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Wave Equation</a></li>
-                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Superposition Principle</a></li>
-                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Standing Waves</a></li>
-                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Sound Waves</a></li>
-                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Doppler Effect</a></li>
-                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Beats & Resonance</a></li>
-                    <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">9. Strings & Pipes</a></li>
-                    <li><a href="#chapter10" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">10. Reflection & Transmission</a></li>
-                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Introduction to Waves</a></li>
+                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Types of Waves</a></li>
+                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Wave Equation</a></li>
+                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Superposition Principle</a></li>
+                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Standing Waves</a></li>
+                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Sound Waves</a></li>
+                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Doppler Effect</a></li>
+                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Beats & Resonance</a></li>
+                    <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">9. Strings & Pipes</a></li>
+                    <li><a href="#chapter10" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">10. Reflection & Transmission</a></li>
+                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                 </ul>
             </div>
         </aside>
         
         <!-- Main Content Area -->
-        <main class="lg:col-span-3 space-y-12">
+        <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./simple-harmonic-motion.html" class="text-primary font-semibold hover:underline">Simple Harmonic Motion &rarr;</a>
+                <a href="./wave-optics.html" class="text-primary font-semibold hover:underline">Wave Optics &rarr;</a>
+            </div>
+        </div>
+    </div>
+
             
             <!-- Featured Image -->
             <figure class="mb-8">
                 <img
-                    src="https://jeeprepguide.netlify.app/jee/physics/wave-motion.png"
+                    src="https://jeeprepguide.netlify.app/jee/physics/wave-motion.webp"
                     alt="Wave Motion JEE notes, Formulas, PYQs"
                     title="Wave Motion — JEE Notes, Formulas, PYQs"
                     width="1200"
                     height="630"
                     loading="eager"
                     fetchpriority="high"
-                    class="w-full rounded-2xl shadow-lg border border-gray-200"
+                    class="w-full rounded-2xl border border-hairline border border-hairline"
                     itemprop="image"
                 >
-                <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                     Wave Motion - Complete JEE Physics Notes
                 </figcaption>
             </figure>
             
             <!-- Chapter 1: Introduction to Waves -->
-            <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Introduction to Wave Motion</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Introduction to Wave Motion</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -600,12 +627,12 @@
                     
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 What is a Wave?</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Definition of Wave</h4>
                         <p class="text-lg mb-4">
                             A <strong>wave</strong> is a disturbance that propagates through a medium (or vacuum) transferring energy from one point to another without the net movement of matter.
                         </p>
-                        <div class="bg-blue-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <p class="font-semibold">Key Characteristics:</p>
                             <ul class="list-disc list-inside space-y-1 mt-2">
                                 <li>Transfers energy and momentum</li>
@@ -619,16 +646,16 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Wave Parameters</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Parameter</th>
                                     <th class="p-4 text-left">Symbol</th>
                                     <th class="p-4 text-left">Definition</th>
                                     <th class="p-4 text-left">SI Unit</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Amplitude</td>
                                     <td class="p-4 font-mono">A</td>
@@ -683,35 +710,35 @@
                     
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Fundamental Wave Relations</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Essential Formulas</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Wave Velocity</p>
                                 <div class="math-display">
                                     \[v = f\lambda = \frac{\lambda}{T}\]
                                 </div>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Frequency-Period Relation</p>
                                 <div class="math-display">
                                     \[f = \frac{1}{T}\]
                                 </div>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Wave Number</p>
                                 <div class="math-display">
                                     \[k = \frac{2\pi}{\lambda}\]
                                 </div>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Angular Frequency</p>
                                 <div class="math-display">
                                     \[\omega = 2\pi f = \frac{2\pi}{T}\]
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                        <div class="mt-4 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                             <p class="font-semibold text-center">Key Relationship:</p>
                             <div class="math-display text-center">
                                 \[v = \frac{\omega}{k}\]
@@ -723,7 +750,7 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">🎯</span> JEE Tip: Quick Conversions
                         </h4>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
                                 <li><strong>v = fλ</strong> - Most frequently used formula in wave problems</li>
                                 <li><strong>k = 2π/λ = ω/v</strong> - Wave number appears in wave equation</li>
@@ -736,10 +763,10 @@
             </section>
             
             <!-- Chapter 2: Types of Waves -->
-            <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Types of Waves</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Types of Waves</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -747,11 +774,11 @@
                         Waves can be classified in multiple ways based on their properties, medium requirements, and particle motion. Understanding these classifications is essential for solving JEE problems correctly.
                     </p>
                     
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Based on Medium Requirement</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Based on Medium Requirement</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Mechanical Waves</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Mechanical Waves</h5>
                             <p class="mb-3">Require a material medium for propagation</p>
                             <ul class="list-disc list-inside space-y-2 text-sm">
                                 <li>Sound waves</li>
@@ -759,10 +786,10 @@
                                 <li>Seismic waves</li>
                                 <li>Waves on a string</li>
                             </ul>
-                            <p class="mt-3 text-sm font-semibold text-secondary">Cannot travel through vacuum</p>
+                            <p class="mt-3 text-sm font-semibold text-primary">Cannot travel through vacuum</p>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Electromagnetic Waves</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Electromagnetic Waves</h5>
                             <p class="mb-3">Do NOT require a medium</p>
                             <ul class="list-disc list-inside space-y-2 text-sm">
                                 <li>Light waves</li>
@@ -770,15 +797,15 @@
                                 <li>X-rays</li>
                                 <li>Microwaves</li>
                             </ul>
-                            <p class="mt-3 text-sm font-semibold text-secondary">Can travel through vacuum at speed c</p>
+                            <p class="mt-3 text-sm font-semibold text-primary">Can travel through vacuum at speed c</p>
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Based on Particle Motion</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Based on Particle Motion</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Transverse Waves</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Transverse Waves</h5>
                             <p class="mb-3">Particle vibration <strong>⊥</strong> to wave propagation</p>
                             <div class="diagram-box my-4 p-4">
                                 <svg width="300" height="100" viewBox="0 0 300 100">
@@ -797,8 +824,8 @@
                             </ul>
                             <p class="mt-3 text-sm italic">Can be polarized</p>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Longitudinal Waves</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Longitudinal Waves</h5>
                             <p class="mb-3">Particle vibration <strong>∥</strong> to wave propagation</p>
                             <div class="diagram-box my-4 p-4">
                                 <svg width="300" height="100" viewBox="0 0 300 100">
@@ -822,18 +849,18 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Based on Energy Propagation</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Based on Energy Propagation</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Property</th>
                                     <th class="p-4 text-left">Progressive Waves</th>
                                     <th class="p-4 text-left">Stationary Waves</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Energy Transfer</td>
                                     <td class="p-4">Energy propagates along with wave</td>
@@ -863,33 +890,33 @@
                         </table>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Wave Velocity in Different Media</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Wave Velocity in Different Media</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Important Velocity Formulas</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Important Velocity Formulas</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">String (Transverse Wave)</p>
                                 <div class="math-display">
                                     \[v = \sqrt{\frac{T}{\mu}}\]
                                 </div>
                                 <p class="text-sm">T = Tension, μ = mass per unit length</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Rod (Longitudinal Wave)</p>
                                 <div class="math-display">
                                     \[v = \sqrt{\frac{Y}{\rho}}\]
                                 </div>
                                 <p class="text-sm">Y = Young's modulus, ρ = density</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Fluid (Sound Wave)</p>
                                 <div class="math-display">
                                     \[v = \sqrt{\frac{B}{\rho}}\]
                                 </div>
                                 <p class="text-sm">B = Bulk modulus, ρ = density</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Ideal Gas (Sound Wave)</p>
                                 <div class="math-display">
                                     \[v = \sqrt{\frac{\gamma RT}{M}} = \sqrt{\frac{\gamma P}{\rho}}\]
@@ -900,14 +927,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 1
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A string has mass 10 g and length 2 m. It is stretched with a tension of 40 N. Find the velocity of transverse waves in the string.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Given: m = 10 g = 0.01 kg, L = 2 m, T = 40 N</p>
                             
                             <p class="mb-2 mt-4"><strong>Step 1: Calculate linear mass density</strong></p>
@@ -923,14 +950,14 @@
                                 \[v = \sqrt{8000} = 89.44 \text{ m/s}\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\boxed{v \approx 89.4 \text{ m/s}}\]
                             </div>
                         </div>
                     </div>
                     
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Common Mistakes
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -944,10 +971,10 @@
             </section>
             
             <!-- Chapter 3: Wave Equation -->
-            <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Progressive Wave Equation</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Progressive Wave Equation</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -957,11 +984,11 @@
                     
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 General Wave Equation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Standard Forms of Progressive Wave</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2 text-center">Wave in +x direction</p>
                                 <div class="math-display text-center">
                                     \[y = A\sin(kx - \omega t + \phi)\]
@@ -971,7 +998,7 @@
                                     \[y = A\sin(\omega t - kx + \phi)\]
                                 </div>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2 text-center">Wave in -x direction</p>
                                 <div class="math-display text-center">
                                     \[y = A\sin(kx + \omega t + \phi)\]
@@ -983,7 +1010,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 p-4 bg-white rounded-lg">
+                        <div class="mt-4 p-4 bg-canvas rounded-lg">
                             <p class="font-semibold mb-2">Alternative Forms:</p>
                             <div class="math-display">
                                 \[y = A\sin\left[\frac{2\pi}{\lambda}(x - vt)\right] = A\sin\left[2\pi\left(\frac{x}{\lambda} - \frac{t}{T}\right)\right]\]
@@ -994,16 +1021,16 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Understanding the Wave Equation</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Term</th>
                                     <th class="p-4 text-left">Symbol</th>
                                     <th class="p-4 text-left">Meaning</th>
                                     <th class="p-4 text-left">How to Find</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Amplitude</td>
                                     <td class="p-4 font-mono">A</td>
@@ -1046,12 +1073,12 @@
                     
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Particle Velocity and Acceleration</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Derivatives of Wave Equation</h4>
                         <p class="mb-3">For y = A sin(kx - ωt):</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Particle Velocity</p>
                                 <div class="math-display">
                                     \[v_p = \frac{\partial y}{\partial t}\]
@@ -1061,7 +1088,7 @@
                                 </div>
                                 <p class="text-sm text-center">(v_p)_max = Aω</p>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Particle Acceleration</p>
                                 <div class="math-display">
                                     \[a_p = \frac{\partial^2 y}{\partial t^2}\]
@@ -1071,7 +1098,7 @@
                                 </div>
                                 <p class="text-sm text-center">(a_p)_max = Aω²</p>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Slope</p>
                                 <div class="math-display">
                                     \[\frac{\partial y}{\partial x} = Ak\cos(kx - \omega t)\]
@@ -1080,7 +1107,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                        <div class="mt-4 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                             <p class="font-semibold text-center">Important Relation:</p>
                             <div class="math-display text-center">
                                 \[\frac{\partial y}{\partial t} = -v \cdot \frac{\partial y}{\partial x}\]
@@ -1093,7 +1120,7 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">💡</span> Quick Tricks for Wave Equation
                         </h4>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
                                 <li><strong>Direction check:</strong> If (kx - ωt) → wave moves in +x direction</li>
                                 <li><strong>Velocity = ω/k</strong> regardless of the form of equation</li>
@@ -1106,14 +1133,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A wave is described by y = 0.02 sin(3x - 2t) where x, y are in meters and t in seconds. Find (a) amplitude, (b) wavelength, (c) frequency, (d) wave velocity, (e) maximum particle velocity.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Comparing with y = A sin(kx - ωt):</p>
                             
                             <p class="mb-2 mt-3"><strong>(a) Amplitude:</strong> A = 0.02 m = 2 cm</p>
@@ -1138,7 +1165,7 @@
                                 \[v_{p(max)} = A\omega = 0.02 \times 2 = 0.04 \text{ m/s} = 4 \text{ cm/s}\]
                             </div>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                 <p><strong>Direction:</strong> Wave travels in +x direction (opposite signs of kx and ωt)</p>
                             </div>
                         </div>
@@ -1146,29 +1173,29 @@
                     
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Phase and Phase Difference</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Phase Relations</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Phase at point (x, t)</p>
                                 <div class="math-display">
                                     \[\phi = kx - \omega t + \phi_0\]
                                 </div>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Path Difference to Phase Difference</p>
                                 <div class="math-display">
                                     \[\Delta\phi = \frac{2\pi}{\lambda} \times \Delta x = k \cdot \Delta x\]
                                 </div>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Time Difference to Phase Difference</p>
                                 <div class="math-display">
                                     \[\Delta\phi = \frac{2\pi}{T} \times \Delta t = \omega \cdot \Delta t\]
                                 </div>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Path Difference to Time Difference</p>
                                 <div class="math-display">
                                     \[\Delta t = \frac{\Delta x}{v} = \frac{T \cdot \Delta x}{\lambda}\]
@@ -1176,7 +1203,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2 text-center">Special Cases:</p>
                             <ul class="list-disc list-inside space-y-1 text-sm">
                                 <li>Δφ = 0, 2π, 4π... → In phase (constructive)</li>
@@ -1189,10 +1216,10 @@
             </section>
             
             <!-- Chapter 4: Superposition Principle -->
-            <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+            <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                 <div class="flex items-center mb-6">
-                    <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Superposition of Waves</h2>
+                    <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Superposition of Waves</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -1200,11 +1227,11 @@
                         The <strong>principle of superposition</strong> states that when two or more waves meet at a point, the resultant displacement is the algebraic sum of individual displacements. This fundamental principle explains interference, beats, and standing waves.
                     </p>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Principle of Superposition</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Principle of Superposition</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Mathematical Statement</h4>
-                        <div class="math-display bg-red-50 p-4 rounded-lg border-2 border-danger">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Mathematical Statement</h4>
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-danger">
                             \[y_{resultant} = y_1 + y_2 + y_3 + ... + y_n\]
                         </div>
                         <p class="mt-3 text-lg">
@@ -1212,24 +1239,24 @@
                         </p>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 Interference of Two Waves</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Interference of Two Waves</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Resultant of Two Sinusoidal Waves</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Resultant of Two Sinusoidal Waves</h4>
                         <p class="mb-3">For two waves: y₁ = A₁sin(kx - ωt) and y₂ = A₂sin(kx - ωt + φ)</p>
                         
-                        <div class="math-display bg-red-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[y = A_R \sin(kx - \omega t + \theta)\]
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Resultant Amplitude</p>
                                 <div class="math-display">
                                     \[A_R = \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos\phi}\]
                                 </div>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Phase of Resultant</p>
                                 <div class="math-display">
                                     \[\tan\theta = \frac{A_2\sin\phi}{A_1 + A_2\cos\phi}\]
@@ -1238,27 +1265,27 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Special Cases of Interference</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Special Cases of Interference</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Condition</th>
                                     <th class="p-4 text-left">Phase Difference (φ)</th>
                                     <th class="p-4 text-left">Path Difference (Δx)</th>
                                     <th class="p-4 text-left">Resultant Amplitude</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
-                                    <td class="p-4 font-semibold text-success">Constructive Interference (Maximum)</td>
+                                    <td class="p-4 font-semibold text-primary">Constructive Interference (Maximum)</td>
                                     <td class="p-4">0, 2π, 4π, ... (2nπ)</td>
                                     <td class="p-4">0, λ, 2λ, ... (nλ)</td>
                                     <td class="p-4 font-mono">A₁ + A₂</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 font-semibold text-danger">Destructive Interference (Minimum)</td>
+                                    <td class="p-4 font-semibold text-primary">Destructive Interference (Minimum)</td>
                                     <td class="p-4">π, 3π, 5π, ... ((2n+1)π)</td>
                                     <td class="p-4">λ/2, 3λ/2, ... ((2n+1)λ/2)</td>
                                     <td class="p-4 font-mono">|A₁ - A₂|</td>
@@ -1277,29 +1304,29 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">💡</span> JEE Shortcut for Equal Amplitude Waves
                         </h4>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <p class="text-lg mb-3">When A₁ = A₂ = A, use this quick formula:</p>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[A_R = 2A\cos\left(\frac{\phi}{2}\right)\]
                             </div>
                             <p class="text-sm mt-3">This comes from: A_R = √(A² + A² + 2A²cosφ) = A√(2 + 2cosφ) = 2A|cos(φ/2)|</p>
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.4 Intensity and Interference</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Intensity and Interference</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Intensity Relations</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Intensity Relations</h4>
                         <p class="mb-3">Since Intensity ∝ Amplitude²:</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Resultant Intensity</p>
                                 <div class="math-display">
                                     \[I_R = I_1 + I_2 + 2\sqrt{I_1I_2}\cos\phi\]
                                 </div>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">For Equal Intensities (I₁ = I₂ = I₀)</p>
                                 <div class="math-display">
                                     \[I_R = 4I_0\cos^2\left(\frac{\phi}{2}\right)\]
@@ -1307,7 +1334,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Maximum and Minimum Intensities:</p>
                             <div class="grid grid-cols-2 gap-4 mt-2">
                                 <div class="math-display text-center bg-success/10 p-2 rounded">
@@ -1321,14 +1348,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 3
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Two waves of intensities I and 4I interfere. Find the ratio of I_max to I_min.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Given: I₁ = I, I₂ = 4I</p>
                             <p class="mb-2">∴ √I₁ = √I, √I₂ = 2√I</p>
                             
@@ -1342,7 +1369,7 @@
                                 \[I_{min} = (\sqrt{I_1} - \sqrt{I_2})^2 = (\sqrt{I} - 2\sqrt{I})^2 = (-\sqrt{I})^2 = I\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\frac{I_{max}}{I_{min}} = \frac{9I}{I} = 9:1\]
                             </div>
                         </div>
@@ -1351,10 +1378,10 @@
             </section>
             
             <!-- Chapter 5: Standing Waves -->
-            <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+            <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                 <div class="flex items-center mb-6">
-                    <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Standing (Stationary) Waves</h2>
+                    <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Standing (Stationary) Waves</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -1362,15 +1389,15 @@
                         Standing waves are formed when two identical waves traveling in opposite directions superpose. They are crucial for understanding musical instruments, resonance in strings and pipes, and many JEE problems.
                     </p>
                     
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.1 Formation of Standing Waves</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Formation of Standing Waves</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">Mathematical Formation</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Mathematical Formation</h4>
                         <p class="mb-3">Incident wave: y₁ = A sin(kx - ωt)</p>
                         <p class="mb-3">Reflected wave: y₂ = A sin(kx + ωt)</p>
                         
                         <p class="mb-2 mt-4"><strong>Resultant:</strong></p>
-                        <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-success">
                             \[y = y_1 + y_2 = 2A\sin(kx)\cos(\omega t)\]
                         </div>
                         <p class="mt-3 text-lg text-center font-semibold">
@@ -1378,13 +1405,13 @@
                         </p>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.2 Nodes and Antinodes</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Nodes and Antinodes</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">Nodes (Zero Amplitude)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Nodes (Zero Amplitude)</h5>
                             <p class="mb-3">Points where amplitude = 0 always</p>
-                            <div class="math-display bg-green-50 p-3 rounded-lg">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg">
                                 \[\sin(kx) = 0\]
                                 \[kx = 0, \pi, 2\pi, 3\pi...\]
                             </div>
@@ -1394,10 +1421,10 @@
                             </div>
                             <p class="text-sm mt-2">Distance between consecutive nodes = λ/2</p>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">Antinodes (Maximum Amplitude)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Antinodes (Maximum Amplitude)</h5>
                             <p class="mb-3">Points where amplitude = 2A (maximum)</p>
-                            <div class="math-display bg-green-50 p-3 rounded-lg">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg">
                                 \[\sin(kx) = \pm 1\]
                                 \[kx = \frac{\pi}{2}, \frac{3\pi}{2}, \frac{5\pi}{2}...\]
                             </div>
@@ -1441,17 +1468,17 @@
                         <p class="mt-4 text-sm">N = Node (zero amplitude), A = Antinode (maximum amplitude)</p>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.3 Properties of Standing Waves</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Properties of Standing Waves</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Property</th>
                                     <th class="p-4 text-left">Description</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Energy Transfer</td>
                                     <td class="p-4">No net energy transfer along the wave</td>
@@ -1477,7 +1504,7 @@
                     </div>
                     
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Phase in Standing Waves
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1488,11 +1515,11 @@
                         </ul>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.4 Boundary Conditions and Reflection</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Boundary Conditions and Reflection</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">Fixed End (Rigid Boundary)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Fixed End (Rigid Boundary)</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li>Reflection with phase change of <strong>π (180°)</strong></li>
                                 <li>Reflected wave: y = -A sin(kx + ωt)</li>
@@ -1500,8 +1527,8 @@
                                 <li>Example: Fixed end of guitar string</li>
                             </ul>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">Free End (Open Boundary)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Free End (Open Boundary)</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li>Reflection with <strong>no phase change</strong></li>
                                 <li>Reflected wave: y = A sin(kx + ωt)</li>
@@ -1514,10 +1541,10 @@
             </section>
             
             <!-- Chapter 6: Sound Waves -->
-            <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Sound Waves</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Sound Waves</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -1525,10 +1552,10 @@
                         Sound waves are longitudinal mechanical waves that require a material medium for propagation. Understanding sound is crucial for JEE as it combines concepts of wave motion with thermodynamics and mechanics.
                     </p>
                     
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Nature of Sound Waves</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Nature of Sound Waves</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Key Properties of Sound</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Key Properties of Sound</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <ul class="list-disc list-inside space-y-2">
@@ -1549,27 +1576,27 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Speed of Sound</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Speed of Sound</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Speed of Sound in Different Media</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Speed of Sound in Different Media</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">In Gases (Laplace Formula)</p>
                                 <div class="math-display">
                                     \[v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma RT}{M}}\]
                                 </div>
                                 <p class="text-sm mt-2">γ = Cp/Cv, M = molar mass</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">In Liquids</p>
                                 <div class="math-display">
                                     \[v = \sqrt{\frac{B}{\rho}}\]
                                 </div>
                                 <p class="text-sm mt-2">B = Bulk modulus</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">In Solids (Rod)</p>
                                 <div class="math-display">
                                     \[v = \sqrt{\frac{Y}{\rho}}\]
@@ -1579,18 +1606,18 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Effect of Various Factors on Speed of Sound</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Effect of Various Factors on Speed of Sound</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Factor</th>
                                     <th class="p-4 text-left">Effect on Speed</th>
                                     <th class="p-4 text-left">Explanation</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Temperature</td>
                                     <td class="p-4">v ∝ √T</td>
@@ -1619,9 +1646,9 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">💡</span> Quick Formula: Temperature Effect
                         </h4>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <p class="text-lg mb-3">For small temperature changes near 0°C:</p>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[v_t = v_0 + 0.61t\]
                             </div>
                             <p class="text-sm mt-2">where v₀ = 332 m/s (speed at 0°C), t = temperature in °C</p>
@@ -1629,20 +1656,20 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.4 Intensity and Loudness</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.4 Intensity and Loudness</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Intensity of Sound</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Intensity of Sound</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Definition</p>
                                 <div class="math-display">
                                     \[I = \frac{P_{avg}}{A} = \frac{E}{A \cdot t}\]
                                 </div>
                                 <p class="text-sm mt-2">Power per unit area (W/m²)</p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">In Terms of Wave Parameters</p>
                                 <div class="math-display">
                                     \[I = \frac{1}{2}\rho v \omega^2 A^2 = 2\pi^2 f^2 A^2 \rho v\]
@@ -1650,9 +1677,9 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Intensity Level (Loudness) in Decibels:</p>
-                            <div class="math-display bg-purple-50 p-3 rounded-lg">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg">
                                 \[\beta = 10\log_{10}\left(\frac{I}{I_0}\right) \text{ dB}\]
                             </div>
                             <p class="text-sm mt-2">where I₀ = 10⁻¹² W/m² (threshold of hearing)</p>
@@ -1660,14 +1687,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 4
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> The intensity of sound from a source is 10⁻⁶ W/m². What is the intensity level in decibels?
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Given: I = 10⁻⁶ W/m², I₀ = 10⁻¹² W/m²</p>
                             
                             <div class="math-display">
@@ -1679,7 +1706,7 @@
                             <div class="math-display">
                                 \[\beta = 10\log_{10}(10^6) = 10 \times 6\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[\beta = 60 \text{ dB}\]
                             </div>
                         </div>
@@ -1688,10 +1715,10 @@
             </section>
             
             <!-- Chapter 7: Doppler Effect -->
-            <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+            <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                 <div class="flex items-center mb-6">
-                    <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Doppler Effect</h2>
+                    <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Doppler Effect</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -1699,15 +1726,15 @@
                         The <strong>Doppler Effect</strong> is the change in frequency of a wave as observed when the source and observer are in relative motion. This is one of the most important topics for JEE with guaranteed questions every year.
                     </p>
                     
-                    <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.1 Master Formula for Doppler Effect</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Master Formula for Doppler Effect</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-accent">General Doppler Formula (Sound Waves)</h4>
-                        <div class="math-display bg-orange-50 p-4 rounded-lg border-2 border-accent">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">General Doppler Formula (Sound Waves)</h4>
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-accent">
                             \[f' = f_0 \left(\frac{v \pm v_o}{v \mp v_s}\right)\]
                         </div>
                         
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Where:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>f' = Apparent/observed frequency</li>
@@ -1718,7 +1745,7 @@
                             </ul>
                         </div>
                         
-                        <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                        <div class="mt-4 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                             <p class="font-bold text-center mb-2">🎯 Sign Convention (Easy Method)</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li><strong>Approaching:</strong> Use + for v_o (numerator), Use - for v_s (denominator)</li>
@@ -1728,18 +1755,18 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.2 Special Cases of Doppler Effect</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Special Cases of Doppler Effect</h3>
                     
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Case</th>
                                     <th class="p-4 text-left">Condition</th>
                                     <th class="p-4 text-left">Formula</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">Source approaches stationary observer</td>
                                     <td class="p-4">v_o = 0, v_s ≠ 0 (approaching)</td>
@@ -1778,7 +1805,7 @@
                         <h4 class="font-bold text-xl mb-3 flex items-center">
                             <span class="text-2xl mr-2">💡</span> JEE Quick Trick: SOFA Rule
                         </h4>
-                        <div class="bg-white p-4 rounded-lg">
+                        <div class="bg-canvas p-4 rounded-lg">
                             <p class="text-lg mb-3"><strong>S</strong>ource, <strong>O</strong>bserver, <strong>F</strong>requency increases when <strong>A</strong>pproaching</p>
                             <ul class="list-disc list-inside space-y-2 ml-4">
                                 <li>Source approaching → f' > f₀ (higher pitch)</li>
@@ -1789,12 +1816,12 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.3 Apparent Wavelength</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Apparent Wavelength</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-accent">Wavelength Change in Doppler Effect</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Wavelength Change in Doppler Effect</h4>
                         
-                        <div class="bg-orange-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <p class="font-semibold mb-2">Key Point:</p>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>Source moving:</strong> Wavelength changes (λ' ≠ λ)</li>
@@ -1808,14 +1835,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Main Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A train moving at 72 km/h emits a whistle of frequency 500 Hz. Find the apparent frequency heard by a stationary observer when (a) train approaches (b) train recedes. (Speed of sound = 340 m/s)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Given: v_s = 72 km/h = 20 m/s, f₀ = 500 Hz, v = 340 m/s, v_o = 0</p>
                             
                             <p class="mb-2 mt-4"><strong>(a) Train approaches:</strong></p>
@@ -1834,7 +1861,7 @@
                                 \[f' = 500 \times \frac{340}{360} = 472.22 \text{ Hz}\]
                             </div>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                 <p><strong>Answer:</strong> (a) 531.25 Hz (b) 472.22 Hz</p>
                                 <p class="text-sm italic mt-2">Note: Approaching gives higher frequency, receding gives lower frequency</p>
                             </div>
@@ -1842,14 +1869,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced Pattern)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A car moving at 30 m/s honks (frequency 200 Hz) at a wall and hears the echo. What is the beat frequency between the original and reflected sound? (v = 330 m/s)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Step 1:</strong> Find frequency received by wall (wall is stationary observer, car is approaching source)</p>
                             <div class="math-display">
                                 \[f_{wall} = f_0\left(\frac{v}{v - v_s}\right) = 200 \times \frac{330}{330 - 30} = 220 \text{ Hz}\]
@@ -1864,14 +1891,14 @@
                             </div>
                             
                             <p class="mb-2 mt-4"><strong>Step 3:</strong> Beat frequency</p>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[f_{beat} = |f_{echo} - f_{original}| = |240 - 200| = 40 \text{ Hz}\]
                             </div>
                         </div>
                     </div>
                     
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Common JEE Mistakes in Doppler Effect
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1886,10 +1913,10 @@
             </section>
             
             <!-- Chapter 8: Beats & Resonance -->
-            <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Beats & Resonance</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Beats & Resonance</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -1899,9 +1926,9 @@
                         <strong>Beats</strong> occur when two sound waves of slightly different frequencies interfere, resulting in periodic variations in loudness (or intensity).
                     </p>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Beat Frequency Formula</h4>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg border-2 border-primary">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-primary">
                             \[f_{beat} = |f_1 - f_2|\]
                         </div>
                         <p class="mt-3 text-lg text-center">
@@ -1909,7 +1936,7 @@
                         </p>
                     </div>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Mathematical Derivation</h4>
                         <p class="mb-3">Two waves: y₁ = A sin(2πf₁t) and y₂ = A sin(2πf₂t)</p>
                         
@@ -1918,13 +1945,13 @@
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold">Resultant Frequency (Heard)</p>
                                 <div class="math-display">
                                     \[f_{resultant} = \frac{f_1 + f_2}{2}\]
                                 </div>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold">Beat Frequency</p>
                                 <div class="math-display">
                                     \[f_{beat} = |f_1 - f_2|\]
@@ -1953,7 +1980,7 @@
                         <strong>Resonance</strong> is the phenomenon when an object is made to vibrate at its natural frequency by receiving energy from another vibrating object at that same frequency, resulting in maximum energy transfer.
                     </p>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Conditions for Resonance</h4>
                         <ol class="list-decimal list-inside space-y-2 text-lg">
                             <li>Driving frequency = Natural frequency of the system</li>
@@ -1961,7 +1988,7 @@
                             <li>Amplitude becomes maximum at resonance</li>
                         </ol>
                         
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Examples of Resonance:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Tuning fork resonating with air column</li>
@@ -1974,14 +2001,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 7
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Two tuning forks A and B give 5 beats per second. Fork A has frequency 256 Hz. On loading fork B with wax, beat frequency becomes 3 beats/s. Find original frequency of B.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2"><strong>Step 1:</strong> Original beat frequency = 5 Hz</p>
                             <p class="mb-2">∴ f_B = 256 ± 5 = 251 Hz or 261 Hz</p>
                             
@@ -1994,7 +2021,7 @@
                                 <li>If f_B = 251 Hz (originally), after loading f_B decreases → moves away from 256 Hz → beat frequency should increase. But beat decreased to 3 Hz. ✗</li>
                             </ul>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\boxed{f_B = 261 \text{ Hz}}\]
                             </div>
                         </div>
@@ -2003,19 +2030,19 @@
             </section>
             
             <!-- Chapter 9: Strings and Pipes -->
-            <section id="chapter9" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+            <section id="chapter9" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                 <div class="flex items-center mb-6">
-                    <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">9</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Vibration in Strings & Air Columns</h2>
+                    <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">9</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Vibration in Strings & Air Columns</h2>
                 </div>
                 
                 <div class="prose max-w-none">
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">9.1 Vibrating Strings (Both Ends Fixed)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">9.1 Vibrating Strings (Both Ends Fixed)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Harmonics in a Fixed String</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Harmonics in a Fixed String</h4>
                         
-                        <div class="math-display bg-red-50 p-4 rounded-lg border-2 border-danger mb-4">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-danger mb-4">
                             <p class="text-center mb-2">Condition: Nodes at both ends</p>
                             \[L = n\frac{\lambda_n}{2} \quad \Rightarrow \quad \lambda_n = \frac{2L}{n}\]
                             \[f_n = n \cdot f_1 = \frac{n}{2L}\sqrt{\frac{T}{\mu}} = \frac{nv}{2L}\]
@@ -2023,7 +2050,7 @@
                         
                          <div class="overflow-x-auto">
                             <table class="w-full text-sm">
-                                <thead class="bg-danger text-white">
+                                <thead class="bg-danger text-ink">
                                     <tr>
                                         <th class="p-2">Harmonic</th>
                                         <th class="p-2">n</th>
@@ -2065,7 +2092,7 @@
                             </table>
                         </div>
                         
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold">Key Points:</p>
                             <ul class="list-disc list-inside space-y-1 text-sm">
                                 <li>All harmonics (odd + even) are present</li>
@@ -2110,27 +2137,27 @@
                         <p class="mt-4 text-sm">Red dots = Nodes (fixed points), Colored lines = Antinodes (maximum displacement)</p>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">9.2 Laws of Vibrating Strings</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">9.2 Laws of Vibrating Strings</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Three Laws of Transverse Vibration</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Three Laws of Transverse Vibration</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2 text-center">Law of Length</p>
                                 <div class="math-display text-center">
                                     \[f \propto \frac{1}{L}\]
                                 </div>
                                 <p class="text-sm text-center">(T and μ constant)</p>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2 text-center">Law of Tension</p>
                                 <div class="math-display text-center">
                                     \[f \propto \sqrt{T}\]
                                 </div>
                                 <p class="text-sm text-center">(L and μ constant)</p>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2 text-center">Law of Mass</p>
                                 <div class="math-display text-center">
                                     \[f \propto \frac{1}{\sqrt{\mu}}\]
@@ -2139,7 +2166,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                        <div class="mt-4 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                             <p class="font-semibold text-center">Combined Formula (Mersenne's Law):</p>
                             <div class="math-display text-center">
                                 \[f = \frac{1}{2L}\sqrt{\frac{T}{\mu}} = \frac{1}{2L}\sqrt{\frac{T}{\pi r^2 \rho}}\]
@@ -2148,12 +2175,12 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">9.3 Open Organ Pipe (Both Ends Open)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">9.3 Open Organ Pipe (Both Ends Open)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Harmonics in Open Pipe</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Harmonics in Open Pipe</h4>
                         
-                        <div class="math-display bg-red-50 p-4 rounded-lg border-2 border-danger mb-4">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-danger mb-4">
                             <p class="text-center mb-2">Condition: Antinodes at both ends</p>
                             \[L = n\frac{\lambda_n}{2} \quad \Rightarrow \quad \lambda_n = \frac{2L}{n}\]
                             \[f_n = n \cdot f_1 = \frac{nv}{2L}\]
@@ -2161,7 +2188,7 @@
                         
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm">
-                                <thead class="bg-danger text-white">
+                                <thead class="bg-danger text-ink">
                                     <tr>
                                         <th class="p-2">Harmonic</th>
                                         <th class="p-2">n</th>
@@ -2192,15 +2219,15 @@
                             </table>
                         </div>
                         
-                        <p class="mt-4 font-semibold text-center text-success">All harmonics (odd + even) are present</p>
+                        <p class="mt-4 font-semibold text-center text-primary">All harmonics (odd + even) are present</p>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">9.4 Closed Organ Pipe (One End Closed)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">9.4 Closed Organ Pipe (One End Closed)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Harmonics in Closed Pipe</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Harmonics in Closed Pipe</h4>
                         
-                        <div class="math-display bg-red-50 p-4 rounded-lg border-2 border-danger mb-4">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-danger mb-4">
                             <p class="text-center mb-2">Condition: Node at closed end, Antinode at open end</p>
                             \[L = (2n-1)\frac{\lambda_n}{4} \quad \Rightarrow \quad \lambda_n = \frac{4L}{2n-1}\]
                             \[f_n = (2n-1) \cdot f_1 = \frac{(2n-1)v}{4L}\]
@@ -2208,7 +2235,7 @@
                         
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm">
-                                <thead class="bg-danger text-white">
+                                <thead class="bg-danger text-ink">
                                     <tr>
                                         <th class="p-2">Harmonic</th>
                                         <th class="p-2">n</th>
@@ -2239,7 +2266,7 @@
                             </table>
                         </div>
                         
-                        <p class="mt-4 font-semibold text-center text-danger">Only ODD harmonics are present (1, 3, 5, 7...)</p>
+                        <p class="mt-4 font-semibold text-center text-primary">Only ODD harmonics are present (1, 3, 5, 7...)</p>
                     </div>
                     
                     <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
@@ -2248,14 +2275,14 @@
                         </h4>
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm">
-                                <thead class="bg-secondary text-white">
+                                <thead class="bg-secondary text-ink">
                                     <tr>
                                         <th class="p-2">Property</th>
                                         <th class="p-2">Open Pipe</th>
                                         <th class="p-2">Closed Pipe</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-2 font-semibold">Boundary Condition</td>
                                         <td class="p-2">A-A (Antinode at both ends)</td>
@@ -2286,25 +2313,25 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">9.5 End Correction</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">9.5 End Correction</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">End Correction Formula</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">End Correction Formula</h4>
                         <p class="mb-3">The antinode doesn't form exactly at the open end but slightly outside. This extra length is called end correction (e).</p>
                         
-                        <div class="math-display bg-red-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[e \approx 0.6r\]
                         </div>
                         <p class="text-center text-sm">where r = radius of the pipe</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold">Open Pipe (effective length)</p>
                                 <div class="math-display">
                                     \[L_{eff} = L + 2e = L + 1.2r\]
                                 </div>
                             </div>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold">Closed Pipe (effective length)</p>
                                 <div class="math-display">
                                     \[L_{eff} = L + e = L + 0.6r\]
@@ -2313,21 +2340,21 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-danger mt-8 mb-4">9.6 Resonance Tube Experiment</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">9.6 Resonance Tube Experiment</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-danger">Finding Speed of Sound</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Finding Speed of Sound</h4>
                         
                         <p class="mb-3">In resonance tube experiment, first resonance occurs at length L₁ and second at L₂:</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">First Resonance</p>
                                 <div class="math-display">
                                     \[L_1 + e = \frac{\lambda}{4}\]
                                 </div>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Second Resonance</p>
                                 <div class="math-display">
                                     \[L_2 + e = \frac{3\lambda}{4}\]
@@ -2335,7 +2362,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                        <div class="mt-4 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                             <p class="font-semibold text-center">Subtracting to eliminate end correction:</p>
                             <div class="math-display text-center">
                                 \[L_2 - L_1 = \frac{\lambda}{2} \quad \Rightarrow \quad \lambda = 2(L_2 - L_1)\]
@@ -2345,7 +2372,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold">End Correction from experiment:</p>
                             <div class="math-display">
                                 \[e = \frac{L_2 - 3L_1}{2}\]
@@ -2354,14 +2381,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 8
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> In a resonance tube experiment, first and second resonance are obtained at lengths 20 cm and 62 cm respectively. Find (a) wavelength, (b) speed of sound if frequency = 512 Hz, (c) end correction.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Given: L₁ = 20 cm, L₂ = 62 cm, f = 512 Hz</p>
                             
                             <p class="mb-2 mt-4"><strong>(a) Wavelength:</strong></p>
@@ -2379,7 +2406,7 @@
                                 \[e = \frac{L_2 - 3L_1}{2} = \frac{62 - 3 \times 20}{2} = \frac{62 - 60}{2} = 1 \text{ cm}\]
                             </div>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                 <p><strong>Answers:</strong></p>
                                 <p>(a) λ = 84 cm (b) v = 430 m/s (c) e = 1 cm</p>
                             </div>
@@ -2389,10 +2416,10 @@
             </section>
             
             <!-- Chapter 10: Reflection & Transmission -->
-            <section id="chapter10" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+            <section id="chapter10" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                 <div class="flex items-center mb-6">
-                    <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">10</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Reflection & Transmission of Waves</h2>
+                    <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">10</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Reflection & Transmission of Waves</h2>
                 </div>
                 
                 <div class="prose max-w-none">
@@ -2400,42 +2427,42 @@
                         When a wave encounters a boundary or interface between two media, part of it is reflected and part is transmitted. Understanding this is crucial for solving JEE problems on wave behavior at boundaries.
                     </p>
                     
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">10.1 Reflection at Boundaries</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.1 Reflection at Boundaries</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">Reflection from Rigid (Fixed) End</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Reflection from Rigid (Fixed) End</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li>Phase change of <strong>π (180°)</strong></li>
                                 <li>Reflected pulse is <strong>inverted</strong></li>
                                 <li>Node forms at rigid boundary</li>
                                 <li>Amplitude sign reverses</li>
                             </ul>
-                            <div class="mt-3 bg-green-50 p-3 rounded-lg">
+                            <div class="mt-3 bg-surface-2 p-3 rounded-lg">
                                 <p class="text-sm">Example: Wave on string reflecting from fixed end</p>
                             </div>
                         </div>
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                            <h5 class="font-bold text-lg mb-3 text-success">Reflection from Free (Open) End</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Reflection from Free (Open) End</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>No phase change</strong></li>
                                 <li>Reflected pulse is <strong>upright</strong></li>
                                 <li>Antinode forms at free boundary</li>
                                 <li>Amplitude sign unchanged</li>
                             </ul>
-                            <div class="mt-3 bg-green-50 p-3 rounded-lg">
+                            <div class="mt-3 bg-surface-2 p-3 rounded-lg">
                                 <p class="text-sm">Example: Wave on string with ring sliding on rod</p>
                             </div>
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">10.2 Reflection at Interface of Two Media</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.2 Reflection at Interface of Two Media</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">Wave Traveling from Medium 1 to Medium 2</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Wave Traveling from Medium 1 to Medium 2</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Rarer to Denser (v₁ > v₂)</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Reflected wave: Phase change π</li>
@@ -2444,7 +2471,7 @@
                                     <li>Frequency remains same</li>
                                 </ul>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Denser to Rarer (v₁ < v₂)</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Reflected wave: No phase change</li>
@@ -2456,21 +2483,21 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">10.3 Amplitude of Reflected and Transmitted Waves</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.3 Amplitude of Reflected and Transmitted Waves</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">Amplitude Relations (Strings)</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Amplitude Relations (Strings)</h4>
                         
                         <p class="mb-3">For wave traveling from string of linear density μ₁ to string of linear density μ₂:</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Reflected Amplitude</p>
                                 <div class="math-display">
                                     \[A_r = \frac{v_1 - v_2}{v_1 + v_2} A_i = \frac{\sqrt{\mu_2} - \sqrt{\mu_1}}{\sqrt{\mu_2} + \sqrt{\mu_1}} A_i\]
                                 </div>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Transmitted Amplitude</p>
                                 <div class="math-display">
                                     \[A_t = \frac{2v_1}{v_1 + v_2} A_i = \frac{2\sqrt{\mu_2}}{\sqrt{\mu_2} + \sqrt{\mu_1}} A_i\]
@@ -2478,7 +2505,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Special Cases:</p>
                             <ul class="list-disc list-inside space-y-1 text-sm">
                                 <li>If v₂ → ∞ (free end): A_r = A_i, A_t = 2A_i</li>
@@ -2488,19 +2515,19 @@
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">10.4 Energy Relations</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.4 Energy Relations</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">Power/Energy Coefficients</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Power/Energy Coefficients</h4>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Reflection Coefficient (R)</p>
                                 <div class="math-display">
                                     \[R = \left(\frac{A_r}{A_i}\right)^2 = \left(\frac{v_1 - v_2}{v_1 + v_2}\right)^2\]
                                 </div>
                             </div>
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Transmission Coefficient (T)</p>
                                 <div class="math-display">
                                     \[T = \frac{v_1}{v_2}\left(\frac{A_t}{A_i}\right)^2 = \frac{4v_1v_2}{(v_1 + v_2)^2}\]
@@ -2508,7 +2535,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                        <div class="mt-4 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                             <p class="font-semibold text-center">Energy Conservation:</p>
                             <div class="math-display text-center">
                                 \[R + T = 1\]
@@ -2518,7 +2545,7 @@
                     </div>
                     
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Key Points for JEE
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -2532,14 +2559,14 @@
                     </div>
                     
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 9
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> A wave traveling in a string of linear density 2 g/m enters another string of linear density 8 g/m. If incident amplitude is 4 cm, find the amplitudes of reflected and transmitted waves.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-2">Given: μ₁ = 2 g/m, μ₂ = 8 g/m, A_i = 4 cm</p>
                             
                             <p class="mb-2 mt-4"><strong>Step 1:</strong> Find velocity ratio</p>
@@ -2559,7 +2586,7 @@
                                 \[A_t = \frac{2v_1}{v_1 + v_2} A_i = \frac{2 \times 2v}{2v + v} \times 4 = \frac{4v}{3v} \times 4 = \frac{16}{3} \text{ cm}\]
                             </div>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg border-2 border-accent mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg border-2 border-accent mt-4">
                                 <p><strong>Answers:</strong></p>
                                 <p>Reflected amplitude = 4/3 cm ≈ 1.33 cm (same phase - going to denser)</p>
                                 <p>Transmitted amplitude = 16/3 cm ≈ 5.33 cm</p>
@@ -2570,14 +2597,14 @@
             </section>
             
             <!-- Previous Year Questions Analysis -->
-            <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+            <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">📝</span>
                     Previous Year Questions Analysis (Wave Motion)
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Standing Waves & Harmonics: 25%</li>
@@ -2588,7 +2615,7 @@
                             <li>✓ Superposition: 5%</li>
                         </ul>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Standing Waves (Strings/Pipes): 30%</li>
@@ -2601,8 +2628,8 @@
                     </div>
                 </div>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                    <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Find frequency/wavelength/velocity from wave equation y = A sin(kx - ωt)</li>
                         <li>Doppler effect with source/observer moving (train, car problems)</li>
@@ -2622,7 +2649,7 @@
                     </ol>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                     <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                     <div class="space-y-3">
                         <div class="flex justify-between items-center">
@@ -2644,11 +2671,11 @@
                     </div>
                 </div>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                    <h3 class="text-2xl font-bold mb-4 text-accent">Year-wise Question Distribution</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Year-wise Question Distribution</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-accent text-white">
+                            <thead class="bg-accent text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -2657,25 +2684,25 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
                                     <td class="p-3">5 Questions (18 marks)</td>
                                     <td class="p-3">Doppler, Standing waves</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">4 Questions (15 marks)</td>
                                     <td class="p-3">Resonance tube, Beats</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
                                     <td class="p-3">5 Questions (20 marks)</td>
                                     <td class="p-3">Wave equation, Organ pipes</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2021</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
@@ -2687,21 +2714,21 @@
                 </div>
                 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Download Complete PYQ PDF (2015-2024) - Wave Motion
                     </a>
                 </div>
             </section>
             
             <!-- Practice Problems -->
-            <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+            <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">🎯</span>
                     Practice Problem Set - Wave Motion
                 </h2>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>A wave is represented by y = 5 sin(4πt - 0.02x) where y and x are in cm and t in seconds. Find amplitude, frequency, wavelength, and wave velocity.</li>
                         <li>Calculate the speed of sound in air at 27°C if it is 332 m/s at 0°C.</li>
@@ -2714,8 +2741,8 @@
                     </ol>
                 </div>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>The equation of a wave is y = 0.05 sin(10πx - 200πt) where x, y are in meters and t in seconds. Find (a) wavelength (b) frequency (c) wave velocity (d) max particle velocity (e) max particle acceleration.</li>
                         <li>Two identical strings have same tension. One is 60 cm and the other is 90 cm long. Find ratio of their fundamental frequencies.</li>
@@ -2730,8 +2757,8 @@
                     </ol>
                 </div>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>A wave pulse is traveling on a string with speed v. The shape of pulse is triangular with height h and base 2l. Find the total kinetic energy of the pulse. (linear density = μ)</li>
                         <li>Two coherent sources S₁ and S₂ are separated by 4λ. A circular wire of radius r (r >> λ) is placed with center midway between sources. Find number of maxima and minima on the wire.</li>
@@ -2746,8 +2773,8 @@
                     </ol>
                 </div>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Conceptual Questions (Theory Based)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Conceptual Questions (Theory Based)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Why can't longitudinal waves be polarized?</li>
                         <li>Explain why sound travels faster in humid air than in dry air.</li>
@@ -2763,21 +2790,21 @@
                 </div>
                 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Get Complete Solutions PDF with Step-by-Step Working
                     </a>
                 </div>
             </section>
             
             <!-- Formula Sheet -->
-            <section class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl shadow-2xl p-8 mt-12">
+            <section class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">📋</span>
                     Wave Motion - Complete Formula Sheet
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">Basic Wave Relations</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>v = fλ = λ/T = ω/k</p>
@@ -2787,7 +2814,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">Wave Velocity</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>String: v = √(T/μ)</p>
@@ -2797,7 +2824,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">Particle Properties</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>v_particle = -Aω cos(kx - ωt)</p>
@@ -2807,7 +2834,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">Standing Waves</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>y = 2A sin(kx) cos(ωt)</p>
@@ -2817,7 +2844,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">String (Both Ends Fixed)</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>f_n = nv/2L = (n/2L)√(T/μ)</p>
@@ -2827,7 +2854,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">Open Pipe</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>f_n = nv/2L</p>
@@ -2837,7 +2864,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">Closed Pipe</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>f_n = (2n-1)v/4L</p>
@@ -2847,7 +2874,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">Doppler Effect</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>f' = f₀[(v ± v_o)/(v ∓ v_s)]</p>
@@ -2857,7 +2884,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-xl font-bold mb-4">Sound & Intensity</h3>
                         <div class="space-y-2 text-sm font-mono">
                             <p>I = P/A = ½ρvω²A²</p>
@@ -2869,51 +2896,69 @@
                 </div>
             </section>
             
-        </main>
+            <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./wave-optics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Wave Optics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./work-energy-and-power.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Work Energy And Power</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./alternating-current.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Alternating Current</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
     </div>
 </div>
 
 <!-- Related Notes Section -->
-<section class="bg-white py-12 mt-12 border-t-4 border-primary">
+<section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+        <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
             <span class="w-2 h-10 bg-primary rounded mr-4"></span>
             Related Physics Notes
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Related Note 1 -->
-            <a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+            <a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
+                    <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Simple Harmonic Motion</h3>
-                <p class="text-gray-600">SHM equation, oscillations, pendulums, springs</p>
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Simple Harmonic Motion</h3>
+                <p class="text-ink-muted">SHM equation, oscillations, pendulums, springs</p>
                 <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
             
             <!-- Related Note 2 -->
-            <a href="https://jeeprepguide.netlify.app/jee/physics/wave-optics" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+            <a href="https://jeeprepguide.netlify.app/jee/physics/wave-optics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                 <div class="flex items-center mb-3">
-                    <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                    <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Wave Optics</h3>
-                <p class="text-gray-600">Interference, diffraction, polarization of light</p>
-                <div class="mt-4 text-success font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Wave Optics</h3>
+                <p class="text-ink-muted">Interference, diffraction, polarization of light</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
             
             <!-- Related Note 3 -->
-            <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+            <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Topic</span>
+                    <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Topic</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Electromagnetic Waves</h3>
-                <p class="text-gray-600">EM spectrum, properties, applications</p>
-                <div class="mt-4 text-secondary font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electromagnetic Waves</h3>
+                <p class="text-ink-muted">EM spectrum, properties, applications</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
@@ -2921,7 +2966,7 @@
         
         <!-- More Notes Link -->
         <div class="text-center mt-10">
-            <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+            <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                 View All Physics Notes →
             </a>
         </div>
@@ -2929,64 +2974,64 @@
 </section>
 
 <!-- SEO-Optimized Summary Section -->
-<section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+<section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <article class="prose max-w-none">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6">Wave Motion - Complete Guide for JEE 2025-26</h2>
+            <h2 class="text-4xl font-bold text-ink mb-6">Wave Motion - Complete Guide for JEE 2025-26</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Why Wave Motion is Critical for JEE?</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-ink-muted leading-relaxed mb-4">
                         <strong>Wave Motion</strong> is one of the highest-scoring chapters in <strong>JEE Physics</strong> with consistent 12-20 marks every year. This chapter bridges mechanics with modern physics and includes:
                     </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                         <li><strong>Doppler Effect</strong> - 2-3 questions every year (guaranteed!)</li>
                         <li><strong>Standing Waves</strong> - Strings and organ pipes (very frequent)</li>
                         <li><strong>Wave Equation Analysis</strong> - Extract all parameters from equation</li>
                         <li><strong>Sound Waves</strong> - Speed, intensity, resonance</li>
                         <li><strong>Beats</strong> - Easy marks with careful calculation</li>
                     </ul>
-                    <p class="text-gray-700 leading-relaxed mt-4">
+                    <p class="text-ink-muted leading-relaxed mt-4">
                         In <strong>JEE Advanced</strong>, expect multi-concept problems combining wave motion with SHM, thermodynamics, or optics.
                     </p>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Must-Remember Formulas</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">1. Wave Equation</h4>
-                            <p class="text-gray-700 text-sm font-mono">y = A sin(kx - ωt) → +x direction</p>
-                            <p class="text-gray-700 text-sm font-mono">v = ω/k = fλ = λ/T</p>
+                            <h4 class="font-bold text-lg text-primary mb-2">1. Wave Equation</h4>
+                            <p class="text-ink-muted text-sm font-mono">y = A sin(kx - ωt) → +x direction</p>
+                            <p class="text-ink-muted text-sm font-mono">v = ω/k = fλ = λ/T</p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">2. Doppler Effect</h4>
-                            <p class="text-gray-700 text-sm font-mono">f' = f₀[(v ± v_o)/(v ∓ v_s)]</p>
-                            <p class="text-gray-700 text-sm">Upper sign: approaching, Lower: receding</p>
+                            <h4 class="font-bold text-lg text-primary mb-2">2. Doppler Effect</h4>
+                            <p class="text-ink-muted text-sm font-mono">f' = f₀[(v ± v_o)/(v ∓ v_s)]</p>
+                            <p class="text-ink-muted text-sm">Upper sign: approaching, Lower: receding</p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">3. Standing Waves</h4>
-                            <p class="text-gray-700 text-sm font-mono">String: f_n = nv/2L (all harmonics)</p>
-                            <p class="text-gray-700 text-sm font-mono">Open pipe: f_n = nv/2L (all harmonics)</p>
-                            <p class="text-gray-700 text-sm font-mono">Closed pipe: f_n = (2n-1)v/4L (odd only)</p>
+                            <h4 class="font-bold text-lg text-primary mb-2">3. Standing Waves</h4>
+                            <p class="text-ink-muted text-sm font-mono">String: f_n = nv/2L (all harmonics)</p>
+                            <p class="text-ink-muted text-sm font-mono">Open pipe: f_n = nv/2L (all harmonics)</p>
+                            <p class="text-ink-muted text-sm font-mono">Closed pipe: f_n = (2n-1)v/4L (odd only)</p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">4. Beats & Intensity</h4>
-                            <p class="text-gray-700 text-sm font-mono">f_beat = |f₁ - f₂|</p>
-                            <p class="text-gray-700 text-sm font-mono">β = 10 log(I/I₀) dB</p>
+                            <h4 class="font-bold text-lg text-primary mb-2">4. Beats & Intensity</h4>
+                            <p class="text-ink-muted text-sm font-mono">f_beat = |f₁ - f₂|</p>
+                            <p class="text-ink-muted text-sm font-mono">β = 10 log(I/I₀) dB</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Study Strategy -->
-            <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+            <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Master Wave Motion for JEE?</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 6-8 days (3 hours/day)</li>
                             <li>Master wave equation interpretation (k, ω, v, A)</li>
                             <li>Practice 80+ Doppler effect problems</li>
@@ -2997,7 +3042,7 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 10-12 days (4 hours/day)</li>
                             <li>Derive all standing wave formulas from first principles</li>
                             <li>Master complex Doppler problems (reflections, moving medium)</li>
@@ -3010,35 +3055,35 @@
             </div>
             
             <!-- Common Mistakes -->
-            <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid</h3>
-                <ul class="space-y-3 text-gray-700">
+            <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid</h3>
+                <ul class="space-y-3 text-ink-muted">
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Confusing particle velocity and wave velocity:</strong> Particle velocity = Aω cos(...), Wave velocity = ω/k (constant)
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Wrong sign in Doppler:</strong> Use "+" for v_o when approaching in numerator, "-" for v_s when approaching in denominator
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Open vs Closed pipe confusion:</strong> Open → f₁ = v/2L (all harmonics), Closed → f₁ = v/4L (odd only)
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Frequency change in medium:</strong> Frequency NEVER changes when wave enters new medium. Only wavelength changes!
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Phase change on reflection:</strong> Phase change of π at rigid/denser end, no phase change at free/rarer end
                         </div>
@@ -3051,110 +3096,110 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+<footer class="bg-canvas text-ink py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             
             <!-- Quick Links -->
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                 </ul>
             </div>
             
             <div>
                 <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             
             <div>
                 <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             
             <div>
                 <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functions</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functions</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
         </div>
         
         <div>
             <h4 class="text-xl font-bold mb-4">Articles</h4>
-            <ul class="space-y-2 text-gray-400">
-                <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+            <ul class="space-y-2 text-ink-subtle">
+                <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
             </ul>
         </div>
         
         <div class="mt-8">
             <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-            <ul class="space-y-2 text-gray-400">
-                <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+            <ul class="space-y-2 text-ink-subtle">
+                <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
             </ul>
         </div>
         
         <!-- Bottom Bar -->
-        <div class="border-t border-gray-700 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+        <div class="border-t border-hairline pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                 © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
             </p>
-            <div class="flex space-x-6 text-sm text-gray-400">
-                <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+            <div class="flex space-x-6 text-sm text-ink-subtle">
+                <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
             </div>
         </div>
     </div>
 </footer>
 
 <!-- Scroll to Top Button -->
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
     ↑
 </button>
 <!-- Scripts -->

@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Semiconductor Electronics - Complete JEE Physics Notes with 150+ Examples">
     <meta property="og:description" content="Master PN Junction, Transistors, Logic Gates & Rectifiers. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Semiconductor Electronics - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/semiconductors">
     <meta name="twitter:title" content="Semiconductor Electronics - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master semiconductor physics with 150+ solved examples. Complete notes on PN Junction, Transistors & Logic Gates for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Semiconductors JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Semiconductor Electronics - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Semiconductor Electronics covering PN Junction, Transistors, Logic Gates, and Rectifiers with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -357,59 +370,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="JEE Prep Guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="JEE Prep Guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                   <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                   <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -418,30 +433,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Semiconductor Electronics</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Semiconductor Electronics</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -449,32 +464,32 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Semiconductor Electronics</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Semiconductor Electronics</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Energy Bands
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Semiconductors
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     PN Junction
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Rectifiers
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Zener Diode
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Transistors
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Amplifiers
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Logic Gates
                 </a>
             </div>
@@ -482,28 +497,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Semiconductor Electronics
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Modern Electronics with complete notes on PN Junction, Transistors, Rectifiers, Amplifiers, and Logic Gates. Includes 150+ solved problems and all JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Truth Tables & Circuits</span>
                     </div>
                 </div>
@@ -512,21 +527,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Semiconductor Electronics JEE Notes">
         <meta itemprop="description" content="Complete study notes for Semiconductor Electronics">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.8</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">312</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -536,15 +551,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">5 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">5 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -556,53 +571,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Energy Bands</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Semiconductors</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. PN Junction Diode</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Rectifiers</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Special Diodes</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Transistors</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Amplifiers</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Logic Gates</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Energy Bands</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Semiconductors</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. PN Junction Diode</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Rectifiers</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Special Diodes</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Transistors</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Amplifiers</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Logic Gates</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./atoms-and-nuclei.html" class="text-primary font-semibold hover:underline">Atoms And Nuclei &rarr;</a>
+                <a href="./current-electricity.html" class="text-primary font-semibold hover:underline">Current Electricity &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/semiconductors.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/semiconductors.webp"
                         alt="Semiconductor Electronics JEE notes, Formulas, PYQs"
                         title="Semiconductor Electronics — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Semiconductor Electronics JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Energy Bands in Solids -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Energy Bands in Solids</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Energy Bands in Solids</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -612,7 +639,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Formation of Energy Bands</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Key Concepts</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li><strong>Isolated Atom:</strong> Electrons occupy discrete energy levels (sharp lines)</li>
@@ -627,9 +654,9 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Classification of Solids Based on Band Gap</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Conductors</h5>
-                                <div class="bg-blue-50 p-4 rounded text-sm">
+                                <div class="bg-surface-2 p-4 rounded text-sm">
                                     <p class="mb-2 font-semibold">Band Gap: Zero (Eg = 0)</p>
                                     <ul class="list-disc list-inside space-y-1">
                                         <li>Valence and conduction bands overlap</li>
@@ -637,16 +664,16 @@
                                         <li>Resistivity: 10⁻² - 10⁻⁸ Ω·m</li>
                                         <li>Examples: Cu, Ag, Au, Al</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded">
+                                    <div class="mt-3 p-2 bg-canvas rounded">
                                         <p class="text-xs font-mono">Conductivity increases with purity</p>
                                         <p class="text-xs font-mono">σ decreases with temperature</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Semiconductors</h5>
-                                <div class="bg-blue-50 p-4 rounded text-sm">
+                                <div class="bg-surface-2 p-4 rounded text-sm">
                                     <p class="mb-2 font-semibold">Band Gap: Small (Eg ≈ 1 eV)</p>
                                     <ul class="list-disc list-inside space-y-1">
                                         <li>Small forbidden gap</li>
@@ -654,16 +681,16 @@
                                         <li>Resistivity: 10⁻⁵ - 10⁶ Ω·m</li>
                                         <li>Examples: Si (1.1 eV), Ge (0.7 eV)</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded">
-                                        <p class="text-xs font-mono text-success">σ increases with temperature</p>
+                                    <div class="mt-3 p-2 bg-canvas rounded">
+                                        <p class="text-xs font-mono text-primary">σ increases with temperature</p>
                                         <p class="text-xs font-mono">Negative temperature coefficient</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Insulators</h5>
-                                <div class="bg-blue-50 p-4 rounded text-sm">
+                                <div class="bg-surface-2 p-4 rounded text-sm">
                                     <p class="mb-2 font-semibold">Band Gap: Large (Eg > 3 eV)</p>
                                     <ul class="list-disc list-inside space-y-1">
                                         <li>Large forbidden gap</li>
@@ -671,7 +698,7 @@
                                         <li>Resistivity: 10¹¹ - 10¹⁹ Ω·m</li>
                                         <li>Examples: Diamond (6 eV), Glass</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded">
+                                    <div class="mt-3 p-2 bg-canvas rounded">
                                         <p class="text-xs font-mono">VB completely filled</p>
                                         <p class="text-xs font-mono">CB completely empty</p>
                                     </div>
@@ -681,8 +708,8 @@
 
                         <div class="diagram-box my-8 rounded-xl">
                             <div class="text-center">
-                                <p class="font-bold text-xl mb-4 text-gray-700">Energy Band Diagrams</p>
-                                <div class="bg-white p-6 rounded-lg inline-block">
+                                <p class="font-bold text-xl mb-4 text-ink-muted">Energy Band Diagrams</p>
+                                <div class="bg-canvas p-6 rounded-lg inline-block">
                                     <pre class="text-xs text-left font-mono">
    CONDUCTOR        SEMICONDUCTOR        INSULATOR
    
@@ -720,10 +747,10 @@
                 </section>
 
                 <!-- Chapter 2: Intrinsic and Extrinsic Semiconductors -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Types of Semiconductors</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Types of Semiconductors</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -731,10 +758,10 @@
                             Semiconductors are classified based on their purity. Pure semiconductors are called intrinsic, while doped ones are called extrinsic. Doping dramatically changes the electrical properties.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Intrinsic Semiconductors</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Intrinsic Semiconductors</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Pure Semiconductor Properties</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Pure Semiconductor Properties</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-semibold mb-2">Characteristics:</p>
@@ -758,12 +785,12 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Extrinsic Semiconductors (Doped)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Extrinsic Semiconductors (Doped)</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">N-Type Semiconductor</h5>
-                                <div class="bg-purple-50 p-4 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">N-Type Semiconductor</h5>
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Dopant: Pentavalent (Group 15)</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li><strong>Dopants:</strong> P, As, Sb, Bi</li>
@@ -772,22 +799,22 @@
                                         <li><strong>Majority carriers:</strong> Electrons</li>
                                         <li><strong>Minority carriers:</strong> Holes</li>
                                     </ul>
-                                    <div class="mt-3 bg-white p-3 rounded">
+                                    <div class="mt-3 bg-canvas p-3 rounded">
                                         <p class="font-semibold text-sm">Carrier Relation:</p>
                                         <div class="math-display text-sm">
                                             \[n_e \cdot n_h = n_i^2\]
                                         </div>
                                         <p class="text-xs">n_e >> n_h (electrons dominate)</p>
                                     </div>
-                                    <div class="mt-2 p-2 bg-blue-100 rounded text-xs">
+                                    <div class="mt-2 p-2 bg-surface-3 rounded text-xs">
                                         <p><strong>Fermi level:</strong> Shifts towards conduction band</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">P-Type Semiconductor</h5>
-                                <div class="bg-purple-50 p-4 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">P-Type Semiconductor</h5>
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Dopant: Trivalent (Group 13)</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li><strong>Dopants:</strong> B, Al, Ga, In</li>
@@ -796,14 +823,14 @@
                                         <li><strong>Majority carriers:</strong> Holes</li>
                                         <li><strong>Minority carriers:</strong> Electrons</li>
                                     </ul>
-                                    <div class="mt-3 bg-white p-3 rounded">
+                                    <div class="mt-3 bg-canvas p-3 rounded">
                                         <p class="font-semibold text-sm">Carrier Relation:</p>
                                         <div class="math-display text-sm">
                                             \[n_e \cdot n_h = n_i^2\]
                                         </div>
                                         <p class="text-xs">n_h >> n_e (holes dominate)</p>
                                     </div>
-                                    <div class="mt-2 p-2 bg-pink-100 rounded text-xs">
+                                    <div class="mt-2 p-2 bg-surface-3 rounded text-xs">
                                         <p><strong>Fermi level:</strong> Shifts towards valence band</p>
                                     </div>
                                 </div>
@@ -811,16 +838,16 @@
                         </div>
 
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Intrinsic</th>
                                         <th class="p-4 text-left">N-Type</th>
                                         <th class="p-4 text-left">P-Type</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Purity</td>
                                         <td class="p-4">Pure (99.9999%)</td>
@@ -856,7 +883,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common JEE Misconceptions
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -868,13 +895,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main 2023 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A pure silicon crystal has 5 × 10²⁸ atoms/m³. It is doped with 10²² phosphorus atoms/m³. Calculate electron and hole concentration if n_i = 1.5 × 10¹⁶/m³.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Given: N_d (donor concentration) = 10²² /m³</p>
                                 <p class="mb-2">n_i = 1.5 × 10¹⁶ /m³</p>
@@ -896,20 +923,20 @@
                                     \[n_h = \frac{2.25 \times 10^{32}}{10^{22}} = 2.25 \times 10^{10} \text{ /m}^3\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{n_e = 10^{22} \text{ /m}^3, \quad n_h = 2.25 \times 10^{10} \text{ /m}^3}\]
                                 </div>
-                                <p class="text-sm mt-2 text-success">✓ n_e >> n_h confirms N-type semiconductor</p>
+                                <p class="text-sm mt-2 text-primary">✓ n_e >> n_h confirms N-type semiconductor</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Chapter 3: PN Junction Diode -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">PN Junction Diode</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">PN Junction Diode</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -919,7 +946,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Formation of PN Junction</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Depletion Region Formation</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
@@ -951,9 +978,9 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Biasing of PN Junction</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Forward Bias</h5>
-                                <div class="bg-green-50 p-4 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Forward Bias</h5>
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Connection:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>P → +ve terminal of battery</li>
@@ -967,15 +994,15 @@
                                         <li>When V > V_B: Current flows easily</li>
                                         <li>Low resistance path</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded">
+                                    <div class="mt-3 p-2 bg-canvas rounded">
                                         <p class="text-sm font-mono">V_applied > 0.7V (Si) → conduction</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Reverse Bias</h5>
-                                <div class="bg-red-50 p-4 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Reverse Bias</h5>
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Connection:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>P → -ve terminal of battery</li>
@@ -989,7 +1016,7 @@
                                         <li>Very small reverse saturation current</li>
                                         <li>High resistance path</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded">
+                                    <div class="mt-3 p-2 bg-canvas rounded">
                                         <p class="text-sm font-mono">I_reverse ≈ μA (due to minority carriers)</p>
                                     </div>
                                 </div>
@@ -998,9 +1025,9 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 V-I Characteristics of Diode</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Diode Equation (Shockley Equation)</h5>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center text-xl">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center text-xl">
                                 \[I = I_0 \left(e^{eV/k_BT} - 1\right)\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -1015,14 +1042,14 @@
                                 </ul>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="bg-green-100 p-3 rounded">
+                                <div class="bg-surface-3 p-3 rounded">
                                     <p class="font-semibold text-sm">Forward Bias (V >> k_BT/e):</p>
                                     <div class="math-display text-sm">
                                         \[I \approx I_0 e^{eV/k_BT}\]
                                     </div>
                                     <p class="text-xs">Exponential increase</p>
                                 </div>
-                                <div class="bg-red-100 p-3 rounded">
+                                <div class="bg-surface-3 p-3 rounded">
                                     <p class="font-semibold text-sm">Reverse Bias (V << 0):</p>
                                     <div class="math-display text-sm">
                                         \[I \approx -I_0\]
@@ -1034,8 +1061,8 @@
 
                         <div class="diagram-box my-8 rounded-xl">
                             <div class="text-center">
-                                <p class="font-bold text-xl mb-4 text-gray-700">V-I Characteristics of PN Junction Diode</p>
-                                <div class="bg-white p-6 rounded-lg inline-block">
+                                <p class="font-bold text-xl mb-4 text-ink-muted">V-I Characteristics of PN Junction Diode</p>
+                                <div class="bg-canvas p-6 rounded-lg inline-block">
                                     <pre class="text-xs text-left font-mono">
           I (mA)
            ↑
@@ -1078,10 +1105,10 @@
                 </section>
 
                 <!-- Chapter 4: Rectifiers -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Rectifiers</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Rectifiers</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1089,10 +1116,10 @@
                             Rectifiers convert AC (alternating current) to DC (direct current). This is one of the most important applications of diodes and a guaranteed topic in JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Half-Wave Rectifier</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Half-Wave Rectifier</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">Working Principle</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Working Principle</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-semibold mb-2">Circuit Components:</p>
@@ -1111,7 +1138,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Important Formulas:</p>
-                                    <div class="bg-green-50 p-3 rounded space-y-2">
+                                    <div class="bg-surface-2 p-3 rounded space-y-2">
                                         <div class="math-display text-sm">
                                             \[V_{dc} = \frac{V_m}{\pi} = 0.318 V_m\]
                                         </div>
@@ -1132,10 +1159,10 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Full-Wave Rectifier</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Full-Wave Rectifier</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">Center-Tap Full-Wave Rectifier</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Center-Tap Full-Wave Rectifier</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-semibold mb-2">Circuit Components:</p>
@@ -1153,7 +1180,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Important Formulas:</p>
-                                    <div class="bg-green-50 p-3 rounded space-y-2">
+                                    <div class="bg-surface-2 p-3 rounded space-y-2">
                                         <div class="math-display text-sm">
                                             \[V_{dc} = \frac{2V_m}{\pi} = 0.636 V_m\]
                                         </div>
@@ -1174,11 +1201,11 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.3 Bridge Rectifier (Most Efficient)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Bridge Rectifier (Most Efficient)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">Four Diode Bridge Configuration</h5>
-                            <div class="bg-green-50 p-4 rounded">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Four Diode Bridge Configuration</h5>
+                            <div class="bg-surface-2 p-4 rounded">
                                 <p class="font-semibold mb-3">Advantages over Center-Tap:</p>
                                 <ul class="list-disc list-inside text-sm space-y-1 mb-4">
                                     <li>No center-tap transformer needed</li>
@@ -1188,24 +1215,24 @@
                                 </ul>
                                 <p class="font-semibold mb-2">Same output characteristics as full-wave:</p>
                                 <div class="grid grid-cols-2 gap-2 text-sm">
-                                    <div class="bg-white p-2 rounded">V_dc = 0.636 V_m</div>
-                                    <div class="bg-white p-2 rounded">Ripple = 0.48</div>
-                                    <div class="bg-white p-2 rounded">Efficiency = 81.2%</div>
-                                    <div class="bg-white p-2 rounded">PIV = V_m per diode</div>
+                                    <div class="bg-canvas p-2 rounded">V_dc = 0.636 V_m</div>
+                                    <div class="bg-canvas p-2 rounded">Ripple = 0.48</div>
+                                    <div class="bg-canvas p-2 rounded">Efficiency = 81.2%</div>
+                                    <div class="bg-canvas p-2 rounded">PIV = V_m per diode</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Parameter</th>
                                         <th class="p-4 text-left">Half-Wave</th>
                                         <th class="p-4 text-left">Full-Wave</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Number of diodes</td>
                                         <td class="p-4">1</td>
@@ -1241,13 +1268,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A full-wave rectifier uses a transformer of turns ratio 5:1. If primary voltage is 220V (rms), calculate the DC output voltage. (Assume ideal diodes)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Given: Turns ratio = 5:1, V_primary = 220V (rms)</p>
                                 
@@ -1266,7 +1293,7 @@
                                     \[V_{dc} = \frac{2V_m}{\pi} = \frac{2 \times 62.2}{3.14} = 39.6V\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{V_{dc} \approx 40V}\]
                                 </div>
                             </div>
@@ -1275,17 +1302,17 @@
                 </section>
 
                 <!-- Chapter 5: Special Purpose Diodes -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Special Purpose Diodes</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Special Purpose Diodes</h2>
                     </div>
 
                     <div class="prose max-w-none">
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.1 Zener Diode</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Zener Diode</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Working in Breakdown Region</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Working in Breakdown Region</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-semibold mb-2">Key Features:</p>
@@ -1303,7 +1330,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Zener as Voltage Regulator:</p>
-                                    <div class="bg-red-50 p-3 rounded space-y-2">
+                                    <div class="bg-surface-2 p-3 rounded space-y-2">
                                         <p class="text-sm">Output voltage = V_Z (constant)</p>
                                         <div class="math-display text-sm">
                                             \[I_S = \frac{V_{in} - V_Z}{R_S}\]
@@ -1320,12 +1347,12 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.2 Photodiode</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Photodiode</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <h5 class="font-bold text-lg mb-3 text-danger">Working Principle</h5>
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Working Principle</h5>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Operated in reverse bias</li>
                                         <li>Light incident on junction</li>
@@ -1340,8 +1367,8 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h5 class="font-bold text-lg mb-3 text-danger">Key Relation</h5>
-                                    <div class="bg-red-50 p-3 rounded">
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Key Relation</h5>
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="text-sm mb-2">Photocurrent depends on intensity:</p>
                                         <div class="math-display text-sm">
                                             \[I_{photo} \propto \text{Light Intensity}\]
@@ -1356,12 +1383,12 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.3 Light Emitting Diode (LED)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Light Emitting Diode (LED)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <h5 class="font-bold text-lg mb-3 text-danger">Working Principle</h5>
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Working Principle</h5>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Operated in forward bias</li>
                                         <li>Electrons recombine with holes at junction</li>
@@ -1377,8 +1404,8 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h5 class="font-bold text-lg mb-3 text-danger">Key Relation</h5>
-                                    <div class="bg-red-50 p-3 rounded">
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Key Relation</h5>
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="text-sm mb-2">Wavelength of emitted light:</p>
                                         <div class="math-display text-sm">
                                             \[\lambda = \frac{hc}{E_g}\]
@@ -1393,10 +1420,10 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">5.4 Solar Cell (Photovoltaic Cell)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Solar Cell (Photovoltaic Cell)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Working Principle</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Working Principle</h5>
                             <ul class="list-disc list-inside text-sm space-y-1">
                                 <li>Converts light energy directly to electrical energy</li>
                                 <li>No external bias required (generates its own EMF)</li>
@@ -1404,20 +1431,20 @@
                                 <li>Internal electric field separates carriers</li>
                                 <li>Open circuit voltage: 0.5-1V per cell</li>
                             </ul>
-                            <div class="bg-green-100 p-3 rounded mt-4">
+                            <div class="bg-surface-3 p-3 rounded mt-4">
                                 <p class="font-semibold text-sm">Common Materials:</p>
                                 <p class="text-sm">Si (most common), GaAs (high efficiency), CdTe, CIGS</p>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (Zener Diode)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A Zener diode of V_Z = 6V is used with series resistance R_S = 100Ω. If input varies from 10V to 16V, find range of Zener current for R_L = 1kΩ.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 <p class="mb-2">Load current (constant):</p>
                                 <div class="math-display">
@@ -1440,7 +1467,7 @@
                                     \[I_Z = 100 - 6 = 94 \text{ mA}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{I_Z \text{ ranges from } 34 \text{ mA to } 94 \text{ mA}}\]
                                 </div>
                             </div>
@@ -1449,10 +1476,10 @@
                 </section>
 
                 <!-- Chapter 6: Transistors -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Bipolar Junction Transistors (BJT)</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Bipolar Junction Transistors (BJT)</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1460,12 +1487,12 @@
                             A transistor is a three-terminal semiconductor device used for amplification and switching. It consists of three alternating regions: Emitter, Base, and Collector.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Types of Transistors</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Types of Transistors</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">NPN Transistor</h5>
-                                <div class="bg-purple-50 p-4 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">NPN Transistor</h5>
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Structure: N-P-N</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Emitter: N-type (heavily doped)</li>
@@ -1478,15 +1505,15 @@
                                         <li>Current: Collector → Emitter</li>
                                         <li>Electron flow: Emitter → Collector</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded text-xs font-mono">
+                                    <div class="mt-3 p-2 bg-canvas rounded text-xs font-mono">
                                         I_E = I_B + I_C (Current relation)
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">PNP Transistor</h5>
-                                <div class="bg-purple-50 p-4 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">PNP Transistor</h5>
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Structure: P-N-P</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Emitter: P-type (heavily doped)</li>
@@ -1499,17 +1526,17 @@
                                         <li>Current: Emitter → Collector</li>
                                         <li>Hole flow: Emitter → Collector</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded text-xs font-mono">
+                                    <div class="mt-3 p-2 bg-canvas rounded text-xs font-mono">
                                         I_E = I_B + I_C (Same relation)
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Transistor Action</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Transistor Action</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Biasing for Active Mode (NPN)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Biasing for Active Mode (NPN)</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-semibold mb-2">Biasing Conditions:</p>
@@ -1527,7 +1554,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold mb-2">Key Current Relations:</p>
-                                    <div class="bg-purple-50 p-3 rounded space-y-2">
+                                    <div class="bg-surface-2 p-3 rounded space-y-2">
                                         <div class="math-display text-sm">
                                             \[I_E = I_B + I_C\]
                                         </div>
@@ -1548,19 +1575,19 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Transistor Configurations</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Transistor Configurations</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Parameter</th>
                                         <th class="p-4 text-left">Common Base (CB)</th>
                                         <th class="p-4 text-left">Common Emitter (CE)</th>
                                         <th class="p-4 text-left">Common Collector (CC)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Input</td>
                                         <td class="p-4">Emitter</td>
@@ -1624,7 +1651,7 @@
                                 <span class="text-2xl mr-2">🎯</span> Most Important for JEE
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Must Memorize:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li>I_E = I_B + I_C</li>
@@ -1634,7 +1661,7 @@
                                         <li>CC is called emitter follower</li>
                                     </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Common Question Types:</p>
                                     <ul class="text-sm space-y-1 list-disc list-inside">
                                         <li>Find β given α (or vice versa)</li>
@@ -1647,13 +1674,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Main 2024 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> In a transistor, α = 0.98. Find β, and if I_B = 50 μA, calculate I_C and I_E.
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 
                                 <p class="mb-2"><strong>Step 1:</strong> Calculate β</p>
@@ -1676,7 +1703,7 @@
                                     \[\alpha = \frac{I_C}{I_E} = \frac{2450}{2500} = 0.98 \checkmark\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{\beta = 49, \quad I_C = 2.45 \text{ mA}, \quad I_E = 2.5 \text{ mA}}\]
                                 </div>
                             </div>
@@ -1685,16 +1712,16 @@
                 </section>
 
                 <!-- Chapter 7: Transistor as Amplifier -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Transistor as Amplifier & Switch</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Transistor as Amplifier & Switch</h2>
                     </div>
 
                     <div class="prose max-w-none">
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Transistor as Amplifier (CE Configuration)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Amplifier Parameters</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
@@ -1725,9 +1752,9 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Transistor as Switch</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Cut-off Region (OFF)</h5>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Condition:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>I_B = 0 (no base current)</li>
@@ -1735,16 +1762,16 @@
                                         <li>I_C ≈ 0</li>
                                         <li>V_CE ≈ V_CC (supply voltage)</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded">
+                                    <div class="mt-3 p-2 bg-canvas rounded">
                                         <p class="text-sm font-semibold">Output: HIGH (Logic 1)</p>
                                         <p class="text-xs">Transistor acts as open switch</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Saturation Region (ON)</h5>
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Condition:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>I_B > I_B(sat)</li>
@@ -1752,7 +1779,7 @@
                                         <li>I_C = I_C(sat) = V_CC/R_C</li>
                                         <li>V_CE ≈ 0 (nearly zero)</li>
                                     </ul>
-                                    <div class="mt-3 p-2 bg-white rounded">
+                                    <div class="mt-3 p-2 bg-canvas rounded">
                                         <p class="text-sm font-semibold">Output: LOW (Logic 0)</p>
                                         <p class="text-xs">Transistor acts as closed switch</p>
                                     </div>
@@ -1761,7 +1788,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Note for Digital Circuits
                             </h4>
                             <p class="text-lg">
@@ -1777,10 +1804,10 @@
                 </section>
 
                 <!-- Chapter 8: Logic Gates -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Logic Gates & Digital Electronics</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Logic Gates & Digital Electronics</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1788,24 +1815,24 @@
                             Logic gates are the building blocks of digital circuits. They perform basic logical operations on binary inputs (0 and 1). This is one of the most scoring topics in JEE with guaranteed 1-2 questions.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.1 Basic Logic Gates</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Basic Logic Gates</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
                             <!-- AND Gate -->
                             <div class="gate-box p-6 rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-center">AND Gate</h5>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="text-sm mb-2 text-center font-semibold">Y = A · B (A AND B)</p>
                                     <p class="text-xs text-center mb-3">Output is 1 only when ALL inputs are 1</p>
                                     <table class="w-full text-center text-sm border">
-                                        <thead class="bg-gray-100">
+                                        <thead class="bg-surface-1">
                                             <tr><th class="p-1">A</th><th class="p-1">B</th><th class="p-1">Y</th></tr>
                                         </thead>
                                         <tbody>
                                             <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold">0</td></tr>
                                             <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold">0</td></tr>
                                             <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold">0</td></tr>
-                                            <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-success">1</td></tr>
+                                            <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-primary">1</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -1814,18 +1841,18 @@
                             <!-- OR Gate -->
                             <div class="gate-box p-6 rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-center">OR Gate</h5>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="text-sm mb-2 text-center font-semibold">Y = A + B (A OR B)</p>
                                     <p class="text-xs text-center mb-3">Output is 1 when ANY input is 1</p>
                                     <table class="w-full text-center text-sm border">
-                                        <thead class="bg-gray-100">
+                                        <thead class="bg-surface-1">
                                             <tr><th class="p-1">A</th><th class="p-1">B</th><th class="p-1">Y</th></tr>
                                         </thead>
                                         <tbody>
                                             <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold">0</td></tr>
-                                            <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-success">1</td></tr>
-                                            <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-success">1</td></tr>
-                                            <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-success">1</td></tr>
+                                            <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-primary">1</td></tr>
+                                            <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-primary">1</td></tr>
+                                            <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-primary">1</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -1834,15 +1861,15 @@
                             <!-- NOT Gate -->
                             <div class="gate-box p-6 rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-center">NOT Gate (Inverter)</h5>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="text-sm mb-2 text-center font-semibold">Y = Ā (NOT A)</p>
                                     <p class="text-xs text-center mb-3">Output is complement of input</p>
                                     <table class="w-full text-center text-sm border mx-auto" style="width: 60%;">
-                                        <thead class="bg-gray-100">
+                                        <thead class="bg-surface-1">
                                             <tr><th class="p-1">A</th><th class="p-1">Y</th></tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td class="p-1 border">0</td><td class="p-1 border font-bold text-success">1</td></tr>
+                                            <tr><td class="p-1 border">0</td><td class="p-1 border font-bold text-primary">1</td></tr>
                                             <tr><td class="p-1 border">1</td><td class="p-1 border font-bold">0</td></tr>
                                         </tbody>
                                     </table>
@@ -1851,27 +1878,27 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.2 Universal Gates (NAND & NOR)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Universal Gates (NAND & NOR)</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <!-- NAND Gate -->
                             <div class="gate-box p-6 rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-center">NAND Gate (Universal)</h5>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="text-sm mb-2 text-center font-semibold">Y = <span style="text-decoration: overline;">A · B</span> (NOT AND)</p>
                                     <p class="text-xs text-center mb-3">Output is 0 only when ALL inputs are 1</p>
                                     <table class="w-full text-center text-sm border">
-                                        <thead class="bg-gray-100">
+                                        <thead class="bg-surface-1">
                                             <tr><th class="p-1">A</th><th class="p-1">B</th><th class="p-1">Y</th></tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-success">1</td></tr>
-                                            <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-success">1</td></tr>
-                                            <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-success">1</td></tr>
+                                            <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-primary">1</td></tr>
+                                            <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-primary">1</td></tr>
+                                            <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-primary">1</td></tr>
                                             <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold">0</td></tr>
                                         </tbody>
                                     </table>
-                                    <div class="mt-3 p-2 bg-green-100 rounded text-xs">
+                                    <div class="mt-3 p-2 bg-surface-3 rounded text-xs">
                                         <p class="font-semibold">Universal: Can make any gate using only NAND!</p>
                                     </div>
                                 </div>
@@ -1880,44 +1907,44 @@
                             <!-- NOR Gate -->
                             <div class="gate-box p-6 rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-center">NOR Gate (Universal)</h5>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="text-sm mb-2 text-center font-semibold">Y = <span style="text-decoration: overline;">A + B</span> (NOT OR)</p>
                                     <p class="text-xs text-center mb-3">Output is 1 only when ALL inputs are 0</p>
                                     <table class="w-full text-center text-sm border">
-                                        <thead class="bg-gray-100">
+                                        <thead class="bg-surface-1">
                                             <tr><th class="p-1">A</th><th class="p-1">B</th><th class="p-1">Y</th></tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-success">1</td></tr>
+                                            <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-primary">1</td></tr>
                                             <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold">0</td></tr>
                                             <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold">0</td></tr>
                                             <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold">0</td></tr>
                                         </tbody>
                                     </table>
-                                    <div class="mt-3 p-2 bg-green-100 rounded text-xs">
+                                    <div class="mt-3 p-2 bg-surface-3 rounded text-xs">
                                         <p class="font-semibold">Universal: Can make any gate using only NOR!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.3 XOR and XNOR Gates</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 XOR and XNOR Gates</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <!-- XOR Gate -->
                             <div class="gate-box p-6 rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-center">XOR Gate (Exclusive OR)</h5>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="text-sm mb-2 text-center font-semibold">Y = A ⊕ B = Ā·B + A·B̄</p>
                                     <p class="text-xs text-center mb-3">Output is 1 when inputs are DIFFERENT</p>
                                     <table class="w-full text-center text-sm border">
-                                        <thead class="bg-gray-100">
+                                        <thead class="bg-surface-1">
                                             <tr><th class="p-1">A</th><th class="p-1">B</th><th class="p-1">Y</th></tr>
                                         </thead>
                                         <tbody>
                                             <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold">0</td></tr>
-                                            <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-success">1</td></tr>
-                                            <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-success">1</td></tr>
+                                            <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-primary">1</td></tr>
+                                            <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-primary">1</td></tr>
                                             <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold">0</td></tr>
                                         </tbody>
                                     </table>
@@ -1928,18 +1955,18 @@
                             <!-- XNOR Gate -->
                             <div class="gate-box p-6 rounded-xl">
                                 <h5 class="font-bold text-lg mb-3 text-center">XNOR Gate (Exclusive NOR)</h5>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="text-sm mb-2 text-center font-semibold">Y = <span style="text-decoration: overline;">A ⊕ B</span> = A·B + Ā·B̄</p>
                                     <p class="text-xs text-center mb-3">Output is 1 when inputs are SAME</p>
                                     <table class="w-full text-center text-sm border">
-                                        <thead class="bg-gray-100">
+                                        <thead class="bg-surface-1">
                                             <tr><th class="p-1">A</th><th class="p-1">B</th><th class="p-1">Y</th></tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-success">1</td></tr>
+                                            <tr><td class="p-1 border">0</td><td class="p-1 border">0</td><td class="p-1 border font-bold text-primary">1</td></tr>
                                             <tr><td class="p-1 border">0</td><td class="p-1 border">1</td><td class="p-1 border font-bold">0</td></tr>
                                             <tr><td class="p-1 border">1</td><td class="p-1 border">0</td><td class="p-1 border font-bold">0</td></tr>
-                                            <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-success">1</td></tr>
+                                            <tr><td class="p-1 border">1</td><td class="p-1 border">1</td><td class="p-1 border font-bold text-primary">1</td></tr>
                                         </tbody>
                                     </table>
                                     <p class="text-xs text-center mt-2">Also called Equality gate</p>
@@ -1947,28 +1974,28 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.4 Making Gates from NAND Only</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.4 Making Gates from NAND Only</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-amber-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-accent">NAND as Building Block</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">NAND as Building Block</h5>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold text-sm mb-2">NOT from NAND:</p>
                                     <p class="text-xs font-mono">Connect both inputs together</p>
                                     <p class="text-xs font-mono mt-1">Ā = NAND(A,A)</p>
-                                    <p class="text-xs mt-2 text-gray-600">Uses: 1 NAND gate</p>
+                                    <p class="text-xs mt-2 text-ink-muted">Uses: 1 NAND gate</p>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold text-sm mb-2">AND from NAND:</p>
                                     <p class="text-xs font-mono">NAND followed by NOT</p>
                                     <p class="text-xs font-mono mt-1">A·B = NOT(NAND(A,B))</p>
-                                    <p class="text-xs mt-2 text-gray-600">Uses: 2 NAND gates</p>
+                                    <p class="text-xs mt-2 text-ink-muted">Uses: 2 NAND gates</p>
                                 </div>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold text-sm mb-2">OR from NAND:</p>
                                     <p class="text-xs font-mono">NOT both inputs, then NAND</p>
                                     <p class="text-xs font-mono mt-1">A+B = NAND(Ā,B̄)</p>
-                                    <p class="text-xs mt-2 text-gray-600">Uses: 3 NAND gates</p>
+                                    <p class="text-xs mt-2 text-ink-muted">Uses: 3 NAND gates</p>
                                 </div>
                             </div>
                         </div>
@@ -1978,7 +2005,7 @@
                                 <span class="text-2xl mr-2">🎯</span> Memory Tricks for Truth Tables
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <ul class="text-sm space-y-2">
                                         <li><strong>AND:</strong> Both must be 1 for output 1 (multiplication)</li>
                                         <li><strong>OR:</strong> Any 1 gives output 1 (addition, max 1)</li>
@@ -1986,7 +2013,7 @@
                                         <li><strong>NOR:</strong> NOT OR - just invert OR output</li>
                                     </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <ul class="text-sm space-y-2">
                                         <li><strong>XOR:</strong> "Different = 1" (odd number of 1s)</li>
                                         <li><strong>XNOR:</strong> "Same = 1" (even number of 1s)</li>
@@ -1998,14 +2025,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the output Y for the given circuit if A=1, B=0, C=1.
                                 <br>Circuit: Y = (A + B) · C̄
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 
                                 <p class="mb-2"><strong>Step 1:</strong> Calculate (A + B)</p>
@@ -2023,24 +2050,24 @@
                                     \[Y = (A + B) \cdot \bar{C} = 1 \cdot 0 = 0 \text{ (AND operation)}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{Y = 0}\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.5 Boolean Algebra Laws (Quick Reference)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.5 Boolean Algebra Laws (Quick Reference)</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Law</th>
                                         <th class="p-4 text-left">AND Form</th>
                                         <th class="p-4 text-left">OR Form</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Identity</td>
                                         <td class="p-4 font-mono">A · 1 = A</td>
@@ -2091,11 +2118,11 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> De Morgan's Theorem (Most Important!)
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">First Theorem:</p>
                                     <div class="math-display">
                                         \[\overline{A \cdot B} = \bar{A} + \bar{B}\]
@@ -2103,7 +2130,7 @@
                                     <p class="text-sm mt-2">NOT of AND = OR of NOTs</p>
                                     <p class="text-sm text-primary font-semibold">NAND = OR with inverted inputs</p>
                                 </div>
-                                <div class="bg-white p-4 rounded">
+                                <div class="bg-canvas p-4 rounded">
                                     <p class="font-semibold mb-2">Second Theorem:</p>
                                     <div class="math-display">
                                         \[\overline{A + B} = \bar{A} \cdot \bar{B}\]
@@ -2118,13 +2145,13 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (Boolean Simplification)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Simplify: Y = A·B + A·B̄ + Ā·B
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Solution:</strong></p>
                                 
                                 <p class="mb-2"><strong>Step 1:</strong> Factor out A from first two terms</p>
@@ -2142,7 +2169,7 @@
                                     \[Y = A + B\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-3">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-3">
                                     \[\boxed{Y = A + B \text{ (OR gate)}}\]
                                 </div>
                             </div>
@@ -2151,14 +2178,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Logic Gates & Truth Tables: 35%</li>
@@ -2167,7 +2194,7 @@
                                 <li>✓ Rectifiers & Special Diodes: 15%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Transistor configurations: 35%</li>
@@ -2178,8 +2205,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 15 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 15 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Identify output of combined logic gates circuit</li>
                             <li>Find β given α (or α given β) for transistors</li>
@@ -2199,7 +2226,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -2221,11 +2248,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Year-wise Topic Distribution</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Year-wise Topic Distribution</h3>
                         <div class="overflow-x-auto">
                             <table class="w-full border-collapse">
-                                <thead class="bg-accent text-white">
+                                <thead class="bg-accent text-ink">
                                     <tr>
                                         <th class="p-3 text-left">Year</th>
                                         <th class="p-3 text-left">JEE Main Topics</th>
@@ -2259,21 +2286,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024) with Solutions
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>What is the band gap energy of Silicon and Germanium?</li>
                             <li>In N-type semiconductor, which are majority and minority carriers?</li>
@@ -2288,8 +2315,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A Si crystal has 5×10²² atoms/m³. It is doped with 10²⁰ arsenic atoms/m³. Find majority and minority carrier concentrations. (n_i = 1.5×10¹⁶/m³)</li>
                             <li>In a transistor, I_C = 4.9 mA and I_E = 5 mA. Find α, β, and I_B.</li>
@@ -2304,8 +2331,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>In a transistor, the base current changes from 50 μA to 150 μA and collector current changes from 2 mA to 6 mA. Find dynamic values of α and β.</li>
                             <li>Design a circuit using only NOR gates to implement: Y = A·B + C.</li>
@@ -2321,21 +2348,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Complete Solutions PDF with Detailed Steps
                         </a>
                     </div>
                 </section>
 
                 <!-- Quick Formula Reference -->
-                <section class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📋</span>
                         Quick Formula Reference Sheet
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Semiconductor Basics</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>n_e · n_h = n_i²</li>
@@ -2345,7 +2372,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">PN Junction</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>V_knee(Si) = 0.7V</li>
@@ -2355,7 +2382,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Rectifiers</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>HW: V_dc = V_m/π = 0.318V_m</li>
@@ -2365,7 +2392,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Transistor</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>I_E = I_B + I_C</li>
@@ -2376,7 +2403,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Amplifier Gains</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>A_i = β (current gain)</li>
@@ -2386,7 +2413,7 @@
                             </ul>
                         </div>
                         
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">LED/Photodiode</h3>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>λ = hc/E_g</li>
@@ -2397,11 +2424,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
                         <h3 class="text-2xl font-bold mb-4 text-primary">Logic Gates Quick Reference</h3>
                         <div class="overflow-x-auto">
                             <table class="w-full text-center text-sm">
-                                <thead class="bg-primary text-white">
+                                <thead class="bg-primary text-ink">
                                     <tr>
                                         <th class="p-2">Gate</th>
                                         <th class="p-2">Symbol</th>
@@ -2423,51 +2450,69 @@
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./simple-harmonic-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Simple Harmonic Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./thermal-properties-of-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Thermal Properties Of Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./thermodynamics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Thermodynamics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/communication-systems" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/communication-systems" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Communication Systems</h3>
-                    <p class="text-gray-600">Modulation, Bandwidth, AM/FM, Antenna, Satellite Communication</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Communication Systems</h3>
+                    <p class="text-ink-muted">Modulation, Bandwidth, AM/FM, Antenna, Satellite Communication</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Atoms and Nuclei</h3>
-                    <p class="text-gray-600">Bohr Model, Radioactivity, Nuclear Reactions, Binding Energy</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Atoms and Nuclei</h3>
+                    <p class="text-ink-muted">Bohr Model, Radioactivity, Nuclear Reactions, Binding Energy</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Dual Nature of Radiation</h3>
-                    <p class="text-gray-600">Photoelectric Effect, De Broglie Waves, Matter Waves</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Dual Nature of Radiation</h3>
+                    <p class="text-ink-muted">Photoelectric Effect, De Broglie Waves, Matter Waves</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -2475,7 +2520,7 @@
 
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2483,50 +2528,50 @@
     </section>
 
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Semiconductor Electronics - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Semiconductor Electronics - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Semiconductor Electronics is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Semiconductor Electronics</strong> is one of the most scoring chapters in <strong>JEE Physics</strong>. It carries 6-10% weightage and offers easy marks if you understand the concepts properly:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Logic Gates</strong> - Guaranteed 1-2 questions in JEE Main (direct formula application)</li>
                             <li><strong>Transistor α-β relations</strong> - Simple calculations, high scoring</li>
                             <li><strong>PN Junction</strong> - Conceptual questions, easy if understood properly</li>
                             <li><strong>Rectifiers</strong> - Formula-based, straightforward problems</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             In <strong>JEE Advanced</strong>, expect more complex Boolean algebra simplification and transistor circuit analysis questions.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Must-Know Formulas</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Semiconductor Basics</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Semiconductor Basics</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• n_e · n_h = n_i² (Mass action law)</li>
                                     <li>• N-type: Pentavalent dopants (P, As)</li>
                                     <li>• P-type: Trivalent dopants (B, Al)</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Transistor Relations</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Transistor Relations</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• I_E = I_B + I_C</li>
                                     <li>• β = α/(1-α) = I_C/I_B</li>
                                     <li>• α = β/(1+β) = I_C/I_E</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">3. Rectifier Outputs</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">3. Rectifier Outputs</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Half-wave: V_dc = 0.318 V_m</li>
                                     <li>• Full-wave: V_dc = 0.636 V_m</li>
                                     <li>• Full-wave efficiency = 81.2%</li>
@@ -2537,12 +2582,12 @@
                 </div>
                 
                 <!-- Study Strategy -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Master Semiconductor Electronics for JEE?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 5-6 days (3 hours/day)</li>
                                 <li>Master all 7 <strong>logic gate truth tables</strong> - memorize them!</li>
                                 <li>Practice α-β conversions until you can do them in 10 seconds</li>
@@ -2553,7 +2598,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 7-8 days (4 hours/day)</li>
                                 <li>Master <strong>Boolean algebra</strong> and De Morgan's theorems</li>
                                 <li>Practice building gates from NAND/NOR only</li>
@@ -2566,35 +2611,35 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes Students Make in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes Students Make in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing α and β:</strong> Remember α < 1 (always!), β >> 1. Use β = α/(1-α) to convert.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong truth table for NAND:</strong> NAND gives 0 ONLY when both inputs are 1. All other combinations give 1.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>N-type is negative charge:</strong> NO! N-type is electrically neutral. "N" refers to negative charge carriers (electrons) being majority.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>De Morgan's application:</strong> When breaking the bar, change AND to OR (or vice versa). Don't forget to invert BOTH terms!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Rectifier formulas:</strong> Half-wave uses 1/π, Full-wave uses 2/π. Don't mix them up!
                             </div>
@@ -2603,11 +2648,11 @@
                 </div>
                 
                 <!-- Weightage Table -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 Topic-wise Weightage Breakdown (Last 10 Years)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Topic</th>
                                     <th class="p-3 text-center">JEE Main %</th>
@@ -2617,28 +2662,28 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Logic Gates</td>
                                     <td class="p-3 text-center">35%</td>
                                     <td class="p-3 text-center">25%</td>
                                     <td class="p-3">Easy</td>
                                     <td class="p-3 text-sm">Memorize all truth tables</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Transistors</td>
                                     <td class="p-3 text-center">25%</td>
                                     <td class="p-3 text-center">35%</td>
                                     <td class="p-3">Medium</td>
                                     <td class="p-3 text-sm">Master α-β relations</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">PN Junction & Diodes</td>
                                     <td class="p-3 text-center">25%</td>
                                     <td class="p-3 text-center">20%</td>
                                     <td class="p-3">Easy-Medium</td>
                                     <td class="p-3 text-sm">Understand biasing clearly</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">Rectifiers & Zener</td>
                                     <td class="p-3 text-center">15%</td>
                                     <td class="p-3 text-center">20%</td>
@@ -2648,16 +2693,16 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Pro Tip:</strong> Logic gates alone can fetch you 8-12 marks in JEE Main if you've memorized all truth tables and can identify gate combinations quickly.
                     </p>
                 </div>
 
                 <!-- Quick Revision Points -->
-                <div class="mt-8 bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-2xl border-2 border-accent">
-                    <h3 class="text-2xl font-bold text-accent mb-4">⚡ Last Minute Revision Points (24 Hours Before Exam)</h3>
+                <div class="mt-8 bg-gradient-to-r from-surface-2 to-surface-2 p-8 rounded-2xl border-2 border-accent">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚡ Last Minute Revision Points (24 Hours Before Exam)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Truth Tables to Remember</h4>
                             <ul class="text-sm space-y-1">
                                 <li>✓ AND: 1 only when both 1</li>
@@ -2668,7 +2713,7 @@
                                 <li>✓ XNOR: 1 when same</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Critical Values</h4>
                             <ul class="text-sm space-y-1">
                                 <li>✓ Si: E_g=1.1eV, V_knee=0.7V</li>
@@ -2679,7 +2724,7 @@
                                 <li>✓ FW efficiency: 81.2%</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-4 rounded-xl">
+                        <div class="bg-canvas p-4 rounded-xl">
                             <h4 class="font-bold text-lg mb-3 text-primary">Key Relations</h4>
                             <ul class="text-sm space-y-1">
                                 <li>✓ I_E = I_B + I_C</li>
@@ -2698,64 +2743,64 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- Physics Topics -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Modern Physics</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/semiconductors" class="hover:text-white transition">Semiconductor Electronics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="hover:text-white transition">Atoms and Nuclei</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation" class="hover:text-white transition">Dual Nature</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="hover:text-white transition">EM Waves</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/semiconductors" class="hover:text-ink transition">Semiconductor Electronics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="hover:text-ink transition">Atoms and Nuclei</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation" class="hover:text-ink transition">Dual Nature</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="hover:text-ink transition">EM Waves</a></li>
                     </ul>
                 </div>
 
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#pyq" class="hover:text-white transition">Previous Year Papers</a></li>
-                        <li><a href="#practice" class="hover:text-white transition">Practice Problems</a></li>
-                        <li><a href="#" class="hover:text-white transition">Formula Sheet</a></li>
-                        <li><a href="#" class="hover:text-white transition">Video Lectures</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="#pyq" class="hover:text-ink transition">Previous Year Papers</a></li>
+                        <li><a href="#practice" class="hover:text-ink transition">Practice Problems</a></li>
+                        <li><a href="#" class="hover:text-ink transition">Formula Sheet</a></li>
+                        <li><a href="#" class="hover:text-ink transition">Video Lectures</a></li>
                     </ul>
                 </div>
 
                 <!-- Important Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Important</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE Main Official</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE Advanced Official</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE Main Official</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE Advanced Official</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms</a>
                 </div>
             </div>
         </div>
@@ -2763,7 +2808,7 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

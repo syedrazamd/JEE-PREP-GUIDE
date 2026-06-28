@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Surface Chemistry - Complete JEE Chemistry Notes with 100+ Examples">
     <meta property="og:description" content="Master adsorption isotherms, catalysis, colloids & emulsions. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Surface Chemistry - JEE Chemistry Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry">
     <meta name="twitter:title" content="Surface Chemistry - Complete JEE Chemistry Notes">
     <meta name="twitter:description" content="Master adsorption with 100+ solved examples. Complete notes on catalysis, colloids & emulsions for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Surface Chemistry JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Surface Chemistry - Complete JEE Chemistry Notes 2025-26",
       "description": "Comprehensive notes on Surface Chemistry covering adsorption, catalysis, colloids, and emulsions with 100+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -375,59 +388,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#059669',
-                        secondary: '#047857',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-chemistry.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-chemistry.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-emerald-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #059669, #34d399); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                   <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                   <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -436,59 +451,59 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Chemistry</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Surface Chemistry</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Surface Chemistry</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
         </div>
     </nav>
 
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Surface Chemistry</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Surface Chemistry</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Adsorption
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Isotherms
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Catalysis
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Colloids
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Properties
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Emulsions
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Applications
             </a>
         </div>
@@ -496,28 +511,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-emerald-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Surface Chemistry
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Surface Chemistry with complete notes on Adsorption, Catalysis, Colloids, and Emulsions. Includes 100+ solved problems and all JEE formulas.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 7 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -526,21 +541,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Surface Chemistry JEE Notes">
         <meta itemprop="description" content="Complete study notes for Surface Chemistry">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">240</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -550,15 +565,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">100+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -570,52 +585,64 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Adsorption</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Adsorption Isotherms</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Catalysis</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Colloids</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Properties of Colloids</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Emulsions</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Applications</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Adsorption</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Adsorption Isotherms</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Catalysis</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Colloids</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Properties of Colloids</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Emulsions</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Applications</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./chemical-kinetics.html" class="text-primary font-semibold hover:underline">Chemical Kinetics &rarr;</a>
+                <a href="./ionic-equilibrium.html" class="text-primary font-semibold hover:underline">Ionic Equilibrium &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry.png"
+                        src="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry.webp"
                         alt="Surface Chemistry JEE notes, Formulas, PYQs"
                         title="Surface Chemistry — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Surface Chemistry JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Adsorption -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Adsorption</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Adsorption</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -626,15 +653,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Adsorption vs Absorption</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Adsorption</th>
                                         <th class="p-4 text-left">Absorption</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Definition</td>
                                         <td class="p-4">Surface phenomenon</td>
@@ -682,15 +709,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Physisorption vs Chemisorption</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Physisorption</th>
                                         <th class="p-4 text-left">Chemisorption</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Forces Involved</td>
                                         <td class="p-4">Weak van der Waals forces</td>
@@ -743,7 +770,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Factors Affecting Adsorption</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">1. Nature of Adsorbent</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>Greater surface area → More adsorption</li>
@@ -752,7 +779,7 @@
                                     <li>Finely divided metals (Ni, Pt, Pd)</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">2. Nature of Adsorbate</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>Easily liquefiable gases (higher critical temp) adsorb more</li>
@@ -761,7 +788,7 @@
                                     <li>Polar molecules adsorb more than non-polar</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">3. Temperature</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Physisorption:</strong> Decreases with T ↑ (exothermic)</li>
@@ -769,7 +796,7 @@
                                     <li>Generally: Adsorption ∝ 1/T</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">4. Pressure</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>At constant T: Adsorption ↑ with pressure ↑</li>
@@ -780,7 +807,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> JEE Important: Adsorption is Exothermic
                             </h4>
                             <p class="text-lg mb-3">
@@ -797,10 +824,10 @@
                 </section>
 
                 <!-- Chapter 2: Adsorption Isotherms -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Adsorption Isotherms</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Adsorption Isotherms</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -808,15 +835,15 @@
                             <strong>Adsorption isotherm</strong> is the relationship between the amount of substance adsorbed per unit mass of adsorbent (x/m) and pressure (or concentration) at constant temperature.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Freundlich Adsorption Isotherm</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Freundlich Adsorption Isotherm</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Empirical Relationship</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Empirical Relationship</h4>
                             
                             <div class="space-y-4">
                                 <div>
                                     <p class="font-semibold mb-2">Basic Equation:</p>
-                                    <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                                    <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                         \[\frac{x}{m} = kP^{1/n}\]
                                     </div>
                                     <p class="text-sm mt-2">where x = mass adsorbed, m = mass of adsorbent, P = pressure, k and n are constants (n > 1)</p>
@@ -824,12 +851,12 @@
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Logarithmic Form (Most useful for JEE):</p>
-                                    <div class="math-display bg-purple-50 p-4 rounded-lg border-2 border-secondary">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-secondary">
                                         \[\log\left(\frac{x}{m}\right) = \log k + \frac{1}{n}\log P\]
                                     </div>
                                 </div>
                                 
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Graph: log(x/m) vs log P</p>
                                     <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>Straight line with positive slope</li>
@@ -842,17 +869,17 @@
                                 <div>
                                     <p class="font-semibold mb-2">Behavior at Different Pressures:</p>
                                     <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-2">
-                                        <div class="bg-white p-3 rounded border-2 border-purple-200">
+                                        <div class="bg-canvas p-3 rounded border-2 border-hairline">
                                             <p class="font-semibold text-sm">Low Pressure</p>
                                             <p class="text-sm">x/m ∝ P (1/n = 1)</p>
                                             <p class="text-xs">Linear relationship</p>
                                         </div>
-                                        <div class="bg-white p-3 rounded border-2 border-purple-200">
+                                        <div class="bg-canvas p-3 rounded border-2 border-hairline">
                                             <p class="font-semibold text-sm">Moderate Pressure</p>
                                             <p class="text-sm">x/m ∝ P^(1/n)</p>
                                             <p class="text-xs">n > 1 (typical)</p>
                                         </div>
-                                        <div class="bg-white p-3 rounded border-2 border-purple-200">
+                                        <div class="bg-canvas p-3 rounded border-2 border-hairline">
                                             <p class="font-semibold text-sm">High Pressure</p>
                                             <p class="text-sm">x/m ∝ P⁰ (constant)</p>
                                             <p class="text-xs">Saturation (1/n = 0)</p>
@@ -862,13 +889,13 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Langmuir Adsorption Isotherm</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Langmuir Adsorption Isotherm</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Theoretical Approach (Based on Kinetics)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Theoretical Approach (Based on Kinetics)</h4>
                             
                             <div class="space-y-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Assumptions:</p>
                                     <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>Surface has fixed number of adsorption sites</li>
@@ -881,7 +908,7 @@
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Langmuir Equation:</p>
-                                    <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                                    <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                         \[\frac{x}{m} = \frac{aP}{1 + bP}\]
                                     </div>
                                     <p class="text-sm mt-2">where a and b are constants, θ = fraction of surface covered</p>
@@ -889,14 +916,14 @@
                                 
                                 <div>
                                     <p class="font-semibold mb-2">In terms of θ (surface coverage):</p>
-                                    <div class="math-display bg-white p-4 rounded-lg border-2 border-secondary">
+                                    <div class="math-display bg-canvas p-4 rounded-lg border-2 border-secondary">
                                         \[\theta = \frac{bP}{1 + bP}\]
                                     </div>
                                 </div>
                                 
                                 <div>
                                     <p class="font-semibold mb-2">Linear Form (for graphing):</p>
-                                    <div class="math-display bg-purple-50 p-4 rounded-lg border-2 border-secondary">
+                                    <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-secondary">
                                         \[\frac{1}{(x/m)} = \frac{1}{a} + \frac{b}{a} \cdot \frac{1}{P}\]
                                     </div>
                                     <p class="text-sm mt-2">Graph of 1/(x/m) vs 1/P gives straight line</p>
@@ -905,7 +932,7 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
@@ -913,7 +940,7 @@
                             </p>
                             <div class="overflow-x-auto my-3">
                                 <table class="w-full text-sm border">
-                                    <thead class="bg-gray-100">
+                                    <thead class="bg-surface-1">
                                         <tr>
                                             <th class="p-2 border">P (atm)</th>
                                             <th class="p-2 border">0.5</th>
@@ -936,12 +963,12 @@
                             <p class="text-lg mb-3">Show that it follows Freundlich isotherm and find values of k and n.</p>
                             
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Using Freundlich equation:</strong> log(x/m) = log k + (1/n) log P</p>
                                 
                                 <div class="overflow-x-auto my-3">
                                     <table class="w-full text-sm border">
-                                        <thead class="bg-gray-100">
+                                        <thead class="bg-surface-1">
                                             <tr>
                                                 <th class="p-2 border">P</th>
                                                 <th class="p-2 border">log P</th>
@@ -992,7 +1019,7 @@
                                     \[k = 10^{-0.854} \approx 0.14\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     <p class="font-semibold">Answer:</p>
                                     <p>The data follows Freundlich isotherm</p>
                                     <p>k = 0.14, n = 2</p>
@@ -1007,7 +1034,7 @@
                             </h4>
                             <div class="overflow-x-auto mt-3">
                                 <table class="w-full text-sm">
-                                    <thead class="bg-purple-100">
+                                    <thead class="bg-surface-3">
                                         <tr>
                                             <th class="p-2 text-left">Property</th>
                                             <th class="p-2 text-left">Freundlich</th>
@@ -1037,7 +1064,7 @@
                                         </tr>
                                         <tr>
                                             <td class="p-2 font-semibold">JEE Frequency</td>
-                                            <td class="p-2 text-success font-bold">More common</td>
+                                            <td class="p-2 text-primary font-bold">More common</td>
                                             <td class="p-2">Less common</td>
                                         </tr>
                                     </tbody>
@@ -1048,10 +1075,10 @@
                 </section>
 
                 <!-- Chapter 3: Catalysis -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Catalysis</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Catalysis</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1061,7 +1088,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Characteristics of Catalyst</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <ul class="space-y-3">
                                 <li class="flex items-start">
                                     <span class="text-primary font-bold mr-2 text-xl">✓</span>
@@ -1111,11 +1138,11 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Types of Catalysis</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Homogeneous Catalysis</h5>
                                 <p class="text-sm mb-3">Catalyst and reactants are in the <strong>same phase</strong></p>
                                 
-                                <div class="bg-blue-50 p-3 rounded mb-3">
+                                <div class="bg-surface-2 p-3 rounded mb-3">
                                     <p class="font-semibold text-sm mb-2">Examples:</p>
                                     <ul class="list-disc list-inside space-y-1 text-xs">
                                         <li>2SO₂(g) + O₂(g) →<sup>NO(g)</sup> 2SO₃(g)</li>
@@ -1124,18 +1151,18 @@
                                     </ul>
                                 </div>
                                 
-                                <div class="bg-white p-3 rounded border-2 border-blue-200">
+                                <div class="bg-canvas p-3 rounded border-2 border-hairline">
                                     <p class="font-semibold text-sm mb-1">Characteristics:</p>
                                     <p class="text-xs">• Cannot be separated easily</p>
                                     <p class="text-xs">• Reaction mechanism well understood</p>
                                 </div>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Heterogeneous Catalysis</h5>
                                 <p class="text-sm mb-3">Catalyst and reactants are in <strong>different phases</strong></p>
                                 
-                                <div class="bg-blue-50 p-3 rounded mb-3">
+                                <div class="bg-surface-2 p-3 rounded mb-3">
                                     <p class="font-semibold text-sm mb-2">Examples:</p>
                                     <ul class="list-disc list-inside space-y-1 text-xs">
                                         <li>N₂(g) + 3H₂(g) →<sup>Fe(s)</sup> 2NH₃(g) (Haber)</li>
@@ -1144,7 +1171,7 @@
                                     </ul>
                                 </div>
                                 
-                                <div class="bg-white p-3 rounded border-2 border-blue-200">
+                                <div class="bg-canvas p-3 rounded border-2 border-hairline">
                                     <p class="font-semibold text-sm mb-1">Characteristics:</p>
                                     <p class="text-xs">• Usually solid catalyst, gas/liquid reactants</p>
                                     <p class="text-xs">• Can be separated by filtration</p>
@@ -1154,31 +1181,31 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Mechanism of Heterogeneous Catalysis</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <p class="font-semibold mb-3">Involves following steps on catalyst surface:</p>
                             
                             <div class="space-y-4">
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Step 1: Diffusion</p>
                                     <p class="text-sm">Reactant molecules diffuse to catalyst surface</p>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Step 2: Adsorption</p>
                                     <p class="text-sm">Reactants are adsorbed on catalyst surface (usually chemisorption)</p>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Step 3: Reaction</p>
                                     <p class="text-sm">Chemical reaction occurs on surface forming intermediates/products</p>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Step 4: Desorption</p>
                                     <p class="text-sm">Products are desorbed from surface, freeing active sites</p>
                                 </div>
                                 
-                                <div class="bg-blue-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Step 5: Diffusion</p>
                                     <p class="text-sm">Product molecules diffuse away from surface</p>
                                 </div>
@@ -1188,16 +1215,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Important Industrial Catalytic Processes</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Process</th>
                                         <th class="p-4 text-left">Reaction</th>
                                         <th class="p-4 text-left">Catalyst</th>
                                         <th class="p-4 text-left">Product</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Haber Process</td>
                                         <td class="p-4 font-mono text-sm">N₂ + 3H₂ → 2NH₃</td>
@@ -1239,7 +1266,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Catalytic Poisoning
                             </h4>
                             <p class="text-lg mb-3">
@@ -1250,7 +1277,7 @@
                                 <li><strong>Contact process:</strong> As₂O₃ poisons V₂O₅ catalyst</li>
                                 <li><strong>Hydrogenation:</strong> S, P, As, Hg poison Ni catalyst</li>
                             </ul>
-                            <p class="text-sm mt-3 text-gray-600">Mechanism: Poison preferentially adsorbs on active sites, blocking reactants</p>
+                            <p class="text-sm mt-3 text-ink-muted">Mechanism: Poison preferentially adsorbs on active sites, blocking reactants</p>
                         </div>
 
                         <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
@@ -1274,10 +1301,10 @@
                 </section>
 
                 <!-- Chapter 4: Colloids (Condensed due to length) -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Colloids</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Colloids</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1285,19 +1312,19 @@
                             <strong>Colloidal solutions (colloids)</strong> are heterogeneous mixtures where particle size is between 1-1000 nm (10⁻⁹ to 10⁻⁶ m). Cannot be seen by naked eye but show Tyndall effect.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.1 Classification of Colloids</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Classification of Colloids</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Dispersed Phase</th>
                                         <th class="p-4 text-left">Dispersion Medium</th>
                                         <th class="p-4 text-left">Name</th>
                                         <th class="p-4 text-left">Examples</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4">Solid</td>
                                         <td class="p-4">Solid</td>
@@ -1356,18 +1383,18 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">4.2 Lyophilic vs Lyophobic Colloids</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Lyophilic vs Lyophobic Colloids</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Property</th>
                                         <th class="p-4 text-left">Lyophilic (Solvent-loving)</th>
                                         <th class="p-4 text-left">Lyophobic (Solvent-hating)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Meaning</td>
                                         <td class="p-4">Hydrophilic (if water is medium)</td>
@@ -1410,17 +1437,17 @@
                 </section>
 
                 <!-- Chapter 5: Properties of Colloids -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Properties of Colloids</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Properties of Colloids</h2>
                     </div>
 
                     <div class="prose max-w-none">
                         <h3 class="text-2xl font-bold text-primary mt-4 mb-4">5.1 Key Properties (JEE Important)</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">1. Tyndall Effect</h5>
                                 <p class="text-sm mb-2">Scattering of light by colloidal particles</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
@@ -1430,7 +1457,7 @@
                                 </ul>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">2. Brownian Motion</h5>
                                 <p class="text-sm mb-2">Zig-zag random motion of colloidal particles</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
@@ -1440,7 +1467,7 @@
                                 </ul>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">3. Electrophoresis</h5>
                                 <p class="text-sm mb-2">Movement of colloidal particles under electric field</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
@@ -1450,7 +1477,7 @@
                                 </ul>
                             </div>
 
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">4. Coagulation/Flocculation</h5>
                                 <p class="text-sm mb-2">Settling of colloidal particles</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
@@ -1463,12 +1490,12 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Hardy-Schulze Rule (Very Important for JEE)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Coagulation of Colloids by Electrolytes</h4>
                             
                             <p class="mb-4">Greater the <strong>valency</strong> of the coagulating ion (opposite charge to sol), greater is its <strong>coagulating power</strong>.</p>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-2">For Negative Sols (e.g., As₂S₃):</p>
                                 <div class="math-display">
                                     \[\text{Coagulating power: } Al^{3+} > Ba^{2+} > Na^{+}\]
@@ -1476,7 +1503,7 @@
                                 <p class="text-sm">Cations coagulate negative sols</p>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">For Positive Sols (e.g., Fe(OH)₃):</p>
                                 <div class="math-display">
                                     \[\text{Coagulating power: } PO_4^{3-} > SO_4^{2-} > Cl^{-}\]
@@ -1486,7 +1513,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Gold Number
                             </h4>
                             <p class="text-lg mb-3">
@@ -1501,24 +1528,24 @@
                 </section>
 
                 <!-- Chapters 6 & 7 Brief -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Emulsions</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Emulsions</h2>
                     </div>
                     <div class="prose max-w-none">
                         <p class="mb-4"><strong>Emulsion:</strong> Colloidal dispersion of liquid in liquid</p>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h4 class="font-semibold mb-3">Types:</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Oil-in-Water (O/W)</p>
                                     <p class="text-sm">Oil dispersed in water</p>
                                     <p class="text-sm">Examples: Milk, Vanishing cream</p>
                                     <p class="text-sm">Test: Conducts electricity</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded">
+                                <div class="bg-surface-2 p-4 rounded">
                                     <p class="font-semibold mb-2">Water-in-Oil (W/O)</p>
                                     <p class="text-sm">Water dispersed in oil</p>
                                     <p class="text-sm">Examples: Butter, Cold cream</p>
@@ -1526,7 +1553,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-4 p-4 bg-white rounded border-2 border-purple-200">
+                            <div class="mt-4 p-4 bg-canvas rounded border-2 border-hairline">
                                 <p class="font-semibold mb-2">Emulsifying Agents:</p>
                                 <p class="text-sm">Stabilize emulsions - Soap, Detergents, Proteins, Gums</p>
                             </div>
@@ -1534,26 +1561,26 @@
                     </div>
                 </section>
 
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Applications of Colloids</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Applications of Colloids</h2>
                     </div>
                     <div class="prose max-w-none">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="formula-box p-4 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-4 rounded-xl border-2 border-hairline-strong">
                                 <p class="font-semibold mb-2">🏥 Medicine:</p>
                                 <p class="text-sm">Colloidal silver (antiseptic), Colloidal gold (medicine)</p>
                             </div>
-                            <div class="formula-box p-4 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-4 rounded-xl border-2 border-hairline-strong">
                                 <p class="font-semibold mb-2">💧 Water Purification:</p>
                                 <p class="text-sm">Alum coagulates dirt particles</p>
                             </div>
-                            <div class="formula-box p-4 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-4 rounded-xl border-2 border-hairline-strong">
                                 <p class="font-semibold mb-2">🏭 Industrial:</p>
                                 <p class="text-sm">Paints, inks, rubber, photography</p>
                             </div>
-                            <div class="formula-box p-4 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-4 rounded-xl border-2 border-hairline-strong">
                                 <p class="font-semibold mb-2">🥛 Food:</p>
                                 <p class="text-sm">Milk, ice cream, whipped cream</p>
                             </div>
@@ -1563,14 +1590,14 @@
 
                 <!-- PYQ and Practice (Same structure as previous files) -->
                 
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Colloids Classification: 30%</li>
@@ -1580,7 +1607,7 @@
                                 <li>✓ Emulsions: 10%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Freundlich Isotherm: 35%</li>
@@ -1592,8 +1619,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculating k and n from Freundlich isotherm data</li>
                             <li>Distinguishing between physisorption and chemisorption</li>
@@ -1608,7 +1635,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1631,21 +1658,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Differentiate between adsorption and absorption with examples.</li>
                             <li>Why is adsorption always exothermic?</li>
@@ -1658,8 +1685,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>For Freundlich isotherm x/m = kP^(1/n), what happens when: (a) n = 1 (b) n = ∞</li>
                             <li>Compare physisorption and chemisorption on five different parameters.</li>
@@ -1672,8 +1699,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Derive Langmuir adsorption isotherm equation. What are its assumptions?</li>
                             <li>For adsorption of gas on solid: at P = 0.5, 1, 2, 4 atm, x/m = 2, 3, 4, 5. Verify Freundlich isotherm graphically.</li>
@@ -1687,63 +1714,81 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./thermodynamics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Thermodynamics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./atomic-structure.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Atomic Structure</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./chemical-equilibrium.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Chemical Equilibrium</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes, SEO Summary, Footer (Same structure as previous files) -->
     
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Chemistry Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Chemical Kinetics</h3>
-                    <p class="text-gray-600">Rate laws, Arrhenius equation, Reaction mechanisms</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Chemical Kinetics</h3>
+                    <p class="text-ink-muted">Rate laws, Arrhenius equation, Reaction mechanisms</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Electrochemistry</h3>
-                    <p class="text-gray-600">Nernst equation, Faraday's laws, Electrolysis</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electrochemistry</h3>
+                    <p class="text-ink-muted">Nernst equation, Faraday's laws, Electrolysis</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Solutions</h3>
-                    <p class="text-gray-600">Colligative properties, Raoult's law, Concentration terms</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Solutions</h3>
+                    <p class="text-ink-muted">Colligative properties, Raoult's law, Concentration terms</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Chemistry Notes →
                 </a>
             </div>
@@ -1751,52 +1796,52 @@
     </section>
 
     <!-- Footer (Same as previous templates) -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="hover:text-white transition">Solutions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="hover:text-white transition">Electrochemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="hover:text-white transition">Chemical Kinetics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry" class="hover:text-white transition">Surface Chemistry</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="hover:text-ink transition">Solutions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="hover:text-ink transition">Electrochemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="hover:text-ink transition">Chemical Kinetics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry" class="hover:text-ink transition">Surface Chemistry</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8 text-center">
-                <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants</p>
+            <div class="border-t border-hairline pt-8 text-center">
+                <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

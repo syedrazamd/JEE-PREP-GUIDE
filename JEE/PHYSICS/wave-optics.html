@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Wave Optics - Complete JEE Physics Notes with 100+ Examples">
     <meta property="og:description" content="Master YDSE, Interference, Diffraction & Polarization. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Wave Optics - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/wave-optics">
     <meta name="twitter:title" content="Wave Optics - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master wave optics with 100+ solved examples. Complete notes on YDSE, interference, diffraction & polarization for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Wave Optics JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Wave Optics - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Wave Optics covering Huygens Principle, Interference, YDSE, Diffraction, and Polarization with 100+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -355,59 +368,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -416,23 +431,23 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Wave Optics</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Wave Optics</span>
                     <meta itemprop="position" content="4" />
                 </li>
             </ol>
@@ -440,29 +455,29 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-purple-50 to-blue-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Wave Optics</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Wave Optics</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Huygens Principle
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Interference
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     YDSE
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Diffraction
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Polarization
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Thin Films
                 </a>
-                <a href="#pyq" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#pyq" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     PYQs
                 </a>
             </div>
@@ -470,35 +485,35 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <div class="flex justify-center gap-4 mb-6">
-                    <span class="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold">Chapter 22</span>
-                    <span class="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold">Optics • Class 12</span>
+                    <span class="bg-canvas/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold">Chapter 22</span>
+                    <span class="bg-canvas/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold">Optics • Class 12</span>
                 </div>
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Wave Optics
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Huygens Principle, Interference, Young's Double Slit Experiment (YDSE), Diffraction, and Polarization with complete notes, formulas, and 100+ solved problems. All JEE shortcuts included.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 6 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All JEE Formulas</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🌊 Wave Patterns</span>
                     </div>
                 </div>
@@ -507,21 +522,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Wave Optics JEE Notes">
         <meta itemprop="description" content="Complete study notes for Wave Optics">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">195</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -531,15 +546,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">100+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">3.5 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">3.5 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -551,51 +566,63 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Huygens Principle</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Interference of Light</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. YDSE</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Diffraction</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Polarization</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Thin Film Interference</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Huygens Principle</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Interference of Light</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. YDSE</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Diffraction</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Polarization</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Thin Film Interference</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./ray-optics.html" class="text-primary font-semibold hover:underline">Ray Optics &rarr;</a>
+                <a href="./wave-motion.html" class="text-primary font-semibold hover:underline">Wave Motion &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Hero Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/wave-optics.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/wave-optics.webp"
                         alt="Wave Optics JEE notes - Interference, Diffraction, YDSE, Polarization"
                         title="Wave Optics — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Wave Optics JEE Notes — Interference, Diffraction, YDSE, Polarization
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Huygens Principle -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Huygens Principle & Wave Theory</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Huygens Principle & Wave Theory</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -605,18 +632,18 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Huygens Principle Statement</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Huygens Principle</h5>
                             <div class="space-y-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Step 1:</p>
                                     <p>Every point on a given wavefront acts as a <strong>source of secondary wavelets</strong> that spread out in all directions with the speed of light in that medium.</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Step 2:</p>
                                     <p>The new position of the wavefront after time t is the <strong>forward envelope</strong> (tangent surface) of all these secondary wavelets.</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Step 3:</p>
                                     <p>The backward envelope (in opposite direction) is rejected because it doesn't represent actual propagation.</p>
                                 </div>
@@ -626,7 +653,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Types of Wavefronts</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Spherical Wavefront</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Source: Point source</li>
@@ -635,7 +662,7 @@
                                     <li>Amplitude: A ∝ 1/r</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Cylindrical Wavefront</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Source: Linear source (slit)</li>
@@ -644,7 +671,7 @@
                                     <li>Amplitude: A ∝ 1/√r</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Plane Wavefront</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Source: Very distant source</li>
@@ -662,11 +689,11 @@
                                 <span class="text-2xl mr-2">💡</span> Key Results from Huygens Principle
                             </h4>
                             <div class="space-y-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Laws of Reflection:</p>
                                     <p>∠i = ∠r (proved geometrically using Huygens construction)</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Laws of Refraction (Snell's Law):</p>
                                     <div class="math-display text-center">
                                         \[\frac{\sin i}{\sin r} = \frac{v_1}{v_2} = \frac{n_2}{n_1}\]
@@ -677,10 +704,10 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Wave Optics vs Ray Optics
                             </h4>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <ul class="space-y-2">
                                     <li>• <strong>Ray Optics:</strong> Treats light as rays (valid when λ << size of obstacle)</li>
                                     <li>• <strong>Wave Optics:</strong> Treats light as waves (required when λ ≈ size of obstacle)</li>
@@ -693,10 +720,10 @@
                 </section>
 
                 <!-- Chapter 2: Interference of Light -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Interference of Light</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Interference of Light</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -704,11 +731,11 @@
                             Interference is the phenomenon in which two or more coherent light waves superpose to produce a resultant wave with intensity that varies from point to point. This is one of the most important phenomena proving the wave nature of light.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Conditions for Interference</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Conditions for Interference</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Essential Conditions for Sustained Interference</h5>
-                            <div class="bg-white p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Essential Conditions for Sustained Interference</h5>
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <ol class="list-decimal list-inside space-y-3">
                                     <li><strong>Coherent Sources:</strong> Sources must have constant phase difference (same frequency)</li>
                                     <li><strong>Monochromatic Light:</strong> Single wavelength (or narrow range)</li>
@@ -717,13 +744,13 @@
                                     <li><strong>Same State of Polarization:</strong> For maximum contrast</li>
                                 </ol>
                             </div>
-                            <p class="text-sm mt-3 text-gray-600"><strong>Note:</strong> Two independent sources cannot produce sustained interference because they are not coherent (random phase fluctuations).</p>
+                            <p class="text-sm mt-3 text-ink-muted"><strong>Note:</strong> Two independent sources cannot produce sustained interference because they are not coherent (random phase fluctuations).</p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Superposition of Waves</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Superposition of Waves</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
-                            <div class="bg-white p-6 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg">
                                 <p class="mb-3">When two waves with same frequency meet:</p>
                                 <div class="math-display text-center">
                                     \[y_1 = A_1 \sin(\omega t), \quad y_2 = A_2 \sin(\omega t + \phi)\]
@@ -739,12 +766,12 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Constructive & Destructive Interference</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Constructive & Destructive Interference</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Constructive Interference (Bright)</h5>
-                                <div class="bg-white p-4 rounded-lg space-y-3">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Constructive Interference (Bright)</h5>
+                                <div class="bg-canvas p-4 rounded-lg space-y-3">
                                     <p><strong>Condition:</strong> Waves in phase</p>
                                     <div class="math-display text-center text-sm">
                                         \[\phi = 0, 2\pi, 4\pi, ... = 2n\pi\]
@@ -760,9 +787,9 @@
                                     <p>If I₁ = I₂ = I₀: <strong>I_max = 4I₀</strong></p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Destructive Interference (Dark)</h5>
-                                <div class="bg-white p-4 rounded-lg space-y-3">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Destructive Interference (Dark)</h5>
+                                <div class="bg-canvas p-4 rounded-lg space-y-3">
                                     <p><strong>Condition:</strong> Waves out of phase</p>
                                     <div class="math-display text-center text-sm">
                                         \[\phi = \pi, 3\pi, 5\pi, ... = (2n+1)\pi\]
@@ -780,10 +807,10 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Path Difference & Phase Difference Relation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Path Difference & Phase Difference Relation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
-                            <div class="bg-white p-6 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg text-center">
                                 <div class="math-display text-2xl">
                                     \[\boxed{\phi = \frac{2\pi}{\lambda} \times \Delta x}\]
                                 </div>
@@ -791,7 +818,7 @@
                                 <div class="math-display text-lg">
                                     \[\frac{\phi}{2\pi} = \frac{\Delta x}{\lambda} = \frac{\Delta t}{T}\]
                                 </div>
-                                <div class="mt-4 text-sm text-gray-600">
+                                <div class="mt-4 text-sm text-ink-muted">
                                     <p>Phase difference of 2π corresponds to path difference of λ</p>
                                     <p>Phase difference of π corresponds to path difference of λ/2</p>
                                 </div>
@@ -802,7 +829,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Important JEE Formula: Intensity Ratio
                             </h4>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <div class="math-display text-center">
                                     \[\frac{I_{max}}{I_{min}} = \left(\frac{A_1 + A_2}{A_1 - A_2}\right)^2 = \left(\frac{\sqrt{I_1} + \sqrt{I_2}}{\sqrt{I_1} - \sqrt{I_2}}\right)^2\]
                                 </div>
@@ -816,10 +843,10 @@
                 </section>
 
                 <!-- Chapter 3: Young's Double Slit Experiment -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Young's Double Slit Experiment (YDSE)</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Young's Double Slit Experiment (YDSE)</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -827,11 +854,11 @@
                             YDSE is the most important experiment demonstrating interference of light. Performed by Thomas Young in 1801, it provided the first conclusive evidence for the wave nature of light. This is the <strong>most frequently asked topic</strong> from Wave Optics in JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 YDSE Setup & Path Difference</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 YDSE Setup & Path Difference</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-yellow-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-accent">Path Difference Formula</h5>
-                            <div class="bg-white p-6 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Path Difference Formula</h5>
+                            <div class="bg-canvas p-6 rounded-lg">
                                 <p class="mb-3">For a point P at distance y from center on screen:</p>
                                 <div class="math-display text-2xl text-center">
                                     \[\boxed{\Delta x = \frac{yd}{D}}\]
@@ -841,14 +868,14 @@
                                     <div><strong>D</strong> = screen distance</div>
                                     <div><strong>y</strong> = distance from center</div>
                                 </div>
-                                <p class="text-sm mt-4 text-gray-600"><strong>Approximation:</strong> Valid when d << D (usually D ≈ 1m, d ≈ 1mm)</p>
+                                <p class="text-sm mt-4 text-ink-muted"><strong>Approximation:</strong> Valid when d << D (usually D ≈ 1m, d ≈ 1mm)</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Fringe Width Formula (Most Important!)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Fringe Width Formula (Most Important!)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-yellow-300 my-6">
-                            <div class="bg-white p-6 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg text-center">
                                 <p class="mb-3 text-lg font-semibold">Fringe Width (β) = Distance between two consecutive bright (or dark) fringes</p>
                                 <div class="math-display text-3xl">
                                     \[\boxed{\beta = \frac{\lambda D}{d}}\]
@@ -860,8 +887,8 @@
                                     <div><strong>d</strong> = slit separation</div>
                                 </div>
                             </div>
-                            <div class="mt-4 bg-yellow-50 p-4 rounded-lg border border-yellow-300">
-                                <p class="font-semibold text-accent">🎯 JEE Key Points:</p>
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg border border-hairline-strong">
+                                <p class="font-semibold text-primary">🎯 JEE Key Points:</p>
                                 <ul class="list-disc list-inside mt-2 space-y-1">
                                     <li>All bright and dark fringes have <strong>same width</strong></li>
                                     <li>β ∝ λ (red light → wider fringes, violet → narrower)</li>
@@ -871,18 +898,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Position of Bright & Dark Fringes</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Position of Bright & Dark Fringes</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Fringe Type</th>
                                         <th class="p-4 text-left">Path Difference</th>
                                         <th class="p-4 text-left">Position from Center</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Central Bright (n=0)</td>
                                         <td class="p-4 font-mono">Δx = 0</td>
@@ -907,12 +934,12 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.4 YDSE Modifications (JEE Advanced)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 YDSE Modifications (JEE Advanced)</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-yellow-300">
-                                <h5 class="font-bold text-lg mb-3 text-accent">Glass Slab in Path of One Beam</h5>
-                                <div class="bg-white p-4 rounded-lg space-y-3">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Glass Slab in Path of One Beam</h5>
+                                <div class="bg-canvas p-4 rounded-lg space-y-3">
                                     <p>Extra path introduced:</p>
                                     <div class="math-display text-center">
                                         \[\Delta x_{extra} = (\mu - 1)t\]
@@ -924,9 +951,9 @@
                                     <p class="text-sm">Central fringe shifts towards the slab.</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-yellow-300">
-                                <h5 class="font-bold text-lg mb-3 text-accent">Source Shifted from Center</h5>
-                                <div class="bg-white p-4 rounded-lg space-y-3">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Source Shifted from Center</h5>
+                                <div class="bg-canvas p-4 rounded-lg space-y-3">
                                     <p>If source S is shifted by x₀:</p>
                                     <div class="math-display text-center">
                                         \[\text{Fringe shift} = \frac{x_0 \cdot D}{d'}\]
@@ -937,9 +964,9 @@
                             </div>
                         </div>
 
-                        <div class="formula-box p-6 rounded-xl border-2 border-yellow-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-accent">YDSE in Medium of Refractive Index μ</h5>
-                            <div class="bg-white p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">YDSE in Medium of Refractive Index μ</h5>
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="mb-3">When entire setup is immersed in medium of RI = μ:</p>
                                 <div class="math-display text-center">
                                     \[\lambda_{medium} = \frac{\lambda_{air}}{\mu}, \quad \beta_{medium} = \frac{\beta_{air}}{\mu}\]
@@ -949,14 +976,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> In YDSE, the separation between slits is 1 mm and the screen is placed at 1 m from slits. If the wavelength of light is 500 nm, find (a) fringe width (b) position of 3rd bright fringe (c) position of 2nd dark fringe.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: d = 1 mm = 10⁻³ m, D = 1 m, λ = 500 nm = 5 × 10⁻⁷ m</p>
                                 
                                 <p class="mb-2 mt-3"><strong>(a) Fringe width:</strong></p>
@@ -974,21 +1001,21 @@
                                     \[y = (2n-1)\frac{\beta}{2} = (2 \times 2 - 1)\frac{0.5}{2} = 3 \times 0.25 = 0.75 \text{ mm}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\beta = 0.5 \text{ mm}, \quad y_{3B} = 1.5 \text{ mm}, \quad y_{2D} = 0.75 \text{ mm}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> In YDSE with d = 1 mm and D = 1 m, a thin glass plate of thickness 0.02 mm and μ = 1.5 is placed in front of one slit. Find the shift in central fringe. (λ = 600 nm)
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: t = 0.02 mm = 2 × 10⁻⁵ m, μ = 1.5, D = 1 m, d = 10⁻³ m</p>
                                 
                                 <p class="mb-2 mt-3"><strong>Step 1:</strong> Extra path difference due to glass</p>
@@ -1006,7 +1033,7 @@
                                     \[n = \frac{\Delta y}{\beta} = \frac{(\mu - 1)t}{\lambda} = \frac{10^{-5}}{6 \times 10^{-7}} \approx 16.67 \text{ fringes}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Central fringe shifts by 10 mm towards the glass plate}\]
                                 </div>
                             </div>
@@ -1016,7 +1043,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Angular Fringe Width
                             </h4>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <div class="math-display text-center text-xl">
                                     \[\boxed{\theta = \frac{\beta}{D} = \frac{\lambda}{d}}\]
                                 </div>
@@ -1027,10 +1054,10 @@
                 </section>
 
                 <!-- Chapter 4: Diffraction -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Diffraction of Light</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Diffraction of Light</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1038,21 +1065,21 @@
                             Diffraction is the bending of light around the edges of an obstacle or aperture. It occurs when the size of the obstacle/aperture is comparable to the wavelength of light. Single slit diffraction is the most important topic for JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Types of Diffraction</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Types of Diffraction</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Fresnel Diffraction</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Fresnel Diffraction</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Source or screen at <strong>finite</strong> distance</li>
                                     <li>Curved wavefronts involved</li>
                                     <li>No lenses used</li>
                                     <li>Complex mathematical analysis</li>
-                                    <li>Example: Shadow of sharp edge</li>
+                                    <li>Example: border border-hairline of sharp edge</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Fraunhofer Diffraction</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Fraunhofer Diffraction</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Source and screen at <strong>infinite</strong> distance</li>
                                     <li>Plane wavefronts involved</li>
@@ -1063,32 +1090,32 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 Single Slit Diffraction (Fraunhofer)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Single Slit Diffraction (Fraunhofer)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Key Formulas for Single Slit</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Key Formulas for Single Slit</h5>
                             <div class="space-y-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Condition for Minima (Dark fringes):</p>
                                     <div class="math-display text-xl text-center">
                                         \[\boxed{a \sin\theta = n\lambda \quad (n = 1, 2, 3, ...)}\]
                                     </div>
                                     <p class="text-sm mt-2">where a = slit width, θ = angle of diffraction</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Condition for Secondary Maxima:</p>
                                     <div class="math-display text-center">
                                         \[a \sin\theta = \left(n + \frac{1}{2}\right)\lambda \quad (n = 1, 2, 3, ...)\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Width of Central Maximum:</p>
                                     <div class="math-display text-xl text-center">
                                         \[\boxed{W = \frac{2\lambda D}{a} = 2\beta_{YDSE} \times \frac{d}{a}}\]
                                     </div>
                                     <p class="text-sm mt-2">Central maxima width = 2 × width of secondary maxima</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Angular Width of Central Maximum:</p>
                                     <div class="math-display text-center">
                                         \[\Delta\theta = \frac{2\lambda}{a}\]
@@ -1098,19 +1125,19 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> YDSE vs Single Slit Diffraction
                             </h4>
                             <div class="overflow-x-auto">
-                                <table class="w-full custom-table shadow-lg">
+                                <table class="w-full custom-table border border-hairline">
                                     <thead>
-                                        <tr class="text-white">
+                                        <tr class="text-ink">
                                             <th class="p-3 text-left">Feature</th>
                                             <th class="p-3 text-left">YDSE (Interference)</th>
                                             <th class="p-3 text-left">Single Slit (Diffraction)</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y bg-white">
+                                    <tbody class="divide-y bg-canvas">
                                         <tr>
                                             <td class="p-3 font-semibold">Source</td>
                                             <td class="p-3">Two coherent sources</td>
@@ -1136,10 +1163,10 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Intensity Distribution</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Intensity Distribution</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <div class="bg-white p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="mb-3">Intensity at angle θ:</p>
                                 <div class="math-display text-center text-xl">
                                     \[\boxed{I = I_0 \left(\frac{\sin\alpha}{\alpha}\right)^2}\]
@@ -1154,14 +1181,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Light of wavelength 600 nm passes through a single slit of width 0.3 mm. The screen is at 1 m from the slit. Find (a) width of central maximum (b) position of first minimum.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: λ = 600 nm = 6 × 10⁻⁷ m, a = 0.3 mm = 3 × 10⁻⁴ m, D = 1 m</p>
                                 
                                 <p class="mb-2 mt-3"><strong>(a) Width of central maximum:</strong></p>
@@ -1174,24 +1201,24 @@
                                     \[y_1 = \frac{n\lambda D}{a} = \frac{1 \times 6 \times 10^{-7} \times 1}{3 \times 10^{-4}} = 2 \times 10^{-3} \text{ m} = 2 \text{ mm}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Central maximum width} = 4 \text{ mm}, \quad y_1 = 2 \text{ mm}\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.4 Resolving Power</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Resolving Power</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Rayleigh's Criterion</h5>
-                            <div class="bg-white p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Rayleigh's Criterion</h5>
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="mb-3">Two sources are just resolved when the central maximum of one falls on the first minimum of other.</p>
                                 <p class="font-semibold mb-2">Minimum angular separation:</p>
                                 <div class="math-display text-center">
                                     \[\theta_{min} = \frac{1.22\lambda}{D}\]
                                 </div>
                                 <p class="text-sm mt-2">where D = diameter of circular aperture</p>
-                                <div class="mt-4 bg-red-50 p-3 rounded">
+                                <div class="mt-4 bg-surface-2 p-3 rounded">
                                     <p class="font-semibold">Resolving Power of Telescope:</p>
                                     <div class="math-display text-center">
                                         \[R.P. = \frac{D}{1.22\lambda}\]
@@ -1203,10 +1230,10 @@
                 </section>
 
                 <!-- Chapter 5: Polarization -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Polarization of Light</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Polarization of Light</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1214,27 +1241,27 @@
                             Polarization is the phenomenon that proves light is a <strong>transverse wave</strong>. Unpolarized light has electric field vectors oscillating in all directions perpendicular to propagation. Polarized light has electric field oscillating in only one direction.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.1 Types of Polarization</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Types of Polarization</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Plane Polarized</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Plane Polarized</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>E-field oscillates in single plane</li>
                                     <li>Also called linearly polarized</li>
                                     <li>Produced by Polaroid, reflection</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Circularly Polarized</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Circularly Polarized</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>E-field rotates in circle</li>
                                     <li>Components with 90° phase diff</li>
                                     <li>Equal amplitudes</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">Elliptically Polarized</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Elliptically Polarized</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>E-field traces ellipse</li>
                                     <li>Unequal amplitudes</li>
@@ -1243,25 +1270,25 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.2 Malus Law (Most Important!)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Malus Law (Most Important!)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <div class="bg-white p-6 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg text-center">
                                 <p class="mb-3 text-lg">When plane polarized light passes through an analyzer at angle θ to polarization direction:</p>
                                 <div class="math-display text-3xl">
                                     \[\boxed{I = I_0 \cos^2\theta}\]
                                 </div>
                                 <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p><strong>θ = 0°:</strong> I = I₀ (maximum)</p>
                                     </div>
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p><strong>θ = 90°:</strong> I = 0 (crossed polaroids)</p>
                                     </div>
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p><strong>θ = 45°:</strong> I = I₀/2</p>
                                     </div>
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p><strong>θ = 60°:</strong> I = I₀/4</p>
                                     </div>
                                 </div>
@@ -1272,7 +1299,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Unpolarized Light through Polaroid
                             </h4>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="mb-3">When <strong>unpolarized</strong> light passes through a single polaroid:</p>
                                 <div class="math-display text-center text-xl">
                                     \[\boxed{I = \frac{I_0}{2}}\]
@@ -1281,43 +1308,43 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.3 Brewster's Law</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Brewster's Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <div class="bg-white p-6 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg">
                                 <p class="mb-3 text-lg">When light is incident at Brewster's angle, the <strong>reflected light is completely plane polarized</strong>.</p>
                                 <div class="math-display text-2xl text-center">
                                     \[\boxed{\tan i_B = \mu = \frac{n_2}{n_1}}\]
                                 </div>
                                 <div class="mt-4 space-y-3">
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p><strong>At Brewster's angle:</strong> Reflected & refracted rays are perpendicular</p>
                                         <div class="math-display text-center">
                                             \[i_B + r = 90°\]
                                         </div>
                                     </div>
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p><strong>For glass (μ = 1.5):</strong> i_B = tan⁻¹(1.5) ≈ 56.3°</p>
                                     </div>
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p><strong>For water (μ = 4/3):</strong> i_B = tan⁻¹(4/3) ≈ 53.1°</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.4 Methods of Polarization</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Methods of Polarization</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Method</th>
                                         <th class="p-4 text-left">Description</th>
                                         <th class="p-4 text-left">Example</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Reflection</td>
                                         <td class="p-4">At Brewster's angle, reflected light is polarized</td>
@@ -1348,14 +1375,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Unpolarized light of intensity I₀ passes through two polaroids with axes at 30° to each other. Find the intensity of transmitted light.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2 mt-3"><strong>Step 1:</strong> After first polaroid (unpolarized → polarized)</p>
                                 <div class="math-display">
                                     \[I_1 = \frac{I_0}{2}\]
@@ -1366,21 +1393,21 @@
                                     \[I_2 = I_1 \cos^2(30°) = \frac{I_0}{2} \times \left(\frac{\sqrt{3}}{2}\right)^2 = \frac{I_0}{2} \times \frac{3}{4}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[I = \frac{3I_0}{8}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Three polaroids P₁, P₂, P₃ are arranged with P₁ and P₃ having perpendicular axes. P₂ is placed between them with axis at 45° to P₁. Find the intensity of light emerging if unpolarized light of intensity I₀ is incident.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2 mt-3"><strong>Step 1:</strong> After P₁:</p>
                                 <div class="math-display">
                                     \[I_1 = \frac{I_0}{2}\]
@@ -1396,7 +1423,7 @@
                                     \[I_3 = I_2 \cos^2(45°) = \frac{I_0}{4} \times \frac{1}{2} = \frac{I_0}{8}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[I_{final} = \frac{I_0}{8}\]
                                 </div>
                                 <p class="text-sm mt-2">Without P₂, intensity would be zero (crossed polaroids). P₂ allows some light to pass!</p>
@@ -1406,10 +1433,10 @@
                 </section>
 
                 <!-- Chapter 6: Thin Film Interference -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Thin Film Interference</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Thin Film Interference</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1419,47 +1446,47 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Phase Change on Reflection</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <h5 class="font-bold text-lg mb-3 text-primary">Reflection from Denser Medium</h5>
                                     <p>Phase change = <strong>π (or λ/2)</strong></p>
                                     <p class="text-sm mt-2">Example: Light going from air to glass</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <h5 class="font-bold text-lg mb-3 text-primary">Reflection from Rarer Medium</h5>
                                     <p>Phase change = <strong>0</strong></p>
                                     <p class="text-sm mt-2">Example: Light going from glass to air</p>
                                 </div>
                             </div>
-                            <p class="text-sm mt-4 text-gray-600"><strong>Important:</strong> This is known as "Stokes Treatment" - hard reflection (from denser medium) causes π phase change.</p>
+                            <p class="text-sm mt-4 text-ink-muted"><strong>Important:</strong> This is known as "Stokes Treatment" - hard reflection (from denser medium) causes π phase change.</p>
                         </div>
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Thin Film Formulas (Reflected Light)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">For Film of Refractive Index μ and Thickness t</h5>
                             <div class="space-y-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="mb-2"><strong>Path difference:</strong></p>
                                     <div class="math-display text-center">
                                         \[\Delta x = 2\mu t \cos r\]
                                     </div>
                                     <p class="text-sm">where r = angle of refraction inside film</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="mb-2"><strong>Effective path difference (including phase change at top surface):</strong></p>
                                     <div class="math-display text-center">
                                         \[\Delta x_{eff} = 2\mu t \cos r + \frac{\lambda}{2}\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="mb-2"><strong>Constructive Interference (Bright):</strong></p>
                                     <div class="math-display text-center text-lg">
                                         \[\boxed{2\mu t \cos r = \left(n - \frac{1}{2}\right)\lambda \quad \text{or} \quad (2n-1)\frac{\lambda}{2}}\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="mb-2"><strong>Destructive Interference (Dark):</strong></p>
                                     <div class="math-display text-center text-lg">
                                         \[\boxed{2\mu t \cos r = n\lambda}\]
@@ -1469,10 +1496,10 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> For Normal Incidence (r = 0, cos r = 1)
                             </h4>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="mb-3">Simplified formulas when light falls normally:</p>
                                 <div class="space-y-3">
                                     <div class="math-display text-center">
@@ -1489,7 +1516,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Applications</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Colors in Soap Bubbles/Oil Films</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>Different colors seen due to varying thickness</li>
@@ -1498,7 +1525,7 @@
                                     <li>White light → colorful patterns</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Anti-Reflection Coating</h5>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li>Coating with μ = √μ_glass</li>
@@ -1510,14 +1537,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A thin film of thickness 500 nm and refractive index 1.5 is illuminated by white light at normal incidence. Which wavelengths will be strongly reflected?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: t = 500 nm, μ = 1.5, normal incidence (cos r = 1)</p>
                                 
                                 <p class="mb-2 mt-3"><strong>For constructive interference (bright):</strong></p>
@@ -1536,7 +1563,7 @@
                                     <li>n = 4: λ = 428.6 nm (violet, visible ✓)</li>
                                 </ul>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Strongly reflected: } 600 \text{ nm (orange) and } 428.6 \text{ nm (violet)}\]
                                 </div>
                             </div>
@@ -1545,14 +1572,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ YDSE (Fringe Width, Path Diff): 40%</li>
@@ -1562,7 +1589,7 @@
                                 <li>✓ Thin Films: 5%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ YDSE Modifications: 35%</li>
@@ -1574,8 +1601,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Fringe width calculation in YDSE (β = λD/d)</li>
                             <li>Shift in fringe pattern when glass slab is introduced</li>
@@ -1590,7 +1617,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1613,21 +1640,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>In YDSE, d = 0.5 mm, D = 1 m, λ = 500 nm. Find fringe width and position of 5th bright fringe.</li>
                             <li>Two coherent sources have intensities in ratio 4:1. Find I_max/I_min.</li>
@@ -1640,8 +1667,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>In YDSE, a glass slab (μ = 1.5, t = 2 μm) is placed in front of one slit. Find shift in central fringe (λ = 500 nm, D = 1 m, d = 1 mm).</li>
                             <li>Three polaroids P₁, P₂, P₃ have axes at 0°, 30°, 60° respectively. Find final intensity if I₀ enters P₁.</li>
@@ -1654,8 +1681,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>In YDSE, one slit is covered with a film that shifts phase by π/2. Find the shift in interference pattern and new intensity at center.</li>
                             <li>A parallel beam of light falls on a system of two slits S₁ and S₂. S₁ has a thin glass plate (t, μ) in front. Find fringe pattern if source is shifted perpendicular to principal axis.</li>
@@ -1669,61 +1696,79 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./work-energy-and-power.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Work Energy And Power</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./alternating-current.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Alternating Current</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./atoms-and-nuclei.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Atoms And Nuclei</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://jeeprepguide.netlify.app/jee/physics/ray-optics" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/ray-optics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Ray Optics</h3>
-                    <p class="text-gray-600">Reflection, Refraction, Mirrors, Lenses, Prisms, TIR</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Ray Optics</h3>
+                    <p class="text-ink-muted">Reflection, Refraction, Mirrors, Lenses, Prisms, TIR</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/physics/modern-physics" class="group bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/modern-physics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Modern Physics</h3>
-                    <p class="text-gray-600">Photoelectric Effect, Atoms, Nuclei, Dual Nature</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Modern Physics</h3>
+                    <p class="text-ink-muted">Photoelectric Effect, Atoms, Nuclei, Dual Nature</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-waves" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Electromagnetic Waves</h3>
-                    <p class="text-gray-600">EM Spectrum, Properties, Maxwell's Equations</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electromagnetic Waves</h3>
+                    <p class="text-ink-muted">EM Spectrum, Properties, Maxwell's Equations</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -1731,34 +1776,34 @@
     </section>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-purple-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Wave Optics - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Wave Optics - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Wave Optics is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Wave Optics</strong> is a highly scoring chapter in <strong>JEE Physics</strong> with predictable question patterns. It carries 4-5% weightage with formula-based questions:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>YDSE Problems</strong> - Fringe width, shifts, modifications (most common)</li>
                             <li><strong>Malus Law</strong> - Multiple polaroid problems</li>
                             <li><strong>Single Slit Diffraction</strong> - Central maximum width</li>
                             <li><strong>Brewster's Law</strong> - Direct formula application</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             Combined with <strong>Ray Optics</strong>, the entire Optics section contributes about 10% to JEE Physics.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Formulas to Remember</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. YDSE Formulas</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">1. YDSE Formulas</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Fringe width: β = λD/d</li>
                                     <li>• Path difference: Δx = yd/D</li>
                                     <li>• Bright: Δx = nλ</li>
@@ -1767,8 +1812,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Diffraction & Polarization</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Diffraction & Polarization</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Central maxima width: W = 2λD/a</li>
                                     <li>• Minima: a sinθ = nλ</li>
                                     <li>• Malus Law: I = I₀cos²θ</li>
@@ -1779,12 +1824,12 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Wave Optics Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 3-4 days (2 hours/day)</li>
                                 <li>Master <strong>YDSE fringe width formula</strong> — most asked!</li>
                                 <li>Practice 30+ numericals on YDSE variations</li>
@@ -1795,7 +1840,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 5-6 days (3 hours/day)</li>
                                 <li>Deep dive into <strong>YDSE modifications</strong> (glass slab, source shift)</li>
                                 <li>Practice intensity distribution problems</li>
@@ -1807,29 +1852,29 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing bright and dark conditions:</strong> In YDSE, bright occurs at Δx = nλ. In single slit diffraction, minima (dark) occurs at a sinθ = nλ. Don't mix them!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Forgetting intensity halving for unpolarized light:</strong> When unpolarized light passes through first polaroid, intensity becomes I₀/2, not I₀.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong unit conversions:</strong> Wavelength often given in nm or Å, distances in mm or m. Convert everything to meters before calculation.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Phase change confusion in thin films:</strong> Remember — reflection from denser medium gives π phase change. Include this in path difference calculation.
                             </div>
@@ -1837,11 +1882,11 @@
                     </ul>
                 </div>
                 
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -1850,19 +1895,19 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">1 Question (4 marks)</td>
                                     <td class="p-3">YDSE fringe width, Polarization intensity</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">1 Question (4 marks)</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">YDSE glass slab, Multiple polaroids</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">1 Question (4 marks)</td>
@@ -1871,7 +1916,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Trend:</strong> YDSE remains the most asked topic. JEE Advanced is asking conceptual questions combining YDSE with other modifications. Polarization questions have increased in frequency.
                     </p>
                 </div>
@@ -1881,78 +1926,78 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/ray-optics" class="hover:text-white transition">Ray Optics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-optics" class="hover:text-white transition font-bold text-white">Wave Optics ★</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/ray-optics" class="hover:text-ink transition">Ray Optics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-optics" class="hover:text-ink transition font-bold text-ink">Wave Optics ★</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                     </ul>
                     
                     <h4 class="text-xl font-bold mb-4 mt-6">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
@@ -1960,7 +2005,7 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

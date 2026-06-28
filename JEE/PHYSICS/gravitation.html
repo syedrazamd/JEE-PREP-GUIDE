@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Gravitation - Complete JEE Physics Notes with 150+ Examples">
     <meta property="og:description" content="Master gravitational field, escape velocity, satellites & Kepler's laws. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Gravitation - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/gravitation">
     <meta name="twitter:title" content="Gravitation - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master gravitation with 150+ solved examples. Complete notes on satellites, escape velocity & Kepler's laws for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Gravitation JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Gravitation - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Gravitation covering Newton's law, gravitational field, escape velocity, satellites, Kepler's laws with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -381,60 +394,62 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
+    
 
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -443,30 +458,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Gravitation</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Gravitation</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -474,32 +489,32 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Gravitation</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Gravitation</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Newton's Law
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Field & Potential
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Variation of g
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Potential Energy
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Escape Velocity
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Satellites
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Kepler's Laws
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Binary Stars
                 </a>
             </div>
@@ -507,28 +522,28 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Gravitation
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the complete gravitational mechanics with detailed notes on Newton's Law, Gravitational Field, Satellites, Escape Velocity, and Kepler's Laws. Includes 150+ solved problems and all important formulas.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All Key Formulas</span>
                     </div>
                 </div>
@@ -537,21 +552,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Gravitation JEE Notes">
         <meta itemprop="description" content="Complete study notes for Gravitation">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">312</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -561,15 +576,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">5 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">5 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -581,52 +596,64 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Newton's Law of Gravitation</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Gravitational Field & Potential</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Variation of g</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Gravitational PE</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Escape Velocity</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Satellites</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Kepler's Laws</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Binary Star Systems</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Newton's Law of Gravitation</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Gravitational Field & Potential</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Variation of g</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Gravitational PE</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Escape Velocity</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Satellites</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Kepler's Laws</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Binary Star Systems</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./rotational-motion.html" class="text-primary font-semibold hover:underline">Rotational Motion &rarr;</a>
+                <a href="./kinematics.html" class="text-primary font-semibold hover:underline">Kinematics &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/gravitation.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/gravitation.webp"
                         alt="Gravitation JEE notes, Formulas, PYQs"
                         title="Gravitation — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Gravitation JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Newton's Law of Gravitation -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Newton's Law of Universal Gravitation</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Newton's Law of Universal Gravitation</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -636,7 +663,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Statement of the Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Universal Law of Gravitation</h4>
                             <p class="text-lg mb-4">
                                 Every particle in the universe attracts every other particle with a force that is:
@@ -645,23 +672,23 @@
                                 <li>Directly proportional to the product of their masses</li>
                                 <li>Inversely proportional to the square of the distance between them</li>
                             </ul>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[F = \frac{Gm_1m_2}{r^2}\]
                             </div>
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">F</p>
                                     <p class="text-sm">Gravitational force</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">G</p>
                                     <p class="text-sm">Universal constant</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">m₁, m₂</p>
                                     <p class="text-sm">Masses</p>
                                 </div>
-                                <div class="bg-white p-3 rounded text-center">
+                                <div class="bg-canvas p-3 rounded text-center">
                                     <p class="font-semibold">r</p>
                                     <p class="text-sm">Distance</p>
                                 </div>
@@ -670,19 +697,19 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Universal Gravitational Constant (G)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Value and Units of G</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[G = 6.67 \times 10^{-11} \text{ Nm}^2/\text{kg}^2\]
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Dimensional Formula:</p>
                                     <div class="math-display text-base">
                                         \[[G] = [M^{-1}L^3T^{-2}]\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">SI Units:</p>
                                     <p class="text-sm">N·m²/kg² or m³/(kg·s²)</p>
                                     <p class="text-sm mt-2">CGS: dyne·cm²/g² = 6.67 × 10⁻⁸</p>
@@ -706,30 +733,30 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Vector Form of Newton's Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Vector Notation</h4>
                             <p class="text-lg mb-4">
                                 Force on mass m₁ due to m₂:
                             </p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[\vec{F}_{12} = -\frac{Gm_1m_2}{r^2}\hat{r}_{12}\]
                             </div>
                             <p class="mt-4 text-sm">
                                 The negative sign indicates attractive force (opposite to position vector direction)
                             </p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center mt-4">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center mt-4">
                                 \[\vec{F}_{12} = -\frac{Gm_1m_2}{|\vec{r}_{12}|^3}\vec{r}_{12}\]
                             </div>
                         </div>
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Principle of Superposition</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Superposition of Gravitational Forces</h4>
                             <p class="text-lg mb-4">
                                 The net gravitational force on a particle due to multiple particles is the vector sum of individual forces:
                             </p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[\vec{F}_{net} = \vec{F}_1 + \vec{F}_2 + \vec{F}_3 + ... = \sum_{i} \vec{F}_i\]
                             </div>
                             <p class="mt-4 text-sm">
@@ -738,14 +765,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main 2023)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Two spheres of masses 1 kg and 4 kg are separated by 10 cm. Find the position where gravitational field is zero.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Let null point be at distance x from 1 kg mass.</strong></p>
                                 
                                 <p class="mb-2">At null point, gravitational fields due to both masses are equal and opposite:</p>
@@ -766,25 +793,25 @@
                                 <div class="math-display">
                                     \[3x = 10\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[x = \frac{10}{3} \text{ cm} = 3.33 \text{ cm from 1 kg mass}\]
                                 </div>
                                 
-                                <p class="mt-4 p-3 bg-blue-50 rounded-lg text-sm">
+                                <p class="mt-4 p-3 bg-surface-2 rounded-lg text-sm">
                                     <strong>Note:</strong> Null point is always closer to the smaller mass. Between two masses, there's always exactly one null point.
                                 </p>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Three identical masses m are placed at the vertices of an equilateral triangle of side a. Find the gravitational force on each mass.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>For mass at vertex A:</strong></p>
                                 
                                 <p class="mb-2">Force due to mass at B:</p>
@@ -809,7 +836,7 @@
                                 <div class="math-display">
                                     \[F_{net} = \sqrt{3F^2} = \sqrt{3}F\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[F_{net} = \frac{\sqrt{3}Gm^2}{a^2}\]
                                 </div>
                                 <p class="text-sm mt-3">Direction: Towards the centroid of the triangle</p>
@@ -819,10 +846,10 @@
                 </section>
 
                 <!-- Chapter 2: Gravitational Field and Potential -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Gravitational Field and Potential</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Gravitational Field and Potential</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -830,32 +857,32 @@
                             The concepts of gravitational field and potential provide an elegant way to describe gravitational effects at any point in space without directly considering the masses involved.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Gravitational Field Intensity (E or g)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Gravitational Field Intensity (E or g)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 Gravitational field intensity at a point is the gravitational force experienced per unit mass placed at that point.
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[\vec{E} = \frac{\vec{F}}{m} = -\frac{GM}{r^2}\hat{r}\]
                             </div>
                             <p class="text-sm mt-4"><strong>Unit:</strong> N/kg or m/s² | <strong>Dimension:</strong> [LT⁻²]</p>
                             <p class="text-sm mt-2">Note: At Earth's surface, E = g = 9.8 m/s²</p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Gravitational Field Due to Different Bodies</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Gravitational Field Due to Different Bodies</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Body</th>
                                         <th class="p-4 text-left">Location</th>
                                         <th class="p-4 text-left">Field Intensity (E)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Point Mass M</td>
                                         <td class="p-4">Distance r</td>
@@ -879,7 +906,7 @@
                                     <tr>
                                         <td class="p-4 font-semibold">Hollow Sphere (shell)</td>
                                         <td class="p-4">Inside (r < R)</td>
-                                        <td class="p-4 font-mono text-success font-bold">E = 0</td>
+                                        <td class="p-4 font-mono text-primary font-bold">E = 0</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Uniform Ring (M, R)</td>
@@ -911,19 +938,19 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Gravitational Potential (V)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Gravitational Potential (V)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <p class="text-lg mb-4">
                                 Gravitational potential at a point is the work done per unit mass in bringing a mass from infinity to that point.
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[V = -\frac{GM}{r}\]
                             </div>
                             <p class="text-sm mt-4"><strong>Unit:</strong> J/kg or m²/s² | <strong>Dimension:</strong> [L²T⁻²]</p>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Key Properties:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Gravitational potential is always negative (zero at infinity)</li>
@@ -933,19 +960,19 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Relationship Between Field and Potential</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Relationship Between Field and Potential</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Fundamental Relations</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Fundamental Relations</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Field from Potential</p>
                                     <div class="math-display text-base">
                                         \[\vec{E} = -\nabla V = -\frac{dV}{dr}\hat{r}\]
                                     </div>
                                     <p class="text-sm text-center mt-2">(Field is negative gradient of potential)</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Potential from Field</p>
                                     <div class="math-display text-base">
                                         \[V = -\int \vec{E} \cdot d\vec{r}\]
@@ -954,7 +981,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2 text-center">In Cartesian Coordinates:</p>
                                 <div class="math-display text-base">
                                     \[E_x = -\frac{\partial V}{\partial x}, \quad E_y = -\frac{\partial V}{\partial y}, \quad E_z = -\frac{\partial V}{\partial z}\]
@@ -962,18 +989,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.5 Gravitational Potential Due to Different Bodies</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.5 Gravitational Potential Due to Different Bodies</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Body</th>
                                         <th class="p-4 text-left">Location</th>
                                         <th class="p-4 text-left">Potential (V)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Point Mass M</td>
                                         <td class="p-4">Distance r</td>
@@ -1002,7 +1029,7 @@
                                     <tr>
                                         <td class="p-4 font-semibold">Hollow Sphere</td>
                                         <td class="p-4">Inside (r ≤ R)</td>
-                                        <td class="p-4 font-mono text-success font-bold">V = -GM/R (constant)</td>
+                                        <td class="p-4 font-mono text-primary font-bold">V = -GM/R (constant)</td>
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">Ring (M, R)</td>
@@ -1014,17 +1041,17 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Critical Difference: Shell vs Solid Sphere
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded-lg">
-                                    <p class="font-semibold mb-2 text-danger">Hollow Shell (Inside)</p>
+                                <div class="bg-canvas p-4 rounded-lg">
+                                    <p class="font-semibold mb-2 text-primary">Hollow Shell (Inside)</p>
                                     <p class="text-sm">E = 0 (no force)</p>
                                     <p class="text-sm">V = -GM/R (constant, non-zero)</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
-                                    <p class="font-semibold mb-2 text-success">Solid Sphere (Inside)</p>
+                                <div class="bg-canvas p-4 rounded-lg">
+                                    <p class="font-semibold mb-2 text-primary">Solid Sphere (Inside)</p>
                                     <p class="text-sm">E = GMr/R³ (non-zero, ∝ r)</p>
                                     <p class="text-sm">V varies with position</p>
                                 </div>
@@ -1032,14 +1059,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced 2022)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the maximum gravitational field intensity on the axis of a uniform ring of mass M and radius R. At what distance from center does it occur?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Field on axis at distance x:</strong></p>
                                 <div class="math-display">
                                     \[E = \frac{GMx}{(R^2 + x^2)^{3/2}}\]
@@ -1060,7 +1087,7 @@
                                 <div class="math-display">
                                     \[R^2 = 2x^2\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[x = \frac{R}{\sqrt{2}}\]
                                 </div>
                                 
@@ -1071,7 +1098,7 @@
                                 <div class="math-display">
                                     \[E_{max} = \frac{GM \cdot \frac{R}{\sqrt{2}}}{\left(\frac{3R^2}{2}\right)^{3/2}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[E_{max} = \frac{2GM}{3\sqrt{3}R^2}\]
                                 </div>
                             </div>
@@ -1080,10 +1107,10 @@
                 </section>
 
                 <!-- Chapter 3: Variation of g -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Variation of Acceleration Due to Gravity</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Variation of Acceleration Due to Gravity</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1091,16 +1118,16 @@
                             The acceleration due to gravity (g) is not constant throughout Earth. It varies with altitude, depth, latitude, and Earth's rotation. Understanding these variations is crucial for JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.1 Value of g at Earth's Surface</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Value of g at Earth's Surface</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Fundamental Formula</h4>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Fundamental Formula</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[g = \frac{GM}{R^2}\]
                             </div>
                             <p class="text-center mt-4">For Earth: g ≈ 9.8 m/s² ≈ 10 m/s² (for calculations)</p>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">In terms of density (ρ):</p>
                                 <div class="math-display text-base">
                                     \[g = \frac{4}{3}\pi G\rho R\]
@@ -1109,42 +1136,42 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.2 Variation with Height (h)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Variation with Height (h)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">At Height h Above Surface</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">At Height h Above Surface</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Exact Formula</p>
                                     <div class="math-display text-base">
                                         \[g_h = \frac{GM}{(R+h)^2} = g\left(\frac{R}{R+h}\right)^2\]
                                     </div>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Approximate (h << R)</p>
                                     <div class="math-display text-base">
                                         \[g_h \approx g\left(1 - \frac{2h}{R}\right)\]
                                     </div>
                                 </div>
                             </div>
-                            <p class="mt-4 p-3 bg-yellow-50 rounded-lg text-sm">
+                            <p class="mt-4 p-3 bg-surface-2 rounded-lg text-sm">
                                 <strong>Key Point:</strong> g decreases as we go higher. Use approximate formula only when h << R (e.g., h < R/10)
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.3 Variation with Depth (d)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Variation with Depth (d)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">At Depth d Below Surface</h4>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">At Depth d Below Surface</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[g_d = g\left(1 - \frac{d}{R}\right) = g\left(\frac{R-d}{R}\right)\]
                             </div>
                             <p class="text-center mt-4">Or in terms of distance from center (r = R - d):</p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center mt-3">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center mt-3">
                                 \[g_d = \frac{GM}{R^3} \cdot r = g\frac{r}{R}\]
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Special Cases:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>At surface (d = 0): g<sub>d</sub> = g</li>
@@ -1158,39 +1185,39 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Comparison: Height vs Depth
                             </h4>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="mb-3">For same change, which causes greater decrease in g?</p>
                                 <div class="math-display">
                                     \[\Delta g_h = g \cdot \frac{2h}{R} \quad \text{vs} \quad \Delta g_d = g \cdot \frac{d}{R}\]
                                 </div>
                                 <p class="mt-3">For h = d: Δg<sub>h</sub> = 2 × Δg<sub>d</sub></p>
-                                <p class="font-semibold text-success mt-2">
+                                <p class="font-semibold text-primary mt-2">
                                     ✓ Going up causes twice the decrease compared to going down (same distance)
                                 </p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.4 Variation with Latitude (φ)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Variation with Latitude (φ)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Effect of Earth's Rotation</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Effect of Earth's Rotation</h4>
                             <p class="text-lg mb-4">
                                 Due to Earth's rotation, the effective g is reduced by centrifugal acceleration:
                             </p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[g' = g - \omega^2 R\cos^2\phi\]
                             </div>
                             <p class="text-center mt-2">where φ is latitude and ω is Earth's angular velocity</p>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">At Poles (φ = 90°):</p>
                                     <div class="math-display text-base">
                                         \[g'_{pole} = g\]
                                     </div>
                                     <p class="text-sm">Maximum g (no centrifugal effect)</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">At Equator (φ = 0°):</p>
                                     <div class="math-display text-base">
                                         \[g'_{eq} = g - \omega^2 R\]
@@ -1199,16 +1226,16 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg mt-4 border-l-4 border-accent">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4 border-l-4 border-accent">
                                 <p class="font-semibold">Numerical Value:</p>
                                 <p class="text-sm">g<sub>pole</sub> - g<sub>equator</sub> ≈ 0.034 m/s² (about 0.35% difference)</p>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.5 Effect of Earth's Shape (Oblateness)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.5 Effect of Earth's Shape (Oblateness)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Earth is Not a Perfect Sphere</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Earth is Not a Perfect Sphere</h4>
                             <p class="text-lg mb-4">
                                 Earth is flattened at poles (oblate spheroid):
                             </p>
@@ -1223,14 +1250,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Main 2024)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> At what height above Earth's surface does g become half its surface value? (R = 6400 km)
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Using exact formula:</p>
                                 <div class="math-display">
                                     \[g_h = g\left(\frac{R}{R+h}\right)^2 = \frac{g}{2}\]
@@ -1247,21 +1274,21 @@
                                 <div class="math-display">
                                     \[h = R(\sqrt{2} - 1) = R(1.414 - 1)\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[h = 0.414R = 0.414 \times 6400 = 2650 \text{ km}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> At what angular speed of Earth would objects at equator become weightless?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">For weightlessness at equator:</p>
                                 <div class="math-display">
                                     \[g' = g - \omega^2 R = 0\]
@@ -1277,7 +1304,7 @@
                                 <div class="math-display">
                                     \[\omega = \sqrt{\frac{10}{6.4 \times 10^6}} = \sqrt{1.56 \times 10^{-6}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\omega = 1.25 \times 10^{-3} \text{ rad/s}\]
                                 </div>
                                 
@@ -1286,7 +1313,7 @@
                                     \[T = \frac{2\pi}{\omega} = \frac{2\pi}{1.25 \times 10^{-3}} \approx 5027 \text{ s} \approx 84 \text{ min}\]
                                 </div>
                                 
-                                <p class="mt-4 p-3 bg-blue-50 rounded-lg text-sm">
+                                <p class="mt-4 p-3 bg-surface-2 rounded-lg text-sm">
                                     <strong>Note:</strong> Current Earth's period is 24 hours = 1440 min. Earth would need to rotate 17 times faster for equatorial weightlessness!
                                 </p>
                             </div>
@@ -1295,10 +1322,10 @@
                 </section>
 
                 <!-- Chapter 4: Gravitational Potential Energy -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Gravitational Potential Energy</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Gravitational Potential Energy</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1306,18 +1333,18 @@
                             Gravitational potential energy is the energy stored in a system of masses due to their gravitational interaction. Understanding this concept is essential for solving problems involving escape velocity, satellites, and orbital mechanics.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Definition and Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Definition and Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Gravitational Potential Energy</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Gravitational Potential Energy</h4>
                             <p class="text-lg mb-4">
                                 The gravitational PE of a system of two masses is the work done by an external agent in assembling the system (bringing masses from infinity):
                             </p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[U = -\frac{Gm_1 m_2}{r}\]
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Key Points:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Always negative:</strong> Because work is done ON the system to separate masses</li>
@@ -1328,18 +1355,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 PE at Earth's Surface</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 PE at Earth's Surface</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">For Object of Mass m</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">For Object of Mass m</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">General Form</p>
                                     <div class="math-display text-base">
                                         \[U = -\frac{GMm}{r}\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">At Earth's Surface</p>
                                     <div class="math-display text-base">
                                         \[U_s = -\frac{GMm}{R} = -mgR\]
@@ -1348,17 +1375,17 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Change in PE (Near Earth's Surface)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Change in PE (Near Earth's Surface)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">For Small Heights (h << R)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">For Small Heights (h << R)</h4>
                             <p class="text-lg mb-4">When h is small compared to R, we can use the simplified formula:</p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[\Delta U = mgh\]
                             </div>
                             <p class="text-center mt-2">(This is the familiar formula used in basic mechanics)</p>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg mt-4 border-l-4 border-accent">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4 border-l-4 border-accent">
                                 <p class="font-semibold">Derivation:</p>
                                 <div class="math-display text-sm">
                                     \[\Delta U = -\frac{GMm}{R+h} - \left(-\frac{GMm}{R}\right) = GMm\left(\frac{1}{R} - \frac{1}{R+h}\right)\]
@@ -1369,16 +1396,16 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.4 Self-Energy of a System</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Self-Energy of a System</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">PE of a System of n Particles</h4>
-                            <div class="math-display bg-red-50 p-4 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">PE of a System of n Particles</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[U_{total} = \sum_{i<j} \left(-\frac{Gm_i m_j}{r_{ij}}\right)\]
                             </div>
                             <p class="text-center mt-2">Sum over all pairs (n(n-1)/2 pairs for n particles)</p>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Self-Energy of Uniform Sphere:</p>
                                 <div class="math-display text-base">
                                     \[U_{self} = -\frac{3GM^2}{5R}\]
@@ -1388,14 +1415,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Main 2023)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Find the gravitational potential energy of a system of 4 identical particles of mass m at the corners of a square of side a.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Count the pairs:</strong></p>
                                 <p class="mb-2">Total pairs = ⁴C₂ = 6</p>
                                 <p class="mb-2">• 4 pairs along sides (distance = a)</p>
@@ -1411,7 +1438,7 @@
                                 <div class="math-display">
                                     \[U = -\frac{Gm^2}{a}(4 + \sqrt{2})\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[U = -\frac{Gm^2}{a}(4 + \sqrt{2}) \approx -5.41\frac{Gm^2}{a}\]
                                 </div>
                             </div>
@@ -1420,10 +1447,10 @@
                 </section>
 
                 <!-- Chapter 5: Escape Velocity -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Escape Velocity</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Escape Velocity</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1433,16 +1460,16 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Definition and Derivation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Escape Velocity Formula</h4>
                             <p class="text-lg mb-4">
                                 Minimum velocity needed to escape gravitational field (reach infinity with zero final velocity):
                             </p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[v_e = \sqrt{\frac{2GM}{R}} = \sqrt{2gR}\]
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Derivation (using energy conservation):</p>
                                 <div class="math-display text-sm">
                                     \[KE_i + PE_i = KE_f + PE_f\]
@@ -1459,15 +1486,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Important Values</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Celestial Body</th>
                                         <th class="p-4 text-left">Escape Velocity</th>
                                         <th class="p-4 text-left">Notes</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Earth</td>
                                         <td class="p-4 font-mono">11.2 km/s</td>
@@ -1494,28 +1521,28 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Key Relationships</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Important Formulas</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">In Terms of g and R</p>
                                     <div class="math-display text-base">
                                         \[v_e = \sqrt{2gR}\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">In Terms of Density</p>
                                     <div class="math-display text-base">
                                         \[v_e = R\sqrt{\frac{8\pi G\rho}{3}}\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Relation with Orbital Velocity</p>
                                     <div class="math-display text-base">
                                         \[v_e = \sqrt{2} \times v_o\]
                                     </div>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">At Height h</p>
                                     <div class="math-display text-base">
                                         \[v_e = \sqrt{\frac{2GM}{R+h}}\]
@@ -1540,28 +1567,28 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Velocity Greater Than Escape Velocity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Object Projected with v > v<sub>e</sub></h4>
                             <p class="text-lg mb-4">
                                 If initial velocity v > v<sub>e</sub>, the object will have some velocity at infinity:
                             </p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[\frac{1}{2}mv^2 - \frac{GMm}{R} = \frac{1}{2}mv_\infty^2\]
                             </div>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg text-center mt-3">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center mt-3">
                                 \[v_\infty = \sqrt{v^2 - v_e^2}\]
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7 (JEE Main 2024)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A rocket is launched from Earth's surface with velocity v = 1.5v<sub>e</sub>. Find its velocity at infinity.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Using energy conservation:</p>
                                 <div class="math-display">
                                     \[v_\infty = \sqrt{v^2 - v_e^2}\]
@@ -1575,21 +1602,21 @@
                                 <div class="math-display">
                                     \[v_\infty = \sqrt{1.25v_e^2}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[v_\infty = \frac{\sqrt{5}}{2}v_e \approx 1.118v_e \approx 12.5 \text{ km/s}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> If Earth's radius is doubled keeping mass constant, what happens to escape velocity?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Escape velocity formula:</p>
                                 <div class="math-display">
                                     \[v_e = \sqrt{\frac{2GM}{R}}\]
@@ -1601,7 +1628,7 @@
                                 <div class="math-display">
                                     \[\frac{v_{e2}}{v_{e1}} = \sqrt{\frac{2GM/2R}{2GM/R}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[v_{e2} = \frac{v_{e1}}{\sqrt{2}} \approx \frac{11.2}{\sqrt{2}} \approx 7.9 \text{ km/s}\]
                                 </div>
                                 <p class="mt-4 text-sm">Escape velocity decreases by factor of √2 (becomes 1/√2 times)</p>
@@ -1611,10 +1638,10 @@
                 </section>
 
                 <!-- Chapter 6: Satellites -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Satellites and Orbital Motion</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Satellites and Orbital Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1622,21 +1649,21 @@
                             Satellites are objects that orbit around a larger body under gravitational attraction. Understanding satellite motion is one of the most important and high-weightage topics in JEE gravitation.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Orbital Velocity</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Orbital Velocity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Velocity Required for Circular Orbit</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Velocity Required for Circular Orbit</h4>
                             <p class="text-lg mb-4">
                                 For circular orbit, gravitational force provides centripetal force:
                             </p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg text-center">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[\frac{GMm}{r^2} = \frac{mv_o^2}{r}\]
                             </div>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg text-center mt-3">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center mt-3">
                                 \[v_o = \sqrt{\frac{GM}{r}} = \sqrt{\frac{gR^2}{r}}\]
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">For orbit at height h above surface (r = R + h):</p>
                                 <div class="math-display text-base">
                                     \[v_o = \sqrt{\frac{GM}{R+h}} = R\sqrt{\frac{g}{R+h}}\]
@@ -1645,15 +1672,15 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Time Period of Revolution</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Time Period of Revolution</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Orbital Period</h4>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Orbital Period</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                                 \[T = \frac{2\pi r}{v_o} = 2\pi\sqrt{\frac{r^3}{GM}} = 2\pi\sqrt{\frac{(R+h)^3}{gR^2}}\]
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">For near-surface orbit (h << R):</p>
                                 <div class="math-display text-base">
                                     \[T = 2\pi\sqrt{\frac{R}{g}} \approx 84.6 \text{ minutes for Earth}\]
@@ -1662,24 +1689,24 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Energy of a Satellite</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Energy of a Satellite</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Energy Analysis</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Energy Analysis</h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Kinetic Energy</p>
                                     <div class="math-display text-base">
                                         \[KE = \frac{1}{2}mv_o^2 = \frac{GMm}{2r}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Potential Energy</p>
                                     <div class="math-display text-base">
                                         \[PE = -\frac{GMm}{r}\]
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2 text-center">Total Energy</p>
                                     <div class="math-display text-base">
                                         \[E = -\frac{GMm}{2r}\]
@@ -1687,7 +1714,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg mt-4 border-l-4 border-accent">
+                            <div class="bg-surface-2 p-4 rounded-lg mt-4 border-l-4 border-accent">
                                 <p class="font-semibold">Important Relationships:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm mt-2">
                                     <li>KE = -E (KE is positive, same magnitude as total energy)</li>
@@ -1702,7 +1729,7 @@
                             <h4 class="font-bold text-xl mb-3 flex items-center">
                                 <span class="text-2xl mr-2">💡</span> Binding Energy
                             </h4>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="mb-3">Binding energy is the minimum energy required to remove satellite from orbit to infinity:</p>
                                 <div class="math-display text-center">
                                     \[BE = |E| = \frac{GMm}{2r} = \frac{1}{2}mv_o^2 = KE\]
@@ -1711,19 +1738,19 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.4 Types of Satellites</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.4 Types of Satellites</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Type</th>
                                         <th class="p-4 text-left">Altitude</th>
                                         <th class="p-4 text-left">Period</th>
                                         <th class="p-4 text-left">Uses</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Geostationary (GEO)</td>
                                         <td class="p-4">36,000 km</td>
@@ -1752,12 +1779,12 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.5 Geostationary Satellite</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.5 Geostationary Satellite</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Conditions and Calculations</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Conditions and Calculations</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Requirements:</p>
                                     <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>Period T = 24 hours</li>
@@ -1766,7 +1793,7 @@
                                         <li>Circular orbit</li>
                                     </ul>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Height Calculation:</p>
                                     <div class="math-display text-sm">
                                         \[T = 2\pi\sqrt{\frac{(R+h)^3}{gR^2}}\]
@@ -1775,7 +1802,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Orbital Parameters (for Earth):</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Height: h ≈ 35,800 km ≈ 6R</li>
@@ -1786,14 +1813,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 9 (JEE Main 2023)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A satellite is revolving in circular orbit of radius r. If its velocity is doubled, what happens?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Original orbital velocity:</strong></p>
                                 <div class="math-display">
                                     \[v_o = \sqrt{\frac{GM}{r}}\]
@@ -1808,7 +1835,7 @@
                                 
                                 <p class="mb-2 mt-3">Since v' = 2v<sub>o</sub> > v<sub>e</sub> = 1.414v<sub>o</sub></p>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{The satellite will escape the gravitational field!}\]
                                 </div>
                                 
@@ -1820,19 +1847,19 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 10 (JEE Advanced 2022)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Two satellites A and B are in circular orbits of radii r and 4r. Find the ratio of their (a) orbital velocities (b) time periods (c) total energies.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>(a) Orbital velocities:</strong></p>
                                 <div class="math-display">
                                     \[v_o = \sqrt{\frac{GM}{r}} \implies v \propto \frac{1}{\sqrt{r}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-2 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-2 rounded border-2 border-accent">
                                     \[\frac{v_A}{v_B} = \sqrt{\frac{4r}{r}} = 2:1\]
                                 </div>
                                 
@@ -1840,7 +1867,7 @@
                                 <div class="math-display">
                                     \[T = 2\pi\sqrt{\frac{r^3}{GM}} \implies T \propto r^{3/2}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-2 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-2 rounded border-2 border-accent">
                                     \[\frac{T_A}{T_B} = \left(\frac{r}{4r}\right)^{3/2} = \frac{1}{8} = 1:8\]
                                 </div>
                                 
@@ -1848,7 +1875,7 @@
                                 <div class="math-display">
                                     \[E = -\frac{GMm}{2r} \implies |E| \propto \frac{1}{r}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-2 rounded border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-2 rounded border-2 border-accent">
                                     \[\frac{|E_A|}{|E_B|} = \frac{4r}{r} = 4:1\]
                                 </div>
                                 <p class="text-sm mt-2">(Satellite A is more tightly bound)</p>
@@ -1858,10 +1885,10 @@
                 </section>
 
                 <!-- Chapter 7: Kepler's Laws -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Kepler's Laws of Planetary Motion</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Kepler's Laws of Planetary Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1869,15 +1896,15 @@
                             Johannes Kepler formulated three empirical laws describing planetary motion around the Sun. These laws are derivable from Newton's law of gravitation and are essential for understanding orbital mechanics.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.1 First Law (Law of Orbits)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 First Law (Law of Orbits)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Elliptical Orbits</h4>
-                            <p class="text-lg mb-4 p-4 bg-green-50 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Elliptical Orbits</h4>
+                            <p class="text-lg mb-4 p-4 bg-surface-2 rounded-lg">
                                 <strong>Statement:</strong> All planets move in elliptical orbits with the Sun at one focus.
                             </p>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Key Terms:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Semi-major axis (a):</strong> Half the longest diameter of ellipse</li>
@@ -1892,19 +1919,19 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.2 Second Law (Law of Areas)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Second Law (Law of Areas)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Equal Areas in Equal Times</h4>
-                            <p class="text-lg mb-4 p-4 bg-green-50 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Equal Areas in Equal Times</h4>
+                            <p class="text-lg mb-4 p-4 bg-surface-2 rounded-lg">
                                 <strong>Statement:</strong> The line joining the planet to the Sun sweeps out equal areas in equal intervals of time.
                             </p>
                             
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center mt-4">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center mt-4">
                                 \[\frac{dA}{dt} = \frac{L}{2m} = \text{constant}\]
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">This is equivalent to:</p>
                                 <ul class="list-disc list-inside space-y-2 text-sm">
                                     <li><strong>Conservation of angular momentum</strong> (L = constant)</li>
@@ -1919,22 +1946,22 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">7.3 Third Law (Law of Periods)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Third Law (Law of Periods)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">T² ∝ a³</h4>
-                            <p class="text-lg mb-4 p-4 bg-green-50 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">T² ∝ a³</h4>
+                            <p class="text-lg mb-4 p-4 bg-surface-2 rounded-lg">
                                 <strong>Statement:</strong> The square of the orbital period is proportional to the cube of the semi-major axis.
                             </p>
                             
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center mt-4">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center mt-4">
                                 \[T^2 \propto a^3\]
                             </div>
-                            <div class="math-display bg-green-50 p-4 rounded-lg text-center mt-3">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg text-center mt-3">
                                 \[T^2 = \frac{4\pi^2}{GM}a^3\]
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">For two planets orbiting same star:</p>
                                 <div class="math-display text-base">
                                     \[\left(\frac{T_1}{T_2}\right)^2 = \left(\frac{a_1}{a_2}\right)^3\]
@@ -1949,28 +1976,28 @@
                             </h4>
                             <div class="overflow-x-auto">
                                 <table class="w-full border-collapse">
-                                    <thead class="bg-purple-100">
+                                    <thead class="bg-surface-3">
                                         <tr>
-                                            <th class="border border-gray-300 p-3">Law</th>
-                                            <th class="border border-gray-300 p-3">Statement</th>
-                                            <th class="border border-gray-300 p-3">Physics Principle</th>
+                                            <th class="border border-hairline-strong p-3">Law</th>
+                                            <th class="border border-hairline-strong p-3">Statement</th>
+                                            <th class="border border-hairline-strong p-3">Physics Principle</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="border border-gray-300 p-3 font-semibold">1st (Orbits)</td>
-                                            <td class="border border-gray-300 p-3">Elliptical orbits</td>
-                                            <td class="border border-gray-300 p-3">Inverse square law</td>
+                                            <td class="border border-hairline-strong p-3 font-semibold">1st (Orbits)</td>
+                                            <td class="border border-hairline-strong p-3">Elliptical orbits</td>
+                                            <td class="border border-hairline-strong p-3">Inverse square law</td>
                                         </tr>
                                         <tr>
-                                            <td class="border border-gray-300 p-3 font-semibold">2nd (Areas)</td>
-                                            <td class="border border-gray-300 p-3">Equal areas in equal times</td>
-                                            <td class="border border-gray-300 p-3">Conservation of angular momentum</td>
+                                            <td class="border border-hairline-strong p-3 font-semibold">2nd (Areas)</td>
+                                            <td class="border border-hairline-strong p-3">Equal areas in equal times</td>
+                                            <td class="border border-hairline-strong p-3">Conservation of angular momentum</td>
                                         </tr>
                                         <tr>
-                                            <td class="border border-gray-300 p-3 font-semibold">3rd (Periods)</td>
-                                            <td class="border border-gray-300 p-3">T² ∝ a³</td>
-                                            <td class="border border-gray-300 p-3">Gravitational force = Centripetal force</td>
+                                            <td class="border border-hairline-strong p-3 font-semibold">3rd (Periods)</td>
+                                            <td class="border border-hairline-strong p-3">T² ∝ a³</td>
+                                            <td class="border border-hairline-strong p-3">Gravitational force = Centripetal force</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1978,14 +2005,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 11 (JEE Main 2024)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A planet has orbital radius 4 times that of Earth. Find its orbital period in Earth years.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Using Kepler's third law:</p>
                                 <div class="math-display">
                                     \[\left(\frac{T_p}{T_E}\right)^2 = \left(\frac{r_p}{r_E}\right)^3\]
@@ -1993,21 +2020,21 @@
                                 <div class="math-display">
                                     \[\left(\frac{T_p}{1}\right)^2 = (4)^3 = 64\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[T_p = 8 \text{ Earth years}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 12 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A comet moves in highly elliptical orbit with perihelion distance r<sub>P</sub> and aphelion distance r<sub>A</sub> = 4r<sub>P</sub>. Find ratio of velocities at these points.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Using Kepler's second law (conservation of angular momentum):</p>
                                 <div class="math-display">
                                     \[L = mv_P r_P = mv_A r_A = \text{constant}\]
@@ -2018,7 +2045,7 @@
                                 <div class="math-display">
                                     \[\frac{v_P}{v_A} = \frac{r_A}{r_P} = \frac{4r_P}{r_P}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\frac{v_P}{v_A} = 4:1\]
                                 </div>
                                 <p class="text-sm mt-3">Comet moves 4 times faster at perihelion than at aphelion</p>
@@ -2028,10 +2055,10 @@
                 </section>
 
                 <!-- Chapter 8: Binary Star Systems -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Binary Star Systems</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Binary Star Systems</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -2039,16 +2066,16 @@
                             Binary star systems consist of two stars orbiting around their common center of mass. This topic combines concepts of gravitation with center of mass motion.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.1 Motion of Binary Stars</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Motion of Binary Stars</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Key Relationships</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Key Relationships</h4>
                             <p class="text-lg mb-4">
                                 Two stars of masses m₁ and m₂ separated by distance d orbit their common center of mass:
                             </p>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Distances from CM:</p>
                                     <div class="math-display text-base">
                                         \[r_1 = \frac{m_2 d}{m_1 + m_2}\]
@@ -2057,7 +2084,7 @@
                                         \[r_2 = \frac{m_1 d}{m_1 + m_2}\]
                                     </div>
                                 </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Angular Velocity:</p>
                                     <div class="math-display text-base">
                                         \[\omega = \sqrt{\frac{G(m_1 + m_2)}{d^3}}\]
@@ -2066,7 +2093,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-white p-4 rounded-lg mt-4">
+                            <div class="bg-canvas p-4 rounded-lg mt-4">
                                 <p class="font-semibold mb-2">Time Period:</p>
                                 <div class="math-display text-base">
                                     \[T = 2\pi\sqrt{\frac{d^3}{G(m_1 + m_2)}}\]
@@ -2083,31 +2110,31 @@
 
 
 
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                    <h4 class="font-bold text-xl mb-4 text-accent">Energy of Binary System</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                    <h4 class="font-bold text-xl mb-4 text-primary">Energy of Binary System</h4>
                     <p class="text-lg mb-4">Total Energy = KE₁ + KE₂ + PE</p>
-                    <div class="math-display bg-orange-50 p-4 rounded-lg text-center">
+                    <div class="math-display bg-surface-2 p-4 rounded-lg text-center">
                         \[E_{total} = -\frac{Gm_1m_2}{2d}\]
                     </div>
                     <p class="text-sm mt-2">Note: Same form as single particle orbit, but with reduced mass μ = m₁m₂/(m₁+m₂)</p>
                 </div>
 
                 <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                    <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                    <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                         <span class="text-2xl mr-2">📝</span> Solved Example 13 (JEE Advanced Pattern)
                     </h4>
                     <p class="text-lg mb-3">
                         <strong>Question:</strong> Two stars of masses 2M and M are separated by distance d. Find the time period of their revolution around common CM.
                     </p>
                     <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                    <div class="bg-white p-4 rounded-lg my-3">
+                    <div class="bg-canvas p-4 rounded-lg my-3">
                         <p class="mb-3">Using the binary star period formula:</p>
                         <div class="math-display">
                             \[T = 2\pi\sqrt{\frac{d^3}{G(m_1 + m_2)}}\]
                         </div>
                         <p class="mb-2 mt-3">Here m₁ = 2M, m₂ = M, so m₁ + m₂ = 3M</p>
                         
-                        <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                        <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                             \[T = 2\pi\sqrt{\frac{d^3}{3GM}}\]
                         </div>
                     </div>
@@ -2116,25 +2143,25 @@
 
             <!-- PYQ SECTION -->
             <section id="pyq" class="lg:col-span-3 space-y-8 mt-12">
-                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-8 border-l-8 border-indigo-500">
-                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 flex items-center">
-                        <span class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center mr-3 text-lg">P</span>
+                <div class="bg-gradient-to-r from-surface-2 to-surface-2 rounded-2xl border border-hairline p-8 border-l-8 border-hairline-strong">
+                    <h2 class="text-3xl font-extrabold text-ink mb-6 flex items-center">
+                        <span class="bg-surface-2 text-ink w-10 h-10 rounded-full flex items-center justify-center mr-3 text-lg">P</span>
                         Previous Year Questions (JEE Main & Advanced)
                     </h2>
 
                     <!-- PYQ 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md mb-6 border border-gray-200">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline mb-6 border border-hairline">
                         <div class="flex items-start justify-between mb-3">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">JEE Main 2024</span>
-                            <span class="text-gray-500 text-sm">Single Correct</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">JEE Main 2024</span>
+                            <span class="text-ink-subtle text-sm">Single Correct</span>
                         </div>
                         <p class="text-lg font-semibold mb-4">The variation of acceleration due to gravity (g) with distance (r) from the center of a solid sphere of radius R and uniform density is best represented by:</p>
-                        <div class="bg-gray-50 p-4 rounded-lg text-center mb-4">
+                        <div class="bg-surface-1 p-4 rounded-lg text-center mb-4">
                             [Graph Question - Option C is correct: Linear increase from 0 to R, then 1/r² decrease]
                         </div>
                         <details class="mt-2 cursor-pointer">
-                            <summary class="font-bold text-indigo-600 hover:text-indigo-800">View Solution</summary>
-                            <div class="mt-3 p-3 bg-indigo-50 rounded-lg">
+                            <summary class="font-bold text-primary hover:text-primary">View Solution</summary>
+                            <div class="mt-3 p-3 bg-surface-2 rounded-lg">
                                 <p class="mb-2"><strong>Ans: (C)</strong></p>
                                 <p>Inside (r < R): g ∝ r (Linear)</p>
                                 <p>Outside (r ≥ R): g ∝ 1/r² (Hyperbolic)</p>
@@ -2143,15 +2170,15 @@
                     </div>
 
                     <!-- PYQ 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md mb-6 border border-gray-200">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline mb-6 border border-hairline">
                         <div class="flex items-start justify-between mb-3">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">JEE Main 2023</span>
-                            <span class="text-gray-500 text-sm">Numerical</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">JEE Main 2023</span>
+                            <span class="text-ink-subtle text-sm">Numerical</span>
                         </div>
                         <p class="text-lg font-semibold mb-4">A satellite is orbiting Earth at a height of 2R (R = Earth's radius). Find its orbital velocity. (Take g = 10 m/s², R = 6400 km)</p>
                         <details class="mt-2 cursor-pointer">
-                            <summary class="font-bold text-indigo-600 hover:text-indigo-800">View Solution</summary>
-                            <div class="mt-3 p-3 bg-indigo-50 rounded-lg">
+                            <summary class="font-bold text-primary hover:text-primary">View Solution</summary>
+                            <div class="mt-3 p-3 bg-surface-2 rounded-lg">
                                 <p class="mb-2"><strong>Ans: 4.62 km/s</strong></p>
                                 <p>r = R + 2R = 3R</p>
                                 <p>v = √(GM/r) = √(gR²/3R) = √(gR/3)</p>
@@ -2161,15 +2188,15 @@
                     </div>
 
                     <!-- PYQ 3 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md mb-6 border border-gray-200">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline mb-6 border border-hairline">
                         <div class="flex items-start justify-between mb-3">
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-bold">JEE Advanced 2022</span>
-                            <span class="text-gray-500 text-sm">Multiple Correct</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">JEE Advanced 2022</span>
+                            <span class="text-ink-subtle text-sm">Multiple Correct</span>
                         </div>
                         <p class="text-lg font-semibold mb-4">Two planets P₁ and P₂ have masses M₁, M₂ and radii R₁, R₂. If escape velocities are equal, then:</p>
                         <details class="mt-2 cursor-pointer">
-                            <summary class="font-bold text-indigo-600 hover:text-indigo-800">View Solution</summary>
-                            <div class="mt-3 p-3 bg-indigo-50 rounded-lg">
+                            <summary class="font-bold text-primary hover:text-primary">View Solution</summary>
+                            <div class="mt-3 p-3 bg-surface-2 rounded-lg">
                                 <p class="mb-2"><strong>Ans: (A), (C)</strong></p>
                                 <p>v  √(2GM/R). If v  = vₑ₂, then M₁/R₁ = M₂/R₂</p>
                                 <p>→ M₁/M₂ = R₁/R₂ (Option A correct)</p>
@@ -2182,51 +2209,51 @@
 
             <!-- PRACTICE PROBLEMS -->
             <section id="practice" class="lg:col-span-3 space-y-8 mt-12">
-                <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl shadow-xl p-8 border-l-8 border-emerald-500">
-                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 flex items-center">
-                        <span class="bg-emerald-500 text-white w-10 h-10 rounded-full flex items-center justify-center mr-3 text-lg">🎯</span>
+                <div class="bg-gradient-to-r from-surface-2 to-surface-2 rounded-2xl border border-hairline p-8 border-l-8 border-hairline-strong">
+                    <h2 class="text-3xl font-extrabold text-ink mb-6 flex items-center">
+                        <span class="bg-primary text-ink w-10 h-10 rounded-full flex items-center justify-center mr-3 text-lg">🎯</span>
                         Practice Problems (For JEE 2025)
                     </h2>
 
                     <div class="space-y-4">
                         <!-- Q1 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200 flex justify-between items-center">
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline border border-hairline flex justify-between items-center">
                             <span class="font-semibold">1. At what height is g reduced by 1%? (R = 6400 km)</span>
                             <details class="cursor-pointer">
-                                <summary class="text-emerald-600 font-bold text-sm">Answer</summary>
-                                <div class="mt-2 p-2 bg-emerald-50 rounded text-sm">32 km</div>
+                                <summary class="text-primary font-bold text-sm">Answer</summary>
+                                <div class="mt-2 p-2 bg-surface-2 rounded text-sm">32 km</div>
                             </details>
                         </div>
                         <!-- Q2 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200 flex justify-between items-center">
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline border border-hairline flex justify-between items-center">
                             <span class="font-semibold">2. A body is projected with velocity v = √(GM/R). Find max height.</span>
                             <details class="cursor-pointer">
-                                <summary class="text-emerald-600 font-bold text-sm">Answer</summary>
-                                <div class="mt-2 p-2 bg-emerald-50 rounded text-sm">R (i.e., height = Radius of Earth)</div>
+                                <summary class="text-primary font-bold text-sm">Answer</summary>
+                                <div class="mt-2 p-2 bg-surface-2 rounded text-sm">R (i.e., height = Radius of Earth)</div>
                             </details>
                         </div>
                         <!-- Q3 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200 flex justify-between items-center">
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline border border-hairline flex justify-between items-center">
                             <span class="font-semibold">3. Two stars (m, 4m) distance d. Find angular velocity ω.</span>
                             <details class="cursor-pointer">
-                                <summary class="text-emerald-600 font-bold text-sm">Answer</summary>
-                                <div class="mt-2 p-2 bg-emerald-50 rounded text-sm">ω = √(5Gm/d³)</div>
+                                <summary class="text-primary font-bold text-sm">Answer</summary>
+                                <div class="mt-2 p-2 bg-surface-2 rounded text-sm">ω = √(5Gm/d³)</div>
                             </details>
                         </div>
                         <!-- Q4 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200 flex justify-between items-center">
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline border border-hairline flex justify-between items-center">
                             <span class="font-semibold">4. A tunnel is dug along Earth's diameter. Time period of oscillation?</span>
                             <details class="cursor-pointer">
-                                <summary class="text-emerald-600 font-bold text-sm">Answer</summary>
-                                <div class="mt-2 p-2 bg-emerald-50 rounded text-sm">84.6 minutes (Same as near-surface satellite)</div>
+                                <summary class="text-primary font-bold text-sm">Answer</summary>
+                                <div class="mt-2 p-2 bg-surface-2 rounded text-sm">84.6 minutes (Same as near-surface satellite)</div>
                             </details>
                         </div>
                         <!-- Q5 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-200 flex justify-between items-center">
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline border border-hairline flex justify-between items-center">
                             <span class="font-semibold">5. Satellite at 400km height. Find % decrease in weight of 1kg mass.</span>
                             <details class="cursor-pointer">
-                                <summary class="text-emerald-600 font-bold text-sm">Answer</summary>
-                                <div class="mt-2 p-2 bg-emerald-50 rounded text-sm">~11.6%</div>
+                                <summary class="text-primary font-bold text-sm">Answer</summary>
+                                <div class="mt-2 p-2 bg-surface-2 rounded text-sm">~11.6%</div>
                             </details>
                         </div>
                     </div>
@@ -2235,16 +2262,16 @@
 
             <!-- CHEATSHEET / SUMMARY -->
             <section id="summary" class="lg:col-span-3 space-y-8 mt-12">
-                <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-xl p-8 border-l-8 border-amber-500">
-                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 flex items-center">
-                        <span class="bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center mr-3 text-lg">⚡</span>
+                <div class="bg-gradient-to-r from-surface-2 to-surface-2 rounded-2xl border border-hairline p-8 border-l-8 border-hairline-strong">
+                    <h2 class="text-3xl font-extrabold text-ink mb-6 flex items-center">
+                        <span class="bg-primary text-ink w-10 h-10 rounded-full flex items-center justify-center mr-3 text-lg">⚡</span>
                         JEE Gravitation Cheatsheet
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Col 1 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg mb-3 text-amber-700 border-b pb-2">Force & Field</h4>
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline">
+                            <h4 class="font-bold text-lg mb-3 text-primary border-b pb-2">Force & Field</h4>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>F = GMm/r²</li>
                                 <li>E = GM/r² (Point mass)</li>
@@ -2254,8 +2281,8 @@
                             </ul>
                         </div>
                         <!-- Col 2 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg mb-3 text-amber-700 border-b pb-2">Potential & Energy</h4>
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline">
+                            <h4 class="font-bold text-lg mb-3 text-primary border-b pb-2">Potential & Energy</h4>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>V = -GM/r</li>
                                 <li>U = -GMm/r</li>
@@ -2265,8 +2292,8 @@
                             </ul>
                         </div>
                         <!-- Col 3 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg mb-3 text-amber-700 border-b pb-2">Velocities</h4>
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline">
+                            <h4 class="font-bold text-lg mb-3 text-primary border-b pb-2">Velocities</h4>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>v  √(GM/r) (Orbital)</li>
                                 <li>vₑ = √(2GM/R) (Escape)</li>
@@ -2275,8 +2302,8 @@
                             </ul>
                         </div>
                         <!-- Col 4 -->
-                        <div class="bg-white p-5 rounded-lg shadow-sm">
-                            <h4 class="font-bold text-lg mb-3 text-amber-700 border-b pb-2">Kepler & Variation</h4>
+                        <div class="bg-canvas p-5 rounded-lg border border-hairline">
+                            <h4 class="font-bold text-lg mb-3 text-primary border-b pb-2">Kepler & Variation</h4>
                             <ul class="space-y-2 text-sm font-mono">
                                 <li>T² ∝ a³ (Kepler 3rd)</li>
                                 <li>dA/dt = L/2m = const</li>
@@ -2290,88 +2317,108 @@
             </section>
 
             <!-- CONCLUSION -->
-            <section class="lg:col-span-3 mt-12 text-center py-10 bg-gradient-to-br from-primary to-secondary rounded-3xl text-white shadow-2xl">
+            <section class="lg:col-span-3 mt-12 text-center py-10 bg-gradient-to-br from-primary to-primary rounded-3xl text-ink border border-hairline">
                 <h2 class="text-4xl font-extrabold mb-4">🚀 Ready to Master Gravitation?</h2>
                 <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
                     You've just completed the most comprehensive Gravitation notes for JEE! <br>
                     Now practice 50+ questions from PYQs and move to the next chapter.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#practice" class="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+                    <a href="#practice" class="bg-canvas text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-1 transition border border-hairline">
                         Start Practice Problems
                     </a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics/shm" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition">
+                    <a href="https://jeeprepguide.netlify.app/jee/physics/shm" class="bg-transparent border-2 border-hairline text-ink px-8 py-4 rounded-xl font-bold text-lg hover:bg-canvas hover:text-primary transition">
                         Next Chapter: SHM →
                     </a>
                 </div>
             </section>
 
+    <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./kinematics.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Kinematics</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./kinetic-theory-of-gases.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Kinetic Theory Of Gases</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./laws-of-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Laws Of Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
+
         </div> <!-- End Main Content Grid -->
     </div> <!-- End Max Width Container -->
 
     <!-- FOOTER -->
-   <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+   <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -2379,12 +2426,12 @@
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -2393,32 +2440,32 @@
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- SCROLL TO TOP BUTTON -->
-    <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg hover:bg-secondary transition opacity-0 pointer-events-none flex items-center justify-center z-50" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-primary text-ink w-12 h-12 rounded-full border border-hairline hover:bg-secondary transition opacity-0 pointer-events-none flex items-center justify-center z-50" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         ↑
     </button>
 
@@ -2452,5 +2499,6 @@
             });
         });
     </script>
+    <script src="../assets/js/notes.js"></script>
 </body>
 </html>

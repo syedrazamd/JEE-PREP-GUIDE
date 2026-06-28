@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Ionic Equilibrium - Complete JEE Chemistry Notes with 250+ Examples">
     <meta property="og:description" content="Master pH calculations, acids & bases, buffers, hydrolysis, Ksp & indicators. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ionic Equilibrium - JEE Chemistry Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium">
     <meta name="twitter:title" content="Ionic Equilibrium - Complete JEE Chemistry Notes">
     <meta name="twitter:description" content="Master ionic equilibrium with 250+ solved examples. Complete notes on pH, acids-bases, buffers, hydrolysis & Ksp for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Ionic Equilibrium JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
         "@type": "Article",
         "headline": "Ionic Equilibrium - Complete JEE Chemistry Notes 2025-26",
         "description": "Comprehensive notes on Ionic Equilibrium covering pH, acids & bases, ionization constants, buffer solutions, salt hydrolysis, solubility product, common ion effect, and indicators with 250+ solved examples",
-        "image": "https://jeeprepguide.netlify.app/logo.png",
+        "image": "/logo-header.webp",
         "author": {
             "@type": "Organization",
             "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
             "name": "JEE Prep Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://jeeprepguide.netlify.app/logo.png"
+                "url": "/logo-header.webp"
             }
         },
         "datePublished": "2024-12-19",
@@ -429,62 +442,64 @@
         });
     </script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#059669',
-                        secondary: '#047857',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-chemistry.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-chemistry.css">
 </head>
 
-<body class="bg-gradient-to-br from-gray-50 to-emerald-50 text-gray-800">
+<body class="bg-canvas text-ink">
     
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #059669, #34d399); z-index: 9999; transition: width 0.1s;"></div>
     
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        <h1 class="text-3xl font-extrabold text-ink">
                             <a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a>
                         </h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
     
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -493,30 +508,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Chemistry</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Ionic Equilibrium</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Ionic Equilibrium</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -524,38 +539,38 @@
     </nav>
     
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Ionic Equilibrium</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Ionic Equilibrium</h2>
             <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Electrolytes
                 </a>
-                <a href="#chapter2" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Acid-Base
                 </a>
-                <a href="#chapter3" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Kw & pH
                 </a>
-                <a href="#chapter4" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Ka & Kb
                 </a>
-                <a href="#chapter5" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     pH Calc
                 </a>
-                <a href="#chapter6" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Buffers
                 </a>
-                <a href="#chapter7" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Hydrolysis
                 </a>
-                <a href="#chapter8" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Ksp
                 </a>
-                <a href="#chapter9" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter9" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Common Ion
                 </a>
-                <a href="#chapter10" class="bg-white px-3 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter10" class="bg-canvas px-3 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Indicators
                 </a>
             </div>
@@ -563,28 +578,28 @@
     </section>
     
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-emerald-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Ionic Equilibrium
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the complete Ionic Equilibrium with detailed notes on Acids & Bases, pH Calculations, Ka & Kb, Buffer Solutions, Salt Hydrolysis, Solubility Product Ksp, Common Ion Effect, and Titration Curves. Includes 250+ solved problems and JEE shortcuts.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 10 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 250+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All Important Formulas</span>
                     </div>
                 </div>
@@ -593,21 +608,21 @@
     </section>
     
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Ionic Equilibrium JEE Notes">
         <meta itemprop="description" content="Complete study notes for Ionic Equilibrium">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.9</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">428</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -617,15 +632,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">250+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">5 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">5 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -637,37 +652,49 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Electrolytes</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Acid-Base Theories</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Kw, pH & pOH</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Ka and Kb</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. pH Calculations</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Buffer Solutions</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Salt Hydrolysis</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Solubility Product</a></li>
-                        <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">9. Common Ion Effect</a></li>
-                        <li><a href="#chapter10" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">10. Indicators & Titrations</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Electrolytes</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Acid-Base Theories</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Kw, pH & pOH</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Ka and Kb</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. pH Calculations</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Buffer Solutions</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Salt Hydrolysis</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Solubility Product</a></li>
+                        <li><a href="#chapter9" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">9. Common Ion Effect</a></li>
+                        <li><a href="#chapter10" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">10. Indicators & Titrations</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
             
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./chemical-equilibrium.html" class="text-primary font-semibold hover:underline">Chemical Equilibrium &rarr;</a>
+                <a href="./electrochemistry.html" class="text-primary font-semibold hover:underline">Electrochemistry &rarr;</a>
+            </div>
+        </div>
+    </div>
+
                 
                 <!-- Chapter 1: Electrolytes and Ionization -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Electrolytes and Ionization</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Electrolytes and Ionization</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -678,10 +705,10 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Classification of Electrolytes</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Strong Electrolytes</h5>
                                 <p class="mb-3">Completely dissociate into ions in solution (α ≈ 1 or 100%)</p>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li><strong>Strong Acids:</strong> HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄</li>
@@ -689,14 +716,14 @@
                                         <li><strong>Most Salts:</strong> NaCl, KNO₃, Na₂SO₄, CuSO₄</li>
                                     </ul>
                                 </div>
-                                <div class="mt-3 bg-blue-50 p-3 rounded">
+                                <div class="mt-3 bg-surface-2 p-3 rounded">
                                     <p class="text-sm font-mono">HCl → H⁺ + Cl⁻ (100% dissociation)</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Weak Electrolytes</h5>
                                 <p class="mb-3">Partially dissociate into ions in solution (α << 1)</p>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li><strong>Weak Acids:</strong> CH₃COOH, H₂CO₃, HCN, HF, H₂S, H₃PO₄</li>
@@ -704,7 +731,7 @@
                                         <li><strong>Few Salts:</strong> HgCl₂, PbCl₂, CdBr₂</li>
                                     </ul>
                                 </div>
-                                <div class="mt-3 bg-blue-50 p-3 rounded">
+                                <div class="mt-3 bg-surface-2 p-3 rounded">
                                     <p class="text-sm font-mono">CH₃COOH ⇌ H⁺ + CH₃COO⁻ (partial)</p>
                                 </div>
                             </div>
@@ -712,9 +739,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Degree of Ionization (α)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
-                            <div class="math-display text-xl bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display text-xl bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[\alpha = \frac{\text{Number of moles ionized}}{\text{Total number of moles dissolved}}\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -726,20 +753,20 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Ostwald's Dilution Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">For Weak Electrolytes</h4>
                             <p class="mb-4">For weak acid HA ⇌ H⁺ + A⁻ with initial concentration C and degree of ionization α:</p>
                             
                             <div class="overflow-x-auto mb-4">
                                 <table class="w-full text-sm">
-                                    <thead class="bg-primary text-white">
+                                    <thead class="bg-primary text-ink">
                                         <tr>
                                             <th class="p-2">Species</th>
                                             <th class="p-2">Initial</th>
                                             <th class="p-2">At Equilibrium</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="bg-white">
+                                    <tbody class="bg-canvas">
                                         <tr>
                                             <td class="p-2 border">HA</td>
                                             <td class="p-2 border">C</td>
@@ -759,11 +786,11 @@
                                 </table>
                             </div>
                             
-                            <div class="math-display text-lg bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display text-lg bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[K_a = \frac{[H^+][A^-]}{[HA]} = \frac{C\alpha \cdot C\alpha}{C(1-\alpha)} = \frac{C\alpha^2}{1-\alpha}\]
                             </div>
                             
-                            <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">If α << 1 (weak electrolyte approximation):</p>
                                 <div class="math-display text-base">
                                     \[K_a \approx C\alpha^2\]
@@ -771,21 +798,21 @@
                                 <div class="math-display text-base">
                                     \[\alpha = \sqrt{\frac{K_a}{C}}\]
                                 </div>
-                                <p class="text-sm mt-2 text-gray-700">
+                                <p class="text-sm mt-2 text-ink-muted">
                                     <strong>Key insight:</strong> As dilution increases (C decreases), α increases. "Dilution increases ionization"
                                 </p>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate the degree of ionization of 0.1 M acetic acid solution. Ka = 1.8 × 10⁻⁵
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Using Ostwald's dilution law (assuming α << 1):</p>
                                 <div class="math-display">
                                     \[\alpha = \sqrt{\frac{K_a}{C}} = \sqrt{\frac{1.8 \times 10^{-5}}{0.1}}\]
@@ -793,10 +820,10 @@
                                 <div class="math-display">
                                     \[\alpha = \sqrt{1.8 \times 10^{-4}} = 1.34 \times 10^{-2}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\alpha = 0.0134 \text{ or } 1.34\%\]
                                 </div>
-                                <p class="mt-3 text-sm text-gray-700">
+                                <p class="mt-3 text-sm text-ink-muted">
                                     <strong>Verification:</strong> α = 0.0134 << 1, so our approximation is valid!
                                 </p>
                             </div>
@@ -809,7 +836,7 @@
                             <p class="text-lg">
                                 If α > 0.1 (10%), the approximation α << 1 fails. In such cases, solve the quadratic equation:
                             </p>
-                            <div class="math-display text-base bg-white p-4 rounded-lg mt-3">
+                            <div class="math-display text-base bg-canvas p-4 rounded-lg mt-3">
                                 \[K_a = \frac{C\alpha^2}{1-\alpha}\]
                             </div>
                             <p class="text-lg mt-3">
@@ -820,10 +847,10 @@
                 </section>
                 
                 <!-- Chapter 2: Theories of Acids and Bases -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Theories of Acids and Bases</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Theories of Acids and Bases</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -831,13 +858,13 @@
                             Understanding the different theories of acids and bases is crucial for JEE. Each theory has its own scope and applications. Let's study them in detail.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Arrhenius Theory (1887)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Arrhenius Theory (1887)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-purple-50 p-4 rounded-lg">
-                                    <h5 class="font-bold mb-3 text-danger">Arrhenius Acid</h5>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-3 text-primary">Arrhenius Acid</h5>
                                     <p class="mb-2">A substance that produces <strong>H⁺ (or H₃O⁺)</strong> ions in aqueous solution</p>
                                     <div class="space-y-1 text-sm font-mono mt-3">
                                         <p>HCl(aq) → H⁺(aq) + Cl⁻(aq)</p>
@@ -845,7 +872,7 @@
                                         <p>CH₃COOH(aq) ⇌ H⁺(aq) + CH₃COO⁻(aq)</p>
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3 text-primary">Arrhenius Base</h5>
                                     <p class="mb-2">A substance that produces <strong>OH⁻</strong> ions in aqueous solution</p>
                                     <div class="space-y-1 text-sm font-mono mt-3">
@@ -855,13 +882,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-4 bg-yellow-50 p-4 rounded-lg border border-accent">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg border border-accent">
                                 <p class="font-semibold mb-2">Neutralization Reaction:</p>
                                 <p class="font-mono">H⁺ + OH⁻ → H₂O</p>
-                                <p class="text-sm mt-2 text-gray-700">ΔH = -57.1 kJ/mol (for strong acid + strong base)</p>
+                                <p class="text-sm mt-2 text-ink-muted">ΔH = -57.1 kJ/mol (for strong acid + strong base)</p>
                             </div>
-                            <div class="mt-4 bg-red-50 p-4 rounded-lg border border-danger">
-                                <p class="font-semibold text-danger mb-2">Limitations:</p>
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg border border-danger">
+                                <p class="font-semibold text-primary mb-2">Limitations:</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Only applicable to aqueous solutions</li>
                                     <li>Cannot explain acidic nature of CO₂, SO₂, etc.</li>
@@ -871,63 +898,63 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Brønsted-Lowry Theory (1923)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Brønsted-Lowry Theory (1923)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-purple-50 p-4 rounded-lg">
-                                    <h5 class="font-bold mb-3 text-danger">Brønsted Acid</h5>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-3 text-primary">Brønsted Acid</h5>
                                     <p class="mb-2"><strong>Proton (H⁺) donor</strong></p>
                                     <p class="text-sm">Must have at least one hydrogen that can be donated</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3 text-primary">Brønsted Base</h5>
                                     <p class="mb-2"><strong>Proton (H⁺) acceptor</strong></p>
                                     <p class="text-sm">Must have a lone pair to accept proton</p>
                                 </div>
                             </div>
                             
-                            <div class="mt-6 bg-white p-4 rounded-lg">
+                            <div class="mt-6 bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Example Reactions:</p>
                                 <div class="space-y-3 text-sm">
-                                    <div class="bg-gray-50 p-3 rounded">
+                                    <div class="bg-surface-1 p-3 rounded">
                                         <p class="font-mono">HCl + H₂O → H₃O⁺ + Cl⁻</p>
-                                        <p class="text-gray-600 mt-1">HCl (acid - donates H⁺) + H₂O (base - accepts H⁺)</p>
+                                        <p class="text-ink-muted mt-1">HCl (acid - donates H⁺) + H₂O (base - accepts H⁺)</p>
                                     </div>
-                                    <div class="bg-gray-50 p-3 rounded">
+                                    <div class="bg-surface-1 p-3 rounded">
                                         <p class="font-mono">NH₃ + H₂O ⇌ NH₄⁺ + OH⁻</p>
-                                        <p class="text-gray-600 mt-1">NH₃ (base - accepts H⁺) + H₂O (acid - donates H⁺)</p>
+                                        <p class="text-ink-muted mt-1">NH₃ (base - accepts H⁺) + H₂O (acid - donates H⁺)</p>
                                     </div>
-                                    <div class="bg-gray-50 p-3 rounded">
+                                    <div class="bg-surface-1 p-3 rounded">
                                         <p class="font-mono">HCl + NH₃ → NH₄⁺ + Cl⁻</p>
-                                        <p class="text-gray-600 mt-1">Reaction in gas phase (no water needed!)</p>
+                                        <p class="text-ink-muted mt-1">Reaction in gas phase (no water needed!)</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Conjugate Acid-Base Pairs</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Conjugate Acid-Base Pairs</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Definition</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Definition</h5>
                             <p class="mb-4">A conjugate acid-base pair differs by <strong>one proton (H⁺)</strong>.</p>
                             
-                            <div class="bg-yellow-50 p-4 rounded-lg border border-accent mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg border border-accent mb-4">
                                 <p class="font-semibold mb-2">General Equation:</p>
                                 <p class="font-mono text-lg">Acid₁ + Base₂ ⇌ Conjugate Base₁ + Conjugate Acid₂</p>
                             </div>
                             
                             <div class="overflow-x-auto">
-                                <table class="w-full custom-table shadow-lg">
+                                <table class="w-full custom-table border border-hairline">
                                     <thead>
-                                        <tr class="text-white">
+                                        <tr class="text-ink">
                                             <th class="p-3 text-left">Acid</th>
                                             <th class="p-3 text-left">Conjugate Base</th>
                                             <th class="p-3 text-left">Relationship</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y bg-white">
+                                    <tbody class="divide-y bg-canvas">
                                         <tr>
                                             <td class="p-3">HCl</td>
                                             <td class="p-3">Cl⁻</td>
@@ -957,7 +984,7 @@
                                 </table>
                             </div>
                             
-                            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Important Relationships:</p>
                                 <div class="math-display text-lg">
                                     \[K_a \times K_b = K_w = 10^{-14} \text{ (at 25°C)}\]
@@ -965,22 +992,22 @@
                                 <div class="math-display text-lg">
                                     \[pK_a + pK_b = pK_w = 14\]
                                 </div>
-                                <p class="text-sm mt-2 text-gray-700">
+                                <p class="text-sm mt-2 text-ink-muted">
                                     <strong>Rule:</strong> Stronger the acid, weaker its conjugate base (and vice versa)
                                 </p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Lewis Theory (1923)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Lewis Theory (1923)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Definition (Most General)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition (Most General)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-purple-50 p-4 rounded-lg">
-                                    <h5 class="font-bold mb-3 text-danger">Lewis Acid</h5>
+                                <div class="bg-surface-2 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-3 text-primary">Lewis Acid</h5>
                                     <p class="mb-2"><strong>Electron pair acceptor</strong></p>
                                     <p class="mb-3 text-sm">Must have vacant orbital or ability to expand octet</p>
-                                    <div class="bg-white p-3 rounded">
+                                    <div class="bg-canvas p-3 rounded">
                                         <p class="font-semibold mb-2">Examples:</p>
                                         <ul class="list-disc list-inside text-sm space-y-1">
                                             <li>All cations: H⁺, Ag⁺, Cu²⁺, Fe³⁺, Zn²⁺</li>
@@ -990,11 +1017,11 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3 text-primary">Lewis Base</h5>
                                     <p class="mb-2"><strong>Electron pair donor</strong></p>
                                     <p class="mb-3 text-sm">Must have lone pair of electrons</p>
-                                    <div class="bg-white p-3 rounded">
+                                    <div class="bg-canvas p-3 rounded">
                                         <p class="font-semibold mb-2">Examples:</p>
                                         <ul class="list-disc list-inside text-sm space-y-1">
                                             <li>All anions: OH⁻, Cl⁻, F⁻, CN⁻, S²⁻</li>
@@ -1006,7 +1033,7 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-6 bg-white p-4 rounded-lg">
+                            <div class="mt-6 bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Lewis Acid-Base Reactions (Coordinate Bond Formation):</p>
                                 <div class="space-y-2 text-sm font-mono">
                                     <p>BF₃ + :NH₃ → F₃B←NH₃ (Adduct formation)</p>
@@ -1017,19 +1044,19 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.5 Comparison of Theories</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.5 Comparison of Theories</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Aspect</th>
                                         <th class="p-4 text-left">Arrhenius</th>
                                         <th class="p-4 text-left">Brønsted-Lowry</th>
                                         <th class="p-4 text-left">Lewis</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Acid Definition</td>
                                         <td class="p-4">H⁺ producer</td>
@@ -1056,9 +1083,9 @@
                                     </tr>
                                     <tr>
                                         <td class="p-4 font-semibold">BF₃</td>
-                                        <td class="p-4 text-danger">Not acid</td>
-                                        <td class="p-4 text-danger">Not acid</td>
-                                        <td class="p-4 text-success">Acid</td>
+                                        <td class="p-4 text-primary">Not acid</td>
+                                        <td class="p-4 text-primary">Not acid</td>
+                                        <td class="p-4 text-primary">Acid</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1071,7 +1098,7 @@
                             <p class="text-lg mb-3">
                                 Substances that can act as both acid and base are called <strong>amphoteric</strong> (Lewis) or <strong>amphiprotic</strong> (Brønsted).
                             </p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Examples:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>H₂O:</strong> Can donate H⁺ (acid) or accept H⁺ (base)</li>
@@ -1086,10 +1113,10 @@
                 </section>
                 
                 <!-- Chapter 3: Ionization of Water, pH and pOH -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Ionization of Water, pH and pOH</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Ionization of Water, pH and pOH</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1097,17 +1124,17 @@
                             The self-ionization of water and the pH scale are fundamental concepts in ionic equilibrium. Understanding these concepts is essential for all pH calculations.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.1 Self-Ionization of Water</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Self-Ionization of Water</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Auto-protolysis of Water</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Auto-protolysis of Water</h4>
                             <p class="mb-4">Water undergoes self-ionization to a very small extent:</p>
-                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                            <div class="bg-surface-2 p-4 rounded-lg text-center">
                                 <p class="font-mono text-lg mb-2">H₂O + H₂O ⇌ H₃O⁺ + OH⁻</p>
                                 <p class="font-mono text-lg">or simply: H₂O ⇌ H⁺ + OH⁻</p>
                             </div>
                             
-                            <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 <p class="font-semibold mb-2">Ionic Product of Water (Kw):</p>
                                 <div class="math-display text-xl">
                                     \[K_w = [H^+][OH^-] = 10^{-14} \text{ at 25°C}\]
@@ -1117,14 +1144,14 @@
                             <div class="mt-4 space-y-2">
                                 <p><strong>In pure water at 25°C:</strong></p>
                                 <p>[H⁺] = [OH⁻] = 10⁻⁷ M (neutral)</p>
-                                <p class="mt-3 text-sm text-gray-700">
+                                <p class="mt-3 text-sm text-ink-muted">
                                     <strong>Temperature dependence:</strong> Kw increases with temperature because ionization is endothermic (ΔH > 0)
                                 </p>
                             </div>
                             
                             <div class="mt-4 overflow-x-auto">
                                 <table class="w-full text-sm">
-                                    <thead class="bg-success text-white">
+                                    <thead class="bg-success text-ink">
                                         <tr>
                                             <th class="p-2">Temperature (°C)</th>
                                             <th class="p-2">Kw</th>
@@ -1132,7 +1159,7 @@
                                             <th class="p-2">pH of pure water</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="bg-white divide-y">
+                                    <tbody class="bg-canvas divide-y">
                                         <tr>
                                             <td class="p-2 border">0</td>
                                             <td class="p-2 border">0.114 × 10⁻¹⁴</td>
@@ -1163,7 +1190,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Note for JEE
                             </h4>
                             <p class="text-lg">
@@ -1171,12 +1198,12 @@
                             </p>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.2 pH and pOH Scale</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 pH and pOH Scale</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Definitions</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definitions</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3">pH (Potential of Hydrogen)</h5>
                                     <div class="math-display text-lg">
                                         \[pH = -\log[H^+] = -\log[H_3O^+]\]
@@ -1186,7 +1213,7 @@
                                         \[[H^+] = 10^{-pH}\]
                                     </div>
                                 </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3">pOH</h5>
                                     <div class="math-display text-lg">
                                         \[pOH = -\log[OH^-]\]
@@ -1198,55 +1225,55 @@
                                 </div>
                             </div>
                             
-                            <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 <p class="font-semibold mb-2">Fundamental Relationships at 25°C:</p>
                                 <div class="math-display text-xl">
                                     \[pH + pOH = pK_w = 14\]
                                 </div>
-                                <p class="text-sm mt-2 text-center text-gray-700">where pKw = -log Kw</p>
+                                <p class="text-sm mt-2 text-center text-ink-muted">where pKw = -log Kw</p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">3.3 pH Scale Interpretation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 pH Scale Interpretation</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">pH Range</th>
                                         <th class="p-4 text-left">Nature</th>
                                         <th class="p-4 text-left">[H⁺] Range</th>
                                         <th class="p-4 text-left">Examples</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
-                                    <tr class="bg-red-50">
+                                <tbody class="divide-y bg-canvas">
+                                    <tr class="bg-surface-2">
                                         <td class="p-4 font-semibold">0 - 3</td>
-                                        <td class="p-4 text-danger font-bold">Strongly Acidic</td>
+                                        <td class="p-4 text-primary font-bold">Strongly Acidic</td>
                                         <td class="p-4">1 - 10⁻³ M</td>
                                         <td class="p-4">Gastric juice (1.5), Lemon (2.4)</td>
                                     </tr>
-                                    <tr class="bg-orange-50">
+                                    <tr class="bg-surface-2">
                                         <td class="p-4 font-semibold">3 - 6</td>
-                                        <td class="p-4 text-accent font-bold">Weakly Acidic</td>
+                                        <td class="p-4 text-primary font-bold">Weakly Acidic</td>
                                         <td class="p-4">10⁻³ - 10⁻⁶ M</td>
                                         <td class="p-4">Vinegar (3), Coffee (5), Milk (6.5)</td>
                                     </tr>
-                                    <tr class="bg-green-50">
+                                    <tr class="bg-surface-2">
                                         <td class="p-4 font-semibold">7</td>
-                                        <td class="p-4 text-success font-bold">Neutral</td>
+                                        <td class="p-4 text-primary font-bold">Neutral</td>
                                         <td class="p-4">10⁻⁷ M</td>
                                         <td class="p-4">Pure water at 25°C</td>
                                     </tr>
-                                    <tr class="bg-blue-50">
+                                    <tr class="bg-surface-2">
                                         <td class="p-4 font-semibold">8 - 11</td>
                                         <td class="p-4 text-primary font-bold">Weakly Basic</td>
                                         <td class="p-4">10⁻⁸ - 10⁻¹¹ M</td>
                                         <td class="p-4">Blood (7.4), Sea water (8.5), Soap (9-10)</td>
                                     </tr>
-                                    <tr class="bg-purple-50">
+                                    <tr class="bg-surface-2">
                                         <td class="p-4 font-semibold">11 - 14</td>
-                                        <td class="p-4 text-secondary font-bold">Strongly Basic</td>
+                                        <td class="p-4 text-primary font-bold">Strongly Basic</td>
                                         <td class="p-4">10⁻¹¹ - 10⁻¹⁴ M</td>
                                         <td class="p-4">Ammonia (11), NaOH 0.1M (13)</td>
                                     </tr>
@@ -1259,12 +1286,12 @@
                                 <span class="text-2xl mr-2">💡</span> Quick pH Calculation Tricks
                             </h4>
                             <div class="space-y-3">
-                                <div class="bg-white p-3 rounded-lg">
+                                <div class="bg-canvas p-3 rounded-lg">
                                     <p class="font-semibold">If [H⁺] = a × 10⁻ⁿ M:</p>
                                     <p class="font-mono">pH = n - log a</p>
-                                    <p class="text-sm text-gray-600 mt-1">Example: [H⁺] = 2 × 10⁻⁵ → pH = 5 - log 2 = 5 - 0.3 = 4.7</p>
+                                    <p class="text-sm text-ink-muted mt-1">Example: [H⁺] = 2 × 10⁻⁵ → pH = 5 - log 2 = 5 - 0.3 = 4.7</p>
                                 </div>
-                                <div class="bg-white p-3 rounded-lg">
+                                <div class="bg-canvas p-3 rounded-lg">
                                     <p class="font-semibold">Useful log values to memorize:</p>
                                     <p class="font-mono">log 2 = 0.3, log 3 = 0.48, log 5 = 0.7, log 7 = 0.85</p>
                                 </div>
@@ -1272,14 +1299,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate [H⁺], [OH⁻], and pOH for a solution with pH = 4.5
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>Step 1:</strong> Find [H⁺]</p>
                                 <div class="math-display">
                                     \[[H^+] = 10^{-pH} = 10^{-4.5} = 10^{-5} \times 10^{0.5}\]
@@ -1298,7 +1325,7 @@
                                     \[[OH^-] = 10^{-pOH} = 10^{-9.5} = 3.16 \times 10^{-10} M\]
                                 </div>
                                 
-                                <div class="bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     <p class="font-bold">Answers:</p>
                                     <p>[H⁺] = 3.16 × 10⁻⁵ M</p>
                                     <p>[OH⁻] = 3.16 × 10⁻¹⁰ M</p>
@@ -1313,10 +1340,10 @@
                 <!-- Due to the extreme length, I'll provide a condensed but complete structure -->
                 
                 <!-- Chapter 4: Ionization Constants Ka and Kb -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Ionization Constants Ka and Kb</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Ionization Constants Ka and Kb</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1324,12 +1351,12 @@
                             The ionization constants Ka and Kb quantify the strength of weak acids and bases respectively. These constants are fundamental for pH calculations.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Acid Dissociation Constant (Ka)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Acid Dissociation Constant (Ka)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">For Weak Acid HA</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">For Weak Acid HA</h4>
                             <p class="mb-2 font-mono text-lg">HA + H₂O ⇌ H₃O⁺ + A⁻</p>
-                            <div class="math-display text-xl bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display text-xl bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[K_a = \frac{[H_3O^+][A^-]}{[HA]} = \frac{[H^+][A^-]}{[HA]}\]
                             </div>
                             
@@ -1340,7 +1367,7 @@
                             
                             <div class="mt-4 overflow-x-auto">
                                 <table class="w-full text-sm">
-                                    <thead class="bg-danger text-white">
+                                    <thead class="bg-danger text-ink">
                                         <tr>
                                             <th class="p-2">Acid</th>
                                             <th class="p-2">Ka</th>
@@ -1348,7 +1375,7 @@
                                             <th class="p-2">Strength</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="bg-white divide-y">
+                                    <tbody class="bg-canvas divide-y">
                                         <tr>
                                             <td class="p-2 border">HF</td>
                                             <td class="p-2 border">6.6 × 10⁻⁴</td>
@@ -1384,12 +1411,12 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 Base Dissociation Constant (Kb)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Base Dissociation Constant (Kb)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">For Weak Base B</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">For Weak Base B</h4>
                             <p class="mb-2 font-mono text-lg">B + H₂O ⇌ BH⁺ + OH⁻</p>
-                            <div class="math-display text-xl bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display text-xl bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[K_b = \frac{[BH^+][OH^-]}{[B]}\]
                             </div>
                             
@@ -1399,18 +1426,18 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Relationship: Ka × Kb = Kw</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Relationship: Ka × Kb = Kw</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-danger">For Conjugate Acid-Base Pair</h5>
-                            <div class="math-display text-xl bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">For Conjugate Acid-Base Pair</h5>
+                            <div class="math-display text-xl bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[K_a \times K_b = K_w = 10^{-14}\]
                             </div>
                             <div class="math-display text-lg">
                                 \[pK_a + pK_b = pK_w = 14\]
                             </div>
                             
-                            <div class="mt-4 bg-red-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Example:</p>
                                 <p>For CH₃COOH/CH₃COO⁻ pair:</p>
                                 <p>Ka(CH₃COOH) = 1.8 × 10⁻⁵, so pKa = 4.74</p>
@@ -1419,27 +1446,27 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.4 Polyprotic Acids</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.4 Polyprotic Acids</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-danger">Acids with Multiple Ionizable Protons</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Acids with Multiple Ionizable Protons</h5>
                             
-                            <div class="bg-white p-4 rounded-lg mb-4">
+                            <div class="bg-canvas p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-2">Example: H₃PO₄ (Phosphoric Acid)</p>
                                 <div class="space-y-2 text-sm">
-                                    <div class="bg-red-50 p-2 rounded">
+                                    <div class="bg-surface-2 p-2 rounded">
                                         <p>H₃PO₄ ⇌ H⁺ + H₂PO₄⁻; Ka₁ = 7.5 × 10⁻³</p>
                                     </div>
-                                    <div class="bg-orange-50 p-2 rounded">
+                                    <div class="bg-surface-2 p-2 rounded">
                                         <p>H₂PO₄⁻ ⇌ H⁺ + HPO₄²⁻; Ka₂ = 6.2 × 10⁻⁸</p>
                                     </div>
-                                    <div class="bg-yellow-50 p-2 rounded">
+                                    <div class="bg-surface-2 p-2 rounded">
                                         <p>HPO₄²⁻ ⇌ H⁺ + PO₄³⁻; Ka₃ = 4.2 × 10⁻¹³</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Key Points:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>Ka₁ > Ka₂ > Ka₃ (always decreasing)</li>
@@ -1451,22 +1478,22 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate the Kb of acetate ion (CH₃COO⁻) if Ka of acetic acid is 1.8 × 10⁻⁵.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Using the relationship Ka × Kb = Kw:</p>
                                 <div class="math-display">
                                     \[K_b = \frac{K_w}{K_a} = \frac{10^{-14}}{1.8 \times 10^{-5}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[K_b = 5.56 \times 10^{-10}\]
                                 </div>
-                                <p class="mt-3 text-success font-bold">
+                                <p class="mt-3 text-primary font-bold">
                                     This shows acetate ion is a weak base (Kb << 1)
                                 </p>
                             </div>
@@ -1477,10 +1504,10 @@
                 <!-- I'll continue with the remaining chapters in a more condensed format -->
                 
                 <!-- Chapter 5: pH Calculations -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">pH Calculations - All Types</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">pH Calculations - All Types</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1491,16 +1518,16 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Master Formula Chart</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg text-sm">
+                            <table class="w-full custom-table border border-hairline text-sm">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-3 text-left">Solution Type</th>
                                         <th class="p-3 text-left">[H⁺] Formula</th>
                                         <th class="p-3 text-left">pH Formula</th>
                                         <th class="p-3 text-left">Example</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-3 font-semibold">Strong Acid (C M)</td>
                                         <td class="p-3 font-mono">[H⁺] = C</td>
@@ -1560,13 +1587,13 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Very Dilute Strong Acid (C < 10⁻⁶ M)
                             </h4>
                             <p class="text-lg mb-3">
                                 For very dilute strong acids, consider water's contribution to [H⁺]:
                             </p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <div class="math-display">
                                     \[[H^+]_{total} = \frac{C + \sqrt{C^2 + 4K_w}}{2}\]
                                 </div>
@@ -1577,7 +1604,7 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Main 2024 Type)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1587,7 +1614,7 @@
                                 (c) 0.1 M NH₃ (Kb = 1.8 × 10⁻⁵)<br>
                                 (d) 0.01 M Ca(OH)₂
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>(a) 0.1 M HNO₃ (Strong acid):</strong></p>
                                 <p>[H⁺] = 0.1 M, <strong>pH = 1</strong></p>
                                 
@@ -1612,10 +1639,10 @@
                 </section>
                 
                 <!-- Chapter 6: Buffer Solutions -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Buffer Solutions</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Buffer Solutions</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1623,13 +1650,13 @@
                             Buffer solutions resist change in pH upon addition of small amounts of acid or base. They're crucial for biological systems and laboratory work.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Types of Buffers</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Types of Buffers</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Acidic Buffer (pH < 7)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Acidic Buffer (pH < 7)</h5>
                                 <p class="mb-3">Weak acid + Its salt with strong base</p>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>CH₃COOH + CH₃COONa (Acetate buffer)</li>
@@ -1638,10 +1665,10 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Basic Buffer (pH > 7)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Basic Buffer (pH > 7)</h5>
                                 <p class="mb-3">Weak base + Its salt with strong acid</p>
-                                <div class="bg-white p-3 rounded">
+                                <div class="bg-canvas p-3 rounded">
                                     <p class="font-semibold mb-2">Examples:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>NH₃ + NH₄Cl (Ammonia buffer)</li>
@@ -1651,21 +1678,21 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Henderson-Hasselbalch Equation</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Henderson-Hasselbalch Equation</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">The Master Buffer Equations</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">The Master Buffer Equations</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3">Acidic Buffer:</h5>
-                                    <div class="math-display text-lg bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="math-display text-lg bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         \[pH = pK_a + \log\frac{[Salt]}{[Acid]}\]
                                     </div>
                                     <p class="text-sm mt-2">or: pH = pKa + log([A⁻]/[HA])</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3">Basic Buffer:</h5>
-                                    <div class="math-display text-lg bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                    <div class="math-display text-lg bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                         \[pOH = pK_b + \log\frac{[Salt]}{[Base]}\]
                                     </div>
                                     <p class="text-sm mt-2">Then: pH = 14 - pOH</p>
@@ -1673,12 +1700,12 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Buffer Capacity and Range</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Buffer Capacity and Range</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <h5 class="font-bold text-lg mb-3 text-secondary">Buffer Capacity</h5>
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Buffer Capacity</h5>
                                     <ul class="list-disc list-inside space-y-2 text-sm">
                                         <li>Maximum when [Salt] = [Acid] (ratio = 1)</li>
                                         <li>At this point: <strong>pH = pKa</strong></li>
@@ -1687,8 +1714,8 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h5 class="font-bold text-lg mb-3 text-secondary">Buffer Range</h5>
-                                    <div class="math-display text-lg bg-yellow-50 p-3 rounded-lg border border-accent">
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Buffer Range</h5>
+                                    <div class="math-display text-lg bg-surface-2 p-3 rounded-lg border border-accent">
                                         \[\text{Effective Range} = pK_a \pm 1\]
                                     </div>
                                     <p class="text-sm mt-2">Buffer works best when:</p>
@@ -1698,20 +1725,20 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate pH of buffer containing 0.3 M CH₃COOH and 0.6 M CH₃COONa. (pKa = 4.74)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <div class="math-display">
                                     \[pH = pK_a + \log\frac{[Salt]}{[Acid]} = 4.74 + \log\frac{0.6}{0.3}\]
                                 </div>
                                 <div class="math-display">
                                     \[pH = 4.74 + \log 2 = 4.74 + 0.301\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[pH = 5.04\]
                                 </div>
                             </div>
@@ -1720,10 +1747,10 @@
                 </section>
                 
                 <!-- Chapter 7: Salt Hydrolysis -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Salt Hydrolysis</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Salt Hydrolysis</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1731,12 +1758,12 @@
                             Salt hydrolysis is the reaction of salt ions with water to produce acidic or basic solutions. This is a high-scoring topic with direct formula-based questions.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.1 Complete Hydrolysis Summary</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Complete Hydrolysis Summary</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg text-sm">
+                            <table class="w-full custom-table border border-hairline text-sm">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-3 text-left">Salt Type</th>
                                         <th class="p-3 text-left">Example</th>
                                         <th class="p-3 text-left">Hydrolysis</th>
@@ -1744,47 +1771,47 @@
                                         <th class="p-3 text-left">Nature</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
-                                    <tr class="bg-gray-50">
+                                <tbody class="divide-y bg-canvas">
+                                    <tr class="bg-surface-1">
                                         <td class="p-3 font-semibold">Strong Acid + Strong Base</td>
                                         <td class="p-3">NaCl, KNO₃</td>
                                         <td class="p-3">No hydrolysis</td>
                                         <td class="p-3 font-mono">pH = 7</td>
-                                        <td class="p-3 text-success font-bold">Neutral</td>
+                                        <td class="p-3 text-primary font-bold">Neutral</td>
                                     </tr>
-                                    <tr class="bg-blue-50">
+                                    <tr class="bg-surface-2">
                                         <td class="p-3 font-semibold">Weak Acid + Strong Base</td>
                                         <td class="p-3">CH₃COONa, Na₂CO₃</td>
                                         <td class="p-3">Anion hydrolysis</td>
                                         <td class="p-3 font-mono">pH = 7 + ½(pKa + log C)</td>
                                         <td class="p-3 text-primary font-bold">Basic</td>
                                     </tr>
-                                    <tr class="bg-red-50">
+                                    <tr class="bg-surface-2">
                                         <td class="p-3 font-semibold">Strong Acid + Weak Base</td>
                                         <td class="p-3">NH₄Cl, FeCl₃</td>
                                         <td class="p-3">Cation hydrolysis</td>
                                         <td class="p-3 font-mono">pH = 7 - ½(pKb + log C)</td>
-                                        <td class="p-3 text-danger font-bold">Acidic</td>
+                                        <td class="p-3 text-primary font-bold">Acidic</td>
                                     </tr>
-                                    <tr class="bg-purple-50">
+                                    <tr class="bg-surface-2">
                                         <td class="p-3 font-semibold">Weak Acid + Weak Base</td>
                                         <td class="p-3">CH₃COONH₄</td>
                                         <td class="p-3">Both hydrolyze</td>
                                         <td class="p-3 font-mono">pH = 7 + ½(pKa - pKb)</td>
-                                        <td class="p-3 text-secondary font-bold">Depends on Ka vs Kb</td>
+                                        <td class="p-3 text-primary font-bold">Depends on Ka vs Kb</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Special Note: WA + WB Salt
                             </h4>
                             <p class="text-lg">
                                 For salt of weak acid + weak base, pH is <strong>independent of concentration!</strong>
                             </p>
-                            <div class="mt-3 bg-white p-3 rounded-lg">
+                            <div class="mt-3 bg-canvas p-3 rounded-lg">
                                 <p>If Ka > Kb → pH < 7 (Acidic)</p>
                                 <p>If Ka < Kb → pH > 7 (Basic)</p>
                                 <p>If Ka = Kb → pH = 7 (Neutral)</p>
@@ -1792,13 +1819,13 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate pH of 0.1 M NH₄Cl solution. (Kb of NH₃ = 1.8 × 10⁻⁵)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">This is salt of SA (HCl) + WB (NH₃), so solution is acidic.</p>
                                 <p class="mb-3">pKb = -log(1.8 × 10⁻⁵) = 4.74</p>
                                 <div class="math-display">
@@ -1810,7 +1837,7 @@
                                 <div class="math-display">
                                     \[pH = 7 - \frac{1}{2}(4.74 - 1) = 7 - 1.87\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[pH = 5.13\]
                                 </div>
                             </div>
@@ -1819,34 +1846,34 @@
                 </section>
                 
                 <!-- Chapter 8: Solubility Product -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Solubility Product (Ksp)</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Solubility Product (Ksp)</h2>
                     </div>
                     
                     <div class="prose max-w-none">
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">8.1 Ksp and Solubility Relationship</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Ksp and Solubility Relationship</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">For Salt A<sub>x</sub>B<sub>y</sub></h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">For Salt A<sub>x</sub>B<sub>y</sub></h4>
                             <p class="mb-2 font-mono">A<sub>x</sub>B<sub>y</sub>(s) ⇌ xA<sup>y+</sup>(aq) + yB<sup>x-</sup>(aq)</p>
-                            <div class="math-display text-xl bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="math-display text-xl bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 \[K_{sp} = [A^{y+}]^x[B^{x-}]^y = x^x \cdot y^y \cdot S^{(x+y)}\]
                             </div>
                         </div>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg text-sm">
+                            <table class="w-full custom-table border border-hairline text-sm">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-3">Salt Type</th>
                                         <th class="p-3">Example</th>
                                         <th class="p-3">Ksp in terms of S</th>
                                         <th class="p-3">S in terms of Ksp</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-3 font-semibold">AB</td>
                                         <td class="p-3">AgCl, BaSO₄</td>
@@ -1881,20 +1908,20 @@
                             </table>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">8.2 Ionic Product vs Ksp</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Ionic Product vs Ksp</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">Precipitation Criteria</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Precipitation Criteria</h5>
                             <div class="space-y-3">
-                                <div class="bg-green-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-semibold">IP < Ksp:</p>
                                     <p>Unsaturated solution → No precipitation</p>
                                 </div>
-                                <div class="bg-yellow-50 p-3 rounded-lg border border-accent">
+                                <div class="bg-surface-2 p-3 rounded-lg border border-accent">
                                     <p class="font-semibold">IP = Ksp:</p>
                                     <p>Saturated solution → At equilibrium</p>
                                 </div>
-                                <div class="bg-red-50 p-3 rounded-lg">
+                                <div class="bg-surface-2 p-3 rounded-lg">
                                     <p class="font-semibold">IP > Ksp:</p>
                                     <p>Supersaturated → Precipitation occurs</p>
                                 </div>
@@ -1904,20 +1931,20 @@
                 </section>
                 
                 <!-- Chapter 9: Common Ion Effect -->
-                <section id="chapter9" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter9" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">9</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Common Ion Effect</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">9</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Common Ion Effect</h2>
                     </div>
                     
                     <div class="prose max-w-none">
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Definition</h4>
-                            <p class="text-lg mb-4 bg-red-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
+                            <p class="text-lg mb-4 bg-surface-2 p-4 rounded-lg">
                                 The suppression of ionization of a weak electrolyte by adding a strong electrolyte containing a common ion.
                             </p>
                             
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Effects:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Decreases degree of ionization (α) of weak electrolyte</li>
@@ -1928,22 +1955,22 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Calculate solubility of AgCl in 0.1 M NaCl solution. (Ksp = 1.8 × 10⁻¹⁰)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3">Let solubility = S mol/L</p>
                                 <p>[Ag⁺] = S, [Cl⁻] = S + 0.1 ≈ 0.1 M (since S << 0.1)</p>
                                 <div class="math-display">
                                     \[K_{sp} = [Ag^+][Cl^-] = S \times 0.1 = 1.8 \times 10^{-10}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[S = 1.8 \times 10^{-9} \text{ mol/L}\]
                                 </div>
-                                <p class="mt-3 text-sm text-gray-700">
+                                <p class="mt-3 text-sm text-ink-muted">
                                     Compare: Solubility in pure water = 1.34 × 10⁻⁵ M<br>
                                     <strong>Solubility decreased ~7500 times due to common ion!</strong>
                                 </p>
@@ -1953,26 +1980,26 @@
                 </section>
                 
                 <!-- Chapter 10: Indicators and Titrations -->
-                <section id="chapter10" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter10" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">10</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Indicators and Titrations</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">10</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Indicators and Titrations</h2>
                     </div>
                     
                     <div class="prose max-w-none">
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.1 Acid-Base Indicators</h3>
                         
-                       <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                       <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Indicator Theory</h4>
                             <p class="mb-4">Indicators are weak acids/bases whose ionized and unionized forms have different colors.</p>
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-mono mb-2">HIn (color 1) ⇌ H⁺ + In⁻ (color 2)</p>
                                 <div class="math-display text-base">
                                     \[K_{In} = \frac{[H^+][In^-]}{[HIn]}\]
                                 </div>
                             </div>
                             
-                            <div class="mt-4 bg-yellow-50 p-4 rounded-lg border border-accent">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg border border-accent">
                                 <p class="font-semibold mb-2">Color Change Range:</p>
                                 <div class="math-display text-base">
                                     \[\text{pH range} = pK_{In} \pm 1\]
@@ -1988,9 +2015,9 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.2 Common Indicators</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg text-sm">
+                            <table class="w-full custom-table border border-hairline text-sm">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-3 text-left">Indicator</th>
                                         <th class="p-3 text-left">pH Range</th>
                                         <th class="p-3 text-left">Acid Color</th>
@@ -1998,47 +2025,47 @@
                                         <th class="p-3 text-left">pKIn</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-3 font-semibold">Methyl Orange</td>
                                         <td class="p-3">3.1 - 4.4</td>
-                                        <td class="p-3 text-red-500 font-bold">Red</td>
-                                        <td class="p-3 text-yellow-500 font-bold">Yellow</td>
+                                        <td class="p-3 text-primary font-bold">Red</td>
+                                        <td class="p-3 text-primary font-bold">Yellow</td>
                                         <td class="p-3">3.7</td>
                                     </tr>
                                     <tr>
                                         <td class="p-3 font-semibold">Methyl Red</td>
                                         <td class="p-3">4.4 - 6.2</td>
-                                        <td class="p-3 text-red-500 font-bold">Red</td>
-                                        <td class="p-3 text-yellow-500 font-bold">Yellow</td>
+                                        <td class="p-3 text-primary font-bold">Red</td>
+                                        <td class="p-3 text-primary font-bold">Yellow</td>
                                         <td class="p-3">5.1</td>
                                     </tr>
                                     <tr>
                                         <td class="p-3 font-semibold">Litmus</td>
                                         <td class="p-3">5.0 - 8.0</td>
-                                        <td class="p-3 text-red-500 font-bold">Red</td>
-                                        <td class="p-3 text-blue-500 font-bold">Blue</td>
+                                        <td class="p-3 text-primary font-bold">Red</td>
+                                        <td class="p-3 text-primary font-bold">Blue</td>
                                         <td class="p-3">6.5</td>
                                     </tr>
                                     <tr>
                                         <td class="p-3 font-semibold">Bromothymol Blue</td>
                                         <td class="p-3">6.0 - 7.6</td>
-                                        <td class="p-3 text-yellow-500 font-bold">Yellow</td>
-                                        <td class="p-3 text-blue-500 font-bold">Blue</td>
+                                        <td class="p-3 text-primary font-bold">Yellow</td>
+                                        <td class="p-3 text-primary font-bold">Blue</td>
                                         <td class="p-3">7.0</td>
                                     </tr>
                                     <tr>
                                         <td class="p-3 font-semibold">Phenolphthalein</td>
                                         <td class="p-3">8.0 - 9.8</td>
                                         <td class="p-3 font-bold">Colorless</td>
-                                        <td class="p-3 text-pink-500 font-bold">Pink</td>
+                                        <td class="p-3 text-primary font-bold">Pink</td>
                                         <td class="p-3">9.4</td>
                                     </tr>
                                     <tr>
                                         <td class="p-3 font-semibold">Thymolphthalein</td>
                                         <td class="p-3">9.3 - 10.5</td>
                                         <td class="p-3 font-bold">Colorless</td>
-                                        <td class="p-3 text-blue-500 font-bold">Blue</td>
+                                        <td class="p-3 text-primary font-bold">Blue</td>
                                         <td class="p-3">10.0</td>
                                     </tr>
                                 </tbody>
@@ -2048,7 +2075,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.3 Types of Acid-Base Titrations</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Strong Acid + Strong Base</h5>
                                 <p class="mb-2">Example: HCl + NaOH</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
@@ -2056,11 +2083,11 @@
                                     <li>Sharp pH change (3 to 11)</li>
                                     <li>Indicator: Methyl orange, Phenolphthalein, or any</li>
                                 </ul>
-                                <div class="mt-3 bg-blue-50 p-2 rounded text-center">
+                                <div class="mt-3 bg-surface-2 p-2 rounded text-center">
                                     <p class="text-sm font-semibold">pH jump: ~3 to ~11</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Weak Acid + Strong Base</h5>
                                 <p class="mb-2">Example: CH₃COOH + NaOH</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
@@ -2068,11 +2095,11 @@
                                     <li>Salt undergoes hydrolysis</li>
                                     <li>Indicator: <strong>Phenolphthalein</strong> (pH 8-10)</li>
                                 </ul>
-                                <div class="mt-3 bg-blue-50 p-2 rounded text-center">
+                                <div class="mt-3 bg-surface-2 p-2 rounded text-center">
                                     <p class="text-sm font-semibold">pH at eq. point: ~8.7</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Strong Acid + Weak Base</h5>
                                 <p class="mb-2">Example: HCl + NH₃</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
@@ -2080,11 +2107,11 @@
                                     <li>Salt (NH₄Cl) undergoes hydrolysis</li>
                                     <li>Indicator: <strong>Methyl orange</strong> (pH 3-4)</li>
                                 </ul>
-                                <div class="mt-3 bg-blue-50 p-2 rounded text-center">
+                                <div class="mt-3 bg-surface-2 p-2 rounded text-center">
                                     <p class="text-sm font-semibold">pH at eq. point: ~5.3</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Weak Acid + Weak Base</h5>
                                 <p class="mb-2">Example: CH₃COOH + NH₃</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
@@ -2092,19 +2119,19 @@
                                     <li>Very gradual pH change</li>
                                     <li><strong>No suitable indicator!</strong></li>
                                 </ul>
-                                <div class="mt-3 bg-red-50 p-2 rounded text-center">
-                                    <p class="text-sm font-semibold text-danger">Not titrated with indicators</p>
+                                <div class="mt-3 bg-surface-2 p-2 rounded text-center">
+                                    <p class="text-sm font-semibold text-primary">Not titrated with indicators</p>
                                 </div>
                             </div>
                         </div>
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.4 Titration Curve Analysis</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Key Points on Titration Curve</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3">Weak Acid Titration with Strong Base:</h5>
                                     <ul class="list-disc list-inside space-y-2 text-sm">
                                         <li><strong>Initial point:</strong> pH from weak acid formula</li>
@@ -2114,15 +2141,15 @@
                                         <li><strong>Beyond equivalence:</strong> pH from excess base</li>
                                     </ul>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <h5 class="font-bold mb-3">Important Formulas for Titration:</h5>
                                     <div class="space-y-3 text-sm">
-                                        <div class="bg-white p-2 rounded">
+                                        <div class="bg-canvas p-2 rounded">
                                             <p class="font-semibold">At half-equivalence:</p>
                                             <p class="font-mono">pH = pKa (for weak acid)</p>
                                             <p class="font-mono">pOH = pKb (for weak base)</p>
                                         </div>
-                                        <div class="bg-white p-2 rounded">
+                                        <div class="bg-canvas p-2 rounded">
                                             <p class="font-semibold">At equivalence point:</p>
                                             <p class="font-mono">meq of acid = meq of base</p>
                                             <p class="font-mono">N₁V₁ = N₂V₂</p>
@@ -2133,13 +2160,13 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Indicator Selection Rule
                             </h4>
                             <p class="text-lg mb-3">
                                 Choose indicator whose <strong>pKIn is close to pH at equivalence point</strong>.
                             </p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>SA + SB: Any indicator (pH = 7, wide range)</li>
                                     <li>WA + SB: Phenolphthalein (pH > 7)</li>
@@ -2150,7 +2177,7 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
@@ -2160,7 +2187,7 @@
                                 (c) At equivalence point
                                 (Ka = 1.8 × 10⁻⁵)
                             </p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-3"><strong>(a) Initial pH (only weak acid):</strong></p>
                                 <div class="math-display">
                                     \[pH = \frac{1}{2}(pK_a - \log C) = \frac{1}{2}(4.74 - (-1)) = 2.87\]
@@ -2169,7 +2196,7 @@
                                 <p class="mb-3 mt-4"><strong>(b) After 12.5 mL NaOH (half-equivalence):</strong></p>
                                 <p class="text-sm mb-2">This is exactly half the required volume (25 mL × 0.1 M needs 25 mL × 0.1 M NaOH)</p>
                                 <p class="text-sm mb-2">At half-equivalence: [Salt] = [Acid]</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded border border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded border border-accent">
                                     \[pH = pK_a = 4.74\]
                                 </div>
                                 
@@ -2186,7 +2213,7 @@
                                 <div class="math-display">
                                     \[pH = 7 + \frac{1}{2}(4.74 - 1.30) = 7 + 1.72\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[pH = 8.72\]
                                 </div>
                             </div>
@@ -2194,18 +2221,18 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">10.5 Polyprotic Acid Titrations</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Titration of H₂SO₄, H₃PO₄, Na₂CO₃</h4>
                             
-                            <div class="bg-white p-4 rounded-lg mb-4">
+                            <div class="bg-canvas p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-2">Example: Na₂CO₃ + HCl Titration</p>
                                 <div class="space-y-3 text-sm">
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="font-semibold">First equivalence point (pH ≈ 8.3):</p>
                                         <p class="font-mono">Na₂CO₃ + HCl → NaHCO₃ + NaCl</p>
                                         <p>Indicator: Phenolphthalein (colorless endpoint)</p>
                                     </div>
-                                    <div class="bg-yellow-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="font-semibold">Second equivalence point (pH ≈ 3.8):</p>
                                         <p class="font-mono">NaHCO₃ + HCl → H₂CO₃ + NaCl</p>
                                         <p>Indicator: Methyl orange (red endpoint)</p>
@@ -2213,7 +2240,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Key Relationships:</p>
                                 <ul class="list-disc list-inside text-sm space-y-1">
                                     <li>Volume for phenolphthalein endpoint = V₁</li>
@@ -2228,14 +2255,14 @@
                 </section>
                 
                 <!-- Formula Summary Section -->
-                <section class="bg-gradient-to-br from-primary to-secondary text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📋</span>
                         Master Formula Sheet - Ionic Equilibrium
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Basic Relationships</h3>
                             <div class="space-y-2 text-sm font-mono">
                                 <p>Kw = [H⁺][OH⁻] = 10⁻¹⁴</p>
@@ -2245,7 +2272,7 @@
                                 <p>α = √(K/C)</p>
                             </div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">pH Calculations</h3>
                             <div class="space-y-2 text-sm font-mono">
                                 <p>Strong acid: pH = -log C</p>
@@ -2254,7 +2281,7 @@
                                 <p>Weak base: pOH = ½(pKb - log C)</p>
                             </div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Buffer Solutions</h3>
                             <div class="space-y-2 text-sm font-mono">
                                 <p>pH = pKa + log([Salt]/[Acid])</p>
@@ -2263,7 +2290,7 @@
                                 <p>Max capacity: [Salt] = [Acid]</p>
                             </div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Salt Hydrolysis</h3>
                             <div class="space-y-2 text-sm font-mono">
                                 <p>SA+SB: pH = 7</p>
@@ -2272,7 +2299,7 @@
                                 <p>WA+WB: pH = 7+½(pKa-pKb)</p>
                             </div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Solubility Product</h3>
                             <div class="space-y-2 text-sm font-mono">
                                 <p>AB: Ksp = S²</p>
@@ -2282,7 +2309,7 @@
                                 <p>A₃B₂: Ksp = 108S⁵</p>
                             </div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-xl font-bold mb-4">Titration</h3>
                             <div class="space-y-2 text-sm font-mono">
                                 <p>N₁V₁ = N₂V₂</p>
@@ -2295,14 +2322,14 @@
                 </section>
                 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ pH Calculations: 30%</li>
@@ -2313,7 +2340,7 @@
                                 <li>✓ Indicators & Titration: 7%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Multi-step pH calculations: 25%</li>
@@ -2326,8 +2353,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 18 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 18 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-2 text-lg">
                             <li>Calculate pH of weak acid/base solution</li>
                             <li>Henderson-Hasselbalch equation for buffer pH</li>
@@ -2350,7 +2377,7 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -2373,21 +2400,21 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
                 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate pH of: (a) 0.01 M HCl (b) 0.001 M NaOH (c) 0.05 M H₂SO₄</li>
                             <li>What is the degree of ionization of 0.2 M acetic acid? (Ka = 1.8 × 10⁻⁵)</li>
@@ -2402,8 +2429,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate pH of 10⁻⁸ M HCl solution. (Consider water ionization)</li>
                             <li>A buffer is prepared by mixing 50 mL of 0.2 M acetic acid and 50 mL of 0.1 M NaOH. Calculate pH. (pKa = 4.74)</li>
@@ -2418,8 +2445,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate the pH of 0.1 M H₂S solution. (Ka1 = 10⁻⁷, Ka2 = 10⁻¹⁴)</li>
                             <li>A solution contains both Mg²⁺ and Zn²⁺ ions (0.01 M each). At what pH will Mg(OH)₂ start precipitating? (Ksp Mg(OH)₂ = 1.8 × 10⁻¹¹)</li>
@@ -2435,57 +2462,75 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
                 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./some-basic-concepts-of-chemistry.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Some Basic Concepts Of Chemistry</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./states-of-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">States Of Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./surface-chemistry.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Surface Chemistry</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
     
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Chemistry Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Related Topic</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related Topic</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Chemical Equilibrium</h3>
-                    <p class="text-gray-600">Law of Mass Action, Kc, Kp, Le Chatelier's principle, Reaction Quotient</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Chemical Equilibrium</h3>
+                    <p class="text-ink-muted">Law of Mass Action, Kc, Kp, Le Chatelier's principle, Reaction Quotient</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Electrochemistry</h3>
-                    <p class="text-gray-600">Galvanic cells, Nernst equation, Electrolysis, Faraday's laws, Conductance</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electrochemistry</h3>
+                    <p class="text-ink-muted">Galvanic cells, Nernst equation, Electrolysis, Faraday's laws, Conductance</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Thermodynamics</h3>
-                    <p class="text-gray-600">Laws, Enthalpy, Entropy, Gibbs Energy (links to spontaneity & equilibrium)</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Thermodynamics</h3>
+                    <p class="text-ink-muted">Laws, Enthalpy, Entropy, Gibbs Energy (links to spontaneity & equilibrium)</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -2493,7 +2538,7 @@
             
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Chemistry Notes →
                 </a>
             </div>
@@ -2501,18 +2546,18 @@
     </section>
     
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Ionic Equilibrium - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Ionic Equilibrium - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Ionic Equilibrium is Critical for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Ionic Equilibrium</strong> is one of the most important and highest-scoring chapters in <strong>Physical Chemistry for JEE</strong>. It carries 8-15% weightage and appears in both JEE Main and Advanced. Key reasons to master this chapter:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>High weightage</strong> - 2-5 questions guaranteed in every JEE</li>
                             <li><strong>Formula-based numericals</strong> - Direct scoring opportunity</li>
                             <li><strong>Connected to other chapters</strong> - Electrochemistry, Solutions, Thermodynamics</li>
@@ -2521,40 +2566,40 @@
                         </ul>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Most Important Topics to Master</h3>
                         <div class="space-y-3">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-1">1. pH Calculations (30% weightage)</h4>
-                                <p class="text-gray-700 text-sm">Strong acids/bases, weak acids/bases, mixed solutions</p>
+                                <h4 class="font-bold text-lg text-primary mb-1">1. pH Calculations (30% weightage)</h4>
+                                <p class="text-ink-muted text-sm">Strong acids/bases, weak acids/bases, mixed solutions</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-1">2. Buffer Solutions (20% weightage)</h4>
-                                <p class="text-gray-700 text-sm">Henderson equation, buffer capacity, preparation</p>
+                                <h4 class="font-bold text-lg text-primary mb-1">2. Buffer Solutions (20% weightage)</h4>
+                                <p class="text-ink-muted text-sm">Henderson equation, buffer capacity, preparation</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-1">3. Salt Hydrolysis (18% weightage)</h4>
-                                <p class="text-gray-700 text-sm">All four salt types and their pH formulas</p>
+                                <h4 class="font-bold text-lg text-primary mb-1">3. Salt Hydrolysis (18% weightage)</h4>
+                                <p class="text-ink-muted text-sm">All four salt types and their pH formulas</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-1">4. Solubility Product (15% weightage)</h4>
-                                <p class="text-gray-700 text-sm">Ksp calculations, IP vs Ksp, precipitation</p>
+                                <h4 class="font-bold text-lg text-primary mb-1">4. Solubility Product (15% weightage)</h4>
+                                <p class="text-ink-muted text-sm">Ksp calculations, IP vs Ksp, precipitation</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-1">5. Common Ion Effect (10% weightage)</h4>
-                                <p class="text-gray-700 text-sm">Effect on solubility and ionization</p>
+                                <h4 class="font-bold text-lg text-primary mb-1">5. Common Ion Effect (10% weightage)</h4>
+                                <p class="text-ink-muted text-sm">Effect on solubility and ionization</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Study Tips -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Ionic Equilibrium Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 6-7 days (3 hours/day)</li>
                                 <li>Memorize <strong>all pH formulas</strong> - this is non-negotiable</li>
                                 <li>Master <strong>Henderson-Hasselbalch</strong> equation thoroughly</li>
@@ -2566,7 +2611,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 8-10 days (4 hours/day)</li>
                                 <li>Deep understanding of <strong>derivations</strong> for all formulas</li>
                                 <li>Master <strong>polyprotic acid</strong> problems</li>
@@ -2581,47 +2626,47 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong pH formula selection:</strong> Always identify the type of solution first (strong/weak acid/base, salt, buffer) before selecting the formula.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Ignoring water ionization:</strong> For very dilute strong acids (C < 10⁻⁶ M), you must consider water's contribution to [H⁺].
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing Ka and Kb:</strong> Ka is for acid dissociation, Kb for base. For conjugate pairs: Ka × Kb = 10⁻¹⁴
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Hydrolysis formula signs:</strong> Remember: WA+SB → basic (pH > 7), SA+WB → acidic (pH < 7). Don't mix up the formulas!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Direct Ksp comparison for different salts:</strong> You cannot compare Ksp directly for salts of different types (AB vs AB₂). Calculate S first!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Forgetting concentration after mixing:</strong> When solutions are mixed, concentrations change. Always recalculate C = moles/total volume.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong indicator for titration:</strong> Choose indicator based on pH at equivalence point, not arbitrary selection.
                             </div>
@@ -2630,11 +2675,11 @@
                 </div>
                 
                 <!-- Previous Year Analysis Table -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2019-2024)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -2643,31 +2688,31 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
                                     <td class="p-3">pH calculations, Buffer, Ksp</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">5 Questions (18 marks)</td>
                                     <td class="p-3">Hydrolysis, Common ion, Titration</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">4 Questions (14 marks)</td>
                                     <td class="p-3">Buffer capacity, Precipitation</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2021</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">Ka-Kb relationship, Indicators</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2020</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
@@ -2676,18 +2721,18 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Trend:</strong> JEE is focusing more on <strong>application-based problems</strong> rather than direct formula substitution. Multi-concept questions combining ionic equilibrium with electrochemistry or thermodynamics are becoming common.
                     </p>
                 </div>
                 
                 <!-- Quick Revision Checklist -->
-                <div class="mt-8 bg-gradient-to-r from-green-100 to-emerald-100 p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold text-success mb-4">✅ Pre-Exam Quick Revision Checklist</h3>
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">✅ Pre-Exam Quick Revision Checklist</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">Acids & Bases:</h4>
-                            <ul class="space-y-2 text-gray-700 text-sm">
+                            <ul class="space-y-2 text-ink-muted text-sm">
                                 <li>☐ Three theories with examples</li>
                                 <li>☐ Conjugate acid-base pairs</li>
                                 <li>☐ Ka, Kb relationship</li>
@@ -2697,7 +2742,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">pH Calculations:</h4>
-                            <ul class="space-y-2 text-gray-700 text-sm">
+                            <ul class="space-y-2 text-ink-muted text-sm">
                                 <li>☐ Strong acid/base pH</li>
                                 <li>☐ Weak acid/base pH</li>
                                 <li>☐ Buffer pH (Henderson eq.)</li>
@@ -2707,7 +2752,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">Solubility & Titration:</h4>
-                            <ul class="space-y-2 text-gray-700 text-sm">
+                            <ul class="space-y-2 text-ink-muted text-sm">
                                 <li>☐ Ksp-S relationships</li>
                                 <li>☐ IP vs Ksp comparison</li>
                                 <li>☐ Common ion effect</li>
@@ -2722,101 +2767,101 @@
         </div>
     </section>
     
-<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+<footer class="bg-canvas text-ink py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">sitemap</a></li>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
-                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-white transition">Physics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Mathematics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Study Tips</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-ink transition">Physics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Mathematics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Study Tips</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         </ul>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Last Updated: 14 March, 2026</p>
+        <div class="border-t border-hairline pt-8 text-center">
+            <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+            <p class="text-ink-subtle text-xs mt-2">Last Updated: 14 March, 2026</p>
         </div>
     </div>
 </footer>
     
     <!-- Scroll to Top Button -->
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

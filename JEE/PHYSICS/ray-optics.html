@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Ray Optics - Complete JEE Physics Notes with 100+ Examples">
     <meta property="og:description" content="Master reflection, refraction, mirrors, lenses, prisms & optical instruments. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ray Optics - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/ray-optics">
     <meta name="twitter:title" content="Ray Optics - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master ray optics with 100+ solved examples. Complete notes on reflection, refraction, mirrors, lenses & optical instruments for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Ray Optics JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Ray Optics - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Ray Optics covering reflection, refraction, mirrors, lenses, prisms, and optical instruments with 100+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -355,59 +368,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -416,23 +431,23 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Ray Optics</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Ray Optics</span>
                     <meta itemprop="position" content="4" />
                 </li>
             </ol>
@@ -440,32 +455,32 @@
     </nav>
 
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-purple-50 to-blue-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Ray Optics</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Ray Optics</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Reflection
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Mirrors
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Refraction
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     TIR
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Lenses
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Prisms
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Instruments
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Eye Defects
                 </a>
             </div>
@@ -473,35 +488,35 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <div class="flex justify-center gap-4 mb-6">
-                    <span class="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold">Chapter 21</span>
-                    <span class="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold">Optics • Class 12</span>
+                    <span class="bg-canvas/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold">Chapter 21</span>
+                    <span class="bg-canvas/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold">Optics • Class 12</span>
                 </div>
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Ray Optics
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master Reflection, Refraction, Mirrors, Lenses, Prisms & Optical Instruments with complete notes, formulas, ray diagrams, and 100+ solved problems. All JEE shortcuts included.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 100+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 All JEE Formulas</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🔍 Ray Diagrams</span>
                     </div>
                 </div>
@@ -510,21 +525,21 @@
     </section>
 
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Ray Optics JEE Notes">
         <meta itemprop="description" content="Complete study notes for Ray Optics">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.8</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">220</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -534,15 +549,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">100+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">4 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">4 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -554,53 +569,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Reflection of Light</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Spherical Mirrors</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Refraction of Light</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Total Internal Reflection</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Lenses</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Prisms & Dispersion</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Optical Instruments</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Eye Defects</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Reflection of Light</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Spherical Mirrors</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Refraction of Light</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Total Internal Reflection</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Lenses</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Prisms & Dispersion</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Optical Instruments</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Eye Defects</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./wave-optics.html" class="text-primary font-semibold hover:underline">Wave Optics &rarr;</a>
+                <a href="./dual-nature-of-radiation-and-matter.html" class="text-primary font-semibold hover:underline">Dual Nature Of Radiation And Matter &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Hero Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/ray-optics.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/ray-optics.webp"
                         alt="Ray Optics JEE notes, Formulas, PYQs - Reflection, Refraction, Mirrors, Lenses"
                         title="Ray Optics — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Ray Optics JEE Notes — Reflection, Refraction, Mirrors, Lenses, Prisms & Optical Instruments
                     </figcaption>
                 </figure>
 
                 <!-- Chapter 1: Reflection of Light -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Reflection of Light</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Reflection of Light</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -610,14 +637,14 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Laws of Reflection</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Two Laws of Reflection</h5>
                             <div class="space-y-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Law 1:</p>
                                     <p>The incident ray, the reflected ray, and the normal to the reflecting surface at the point of incidence all lie in the <strong>same plane</strong>.</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Law 2:</p>
                                     <p>The angle of incidence (i) is always <strong>equal</strong> to the angle of reflection (r).</p>
                                     <div class="math-display text-center mt-2">
@@ -625,13 +652,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-sm text-gray-600 mt-3">These laws are valid for all types of surfaces — plane, curved, smooth, or rough.</p>
+                            <p class="text-sm text-ink-muted mt-3">These laws are valid for all types of surfaces — plane, curved, smooth, or rough.</p>
                         </div>
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Types of Reflection</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Regular (Specular) Reflection</h5>
                                 <p class="mb-3">When parallel light rays fall on a smooth surface, the reflected rays are also <strong>parallel</strong>.</p>
                                 <ul class="list-disc list-inside space-y-2">
@@ -640,7 +667,7 @@
                                     <li>Example: Plane mirror, still water</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Diffuse (Irregular) Reflection</h5>
                                 <p class="mb-3">When parallel light rays fall on a rough surface, the reflected rays scatter in <strong>different directions</strong>.</p>
                                 <ul class="list-disc list-inside space-y-2">
@@ -653,10 +680,10 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Plane Mirror Properties</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h5 class="font-bold text-lg mb-3 text-primary">Key Properties of Plane Mirror Image</h5>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <ul class="space-y-2">
                                         <li>✓ Image is <strong>virtual and erect</strong></li>
                                         <li>✓ Image size = Object size (m = 1)</li>
@@ -664,7 +691,7 @@
                                         <li>✓ Image is <strong>laterally inverted</strong></li>
                                     </ul>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <ul class="space-y-2">
                                         <li>✓ Focal length f = ∞</li>
                                         <li>✓ Power P = 0</li>
@@ -682,30 +709,30 @@
                             <p class="text-lg mb-3">
                                 <strong>Number of images formed by two plane mirrors inclined at angle θ:</strong>
                             </p>
-                            <div class="math-display bg-white p-4 rounded-lg">
+                            <div class="math-display bg-canvas p-4 rounded-lg">
                                 \[\text{If } \frac{360°}{\theta} = n\]
                                 \[\text{If n is even: Number of images} = n - 1\]
                                 \[\text{If n is odd: Number of images} = n - 1 \text{ (object not on bisector)}\]
                                 \[\text{If n is odd: Number of images} = n \text{ (object on bisector — but not applicable, still } n-1 \text{)}\]
                             </div>
-                            <p class="text-sm mt-3 text-gray-600">When 360/θ is not integer, take the integer part for number of images.</p>
+                            <p class="text-sm mt-3 text-ink-muted">When 360/θ is not integer, take the integer part for number of images.</p>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Two plane mirrors are inclined at 60° to each other. An object is placed between them. Find the number of images formed.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: θ = 60°</p>
                                 <div class="math-display">
                                     \[n = \frac{360°}{60°} = 6 \text{ (even)}\]
                                 </div>
                                 <p class="mb-2">Since n is even:</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Number of images} = n - 1 = 6 - 1 = 5\]
                                 </div>
                             </div>
@@ -714,10 +741,10 @@
                 </section>
 
                 <!-- Chapter 2: Spherical Mirrors -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Spherical Mirrors</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Spherical Mirrors</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -725,14 +752,14 @@
                             Spherical mirrors are mirrors whose reflecting surface forms a part of a hollow sphere. They are of two types — concave (converging) and convex (diverging). Understanding mirror formula, magnification, and image formation is crucial for JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Sign Convention (New Cartesian)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Sign Convention (New Cartesian)</h3>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> CRITICAL: Master This First!
                             </h4>
                             <p class="text-lg mb-4">The sign convention is the #1 reason students get wrong answers. Memorize these rules:</p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <ul class="space-y-3 text-lg">
                                     <li>📍 All distances measured from <strong>Pole (P)</strong></li>
                                     <li>➡️ Distances along incident light (right) → <strong>Positive (+)</strong></li>
@@ -741,7 +768,7 @@
                                     <li>⬇️ Heights below principal axis → <strong>Negative (−)</strong></li>
                                 </ul>
                             </div>
-                            <div class="mt-4 bg-white p-4 rounded-lg">
+                            <div class="mt-4 bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Quick Reference:</p>
                                 <ul class="space-y-1">
                                     <li>• Object is always on left → <strong>u is always negative</strong></li>
@@ -751,18 +778,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Important Terms</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Important Terms</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Term</th>
                                         <th class="p-4 text-left">Symbol</th>
                                         <th class="p-4 text-left">Description</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Pole</td>
                                         <td class="p-4 font-mono">P</td>
@@ -797,12 +824,12 @@
                             </table>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Mirror Formula & Magnification</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Mirror Formula & Magnification</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h5 class="font-bold text-lg mb-3 text-secondary">Mirror Formula</h5>
+                                <div class="bg-canvas p-6 rounded-lg">
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Mirror Formula</h5>
                                     <div class="math-display text-2xl text-center">
                                         \[\boxed{\frac{1}{f} = \frac{1}{v} + \frac{1}{u}}\]
                                     </div>
@@ -812,8 +839,8 @@
                                         <p><strong>u</strong> = object distance from pole</p>
                                     </div>
                                 </div>
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h5 class="font-bold text-lg mb-3 text-secondary">Magnification</h5>
+                                <div class="bg-canvas p-6 rounded-lg">
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Magnification</h5>
                                     <div class="math-display text-2xl text-center">
                                         \[\boxed{m = \frac{h'}{h} = -\frac{v}{u}}\]
                                     </div>
@@ -827,19 +854,19 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Image Formation by Concave Mirror</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Image Formation by Concave Mirror</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Object Position</th>
                                         <th class="p-4 text-left">Image Position</th>
                                         <th class="p-4 text-left">Image Nature</th>
                                         <th class="p-4 text-left">Image Size</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">At ∞</td>
                                         <td class="p-4">At F</td>
@@ -892,14 +919,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> An object is placed 40 cm in front of a concave mirror of focal length 15 cm. Find the position, nature, and magnification of the image.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Given:</strong> u = −40 cm, f = −15 cm (concave mirror)</p>
                                 
                                 <p class="mb-2 mt-3"><strong>Step 1:</strong> Apply mirror formula</p>
@@ -921,23 +948,23 @@
                                     \[m = -\frac{v}{u} = -\frac{-24}{-40} = -0.6\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Image: Real, Inverted, Diminished at 24 cm in front of mirror}\]
                                     \[v = -24\text{ cm}, \quad m = -0.6\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.5 Velocity of Image in Mirrors</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.5 Velocity of Image in Mirrors</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-secondary">Image Velocity Formula (Along Principal Axis)</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Image Velocity Formula (Along Principal Axis)</h5>
                             <p class="mb-3">Differentiating mirror formula with respect to time:</p>
-                            <div class="math-display text-xl text-center bg-white p-4 rounded-lg">
+                            <div class="math-display text-xl text-center bg-canvas p-4 rounded-lg">
                                 \[\boxed{v_{\text{image}} = -\frac{v^2}{u^2} \cdot v_{\text{object}}}\]
                             </div>
                             <p class="text-sm mt-3">This is the velocity of image relative to mirror along the principal axis.</p>
-                            <div class="mt-3 bg-white p-4 rounded-lg">
+                            <div class="mt-3 bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">For Perpendicular to Axis:</p>
                                 <div class="math-display text-center">
                                     \[v_{\text{image}}^{\perp} = -\frac{v}{u} \cdot v_{\text{object}}^{\perp}\]
@@ -948,10 +975,10 @@
                 </section>
 
                 <!-- Chapter 3: Refraction of Light -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Refraction of Light</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Refraction of Light</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -959,10 +986,10 @@
                             Refraction is the bending of light when it passes from one transparent medium to another. This occurs because the speed of light changes in different media. Snell's Law is the fundamental equation governing refraction.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Snell's Law of Refraction</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Snell's Law of Refraction</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-yellow-300 my-6">
-                            <div class="bg-white p-6 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg text-center">
                                 <div class="math-display text-2xl">
                                     \[\boxed{n_1 \sin\theta_1 = n_2 \sin\theta_2}\]
                                 </div>
@@ -973,7 +1000,7 @@
                                     <div><strong>θ₂</strong> = Angle of refraction</div>
                                 </div>
                             </div>
-                            <div class="mt-4 bg-white p-4 rounded-lg">
+                            <div class="mt-4 bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Refractive Index:</p>
                                 <div class="math-display text-center">
                                     \[n = \frac{c}{v} = \frac{\text{Speed of light in vacuum}}{\text{Speed of light in medium}}\]
@@ -982,23 +1009,23 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Key Concepts in Refraction</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Key Concepts in Refraction</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-yellow-300">
-                                <h5 class="font-bold text-lg mb-3 text-accent">Apparent Depth</h5>
-                                <div class="math-display text-center bg-white p-3 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Apparent Depth</h5>
+                                <div class="math-display text-center bg-canvas p-3 rounded">
                                     \[\text{Apparent Depth} = \frac{\text{Real Depth}}{n}\]
                                 </div>
                                 <p class="text-sm mt-2">Object in denser medium, observer in rarer medium</p>
-                                <div class="mt-3 bg-white p-3 rounded">
+                                <div class="mt-3 bg-canvas p-3 rounded">
                                     <p class="text-sm"><strong>Shift:</strong> d = t(1 - 1/n)</p>
                                     <p class="text-sm">where t = thickness of slab</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-yellow-300">
-                                <h5 class="font-bold text-lg mb-3 text-accent">Lateral Shift (Glass Slab)</h5>
-                                <div class="math-display text-center bg-white p-3 rounded">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Lateral Shift (Glass Slab)</h5>
+                                <div class="math-display text-center bg-canvas p-3 rounded">
                                     \[d = \frac{t \sin(i - r)}{\cos r}\]
                                 </div>
                                 <p class="text-sm mt-2">where t = thickness, i = angle of incidence, r = angle of refraction</p>
@@ -1006,11 +1033,11 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Refraction at Spherical Surfaces</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Refraction at Spherical Surfaces</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-yellow-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-accent">Refraction Formula at Single Spherical Surface</h5>
-                            <div class="bg-white p-6 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Refraction Formula at Single Spherical Surface</h5>
+                            <div class="bg-canvas p-6 rounded-lg text-center">
                                 <div class="math-display text-xl">
                                     \[\boxed{\frac{n_2}{v} - \frac{n_1}{u} = \frac{n_2 - n_1}{R}}\]
                                 </div>
@@ -1023,19 +1050,19 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A coin is placed at the bottom of a tank filled with water (n = 4/3) to a depth of 80 cm. Find the apparent position of the coin when viewed from directly above.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: Real depth = 80 cm, n = 4/3</p>
                                 <div class="math-display">
                                     \[\text{Apparent Depth} = \frac{\text{Real Depth}}{n} = \frac{80}{4/3} = 80 \times \frac{3}{4} = 60 \text{ cm}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Apparent depth} = 60 \text{ cm (coin appears 20 cm closer)}\]
                                 </div>
                             </div>
@@ -1044,10 +1071,10 @@
                 </section>
 
                 <!-- Chapter 4: Total Internal Reflection -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Total Internal Reflection (TIR)</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Total Internal Reflection (TIR)</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1055,17 +1082,17 @@
                             Total Internal Reflection is the complete reflection of light back into the denser medium when it strikes the boundary at an angle greater than the critical angle. This is one of the most important and frequently asked topics in JEE from Ray Optics.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Conditions for TIR</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Conditions for TIR</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <div class="bg-white p-6 rounded-lg">
-                                <h5 class="font-bold text-xl mb-4 text-danger">Two Necessary Conditions:</h5>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg">
+                                <h5 class="font-bold text-xl mb-4 text-primary">Two Necessary Conditions:</h5>
                                 <div class="space-y-4">
-                                    <div class="bg-red-50 p-4 rounded-lg">
+                                    <div class="bg-surface-2 p-4 rounded-lg">
                                         <p class="font-semibold text-lg">Condition 1:</p>
                                         <p>Light must travel from <strong>denser medium to rarer medium</strong> (n₁ > n₂)</p>
                                     </div>
-                                    <div class="bg-red-50 p-4 rounded-lg">
+                                    <div class="bg-surface-2 p-4 rounded-lg">
                                         <p class="font-semibold text-lg">Condition 2:</p>
                                         <p>Angle of incidence must be <strong>greater than critical angle</strong> (i > C)</p>
                                     </div>
@@ -1073,31 +1100,31 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 Critical Angle</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Critical Angle</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <div class="bg-white p-6 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg text-center">
                                 <p class="mb-3">The critical angle C is the angle of incidence for which angle of refraction = 90°</p>
                                 <div class="math-display text-2xl">
                                     \[\boxed{\sin C = \frac{n_2}{n_1} = \frac{1}{n} \text{ (when rarer medium is air)}}\]
                                 </div>
                             </div>
-                            <div class="mt-4 bg-white p-4 rounded-lg">
+                            <div class="mt-4 bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Critical Angles of Common Materials:</p>
                                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-                                    <div class="bg-red-50 p-2 rounded text-center">
+                                    <div class="bg-surface-2 p-2 rounded text-center">
                                         <p class="font-bold">Water</p>
                                         <p>C ≈ 49°</p>
                                     </div>
-                                    <div class="bg-red-50 p-2 rounded text-center">
+                                    <div class="bg-surface-2 p-2 rounded text-center">
                                         <p class="font-bold">Glass</p>
                                         <p>C ≈ 42°</p>
                                     </div>
-                                    <div class="bg-red-50 p-2 rounded text-center">
+                                    <div class="bg-surface-2 p-2 rounded text-center">
                                         <p class="font-bold">Diamond</p>
                                         <p>C ≈ 24.4°</p>
                                     </div>
-                                    <div class="bg-red-50 p-2 rounded text-center">
+                                    <div class="bg-surface-2 p-2 rounded text-center">
                                         <p class="font-bold">Dense Flint</p>
                                         <p>C ≈ 33°</p>
                                     </div>
@@ -1105,11 +1132,11 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Applications of TIR</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Applications of TIR</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Optical Fiber</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Optical Fiber</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Uses principle of TIR</li>
                                     <li>Light enters core and undergoes repeated TIR</li>
@@ -1117,8 +1144,8 @@
                                     <li>Used in telecommunications, endoscopy</li>
                                 </ul>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Other Applications</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Other Applications</h5>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>Mirages:</strong> Due to TIR in hot air layers</li>
                                     <li><strong>Brilliance of diamonds:</strong> Small critical angle</li>
@@ -1129,14 +1156,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A point source of light is placed at the bottom of a water tank (n = 4/3). Find the radius of the bright circle seen from above the water surface if the depth of water is 80 cm.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: h = 80 cm, n = 4/3</p>
                                 <p class="mb-2"><strong>Step 1:</strong> Find critical angle</p>
                                 <div class="math-display">
@@ -1146,7 +1173,7 @@
                                 <div class="math-display">
                                     \[R = h \tan C = 80 \times \frac{3}{\sqrt{7}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[R = \frac{240}{\sqrt{7}} \approx 90.7 \text{ cm}\]
                                 </div>
                                 <p class="text-sm mt-2">General formula: R = h/√(n² - 1)</p>
@@ -1156,10 +1183,10 @@
                 </section>
 
                 <!-- Chapter 5: Lenses -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Thin Lenses</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Thin Lenses</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1167,28 +1194,28 @@
                             A lens is a transparent optical medium bounded by two surfaces, at least one of which is curved. Lenses are the most important topic in Ray Optics for JEE — expect at least 1 question from this section every year.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.1 Lens Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Lens Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h5 class="font-bold text-lg mb-3 text-success">Thin Lens Formula</h5>
+                                <div class="bg-canvas p-6 rounded-lg">
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Thin Lens Formula</h5>
                                     <div class="math-display text-2xl text-center">
                                         \[\boxed{\frac{1}{f} = \frac{1}{v} - \frac{1}{u}}\]
                                     </div>
                                     <div class="mt-3 text-sm">
-                                        <p class="text-danger font-semibold">⚠️ Note: Different from mirror formula!</p>
+                                        <p class="text-primary font-semibold">⚠️ Note: Different from mirror formula!</p>
                                         <p>Mirror: 1/f = 1/v + 1/u</p>
                                         <p>Lens: 1/f = 1/v − 1/u</p>
                                     </div>
                                 </div>
-                                <div class="bg-white p-6 rounded-lg">
-                                    <h5 class="font-bold text-lg mb-3 text-success">Magnification</h5>
+                                <div class="bg-canvas p-6 rounded-lg">
+                                    <h5 class="font-bold text-lg mb-3 text-primary">Magnification</h5>
                                     <div class="math-display text-2xl text-center">
                                         \[\boxed{m = \frac{h'}{h} = \frac{v}{u}}\]
                                     </div>
                                     <div class="mt-3 text-sm">
-                                        <p class="text-danger font-semibold">⚠️ No negative sign for lens!</p>
+                                        <p class="text-primary font-semibold">⚠️ No negative sign for lens!</p>
                                         <p>Mirror: m = −v/u</p>
                                         <p>Lens: m = v/u</p>
                                     </div>
@@ -1196,10 +1223,10 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.2 Lens Maker's Formula</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Lens Maker's Formula</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <div class="bg-white p-6 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg text-center">
                                 <div class="math-display text-xl">
                                     \[\boxed{\frac{1}{f} = (\mu - 1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)}\]
                                 </div>
@@ -1210,7 +1237,7 @@
                                     <div><strong>f</strong> = Focal length</div>
                                 </div>
                             </div>
-                            <div class="mt-4 bg-white p-4 rounded-lg">
+                            <div class="mt-4 bg-canvas p-4 rounded-lg">
                                 <p class="font-semibold mb-2">When lens is in a medium of RI μₘ:</p>
                                 <div class="math-display text-center">
                                     \[\frac{1}{f} = \left(\frac{\mu_L}{\mu_m} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)\]
@@ -1218,19 +1245,19 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.3 Power of Lens</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Power of Lens</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <div class="bg-white p-6 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-6 rounded-lg">
                                 <div class="math-display text-2xl text-center">
                                     \[\boxed{P = \frac{1}{f \text{ (in meters)}} \quad \text{Unit: Dioptre (D)}}\]
                                 </div>
                                 <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="font-semibold">Convex lens:</p>
                                         <p>f > 0 → P > 0 (converging)</p>
                                     </div>
-                                    <div class="bg-green-50 p-3 rounded">
+                                    <div class="bg-surface-2 p-3 rounded">
                                         <p class="font-semibold">Concave lens:</p>
                                         <p>f < 0 → P < 0 (diverging)</p>
                                     </div>
@@ -1238,11 +1265,11 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.4 Combination of Lenses</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Combination of Lenses</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                            <h5 class="font-bold text-lg mb-3 text-success">Lenses in Contact</h5>
-                            <div class="bg-white p-4 rounded-lg text-center">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h5 class="font-bold text-lg mb-3 text-primary">Lenses in Contact</h5>
+                            <div class="bg-canvas p-4 rounded-lg text-center">
                                 <div class="math-display">
                                     \[\frac{1}{f_{eq}} = \frac{1}{f_1} + \frac{1}{f_2} + \frac{1}{f_3} + \cdots\]
                                 </div>
@@ -1256,14 +1283,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Main 2023 Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Two thin lenses of focal lengths +20 cm and −10 cm are placed in contact. Find the power and focal length of the combination. What type of combination is it?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: f₁ = +20 cm = 0.2 m, f₂ = −10 cm = −0.1 m</p>
                                 
                                 <p class="mb-2 mt-3"><strong>Step 1:</strong> Find individual powers</p>
@@ -1281,25 +1308,25 @@
                                     \[f = \frac{1}{P} = \frac{1}{-5} = -0.2\text{ m} = -20\text{ cm}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{P = −5 D, f = −20 cm (Diverging combination)}\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">5.5 Image Formation by Convex Lens</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.5 Image Formation by Convex Lens</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Object Position</th>
                                         <th class="p-4 text-left">Image Position</th>
                                         <th class="p-4 text-left">Image Nature</th>
                                         <th class="p-4 text-left">Image Size</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">At ∞</td>
                                         <td class="p-4">At F₂</td>
@@ -1354,10 +1381,10 @@
                 </section>
 
                 <!-- Chapter 6: Prisms & Dispersion -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Prisms & Dispersion of Light</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Prisms & Dispersion of Light</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1367,21 +1394,21 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Prism Formulas</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <div class="space-y-4">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Angle of Prism:</p>
                                     <div class="math-display text-center">
                                         \[\boxed{A = r_1 + r_2}\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Angle of Deviation:</p>
                                     <div class="math-display text-center">
                                         \[\boxed{\delta = i_1 + i_2 - A}\]
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">At Minimum Deviation (δₘ):</p>
                                     <div class="math-display text-center">
                                         \[i_1 = i_2 = i, \quad r_1 = r_2 = r = A/2\]
@@ -1391,7 +1418,7 @@
                                     </div>
                                     <p class="text-sm mt-2 text-center">This is the most important prism formula for JEE!</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-semibold mb-2">For Thin Prism (A < 10°):</p>
                                     <div class="math-display text-center">
                                         \[\boxed{\delta = (\mu - 1)A}\]
@@ -1404,23 +1431,23 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Dispersion of Light</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">What is Dispersion?</h5>
                                 <p class="mb-3">Splitting of white light into its component colors by a prism due to different refractive indices for different wavelengths.</p>
                                 <p class="font-semibold mb-2">VIBGYOR Order (increasing λ):</p>
                                 <p class="text-sm">Violet → Indigo → Blue → Green → Yellow → Orange → Red</p>
                                 <p class="text-sm mt-2">μ_violet > μ_red → δ_violet > δ_red</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Angular Dispersion & Dispersive Power</h5>
                                 <div class="space-y-3">
-                                    <div class="bg-white p-3 rounded">
+                                    <div class="bg-canvas p-3 rounded">
                                         <p class="font-semibold">Angular Dispersion:</p>
                                         <div class="math-display text-center text-sm">
                                             \[\theta = \delta_v - \delta_r = (\mu_v - \mu_r)A\]
                                         </div>
                                     </div>
-                                    <div class="bg-white p-3 rounded">
+                                    <div class="bg-canvas p-3 rounded">
                                         <p class="font-semibold">Dispersive Power:</p>
                                         <div class="math-display text-center text-sm">
                                             \[\omega = \frac{\delta_v - \delta_r}{\delta_y} = \frac{\mu_v - \mu_r}{\mu_y - 1}\]
@@ -1431,11 +1458,11 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> JEE Advanced Concept: Deviation Without Dispersion
                             </h4>
                             <p class="text-lg mb-3">Two prisms can be combined to produce deviation without dispersion (achromatic combination):</p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <div class="math-display text-center">
                                     \[\omega_1 \delta_1 + \omega_2 \delta_2 = 0\]
                                 </div>
@@ -1449,10 +1476,10 @@
                 </section>
 
                 <!-- Chapter 7: Optical Instruments -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Optical Instruments</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Optical Instruments</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1460,18 +1487,18 @@
                             Optical instruments use mirrors and lenses to create images of objects for various purposes — magnification, projection, etc. Understanding magnifying power formulas is key for JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Magnifying Power Formulas</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Magnifying Power Formulas</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Instrument</th>
                                         <th class="p-4 text-left">At D (25 cm)</th>
                                         <th class="p-4 text-left">At ∞ (Normal Adjustment)</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Simple Microscope</td>
                                         <td class="p-4 font-mono">m = 1 + D/f</td>
@@ -1510,14 +1537,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> An astronomical telescope in normal adjustment has a magnifying power of 20. If the focal length of the objective is 100 cm, find the focal length of the eyepiece and the length of the telescope.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: m = 20, f₀ = 100 cm (normal adjustment)</p>
                                 
                                 <p class="mb-2 mt-3"><strong>Step 1:</strong> Find fₑ</p>
@@ -1530,7 +1557,7 @@
                                     \[L = f_0 + f_e = 100 + 5 = 105 \text{ cm}\]
                                 </div>
                                 
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[f_e = 5 \text{ cm}, \quad L = 105 \text{ cm}\]
                                 </div>
                             </div>
@@ -1539,10 +1566,10 @@
                 </section>
 
                 <!-- Chapter 8: Defects of Vision -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Defects of Vision & Human Eye</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Defects of Vision & Human Eye</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1550,10 +1577,10 @@
                             The human eye is a remarkable optical instrument. It uses a convex lens (crystalline lens) to form real images on the retina. Understanding eye defects and their corrections is important for JEE.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.1 The Human Eye</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 The Human Eye</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-yellow-300 my-6">
-                            <div class="bg-white p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <ul class="space-y-3">
                                     <li>✓ <strong>Near point (D):</strong> 25 cm (closest distance for clear vision)</li>
                                     <li>✓ <strong>Far point:</strong> ∞ (farthest distance for clear vision)</li>
@@ -1564,18 +1591,18 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">8.2 Common Eye Defects</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Common Eye Defects</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Defect</th>
                                         <th class="p-4 text-left">Problem</th>
                                         <th class="p-4 text-left">Correction</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Myopia (Short-sightedness)</td>
                                         <td class="p-4">Cannot see distant objects; image forms before retina; far point < ∞</td>
@@ -1601,20 +1628,20 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A person can see objects clearly only up to 200 cm. What lens should be used to correct the vision, and what should be its power?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">This is <strong>Myopia</strong> (far point = 200 cm instead of ∞)</p>
                                 <p class="mb-2">Need concave lens with f = −far point = −200 cm = −2 m</p>
                                 <div class="math-display">
                                     \[P = \frac{1}{f} = \frac{1}{-2} = -0.5 \text{ D}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                     \[\text{Concave lens with Power = −0.5 D}\]
                                 </div>
                             </div>
@@ -1623,14 +1650,14 @@
                 </section>
 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Mirror & Lens Problems: 30%</li>
@@ -1640,7 +1667,7 @@
                                 <li>✓ Refraction at Surfaces: 15%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Combination of lenses/mirrors: 25%</li>
@@ -1652,8 +1679,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Mirror formula & magnification numerical problems</li>
                             <li>Lens formula with sign convention applications</li>
@@ -1668,7 +1695,7 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1691,21 +1718,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>An object is placed 30 cm from a concave mirror of focal length 20 cm. Find the image position and magnification.</li>
                             <li>Two plane mirrors are placed at 72° to each other. Find the number of images formed.</li>
@@ -1718,8 +1745,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A glass slab of thickness 10 cm and refractive index 1.5 is placed on a table. Find the apparent shift of a mark on the table.</li>
                             <li>A prism of angle 60° has a refractive index of √2. Find the angle of minimum deviation.</li>
@@ -1732,8 +1759,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A convex lens of focal length 20 cm is placed in contact with a concave mirror of focal length 15 cm. An object is at 30 cm from this system. Find the final image.</li>
                             <li>A point source is placed at the bottom of a tank containing water (n = 4/3) of depth h. Find the radius of the bright patch visible from above.</li>
@@ -1747,61 +1774,79 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./rotational-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Rotational Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./semiconductors.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Semiconductors</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./simple-harmonic-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Simple Harmonic Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://jeeprepguide.netlify.app/jee/physics/wave-optics" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/wave-optics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Wave Optics</h3>
-                    <p class="text-gray-600">Interference, Diffraction, Polarization, Young's Double Slit</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Wave Optics</h3>
+                    <p class="text-ink-muted">Interference, Diffraction, Polarization, Young's Double Slit</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Electromagnetic Induction</h3>
-                    <p class="text-gray-600">Faraday's Law, Lenz's Law, Self & Mutual Inductance</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electromagnetic Induction</h3>
+                    <p class="text-ink-muted">Faraday's Law, Lenz's Law, Self & Mutual Inductance</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
 
-                <a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Current Electricity</h3>
-                    <p class="text-gray-600">Ohm's Law, Kirchhoff's Laws, Wheatstone Bridge</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Current Electricity</h3>
+                    <p class="text-ink-muted">Ohm's Law, Kirchhoff's Laws, Wheatstone Bridge</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
             </div>
 
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -1809,34 +1854,34 @@
     </section>
 
     <!-- SEO Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-purple-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Ray Optics - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Ray Optics - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Ray Optics is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Ray Optics</strong> is one of the highest-scoring chapters in <strong>JEE Physics</strong>. It carries 5-6% weightage with formula-based questions that are easy to solve if concepts are clear:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Mirror & Lens formulas</strong> - Direct numerical problems (most common)</li>
                             <li><strong>Total Internal Reflection</strong> - Concept-based MCQs</li>
                             <li><strong>Prism Problems</strong> - Minimum deviation calculations</li>
                             <li><strong>Optical Instruments</strong> - Magnifying power formulas</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             In <strong>JEE Advanced</strong>, ray optics questions often involve multi-concept problems combining mirrors, lenses, and refraction at surfaces.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Formulas to Remember</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Must-Know Formulas</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Must-Know Formulas</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Mirror: 1/f = 1/v + 1/u, m = −v/u</li>
                                     <li>• Lens: 1/f = 1/v − 1/u, m = v/u</li>
                                     <li>• Snell's Law: n₁sinθ₁ = n₂sinθ₂</li>
@@ -1846,8 +1891,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Quick Shortcuts</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Quick Shortcuts</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Thin prism: δ = (μ−1)A</li>
                                     <li>• Apparent depth = Real depth / n</li>
                                     <li>• Critical angle: sinC = 1/n</li>
@@ -1858,12 +1903,12 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Ray Optics Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 4-5 days (2-3 hours/day)</li>
                                 <li>Master <strong>sign convention</strong> first — it's the foundation</li>
                                 <li>Practice 50+ numericals on mirror & lens formula</li>
@@ -1874,7 +1919,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 7-8 days (3 hours/day)</li>
                                 <li>Master <strong>refraction at curved surfaces</strong> formula</li>
                                 <li>Practice silvered lens and combination problems</li>
@@ -1886,35 +1931,35 @@
                     </div>
                 </div>
                 
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong sign convention:</strong> Object distance u is ALWAYS negative (object on left). Most students forget this and get wrong answers.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing mirror and lens formulas:</strong> Mirror: 1/f = 1/v + 1/u (plus sign). Lens: 1/f = 1/v − 1/u (minus sign). Similarly, m = −v/u (mirror) vs m = v/u (lens).
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Unit conversion in Power:</strong> P = 1/f requires f in METERS, not centimeters. f = 20 cm → P = 1/0.2 = +5D, NOT 1/20.
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>TIR conditions:</strong> TIR only happens from denser to rarer medium. Many students try to apply it from rarer to denser — not possible!
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Ignoring lateral inversion:</strong> Convex mirror always gives virtual erect diminished image. Don't confuse with concave mirror properties.
                             </div>
@@ -1922,11 +1967,11 @@
                     </ul>
                 </div>
                 
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -1935,19 +1980,19 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">Lens combination, TIR, Prism deviation</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">1 Question (4 marks)</td>
                                     <td class="p-3">3 Questions (10 marks)</td>
                                     <td class="p-3">Mirror formula, Refraction at curved surface</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">2 Questions (8 marks)</td>
                                     <td class="p-3">2 Questions (7 marks)</td>
@@ -1956,7 +2001,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Trend:</strong> JEE Advanced increasingly asks multi-step problems combining reflection, refraction, and lens concepts. Pure formula-based questions are becoming rare in Advanced — expect application-based problems.
                     </p>
                 </div>
@@ -1966,78 +2011,78 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/ray-optics" class="hover:text-white transition font-bold text-white">Ray Optics ★</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-optics" class="hover:text-white transition">Wave Optics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/ray-optics" class="hover:text-ink transition font-bold text-ink">Ray Optics ★</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-optics" class="hover:text-ink transition">Wave Optics</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                     </ul>
                     
                     <h4 class="text-xl font-bold mb-4 mt-6">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
@@ -2045,7 +2090,7 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->

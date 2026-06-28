@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Kinematics - Complete JEE Physics Notes | 150+ Solved Examples">
     <meta property="og:description" content="Master motion, projectile motion, relative velocity & circular motion. Complete kinematics notes with shortcuts, tricks & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Kinematics - JEE Physics Complete Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/kinematics">
     <meta name="twitter:title" content="Kinematics - Complete JEE Physics Notes with 150+ Examples">
     <meta name="twitter:description" content="Master motion, projectile motion & relative velocity with complete notes, shortcuts & solved examples for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -58,26 +58,39 @@
     <meta name="apple-mobile-web-app-title" content="Kinematics JEE">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+        <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -123,7 +136,7 @@
       "@type": "Article",
       "headline": "Kinematics - Complete JEE Physics Notes 2025-26",
       "description": "Comprehensive notes on Kinematics covering motion in 1D/2D, projectile motion, relative velocity, circular motion and motion graphs with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -134,7 +147,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -393,7 +406,7 @@
       "@type": "VideoObject",
       "name": "Kinematics Complete Tutorial for JEE",
       "description": "Master kinematics with detailed explanation of all concepts",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT2H30M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/physics/kinematics"
@@ -445,81 +458,83 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                       <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                       <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">JEE PREP GUIDE</h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink">JEE PREP GUIDE</h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-primary hover:text-secondary transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:text-secondary transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:text-secondary transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/" class="text-primary hover:text-secondary transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-primary hover:text-secondary transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-primary hover:text-primary transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:text-primary transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-primary hover:text-primary transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary hover:text-primary transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-primary hover:text-primary transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
 <!-- Quick Jump Navigation -->
-<section class="bg-white py-6 border-b sticky top-[73px] z-40 shadow-sm">
+<section class="bg-canvas py-6 border-b sticky top-[73px] z-40 border border-hairline">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
-        <h2 class="text-lg font-bold text-gray-900 mb-3">📑 Quick Jump to Topics</h2>
+        <h2 class="text-lg font-bold text-ink mb-3">📑 Quick Jump to Topics</h2>
         <div class="flex flex-wrap gap-2">
-            <a href="#chapter1" class="px-4 py-2 bg-blue-100 text-primary rounded-full hover:bg-primary hover:text-white transition text-sm font-semibold">
+            <a href="#chapter1" class="px-4 py-2 bg-surface-3 text-primary rounded-full hover:bg-primary hover:text-ink transition text-sm font-semibold">
                 1D Motion
             </a>
-            <a href="#chapter2" class="px-4 py-2 bg-blue-100 text-primary rounded-full hover:bg-primary hover:text-white transition text-sm font-semibold">
+            <a href="#chapter2" class="px-4 py-2 bg-surface-3 text-primary rounded-full hover:bg-primary hover:text-ink transition text-sm font-semibold">
                 2D Motion
             </a>
-            <a href="#chapter3" class="px-4 py-2 bg-purple-100 text-secondary rounded-full hover:bg-secondary hover:text-white transition text-sm font-semibold">
+            <a href="#chapter3" class="px-4 py-2 bg-surface-3 text-primary rounded-full hover:bg-secondary hover:text-ink transition text-sm font-semibold">
                 Motion Graphs
             </a>
-            <a href="#chapter4" class="px-4 py-2 bg-green-100 text-success rounded-full hover:bg-success hover:text-white transition text-sm font-semibold">
+            <a href="#chapter4" class="px-4 py-2 bg-surface-3 text-primary rounded-full hover:bg-success hover:text-ink transition text-sm font-semibold">
                 Relative Velocity
             </a>
-            <a href="#chapter5" class="px-4 py-2 bg-yellow-100 text-accent rounded-full hover:bg-accent hover:text-white transition text-sm font-semibold">
+            <a href="#chapter5" class="px-4 py-2 bg-surface-3 text-primary rounded-full hover:bg-accent hover:text-ink transition text-sm font-semibold">
                 Projectile Motion
             </a>
-            <a href="#chapter6" class="px-4 py-2 bg-red-100 text-danger rounded-full hover:bg-danger hover:text-white transition text-sm font-semibold">
+            <a href="#chapter6" class="px-4 py-2 bg-surface-3 text-primary rounded-full hover:bg-danger hover:text-ink transition text-sm font-semibold">
                 Circular Motion
             </a>
-            <a href="#pyq" class="px-4 py-2 bg-gradient-to-r from-accent to-orange-500 text-white rounded-full hover:shadow-lg transition text-sm font-semibold">
+            <a href="#pyq" class="px-4 py-2 bg-gradient-to-r from-primary to-surface-20 text-ink rounded-full hover:border border-hairline transition text-sm font-semibold">
                 📝 PYQ Analysis
             </a>
-            <a href="#practice" class="px-4 py-2 bg-gradient-to-r from-success to-emerald-500 text-white rounded-full hover:shadow-lg transition text-sm font-semibold">
+            <a href="#practice" class="px-4 py-2 bg-gradient-to-r from-primary to-surface-20 text-ink rounded-full hover:border border-hairline transition text-sm font-semibold">
                 🎯 Practice
             </a>
         </div>
@@ -527,28 +542,28 @@
 </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Kinematics
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master motion analysis with comprehensive notes covering 1D/2D motion, projectiles, relative velocity, graphs, and circular motion. Includes 150+ solved problems and all previous year JEE questions.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 6 Complete Chapters</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 PYQ Analysis</span>
                     </div>
                 </div>
@@ -557,21 +572,21 @@
     </section>
  
     <!-- Stats & Rating Section -->
-<section class="py-8 bg-gradient-to-r from-purple-50 to-blue-50 border-y" itemscope itemtype="https://schema.org/Product">
+<section class="py-8 bg-gradient-to-r from-surface-2 to-surface-2 border-y" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="name" content="Kinematics Complete JEE Notes">
     <meta itemprop="description" content="Comprehensive kinematics study material">
-    <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta itemprop="image" content="/logo-header.webp">
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-center">
             <!-- Rating -->
             <div class="flex items-center justify-center space-x-3">
-                <span class="text-yellow-400 text-3xl">⭐⭐⭐⭐⭐</span>
+                <span class="text-primary text-3xl">⭐⭐⭐⭐⭐</span>
                 <div>
                     <div class="text-2xl font-bold">
                         <span itemprop="ratingValue">4.9</span>/5
                     </div>
-                    <div class="text-sm text-gray-600">
+                    <div class="text-sm text-ink-muted">
                         <span itemprop="reviewCount">320</span> reviews
                     </div>
                 </div>
@@ -580,27 +595,27 @@
             </div>
 
             <!-- Stat 1 -->
-            <div class="text-center bg-white rounded-xl p-4 shadow">
+            <div class="text-center bg-canvas rounded-xl p-4 border border-hairline">
                 <div class="text-3xl font-bold text-primary">150+</div>
-                <div class="text-sm text-gray-600">Solved Examples</div>
+                <div class="text-sm text-ink-muted">Solved Examples</div>
             </div>
 
             <!-- Stat 2 -->
-            <div class="text-center bg-white rounded-xl p-4 shadow">
-                <div class="text-3xl font-bold text-secondary">6</div>
-                <div class="text-sm text-gray-600">Major Topics</div>
+            <div class="text-center bg-canvas rounded-xl p-4 border border-hairline">
+                <div class="text-3xl font-bold text-primary">6</div>
+                <div class="text-sm text-ink-muted">Major Topics</div>
             </div>
 
             <!-- Stat 3 -->
-            <div class="text-center bg-white rounded-xl p-4 shadow">
-                <div class="text-3xl font-bold text-success">4 hrs</div>
-                <div class="text-sm text-gray-600">Study Time</div>
+            <div class="text-center bg-canvas rounded-xl p-4 border border-hairline">
+                <div class="text-3xl font-bold text-primary">4 hrs</div>
+                <div class="text-sm text-ink-muted">Study Time</div>
             </div>
 
             <!-- Stat 4 -->
-            <div class="text-center bg-white rounded-xl p-4 shadow">
-                <div class="text-3xl font-bold text-accent">35%</div>
-                <div class="text-sm text-gray-600">JEE Weightage</div>
+            <div class="text-center bg-canvas rounded-xl p-4 border border-hairline">
+                <div class="text-3xl font-bold text-primary">35%</div>
+                <div class="text-sm text-ink-muted">JEE Weightage</div>
             </div>
         </div>
     </div>
@@ -610,49 +625,61 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Fundamental Concepts</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Motion in One Dimension</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Motion Graphs Analysis</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Relative Motion</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Projectile Motion</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Circular Motion</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Fundamental Concepts</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Motion in One Dimension</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Motion Graphs Analysis</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Relative Motion</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Projectile Motion</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Circular Motion</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./laws-of-motion.html" class="text-primary font-semibold hover:underline">Laws Of Motion &rarr;</a>
+                <a href="./work-energy-and-power.html" class="text-primary font-semibold hover:underline">Work Energy And Power &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
                 <!-- Chapter 1: Fundamental Concepts -->
                   <figure class="mb-8">
                 <img
-                    src="https://jeeprepguide.netlify.app/jee/physics/kinematics.png"
+                    src="https://jeeprepguide.netlify.app/jee/physics/kinematics.webp"
                     alt="Kinematics Jee notes, Formulas, PYQs "
                     title="Kinematics — JEE Notes, Formulas, PYQs"
                     width="1200"
                     height="630"
                     loading="eager"
                     fetchpriority="high"
-                    class="w-full rounded-2xl shadow-lg border border-gray-200"
+                    class="w-full rounded-2xl border border-hairline border border-hairline"
                     itemprop="image"
                 >
-                <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                     Kinematics JEE Notes, Formulas, PYQs
                 </figcaption>
             </figure>
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Fundamental Concepts of Motion</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Fundamental Concepts of Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -676,7 +703,7 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Position, Displacement & Distance</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Key Definitions & Formulas</h4>
                             <div class="space-y-4 text-lg">
                                 <div>
@@ -703,14 +730,14 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Velocity - Average & Instantaneous</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Average Velocity</h5>
                                 <div class="math-display">
                                     \[\vec{v}_{avg} = \frac{\Delta\vec{r}}{\Delta t} = \frac{\vec{r}_2 - \vec{r}_1}{t_2 - t_1}\]
                                 </div>
                                 <p class="text-sm mt-2">Vector quantity directed along displacement</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Instantaneous Velocity</h5>
                                 <div class="math-display">
                                     \[\vec{v} = \lim_{\Delta t \to 0} \frac{\Delta\vec{r}}{\Delta t} = \frac{d\vec{r}}{dt}\]
@@ -720,28 +747,28 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A particle moves along a circle of radius 10 m with uniform speed completing one revolution in 4 seconds. Find (a) displacement and (b) average velocity in half revolution.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">(a) Displacement = Diameter = 2R = 20 m</p>
                                 <p class="mb-2">(b) Time for half revolution = 2 s</p>
                                 <div class="math-display">
                                     \[v_{avg} = \frac{\text{Displacement}}{\text{Time}} = \frac{20}{2} = 10 \text{ m/s}\]
                                 </div>
                             </div>
-                            <p class="text-base text-gray-700 mt-3">
+                            <p class="text-base text-ink-muted mt-3">
                                 <strong>Note:</strong> Average speed = (πR×2)/4 = 5π m/s ≠ average velocity
                             </p>
                         </div>
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Acceleration</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Acceleration Formulas</h4>
                             <div class="space-y-4 text-lg">
                                 <div>
@@ -760,7 +787,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistake Alert
                             </h4>
                             <p class="text-lg">
@@ -772,10 +799,10 @@
                 </section>
 
                 <!-- Chapter 2: Motion in One Dimension -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Motion in One Dimension</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Motion in One Dimension</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -783,29 +810,29 @@
                             One-dimensional motion is the simplest form of motion where an object moves along a straight line. This chapter covers uniformly accelerated motion - the foundation for 25% of JEE Physics Mechanics problems.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Equations of Motion (Uniform Acceleration)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Equations of Motion (Uniform Acceleration)</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
                             <div class="formula-box p-6 text-center border-2 border-secondary rounded-xl">
-                                <p class="text-sm text-gray-600 mb-2">First Equation</p>
-                                <div class="math-display text-3xl font-bold text-secondary">
+                                <p class="text-sm text-ink-muted mb-2">First Equation</p>
+                                <div class="math-display text-3xl font-bold text-primary">
                                     \[v = u + at\]
                                 </div>
-                                <p class="text-sm text-gray-600 mt-2">Velocity-time relation</p>
+                                <p class="text-sm text-ink-muted mt-2">Velocity-time relation</p>
                             </div>
                             <div class="formula-box p-6 text-center border-2 border-secondary rounded-xl">
-                                <p class="text-sm text-gray-600 mb-2">Second Equation</p>
-                                <div class="math-display text-3xl font-bold text-secondary">
+                                <p class="text-sm text-ink-muted mb-2">Second Equation</p>
+                                <div class="math-display text-3xl font-bold text-primary">
                                     \[s = ut + \frac{1}{2}at^2\]
                                 </div>
-                                <p class="text-sm text-gray-600 mt-2">Position-time relation</p>
+                                <p class="text-sm text-ink-muted mt-2">Position-time relation</p>
                             </div>
                             <div class="formula-box p-6 text-center border-2 border-secondary rounded-xl">
-                                <p class="text-sm text-gray-600 mb-2">Third Equation</p>
-                                <div class="math-display text-3xl font-bold text-secondary">
+                                <p class="text-sm text-ink-muted mb-2">Third Equation</p>
+                                <div class="math-display text-3xl font-bold text-primary">
                                     \[v^2 = u^2 + 2as\]
                                 </div>
-                                <p class="text-sm text-gray-600 mt-2">Independent of time</p>
+                                <p class="text-sm text-ink-muted mt-2">Independent of time</p>
                             </div>
                         </div>
 
@@ -821,23 +848,23 @@
                                 <li><strong>Area under v-t graph</strong> = displacement → s = ut + ½at²</li>
                                 <li><strong>Eliminate t</strong> from above two → v² = u² + 2as</li>
                             </ul>
-                            <p class="text-base text-gray-700 mt-3">
+                            <p class="text-base text-ink-muted mt-3">
                                 This method fetches you full marks even if you forget formulas during exam!
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Additional Important Formulas</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Additional Important Formulas</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Formula</th>
                                         <th class="p-4 text-left">Expression</th>
                                         <th class="p-4 text-left">Use Case</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Distance in nth second</td>
                                         <td class="p-4 font-mono">\(s_n = u + \frac{a}{2}(2n-1)\)</td>
@@ -863,14 +890,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main 2023 Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A car accelerates from rest at a constant rate α for some time, after which it decelerates at a constant rate β to come to rest. If the total time elapsed is t, find the maximum velocity achieved.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Let maximum velocity = v<sub>max</sub></p>
                                 <p class="mb-2">Time of acceleration = t₁, Time of deceleration = t₂</p>
                                 <p class="mb-2">Given: t₁ + t₂ = t ... (1)</p>
@@ -887,19 +914,19 @@
                                 <div class="math-display">
                                     \[v_{max}\left(\frac{1}{\alpha} + \frac{1}{\beta}\right) = t\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[v_{max} = \frac{\alpha\beta t}{\alpha + \beta}\]
                                 </div>
                             </div>
-                            <p class="text-base text-gray-700 mt-3">
+                            <p class="text-base text-ink-muted mt-3">
                                 <strong>Key Concept:</strong> This is the harmonic mean formula pattern - appears frequently in JEE!
                             </p>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Motion Under Gravity (Free Fall)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Motion Under Gravity (Free Fall)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Free Fall Equations (Taking downward as positive)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Free Fall Equations (Taking downward as positive)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <p class="font-semibold mb-2">Velocity after time t:</p>
@@ -921,14 +948,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3 (Classic JEE Problem)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A stone is dropped from a height h. Another stone is thrown upward from ground with such a velocity that it reaches a height h. When and where will they meet?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>For stone 1 (dropped from height h):</strong></p>
                                 <div class="math-display">\[y_1 = h - \frac{1}{2}gt^2\]</div>
                                 
@@ -939,16 +966,16 @@
                                 <p class="mb-2 mt-4"><strong>At meeting point: y₁ = y₂</strong></p>
                                 <div class="math-display">\[h - \frac{1}{2}gt^2 = \sqrt{2gh} \cdot t - \frac{1}{2}gt^2\]</div>
                                 <div class="math-display">\[h = \sqrt{2gh} \cdot t\]</div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[t = \sqrt{\frac{h}{2g}}\]
                                 </div>
                                 
                                 <p class="mb-2 mt-4"><strong>Height from ground:</strong></p>
                                 <div class="math-display">\[y = \sqrt{2gh} \times \sqrt{\frac{h}{2g}} - \frac{1}{2}g\left(\frac{h}{2g}\right)\]</div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[y = \frac{3h}{4}\]</div>
                             </div>
-                            <p class="text-base text-gray-700 mt-3">
+                            <p class="text-base text-ink-muted mt-3">
                                 <strong>Answer:</strong> They meet at height 3h/4 from ground after time √(h/2g)
                             </p>
                         </div>
@@ -956,10 +983,10 @@
                 </section>
 
                 <!-- Chapter 3: Motion Graphs -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                     <div class="flex items-center mb-6">
-                        <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Motion Graphs Analysis</h2>
+                        <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Motion Graphs Analysis</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -967,10 +994,10 @@
                             Graphical analysis is one of the most scoring topics in JEE. Understanding slopes and areas under curves can solve 90% of problems in under 60 seconds. Master this chapter to gain significant advantage in competitive exams.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.1 Position-Time (x-t) Graphs</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Position-Time (x-t) Graphs</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Key Points for x-t Graphs</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Key Points for x-t Graphs</h4>
                             <div class="space-y-3 text-lg">
                                 <div class="flex items-start">
                                     <span class="text-2xl mr-3">📌</span>
@@ -1002,10 +1029,10 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.2 Velocity-Time (v-t) Graphs</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Velocity-Time (v-t) Graphs</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Key Points for v-t Graphs</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Key Points for v-t Graphs</h4>
                             <div class="space-y-3 text-lg">
                                 <div class="flex items-start">
                                     <span class="text-2xl mr-3">📌</span>
@@ -1037,7 +1064,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚡</span> JEE 2024 Graph Trick
                             </h4>
                             <p class="text-lg mb-3">
@@ -1051,10 +1078,10 @@
                             </ul>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-accent mt-8 mb-4">3.3 Acceleration-Time (a-t) Graphs</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Acceleration-Time (a-t) Graphs</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-orange-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-accent">Key Points for a-t Graphs</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Key Points for a-t Graphs</h4>
                             <div class="space-y-3 text-lg">
                                 <div class="flex items-start">
                                     <span class="text-2xl mr-3">📌</span>
@@ -1075,29 +1102,29 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Advanced 2022 Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> The velocity-time graph of a particle moving in a straight line is shown. Find (a) displacement in first 6 seconds (b) total distance traveled.
                             </p>
                             <div class="diagram-box my-4">
-                                <p class="text-gray-600 mb-2">[Graph: v-t graph with following points]</p>
+                                <p class="text-ink-muted mb-2">[Graph: v-t graph with following points]</p>
                                 <p>t=0, v=20 m/s → t=2s, v=20 m/s → t=4s, v=0 → t=5s, v=-10 m/s → t=6s, v=-10 m/s</p>
                             </div>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>(a) Displacement = Area under v-t graph</strong></p>
                                 <p class="mb-2">Area from 0 to 2s = 20 × 2 = 40 m (rectangle)</p>
                                 <p class="mb-2">Area from 2s to 4s = ½ × 2 × 20 = 20 m (triangle)</p>
                                 <p class="mb-2">Area from 4s to 5s = ½ × 1 × (-10) = -5 m (triangle below axis)</p>
                                 <p class="mb-2">Area from 5s to 6s = -10 × 1 = -10 m (rectangle below axis)</p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Net Displacement} = 40 + 20 - 5 - 10 = 45 \text{ m}\]
                                 </div>
                                 
                                 <p class="mb-2 mt-4"><strong>(b) Total Distance = Sum of absolute areas</strong></p>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\text{Total Distance} = 40 + 20 + 5 + 10 = 75 \text{ m}\]
                                 </div>
                             </div>
@@ -1110,13 +1137,13 @@
                             <div class="overflow-x-auto my-4">
                                 <table class="w-full custom-table">
                                     <thead>
-                                        <tr class="text-white">
+                                        <tr class="text-ink">
                                             <th class="p-3">Graph Type</th>
                                             <th class="p-3">Slope Gives</th>
                                             <th class="p-3">Area Gives</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="bg-white divide-y">
+                                    <tbody class="bg-canvas divide-y">
                                         <tr>
                                             <td class="p-3 font-semibold">x-t graph</td>
                                             <td class="p-3">Velocity (v)</td>
@@ -1140,10 +1167,10 @@
                 </section>
 
                 <!-- Chapter 4: Relative Motion -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                     <div class="flex items-center mb-6">
-                        <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Relative Motion</h2>
+                        <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Relative Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1151,13 +1178,13 @@
                             Relative motion is the study of motion of one object with respect to another. This is a high-weightage topic in JEE Advanced with conceptual depth. Questions often combine relative velocity with projectile motion or collisions.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Relative Velocity in 1D</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Relative Velocity in 1D</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Fundamental Formula</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Fundamental Formula</h4>
                             <div class="text-lg">
                                 <p class="mb-3">Velocity of A relative to B (or velocity of A as seen by B):</p>
-                                <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                                <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-success">
                                     \[\vec{v}_{AB} = \vec{v}_A - \vec{v}_B\]
                                 </div>
                                 <p class="mt-4 mb-3">Similarly, velocity of B relative to A:</p>
@@ -1168,15 +1195,15 @@
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">When Moving in Same Direction</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">When Moving in Same Direction</h5>
                                 <div class="math-display">
                                     \[v_{AB} = v_A - v_B\]
                                 </div>
                                 <p class="text-sm mt-2">Relative velocity is difference of speeds</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-green-300">
-                                <h5 class="font-bold text-lg mb-3 text-success">When Moving in Opposite Direction</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">When Moving in Opposite Direction</h5>
                                 <div class="math-display">
                                     \[v_{AB} = v_A + v_B\]
                                 </div>
@@ -1184,16 +1211,16 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Relative Velocity in 2D</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Relative Velocity in 2D</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Vector Form (Most Important for JEE Advanced)</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Vector Form (Most Important for JEE Advanced)</h4>
                             <div class="text-lg">
                                 <div class="math-display">
                                     \[\vec{v}_{AB} = \vec{v}_A - \vec{v}_B\]
                                 </div>
                                 <p class="my-3">Magnitude of relative velocity:</p>
-                                <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                                <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-success">
                                     \[|\vec{v}_{AB}| = \sqrt{v_A^2 + v_B^2 - 2v_Av_B\cos\theta}\]
                                 </div>
                                 <p class="text-sm mt-2">where θ = angle between \(\vec{v}_A\) and \(\vec{v}_B\)</p>
@@ -1217,14 +1244,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5 (Rain-Man Problem)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Rain is falling vertically with speed 30 m/s. A man is running on the road with speed 10 m/s. At what angle should he hold his umbrella to protect himself from rain?
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Let's find velocity of rain relative to man</p>
                                 <p class="mb-2">\(\vec{v}_{rain} = 30\hat{j}\) m/s (downward)</p>
                                 <p class="mb-2">\(\vec{v}_{man} = 10\hat{i}\) m/s (horizontal)</p>
@@ -1238,18 +1265,18 @@
                                 <div class="math-display">
                                     \[\tan\theta = \frac{v_{horizontal}}{v_{vertical}} = \frac{10}{30} = \frac{1}{3}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[\theta = \tan^{-1}\left(\frac{1}{3}\right) \approx 18.43°\text{ from vertical}\]
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.3 Shortest Distance / Closest Approach</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Shortest Distance / Closest Approach</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-green-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-success">Condition for Closest Approach</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Condition for Closest Approach</h4>
                             <p class="text-lg mb-3">Two objects will be closest when their relative velocity is perpendicular to the line joining them.</p>
-                            <div class="math-display bg-green-50 p-4 rounded-lg border-2 border-success">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg border-2 border-success">
                                 \[\vec{v}_{AB} \perp \vec{r}_{AB}\]
                             </div>
                             <p class="text-lg mt-4 mb-2">Minimum distance formula:</p>
@@ -1259,14 +1286,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced Type)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> Two ships A and B are 10 km apart on a line running south to north. Ship A is south of B and is moving north at 20 km/h. Ship B is moving east at 20 km/h. Find the distance of closest approach and time taken.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Let north be +y direction and east be +x direction</p>
                                 <p class="mb-2">\(\vec{v}_A = 20\hat{j}\) km/h</p>
                                 <p class="mb-2">\(\vec{v}_B = 20\hat{i}\) km/h</p>
@@ -1290,7 +1317,7 @@
                                 <div class="math-display">
                                     \[\sin\alpha = \frac{1}{\sqrt{2}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[d_{min} = 10 \times \frac{1}{\sqrt{2}} = 5\sqrt{2} \text{ km}\]
                                 </div>
                                 
@@ -1302,7 +1329,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistakes in Relative Motion
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1316,10 +1343,10 @@
                 </section>
 
                 <!-- Chapter 5: Projectile Motion -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Projectile Motion - The Rank Decider</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Projectile Motion - The Rank Decider</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1329,13 +1356,13 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Basic Concepts & Equations</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Fundamental Understanding</h4>
                             <p class="text-lg mb-4">
                                 Projectile motion is a 2D motion under constant acceleration (gravity). It can be analyzed by breaking into two independent components:
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-bold mb-2">Horizontal Motion (x-direction):</p>
                                     <ul class="list-disc list-inside space-y-1">
                                         <li>Acceleration: a<sub>x</sub> = 0</li>
@@ -1343,7 +1370,7 @@
                                         <li>Position: x = (u cos θ)t</li>
                                     </ul>
                                 </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-bold mb-2">Vertical Motion (y-direction):</p>
                                     <ul class="list-disc list-inside space-y-1">
                                         <li>Acceleration: a<sub>y</sub> = -g</li>
@@ -1357,15 +1384,15 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Key Formulas (Must Remember)</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Parameter</th>
                                         <th class="p-4 text-left">Formula</th>
                                         <th class="p-4 text-left">Maximum Value</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Time of Flight (T)</td>
                                         <td class="p-4 font-mono">\(T = \frac{2u\sin\theta}{g}\)</td>
@@ -1400,7 +1427,7 @@
                                 <span class="text-2xl mr-2">🎯</span> Quick Derivation Trick
                             </h4>
                             <p class="text-lg mb-3"><strong>Derive all formulas from these two equations in 20 seconds:</strong></p>
-                            <div class="bg-white p-4 rounded-lg space-y-2">
+                            <div class="bg-canvas p-4 rounded-lg space-y-2">
                                 <div class="math-display">1. \(v_y = u\sin\theta - gt\)</div>
                                 <div class="math-display">2. \(y = u\sin\theta \cdot t - \frac{1}{2}gt^2\)</div>
                             </div>
@@ -1414,37 +1441,37 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.3 Important Results & Shortcuts</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Complementary Angles</h5>
                                 <p class="mb-2">For angles θ and (90° - θ):</p>
                                 <div class="math-display">\[R_\theta = R_{90°-\theta}\]</div>
                                 <p class="text-sm mt-2">Same range for complementary angles</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Relation: H, R, T</h5>
                                 <div class="math-display">\[R = \frac{4H}{\tan\theta}\]</div>
                                 <div class="math-display">\[T = 2\sqrt{\frac{2H}{g}}\]</div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Velocity at highest point</h5>
                                 <div class="math-display">\[v_H = u\cos\theta\]</div>
                                 <p class="text-sm mt-2">Only horizontal component remains</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Angle of velocity with horizontal</h5>
                                 <div class="math-display">\[\tan\beta = \frac{v_y}{v_x} = \frac{u\sin\theta - gt}{u\cos\theta}\]</div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 7 (Classic JEE Problem)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A projectile is fired at an angle of 30° with horizontal with velocity 40 m/s. Find (a) Maximum height (b) Range (c) Time of flight. [g = 10 m/s²]
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: u = 40 m/s, θ = 30°, g = 10 m/s²</p>
                                 
                                 <p class="mb-2 mt-3"><strong>(a) Maximum Height:</strong></p>
@@ -1454,7 +1481,7 @@
                                 <div class="math-display">
                                     \[H = \frac{1600 \times (1/2)^2}{20} = \frac{1600 \times 0.25}{20}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[H = 20 \text{ m}\]
                                 </div>
                                 
@@ -1465,7 +1492,7 @@
                                 <div class="math-display">
                                     \[R = \frac{1600 \times \frac{\sqrt{3}}{2}}{10} = \frac{800\sqrt{3}}{10}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[R = 80\sqrt{3} \approx 138.56 \text{ m}\]
                                 </div>
                                 
@@ -1476,7 +1503,7 @@
                                 <div class="math-display">
                                     \[T = \frac{80 \times 0.5}{10}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[T = 4 \text{ s}\]
                                 </div>
                             </div>
@@ -1484,13 +1511,13 @@
 
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.4 Projectile on Inclined Plane (JEE Advanced Favorite)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-200 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">When thrown up the incline (angle α with horizontal)</h4>
                             <p class="text-lg mb-3">Projection angle with horizontal = θ</p>
                             <div class="space-y-3">
                                 <div>
                                     <strong>Range along incline:</strong>
-                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[R = \frac{u^2\sin 2(\theta - \alpha)}{g\cos^2\alpha}\]
                                     </div>
                                 </div>
@@ -1499,13 +1526,13 @@
                                     <div class="math-display">
                                         \[\text{At } \theta = 45° + \frac{\alpha}{2}\]
                                     </div>
-                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[R_{max} = \frac{u^2}{g(1 + \sin\alpha)}\]
                                     </div>
                                 </div>
                                 <div>
                                     <strong>Time of flight:</strong>
-                                    <div class="math-display bg-blue-50 p-3 rounded-lg">
+                                    <div class="math-display bg-surface-2 p-3 rounded-lg">
                                         \[T = \frac{2u\sin(\theta - \alpha)}{g\cos\alpha}\]
                                     </div>
                                 </div>
@@ -1513,14 +1540,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 8 (JEE Advanced 2021 Pattern)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A particle is projected up an inclined plane of inclination 30° with velocity 20 m/s at angle 60° with horizontal. Find the range along the plane.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: u = 20 m/s, α = 30°, θ = 60°, g = 10 m/s²</p>
                                 <div class="math-display">
                                     \[R = \frac{u^2\sin 2(\theta - \alpha)}{g\cos^2\alpha}\]
@@ -1534,14 +1561,14 @@
                                 <div class="math-display">
                                     \[R = \frac{400 \times \frac{\sqrt{3}}{2}}{10 \times \frac{3}{4}} = \frac{200\sqrt{3}}{7.5}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[R = \frac{800\sqrt{3}}{30} = \frac{80\sqrt{3}}{3} \approx 46.19 \text{ m}\]
                                 </div>
                             </div>
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">🔥</span> JEE 2024-25 Trend Analysis
                             </h4>
                             <p class="text-lg mb-3">
@@ -1554,7 +1581,7 @@
                                 <li><strong>Trajectory equation applications:</strong> 15% questions</li>
                                 <li><strong>Energy + Projectile combined:</strong> 10% questions</li>
                             </ul>
-                            <p class="text-lg mt-4 font-semibold text-danger">
+                            <p class="text-lg mt-4 font-semibold text-primary">
                                 Practice minimum 50 PYQs from projectile on incline and relative projectile motion!
                             </p>
                         </div>
@@ -1562,10 +1589,10 @@
                 </section>
 
                 <!-- Chapter 6: Circular Motion -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Circular Motion</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Circular Motion</h2>
                     </div>
 
                     <div class="prose max-w-none">
@@ -1573,10 +1600,10 @@
                             Circular motion is motion along a circular path. Despite constant speed, the velocity continuously changes direction, resulting in acceleration. This chapter is crucial as it bridges kinematics with rotational mechanics and appears in 15-20% of JEE questions.
                         </p>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Uniform Circular Motion</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Uniform Circular Motion</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Key Definitions</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Key Definitions</h4>
                             <div class="space-y-4 text-lg">
                                 <div>
                                     <strong>Angular Displacement (θ):</strong> Angle swept by radius vector
@@ -1600,28 +1627,28 @@
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 Centripetal Acceleration</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Centripetal Acceleration</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Acceleration in Uniform Circular Motion</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Acceleration in Uniform Circular Motion</h4>
                             <p class="text-lg mb-4">
                                 Even though speed is constant, velocity changes direction continuously. This causes acceleration directed towards the center called <strong>centripetal acceleration</strong>.
                             </p>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Form 1</p>
                                     <div class="math-display text-2xl">\[a_c = \frac{v^2}{r}\]</div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Form 2</p>
                                     <div class="math-display text-2xl">\[a_c = \omega^2 r\]</div>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="bg-surface-2 p-4 rounded-lg text-center">
                                     <p class="font-semibold mb-2">Form 3</p>
                                     <div class="math-display text-2xl">\[a_c = v\omega\]</div>
                                 </div>
                             </div>
-                            <p class="text-lg mt-4 font-semibold text-secondary">Direction: Always towards the center of circular path</p>
+                            <p class="text-lg mt-4 font-semibold text-primary">Direction: Always towards the center of circular path</p>
                         </div>
 
                         <div class="tip-box p-6 rounded-xl border-l-4 border-secondary my-6">
@@ -1629,48 +1656,48 @@
                                 <span class="text-2xl mr-2">💡</span> Derivation in 30 Seconds
                             </h4>
                             <p class="text-lg mb-3">Consider two velocity vectors separated by small angle dθ:</p>
-                            <div class="bg-white p-4 rounded-lg">
+                            <div class="bg-canvas p-4 rounded-lg">
                                 <div class="math-display">\[|\Delta\vec{v}| = v \cdot d\theta\]</div>
                                 <div class="math-display">\[a = \frac{|\Delta\vec{v}|}{dt} = v \cdot \frac{d\theta}{dt} = v\omega = \frac{v^2}{r}\]</div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Non-Uniform Circular Motion</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Non-Uniform Circular Motion</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-200 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Two Components of Acceleration</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Two Components of Acceleration</h4>
                             <p class="text-lg mb-4">When speed also changes (non-uniform circular motion):</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-purple-50 p-5 rounded-lg">
-                                    <p class="font-bold text-lg mb-3 text-secondary">1. Centripetal Acceleration (a<sub>c</sub>)</p>
+                                <div class="bg-surface-2 p-5 rounded-lg">
+                                    <p class="font-bold text-lg mb-3 text-primary">1. Centripetal Acceleration (a<sub>c</sub>)</p>
                                     <div class="math-display">\[a_c = \frac{v^2}{r}\]</div>
                                     <p class="text-sm mt-2">• Directed towards center</p>
                                     <p class="text-sm">• Changes direction of velocity</p>
                                     <p class="text-sm">• Always present in circular motion</p>
                                 </div>
-                                <div class="bg-purple-50 p-5 rounded-lg">
-                                    <p class="font-bold text-lg mb-3 text-secondary">2. Tangential Acceleration (a<sub>t</sub>)</p>
+                                <div class="bg-surface-2 p-5 rounded-lg">
+                                    <p class="font-bold text-lg mb-3 text-primary">2. Tangential Acceleration (a<sub>t</sub>)</p>
                                     <div class="math-display">\[a_t = \frac{dv}{dt} = r\alpha\]</div>
                                     <p class="text-sm mt-2">• Directed along tangent</p>
                                     <p class="text-sm">• Changes magnitude of velocity</p>
                                     <p class="text-sm">• Zero for uniform circular motion</p>
                                 </div>
                             </div>
-                            <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-2 border-accent">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg border-2 border-accent">
                                 <p class="font-bold text-lg mb-2">Net Acceleration:</p>
                                 <div class="math-display">\[|\vec{a}| = \sqrt{a_c^2 + a_t^2} = \sqrt{\left(\frac{v^2}{r}\right)^2 + \left(\frac{dv}{dt}\right)^2}\]</div>
                             </div>
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 9
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A particle is moving in a circle of radius 5 m with a constant speed of 10 m/s. Find (a) angular velocity (b) centripetal acceleration (c) time period.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: r = 5 m, v = 10 m/s</p>
                                 
                                 <p class="mb-2 mt-3"><strong>(a) Angular velocity:</strong></p>
@@ -1688,26 +1715,26 @@
                                     \[T = \frac{2\pi r}{v} = \frac{2\pi \times 5}{10} = \pi \text{ s} \approx 3.14 \text{ s}\]
                                 </div>
                                 
-                                <div class="mt-4 bg-yellow-50 p-3 rounded-lg">
+                                <div class="mt-4 bg-surface-2 p-3 rounded-lg">
                                     <p class="font-semibold">Alternative for (c):</p>
                                     <div class="math-display">\[T = \frac{2\pi}{\omega} = \frac{2\pi}{2} = \pi \text{ s}\]</div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.4 Important Formulas Summary</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.4 Important Formulas Summary</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Quantity</th>
                                         <th class="p-4 text-left">Linear</th>
                                         <th class="p-4 text-left">Angular</th>
                                         <th class="p-4 text-left">Relation</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Displacement</td>
                                         <td class="p-4">s</td>
@@ -1743,14 +1770,14 @@
                         </div>
 
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 10 (JEE Advanced Level)
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A particle moves in a circle of radius 20 cm. Its linear speed is given by v = 2t where t is in seconds and v in m/s. Find the radial and tangential acceleration at t = 2s.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: r = 20 cm = 0.2 m, v = 2t</p>
                                 
                                 <p class="mb-2 mt-3"><strong>At t = 2s:</strong></p>
@@ -1774,7 +1801,7 @@
                                     \[a_{net} = \sqrt{6400 + 4} = \sqrt{6404} \approx 80.02 \text{ m/s}^2\]
                                 </div>
                                 
-                                <div class="mt-4 bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="mt-4 bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     <p><strong>Answer:</strong></p>
                                     <p>Radial acceleration = 80 m/s² (towards center)</p>
                                     <p>Tangential acceleration = 2 m/s² (along tangent)</p>
@@ -1784,7 +1811,7 @@
                         </div>
 
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Common Mistakes in Circular Motion
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1799,14 +1826,14 @@
                 </section>
 
                 <!-- Previous Year Questions Section -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Projectile Motion: 35%</li>
@@ -1816,7 +1843,7 @@
                                 <li>✓ 1D Motion: 5%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Projectile on Incline: 30%</li>
@@ -1828,8 +1855,8 @@
                         </div>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Projectile hitting a target at specific angle</li>
                             <li>Rain-man problem with variable velocities</li>
@@ -1845,21 +1872,21 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
 
                 <!-- Practice Problems Section -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A car accelerates from 10 m/s to 30 m/s in 5 seconds. Find acceleration and distance covered.</li>
                             <li>A stone is dropped from height 45 m. Find time to reach ground and velocity just before hitting.</li>
@@ -1869,8 +1896,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Rain falls at 10 m/s vertically. A man runs at 5 m/s. At what angle should he hold umbrella?</li>
                             <li>A projectile is fired up a 30° incline with velocity 50 m/s at 60° from horizontal. Find range along plane.</li>
@@ -1880,8 +1907,8 @@
                         </ol>
                     </div>
 
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>A projectile clears two walls of equal height h at distances d₁ and d₂ from starting point. Find angle of projection.</li>
                             <li>A boat crosses a river of width d. Current velocity is u and boat velocity in still water is v. Find condition for minimum drift and the drift distance.</li>
@@ -1892,21 +1919,39 @@
                     </div>
 
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./kinetic-theory-of-gases.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Kinetic Theory Of Gases</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./laws-of-motion.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Laws Of Motion</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./magnetic-effect-of-current-and-magnetism.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Magnetic Effect Of Current And Magnetism</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
 
     <!-- SEO-Rich Summary & Study Guide -->
-<section class="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+<section class="pt-[81px] bg-gradient-to-br from-surface-1 via-surface-2 to-surface-2">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <article class="prose max-w-none">
-            <h2 class="text-5xl font-bold text-gray-900 mb-8 text-center">Complete Kinematics Mastery Guide for JEE 2025-26</h2>
+            <h2 class="text-5xl font-bold text-ink mb-8 text-center">Complete Kinematics Mastery Guide for JEE 2025-26</h2>
             
             <!-- Main Content Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -1915,12 +1960,12 @@
                 <div class="space-y-8">
                     
                     <!-- Importance Section -->
-                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-3xl font-bold text-primary mb-4 flex items-center">
                             <span class="text-4xl mr-3">🎯</span>
                             Why Kinematics is THE Most Important Chapter
                         </h3>
-                        <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+                        <div class="space-y-4 text-ink-muted text-lg leading-relaxed">
                             <p>
                                 <strong>Kinematics</strong> is not just another chapter - it's the <strong>foundation of entire JEE Physics Mechanics</strong>. Here's why it's crucial:
                             </p>
@@ -1934,56 +1979,56 @@
                     </div>
 
                     <!-- Weightage Breakdown -->
-                    <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-8 rounded-2xl shadow-xl">
-                        <h3 class="text-3xl font-bold text-secondary mb-6">Topic-wise Weightage Analysis</h3>
+                    <div class="bg-gradient-to-br from-surface-3 to-surface-3 p-8 rounded-2xl border border-hairline">
+                        <h3 class="text-3xl font-bold text-primary mb-6">Topic-wise Weightage Analysis</h3>
                         <div class="space-y-4">
-                            <div class="bg-white p-4 rounded-xl">
+                            <div class="bg-canvas p-4 rounded-xl">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="font-bold text-lg">Projectile Motion</span>
                                     <span class="text-2xl font-bold text-primary">35%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="bg-gradient-to-r from-primary to-secondary h-3 rounded-full" style="width: 35%"></div>
+                                <div class="w-full bg-surface-2 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-primary to-primary h-3 rounded-full" style="width: 35%"></div>
                                 </div>
                             </div>
 
-                            <div class="bg-white p-4 rounded-xl">
+                            <div class="bg-canvas p-4 rounded-xl">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="font-bold text-lg">Relative Velocity</span>
-                                    <span class="text-2xl font-bold text-secondary">25%</span>
+                                    <span class="text-2xl font-bold text-primary">25%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="bg-gradient-to-r from-secondary to-purple-600 h-3 rounded-full" style="width: 25%"></div>
+                                <div class="w-full bg-surface-2 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-primary to-primary h-3 rounded-full" style="width: 25%"></div>
                                 </div>
                             </div>
 
-                            <div class="bg-white p-4 rounded-xl">
+                            <div class="bg-canvas p-4 rounded-xl">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="font-bold text-lg">Motion Graphs</span>
-                                    <span class="text-2xl font-bold text-success">20%</span>
+                                    <span class="text-2xl font-bold text-primary">20%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="bg-gradient-to-r from-success to-emerald-600 h-3 rounded-full" style="width: 20%"></div>
+                                <div class="w-full bg-surface-2 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-primary to-primary h-3 rounded-full" style="width: 20%"></div>
                                 </div>
                             </div>
 
-                            <div class="bg-white p-4 rounded-xl">
+                            <div class="bg-canvas p-4 rounded-xl">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="font-bold text-lg">Circular Motion</span>
-                                    <span class="text-2xl font-bold text-accent">15%</span>
+                                    <span class="text-2xl font-bold text-primary">15%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="bg-gradient-to-r from-accent to-orange-600 h-3 rounded-full" style="width: 15%"></div>
+                                <div class="w-full bg-surface-2 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-primary to-primary h-3 rounded-full" style="width: 15%"></div>
                                 </div>
                             </div>
 
-                            <div class="bg-white p-4 rounded-xl">
+                            <div class="bg-canvas p-4 rounded-xl">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="font-bold text-lg">1D Motion & Graphs</span>
-                                    <span class="text-2xl font-bold text-danger">5%</span>
+                                    <span class="text-2xl font-bold text-primary">5%</span>
                                 </div>
-                                <div class="w-full bg-gray-200 rounded-full h-3">
-                                    <div class="bg-gradient-to-r from-danger to-red-600 h-3 rounded-full" style="width: 5%"></div>
+                                <div class="w-full bg-surface-2 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-primary to-primary h-3 rounded-full" style="width: 5%"></div>
                                 </div>
                             </div>
                         </div>
@@ -1995,7 +2040,7 @@
                 <div class="space-y-8">
                     
                     <!-- Formula Cheat Sheet -->
-                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-3xl font-bold text-primary mb-6 flex items-center">
                             <span class="text-4xl mr-3">📐</span>
                             Must-Remember Formulas
@@ -2003,8 +2048,8 @@
                         
                         <div class="space-y-6">
                             <div class="border-l-4 border-primary pl-4">
-                                <h4 class="font-bold text-xl text-secondary mb-2">1D Motion (Uniform Acceleration)</h4>
-                                <div class="space-y-1 font-mono text-base bg-gray-50 p-3 rounded">
+                                <h4 class="font-bold text-xl text-primary mb-2">1D Motion (Uniform Acceleration)</h4>
+                                <div class="space-y-1 font-mono text-base bg-surface-1 p-3 rounded">
                                     <p>v = u + at</p>
                                     <p>s = ut + ½at²</p>
                                     <p>v² = u² + 2as</p>
@@ -2012,8 +2057,8 @@
                             </div>
 
                             <div class="border-l-4 border-secondary pl-4">
-                                <h4 class="font-bold text-xl text-success mb-2">Projectile Motion (Must Know!)</h4>
-                                <div class="space-y-1 font-mono text-base bg-gray-50 p-3 rounded">
+                                <h4 class="font-bold text-xl text-primary mb-2">Projectile Motion (Must Know!)</h4>
+                                <div class="space-y-1 font-mono text-base bg-surface-1 p-3 rounded">
                                     <p>T = 2u sinθ / g</p>
                                     <p>H = u² sin²θ / 2g</p>
                                     <p>R = u² sin2θ / g</p>
@@ -2022,16 +2067,16 @@
                             </div>
 
                             <div class="border-l-4 border-success pl-4">
-                                <h4 class="font-bold text-xl text-accent mb-2">Relative Velocity</h4>
-                                <div class="space-y-1 font-mono text-base bg-gray-50 p-3 rounded">
+                                <h4 class="font-bold text-xl text-primary mb-2">Relative Velocity</h4>
+                                <div class="space-y-1 font-mono text-base bg-surface-1 p-3 rounded">
                                     <p>v_AB = v_A - v_B</p>
                                     <p>|v_AB| = √(v_A² + v_B² - 2v_Av_Bcosθ)</p>
                                 </div>
                             </div>
 
                             <div class="border-l-4 border-accent pl-4">
-                                <h4 class="font-bold text-xl text-danger mb-2">Circular Motion</h4>
-                                <div class="space-y-1 font-mono text-base bg-gray-50 p-3 rounded">
+                                <h4 class="font-bold text-xl text-primary mb-2">Circular Motion</h4>
+                                <div class="space-y-1 font-mono text-base bg-surface-1 p-3 rounded">
                                     <p>v = rω</p>
                                     <p>a_c = v²/r = ω²r</p>
                                     <p>T = 2π/ω = 2πr/v</p>
@@ -2041,38 +2086,38 @@
                     </div>
 
                     <!-- Exam Strategy -->
-                    <div class="bg-gradient-to-br from-yellow-100 to-orange-100 p-8 rounded-2xl shadow-xl border-l-4 border-accent">
-                        <h3 class="text-3xl font-bold text-accent mb-6 flex items-center">
+                    <div class="bg-gradient-to-br from-surface-3 to-surface-3 p-8 rounded-2xl border border-hairline border-l-4 border-accent">
+                        <h3 class="text-3xl font-bold text-primary mb-6 flex items-center">
                             <span class="text-4xl mr-3">⚡</span>
                             15-Minute Exam Strategy
                         </h3>
-                        <ol class="space-y-4 text-gray-800 text-lg">
+                        <ol class="space-y-4 text-ink text-lg">
                             <li class="flex items-start">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">1</span>
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">1</span>
                                 <div>
                                     <strong>Draw diagram FIRST</strong> - 80% mistakes happen due to wrong visualization
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">2</span>
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">2</span>
                                 <div>
                                     <strong>Write given & to find</strong> - Saves 30 seconds in comprehension
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">3</span>
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">3</span>
                                 <div>
                                     <strong>Check units</strong> - Convert km/h to m/s, degrees to radians
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">4</span>
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">4</span>
                                 <div>
                                     <strong>Use component method</strong> - For projectile & relative velocity, components NEVER fail
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-accent text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">5</span>
+                                <span class="bg-accent text-ink w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3 flex-shrink-0">5</span>
                                 <div>
                                     <strong>Verify answer</strong> - Check if velocity/displacement direction makes physical sense
                                 </div>
@@ -2084,13 +2129,13 @@
             </div>
 
             <!-- 7-Day Study Plan -->
-            <div class="bg-white p-10 rounded-3xl shadow-2xl mb-12">
+            <div class="bg-canvas p-10 rounded-3xl border border-hairline mb-12">
                 <h3 class="text-4xl font-bold text-center text-primary mb-8">📅 7-Day Kinematics Mastery Roadmap</h3>
                 
                 <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
-                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border-t-4 border-primary">
+                    <div class="bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl border-t-4 border-primary">
                         <div class="text-center mb-3">
-                            <span class="bg-primary text-white px-4 py-2 rounded-full font-bold">Day 1</span>
+                            <span class="bg-primary text-ink px-4 py-2 rounded-full font-bold">Day 1</span>
                         </div>
                         <h4 class="font-bold text-lg mb-2">1D Motion Basics</h4>
                         <ul class="text-sm space-y-1">
@@ -2100,9 +2145,9 @@
                         </ul>
                     </div>
 
-                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-t-4 border-secondary">
+                    <div class="bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl border-t-4 border-secondary">
                         <div class="text-center mb-3">
-                            <span class="bg-secondary text-white px-4 py-2 rounded-full font-bold">Day 2</span>
+                            <span class="bg-secondary text-ink px-4 py-2 rounded-full font-bold">Day 2</span>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Variable Acceleration</h4>
                         <ul class="text-sm space-y-1">
@@ -2112,9 +2157,9 @@
                         </ul>
                     </div>
 
-                    <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-t-4 border-success">
+                    <div class="bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl border-t-4 border-success">
                         <div class="text-center mb-3">
-                            <span class="bg-success text-white px-4 py-2 rounded-full font-bold">Day 3</span>
+                            <span class="bg-success text-ink px-4 py-2 rounded-full font-bold">Day 3</span>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Motion Graphs</h4>
                         <ul class="text-sm space-y-1">
@@ -2124,9 +2169,9 @@
                         </ul>
                     </div>
 
-                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl border-t-4 border-accent">
+                    <div class="bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl border-t-4 border-accent">
                         <div class="text-center mb-3">
-                            <span class="bg-accent text-white px-4 py-2 rounded-full font-bold">Day 4</span>
+                            <span class="bg-accent text-ink px-4 py-2 rounded-full font-bold">Day 4</span>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Projectile (Basic)</h4>
                         <ul class="text-sm space-y-1">
@@ -2136,9 +2181,9 @@
                         </ul>
                     </div>
 
-                    <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl border-t-4 border-danger">
+                    <div class="bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl border-t-4 border-danger">
                         <div class="text-center mb-3">
-                            <span class="bg-danger text-white px-4 py-2 rounded-full font-bold">Day 5</span>
+                            <span class="bg-danger text-ink px-4 py-2 rounded-full font-bold">Day 5</span>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Projectile (Advanced)</h4>
                         <ul class="text-sm space-y-1">
@@ -2148,9 +2193,9 @@
                         </ul>
                     </div>
 
-                    <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl border-t-4 border-indigo-600">
+                    <div class="bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl border-t-4 border-primary">
                         <div class="text-center mb-3">
-                            <span class="bg-indigo-600 text-white px-4 py-2 rounded-full font-bold">Day 6</span>
+                            <span class="bg-primary text-ink px-4 py-2 rounded-full font-bold">Day 6</span>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Relative + Circular</h4>
                         <ul class="text-sm space-y-1">
@@ -2160,9 +2205,9 @@
                         </ul>
                     </div>
 
-                    <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl border-t-4 border-pink-600">
+                    <div class="bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl border-t-4 border-primary">
                         <div class="text-center mb-3">
-                            <span class="bg-pink-600 text-white px-4 py-2 rounded-full font-bold">Day 7</span>
+                            <span class="bg-primary text-ink px-4 py-2 rounded-full font-bold">Day 7</span>
                         </div>
                         <h4 class="font-bold text-lg mb-2">Revision & Test</h4>
                         <ul class="text-sm space-y-1">
@@ -2175,69 +2220,69 @@
             </div>
 
             <!-- Common Mistakes -->
-            <div class="bg-gradient-to-br from-red-50 to-orange-50 p-10 rounded-3xl shadow-2xl border-l-8 border-danger mb-12">
-                <h3 class="text-4xl font-bold text-danger mb-8 flex items-center">
+            <div class="bg-gradient-to-br from-surface-2 to-surface-2 p-10 rounded-3xl border border-hairline border-l-8 border-danger mb-12">
+                <h3 class="text-4xl font-bold text-primary mb-8 flex items-center">
                     <span class="text-5xl mr-4">⚠️</span>
                     Top 10 Mistakes That Cost You Rank
                 </h3>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline">
                         <div class="flex items-start">
                             <span class="text-3xl mr-3">❌</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Using v² = u² + 2as for variable acceleration</h4>
-                                <p class="text-gray-700">This equation ONLY works for constant acceleration. Use calculus for variable a.</p>
+                                <p class="text-ink-muted">This equation ONLY works for constant acceleration. Use calculus for variable a.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline">
                         <div class="flex items-start">
                             <span class="text-3xl mr-3">❌</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Forgetting to break projectile into components</h4>
-                                <p class="text-gray-700">ALWAYS resolve into horizontal (ucosθ) and vertical (usinθ) first.</p>
+                                <p class="text-ink-muted">ALWAYS resolve into horizontal (ucosθ) and vertical (usinθ) first.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline">
                         <div class="flex items-start">
                             <span class="text-3xl mr-3">❌</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Wrong sign convention in relative velocity</h4>
-                                <p class="text-gray-700">v_AB = v_A - v_B (not +). Direction matters in vector subtraction!</p>
+                                <p class="text-ink-muted">v_AB = v_A - v_B (not +). Direction matters in vector subtraction!</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline">
                         <div class="flex items-start">
                             <span class="text-3xl mr-3">❌</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Confusing distance with displacement in graphs</h4>
-                                <p class="text-gray-700">Area under v-t below time-axis is NEGATIVE displacement, not distance.</p>
+                                <p class="text-ink-muted">Area under v-t below time-axis is NEGATIVE displacement, not distance.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline">
                         <div class="flex items-start">
                             <span class="text-3xl mr-3">❌</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Using degrees instead of radians in circular motion</h4>
-                                <p class="text-gray-700">s = rθ ONLY works when θ is in radians. Convert 360° = 2π rad.</p>
+                                <p class="text-ink-muted">s = rθ ONLY works when θ is in radians. Convert 360° = 2π rad.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="bg-canvas p-6 rounded-xl border border-hairline">
                         <div class="flex items-start">
                             <span class="text-3xl mr-3">❌</span>
                             <div>
                                 <h4 class="font-bold text-lg mb-2">Projectile on incline - using g instead of g cosα</h4>
-                                <p class="text-gray-700">Perpendicular component = g cosα, parallel = g sinα. This is 100% asked.</p>
+                                <p class="text-ink-muted">Perpendicular component = g cosα, parallel = g sinα. This is 100% asked.</p>
                             </div>
                         </div>
                     </div>
@@ -2245,12 +2290,12 @@
             </div>
 
             <!-- PYQ Trend Analysis -->
-            <div class="bg-white p-10 rounded-3xl shadow-2xl">
+            <div class="bg-canvas p-10 rounded-3xl border border-hairline">
                 <h3 class="text-4xl font-bold text-center text-primary mb-8">📊 Previous Year Question Trend (2015-2024)</h3>
                 
                 <div class="overflow-x-auto">
                     <table class="w-full custom-table">
-                        <thead class="bg-gradient-to-r from-primary to-secondary text-white">
+                        <thead class="bg-gradient-to-r from-primary to-primary text-ink">
                             <tr>
                                 <th class="p-4 text-left font-bold">Year</th>
                                 <th class="p-4 text-left font-bold">JEE Main Questions</th>
@@ -2260,48 +2305,48 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y">
-                            <tr class="hover:bg-blue-50 transition">
+                            <tr class="hover:bg-surface-2 transition">
                                 <td class="p-4 font-bold">2024</td>
                                 <td class="p-4">3 Qs (12 marks)</td>
                                 <td class="p-4">4 Qs (15 marks)</td>
                                 <td class="p-4">Projectile on incline + Relative velocity</td>
-                                <td class="p-4"><span class="bg-red-100 text-danger px-3 py-1 rounded-full text-sm font-semibold">Hard</span></td>
+                                <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-semibold">Hard</span></td>
                             </tr>
-                            <tr class="hover:bg-blue-50 transition">
+                            <tr class="hover:bg-surface-2 transition">
                                 <td class="p-4 font-bold">2023</td>
                                 <td class="p-4">4 Qs (16 marks)</td>
                                 <td class="p-4">3 Qs (12 marks)</td>
                                 <td class="p-4">Two projectiles meeting, Graphs</td>
-                                <td class="p-4"><span class="bg-yellow-100 text-accent px-3 py-1 rounded-full text-sm font-semibold">Medium</span></td>
+                                <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-semibold">Medium</span></td>
                             </tr>
-                            <tr class="hover:bg-blue-50 transition">
+                            <tr class="hover:bg-surface-2 transition">
                                 <td class="p-4 font-bold">2022</td>
                                 <td class="p-4">3 Qs (12 marks)</td>
                                 <td class="p-4">5 Qs (18 marks)</td>
                                 <td class="p-4">Relative velocity in 2D, Circular motion</td>
-                                <td class="p-4"><span class="bg-red-100 text-danger px-3 py-1 rounded-full text-sm font-semibold">Hard</span></td>
+                                <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-semibold">Hard</span></td>
                             </tr>
-                            <tr class="hover:bg-blue-50 transition">
+                            <tr class="hover:bg-surface-2 transition">
                                 <td class="p-4 font-bold">2021</td>
                                 <td class="p-4">2 Qs (8 marks)</td>
                                 <td class="p-4">4 Qs (14 marks)</td>
                                 <td class="p-4">Projectile trajectory, Variable acceleration</td>
-                                <td class="p-4"><span class="bg-yellow-100 text-accent px-3 py-1 rounded-full text-sm font-semibold">Medium</span></td>
+                                <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-semibold">Medium</span></td>
                             </tr>
-                            <tr class="hover:bg-blue-50 transition">
+                            <tr class="hover:bg-surface-2 transition">
                                 <td class="p-4 font-bold">2020</td>
                                 <td class="p-4">4 Qs (16 marks)</td>
                                 <td class="p-4">3 Qs (11 marks)</td>
                                 <td class="p-4">Rain-man, Motion graphs integration</td>
-                                <td class="p-4"><span class="bg-green-100 text-success px-3 py-1 rounded-full text-sm font-semibold">Easy</span></td>
+                                <td class="p-4"><span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-semibold">Easy</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="mt-8 bg-blue-50 p-6 rounded-xl border-l-4 border-primary">
+                <div class="mt-8 bg-surface-2 p-6 rounded-xl border-l-4 border-primary">
                     <h4 class="font-bold text-xl text-primary mb-3">🔥 2025 Prediction</h4>
-                    <p class="text-lg text-gray-800">
+                    <p class="text-lg text-ink">
                         Expect <strong>2-3 questions on projectile motion with calculus</strong> (finding angle when given constraints), 
                         <strong>1-2 on relative motion in 2D</strong> (river-swimmer, rain problems), and 
                         <strong>1 conceptual graph question</strong>. Total weightage: <strong>14-18 marks in JEE Main</strong>.
@@ -2314,68 +2359,68 @@
 </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">blog</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -2383,12 +2428,12 @@
                 <!-- Resources -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         
                     </ul>
                     
@@ -2397,25 +2442,25 @@
 
             <div>
                     <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                        <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                        <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                        <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                        <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                        <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                        <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
@@ -2423,9 +2468,10 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
+    <script src="../assets/js/notes.js"></script>
 
 </body>
 </html>

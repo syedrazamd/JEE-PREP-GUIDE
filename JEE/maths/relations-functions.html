@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Relations and Functions - Complete JEE Mathematics Notes with 150+ Examples">
     <meta property="og:description" content="Master relations, functions, domain & range, composite & inverse functions. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Relations and Functions - JEE Mathematics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/maths/relations-and-functions">
     <meta name="twitter:title" content="Relations and Functions - Complete JEE Mathematics Notes">
     <meta name="twitter:description" content="Master relations and functions with 150+ solved examples. Complete notes on domain, range, composite & inverse functions for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
 
@@ -58,25 +58,38 @@
     <meta name="apple-mobile-web-app-title" content="Relations & Functions JEE">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jeeprepguide.netlify.app/logo.png">
-    <link rel="apple-touch-icon" href="https://jeeprepguide.netlify.app/logo.png">
+    <link rel="icon" type="image/x-icon" href="/logo-header.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-header.webp">
+    <link rel="apple-touch-icon" href="/logo-header.webp">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -122,7 +135,7 @@
       "@type": "Article",
       "headline": "Relations and Functions - Complete JEE Mathematics Notes 2025-26",
       "description": "Comprehensive notes on Relations and Functions covering types of relations, types of functions, domain & range, composite functions, inverse functions with 150+ solved examples",
-      "image": "https://jeeprepguide.netlify.app/logo.png",
+      "image": "/logo-header.webp",
       "author": {
         "@type": "Organization",
         "name": "JEE Prep Guide",
@@ -133,7 +146,7 @@
         "name": "JEE Prep Guide",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://jeeprepguide.netlify.app/logo.png"
+          "url": "/logo-header.webp"
         }
       },
       "datePublished": "2024-12-19",
@@ -358,7 +371,7 @@
       "@type": "VideoObject",
       "name": "Relations and Functions - Complete Tutorial",
       "description": "Learn Relations and Functions for JEE with examples",
-      "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+      "thumbnailUrl": "/logo-header.webp",
       "uploadDate": "2024-12-19",
       "duration": "PT60M",
       "contentUrl": "https://jeeprepguide.netlify.app/jee/maths/relations-and-functions"
@@ -395,59 +408,61 @@
       });
     </script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#e11d48',
-                        secondary: '#be123c',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-maths.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-maths.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-rose-50 text-gray-800">
+<body class="bg-canvas text-ink">
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #e11d48, #fb7185); z-index: 9999; transition: width 0.1s;"></div>
 
 <!-- Header -->
-<header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+<header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                    <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide"></a>
+                <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                    <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide"></a>
                 </div>
                 <div>
-                    <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                    <p class="text-sm text-gray-500">Path to IIT</p>
+                    <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                    <p class="text-sm text-ink-tertiary">Path to IIT</p>
                 </div>
             </div>
             <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
             </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
         </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
     </div>
 </header>
 
 <!-- Breadcrumb Navigation -->
-<nav class="bg-gray-100 py-3 border-b">
+<nav class="bg-surface-1 py-3 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -456,23 +471,23 @@
                 </a>
                 <meta itemprop="position" content="1" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="https://jeeprepguide.netlify.app/jee" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">JEE</span>
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-primary hover:underline" itemprop="item">
                     <span itemprop="name">Mathematics</span>
                 </a>
                 <meta itemprop="position" content="3" />
             </li>
-            <li class="text-gray-400">/</li>
+            <li class="text-ink-subtle">/</li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span class="text-gray-600 font-semibold" itemprop="name">Relations and Functions</span>
+                <span class="text-ink-muted font-semibold" itemprop="name">Relations and Functions</span>
                 <meta itemprop="position" content="4" />
             </li>
         </ol>
@@ -480,32 +495,32 @@
 </nav>
 
 <!-- Quick Navigation -->
-<section class="bg-gradient-to-r from-purple-50 to-blue-50 py-6 border-b">
+<section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Relations and Functions</h2>
+        <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Relations and Functions</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-            <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Basic Concepts
             </a>
-            <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Types of Relations
             </a>
-            <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Types of Functions
             </a>
-            <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Domain & Range
             </a>
-            <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Composite Functions
             </a>
-            <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Inverse Functions
             </a>
-            <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Special Functions
             </a>
-            <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+            <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                 Advanced Topics
             </a>
         </div>
@@ -513,28 +528,28 @@
 </section>
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-primary via-rose-600 to-secondary text-white py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center">
             <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                 Relations & Functions
-                <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
             </h2>
             <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                 Master the foundation of Mathematics with complete notes on Relations, Functions, Domain & Range, Composite Functions, and Inverse Functions. Includes 150+ solved problems and all JEE shortcuts.
             </p>
             <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">📚 8 Complete Sections</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                     <span class="font-bold text-lg">🎯 Quick Formulas</span>
                 </div>
             </div>
@@ -543,21 +558,21 @@
 </section>
 
 <!-- Rating Section -->
-<section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+<section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="name" content="Relations and Functions JEE Notes">
     <meta itemprop="description" content="Complete study notes for Relations and Functions">
-    <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta itemprop="image" content="/logo-header.webp">
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
         <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center space-x-6 mb-4 md:mb-0">
                 <div class="flex items-center">
-                    <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                    <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                     <span class="ml-3 text-xl font-bold">
                         <span itemprop="ratingValue">4.8</span>/5
                     </span>
                 </div>
-                <div class="text-gray-600">
+                <div class="text-ink-muted">
                     <span itemprop="reviewCount">250</span>+ students rated this helpful
                 </div>
                 <meta itemprop="bestRating" content="5">
@@ -567,15 +582,15 @@
             <div class="flex items-center space-x-6">
                 <div class="text-center">
                     <div class="text-2xl font-bold text-primary">150+</div>
-                    <div class="text-sm text-gray-600">Solved Examples</div>
+                    <div class="text-sm text-ink-muted">Solved Examples</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-success">3 hrs</div>
-                    <div class="text-sm text-gray-600">Study Time</div>
+                    <div class="text-2xl font-bold text-primary">3 hrs</div>
+                    <div class="text-sm text-ink-muted">Study Time</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-2xl font-bold text-secondary">Free</div>
-                    <div class="text-sm text-gray-600">Always</div>
+                    <div class="text-2xl font-bold text-primary">Free</div>
+                    <div class="text-sm text-ink-muted">Always</div>
                 </div>
             </div>
         </div>
@@ -587,35 +602,47 @@
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
         <!-- Sidebar Navigation -->
-        <aside class="lg:col-span-1">
-            <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <aside class="order-2 lg:order-1 lg:col-span-1">
+            <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                     <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                     Table of Contents
                 </h3>
                 <ul class="space-y-2 text-base font-medium">
-                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Basic Concepts</a></li>
-                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Types of Relations</a></li>
-                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Types of Functions</a></li>
-                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Domain & Range</a></li>
-                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Composite Functions</a></li>
-                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Inverse Functions</a></li>
-                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Special Functions</a></li>
-                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. Advanced Topics</a></li>
-                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                    <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Basic Concepts</a></li>
+                    <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Types of Relations</a></li>
+                    <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Types of Functions</a></li>
+                    <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Domain & Range</a></li>
+                    <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Composite Functions</a></li>
+                    <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Inverse Functions</a></li>
+                    <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Special Functions</a></li>
+                    <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. Advanced Topics</a></li>
+                    <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                    <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                 </ul>
             </div>
         </aside>
 
         <!-- Main Content Area -->
-        <main class="lg:col-span-3 space-y-12">
+        <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./sets.html" class="text-primary font-semibold hover:underline">Sets &rarr;</a>
+                <a href="./quadratic-equations.html" class="text-primary font-semibold hover:underline">Quadratic Equations &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 
             <!-- Chapter 1: Basic Concepts -->
-            <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Basic Concepts</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Basic Concepts</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -625,15 +652,15 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Cartesian Product</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-4">
                             If A and B are two non-empty sets, the <strong>Cartesian product A × B</strong> is the set of all ordered pairs (a, b) where a ∈ A and b ∈ B.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[A \times B = \{(a, b) : a \in A, b \in B\}\]
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Example:</p>
                             <p>If A = {1, 2} and B = {3, 4}</p>
                             <div class="math-display">
@@ -656,12 +683,12 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.2 Relation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-4">
                             A <strong>relation R</strong> from set A to set B is a subset of the Cartesian product A × B.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[R \subseteq A \times B\]
                         </div>
                         <p class="text-lg mt-4">
@@ -670,14 +697,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 1
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> If A = {1, 2, 3} and B = {4, 5}, find the number of possible relations from A to B.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Find n(A × B)</p>
                             <p class="mb-2">n(A) = 3, n(B) = 2</p>
                             <div class="math-display">
@@ -690,7 +717,7 @@
                                 \[\text{Number of relations} = 2^{n(A \times B)} = 2^6 = 64\]
                             </div>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\text{Answer: 64 relations}\]
                             </div>
                         </div>
@@ -698,7 +725,7 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Function</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-4">
                             A relation f from set A to set B is called a <strong>function</strong> if:
@@ -707,7 +734,7 @@
                             <li>Every element of A has an image in B</li>
                             <li>No element of A has more than one image in B</li>
                         </ul>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[f: A \to B\]
                         </div>
                         <p class="text-lg mt-4">
@@ -718,7 +745,7 @@
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Key Difference: Relation vs Function
                         </h4>
                         <div class="overflow-x-auto">
@@ -754,10 +781,10 @@
             </section>
 
             <!-- Chapter 2: Types of Relations -->
-            <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Types of Relations</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Types of Relations</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -765,38 +792,38 @@
                         Relations can be classified based on their properties. Understanding these types is crucial for solving JEE problems efficiently.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Empty Relation</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Empty Relation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <p class="text-lg mb-3">
                             A relation R in a set A is called an <strong>empty relation</strong> if no element of A is related to any element of A.
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[R = \phi \subset A \times A\]
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Universal Relation</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Universal Relation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <p class="text-lg mb-3">
                             A relation R in a set A is called a <strong>universal relation</strong> if each element of A is related to every element of A.
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[R = A \times A\]
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 Reflexive Relation</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 Reflexive Relation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <p class="text-lg mb-3">
                             A relation R in a set A is called <strong>reflexive</strong> if (a, a) ∈ R for every a ∈ A.
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[\forall a \in A, (a, a) \in R\]
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Examples:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Equality relation (=) is reflexive: a = a</li>
@@ -806,16 +833,16 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.4 Symmetric Relation</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.4 Symmetric Relation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <p class="text-lg mb-3">
                             A relation R in a set A is called <strong>symmetric</strong> if (a, b) ∈ R implies (b, a) ∈ R.
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[(a, b) \in R \Rightarrow (b, a) \in R\]
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Examples:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Equality relation (=): if a = b then b = a</li>
@@ -825,16 +852,16 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.5 Transitive Relation</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.5 Transitive Relation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <p class="text-lg mb-3">
                             A relation R in a set A is called <strong>transitive</strong> if (a, b) ∈ R and (b, c) ∈ R implies (a, c) ∈ R.
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[(a, b) \in R \text{ and } (b, c) \in R \Rightarrow (a, c) \in R\]
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Examples:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Less than (<): if a < b and b < c then a < c</li>
@@ -844,10 +871,10 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.6 Equivalence Relation</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.6 Equivalence Relation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Most Important for JEE!</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Most Important for JEE!</h4>
                         <p class="text-lg mb-3">
                             A relation R in a set A is called an <strong>equivalence relation</strong> if it is:
                         </p>
@@ -856,7 +883,7 @@
                             <li><strong>Symmetric:</strong> (a, b) ∈ R ⇒ (b, a) ∈ R</li>
                             <li><strong>Transitive:</strong> (a, b) ∈ R and (b, c) ∈ R ⇒ (a, c) ∈ R</li>
                         </ul>
-                        <div class="bg-blue-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <p class="font-semibold mb-2">Classic Examples:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Equality relation (=)</li>
@@ -867,28 +894,28 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 2 (JEE Main Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Let A = {1, 2, 3, 4} and R = {(1,1), (2,2), (3,3), (4,4), (1,2), (2,1), (2,3), (3,2)}. Check if R is an equivalence relation.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Check 1: Reflexive?</strong></p>
                             <p class="mb-2">All elements (1,1), (2,2), (3,3), (4,4) are present ✓</p>
-                            <p class="text-success font-semibold mb-4">✓ R is reflexive</p>
+                            <p class="text-primary font-semibold mb-4">✓ R is reflexive</p>
                             
                             <p class="mb-3"><strong>Check 2: Symmetric?</strong></p>
                             <p class="mb-2">• (1,2) ∈ R and (2,1) ∈ R ✓</p>
                             <p class="mb-2">• (2,3) ∈ R and (3,2) ∈ R ✓</p>
-                            <p class="text-success font-semibold mb-4">✓ R is symmetric</p>
+                            <p class="text-primary font-semibold mb-4">✓ R is symmetric</p>
                             
                             <p class="mb-3"><strong>Check 3: Transitive?</strong></p>
                             <p class="mb-2">• (1,2) ∈ R and (2,3) ∈ R but (1,3) ∉ R</p>
-                            <p class="text-danger font-semibold mb-4">✗ R is NOT transitive</p>
+                            <p class="text-primary font-semibold mb-4">✗ R is NOT transitive</p>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-danger mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-danger mt-4">
                                 \[\text{Answer: R is NOT an equivalence relation}\]
                             </div>
                         </div>
@@ -911,10 +938,10 @@
             </section>
 
             <!-- Chapter 3: Types of Functions -->
-            <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Types of Functions</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Types of Functions</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -924,19 +951,19 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 One-One Function (Injective)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-3">
                             A function f: A → B is called <strong>one-one (injective)</strong> if different elements of A have different images in B.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[f(x_1) = f(x_2) \Rightarrow x_1 = x_2\]
                         </div>
                         <p class="text-center text-lg mt-3 font-semibold">OR equivalently</p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)\]
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Graphical Test:</p>
                             <p>Any horizontal line cuts the graph at most once.</p>
                         </div>
@@ -944,12 +971,12 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Onto Function (Surjective)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-3">
                             A function f: A → B is called <strong>onto (surjective)</strong> if every element of B is the image of at least one element of A.
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[\text{Range of } f = \text{Codomain} = B\]
                         </div>
                         <p class="text-lg mt-3">
@@ -959,7 +986,7 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Bijective Function (One-One and Onto)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-3">
                             A function f: A → B is called <strong>bijective</strong> if it is both one-one and onto.
@@ -968,20 +995,20 @@
                             <li>Every element of A maps to a unique element in B (one-one)</li>
                             <li>Every element of B is mapped by some element in A (onto)</li>
                         </ul>
-                        <div class="bg-purple-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <p class="font-semibold">Important: Only bijective functions have inverse functions!</p>
                         </div>
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 3 (JEE Main 2023 Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Check if f: ℝ → ℝ defined by f(x) = 3x + 5 is one-one and onto.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Test for One-One:</strong></p>
                             <p class="mb-2">Let f(x₁) = f(x₂)</p>
                             <div class="math-display">
@@ -993,7 +1020,7 @@
                             <div class="math-display">
                                 \[x_1 = x_2\]
                             </div>
-                            <p class="text-success font-semibold mb-4">✓ f is one-one</p>
+                            <p class="text-primary font-semibold mb-4">✓ f is one-one</p>
                             
                             <p class="mb-3 mt-4"><strong>Test for Onto:</strong></p>
                             <p class="mb-2">Let y ∈ ℝ (codomain). We need to find x ∈ ℝ such that f(x) = y</p>
@@ -1004,9 +1031,9 @@
                                 \[x = \frac{y-5}{3}\]
                             </div>
                             <p class="mb-2">For any y ∈ ℝ, we can find x = (y-5)/3 ∈ ℝ</p>
-                            <p class="text-success font-semibold mb-4">✓ f is onto</p>
+                            <p class="text-primary font-semibold mb-4">✓ f is onto</p>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\text{Answer: f is bijective (one-one and onto)}\]
                             </div>
                         </div>
@@ -1015,25 +1042,25 @@
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Other Important Functions</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Identity Function</h5>
                             <div class="math-display">
                                 \[I(x) = x\]
                             </div>
                             <p class="text-sm mt-2">Maps every element to itself</p>
-                            <p class="text-sm font-semibold text-success">Bijective</p>
+                            <p class="text-sm font-semibold text-primary">Bijective</p>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Constant Function</h5>
                             <div class="math-display">
                                 \[f(x) = c\]
                             </div>
                             <p class="text-sm mt-2">Maps all elements to constant c</p>
-                            <p class="text-sm font-semibold text-danger">Neither one-one nor onto</p>
+                            <p class="text-sm font-semibold text-primary">Neither one-one nor onto</p>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Polynomial Function</h5>
                             <div class="math-display">
                                 \[f(x) = a_nx^n + ... + a_1x + a_0\]
@@ -1041,7 +1068,7 @@
                             <p class="text-sm mt-2">Degree n polynomial</p>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Rational Function</h5>
                             <div class="math-display">
                                 \[f(x) = \frac{P(x)}{Q(x)}\]
@@ -1051,45 +1078,45 @@
                     </div>
 
                     <div class="overflow-x-auto my-6">
-                        <table class="w-full custom-table shadow-lg">
+                        <table class="w-full custom-table border border-hairline">
                             <thead>
-                                <tr class="text-white">
+                                <tr class="text-ink">
                                     <th class="p-4 text-left">Function Type</th>
                                     <th class="p-4 text-left">Example</th>
                                     <th class="p-4 text-left">One-One?</th>
                                     <th class="p-4 text-left">Onto?</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y bg-white">
+                            <tbody class="divide-y bg-canvas">
                                 <tr>
                                     <td class="p-4 font-semibold">f(x) = x</td>
                                     <td class="p-4">Identity</td>
-                                    <td class="p-4 text-success">✓ Yes</td>
-                                    <td class="p-4 text-success">✓ Yes</td>
+                                    <td class="p-4 text-primary">✓ Yes</td>
+                                    <td class="p-4 text-primary">✓ Yes</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">f(x) = x²</td>
                                     <td class="p-4">ℝ → ℝ</td>
-                                    <td class="p-4 text-danger">✗ No</td>
-                                    <td class="p-4 text-danger">✗ No</td>
+                                    <td class="p-4 text-primary">✗ No</td>
+                                    <td class="p-4 text-primary">✗ No</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">f(x) = x³</td>
                                     <td class="p-4">ℝ → ℝ</td>
-                                    <td class="p-4 text-success">✓ Yes</td>
-                                    <td class="p-4 text-success">✓ Yes</td>
+                                    <td class="p-4 text-primary">✓ Yes</td>
+                                    <td class="p-4 text-primary">✓ Yes</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">f(x) = eˣ</td>
                                     <td class="p-4">ℝ → ℝ⁺</td>
-                                    <td class="p-4 text-success">✓ Yes</td>
-                                    <td class="p-4 text-success">✓ Yes</td>
+                                    <td class="p-4 text-primary">✓ Yes</td>
+                                    <td class="p-4 text-primary">✓ Yes</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold">f(x) = |x|</td>
                                     <td class="p-4">ℝ → ℝ</td>
-                                    <td class="p-4 text-danger">✗ No</td>
-                                    <td class="p-4 text-danger">✗ No</td>
+                                    <td class="p-4 text-primary">✗ No</td>
+                                    <td class="p-4 text-primary">✗ No</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1098,10 +1125,10 @@
             </section>
 
             <!-- Chapter 4: Domain and Range -->
-            <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-success">
+            <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-success">
                 <div class="flex items-center mb-6">
-                    <span class="bg-success text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Domain and Range</h2>
+                    <span class="bg-success text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Domain and Range</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1109,12 +1136,12 @@
                         Finding domain and range is a guaranteed scoring topic in JEE. Learn the systematic approach to solve any domain-range problem in under 2 minutes.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.1 Finding Domain</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Finding Domain</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">General Rules for Domain</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">General Rules for Domain</h4>
                         <div class="space-y-4">
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">1. Polynomial Functions</p>
                                 <p>Domain = ℝ (all real numbers)</p>
                                 <div class="math-display">
@@ -1122,7 +1149,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">2. Rational Functions</p>
                                 <p>Denominator ≠ 0</p>
                                 <div class="math-display">
@@ -1130,7 +1157,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">3. Square Root Functions</p>
                                 <p>Expression under root ≥ 0</p>
                                 <div class="math-display">
@@ -1138,7 +1165,7 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">4. Logarithmic Functions</p>
                                 <p>Argument > 0</p>
                                 <div class="math-display">
@@ -1149,14 +1176,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 4
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Find the domain of \(f(x) = \sqrt{x-3} + \frac{1}{x-5}\)
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Condition 1:</strong> For √(x-3) to be real</p>
                             <div class="math-display">
                                 \[x - 3 \geq 0\]
@@ -1176,28 +1203,28 @@
                             <p class="mb-3 mt-4"><strong>Combining both conditions:</strong></p>
                             <p class="mb-2">x ≥ 3 AND x ≠ 5</p>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[Domain = [3, 5) \cup (5, \infty)\]
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-success mt-8 mb-4">4.2 Finding Range</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Finding Range</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-green-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-success">Methods for Finding Range</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Methods for Finding Range</h4>
                         <div class="space-y-4">
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Method 1: Solve for x in terms of y</p>
                                 <p>Put y = f(x), solve for x, find values of y for which x is real</p>
                             </div>
                             
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Method 2: Use Calculus</p>
                                 <p>Find minimum and maximum using derivatives</p>
                             </div>
                             
-                            <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Method 3: Graphical Method</p>
                                 <p>Sketch the graph and observe y-values covered</p>
                             </div>
@@ -1205,14 +1232,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 5 (JEE Advanced Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Find the range of \(f(x) = \frac{x-1}{x-2}\) where x ∈ ℝ - {2}
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Method: Solve for x in terms of y</strong></p>
                             <p class="mb-2">Let y = f(x)</p>
                             <div class="math-display">
@@ -1238,7 +1265,7 @@
                             <p class="mb-2">y - 1 ≠ 0</p>
                             <p class="mb-2">y ≠ 1</p>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[Range = \mathbb{R} - \{1\}\]
                             </div>
                         </div>
@@ -1250,7 +1277,7 @@
                         </h4>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left mt-3">
-                                <thead class="bg-blue-100">
+                                <thead class="bg-surface-3">
                                     <tr>
                                         <th class="p-3">Function</th>
                                         <th class="p-3">Domain</th>
@@ -1311,10 +1338,10 @@
             </section>
 
             <!-- Chapter 5: Composite Functions -->
-            <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Composite Functions</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Composite Functions</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1324,18 +1351,18 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 Definition and Notation</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Composite Function</h4>
                         <p class="text-lg mb-3">
                             Let f: A → B and g: B → C be two functions. The <strong>composite function</strong> gof (read as "g of f") is defined as:
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[(g \circ f)(x) = g(f(x))\]
                         </div>
                         <p class="text-lg mt-4">
                             <strong>Important:</strong> gof exists only if Range(f) ⊆ Domain(g)
                         </p>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Example:</p>
                             <p>If f(x) = x² and g(x) = x + 1, then:</p>
                             <div class="math-display">
@@ -1348,7 +1375,7 @@
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Key Point
                         </h4>
                         <p class="text-lg">
@@ -1361,46 +1388,46 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Properties of Composite Functions</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Important Properties</h4>
                         <div class="space-y-4">
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">1. Associativity</p>
                                 <div class="math-display">
                                     \[(h \circ g) \circ f = h \circ (g \circ f)\]
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">2. Identity Function Property</p>
                                 <div class="math-display">
                                     \[f \circ I = I \circ f = f\]
                                 </div>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">3. If f and g are one-one, then gof is one-one</p>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">4. If f and g are onto, then gof is onto</p>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">5. If f and g are bijective, then gof is bijective</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 6
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> If f(x) = 2x + 3 and g(x) = x² - 1, find (fog)(x) and (gof)(x).
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Finding (fog)(x) = f(g(x)):</strong></p>
                             <div class="math-display">
                                 \[f(g(x)) = f(x^2 - 1)\]
@@ -1412,7 +1439,7 @@
                             <div class="math-display">
                                 \[= 2x^2 - 2 + 3\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[(f \circ g)(x) = 2x^2 + 1\]
                             </div>
                             
@@ -1427,7 +1454,7 @@
                             <div class="math-display">
                                 \[= 4x^2 + 12x + 9 - 1\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[(g \circ f)(x) = 4x^2 + 12x + 8\]
                             </div>
                             
@@ -1438,14 +1465,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 7 (JEE Advanced Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> If f: ℝ → ℝ is defined by f(x) = 3x - 5, find fofof(x).
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Find (fof)(x)</p>
                             <div class="math-display">
                                 \[(f \circ f)(x) = f(f(x)) = f(3x - 5)\]
@@ -1467,7 +1494,7 @@
                             <div class="math-display">
                                 \[= 27x - 60 - 5\]
                             </div>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[(f \circ f \circ f)(x) = 27x - 65\]
                             </div>
                         </div>
@@ -1476,10 +1503,10 @@
             </section>
 
             <!-- Chapter 6: Inverse Functions -->
-            <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+            <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Inverse Functions</h2>
+                    <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Inverse Functions</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1487,26 +1514,26 @@
                         Inverse functions are one of the most important concepts in JEE Mathematics. They connect directly to inverse trigonometric functions, which are heavily tested.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.1 Definition of Inverse Function</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Definition of Inverse Function</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Definition</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-3">
                             Let f: A → B be a bijective function. The <strong>inverse function</strong> f⁻¹: B → A is defined by:
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[f^{-1}(y) = x \iff f(x) = y\]
                         </div>
                         <p class="text-lg mt-4">
                             <strong>Key Properties:</strong>
                         </p>
-                        <div class="math-display bg-blue-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[f(f^{-1}(x)) = x \text{ and } f^{-1}(f(x)) = x\]
                         </div>
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-danger my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-danger">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Condition for Existence
                         </h4>
                         <p class="text-lg">
@@ -1518,10 +1545,10 @@
                         </ul>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.2 How to Find Inverse Function</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 How to Find Inverse Function</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Step-by-Step Method</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Step-by-Step Method</h4>
                         <ol class="list-decimal list-inside space-y-3 text-lg ml-4">
                             <li><strong>Check if f is bijective</strong> (necessary condition)</li>
                             <li>Write y = f(x)</li>
@@ -1531,17 +1558,17 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 8
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Find the inverse of f(x) = 3x + 5.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Check if bijective</p>
                             <p class="mb-2">f(x) = 3x + 5 is a linear function with non-zero slope</p>
-                            <p class="mb-2 text-success font-semibold">✓ It is bijective (one-one and onto)</p>
+                            <p class="mb-2 text-primary font-semibold">✓ It is bijective (one-one and onto)</p>
                             
                             <p class="mb-3 mt-4"><strong>Step 2:</strong> Write y = f(x)</p>
                             <div class="math-display">
@@ -1557,7 +1584,7 @@
                             </div>
                             
                             <p class="mb-3 mt-4"><strong>Step 4:</strong> Replace y with x</p>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[f^{-1}(x) = \frac{x-5}{3}\]
                             </div>
                             
@@ -1565,19 +1592,19 @@
                             <div class="math-display">
                                 \[f(f^{-1}(x)) = f\left(\frac{x-5}{3}\right) = 3 \cdot \frac{x-5}{3} + 5 = x-5+5 = x\]
                             </div>
-                            <p class="text-success font-semibold">✓ Verified!</p>
+                            <p class="text-primary font-semibold">✓ Verified!</p>
                         </div>
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 9 (JEE Main Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Find the inverse of \(f(x) = \frac{2x+3}{5x-2}\), x ≠ 2/5.
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3"><strong>Step 1:</strong> Write y = f(x)</p>
                             <div class="math-display">
                                 \[y = \frac{2x+3}{5x-2}\]
@@ -1601,7 +1628,7 @@
                             </div>
                             
                             <p class="mb-3 mt-4"><strong>Step 3:</strong> Replace y with x</p>
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                 \[f^{-1}(x) = \frac{2x + 3}{5x - 2}, \quad x \neq \frac{2}{5}\]
                             </div>
                             
@@ -1611,30 +1638,30 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">6.3 Properties of Inverse Functions</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.3 Properties of Inverse Functions</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-secondary">Important Properties</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Important Properties</h4>
                         <div class="space-y-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">1. Domain and Range Swap</p>
                                 <p>Domain(f⁻¹) = Range(f)</p>
                                 <p>Range(f⁻¹) = Domain(f)</p>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">2. Graph Symmetry</p>
                                 <p>Graph of f⁻¹ is reflection of graph of f about the line y = x</p>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">3. Inverse of Inverse</p>
                                 <div class="math-display">
                                     \[(f^{-1})^{-1} = f\]
                                 </div>
                             </div>
                             
-                            <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">4. Inverse of Composite Function</p>
                                 <div class="math-display">
                                     \[(g \circ f)^{-1} = f^{-1} \circ g^{-1}\]
@@ -1661,10 +1688,10 @@
             </section>
 
             <!-- Chapter 7: Special Functions -->
-            <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-accent">
+            <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-accent">
                 <div class="flex items-center mb-6">
-                    <span class="bg-accent text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Special Functions</h2>
+                    <span class="bg-accent text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Special Functions</h2>
                 </div>
 
                 <div class="prose max-w-none">
@@ -1672,17 +1699,17 @@
                         These special functions appear frequently in JEE problems and have unique properties that you must memorize for quick problem-solving.
                     </p>
 
-                    <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.1 Modulus Function (Absolute Value)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Modulus Function (Absolute Value)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-accent">Definition</h4>
-                        <div class="math-display bg-orange-50 p-4 rounded-lg">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[|x| = \begin{cases} 
                             x & \text{if } x \geq 0 \\
                             -x & \text{if } x < 0
                             \end{cases}\]
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Properties:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Domain: ℝ, Range: [0, ∞)</li>
@@ -1694,18 +1721,18 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.2 Signum Function</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Signum Function</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-accent">Definition</h4>
-                        <div class="math-display bg-orange-50 p-4 rounded-lg">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[\text{sgn}(x) = \begin{cases} 
                             1 & \text{if } x > 0 \\
                             0 & \text{if } x = 0 \\
                             -1 & \text{if } x < 0
                             \end{cases}\]
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Properties:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Domain: ℝ, Range: {−1, 0, 1}</li>
@@ -1715,14 +1742,14 @@
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.3 Greatest Integer Function (Floor Function)</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.3 Greatest Integer Function (Floor Function)</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-accent">Definition</h4>
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-3">
                             The greatest integer function [x] (or ⌊x⌋) gives the <strong>greatest integer less than or equal to x</strong>.
                         </p>
-                        <div class="bg-orange-50 p-4 rounded-lg">
+                        <div class="bg-surface-2 p-4 rounded-lg">
                             <p class="font-semibold mb-2">Examples:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>[2.7] = 2</li>
@@ -1731,7 +1758,7 @@
                                 <li>[−5] = −5</li>
                             </ul>
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Properties:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Domain: ℝ, Range: ℤ (integers)</li>
@@ -1743,14 +1770,14 @@
                     </div>
 
                     <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">📝</span> Solved Example 10 (JEE Advanced Type)
                         </h4>
                         <p class="text-lg mb-3">
                             <strong>Question:</strong> Solve: [x] + [2x] = 3
                         </p>
                         <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                        <div class="bg-white p-4 rounded-lg my-3">
+                        <div class="bg-canvas p-4 rounded-lg my-3">
                             <p class="mb-3">Let x = n + f where n = [x] and 0 ≤ f < 1 (fractional part)</p>
                             
                             <p class="mb-3 mt-4"><strong>Case 1:</strong> 0 ≤ f < 0.5</p>
@@ -1769,22 +1796,22 @@
                                 \[[x] + [2x] = n + 2n + 1 = 3n + 1 = 3\]
                             </div>
                             <p class="mb-2">Therefore 3n = 2, which gives n = 2/3 (not an integer!)</p>
-                            <p class="mb-2 text-danger font-semibold">No solution in this case</p>
+                            <p class="mb-2 text-primary font-semibold">No solution in this case</p>
                             
-                            <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent mt-4">
+                            <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent mt-4">
                                 \[\text{Answer: } x \in [1, 1.5)\]
                             </div>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-accent mt-8 mb-4">7.4 Fractional Part Function</h3>
+                    <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.4 Fractional Part Function</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-orange-300 my-6">
-                        <h4 class="font-bold text-xl mb-4 text-accent">Definition</h4>
-                        <div class="math-display bg-orange-50 p-4 rounded-lg">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                        <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[\{x\} = x - [x]\]
                         </div>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Properties:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Domain: ℝ, Range: [0, 1)</li>
@@ -1796,7 +1823,7 @@
                     </div>
 
                     <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                        <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                        <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                             <span class="text-2xl mr-2">⚠️</span> Common Mistakes with Special Functions
                         </h4>
                         <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1810,17 +1837,17 @@
             </section>
 
             <!-- Chapter 8: Advanced Topics -->
-            <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+            <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                 <div class="flex items-center mb-6">
-                    <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Advanced Topics</h2>
+                    <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                    <h2 class="text-4xl font-extrabold text-ink">Advanced Topics</h2>
                 </div>
 
                 <div class="prose max-w-none">
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Even and Odd Functions</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Even Function</h5>
                             <div class="math-display">
                                 \[f(-x) = f(x)\]
@@ -1834,7 +1861,7 @@
                             </ul>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                             <h5 class="font-bold text-lg mb-3 text-primary">Odd Function</h5>
                             <div class="math-display">
                                 \[f(-x) = -f(x)\]
@@ -1849,7 +1876,7 @@
                         </div>
                     </div>
 
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Important Properties</h4>
                         <div class="space-y-3">
                             <p>• Even + Even = Even</p>
@@ -1864,18 +1891,18 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Periodic Functions</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <h4 class="font-bold text-xl mb-4 text-primary">Definition</h4>
                         <p class="text-lg mb-3">
                             A function f(x) is called <strong>periodic</strong> if there exists a positive number T such that:
                         </p>
-                        <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="math-display bg-surface-2 p-4 rounded-lg">
                             \[f(x + T) = f(x) \text{ for all } x\]
                         </div>
                         <p class="text-lg mt-3">
                             The smallest such T is called the <strong>fundamental period</strong>.
                         </p>
-                        <div class="mt-4 bg-white p-4 rounded-lg">
+                        <div class="mt-4 bg-canvas p-4 rounded-lg">
                             <p class="font-semibold mb-2">Standard Periods:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>sin x, cos x: Period = 2π</li>
@@ -1888,19 +1915,19 @@
 
                     <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.3 Important Theorems</h3>
                     
-                    <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
+                    <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                         <div class="space-y-4">
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Theorem 1: Uniqueness of Inverse</p>
                                 <p>If f is bijective, then f⁻¹ is unique and bijective</p>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Theorem 2: Composition of Bijections</p>
                                 <p>If f and g are bijective, then gof is bijective and (gof)⁻¹ = f⁻¹og⁻¹</p>
                             </div>
                             
-                            <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Theorem 3: Intermediate Value Property</p>
                                 <p>If f is continuous on [a,b] and k is between f(a) and f(b), then there exists c ∈ (a,b) such that f(c) = k</p>
                             </div>
@@ -1923,14 +1950,14 @@
             </section>
 
             <!-- Previous Year Questions -->
-            <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+            <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">📝</span>
                     Previous Year Questions Analysis
                 </h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Domain and Range: 35%</li>
@@ -1940,7 +1967,7 @@
                             <li>✓ Relations: 5%</li>
                         </ul>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                         <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                         <ul class="space-y-2 text-lg">
                             <li>✓ Composite & Inverse: 40%</li>
@@ -1951,8 +1978,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                    <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Finding domain and range of complex functions</li>
                         <li>Checking if function is one-one and onto</li>
@@ -1967,7 +1994,7 @@
                     </ol>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                     <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                     <div class="space-y-3">
                         <div class="flex justify-between items-center">
@@ -1990,21 +2017,21 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Download Complete PYQ PDF (2015-2024)
                     </a>
                 </div>
             </section>
 
             <!-- Practice Problems -->
-            <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+            <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                 <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                     <span class="text-5xl mr-4">🎯</span>
                     Practice Problem Set
                 </h2>
                 
-                <div class="bg-white text-gray-900 p-6 rounded-xl">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>If A = {1, 2, 3} and B = {4, 5}, find the number of relations from A to B.</li>
                         <li>Check if R = {(1,1), (2,2), (3,3), (1,2), (2,1)} is an equivalence relation in {1, 2, 3}.</li>
@@ -2017,8 +2044,8 @@
                     </ol>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Find domain of f(x) = 1/√(x² - 5x + 6).</li>
                         <li>Find range of f(x) = (x² + 2)/(x² + 1).</li>
@@ -2031,8 +2058,8 @@
                     </ol>
                 </div>
 
-                <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                    <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                     <ol class="list-decimal list-inside space-y-3 text-lg">
                         <li>Find domain of f(x) = log(x² - 4x + 3) + √(16 - x²).</li>
                         <li>If f: (0, ∞) → ℝ is defined by f(x) = ln x, show that f(fog) = f + fog for any g.</li>
@@ -2046,57 +2073,75 @@
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                    <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                         Get Solutions PDF with Step-by-Step Working
                     </a>
                 </div>
             </section>
 
-        </main>
+            <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./sequences-and-series.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Sequences And Series</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./sets.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Sets</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./complex-numbers.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Complex Numbers</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
     </div>
 </div>
 
 <!-- Related Notes Section -->
-<section class="bg-white py-12 mt-12 border-t-4 border-primary">
+<section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+        <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
             <span class="w-2 h-10 bg-primary rounded mr-4"></span>
             Related Mathematics Notes
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Related Note 1 -->
-            <a href="https://jeeprepguide.netlify.app/jee/maths/inverse-trigonometric-functions" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+            <a href="https://jeeprepguide.netlify.app/jee/maths/inverse-trigonometric-functions" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                    <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Inverse Trigonometric Functions</h3>
-                <p class="text-gray-600">Domain, Range, Properties, Graphs & Formulas</p>
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Inverse Trigonometric Functions</h3>
+                <p class="text-ink-muted">Domain, Range, Properties, Graphs & Formulas</p>
                 <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
 
             <!-- Related Note 2 -->
-            <a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+            <a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                 <div class="flex items-center mb-3">
-                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
+                    <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Sets</h3>
-                <p class="text-gray-600">Set theory, Operations, Venn diagrams, Cartesian product</p>
-                <div class="mt-4 text-secondary font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Sets</h3>
+                <p class="text-ink-muted">Set theory, Operations, Venn diagrams, Cartesian product</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
 
             <!-- Related Note 3 -->
-            <a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+            <a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                 <div class="flex items-center mb-3">
-                    <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                    <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Sequences and Series</h3>
-                <p class="text-gray-600">AP, GP, HP, Special series, Summation formulas</p>
-                <div class="mt-4 text-success font-semibold flex items-center">
+                <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Sequences and Series</h3>
+                <p class="text-ink-muted">AP, GP, HP, Special series, Summation formulas</p>
+                <div class="mt-4 text-primary font-semibold flex items-center">
                     Read Notes <span class="ml-2">→</span>
                 </div>
             </a>
@@ -2104,7 +2149,7 @@
 
         <!-- More Notes Link -->
         <div class="text-center mt-10">
-            <a href="https://jeeprepguide.netlify.app/jee/maths" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+            <a href="https://jeeprepguide.netlify.app/jee/maths" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                 View All Mathematics Notes →
             </a>
         </div>
@@ -2112,18 +2157,18 @@
 </section>
 
 <!-- SEO-Optimized Summary Section -->
-<section class="py-16 bg-gradient-to-br from-gray-50 to-purple-50">
+<section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <article class="prose max-w-none">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6">Relations and Functions - Complete Guide for JEE 2025-26</h2>
+            <h2 class="text-4xl font-bold text-ink mb-6">Relations and Functions - Complete Guide for JEE 2025-26</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Why Relations and Functions is Important for JEE?</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-ink-muted leading-relaxed mb-4">
                         <strong>Relations and Functions</strong> is one of the highest-scoring chapters in <strong>JEE Mathematics</strong>. It carries 12-16% weightage in JEE Main and 15-20% in JEE Advanced, making it crucial for success.
                     </p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                         <li><strong>Foundation for Calculus</strong> - Essential for understanding limits, continuity, and derivatives</li>
                         <li><strong>Direct Questions</strong> - 3-4 guaranteed questions worth 12-16 marks in JEE Main</li>
                         <li><strong>Application Based</strong> - Used in coordinate geometry, trigonometry, and complex numbers</li>
@@ -2131,12 +2176,12 @@
                     </ul>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Formulas to Remember</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">1. Most Asked Concepts</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">1. Most Asked Concepts</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• Domain and Range (35% questions)</li>
                                 <li>• Composite Functions (25% questions)</li>
                                 <li>• Inverse Functions (20% questions)</li>
@@ -2145,8 +2190,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-secondary mb-2">2. Must Remember Properties</h4>
-                            <ul class="text-gray-700 space-y-1 text-sm">
+                            <h4 class="font-bold text-lg text-primary mb-2">2. Must Remember Properties</h4>
+                            <ul class="text-ink-muted space-y-1 text-sm">
                                 <li>• f is bijective ⟺ f⁻¹ exists</li>
                                 <li>• (gof)⁻¹ = f⁻¹og⁻¹ (order reverses)</li>
                                 <li>• Domain(f⁻¹) = Range(f)</li>
@@ -2158,12 +2203,12 @@
             </div>
             
             <!-- Study Tips -->
-            <div class="mt-8 bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-2xl">
+            <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Relations and Functions Effectively?</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 4-5 days (3 hours/day)</li>
                             <li>Master <strong>domain and range</strong> - practice 50+ problems</li>
                             <li>Learn all <strong>standard domains and ranges</strong> by heart</li>
@@ -2173,7 +2218,7 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                             <li><strong>Time Required:</strong> 6-7 days (4 hours/day)</li>
                             <li>Deep dive into <strong>functional equations</strong></li>
                             <li>Master <strong>greatest integer and modulus</strong> functions</li>
@@ -2185,29 +2230,29 @@
             </div>
             
             <!-- Common Mistakes -->
-            <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                <ul class="space-y-3 text-gray-700">
+            <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                <ul class="space-y-3 text-ink-muted">
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Confusing domain with range:</strong> Remember, domain is input (x-values) and range is output (y-values)
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>fog = gof assumption:</strong> Composition is NOT commutative - always calculate both separately
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>[−2.3] = −2:</strong> WRONG! Greatest integer ≤ −2.3 is −3, not −2
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                        <span class="text-primary font-bold mr-3 text-xl">❌</span>
                         <div>
                             <strong>Assuming every function has inverse:</strong> Only bijective functions have inverse!
                         </div>
@@ -2216,11 +2261,11 @@
             </div>
             
             <!-- Previous Year Analysis -->
-            <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+            <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                 <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                 <div class="overflow-x-auto">
                     <table class="w-full border-collapse">
-                        <thead class="bg-primary text-white">
+                        <thead class="bg-primary text-ink">
                             <tr>
                                 <th class="p-3 text-left">Year</th>
                                 <th class="p-3 text-left">JEE Main</th>
@@ -2229,19 +2274,19 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y">
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2024</td>
                                 <td class="p-3">4 Questions (16 marks)</td>
                                 <td class="p-3">5 Questions (18 marks)</td>
                                 <td class="p-3">Domain-range, Composite functions</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2023</td>
                                 <td class="p-3">3 Questions (12 marks)</td>
                                 <td class="p-3">4 Questions (15 marks)</td>
                                 <td class="p-3">Inverse functions, Special functions</td>
                             </tr>
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-surface-1">
                                 <td class="p-3 font-semibold">2022</td>
                                 <td class="p-3">3 Questions (12 marks)</td>
                                 <td class="p-3">4 Questions (16 marks)</td>
@@ -2250,7 +2295,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="text-gray-700 mt-4 text-sm">
+                <p class="text-ink-muted mt-4 text-sm">
                     <strong>Trend:</strong> JEE is increasingly focusing on application-based problems involving domain-range and composite functions. Pure relation-based questions are declining.
                 </p>
             </div>
@@ -2260,102 +2305,102 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 mt-20">
+<footer class="bg-canvas text-ink py-12 mt-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">sitemap</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                     <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">sitemap</a></li>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Chemistry Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition"></a>Chemical Equilibrium</li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition"></a>Chemical Equilibrium</li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Physics Notes</h4>
-                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-white transition">Thermal Properties of Matter</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-white transition">Kinetic Theory of Gases</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-white transition">Wave Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-white transition">Simple Harmonic Motion</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-white transition">Electrostatics</a></li>
+                <ul>  <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
                 
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">JEE Maths Notes</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Other Subjects</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-white transition">Physics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Mathematics Notes</a></li>
-                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Study Tips</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/jee/physics" class="hover:text-ink transition">Physics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Mathematics Notes</a></li>
+                    <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Study Tips</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition" target="_blank" rel="noopener">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition" target="_blank" rel="noopener">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition" target="_blank" rel="noopener">EXAMINATION SERVICES</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-xl font-bold mb-4">Articles</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                         <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                         </ul>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-gray-400 text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Last Updated: 14 March, 2026</p>
+        <div class="border-t border-hairline pt-8 text-center">
+            <p class="text-ink-subtle text-sm">© 2024 JEE Prep Guide. All rights reserved.</p>
+            <p class="text-ink-subtle text-xs mt-2">Last Updated: 14 March, 2026</p>
         </div>
     </div>
 </footer>
 
 <!-- Scroll to Top Button -->
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-        class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+        class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
     ↑
 </button>
 <!-- Scripts -->

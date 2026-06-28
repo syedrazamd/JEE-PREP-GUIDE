@@ -33,7 +33,7 @@
     <meta property="og:site_name" content="JEE Prep Guide">
     <meta property="og:title" content="Current Electricity - Complete JEE Physics Notes with 150+ Examples">
     <meta property="og:description" content="Master Ohm's Law, Kirchhoff's Laws, RC Circuits & more. Complete notes with formulas, shortcuts & solved examples for JEE 2025-26.">
-    <meta property="og:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta property="og:image" content="/logo-header.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Current Electricity - JEE Physics Notes">
@@ -49,7 +49,7 @@
     <meta name="twitter:url" content="https://jeeprepguide.netlify.app/jee/physics/current-electricity">
     <meta name="twitter:title" content="Current Electricity - Complete JEE Physics Notes">
     <meta name="twitter:description" content="Master current electricity with 150+ solved examples. Complete notes on Ohm's Law, Kirchhoff's Laws & circuits for JEE 2025-26.">
-    <meta name="twitter:image" content="https://jeeprepguide.netlify.app/logo.png">
+    <meta name="twitter:image" content="/logo-header.webp">
     <meta name="twitter:creator" content="@jeeprepguide">
     <meta name="twitter:site" content="@jeeprepguide">
     
@@ -66,17 +66,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//polyfill.io">
-    
+        
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX Rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\(', '\)']],
+            displayMath: [['$$', '$$'], ['\[', '\]']],
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<!-- MathJax for LaTeX Rendering -->
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555" crossorigin="anonymous"></script>
     
     <!-- Breadcrumb Schema -->
@@ -120,7 +133,7 @@
         "@type": "Article",
         "headline": "Current Electricity - Complete JEE Physics Notes 2025-26",
         "description": "Comprehensive notes on Current Electricity covering Ohm's Law, Kirchhoff's Laws, RC Circuits, Wheatstone Bridge, Potentiometer with 150+ solved examples",
-        "image": "https://jeeprepguide.netlify.app/logo.png",
+        "image": "/logo-header.webp",
         "author": {
             "@type": "Organization",
             "name": "JEE Prep Guide",
@@ -131,7 +144,7 @@
             "name": "JEE Prep Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://jeeprepguide.netlify.app/logo.png"
+                "url": "/logo-header.webp"
             }
         },
         "datePublished": "2024-12-19",
@@ -365,7 +378,7 @@
         "@type": "VideoObject",
         "name": "Current Electricity - Complete Tutorial",
         "description": "Learn Current Electricity for JEE with examples",
-        "thumbnailUrl": "https://jeeprepguide.netlify.app/logo.png",
+        "thumbnailUrl": "/logo-header.webp",
         "uploadDate": "2024-12-19",
         "duration": "PT60M",
         "contentUrl": "https://jeeprepguide.netlify.app/jee/physics/current-electricity"
@@ -402,60 +415,62 @@
         });
     </script>
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#7c3aed',
-                        secondary: '#6d28d9',
-                        accent: '#f59e0b',
-                        success: '#10b981',
-                        danger: '#ef4444',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../assets/css/notes-physics.css">
+    
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<link rel="stylesheet" href="../assets/css/notes-physics.css">
 </head>
 
-<body class="bg-gradient-to-br from-gray-50 to-purple-50 text-gray-800">
+<body class="bg-canvas text-ink">
     
     <!-- Reading Progress Bar -->
     <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
     
     <!-- Header -->
-    <header class="bg-white shadow-xl sticky top-0 z-50 border-b-4 border-primary">
+    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                        <a href="https://jeeprepguide.netlify.app"><img src="https://jeeprepguide.netlify.app/logo.png" alt="Jee prep guide" srcset=""></a>
+                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="https://jeeprepguide.netlify.app"><img src="/logo-header.webp" alt="Jee prep guide" srcset=""></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
-                        <p class="text-sm text-gray-500">Path to IIT</p>
+                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide</a></h1>
+                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-gray-700 hover:text-primary font-semibold transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app" class="text-gray-700 hover:text-primary font-semibold transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-gray-700 hover:text-primary font-semibold transition">Blog</a>
-                    <a href="#" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Download PDF</a>
+                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
                 </nav>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
             </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-2">
+                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
+                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                </div>
+            </div>
+
         </div>
     </header>
     
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-gray-100 py-3 border-b">
+    <nav class="bg-surface-1 py-3 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -464,30 +479,30 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Notes</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">JEE</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
                     <meta itemprop="position" content="4" />
                 </li>
-                <li class="text-gray-400">/</li>
+                <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span class="text-gray-600 font-semibold" itemprop="name">Current Electricity</span>
+                    <span class="text-ink-muted font-semibold" itemprop="name">Current Electricity</span>
                     <meta itemprop="position" content="5" />
                 </li>
             </ol>
@@ -495,32 +510,32 @@
     </nav>
     
     <!-- Quick Navigation -->
-    <section class="bg-gradient-to-r from-blue-50 to-purple-50 py-6 border-b">
+    <section class="hidden lg:block bg-gradient-to-r from-surface-2 to-surface-2 py-6 border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">📑 Quick Navigation - Current Electricity</h2>
+            <h2 class="text-xl font-bold text-ink mb-4">📑 Quick Navigation - Current Electricity</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 text-sm">
-                <a href="#chapter1" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter1" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Electric Current
                 </a>
-                <a href="#chapter2" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter2" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Ohm's Law
                 </a>
-                <a href="#chapter3" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter3" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Resistance
                 </a>
-                <a href="#chapter4" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter4" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Kirchhoff's Laws
                 </a>
-                <a href="#chapter5" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter5" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Cells & EMF
                 </a>
-                <a href="#chapter6" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter6" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Wheatstone Bridge
                 </a>
-                <a href="#chapter7" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter7" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     Potentiometer
                 </a>
-                <a href="#chapter8" class="bg-white px-4 py-2 rounded-lg text-primary hover:shadow-lg transition text-center font-semibold">
+                <a href="#chapter8" class="bg-canvas px-4 py-2 rounded-lg text-primary hover:border border-hairline transition text-center font-semibold">
                     RC Circuits
                 </a>
             </div>
@@ -528,9 +543,9 @@
     </section>
     
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-purple-600 to-secondary text-white py-20 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
         
@@ -538,20 +553,20 @@
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Current Electricity
-                    <span class="block text-accent mt-2">JEE Main & Advanced 2025-26</span>
+                    <span class="block text-primary mt-2">JEE Main & Advanced 2025-26</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                     Master the complete chapter with detailed notes on Ohm's Law, Kirchhoff's Laws, RC Circuits, Wheatstone Bridge, and Potentiometer. Includes 150+ solved problems, important formulas, and all JEE shortcuts.
                 </p>
                 
                 <div class="flex flex-wrap justify-center gap-4 mt-10">
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">📚 8 Complete Sections</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">✍️ 150+ Solved Examples</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full">
+                    <div class="bg-canvas/20 backdrop-blur-md px-6 py-3 rounded-full">
                         <span class="font-bold text-lg">🎯 Quick Formulas</span>
                     </div>
                 </div>
@@ -560,21 +575,21 @@
     </section>
     
     <!-- Rating Section -->
-    <section class="py-6 bg-white border-y" itemscope itemtype="https://schema.org/Product">
+    <section class="py-6 bg-canvas border-y" itemscope itemtype="https://schema.org/Product">
         <meta itemprop="name" content="Current Electricity JEE Notes">
         <meta itemprop="description" content="Complete study notes for Current Electricity">
-        <meta itemprop="image" content="https://jeeprepguide.netlify.app/logo.png">
+        <meta itemprop="image" content="/logo-header.webp">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-6 mb-4 md:mb-0">
                     <div class="flex items-center">
-                        <span class="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</span>
+                        <span class="text-primary text-2xl">⭐⭐⭐⭐⭐</span>
                         <span class="ml-3 text-xl font-bold">
                             <span itemprop="ratingValue">4.8</span>/5
                         </span>
                     </div>
-                    <div class="text-gray-600">
+                    <div class="text-ink-muted">
                         <span itemprop="reviewCount">245</span>+ students rated this helpful
                     </div>
                     <meta itemprop="bestRating" content="5">
@@ -584,15 +599,15 @@
                 <div class="flex items-center space-x-6">
                     <div class="text-center">
                         <div class="text-2xl font-bold text-primary">150+</div>
-                        <div class="text-sm text-gray-600">Solved Examples</div>
+                        <div class="text-sm text-ink-muted">Solved Examples</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-success">3 hrs</div>
-                        <div class="text-sm text-gray-600">Study Time</div>
+                        <div class="text-2xl font-bold text-primary">3 hrs</div>
+                        <div class="text-sm text-ink-muted">Study Time</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-secondary">Free</div>
-                        <div class="text-sm text-gray-600">Always</div>
+                        <div class="text-2xl font-bold text-primary">Free</div>
+                        <div class="text-sm text-ink-muted">Always</div>
                     </div>
                 </div>
             </div>
@@ -604,53 +619,65 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
             <!-- Sidebar Navigation -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sticky-nav border-t-4 border-primary">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <aside class="order-2 lg:order-1 lg:col-span-1">
+                <div class="bg-canvas rounded-2xl border border-hairline p-6 sticky-nav border-t-4 border-primary">
+                    <h3 class="text-2xl font-bold text-ink mb-6 flex items-center">
                         <span class="w-2 h-8 bg-primary rounded mr-3"></span>
                         Table of Contents
                     </h3>
                     <ul class="space-y-2 text-base font-medium">
-                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">1. Electric Current & Drift Velocity</a></li>
-                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">2. Ohm's Law</a></li>
-                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">3. Resistance & Resistivity</a></li>
-                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">4. Kirchhoff's Laws</a></li>
-                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">5. Cells & EMF</a></li>
-                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">6. Wheatstone Bridge</a></li>
-                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">7. Potentiometer</a></li>
-                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition duration-200">8. RC Circuits</a></li>
-                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-white hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
-                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-white hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
+                        <li><a href="#chapter1" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">1. Electric Current & Drift Velocity</a></li>
+                        <li><a href="#chapter2" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">2. Ohm's Law</a></li>
+                        <li><a href="#chapter3" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">3. Resistance & Resistivity</a></li>
+                        <li><a href="#chapter4" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">4. Kirchhoff's Laws</a></li>
+                        <li><a href="#chapter5" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">5. Cells & EMF</a></li>
+                        <li><a href="#chapter6" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">6. Wheatstone Bridge</a></li>
+                        <li><a href="#chapter7" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">7. Potentiometer</a></li>
+                        <li><a href="#chapter8" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-ink transition duration-200">8. RC Circuits</a></li>
+                        <li><a href="#pyq" class="block py-3 px-4 rounded-lg bg-accent text-ink hover:bg-accent/90 transition duration-200">📝 Previous Year Questions</a></li>
+                        <li><a href="#practice" class="block py-3 px-4 rounded-lg bg-success text-ink hover:bg-success/90 transition duration-200">🎯 Practice Problems</a></li>
                     </ul>
                 </div>
             </aside>
             
             <!-- Main Content Area -->
-            <main class="lg:col-span-3 space-y-12">
+            <main class="order-1 lg:order-2 lg:col-span-3 space-y-12">
+    <!-- Related Concepts -->
+    <div class="bg-surface-1 border-l-4 border-primary rounded-lg p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <span class="text-2xl">🔗</span>
+        <div>
+            <p class="font-semibold text-ink mb-1">Builds on these concepts:</p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="./capacitance.html" class="text-primary font-semibold hover:underline">Capacitance &rarr;</a>
+                <a href="./magnetic-effect-of-current-and-magnetism.html" class="text-primary font-semibold hover:underline">Magnetic Effect Of Current And Magnetism &rarr;</a>
+            </div>
+        </div>
+    </div>
+
                 
                 <!-- Featured Image -->
                 <figure class="mb-8">
                     <img
-                        src="https://jeeprepguide.netlify.app/jee/physics/current-electricity.png"
+                        src="https://jeeprepguide.netlify.app/jee/physics/current-electricity.webp"
                         alt="Current Electricity JEE notes, Formulas, PYQs"
                         title="Current Electricity — JEE Notes, Formulas, PYQs"
                         width="1200"
                         height="630"
                         loading="eager"
                         fetchpriority="high"
-                        class="w-full rounded-2xl shadow-lg border border-gray-200"
+                        class="w-full rounded-2xl border border-hairline border border-hairline"
                         itemprop="image"
                     >
-                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">
+                    <figcaption class="text-center text-sm text-ink-subtle mt-3 italic">
                         Current Electricity JEE Notes, Formulas, PYQs
                     </figcaption>
                 </figure>
                 
                 <!-- Chapter 1: Electric Current & Drift Velocity -->
-                <section id="chapter1" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter1" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Electric Current & Drift Velocity</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">1</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Electric Current & Drift Velocity</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -660,9 +687,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.1 Electric Current - Definition</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Electric Current Formula</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[I = \frac{dQ}{dt}\]
                             </div>
                             <p class="mt-4 text-lg">
@@ -694,9 +721,9 @@
                             When an electric field is applied across a conductor, free electrons acquire a small average velocity in the direction opposite to the field. This is called <strong>drift velocity</strong>.
                         </p>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Drift Velocity Formula</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[v_d = \frac{I}{nAe}\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -709,16 +736,16 @@
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Alternative Form</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[I = nAev_d\]
                             </div>
                             <p class="mt-3 text-lg">This shows current is proportional to drift velocity</p>
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Key Facts about Drift Velocity
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -732,9 +759,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.3 Current Density</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Current Density</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[J = \frac{I}{A} = nev_d\]
                             </div>
                             <p class="mt-4">
@@ -746,14 +773,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 1
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A current of 1.6 A flows through a copper wire of cross-sectional area 1 mm². If the number density of free electrons is 8.5 × 10²⁸ m⁻³, find the drift velocity.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given:</p>
                                 <p class="mb-2">I = 1.6 A</p>
                                 <p class="mb-2">A = 1 mm² = 1 × 10⁻⁶ m²</p>
@@ -770,10 +797,10 @@
                                 <div class="math-display">
                                     \[v_d = \frac{1.6}{13.6 \times 10^{3}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[v_d = 1.18 \times 10^{-4} \text{ m/s} = 0.118 \text{ mm/s}\]
                                 </div>
-                                <p class="mt-3 text-sm text-gray-600">
+                                <p class="mt-3 text-sm text-ink-muted">
                                     Note: This extremely small value shows electrons drift very slowly despite large current!
                                 </p>
                             </div>
@@ -781,9 +808,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">1.4 Relation between Electric Field and Drift Velocity</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Drift Velocity & Electric Field</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[v_d = \frac{eE\tau}{m}\]
                             </div>
                             <p class="mt-4">Where:</p>
@@ -791,7 +818,7 @@
                             <p>• τ = Relaxation time (average time between collisions)</p>
                             <p>• m = Mass of electron = 9.1 × 10⁻³¹ kg</p>
                             
-                            <div class="mt-4 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-4 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold">Mobility (μ):</p>
                                 <div class="math-display">
                                     \[\mu = \frac{v_d}{E} = \frac{e\tau}{m}\]
@@ -803,10 +830,10 @@
                 </section>
                 
                 <!-- Chapter 2: Ohm's Law -->
-                <section id="chapter2" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter2" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Ohm's Law</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">2</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Ohm's Law</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -814,16 +841,16 @@
                             Ohm's Law is one of the most fundamental laws in electricity. It relates voltage, current, and resistance in a simple linear relationship - the cornerstone of circuit analysis.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.1 Statement of Ohm's Law</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.1 Statement of Ohm's Law</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Ohm's Law</h4>
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Ohm's Law</h4>
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="text-lg italic">
                                     "At constant temperature, the current flowing through a conductor is directly proportional to the potential difference across it."
                                 </p>
                             </div>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[V = IR\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -834,19 +861,19 @@
                             </div>
                             
                             <div class="mt-6 grid grid-cols-3 gap-4">
-                                <div class="bg-white p-4 rounded-lg text-center">
+                                <div class="bg-canvas p-4 rounded-lg text-center">
                                     <div class="math-display">
                                         \[V = IR\]
                                     </div>
                                     <p class="text-sm">Voltage Formula</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg text-center">
+                                <div class="bg-canvas p-4 rounded-lg text-center">
                                     <div class="math-display">
                                         \[I = \frac{V}{R}\]
                                     </div>
                                     <p class="text-sm">Current Formula</p>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg text-center">
+                                <div class="bg-canvas p-4 rounded-lg text-center">
                                     <div class="math-display">
                                         \[R = \frac{V}{I}\]
                                     </div>
@@ -855,18 +882,18 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.2 Ohmic vs Non-Ohmic Conductors</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.2 Ohmic vs Non-Ohmic Conductors</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Aspect</th>
                                         <th class="p-4 text-left">Ohmic Conductors</th>
                                         <th class="p-4 text-left">Non-Ohmic Conductors</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Ohm's Law</td>
                                         <td class="p-4">Obeys (V ∝ I)</td>
@@ -903,46 +930,46 @@
                             </ul>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">2.3 V-I Characteristics</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">2.3 V-I Characteristics</h3>
                         
                         <div class="diagram-box my-8">
-                            <p class="text-2xl font-bold text-gray-700 mb-4">V-I Graphs for Different Materials</p>
+                            <p class="text-2xl font-bold text-ink-muted mb-4">V-I Graphs for Different Materials</p>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-bold text-center mb-2">Ohmic Conductor</p>
-                                    <div class="bg-blue-50 p-4 rounded text-center">
+                                    <div class="bg-surface-2 p-4 rounded text-center">
                                         <p>Straight Line</p>
-                                        <p class="text-sm text-gray-600 mt-2">V ∝ I</p>
-                                        <p class="text-sm text-gray-600">Slope = R (constant)</p>
+                                        <p class="text-sm text-ink-muted mt-2">V ∝ I</p>
+                                        <p class="text-sm text-ink-muted">Slope = R (constant)</p>
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-bold text-center mb-2">Diode</p>
-                                    <div class="bg-green-50 p-4 rounded text-center">
+                                    <div class="bg-surface-2 p-4 rounded text-center">
                                         <p>Exponential Curve</p>
-                                        <p class="text-sm text-gray-600 mt-2">Forward bias: rapid increase</p>
-                                        <p class="text-sm text-gray-600">Reverse bias: almost zero current</p>
+                                        <p class="text-sm text-ink-muted mt-2">Forward bias: rapid increase</p>
+                                        <p class="text-sm text-ink-muted">Reverse bias: almost zero current</p>
                                     </div>
                                 </div>
-                                <div class="bg-white p-4 rounded-lg">
+                                <div class="bg-canvas p-4 rounded-lg">
                                     <p class="font-bold text-center mb-2">Filament Lamp</p>
-                                    <div class="bg-yellow-50 p-4 rounded text-center">
+                                    <div class="bg-surface-2 p-4 rounded text-center">
                                         <p>Curved (concave up)</p>
-                                        <p class="text-sm text-gray-600 mt-2">Resistance increases with temperature</p>
+                                        <p class="text-sm text-ink-muted mt-2">Resistance increases with temperature</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 2
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A wire of resistance 10 Ω is connected across a battery of 12 V. Calculate (a) Current through wire (b) Charge flowing in 5 seconds (c) Number of electrons flowing.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: R = 10 Ω, V = 12 V, t = 5 s</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Current:</strong></p>
@@ -959,7 +986,7 @@
                                 <div class="math-display">
                                     \[n = \frac{Q}{e} = \frac{6}{1.6 \times 10^{-19}}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[n = 3.75 \times 10^{19} \text{ electrons}\]
                                 </div>
                             </div>
@@ -968,10 +995,10 @@
                 </section>
                 
                 <!-- Chapter 3: Resistance & Resistivity -->
-                <section id="chapter3" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter3" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Resistance & Resistivity</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">3</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Resistance & Resistivity</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -981,9 +1008,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.1 Electrical Resistance</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Resistance Formula</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[R = \frac{\rho L}{A}\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -994,7 +1021,7 @@
                                 <p>• A = Cross-sectional area (m²)</p>
                             </div>
                             
-                            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Key Points:</p>
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>R ∝ L (Resistance increases with length)</li>
@@ -1007,9 +1034,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.2 Resistivity (Specific Resistance)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Resistivity</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\rho = \frac{RA}{L}\]
                             </div>
                             <p class="mt-4">
@@ -1026,7 +1053,7 @@
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.3 Conductivity & Conductance</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Conductivity (σ)</h5>
                                 <div class="math-display">
                                     \[\sigma = \frac{1}{\rho}\]
@@ -1034,7 +1061,7 @@
                                 <p class="mt-3"><strong>Unit:</strong> S/m or mho/m or Ω⁻¹m⁻¹</p>
                                 <p class="mt-2">Also called: Siemens per meter</p>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-blue-300">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
                                 <h5 class="font-bold text-lg mb-3 text-primary">Conductance (G)</h5>
                                 <div class="math-display">
                                     \[G = \frac{1}{R}\]
@@ -1046,9 +1073,9 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">3.4 Temperature Dependence of Resistance</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Temperature Coefficient of Resistance</h4>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[R_T = R_0[1 + \alpha(T - T_0)]\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -1058,7 +1085,7 @@
                                 <p>• α = Temperature coefficient of resistance (per °C)</p>
                             </div>
                             
-                            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">For small temperature changes:</p>
                                 <div class="math-display">
                                     \[\alpha = \frac{R_T - R_0}{R_0(T - T_0)}\]
@@ -1067,16 +1094,16 @@
                         </div>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Material Type</th>
                                         <th class="p-4 text-left">α Value</th>
                                         <th class="p-4 text-left">Examples</th>
                                         <th class="p-4 text-left">Behavior</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Metals</td>
                                         <td class="p-4">Positive (+)</td>
@@ -1106,7 +1133,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important JEE Facts
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1119,14 +1146,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 3
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A copper wire of length 2 m and cross-sectional area 2 mm² has resistance 0.017 Ω at 20°C. Find (a) Resistivity of copper (b) Resistance at 100°C if α = 0.004 /°C.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given:</p>
                                 <p class="mb-2">L = 2 m, A = 2 mm² = 2 × 10⁻⁶ m²</p>
                                 <p class="mb-2">R₀ = 0.017 Ω at T₀ = 20°C</p>
@@ -1153,7 +1180,7 @@
                                 <div class="math-display">
                                     \[R_{100} = 0.017[1 + 0.32] = 0.017 \times 1.32\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[R_{100} = 0.0224 \text{ Ω}\]
                                 </div>
                             </div>
@@ -1162,10 +1189,10 @@
                 </section>
                 
                 <!-- Chapter 4: Kirchhoff's Laws -->
-                <section id="chapter4" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter4" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Kirchhoff's Laws</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">4</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Kirchhoff's Laws</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1173,24 +1200,24 @@
                             Kirchhoff's Laws are fundamental to analyzing complex electrical circuits. These laws are based on conservation of charge and energy - two of the most important principles in physics.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.1 Kirchhoff's Current Law (KCL)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.1 Kirchhoff's Current Law (KCL)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Kirchhoff's Current Law (Junction Rule)</h4>
-                            <div class="bg-red-50 p-4 rounded-lg mb-4">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Kirchhoff's Current Law (Junction Rule)</h4>
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="text-lg italic">
                                     "The algebraic sum of currents meeting at any junction in a circuit is zero."
                                 </p>
                             </div>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\sum I_{\text{entering}} = \sum I_{\text{leaving}}\]
                             </div>
                             <p class="text-center mt-3">OR</p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\sum I = 0\]
                             </div>
                             
-                            <div class="mt-6 bg-red-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Sign Convention:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Current entering junction: Positive (+)</li>
@@ -1198,31 +1225,31 @@
                                 </ul>
                             </div>
                             
-                            <div class="mt-4 bg-white p-4 rounded-lg border-2 border-red-200">
-                                <p class="font-semibold text-danger mb-2">Physical Basis:</p>
+                            <div class="mt-4 bg-canvas p-4 rounded-lg border-2 border-hairline">
+                                <p class="font-semibold text-primary mb-2">Physical Basis:</p>
                                 <p>Based on <strong>Conservation of Electric Charge</strong></p>
                                 <p class="text-sm mt-2">Charge cannot accumulate at a junction, so incoming charge = outgoing charge</p>
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.2 Kirchhoff's Voltage Law (KVL)</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.2 Kirchhoff's Voltage Law (KVL)</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Kirchhoff's Voltage Law (Loop Rule)</h4>
-                            <div class="bg-red-50 p-4 rounded-lg mb-4">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Kirchhoff's Voltage Law (Loop Rule)</h4>
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="text-lg italic">
                                     "The algebraic sum of all potential differences (voltages) around any closed loop in a circuit is zero."
                                 </p>
                             </div>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\sum V = 0\]
                             </div>
                             <p class="text-center mt-3">OR</p>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\sum \text{EMF} = \sum IR\]
                             </div>
                             
-                            <div class="mt-6 bg-red-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Sign Convention for Loop:</p>
                                 <ol class="list-decimal list-inside space-y-2">
                                     <li><strong>Choose direction</strong> to traverse the loop (clockwise or anticlockwise)</li>
@@ -1233,8 +1260,8 @@
                                 </ol>
                             </div>
                             
-                            <div class="mt-4 bg-white p-4 rounded-lg border-2 border-red-200">
-                                <p class="font-semibold text-danger mb-2">Physical Basis:</p>
+                            <div class="mt-4 bg-canvas p-4 rounded-lg border-2 border-hairline">
+                                <p class="font-semibold text-primary mb-2">Physical Basis:</p>
                                 <p>Based on <strong>Conservation of Energy</strong></p>
                                 <p class="text-sm mt-2">Work done in moving a charge around a closed path is zero</p>
                             </div>
@@ -1254,12 +1281,12 @@
                             </ol>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">4.3 Combination of Resistances</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">4.3 Combination of Resistances</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Series Combination</h5>
-                                <div class="bg-red-50 p-4 rounded-lg mb-3">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Series Combination</h5>
+                                <div class="bg-surface-2 p-4 rounded-lg mb-3">
                                     <p class="font-semibold mb-2">Properties:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Same current through all</li>
@@ -1276,9 +1303,9 @@
                                 </div>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-red-300">
-                                <h5 class="font-bold text-lg mb-3 text-danger">Parallel Combination</h5>
-                                <div class="bg-red-50 p-4 rounded-lg mb-3">
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Parallel Combination</h5>
+                                <div class="bg-surface-2 p-4 rounded-lg mb-3">
                                     <p class="font-semibold mb-2">Properties:</p>
                                     <ul class="list-disc list-inside text-sm space-y-1">
                                         <li>Same voltage across all</li>
@@ -1296,16 +1323,16 @@
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Important Formulas for Two Resistors</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Important Formulas for Two Resistors</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Series (2 resistors):</p>
                                     <div class="math-display">
                                         \[R_{\text{eq}} = R_1 + R_2\]
                                     </div>
                                 </div>
-                                <div class="bg-red-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-2">Parallel (2 resistors):</p>
                                     <div class="math-display">
                                         \[R_{\text{eq}} = \frac{R_1 R_2}{R_1 + R_2}\]
@@ -1316,7 +1343,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Key Points for JEE
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1329,7 +1356,7 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 4 (JEE Main Type)
                             </h4>
                             <p class="text-lg mb-3">
@@ -1337,7 +1364,7 @@
                                 <br><span class="text-sm">(Circuit: 10V battery, 2Ω in series, then parallel combination of 6Ω and 3Ω)</span>
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2"><strong>Step 1:</strong> Find equivalent resistance of parallel combination</p>
                                 <div class="math-display">
                                     \[R_{\text{parallel}} = \frac{6 \times 3}{6 + 3} = \frac{18}{9} = 2\text{ Ω}\]
@@ -1362,11 +1389,11 @@
                                 <div class="math-display">
                                     \[I_6 = \frac{V}{R} = \frac{5}{6}\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[I_6 = 0.833\text{ A or } \frac{5}{6}\text{ A}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-600">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Verification using current division:</strong> I₆ = I × (3/(3+6)) = 2.5 × (3/9) = 2.5/3 ✓
                                 </p>
                             </div>
@@ -1375,10 +1402,10 @@
                 </section>
                 
                 <!-- Chapter 5: Cells & EMF -->
-                <section id="chapter5" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter5" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Cells, EMF & Internal Resistance</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">5</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Cells, EMF & Internal Resistance</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1386,38 +1413,38 @@
                             An electric cell converts chemical energy into electrical energy. Understanding EMF, terminal voltage, and internal resistance is crucial for analyzing battery circuits - a favorite JEE topic!
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.1 EMF and Terminal Voltage</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.1 EMF and Terminal Voltage</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">EMF (E or ε)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">EMF (E or ε)</h5>
                                 <p class="mb-3">
                                     <strong>Electromotive Force</strong> is the maximum potential difference a cell can provide when no current flows (open circuit).
                                 </p>
-                                <div class="bg-purple-50 p-3 rounded">
+                                <div class="bg-surface-2 p-3 rounded">
                                     <p class="font-semibold">When I = 0:</p>
                                     <p>Terminal Voltage (V) = EMF (E)</p>
                                 </div>
                             </div>
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">Terminal Voltage (V)</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">Terminal Voltage (V)</h5>
                                 <p class="mb-3">
                                     The actual voltage available across the cell terminals when current flows through external circuit.
                                 </p>
-                                <div class="bg-purple-50 p-3 rounded">
+                                <div class="bg-surface-2 p-3 rounded">
                                     <p class="font-semibold">When I ≠ 0:</p>
                                     <p>V < E (due to internal resistance)</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Relation between EMF, Terminal Voltage & Internal Resistance</h4>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Relation between EMF, Terminal Voltage & Internal Resistance</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[E = V + Ir\]
                             </div>
                             <p class="text-center mt-2 mb-3">OR</p>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[V = E - Ir\]
                             </div>
                             <div class="mt-4 space-y-2">
@@ -1428,7 +1455,7 @@
                                 <p>• r = Internal resistance (Ω)</p>
                             </div>
                             
-                            <div class="mt-6 bg-purple-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">In terms of external resistance R:</p>
                                 <div class="math-display">
                                     \[V = \frac{ER}{R + r}\]
@@ -1452,12 +1479,12 @@
                             </ul>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">5.2 Grouping of Cells</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">5.2 Grouping of Cells</h3>
                         
                         <div class="overflow-x-auto my-6">
-                            <table class="w-full custom-table shadow-lg">
+                            <table class="w-full custom-table border border-hairline">
                                 <thead>
-                                    <tr class="text-white">
+                                    <tr class="text-ink">
                                         <th class="p-4 text-left">Configuration</th>
                                         <th class="p-4 text-left">Circuit</th>
                                         <th class="p-4 text-left">Total EMF</th>
@@ -1465,7 +1492,7 @@
                                         <th class="p-4 text-left">Current</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y bg-white">
+                                <tbody class="divide-y bg-canvas">
                                     <tr>
                                         <td class="p-4 font-semibold">Series<br>(n identical cells)</td>
                                         <td class="p-4">+→-→+→-→+→-</td>
@@ -1491,23 +1518,23 @@
                             </table>
                         </div>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Maximum Current & Power Conditions</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Maximum Current & Power Conditions</h4>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-3">For Series Connection:</p>
                                     <p class="text-sm mb-2">Best when: R >> r</p>
                                     <p class="text-sm">Use when external resistance is high</p>
                                 </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="bg-surface-2 p-4 rounded-lg">
                                     <p class="font-semibold mb-3">For Parallel Connection:</p>
                                     <p class="text-sm mb-2">Best when: R << r</p>
                                     <p class="text-sm">Use when external resistance is low</p>
                                 </div>
                             </div>
                             
-                            <div class="mt-6 bg-purple-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Maximum Power Transfer Theorem:</p>
                                 <p class="mb-2">Maximum power is delivered to load when:</p>
                                 <div class="math-display">
@@ -1518,14 +1545,14 @@
                         </div>
                         
                         <div class="example-box p-6 rounded-xl border-l-4 border-success my-8">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-success">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">📝</span> Solved Example 5
                             </h4>
                             <p class="text-lg mb-3">
                                 <strong>Question:</strong> A cell of EMF 2V and internal resistance 0.5Ω is connected to a resistor of 3.5Ω. Find (a) Current (b) Terminal voltage (c) Power delivered to external resistor.
                             </p>
                             <p class="text-lg mb-2"><strong>Solution:</strong></p>
-                            <div class="bg-white p-4 rounded-lg my-3">
+                            <div class="bg-canvas p-4 rounded-lg my-3">
                                 <p class="mb-2">Given: E = 2V, r = 0.5Ω, R = 3.5Ω</p>
                                 
                                 <p class="mb-2 mt-4"><strong>(a) Current:</strong></p>
@@ -1546,11 +1573,11 @@
                                 <div class="math-display">
                                     \[P = I^2R = (0.5)^2 \times 3.5 = 0.25 \times 3.5\]
                                 </div>
-                                <div class="math-display bg-yellow-50 p-3 rounded-lg border-2 border-accent">
+                                <div class="math-display bg-surface-2 p-3 rounded-lg border-2 border-accent">
                                     \[P = 0.875\text{ W}\]
                                 </div>
                                 
-                                <p class="mt-4 text-sm text-gray-600">
+                                <p class="mt-4 text-sm text-ink-muted">
                                     <strong>Note:</strong> Power lost in internal resistance = I²r = 0.25 × 0.5 = 0.125W<br>
                                     Total power = E × I = 2 × 0.5 = 1W ✓
                                 </p>
@@ -1563,10 +1590,10 @@
                 <!-- Due to length constraints, I'll provide the structure for remaining chapters -->
                 
                 <!-- Chapter 6: Wheatstone Bridge -->
-                <section id="chapter6" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-primary">
+                <section id="chapter6" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-primary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-primary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Wheatstone Bridge</h2>
+                        <span class="bg-primary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">6</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Wheatstone Bridge</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1576,22 +1603,22 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.1 Principle of Wheatstone Bridge</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Balanced Wheatstone Bridge</h4>
-                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="text-lg">
                                     When the bridge is balanced, no current flows through the galvanometer (I<sub>g</sub> = 0)
                                 </p>
                             </div>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\frac{P}{Q} = \frac{R}{S}\]
                             </div>
                             <p class="text-center mt-3">OR</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[PS = QR\]
                             </div>
                             
-                            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">At Balance Condition:</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li>Points B and D are at same potential</li>
@@ -1602,7 +1629,7 @@
                         </div>
                         
                         <div class="warning-box p-6 rounded-xl border-l-4 border-accent my-6">
-                            <h4 class="font-bold text-xl mb-3 flex items-center text-accent">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary">
                                 <span class="text-2xl mr-2">⚠️</span> Important Points for JEE
                             </h4>
                             <ul class="list-disc list-inside space-y-2 text-lg ml-4">
@@ -1616,10 +1643,10 @@
                         
                         <h3 class="text-2xl font-bold text-primary mt-8 mb-4">6.2 Meter Bridge</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-blue-300 my-6">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
                             <h4 class="font-bold text-xl mb-4 text-primary">Meter Bridge Formula</h4>
                             <p class="mb-3">A meter bridge is a practical application of Wheatstone bridge using a 1-meter long wire.</p>
-                            <div class="math-display bg-blue-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\frac{R}{S} = \frac{l}{100-l}\]
                             </div>
                             <p class="mt-4">Where:</p>
@@ -1627,7 +1654,7 @@
                             <p>• S = Standard resistance</p>
                             <p>• l = Balance length in cm</p>
                             
-                            <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Unknown Resistance:</p>
                                 <div class="math-display">
                                     \[R = S \times \frac{l}{100-l}\]
@@ -1638,10 +1665,10 @@
                 </section>
                 
                 <!-- Chapter 7: Potentiometer -->
-                <section id="chapter7" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-secondary">
+                <section id="chapter7" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-secondary">
                     <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">Potentiometer</h2>
+                        <span class="bg-secondary text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">7</span>
+                        <h2 class="text-4xl font-extrabold text-ink">Potentiometer</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1649,16 +1676,16 @@
                             A potentiometer is a versatile instrument for measuring potential difference, comparing EMFs, and finding internal resistance - all without drawing any current!
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.1 Principle of Potentiometer</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.1 Principle of Potentiometer</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-purple-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-secondary">Potential Gradient</h4>
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Potential Gradient</h4>
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="text-lg italic">
                                     "The potential difference across a length of wire is directly proportional to that length when constant current flows through it."
                                 </p>
                             </div>
-                            <div class="math-display bg-purple-50 p-4 rounded-lg">
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[V = kl\]
                             </div>
                             <p class="mt-4">Where:</p>
@@ -1666,7 +1693,7 @@
                             <p>• k = Potential gradient (V/m)</p>
                             <p>• l = Length of wire</p>
                             
-                            <div class="mt-6 bg-purple-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">Potential Gradient:</p>
                                 <div class="math-display">
                                     \[k = \frac{V}{L} = \frac{IR\rho}{LA} = \frac{I\rho}{A}\]
@@ -1675,19 +1702,19 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-secondary mt-8 mb-4">7.2 Applications of Potentiometer</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">7.2 Applications of Potentiometer</h3>
                         
                         <div class="grid grid-cols-1 gap-6 my-6">
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">1. Comparison of EMFs</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">1. Comparison of EMFs</h5>
                                 <div class="math-display">
                                     \[\frac{E_1}{E_2} = \frac{l_1}{l_2}\]
                                 </div>
                                 <p class="mt-3">Where l₁ and l₂ are balance lengths for the two cells</p>
                             </div>
                             
-                            <div class="formula-box p-6 rounded-xl border-2 border-purple-300">
-                                <h5 class="font-bold text-lg mb-3 text-secondary">2. Measurement of Internal Resistance</h5>
+                            <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong">
+                                <h5 class="font-bold text-lg mb-3 text-primary">2. Measurement of Internal Resistance</h5>
                                 <div class="math-display">
                                     \[r = R\left(\frac{l_1 - l_2}{l_2}\right)\]
                                 </div>
@@ -1700,10 +1727,10 @@
                 </section>
                 
                 <!-- Chapter 8: RC Circuits -->
-                <section id="chapter8" class="bg-white rounded-2xl shadow-2xl p-8 topic-card border-t-4 border-danger">
+                <section id="chapter8" class="bg-canvas rounded-2xl border border-hairline p-8 topic-card border-t-4 border-danger">
                     <div class="flex items-center mb-6">
-                        <span class="bg-danger text-white text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
-                        <h2 class="text-4xl font-extrabold text-gray-900">RC Circuits</h2>
+                        <span class="bg-danger text-ink text-2xl font-bold w-12 h-12 rounded-full flex items-center justify-center mr-4">8</span>
+                        <h2 class="text-4xl font-extrabold text-ink">RC Circuits</h2>
                     </div>
                     
                     <div class="prose max-w-none">
@@ -1711,12 +1738,12 @@
                             RC circuits involve resistor-capacitor combinations and exhibit time-dependent behavior. Understanding charging and discharging is crucial for JEE Advanced.
                         </p>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">8.1 Charging of Capacitor</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.1 Charging of Capacitor</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Charging Equations</h4>
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Charging Equations</h4>
                             
-                            <div class="bg-red-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-3">Charge on capacitor:</p>
                                 <div class="math-display">
                                     \[q(t) = q_0(1 - e^{-t/RC})\]
@@ -1724,7 +1751,7 @@
                                 <p class="text-sm mt-2">where q₀ = CE (maximum charge)</p>
                             </div>
                             
-                            <div class="bg-red-50 p-4 rounded-lg mb-4">
+                            <div class="bg-surface-2 p-4 rounded-lg mb-4">
                                 <p class="font-semibold mb-3">Current:</p>
                                 <div class="math-display">
                                     \[i(t) = i_0 e^{-t/RC}\]
@@ -1732,7 +1759,7 @@
                                 <p class="text-sm mt-2">where i₀ = E/R (initial current)</p>
                             </div>
                             
-                            <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-3">Voltage across capacitor:</p>
                                 <div class="math-display">
                                     \[V_C(t) = E(1 - e^{-t/RC})\]
@@ -1740,11 +1767,11 @@
                             </div>
                         </div>
                         
-                        <h3 class="text-2xl font-bold text-danger mt-8 mb-4">8.2 Time Constant</h3>
+                        <h3 class="text-2xl font-bold text-primary mt-8 mb-4">8.2 Time Constant</h3>
                         
-                        <div class="formula-box p-6 rounded-xl border-2 border-red-300 my-6">
-                            <h4 class="font-bold text-xl mb-4 text-danger">Time Constant (τ)</h4>
-                            <div class="math-display bg-red-50 p-4 rounded-lg">
+                        <div class="formula-box p-6 rounded-xl border-2 border-hairline-strong my-6">
+                            <h4 class="font-bold text-xl mb-4 text-primary">Time Constant (τ)</h4>
+                            <div class="math-display bg-surface-2 p-4 rounded-lg">
                                 \[\tau = RC\]
                             </div>
                             <p class="mt-4">Time constant is the time in which:</p>
@@ -1754,7 +1781,7 @@
                                 <li>Current reduces to 36.8% of initial value</li>
                             </ul>
                             
-                            <div class="mt-6 bg-red-50 p-4 rounded-lg">
+                            <div class="mt-6 bg-surface-2 p-4 rounded-lg">
                                 <p class="font-semibold mb-2">At different times:</p>
                                 <ul class="list-disc list-inside space-y-1 text-sm">
                                     <li>At t = τ: q = 0.632q₀ ≈ 63%</li>
@@ -1768,14 +1795,14 @@
                 </section>
                 
                 <!-- Previous Year Questions Analysis -->
-                <section id="pyq" class="bg-gradient-to-br from-accent to-orange-600 text-white rounded-2xl shadow-2xl p-8">
+                <section id="pyq" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">📝</span>
                         Previous Year Questions Analysis
                     </h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Main (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Kirchhoff's Laws: 35%</li>
@@ -1785,7 +1812,7 @@
                                 <li>✓ Drift Velocity: 5%</li>
                             </ul>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+                        <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl">
                             <h3 class="text-2xl font-bold mb-4">JEE Advanced (Last 5 Years)</h3>
                             <ul class="space-y-2 text-lg">
                                 <li>✓ Complex Circuits: 40%</li>
@@ -1797,8 +1824,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl my-8">
-                        <h3 class="text-2xl font-bold mb-4 text-accent">Top 10 Most Repeated Question Types</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl my-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Top 10 Most Repeated Question Types</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Finding current distribution using Kirchhoff's laws in complex circuits</li>
                             <li>Wheatstone bridge balance condition and unknown resistance</li>
@@ -1813,7 +1840,7 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl my-8">
+                    <div class="bg-canvas/10 backdrop-blur-md p-6 rounded-xl my-8">
                         <h3 class="text-2xl font-bold mb-4">Weightage Analysis</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -1836,21 +1863,21 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-accent px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Download Complete PYQ PDF (2015-2024)
                         </a>
                     </div>
                 </section>
                 
                 <!-- Practice Problems -->
-                <section id="practice" class="bg-gradient-to-br from-success to-emerald-600 text-white rounded-2xl shadow-2xl p-8 mt-12">
+                <section id="practice" class="bg-gradient-to-br from-primary to-primary text-ink rounded-2xl border border-hairline p-8 mt-12">
                     <h2 class="text-4xl font-extrabold mb-6 flex items-center">
                         <span class="text-5xl mr-4">🎯</span>
                         Practice Problem Set
                     </h2>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 1: Basic (JEE Main Standard)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 1: Basic (JEE Main Standard)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Calculate drift velocity in a copper wire carrying 5A current with cross-section 1mm²</li>
                             <li>A 10Ω resistor is connected to 12V battery. Find current and power dissipated.</li>
@@ -1863,8 +1890,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 2: Intermediate (JEE Main/Advanced)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 2: Intermediate (JEE Main/Advanced)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Find current distribution in a network with 3 resistors using Kirchhoff's laws.</li>
                             <li>A potentiometer wire of length 4m gives balance point at 2.4m for a cell. If wire is cut to 2m, find new balance length.</li>
@@ -1877,8 +1904,8 @@
                         </ol>
                     </div>
                     
-                    <div class="bg-white text-gray-900 p-6 rounded-xl mt-6">
-                        <h3 class="text-2xl font-bold mb-4 text-success">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
+                    <div class="bg-canvas text-ink p-6 rounded-xl mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">Level 3: Advanced (JEE Advanced/Olympiad)</h3>
                         <ol class="list-decimal list-inside space-y-3 text-lg">
                             <li>Find current in each branch of a complex network with 4 resistors and 2 batteries using Kirchhoff's laws.</li>
                             <li>A potentiometer is used to find internal resistance of a cell. Derive the formula and solve a numerical.</li>
@@ -1892,57 +1919,75 @@
                     </div>
                     
                     <div class="text-center mt-8">
-                        <a href="#" class="inline-block bg-white text-success px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-2xl">
+                        <a href="#" class="inline-block bg-canvas text-primary px-10 py-4 rounded-full text-xl font-bold hover:bg-surface-1 transition border border-hairline">
                             Get Solutions PDF with Step-by-Step Working
                         </a>
                     </div>
                 </section>
                 
-            </main>
+                <!-- Related Notes -->
+    <section class="pt-8 border-t">
+        <h3 class="text-2xl font-bold text-ink mb-6">Related Notes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="./dual-nature-of-radiation-and-matter.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Dual Nature Of Radiation And Matter</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./electromagnetic-induction.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Electromagnetic Induction</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+            <a href="./electromagnetic-waves.html" class="bg-canvas rounded-xl border border-hairline p-6 hover:border border-hairline transition border-t-4 border-primary">
+                <h4 class="font-bold text-lg text-ink mb-2">Electromagnetic Waves</h4>
+                <span class="text-primary font-semibold text-sm">Read Notes &rarr;</span>
+            </a>
+        </div>
+    </section>
+</main>
         </div>
     </div>
     
     <!-- Related Notes Section -->
-    <section class="bg-white py-12 mt-12 border-t-4 border-primary">
+    <section class="bg-canvas py-12 mt-12 border-t-4 border-primary">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <h2 class="text-3xl font-bold text-ink mb-8 flex items-center">
                 <span class="w-2 h-10 bg-primary rounded mr-4"></span>
                 Related Physics Notes
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
+                        <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Previous Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition">Electrostatics</h3>
-                    <p class="text-gray-600">Coulomb's Law, Electric Field, Gauss's Law, Capacitors</p>
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electrostatics</h3>
+                    <p class="text-ink-muted">Coulomb's Law, Electric Field, Gauss's Law, Capacitors</p>
                     <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effects-of-current" class="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effects-of-current" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
-                        <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
+                        <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-success transition">Magnetic Effects of Current</h3>
-                    <p class="text-gray-600">Biot-Savart Law, Ampere's Law, Lorentz Force, Moving Charges</p>
-                    <div class="mt-4 text-success font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Magnetic Effects of Current</h3>
+                    <p class="text-ink-muted">Biot-Savart Law, Ampere's Law, Lorentz Force, Moving Charges</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
                 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-2xl transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">Related</span>
+                        <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">Electromagnetic Induction</h3>
-                    <p class="text-gray-600">Faraday's Law, Lenz's Law, Self & Mutual Inductance, AC Circuits</p>
-                    <div class="mt-4 text-secondary font-semibold flex items-center">
+                    <h3 class="text-xl font-bold text-ink mb-2 group-hover:text-primary transition">Electromagnetic Induction</h3>
+                    <p class="text-ink-muted">Faraday's Law, Lenz's Law, Self & Mutual Inductance, AC Circuits</p>
+                    <div class="mt-4 text-primary font-semibold flex items-center">
                         Read Notes <span class="ml-2">→</span>
                     </div>
                 </a>
@@ -1950,7 +1995,7 @@
             
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg shadow-lg">
+                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -1958,34 +2003,34 @@
     </section>
     
     <!-- SEO-Optimized Summary Section -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-surface-1 to-surface-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <article class="prose max-w-none">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Current Electricity - Complete Guide for JEE 2025-26</h2>
+                <h2 class="text-4xl font-bold text-ink mb-6">Current Electricity - Complete Guide for JEE 2025-26</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Why Current Electricity is Important for JEE?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-ink-muted leading-relaxed mb-4">
                             <strong>Current Electricity</strong> is one of the highest weightage chapters in <strong>JEE Physics</strong>, contributing 10-12% marks in both JEE Main and Advanced. Key reasons:
                         </p>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <ul class="list-disc list-inside space-y-2 text-ink-muted ml-4">
                             <li><strong>Kirchhoff's Laws</strong> - Foundation for circuit analysis (30% questions)</li>
                             <li><strong>RC Circuits</strong> - Time-dependent behavior (25% in JEE Advanced)</li>
                             <li><strong>Practical Applications</strong> - Wheatstone bridge, Potentiometer (experimental physics)</li>
                             <li><strong>Conceptual Depth</strong> - Connects electrostatics with magnetism</li>
                         </ul>
-                        <p class="text-gray-700 leading-relaxed mt-4">
+                        <p class="text-ink-muted leading-relaxed mt-4">
                             In <strong>JEE Advanced</strong>, questions often involve complex multi-loop circuits with capacitors, requiring strong problem-solving skills.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="bg-canvas p-8 rounded-2xl border border-hairline">
                         <h3 class="text-2xl font-bold text-primary mb-4">Key Topics & Formulas to Remember</h3>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">1. Most Important Formulas</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">1. Most Important Formulas</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Ohm's Law: V = IR</li>
                                     <li>• Resistance: R = ρL/A</li>
                                     <li>• EMF & Terminal Voltage: V = E - Ir</li>
@@ -1996,8 +2041,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg text-secondary mb-2">2. Critical Concepts</h4>
-                                <ul class="text-gray-700 space-y-1 text-sm">
+                                <h4 class="font-bold text-lg text-primary mb-2">2. Critical Concepts</h4>
+                                <ul class="text-ink-muted space-y-1 text-sm">
                                     <li>• Drift velocity ≠ Speed of current propagation</li>
                                     <li>• Internal resistance reduces terminal voltage</li>
                                     <li>• Time constant τ = RC (63.2% rule)</li>
@@ -2009,12 +2054,12 @@
                 </div>
                 
                 <!-- Study Tips -->
-                <div class="mt-8 bg-gradient-to-r from-blue-100 to-purple-100 p-8 rounded-2xl">
+                <div class="mt-8 bg-gradient-to-r from-surface-3 to-surface-3 p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold text-primary mb-4">📚 How to Study Current Electricity Effectively?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Main Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 5-6 days (3 hours/day)</li>
                                 <li>Master <strong>Kirchhoff's Laws</strong> for simple circuits</li>
                                 <li>Practice 100+ numerical problems on combinations</li>
@@ -2025,7 +2070,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-3">For JEE Advanced Students:</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <ol class="list-decimal list-inside space-y-2 text-ink-muted">
                                 <li><strong>Time Required:</strong> 8-10 days (4 hours/day)</li>
                                 <li>Deep dive into <strong>complex circuit analysis</strong></li>
                                 <li>Master RC circuits with detailed time-dependent analysis</li>
@@ -2038,35 +2083,35 @@
                 </div>
                 
                 <!-- Common Mistakes -->
-                <div class="mt-8 bg-red-50 border-l-4 border-danger p-6 rounded-r-xl">
-                    <h3 class="text-2xl font-bold text-danger mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
-                    <ul class="space-y-3 text-gray-700">
+                <div class="mt-8 bg-surface-2 border-l-4 border-danger p-6 rounded-r-xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">⚠️ Common Mistakes to Avoid in JEE Exam</h3>
+                    <ul class="space-y-3 text-ink-muted">
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Sign errors in Kirchhoff's laws:</strong> Always maintain consistent direction for current/voltage while writing equations
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Confusing series and parallel formulas:</strong> Remember - Series adds R, Parallel adds 1/R
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Forgetting internal resistance:</strong> Always consider 'r' when dealing with real cells
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Wrong exponential in RC circuits:</strong> Charging uses (1-e^(-t/τ)), Discharging uses e^(-t/τ)
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-danger font-bold mr-3 text-xl">❌</span>
+                            <span class="text-primary font-bold mr-3 text-xl">❌</span>
                             <div>
                                 <strong>Assuming ideal ammeter/voltmeter:</strong> Remember - ideal ammeter has R=0, ideal voltmeter has R=∞
                             </div>
@@ -2075,11 +2120,11 @@
                 </div>
                 
                 <!-- Previous Year Analysis -->
-                <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mt-8 bg-canvas p-8 rounded-2xl border border-hairline">
                     <h3 class="text-2xl font-bold text-primary mb-4">📊 JEE Previous Year Question Analysis (2015-2024)</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
-                            <thead class="bg-primary text-white">
+                            <thead class="bg-primary text-ink">
                                 <tr>
                                     <th class="p-3 text-left">Year</th>
                                     <th class="p-3 text-left">JEE Main</th>
@@ -2088,19 +2133,19 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y">
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2024</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
                                     <td class="p-3">RC circuits, Kirchhoff's laws</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2023</td>
                                     <td class="p-3">4 Questions (16 marks)</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">Complex circuits, Potentiometer</td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
+                                <tr class="hover:bg-surface-1">
                                     <td class="p-3 font-semibold">2022</td>
                                     <td class="p-3">3 Questions (12 marks)</td>
                                     <td class="p-3">5 Questions (18 marks)</td>
@@ -2109,7 +2154,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-gray-700 mt-4 text-sm">
+                    <p class="text-ink-muted mt-4 text-sm">
                         <strong>Trend:</strong> JEE Advanced is focusing more on time-dependent circuits (RC), complex multi-loop problems, and conceptual questions on internal resistance and power transfer.
                     </p>
                 </div>
@@ -2119,105 +2164,105 @@
     </section>
     
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
+    <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 
                 <!-- Quick Links -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-white transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-white transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-white transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">Blog</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-white transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-white transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-white transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-white transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-white transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-white transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-white transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-white transition">Fluid Mechanics</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-white transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-white transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-white transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-white transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-white transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-white transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-white transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-white transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-white transition">Chemical Equilibrium</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-white transition">Ionic Equilibrium</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-white transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-white transition">Relation & Functions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-white transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-white transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-white transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-white transition">Permutation and Combinations</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functions</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
                 
                 <!-- Articles -->
                 <div>
                     <h4 class="text-xl font-bold mb-4">Articles</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-white transition">Score 200+ in JEE MAINS</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-white transition">ICAI RESULTS 2026</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-white transition">UGEE 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-white transition">COMEDK 2026 Registration</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-white transition">WBJEE 2026 Registration</a></li>
+                    <ul class="space-y-2 text-ink-subtle">
+                        <li><a href="https://jeeprepguide.netlify.app/blog/jee-main-2026-do-or-die-chapters-to-score-200-marks" class="hover:text-ink transition">Score 200+ in JEE MAINS</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/icai-results-2026" class="hover:text-ink transition">ICAI RESULTS 2026</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/iiith-ugee-2026-registration-date-eligibility-and-application-process" class="hover:text-ink transition">UGEE 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/comedk-2026-registration-exam-date-application-form-fees" class="hover:text-ink transition">COMEDK 2026 Registration</a></li>
+                        <li><a href="https://jeeprepguide.netlify.app/blog/wbjee-2026-registration-date-exam-date-application-form" class="hover:text-ink transition">WBJEE 2026 Registration</a></li>
                     </ul>
                 </div>
             </div>
             
             <div>
                 <h4 class="text-xl font-bold mb-4">Important Websites</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-white transition">JEE MAINS</a></li>
-                    <li><a href="https://jeeadv.ac.in/" class="hover:text-white transition">JEE ADVANCED</a></li>
-                    <li><a href="https://nta.ac.in/" class="hover:text-white transition">NTA</a></li>
-                    <li><a href="https://examinationservices.nic.in/" class="hover:text-white transition">EXAMINATION MANAGEMENT SERVICES</a></li>
+                <ul class="space-y-2 text-ink-subtle">
+                    <li><a href="https://jeemain.nta.nic.in/" class="hover:text-ink transition">JEE MAINS</a></li>
+                    <li><a href="https://jeeadv.ac.in/" class="hover:text-ink transition">JEE ADVANCED</a></li>
+                    <li><a href="https://nta.ac.in/" class="hover:text-ink transition">NTA</a></li>
+                    <li><a href="https://examinationservices.nic.in/" class="hover:text-ink transition">EXAMINATION MANAGEMENT SERVICES</a></li>
                 </ul>
             </div>
             
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <div class="border-t border-hairline pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-ink-subtle text-sm mb-4 md:mb-0">
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
-                <div class="flex space-x-6 text-sm text-gray-400">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-white transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-white transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-white transition">Terms and Conditions</a>
+                <div class="flex space-x-6 text-sm text-ink-subtle">
+                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
+                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
+                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
     
     <!-- Scroll to Top Button -->
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
         ↑
     </button>
 <!-- Scripts -->
