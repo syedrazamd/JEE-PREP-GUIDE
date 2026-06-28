@@ -326,7 +326,7 @@
             scroll-behavior: smooth;
         }
         .hero-gradient {
-            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
+            background: linear-gradient(135deg, #e11d48 0%, #be123c 50%, #9f1239 100%);
         }
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -368,7 +368,20 @@
 
         /* Filter Animation */
         .chapter-card {
-            transition: all 0.4s ease;
+            transition: all 0.4s ease, box-shadow 0.2s ease;
+            display: block;
+            background: #212121;
+            border-radius: 30px;
+            box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                        -15px -15px 30px rgb(60, 60, 60);
+        }
+        .chapter-card:hover {
+            box-shadow: 20px 20px 40px rgb(20, 20, 20),
+                        -20px -20px 40px rgb(65, 65, 65);
+        }
+        .chapter-card:active {
+            box-shadow: inset 8px 8px 16px rgb(25, 25, 25),
+                        inset -8px -8px 16px rgb(60, 60, 60);
         }
         .chapter-card.hidden-filter {
             opacity: 0;
@@ -673,10 +686,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="algebra-grid">
                     
                     <!-- Ch 1: Sets, Relations & Functions (Available) -->
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="chapter-card border-l-4 cat-algebra p-6 group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 1</span>
-                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">📦</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -696,10 +709,10 @@
                         </div>
                     </a>
 
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="chapter-card border-l-4 cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">📦</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -720,10 +733,10 @@
                     </a>
 
                     <!-- Ch 2: Complex Numbers (Available) -->
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="chapter-card border-l-4 cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 3</span>
-                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🌀</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -744,10 +757,10 @@
                     </a>
 
                     <!-- Ch 3: Quadratic Equations (Available) -->
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="chapter-card border-l-4 cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
-                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">✖️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -768,10 +781,10 @@
                     </a>
 
                     <!-- Ch 4: Sequences & Series (Coming Soon) -->
-                     <a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
+                     <a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="chapter-card border-l-4 cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
-                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">✖️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -793,10 +806,10 @@
 
 
                     <!-- Ch 5: Permutations & Combinations (Coming Soon) -->
-                    <a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="chapter-card border-l-4 cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
-                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">✖️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -818,11 +831,11 @@
 
 
                     <!-- Ch 6: Binomial Theorem -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-algebra p-6 group" data-category="algebra" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 6</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">📐</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Binomial Theorem</h3>
                         <p class="text-ink-muted mb-4">Binomial expansion, general term, middle term, properties of coefficients</p>
@@ -833,11 +846,11 @@
                     </div>
 
                     <!-- Ch 7: Matrices & Determinants -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-algebra p-6 rounded-2xl card-hover group" data-category="algebra" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-algebra p-6 group" data-category="algebra" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 7</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">🔢</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Matrices &amp; Determinants</h3>
                         <p class="text-ink-muted mb-4">Types of matrices, operations, inverse, Cramer's rule, rank</p>
@@ -860,11 +873,11 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="trigonometry-grid">
                     <!-- Ch 8: Trig Functions -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-trigonometry p-6 rounded-2xl card-hover group" data-category="trigonometry" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-trigonometry p-6 group" data-category="trigonometry" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 8</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">📐</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Trigonometric Functions &amp; Identities</h3>
                         <p class="text-ink-muted mb-4">Ratios, identities, compound angles, multiple angles, sub-multiple angles</p>
@@ -874,11 +887,11 @@
                         </div>
                     </div>
                     <!-- Ch 9: Inverse Trig -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-trigonometry p-6 rounded-2xl card-hover group" data-category="trigonometry" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-trigonometry p-6 group" data-category="trigonometry" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 9</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">🔄</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Inverse Trigonometric Functions</h3>
                         <p class="text-ink-muted mb-4">Domain, range, principal values, properties, equations</p>
@@ -888,11 +901,11 @@
                         </div>
                     </div>
                     <!-- Ch 10: Trig Equations -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-trigonometry p-6 rounded-2xl card-hover group" data-category="trigonometry" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-trigonometry p-6 group" data-category="trigonometry" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 10</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">⚡</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Trigonometric Equations</h3>
                         <p class="text-ink-muted mb-4">General solutions, principal solutions, methods of solving</p>
@@ -915,11 +928,11 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="coordinate-grid">
                     <!-- Ch 11: Straight Lines -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-coordinate p-6 group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 11</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">📏</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Straight Lines</h3>
                         <p class="text-ink-muted mb-4">Slope, forms of line, angle between lines, distance formulas, locus</p>
@@ -929,11 +942,11 @@
                         </div>
                     </div>
                     <!-- Ch 12: Circles -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-coordinate p-6 group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 12</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">⭕</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Circles</h3>
                         <p class="text-ink-muted mb-4">Standard equation, general form, tangent, chord, family of circles</p>
@@ -943,11 +956,11 @@
                         </div>
                     </div>
                     <!-- Ch 13: Parabola -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-coordinate p-6 group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 13</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">📈</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Parabola</h3>
                         <p class="text-ink-muted mb-4">Standard forms, focus, directrix, tangent, normal, chord of contact</p>
@@ -957,11 +970,11 @@
                         </div>
                     </div>
                     <!-- Ch 14: Ellipse -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-coordinate p-6 group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 14</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">🥚</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Ellipse</h3>
                         <p class="text-ink-muted mb-4">Standard equation, eccentricity, tangent, normal, auxiliary circle</p>
@@ -971,11 +984,11 @@
                         </div>
                     </div>
                     <!-- Ch 15: Hyperbola -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-coordinate p-6 rounded-2xl card-hover group" data-category="coordinate" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-coordinate p-6 group" data-category="coordinate" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 15</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">〰️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Hyperbola</h3>
                         <p class="text-ink-muted mb-4">Standard form, asymptotes, rectangular hyperbola, tangent &amp; normal</p>
@@ -998,11 +1011,11 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="calculus-grid">
                     <!-- Ch 16: Limits -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-calculus p-6 group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 16</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">🔍</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Limits, Continuity &amp; Differentiability</h3>
                         <p class="text-ink-muted mb-4">L'Hopital's rule, indeterminate forms, continuity, differentiability</p>
@@ -1012,11 +1025,11 @@
                         </div>
                     </div>
                     <!-- Ch 17: Differentiation -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-calculus p-6 group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 17</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">📉</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Differentiation</h3>
                         <p class="text-ink-muted mb-4">Chain rule, implicit, parametric, logarithmic differentiation</p>
@@ -1026,11 +1039,11 @@
                         </div>
                     </div>
                     <!-- Ch 18: Applications of Derivatives -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-calculus p-6 group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 18</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">🎯</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Applications of Derivatives</h3>
                         <p class="text-ink-muted mb-4">Tangent, normal, maxima &amp; minima, monotonicity, rate of change</p>
@@ -1040,11 +1053,11 @@
                         </div>
                     </div>
                     <!-- Ch 19: Indefinite Integration -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-calculus p-6 group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 19</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">∫</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Indefinite Integration</h3>
                         <p class="text-ink-muted mb-4">Standard integrals, substitution, integration by parts, partial fractions</p>
@@ -1054,11 +1067,11 @@
                         </div>
                     </div>
                     <!-- Ch 20: Definite Integration & Area -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-calculus p-6 group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 20</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">📊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Definite Integration &amp; Area</h3>
                         <p class="text-ink-muted mb-4">Properties of definite integrals, area under curves, bounded regions</p>
@@ -1068,11 +1081,11 @@
                         </div>
                     </div>
                     <!-- Ch 21: Differential Equations -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-calculus p-6 rounded-2xl card-hover group" data-category="calculus" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-calculus p-6 group" data-category="calculus" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 21</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">🌊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Differential Equations</h3>
                         <p class="text-ink-muted mb-4">Order, degree, variable separable, homogeneous, linear, Bernoulli</p>
@@ -1095,11 +1108,11 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="vectors-grid">
                     <!-- Ch 22: Vectors -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-vectors p-6 rounded-2xl card-hover group" data-category="vectors" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-vectors p-6 group" data-category="vectors" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 22</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">➡️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Vectors</h3>
                         <p class="text-ink-muted mb-4">Dot product, cross product, scalar triple product, vector triple product</p>
@@ -1109,11 +1122,11 @@
                         </div>
                     </div>
                     <!-- Ch 23: 3D Geometry -->
-                    <div class="chapter-card bg-surface-2 border border-hairline cat-vectors p-6 rounded-2xl card-hover group" data-category="vectors" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-vectors p-6 group" data-category="vectors" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 23</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">🧊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">3D Geometry</h3>
                         <p class="text-ink-muted mb-4">Direction cosines, lines in 3D, planes, angle between them, distance</p>
@@ -1136,11 +1149,11 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="probability-grid">
                     <!-- Ch 24: Probability -->
-                    <div class="chapter-card bg-canvas border-l-4 border-hairline-strong p-6 rounded-2xl border border-hairline card-hover group" data-category="vectors" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-vectors p-6 group" data-category="vectors" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="bg-surface-2 text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 24</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">🎲</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Probability</h3>
                         <p class="text-ink-muted mb-4">Classical, conditional probability, Bayes' theorem, Binomial distribution</p>
@@ -1150,11 +1163,11 @@
                         </div>
                     </div>
                     <!-- Ch 25: Statistics -->
-                    <div class="chapter-card bg-canvas border-l-4 border-hairline-strong p-6 rounded-2xl border border-hairline card-hover group" data-category="vectors" data-status="coming-soon">
+                    <a href="#" class="chapter-card border-l-4 cat-vectors p-6 group" data-category="vectors" data-status="coming-soon">
                         <div class="flex items-center justify-between mb-4">
                             <span class="bg-surface-2 text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 25</span>
                             <span style="display:inline-block;background:#2c2c32;color:#fbbf24;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:999px;">Coming Soon</span>
-                        </div>
+                        </a>
                         <div class="text-4xl mb-4">📉</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Statistics</h3>
                         <p class="text-ink-muted mb-4">Mean, median, mode, variance, standard deviation, skewness</p>
