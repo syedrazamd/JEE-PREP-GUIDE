@@ -380,7 +380,20 @@
 
         /* Filter Animation */
         .chapter-card {
-            transition: all 0.4s ease;
+            transition: all 0.4s ease, box-shadow 0.2s ease;
+            display: block;
+            background: #212121;
+            border-radius: 30px;
+            box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                        -15px -15px 30px rgb(60, 60, 60);
+        }
+        .chapter-card:hover {
+            box-shadow: 20px 20px 40px rgb(20, 20, 20),
+                        -20px -20px 40px rgb(65, 65, 65);
+        }
+        .chapter-card:active {
+            box-shadow: inset 8px 8px 16px rgb(25, 25, 25),
+                        inset -8px -8px 16px rgb(60, 60, 60);
         }
         .chapter-card.hidden-filter {
             opacity: 0;
@@ -671,10 +684,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="physical-grid">
                     
                     <!-- Ch 1: Some Basic Concepts of Chemistry (Available) -->
-                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 1</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">⚖️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -688,17 +701,15 @@
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 120+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
                     <!-- Ch 2: Atomic Structure (Available) -->
-                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">⚛️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -712,18 +723,16 @@
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
                     <!-- Ch 3: States of Matter (Coming Soon) -->
 
-                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">💨</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -737,17 +746,15 @@
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
                     <!-- Ch 4: Chemical Thermodynamics (Coming Soon) -->
-                     <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                     <a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🔥</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -761,17 +768,15 @@
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
                     <!-- Ch 5: Chemical Equilibrium (Coming Soon) -->
-                     <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                     <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">⚖️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -785,17 +790,15 @@
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
                     <!-- Ch 6: Ionic Equilibrium (Coming Soon) -->
-                     <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                     <a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🧊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -809,16 +812,14 @@
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
-                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🧊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -832,16 +833,14 @@
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/solutions" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
-                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 2</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🧊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -855,20 +854,18 @@
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/electrochemistry" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
 
                     
 
                     <!-- ADD_NEW_PHYSICAL_CHAPTER -->
-                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 4</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">⏳</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -882,16 +879,14 @@
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-kinetics" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
 
-                    <div class="chapter-card bg-surface-2 border-l-4 cat-physical p-6 rounded-2xl border border-hairline card-hover group" data-category="physical" data-status="available">
+                    <a href="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry" class="chapter-card border-l-4 cat-physical p-6 group" data-category="physical" data-status="available">
                         <div class="flex items-center justify-between mb-4">
                             <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 5</span>
-                            <span class="bg-primary/30 text-primary px-3 py-1 rounded-full text-sm font-bold">✓ Available</span>
+                            <span class="bg-surface-3 text-primary px-3 py-1 rounded-full text-sm font-bold border border-primary">✓ Available</span>
                         </div>
                         <div class="text-4xl mb-4">🌫️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">
@@ -905,10 +900,8 @@
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
-                            <a href="https://jeeprepguide.netlify.app/jee/chemistry/surface-chemistry" class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
-                                Read →
-                            </a>
-                        </div>
+                            <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
+                        </a>
                     </div>
                 </div>
             </div>
