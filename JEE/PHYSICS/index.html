@@ -409,7 +409,9 @@
         /* Filter Animation */
         .chapter-card {
             transition: all 0.4s ease, box-shadow 0.2s ease;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
             background: #212121;
             border-radius: 30px;
             box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -702,20 +704,10 @@
     <!-- Chapters Grid -->
     <section class="pb-16 bg-canvas">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#1c1c20;border-radius:1rem;border-left:4px solid #5e6ad2;">
-              <h2 style="font-size:1.2rem;font-weight:800;color:#f7f8f8;margin-bottom:0.5rem;">
-                JEE Physics Notes — All Chapters 2026
-              </h2>
-              <p style="font-size:0.95rem;line-height:1.8;color:#d0d6e0;margin:0;">
-                This page covers all 24 JEE Physics chapters with chapter-wise notes, important formulas, shortcuts, and PYQ analysis for JEE Main & Advanced 2026. Chapters are organised from Class 11 mechanics to Class 12 modern physics. Topics include Kinematics, Laws of Motion, Rotational Motion, Thermodynamics, Electrostatics, Current Electricity, Magnetism, EMI, Optics, and Modern Physics — all free, no login required.
-              </p>
-            </div>
             
             <!-- Mechanics Section -->
             <div class="mb-16" id="mechanics-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">Mechanics</h2>
                         <p class="text-ink-muted">Foundation of Physics • 8 Chapters • ~35% JEE Weightage</p>
@@ -737,7 +729,7 @@
                         <p class="text-ink-muted mb-4">
                             SI units, dimensional analysis, error analysis, significant figures & conversions
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 2 hrs</span>
                                 <span>📝 100+ MCQs</span>
@@ -761,7 +753,7 @@
                         <p class="text-ink-muted mb-4">
                             Motion in 1D/2D, projectile motion, relative velocity, circular motion & graphs
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -783,7 +775,7 @@
                             Newton's laws, FBD, friction, tension, circular motion dynamics
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center text-sm text-ink-tertiary">
+                        <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                             <span>⏱️ 3.5 hrs</span>
                             <span>📝 150+ MCQs</span>
                         </div>
@@ -803,7 +795,7 @@
                             Work-energy theorem, conservation laws, collisions, power
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center text-sm text-ink-tertiary">
+                        <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                             <span>⏱️ 3 hrs</span>
                             <span>📝 150+ MCQs</span>
                         </div>
@@ -823,7 +815,7 @@
                             Moment of inertia, torque, angular momentum, rolling motion
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center text-sm text-ink-tertiary">
+                        <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                             <span>⏱️ 4 hrs</span>
                             <span>📝 150+ MCQs</span>
                         </div>
@@ -843,7 +835,7 @@
                             Universal gravitation, gravitational field & potential, satellites
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center text-sm text-ink-tertiary">
+                        <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                             <span>⏱️ 3 hrs</span>
                             <span>📝 150+ MCQs</span>
                         </div>
@@ -864,7 +856,7 @@
                             Elasticity, fluid mechanics, surface tension, viscosity
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center text-sm text-ink-tertiary">
+                        <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                             <span>⏱️ 3.5 hrs</span>
                             <span>📝 150+ MCQs</span>
                         </div>
@@ -885,7 +877,7 @@
                             COM calculations, momentum conservation, collisions
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center text-sm text-ink-tertiary">
+                        <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                             <span>⏱️ 3 hrs</span>
                             <span>📝 150+ MCQs</span>
                         </div>
@@ -900,7 +892,7 @@
             <!-- Thermodynamics Section -->
             <div class="mb-16" id="thermodynamics-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-danger rounded mr-4"></div>
+                    
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">Thermodynamics</h2>
                         <p class="text-ink-muted">Heat & Energy • 3 Chapters • ~10% JEE Weightage</p>
@@ -921,7 +913,7 @@
                             Temperature, heat transfer, calorimetry, thermal expansion
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 2.5 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -941,7 +933,7 @@
                             Laws of thermodynamics, heat engines, entropy, Carnot cycle
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -961,7 +953,7 @@
                             Ideal gas equation, molecular speeds, degrees of freedom, equipartition, mean free path
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 2.5 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -974,7 +966,7 @@
             <!-- Waves Section -->
             <div class="mb-16" id="waves-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-success rounded mr-4"></div>
+                    
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">Waves & Oscillations</h2>
                         <p class="text-ink-muted">Vibrations & Sound • 2 Chapters • ~8% JEE Weightage</p>
@@ -995,7 +987,7 @@
                             Simple harmonic motion, pendulums, springs, damped oscillations
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1015,7 +1007,7 @@
                             Progressive waves, standing waves, sound, Doppler effect, beats
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3.5 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1027,7 +1019,7 @@
              <!-- Electromagnetism Section -->
              <div class="mb-16" id="electromagnetism-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-accent rounded mr-4"></div>
+                    
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">Electromagnetism</h2>
                         <p class="text-ink-muted">Electricity & Magnetism • 7 Chapters • ~30% JEE Weightage</p>
@@ -1048,7 +1040,7 @@
                             Coulomb's law, electric field, potential, Gauss's law
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1068,7 +1060,7 @@
                             Capacitors, dielectrics, energy stored, combinations
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 2.5 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1088,7 +1080,7 @@
                             Current, resistance, Ohm's law, circuits, Kirchhoff laws
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1108,7 +1100,7 @@
                             Biot-Savart law, Ampere law, force on charges, magnetic dipole, Earth magnetism
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3.5 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1128,7 +1120,7 @@
                             Faraday law, Lenz law, inductance, AC generator, eddy currents, transformers
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1148,7 +1140,7 @@
                             AC voltage and current, reactance, impedance, resonance, power factor, transformers
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1168,7 +1160,7 @@
                             Displacement current, EM wave properties, spectrum, energy transport, applications
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 2 hrs</span>
                                 <span>📝 100+ MCQs</span>
                             </div>
@@ -1181,7 +1173,7 @@
             <!-- Optics Section -->
             <div class="mb-16" id="optics-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
+                    
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">Optics</h2>
                         <p class="text-ink-muted">Light & Vision • 2 Chapters • ~10% JEE Weightage</p>
@@ -1201,7 +1193,7 @@
                             Reflection, refraction, lenses, mirrors, optical instruments
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1221,7 +1213,7 @@
                             Interference, diffraction, polarization, Huygens principle
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3.5 hrs</span>
                                 <span>📝 150+ MCQs</span>
                             </div>
@@ -1235,7 +1227,7 @@
         <!-- Modern Physics Section -->
             <div class="mb-16" id="modern-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
+                    
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">Modern Physics</h2>
                         <p class="text-ink-muted">Quantum & Nuclear • 3 Chapters • ~12% JEE Weightage</p>
@@ -1256,7 +1248,7 @@
                             Diodes, transistors, logic gates, electronic devices
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 2.5 hrs</span>
                             </div>
                             <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
@@ -1275,7 +1267,7 @@
                             Photoelectric effect, de Broglie wavelength, wave-particle duality
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3 hrs</span>
                             </div>
                             <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
@@ -1294,7 +1286,7 @@
                             Atomic structure, nuclear reactions, radioactivity, binding energy
                         </p>
                         <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center text-sm text-ink-tertiary">
+                            <div class="flex items-center text-sm text-ink-tertiary mt-auto">
                                 <span>⏱️ 3 hrs</span>
                             </div>
                             <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
@@ -1425,6 +1417,17 @@
         </div>
     </div>
 </section>
+
+            <!-- SEO Info Block -->
+            <div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#1c1c20;border-radius:1rem;border-left:4px solid var(--color-primary);">
+              <h2 style="font-size:1.2rem;font-weight:800;color:var(--color-ink);margin-bottom:0.5rem;">
+                JEE Physics Notes — All Chapters 2026
+              </h2>
+              <p style="font-size:0.95rem;line-height:1.8;color:var(--color-ink-muted);margin:0;">
+                This page covers all 24 JEE Physics chapters with chapter-wise notes, important formulas, shortcuts, and PYQ analysis for JEE Main & Advanced 2026. Chapters are organised from Class 11 mechanics to Class 12 modern physics. Topics include Kinematics, Laws of Motion, Rotational Motion, Thermodynamics, Electrostatics, Current Electricity, Magnetism, EMI, Optics, and Modern Physics — all free, no login required.
+              </p>
+            </div>
+
     <!-- Footer -->
     <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
