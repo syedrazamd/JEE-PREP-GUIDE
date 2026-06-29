@@ -363,7 +363,7 @@
             top: 0;
             left: 0;
             height: 4px;
-            background: linear-gradient(to right, #5e6ad2, #828fff);
+            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
             z-index: 9999;
             transition: width 0.1s;
         }
@@ -381,7 +381,9 @@
         /* Filter Animation */
         .chapter-card {
             transition: all 0.4s ease, box-shadow 0.2s ease;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
             background: #212121;
             border-radius: 30px;
             box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -399,6 +401,51 @@
             opacity: 0;
             transform: scale(0.8);
             display: none;
+        }
+
+        /* Glow Button Style */
+        .glow-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            height: 40px;
+            padding: 0 16px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .glow-button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            left: -4px;
+            top: -1px;
+            margin: auto;
+            width: calc(100% + 8px);
+            height: calc(100% + 8px);
+            border-radius: 10px;
+            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+            z-index: -10;
+            pointer-events: none;
+        }
+        .glow-button::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+            transform: translate3d(0, 0, 0) scale(0.95);
+            filter: blur(20px);
+        }
+        .glow-button:hover::after {
+            filter: blur(30px);
+        }
+        .glow-button-active {
+            transform: scale(1.05);
         }
 
         /* Floating Animation */
@@ -640,16 +687,16 @@
 
                 <!-- Category Filters -->
                 <div class="flex flex-wrap gap-2">
-                    <button onclick="filterChapters('all')" class="filter-btn active px-4 py-2 rounded-full font-semibold bg-primary text-ink transition" data-filter="all">
+                    <button onclick="filterChapters('all')" class="glow-button glow-button-active filter-btn" data-filter="all">
                         All (30+)
                     </button>
-                    <button onclick="filterChapters('physical')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition border border-hairline" data-filter="physical">
+                    <button onclick="filterChapters('physical')" class="glow-button filter-btn" data-filter="physical">
                         ⚗️ Physical
                     </button>
-                    <button onclick="filterChapters('inorganic')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition border border-hairline" data-filter="inorganic">
+                    <button onclick="filterChapters('inorganic')" class="glow-button filter-btn" data-filter="inorganic">
                         🔬 Inorganic
                     </button>
-                    <button onclick="filterChapters('organic')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition border border-hairline" data-filter="organic">
+                    <button onclick="filterChapters('organic')" class="glow-button filter-btn" data-filter="organic">
                         🧬 Organic
                     </button>
                 </div>
@@ -664,17 +711,9 @@
             <!-- ============================================ -->
             <!-- PHYSICAL CHEMISTRY SECTION -->
             <!-- ============================================ -->
-<div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#131316;border-radius:1rem;border-left:4px solid #5e6ad2;">
-  <h2 style="font-size:1.2rem;font-weight:800;color:#f7f8f8;margin-bottom:0.5rem;">
-    JEE Chemistry Notes — All Chapters 2026
-  </h2>
-  <p style="font-size:0.95rem;line-height:1.8;color:#d0d6e0;margin:0;">
-    This page covers all 30+ JEE Chemistry chapters with chapter-wise short notes, important formulas, PYQs, and revision notes for JEE Main & Advanced 2026. Chapters are divided into three sections: Physical Chemistry (mole concept, atomic structure, chemical bonding, thermodynamics, equilibrium, electrochemistry, chemical kinetics, solutions, surface chemistry), Inorganic Chemistry (periodic table, p-block, d-block, coordination compounds, salt analysis), and Organic Chemistry (GOC, hydrocarbons, reactions, biomolecules, polymers). All notes are free — no login required.
-  </p>
-</div>
             <div class="mb-16" id="physical-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
+                    
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">⚗️ Physical Chemistry</h2>
                         <p class="text-ink-muted">Concepts & Calculations • 10 Chapters • ~35% JEE Weightage</p>
@@ -696,7 +735,7 @@
                         <p class="text-ink-muted mb-4">
                             Mole concept, Dalton's atomic theory, laws of chemical combination, stoichiometry, limiting reagent, percentage yield
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 120+ MCQs</span>
@@ -718,7 +757,7 @@
                         <p class="text-ink-muted mb-4">
                             Bohr model, quantum numbers, electronic configuration, photoelectric effect, de Broglie wavelength, Heisenberg uncertainty
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -741,7 +780,7 @@
                         <p class="text-ink-muted mb-4">
                             Gas laws, ideal gas equation, kinetic theory of gases, van der Waals equation, liquefaction
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -763,7 +802,7 @@
                         <p class="text-ink-muted mb-4">
                              Enthalpy, entropy, Gibbs free energy, Hess's law, Born-Haber cycle, spontaneity
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -785,7 +824,7 @@
                         <p class="text-ink-muted mb-4">
                              Law of mass action, Le Chatelier's principle, Kp, Kc, ionic equilibrium, pH, buffers
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -807,7 +846,7 @@
                         <p class="text-ink-muted mb-4">
                               Acids & bases, pH scale, buffer solutions, solubility product, common ion effect, hydrolysis
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -828,7 +867,7 @@
                         <p class="text-ink-muted mb-4">
                               Colligative properties, Raoult's law, osmotic pressure, van't Hoff factor, molality, molarity
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -849,7 +888,7 @@
                         <p class="text-ink-muted mb-4">
                               Electrochemical cells, Nernst equation, electrolysis, batteries
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -874,7 +913,7 @@
                         <p class="text-ink-muted mb-4">
                               Rate of reaction, order, molecularity, Arrhenius equation, collision theory
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -895,7 +934,7 @@
                         <p class="text-ink-muted mb-4">
                               Adsorption, catalysis, colloids, emulsions, Tyndall effect, Brownian movement
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-tertiary">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -911,7 +950,7 @@
             <!-- ============================================ -->
             <div class="mb-16" id="inorganic-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
+                    
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">🔬 Inorganic Chemistry</h2>
                         <p class="text-ink-muted">Elements & Periodicity • 10 Chapters • ~30% JEE Weightage</p>
@@ -927,7 +966,7 @@
             <!-- ============================================ -->
             <div class="mb-16" id="organic-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
+                    
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">🧬 Organic Chemistry</h2>
                         <p class="text-ink-muted">Reactions & Mechanisms • 10 Chapters • ~35% JEE Weightage</p>
@@ -1070,6 +1109,20 @@
                         <li><strong class="text-ink">Revise Inorganic Chemistry weekly</strong> - It requires regular revision</li>
                     </ol>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content Block -->
+    <section class="pb-16 bg-canvas">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#131316;border-radius:1rem;border-left:4px solid var(--color-primary);">
+              <h2 style="font-size:1.2rem;font-weight:800;color:var(--color-ink);margin-bottom:0.5rem;">
+                JEE Chemistry Notes — All Chapters 2026
+              </h2>
+              <p style="font-size:0.95rem;line-height:1.8;color:var(--color-ink-muted);margin:0;">
+                This page covers all 30+ JEE Chemistry chapters with chapter-wise short notes, important formulas, PYQs, and revision notes for JEE Main & Advanced 2026. Chapters are divided into three sections: Physical Chemistry (mole concept, atomic structure, chemical bonding, thermodynamics, equilibrium, electrochemistry, chemical kinetics, solutions, surface chemistry), Inorganic Chemistry (periodic table, p-block, d-block, coordination compounds, salt analysis), and Organic Chemistry (GOC, hydrocarbons, reactions, biomolecules, polymers). All notes are free — no login required.
+              </p>
             </div>
         </div>
     </section>

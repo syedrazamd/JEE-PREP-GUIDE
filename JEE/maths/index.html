@@ -345,7 +345,7 @@
             top: 0;
             left: 0;
             height: 4px;
-            background: linear-gradient(to right, #5e6ad2, #828fff);
+            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
             z-index: 9999;
             transition: width 0.1s;
         }
@@ -369,7 +369,9 @@
         /* Filter Animation */
         .chapter-card {
             transition: all 0.4s ease, box-shadow 0.2s ease;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
             background: #212121;
             border-radius: 30px;
             box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -403,6 +405,51 @@
             transition: stroke-dashoffset 0.35s;
             transform: rotate(-90deg);
             transform-origin: 50% 50%;
+        }
+
+        /* Glow Button Style */
+        .glow-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            height: 40px;
+            padding: 0 16px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .glow-button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            left: -4px;
+            top: -1px;
+            margin: auto;
+            width: calc(100% + 8px);
+            height: calc(100% + 8px);
+            border-radius: 10px;
+            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+            z-index: -10;
+            pointer-events: none;
+        }
+        .glow-button::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+            transform: translate3d(0, 0, 0) scale(0.95);
+            filter: blur(20px);
+        }
+        .glow-button:hover::after {
+            filter: blur(30px);
+        }
+        .glow-button-active {
+            transform: scale(1.05);
         }
     </style>
 <link rel="stylesheet" href="../../css/tailwind.min.css">
@@ -636,22 +683,22 @@
 
                 <!-- Category Filters -->
                 <div class="flex flex-wrap gap-2">
-                    <button onclick="filterChapters('all')" class="filter-btn active px-4 py-2 rounded-full font-semibold bg-primary text-ink transition" data-filter="all">
+                    <button onclick="filterChapters('all')" class="glow-button glow-button-active filter-btn" data-filter="all">
                         All (35+)
                     </button>
-                    <button onclick="filterChapters('algebra')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition" data-filter="algebra">
+                    <button onclick="filterChapters('algebra')" class="glow-button filter-btn" data-filter="algebra">
                         🔢 Algebra
                     </button>
-                    <button onclick="filterChapters('calculus')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition" data-filter="calculus">
+                    <button onclick="filterChapters('calculus')" class="glow-button filter-btn" data-filter="calculus">
                         📈 Calculus
                     </button>
-                    <button onclick="filterChapters('coordinate')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-surface-2 hover:text-ink transition" data-filter="coordinate">
+                    <button onclick="filterChapters('coordinate')" class="glow-button filter-btn" data-filter="coordinate">
                         📍 Coordinate
                     </button>
-                    <button onclick="filterChapters('trigonometry')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-surface-2 hover:text-ink transition" data-filter="trigonometry">
+                    <button onclick="filterChapters('trigonometry')" class="glow-button filter-btn" data-filter="trigonometry">
                         📐 Trigonometry
                     </button>
-                    <button onclick="filterChapters('vectors')" class="filter-btn px-4 py-2 rounded-full font-semibold bg-surface-2 text-ink-muted hover:bg-primary hover:text-ink transition" data-filter="vectors">
+                    <button onclick="filterChapters('vectors')" class="glow-button filter-btn" data-filter="vectors">
                         🎯 Vectors & 3D
                     </button>
                 </div>
@@ -666,17 +713,8 @@
             <!-- ============================================ -->
             <!-- ALGEBRA SECTION -->
             <!-- ============================================ -->
-<div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#1c1c20;border-radius:1rem;border-left:4px solid #5e6ad2;">
-  <h2 style="font-size:1.2rem;font-weight:800;color:#d0d6e0;margin-bottom:0.5rem;">
-    JEE Maths Notes — All Chapters 2026
-  </h2>
-  <p style="font-size:0.95rem;line-height:1.8;color:#8a8f98;margin:0;">
-    This page covers all 35+ JEE Mathematics chapters with chapter-wise notes, important formulas, PYQs, and shortcuts for JEE Main & Advanced 2026. Chapters are organised across five sections: Algebra (sets, complex numbers, quadratic equations, sequences & series, permutations & combinations, binomial theorem, matrices & determinants), Trigonometry, Coordinate Geometry (straight lines, circles, parabola, ellipse, hyperbola), Calculus (limits, derivatives, integrals, differential equations, applications of derivatives), and Miscellaneous (vectors, 3D geometry, probability, statistics). All notes are free — no login required.
-  </p>
-</div>
             <div class="mb-16" id="algebra-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">🔢 Algebra</h2>
                         <p class="text-ink-muted">Foundation of Mathematics • 10 Chapters • ~30% JEE Weightage</p>
@@ -698,7 +736,7 @@
                         <p class="text-ink-muted mb-4">
                             Set theory, Venn diagrams, unions, intersection
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 100+ MCQs</span>
@@ -721,7 +759,7 @@
                         <p class="text-ink-muted mb-4">
                            Types of relations, types of functions, domain, range, composition of functions, inverse
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 100+ MCQs</span>
@@ -745,7 +783,7 @@
                         <p class="text-ink-muted mb-4">
                             Argand plane, modulus, argument, polar form, De Moivre's theorem, roots of unity, geometry of complex numbers
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 4 hrs</span>
                                 <span>📝 150+ MCQs</span>
@@ -769,7 +807,7 @@
                         <p class="text-ink-muted mb-4">
                             Roots, discriminant, Vieta's formulas, nature of roots, quadratic inequalities, location of roots, common roots
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3.5 hrs</span>
                                 <span>📝 130+ MCQs</span>
@@ -793,7 +831,7 @@
                         <p class="text-ink-muted mb-4">
                             AP, GP, HP, AGP, special series, sum to n terms, AM-GM-HM inequality, telescoping series
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3 hrs</span>
                                 <span>📝 130+ MCQs</span>
@@ -818,7 +856,7 @@
                         <p class="text-ink-muted mb-4">
                              Fundamental counting, nPr, nCr, circular permutations, derangements, distribution problems
                         </p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle">
                                 <span>⏱️ 3.5 hrs</span>
                                 <span>📝 130+ MCQs</span>
@@ -839,7 +877,7 @@
                         <div class="text-4xl mb-4">📐</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Binomial Theorem</h3>
                         <p class="text-ink-muted mb-4">Binomial expansion, general term, middle term, properties of coefficients</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 1.5 hrs</span><span>🎯 Medium</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -854,7 +892,7 @@
                         <div class="text-4xl mb-4">🔢</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Matrices &amp; Determinants</h3>
                         <p class="text-ink-muted mb-4">Types of matrices, operations, inverse, Cramer's rule, rank</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -865,7 +903,6 @@
             <!-- TRIGONOMETRY SECTION -->
             <div class="mb-16" id="trigonometry-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">📐 Trigonometry</h2>
                         <p class="text-ink-muted">Angles, Identities &amp; Equations • 3 Chapters • ~8% JEE Weightage</p>
@@ -881,7 +918,7 @@
                         <div class="text-4xl mb-4">📐</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Trigonometric Functions &amp; Identities</h3>
                         <p class="text-ink-muted mb-4">Ratios, identities, compound angles, multiple angles, sub-multiple angles</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -895,7 +932,7 @@
                         <div class="text-4xl mb-4">🔄</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Inverse Trigonometric Functions</h3>
                         <p class="text-ink-muted mb-4">Domain, range, principal values, properties, equations</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -909,7 +946,7 @@
                         <div class="text-4xl mb-4">⚡</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Trigonometric Equations</h3>
                         <p class="text-ink-muted mb-4">General solutions, principal solutions, methods of solving</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 1.5 hrs</span><span>🎯 Medium</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -920,7 +957,6 @@
             <!-- COORDINATE GEOMETRY SECTION -->
             <div class="mb-16" id="coordinate-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">📍 Coordinate Geometry</h2>
                         <p class="text-ink-muted">Lines, Circles &amp; Conics • 5 Chapters • ~20% JEE Weightage</p>
@@ -936,7 +972,7 @@
                         <div class="text-4xl mb-4">📏</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Straight Lines</h3>
                         <p class="text-ink-muted mb-4">Slope, forms of line, angle between lines, distance formulas, locus</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Medium</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -950,7 +986,7 @@
                         <div class="text-4xl mb-4">⭕</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Circles</h3>
                         <p class="text-ink-muted mb-4">Standard equation, general form, tangent, chord, family of circles</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -964,7 +1000,7 @@
                         <div class="text-4xl mb-4">📈</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Parabola</h3>
                         <p class="text-ink-muted mb-4">Standard forms, focus, directrix, tangent, normal, chord of contact</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -978,7 +1014,7 @@
                         <div class="text-4xl mb-4">🥚</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Ellipse</h3>
                         <p class="text-ink-muted mb-4">Standard equation, eccentricity, tangent, normal, auxiliary circle</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -992,7 +1028,7 @@
                         <div class="text-4xl mb-4">〰️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Hyperbola</h3>
                         <p class="text-ink-muted mb-4">Standard form, asymptotes, rectangular hyperbola, tangent &amp; normal</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1003,7 +1039,6 @@
             <!-- CALCULUS SECTION -->
             <div class="mb-16" id="calculus-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">∫ Calculus</h2>
                         <p class="text-ink-muted">Limits, Derivatives &amp; Integrals • 6 Chapters • ~35% JEE Weightage</p>
@@ -1019,7 +1054,7 @@
                         <div class="text-4xl mb-4">🔍</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Limits, Continuity &amp; Differentiability</h3>
                         <p class="text-ink-muted mb-4">L'Hopital's rule, indeterminate forms, continuity, differentiability</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1033,7 +1068,7 @@
                         <div class="text-4xl mb-4">📉</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Differentiation</h3>
                         <p class="text-ink-muted mb-4">Chain rule, implicit, parametric, logarithmic differentiation</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1047,7 +1082,7 @@
                         <div class="text-4xl mb-4">🎯</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Applications of Derivatives</h3>
                         <p class="text-ink-muted mb-4">Tangent, normal, maxima &amp; minima, monotonicity, rate of change</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1061,7 +1096,7 @@
                         <div class="text-4xl mb-4">∫</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Indefinite Integration</h3>
                         <p class="text-ink-muted mb-4">Standard integrals, substitution, integration by parts, partial fractions</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 3 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1075,7 +1110,7 @@
                         <div class="text-4xl mb-4">📊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Definite Integration &amp; Area</h3>
                         <p class="text-ink-muted mb-4">Properties of definite integrals, area under curves, bounded regions</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1089,7 +1124,7 @@
                         <div class="text-4xl mb-4">🌊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Differential Equations</h3>
                         <p class="text-ink-muted mb-4">Order, degree, variable separable, homogeneous, linear, Bernoulli</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1100,7 +1135,6 @@
             <!-- VECTORS & 3D SECTION -->
             <div class="mb-16" id="vectors-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-primary rounded mr-4"></div>
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">🔺 Vectors &amp; 3D Geometry</h2>
                         <p class="text-ink-muted">Space Geometry • 2 Chapters • ~12% JEE Weightage</p>
@@ -1116,7 +1150,7 @@
                         <div class="text-4xl mb-4">➡️</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Vectors</h3>
                         <p class="text-ink-muted mb-4">Dot product, cross product, scalar triple product, vector triple product</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2 hrs</span><span>🎯 Medium</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1130,7 +1164,7 @@
                         <div class="text-4xl mb-4">🧊</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">3D Geometry</h3>
                         <p class="text-ink-muted mb-4">Direction cosines, lines in 3D, planes, angle between them, distance</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Hard</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1141,7 +1175,6 @@
             <!-- PROBABILITY & STATISTICS SECTION -->
             <div class="mb-16" id="probability-section">
                 <div class="flex items-center mb-8">
-                    <div class="w-3 h-12 bg-surface-2 rounded mr-4"></div>
                     <div>
                         <h2 class="text-4xl font-extrabold text-ink">📊 Probability &amp; Statistics</h2>
                         <p class="text-ink-muted">Data &amp; Chance • 2 Chapters • ~8% JEE Weightage</p>
@@ -1157,7 +1190,7 @@
                         <div class="text-4xl mb-4">🎲</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Probability</h3>
                         <p class="text-ink-muted mb-4">Classical, conditional probability, Bayes' theorem, Binomial distribution</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 2.5 hrs</span><span>🎯 Medium</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1171,7 +1204,7 @@
                         <div class="text-4xl mb-4">📉</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Statistics</h3>
                         <p class="text-ink-muted mb-4">Mean, median, mode, variance, standard deviation, skewness</p>
-                        <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center justify-between text-sm mt-auto">
                             <div class="flex items-center space-x-4 text-ink-subtle"><span>⏱️ 1.5 hrs</span><span>🎯 Easy</span></div>
                             <span style="display:inline-block;background:#232328;color:#8a8f98;padding:0.5rem 1rem;border-radius:0.5rem;font-size:0.9rem;font-weight:600;cursor:not-allowed;">Coming Soon</span>
                         </div>
@@ -1330,6 +1363,20 @@
         </div>
     </section>
 
+    <!-- SEO Content Block -->
+    <section class="pb-16 bg-canvas">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#1c1c20;border-radius:1rem;border-left:4px solid var(--color-primary);">
+              <h2 style="font-size:1.2rem;font-weight:800;color:var(--color-ink);margin-bottom:0.5rem;">
+                JEE Maths Notes — All Chapters 2026
+              </h2>
+              <p style="font-size:0.95rem;line-height:1.8;color:var(--color-ink-muted);margin:0;">
+                This page covers all 35+ JEE Mathematics chapters with chapter-wise notes, important formulas, PYQs, and shortcuts for JEE Main & Advanced 2026. Chapters are organised across five sections: Algebra (sets, complex numbers, quadratic equations, sequences & series, permutations & combinations, binomial theorem, matrices & determinants), Trigonometry, Coordinate Geometry (straight lines, circles, parabola, ellipse, hyperbola), Calculus (limits, derivatives, integrals, differential equations, applications of derivatives), and Miscellaneous (vectors, 3D geometry, probability, statistics). All notes are free — no login required.
+              </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1438,7 +1485,7 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-primary-hover transition flex items-center justify-center text-2xl z-50 opacity-0 pointer-events-none">
+    <button id="scrollTop" class="glow-button fixed bottom-8 right-8 w-14 h-14 z-50 opacity-0 pointer-events-none">
         ↑
     </button>
 
@@ -1503,17 +1550,10 @@
 
             // Update active button
             buttons.forEach(btn => {
-                btn.classList.remove('bg-primary', 'bg-primary', 'bg-surface-2', 'bg-surface-2', 'bg-primary', 'text-ink');
-                btn.classList.add('bg-surface-2', 'text-ink-muted');
+                btn.classList.remove('glow-button-active');
                 
                 if (btn.getAttribute('data-filter') === category) {
-                    btn.classList.remove('bg-surface-2', 'text-ink-muted');
-                    if (category === 'all') btn.classList.add('bg-primary', 'text-ink');
-                    else if (category === 'algebra') btn.classList.add('bg-primary', 'text-ink');
-                    else if (category === 'calculus') btn.classList.add('bg-primary', 'text-ink');
-                    else if (category === 'coordinate') btn.classList.add('bg-surface-2', 'text-ink');
-                    else if (category === 'trigonometry') btn.classList.add('bg-surface-2', 'text-ink');
-                    else if (category === 'vectors') btn.classList.add('bg-primary', 'text-ink');
+                    btn.classList.add('glow-button-active');
                 }
             });
 
