@@ -365,6 +365,7 @@
         .hero-gradient {
             position: relative;
             isolation: isolate;
+            overflow: visible;
             background: linear-gradient(135deg,
                 #1a1a2e 0%,
                 #16213e 40%,
@@ -381,6 +382,14 @@
                 radial-gradient(ellipse at 50% 90%, rgba(160, 180, 255, 0.1) 0%, transparent 60%);
             filter: blur(40px);
             z-index: 0;
+            pointer-events: none;
+        }
+        .hero-gradient::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+            z-index: -1;
             pointer-events: none;
         }
         .card-hover {
