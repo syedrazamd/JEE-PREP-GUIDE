@@ -345,12 +345,16 @@
             box-shadow: 25px 25px 33px #010102,
                         -2px -2px 2px rgba(255, 255, 255, 0.04) !important;
         }
-        .stat-card {
-            background: var(--color-surface-1);
-            border: 1px solid var(--color-hairline);
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(-45deg, #512085 0%, #40c9ff 100%);
+            z-index: 9999;
+            transition: width 0.1s;
         }
-        .subject-physics, .subject-chemistry, .subject-maths { background: var(--color-surface-1); }
-        
+
         /* Chapter Card Style */
         .chapter-card {
             transition: all 0.4s ease, box-shadow 0.2s ease;
@@ -366,7 +370,7 @@
             box-shadow: 8px 8px 16px rgb(20, 20, 20),
                         -8px -8px 16px rgb(50, 50, 50);
         }
-        
+
         /* Floating Animation */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -374,17 +378,6 @@
         }
         .float-animation {
             animation: float 3s ease-in-out infinite;
-        }
-
-        /* Scroll Progress Bar */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(-45deg, #512085 0%, #40c9ff 100%);
-            z-index: 9999;
-            transition: width 0.1s;
         }
 
         /* Counter Animation */
