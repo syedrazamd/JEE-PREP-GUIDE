@@ -398,7 +398,7 @@
             top: 0;
             left: 0;
             height: 4px;
-            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+            background: linear-gradient(-45deg, #512085 0%, #40c9ff 100%);
             z-index: 9999;
             transition: width 0.1s;
         }
@@ -428,7 +428,7 @@
             width: calc(100% + 4px);
             height: calc(100% + 4px);
             border-radius: 10px;
-            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+            background: linear-gradient(-45deg, #512085 0%, #40c9ff 100%);
             z-index: -10;
             pointer-events: none;
         }
@@ -450,22 +450,22 @@
 
         /* Category Colors */
         .cat-mechanics { border-left-color: #2563eb; }
-        .cat-mechanics .cat-badge { background: #ffffff; color: #000000; }
+        .cat-mechanics .cat-badge { background: #512085; color: #ffffff; }
         
         .cat-thermodynamics { border-left-color: #ef4444; }
-        .cat-thermodynamics .cat-badge { background: #ffffff; color: #000000; }
+        .cat-thermodynamics .cat-badge { background: #512085; color: #ffffff; }
         
         .cat-waves { border-left-color: #10b981; }
-        .cat-waves .cat-badge { background: #ffffff; color: #000000; }
+        .cat-waves .cat-badge { background: #512085; color: #ffffff; }
         
         .cat-electromagnetism { border-left-color: #f59e0b; }
-        .cat-electromagnetism .cat-badge { background: #ffffff; color: #000000; }
+        .cat-electromagnetism .cat-badge { background: #512085; color: #ffffff; }
         
         .cat-optics { border-left-color: #8b5cf6; }
-        .cat-optics .cat-badge { background: #ffffff; color: #000000; }
+        .cat-optics .cat-badge { background: #512085; color: #ffffff; }
         
         .cat-modern { border-left-color: #ec4899; }
-        .cat-modern .cat-badge { background: #ffffff; color: #000000; }
+        .cat-modern .cat-badge { background: #512085; color: #ffffff; }
 
         /* Filter Animation */
         .chapter-card {
@@ -475,21 +475,33 @@
             height: 100%;
             background: #212121;
             border-radius: 30px;
-            box-shadow: 15px 15px 30px rgb(25, 25, 25),
-                        -15px -15px 30px rgb(60, 60, 60);
+            box-shadow: 6px 6px 12px rgb(25, 25, 25),
+                        -6px -6px 12px rgb(45, 45, 45);
         }
         .chapter-card:hover {
-            box-shadow: 20px 20px 40px rgb(20, 20, 20),
-                        -20px -20px 40px rgb(65, 65, 65);
+            box-shadow: 8px 8px 16px rgb(20, 20, 20),
+                        -8px -8px 16px rgb(50, 50, 50);
         }
         .chapter-card:active {
-            box-shadow: inset 8px 8px 16px rgb(25, 25, 25),
-                        inset -8px -8px 16px rgb(60, 60, 60);
+            box-shadow: inset 4px 4px 8px rgb(25, 25, 25),
+                        inset -4px -4px 8px rgb(45, 45, 45);
         }
         .chapter-card.hidden-filter {
             opacity: 0;
             transform: scale(0.8);
             display: none;
+        }
+
+        /* Gradient Text Override for text-primary */
+        .text-primary {
+            color: #40c9ff !important;
+        }
+        .group-hover\:text-primary {
+            color: #40c9ff !important;
+        }
+        a.text-primary:hover,
+        a .text-primary:hover {
+            filter: brightness(1.2);
         }
 
         /* Floating Animation */
@@ -570,7 +582,7 @@
             <ol class="flex items-center space-x-2 text-sm">
                 <li><a href="/" class="text-primary hover:underline">Home</a></li>
                 <li class="text-ink-tertiary">/</li>
-                <li><a href="/jee/physics/" class="text-primary hover:underline">JEE PHYSICS</a></li>
+                <li><a href="/jee/physics/" class="text-primary hover:underline">Jee</a></li>
                 <li class="text-ink-tertiary">/</li>
                 <li class="text-ink-muted font-semibold">Physics</li>
             </ol>
@@ -588,64 +600,72 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="flex items-center mb-4">
-                        <span class="text-6xl mr-4">⚛️</span>
+                    <div class="flex items-center gap-3 flex-wrap mb-4">
                         <span class="backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(255, 255, 255, 0.08);">
-                            JEE Main & Advanced 2025-26
+                            JEE Main 2026
+                        </span>
+                        <span class="backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(255, 255, 255, 0.08);">
+                            JEE Advanced 2026
+                        </span>
+                        <span class="backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(255, 255, 255, 0.08);">
+                            Class 11 & 12
                         </span>
                     </div>
                     <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                        JEE Physics
-                        <span class="block text-primary">Complete Notes</span>
+                        JEE Physics Notes, Formulas & PYQs — <span class="text-primary">Free</span>
                     </h1>
                     <p class="text-xl opacity-95 leading-relaxed mb-8">
-                        All Physics chapters for JEE Main & Advanced 2026 — Mechanics, Modern Physics, Optics, Electrostatics and more
+                        Complete chapter-wise Physics preparation for JEE Main & Advanced 2026. Concise notes, formula sheets, and previous year questions — all free, no login required.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
+                            <span class="font-bold">📚 24+ Chapters Covered</span>
+                        </div>
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
+                            <span class="font-bold">📝 Formula Sheets per Chapter</span>
+                        </div>
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
+                            <span class="font-bold">🎯 PYQs with Solutions</span>
+                        </div>
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
+                            <span class="font-bold">💯 100% Free Forever</span>
+                        </div>
+                    </div>
+                    <p class="text-sm opacity-70 mb-8">
+                        Covers Mechanics, Thermodynamics, Waves, Optics, Electrostatics, Magnetism, Modern Physics and more — aligned with NTA JEE Main syllabus and JEE Advanced pattern.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
-                            <span class="font-bold">📚 24+ Chapters</span>
-                        </div>
-                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
-                            <span class="font-bold">✍️ 1000+ Examples</span>
-                        </div>
-                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
-                            <span class="font-bold">🎯 100% Free</span>
-                        </div>
+
+                        <a href="#mechanics-section" class="backdrop-blur-md px-6 py-3 rounded-full font-semibold border border-white/20 hover:border-white/40 transition" style="background: rgba(255, 255, 255, 0.08);">
+                            Browse Important Chapters
+                        </a>
                     </div>
                 </div>
 
                 <!-- Progress Stats -->
                 <div class="backdrop-blur-md p-8 rounded-3xl" style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12);">
-                    <h3 class="text-2xl font-bold mb-6">Your Progress</h3>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center">
-                            <div class="relative inline-block">
-                                <svg class="w-24 h-24">
-                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.2)" stroke-width="8" fill="none"/>
-                                    <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#10b981" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="191.4"/>
-                                </svg>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <span class="text-2xl font-bold">5/24</span>
-                                </div>
-                            </div>
-                            <p class="mt-2 font-semibold">Chapters Ready</p>
+                    <h3 class="text-2xl font-bold mb-6">Content Status</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
+                            <span class="font-semibold">Chapters with Notes</span>
+                            <span class="font-bold text-primary">25 / 25</span>
                         </div>
-                        <div class="text-center">
-                            <div class="relative inline-block">
-                                <svg class="w-24 h-24">
-                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.2)" stroke-width="8" fill="none"/>
-                                    <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#f59e0b" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="0"/>
-                                </svg>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <span class="text-2xl font-bold">100%</span>
-                                </div>
-                            </div>
-                            <p class="mt-2 font-semibold">Free Forever</p>
+                        <div class="flex items-center justify-between p-3 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
+                            <span class="font-semibold">Formula Sheets</span>
+                            <span class="font-bold opacity-70">Coming Soon</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
+                            <span class="font-semibold">PYQs</span>
+                            <span class="font-bold opacity-70">Coming Soon</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
+                            <span class="font-semibold">Weightage Guide</span>
+                            <span class="font-bold text-green-400">✓ Live</span>
                         </div>
                     </div>
                     <div class="mt-6 p-4 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
                         <p class="text-sm opacity-90">
-                            <span class="font-bold text-primary">✨ New:</span> Centre of Mass and Collision chapter is now live!
+                            <span class="font-bold text-primary">✨ New:</span> All Chapters Detailed Notes — now live
                         </p>
                     </div>
                 </div>
@@ -678,44 +698,6 @@
     </div>
 </section>
     <!-- Add this after hero section, before filter section -->
-<section class="py-8 bg-surface-1 border-y border-hairline" itemscope itemtype="https://schema.org/Product">
-    <meta itemprop="name" content="JEE Physics Complete Notes">
-    <meta itemprop="description" content="Complete Physics study material for JEE">
-    <meta itemprop="image" content="/logo-header.webp">
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="flex items-center space-x-6 mb-4 md:mb-0">
-                <div class="flex items-center">
-                    <span class="text-primary text-3xl">⭐⭐⭐⭐⭐</span>
-                    <span class="ml-3 text-2xl font-bold">
-                        <span itemprop="ratingValue">4.9</span>/5
-                    </span>
-                </div>
-                <div class="text-ink-muted text-lg">
-                    Based on <span itemprop="reviewCount">250</span>+ student reviews
-                </div>
-                <meta itemprop="bestRating" content="5">
-                <meta itemprop="worstRating" content="1">
-            </div>
-            
-            <div class="flex items-center space-x-8 text-center">
-                <div>
-                    <div class="text-3xl font-bold text-primary">5/24</div>
-                    <div class="text-sm text-ink-tertiary">Chapters Live</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold text-primary">1000+</div>
-                    <div class="text-sm text-ink-tertiary">Solved Examples</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold text-primary">100%</div>
-                    <div class="text-sm text-ink-tertiary">Free Forever</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
     <!-- Filter & Search Section -->
     <section class="bg-surface-2 border-b border-hairline shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -896,7 +878,6 @@
                         <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
                         </div>
                     </a>
-                </div>
 
                     <!-- Chapter 7: Properties of Matter -->
                     <a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="chapter-card cat-mechanics p-6 group" data-category="mechanics" data-status="available">
@@ -916,7 +897,6 @@
                         <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
                         </div>
                     </a>
-                </div>
 
                     <!-- Chapter 8: Centre of Mass -->
                     <a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="chapter-card cat-mechanics p-6 group" data-category="mechanics" data-status="available">
@@ -936,11 +916,9 @@
                         <span class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">Read →</span>
                         </div>
                     </a>
-                </div>
-                
 
                     <!-- ADD_NEW_MECHANICS_CHAPTER -->
-            </div>
+                </div>
             <!-- Thermodynamics Section -->
             <div class="mb-16" id="thermodynamics-section">
                 <div class="flex items-center mb-8">
@@ -1277,7 +1255,7 @@
                     <!-- Chapter 26: Semiconductors -->
                     <a href="https://jeeprepguide.netlify.app/jee/physics/semiconductors" class="chapter-card cat-modern p-6 group" data-category="modern" data-status="available">
                         <div class="flex items-center mb-4">
-                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 26</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 23</span>
                         </div>
                         <div class="text-4xl mb-4">🔬</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Semiconductors</h3>
@@ -1295,7 +1273,7 @@
                     <!-- Chapter 27: Dual Nature of Radiation and Matter -->
                     <a href="https://jeeprepguide.netlify.app/jee/physics/dual-nature-of-radiation-and-matter" class="chapter-card cat-modern p-6 group" data-category="modern" data-status="available">
                         <div class="flex items-center mb-4">
-                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 27</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 24</span>
                         </div>
                         <div class="text-4xl mb-4">🌟</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Dual Nature of Radiation and Matter</h3>
@@ -1313,7 +1291,7 @@
                     <!-- Chapter 28: Atoms and Nuclei -->
                     <a href="https://jeeprepguide.netlify.app/jee/physics/atoms-and-nuclei" class="chapter-card cat-modern p-6 group" data-category="modern" data-status="available">
                         <div class="flex items-center mb-4">
-                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 28</span>
+                            <span class="cat-badge text-ink px-3 py-1 rounded-full text-sm font-bold">Ch. 25</span>
                         </div>
                         <div class="text-4xl mb-4">🧲</div>
                         <h3 class="text-2xl font-bold text-ink mb-3 group-hover:text-primary transition">Atoms and Nuclei</h3>
@@ -1454,15 +1432,52 @@
 </section>
 
             <!-- SEO Info Block -->
-            <div style="max-width:900px;margin:0 auto 2rem;padding:1.25rem 1.5rem;background:#1c1c20;border-radius:1rem;border-left:4px solid var(--color-primary);">
-              <h2 style="font-size:1.2rem;font-weight:800;color:var(--color-ink);margin-bottom:0.5rem;">
+            <div class="mt-8 bg-surface-2 p-6 rounded-xl border border-hairline">
+              <h2 class="text-2xl font-bold text-primary mb-4">
                 JEE Physics Notes — All Chapters 2026
               </h2>
-              <p style="font-size:0.95rem;line-height:1.8;color:var(--color-ink-muted);margin:0;">
+              <p class="text-ink-muted leading-relaxed">
                 This page covers all 24 JEE Physics chapters with chapter-wise notes, important formulas, shortcuts, and PYQ analysis for JEE Main & Advanced 2026. Chapters are organised from Class 11 mechanics to Class 12 modern physics. Topics include Kinematics, Laws of Motion, Rotational Motion, Thermodynamics, Electrostatics, Current Electricity, Magnetism, EMI, Optics, and Modern Physics — all free, no login required.
               </p>
             </div>
-
+<section class="py-8 bg-surface-1 border-y border-hairline" itemscope itemtype="https://schema.org/Product">
+    <meta itemprop="name" content="JEE Physics Complete Notes">
+    <meta itemprop="description" content="Complete Physics study material for JEE">
+    <meta itemprop="image" content="/logo-header.webp">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center space-x-6 mb-4 md:mb-0">
+                <div class="flex items-center">
+                    <span class="text-primary text-3xl">⭐⭐⭐⭐⭐</span>
+                    <span class="ml-3 text-2xl font-bold">
+                        <span itemprop="ratingValue">4.9</span>/5
+                    </span>
+                </div>
+                <div class="text-ink-muted text-lg">
+                    Based on <span itemprop="reviewCount">250</span>+ student reviews
+                </div>
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="worstRating" content="1">
+            </div>
+            
+            <div class="flex items-center space-x-8 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-primary">5/24</div>
+                    <div class="text-sm text-ink-tertiary">Chapters Live</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary">1000+</div>
+                    <div class="text-sm text-ink-tertiary">Solved Examples</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary">100%</div>
+                    <div class="text-sm text-ink-tertiary">Free Forever</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer class="bg-canvas text-ink py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1572,7 +1587,7 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="fixed bottom-8 right-8 w-14 h-14 z-50 opacity-0 pointer-events-none rounded-full" style="background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%); box-shadow: 0 0 20px rgba(232, 28, 255, 0.5);">
+    <button id="scrollTop" class="fixed bottom-8 right-8 w-14 h-14 z-50 opacity-0 pointer-events-none rounded-full" style="background: linear-gradient(-45deg, #512085 0%, #40c9ff 100%); box-shadow: 0 0 20px rgba(232, 28, 255, 0.5);">
         ↑
     </button>
 
