@@ -363,7 +363,23 @@
             scroll-behavior: smooth;
         }
         .hero-gradient {
+            position: relative;
+            isolation: isolate;
             background: linear-gradient(135deg, var(--color-surface-1) 0%, var(--color-surface-2) 50%, var(--color-surface-3) 100%);
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                rgba(94, 106, 210, 0.15) 0%,
+                rgba(130, 143, 255, 0.08) 50%,
+                rgba(94, 106, 210, 0.12) 100%
+            ),
+            radial-gradient(ellipse at 20% 50%, rgba(94, 106, 210, 0.2) 0%, transparent 60%),
+            radial-gradient(ellipse at 80% 20%, rgba(130, 143, 255, 0.15) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
         }
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -590,8 +606,8 @@
     <!-- Hero Section -->
     <section class="hero-gradient text-ink py-16 md:py-20 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl float-animation"></div>
-            <div class="absolute bottom-10 right-10 w-96 h-96 bg-canvas rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
+            <div class="absolute top-10 left-10 w-72 h-72 rounded-full blur-3xl float-animation" style="background: rgba(94, 106, 210, 0.25);"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full blur-3xl float-animation" style="animation-delay: 1s; background: rgba(94, 106, 210, 0.25);"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -599,7 +615,7 @@
                 <div>
                     <div class="flex items-center mb-4">
                         <span class="text-6xl mr-4">⚛️</span>
-                        <span class="bg-surface-2/80 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold">
+                        <span class="backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(28, 28, 32, 0.55);">
                             JEE Main & Advanced 2025-26
                         </span>
                     </div>
@@ -611,20 +627,20 @@
                         All Physics chapters for JEE Main & Advanced 2026 — Mechanics, Modern Physics, Optics, Electrostatics and more
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <div class="bg-surface-2/80 backdrop-blur-md px-6 py-3 rounded-full">
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(28, 28, 32, 0.55);">
                             <span class="font-bold">📚 24+ Chapters</span>
                         </div>
-                        <div class="bg-surface-2/80 backdrop-blur-md px-6 py-3 rounded-full">
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(28, 28, 32, 0.55);">
                             <span class="font-bold">✍️ 1000+ Examples</span>
                         </div>
-                        <div class="bg-surface-2/80 backdrop-blur-md px-6 py-3 rounded-full">
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(28, 28, 32, 0.55);">
                             <span class="font-bold">🎯 100% Free</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Progress Stats -->
-                <div class="bg-surface-2/80 backdrop-blur-md p-8 rounded-3xl">
+                <div class="backdrop-blur-md p-8 rounded-3xl" style="background: rgba(28, 28, 32, 0.45);">
                     <h3 class="text-2xl font-bold mb-6">Your Progress</h3>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center">
@@ -652,7 +668,7 @@
                             <p class="mt-2 font-semibold">Free Forever</p>
                         </div>
                     </div>
-                    <div class="mt-6 bg-surface-2/80 p-4 rounded-xl">
+                    <div class="mt-6 p-4 rounded-xl" style="background: rgba(28, 28, 32, 0.6);">
                         <p class="text-sm opacity-90">
                             <span class="font-bold text-primary">✨ New:</span> Centre of Mass and Collision chapter is now live!
                         </p>
