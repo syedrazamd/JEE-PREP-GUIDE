@@ -362,47 +362,36 @@
             font-family: 'Inter', sans-serif; 
             scroll-behavior: smooth;
         }
-        .hero-gradient {
-            position: relative;
-            isolation: isolate;
-            overflow: visible;
-            background: linear-gradient(135deg,
-                #1a1a2e 0%,
-                #16213e 40%,
-                #0f3460 100%
-            );
-        }
-        .hero-gradient::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse at 15% 60%, rgba(200, 210, 255, 0.18) 0%, transparent 55%),
-                radial-gradient(ellipse at 85% 25%, rgba(180, 200, 255, 0.14) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 90%, rgba(160, 180, 255, 0.1) 0%, transparent 60%);
-            filter: blur(40px);
-            z-index: 0;
-            pointer-events: none;
-        }
-        .hero-gradient::after {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
-            z-index: -1;
-            pointer-events: none;
-        }
+.hero-gradient {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    z-index: 0;
+    pointer-events: none;
+}
+/* ::after completely removed — that was the white part */
+.hero-gradient > * {
+    position: relative;
+    z-index: 1;
+}
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
             border-radius: 30px !important;
             background: #1c1c20 !important;
-            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
-                        -12px -12px 24px rgba(255, 255, 255, 0.03) !important;
+            box-shadow: 24px 24px 32px #010102,
+                        -1px -1px 1px rgba(255, 255, 255, 0.01) !important;
         }
         .card-hover:hover {
             transform: translateY(-8px) !important;
-            box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.6),
-                        -16px -16px 32px rgba(255, 255, 255, 0.04) !important;
+            box-shadow: 25px 25px 33px #010102,
+                        -2px -2px 2px rgba(255, 255, 255, 0.04) !important;
         }
         .progress-bar {
             position: fixed;
@@ -433,11 +422,11 @@
             content: '';
             position: absolute;
             inset: 0;
-            left: -4px;
+            left: -1px;
             top: -1px;
             margin: auto;
-            width: calc(100% + 8px);
-            height: calc(100% + 8px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
             border-radius: 10px;
             background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
             z-index: -10;
@@ -450,13 +439,13 @@
             inset: 0;
             background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
             transform: translate3d(0, 0, 0) scale(0.95);
-            filter: blur(20px);
+            filter: blur(10px);
         }
         .glow-button:hover::after {
             filter: blur(30px);
         }
         .glow-button-active {
-            transform: scale(1.05);
+            transform: scale(1.01);
         }
 
         /* Category Colors */
@@ -589,31 +578,6 @@
     </nav>
 
     <!-- SEO-Friendly Table of Contents -->
-<section class="bg-surface-2 py-8 border-b border-hairline">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold text-ink mb-4">📚 Complete JEE Physics Syllabus Coverage</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-sm">
-            <a href="#mechanics-section" class="text-primary hover:underline font-semibold">
-                ⚛️ Mechanics (8)
-            </a>
-            <a href="#thermodynamics-section" class="text-primary hover:underline font-semibold">
-                🔥 Thermodynamics (3)
-            </a>
-            <a href="#waves-section" class="text-primary hover:underline font-semibold">
-                〰️ Waves (2)
-            </a>
-            <a href="#electromagnetism-section" class="text-primary hover:underline font-semibold">
-                ⚡ Electromagnetism (7)
-            </a>
-            <a href="#optics-section" class="text-primary hover:underline font-semibold">
-                🔍 Optics (2)
-            </a>
-            <a href="#modern-section" class="text-primary hover:underline font-semibold">
-                ☢️ Modern Physics (4)
-            </a>
-        </div>
-    </div>
-</section>
     <!-- Hero Section -->
     <section class="hero-gradient text-ink py-16 md:py-20 relative overflow-hidden">
         <div class="absolute inset-0 hero-part">
@@ -688,7 +652,31 @@
             </div>
         </div>
     </section>
-    
+    <section class="bg-surface-2 py-8 border-b border-hairline">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-ink mb-4">📚 Complete JEE Physics Syllabus Coverage</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-sm">
+            <a href="#mechanics-section" class="text-primary hover:underline font-semibold">
+                ⚛️ Mechanics (8)
+            </a>
+            <a href="#thermodynamics-section" class="text-primary hover:underline font-semibold">
+                🔥 Thermodynamics (3)
+            </a>
+            <a href="#waves-section" class="text-primary hover:underline font-semibold">
+                〰️ Waves (2)
+            </a>
+            <a href="#electromagnetism-section" class="text-primary hover:underline font-semibold">
+                ⚡ Electromagnetism (7)
+            </a>
+            <a href="#optics-section" class="text-primary hover:underline font-semibold">
+                🔍 Optics (2)
+            </a>
+            <a href="#modern-section" class="text-primary hover:underline font-semibold">
+                ☢️ Modern Physics (4)
+            </a>
+        </div>
+    </div>
+</section>
     <!-- Add this after hero section, before filter section -->
 <section class="py-8 bg-surface-1 border-y border-hairline" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="name" content="JEE Physics Complete Notes">
