@@ -315,20 +315,35 @@
             font-family: 'Inter', sans-serif; 
             scroll-behavior: smooth;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, #1c1c20 0%, #232328 100%);
-        }
+.hero-gradient {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    z-index: 0;
+    pointer-events: none;
+}
+.hero-gradient > * {
+    position: relative;
+    z-index: 1;
+}
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
             border-radius: 30px !important;
             background: #1c1c20 !important;
-            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
-                        -12px -12px 24px rgba(255, 255, 255, 0.03) !important;
+            box-shadow: 24px 24px 32px #010102,
+                        -1px -1px 1px rgba(255, 255, 255, 0.01) !important;
         }
         .card-hover:hover {
             transform: translateY(-8px) !important;
-            box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.6),
-                        -16px -16px 32px rgba(255, 255, 255, 0.04) !important;
+            box-shadow: 25px 25px 33px #010102,
+                        -2px -2px 2px rgba(255, 255, 255, 0.04) !important;
         }
         .stat-card {
             background: var(--color-surface-1);
@@ -336,22 +351,38 @@
         }
         .subject-physics, .subject-chemistry, .subject-maths { background: var(--color-surface-1); }
         
+        /* Chapter Card Style */
+        .chapter-card {
+            transition: all 0.4s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: #212121;
+            border-radius: 30px;
+            box-shadow: 6px 6px 12px rgb(25, 25, 25),
+                        -6px -6px 12px rgb(45, 45, 45);
+        }
+        .chapter-card:hover {
+            box-shadow: 8px 8px 16px rgb(20, 20, 20),
+                        -8px -8px 16px rgb(50, 50, 50);
+        }
+        
         /* Floating Animation */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-10px); }
         }
         .float-animation {
             animation: float 3s ease-in-out infinite;
         }
-        
+
         /* Scroll Progress Bar */
         .progress-bar {
             position: fixed;
             top: 0;
             left: 0;
             height: 4px;
-            background: linear-gradient(to right, #667eea, #764ba2);
+            background: linear-gradient(-45deg, #512085 0%, #40c9ff 100%);
             z-index: 9999;
             transition: width 0.1s;
         }
@@ -373,33 +404,31 @@
     <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
 
     <!-- Header/Navigation -->
-    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
+    <header class="bg-surface-1 border-b border-hairline">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <div class="w-12 h-12 bg-primary rounded-md flex items-center justify-center border border-hairline">
-                        <span class="text-ink font-bold text-2xl">
-                          <a href="https://jeeprepguide.netlify.app" aria-label="JEE Prep Guide Home">
-                            <img src="/logo-header.webp" alt="JEE Prep Guide - Free Notes for JEE Main and Advanced">
-                          </a>
-                        </span>
+                        <a href="./index.html" aria-label="JEE Prep Guide Home">
+                            <img src="./logo-header.webp" alt="JEE Prep Guide - Free Notes for JEE Main and Advanced">
+                        </a>
                     </div>
                     <div>
-                        <h1 class="text-2xl font-extrabold text-ink">
-                           <a href="https://jeeprepguide.netlify.app">JEE Prep Guide — Free Notes</a>
-                        </h1>
+                        <a href="./index.html" class="text-2xl font-extrabold text-ink">
+                            JEE Prep Guide
+                        </a>
                         <p class="text-xs text-ink-tertiary">Your Path to IIT</p>
                     </div>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="./index.html" class="text-primary font-bold transition">Home</a>
+                    <a href="./jee/physics/index.html" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="./jee/chemistry/index.html" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="./jee/maths/index.html" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="./blog/index.html" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
                     <a href="#physics-notes"><button class="bg-primary text-ink px-4 py-2 rounded-md font-medium hover:bg-primary-hover transition">
                         Start Learning
                     </button></a>
@@ -416,11 +445,11 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
+                    <a href="./index.html" class="text-primary font-bold">Home</a>
+                    <a href="./jee/physics/index.html" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
+                    <a href="./jee/chemistry/index.html" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="./jee/maths/index.html" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="./blog/index.html" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
                     <a href="#physics-notes"><button class="bg-primary text-ink px-4 py-2 rounded-md font-medium hover:bg-primary-hover transition">
                         Start Learning
                     </button></a>
@@ -432,9 +461,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero-gradient text-ink pt-[81px] pb-20 md:pt-[81px] md:pb-32 relative overflow-hidden">
         <!-- Background Elements -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl float-animation"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
+        <div class="absolute inset-0 hero-part">
+            <div class="absolute top-10 left-10 w-72 h-72 rounded-full blur-3xl float-animation" style="background: rgba(200, 220, 255, 0.3);"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full blur-3xl float-animation" style="animation-delay: 1s; background: rgba(180, 210, 255, 0.25);"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
