@@ -22,12 +22,12 @@
     <meta name="geo.placename" content="India">
     
     <!-- Canonical URL (CRITICAL - Update with your actual domain) -->
-    <link rel="canonical" href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions">
+    <link rel="canonical" href="./units-and-dimensions.html">
     <!-- TODO: In Netlify dashboard → Domain settings → add redirect rule: 
          www.jeeprepguide.netlify.app/* → https://jeeprepguide.netlify.app/:splat (301) -->
     
     <!-- Alternate for Mobile -->
-    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions">
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="./units-and-dimensions.html">
     
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="article">
@@ -73,22 +73,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
-    window.MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\(', '\)']],
-            displayMath: [['$$', '$$'], ['\[', '\]']],
-            processEscapes: true
-        },
-        svg: {
-            fontCache: 'global'
-        },
-        options: {
-            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+    },
+    svg: { fontCache: 'global' },
+    options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre']
+    },
+    startup: {
+        ready() {
+            MathJax.startup.defaultReady();
         }
-    };
+    }
+};
 </script>
-<!-- MathJax for LaTeX Rendering -->
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax @3/es5/tex-mml-chtml.js"></script>
     
     
     
@@ -431,33 +433,85 @@
 
     
     <link rel="stylesheet" href="../../css/tailwind.min.css">
-<link rel="stylesheet" href="../assets/css/notes-physics.css">
+<style>
+.formula-box {
+    background: #1c1c20;
+    border: 1px solid #23252a;
+    border-radius: 12px;
+}
+.tip-box {
+    background: #1c1c20;
+    border-left: 4px solid #059669;
+    border-radius: 0 12px 12px 0;
+}
+.example-box {
+    background: #1c1c20;
+    border-left: 4px solid #10b981;
+    border-radius: 0 12px 12px 0;
+}
+.warning-box {
+    background: #1c1c20;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 12px 12px 0;
+}
+.topic-card {
+    background: #131316;
+    border: 1px solid #23252a;
+}
+.sticky-nav {
+    position: sticky;
+    top: 1rem;
+}
+.custom-table thead tr {
+    background: #232328;
+}
+.custom-table tbody tr {
+    background: #131316;
+}
+.custom-table tbody tr:hover {
+    background: #1c1c20;
+}
+.custom-table td, .custom-table th {
+    color: #f7f8f8;
+    border-bottom: 1px solid #23252a;
+}
+.math-display {
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    color: #f7f8f8;
+}
+.prose strong {
+    color: #f7f8f8;
+}
+.prose p, .prose li {
+    color: #d0d6e0;
+}
+</style>
 </head>
 <body class="bg-canvas text-ink">
 
     <!-- Reading Progress Bar -->
-    <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(to right, #7c3aed, #a855f7); z-index: 9999; transition: width 0.1s;"></div>
+    <div id="progress-bar" style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(-45deg, #7c00d5 0%, #40c9ff 100%); z-index: 9999; transition: width 0.1s;"></div>
 
     <!-- Header -->
-    <header class="bg-canvas fixed top-0 z-50 border-b-2 border-primary">
+    <header class="bg-surface-1 border-b border-hairline">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-14 h-14 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
-                        <a href="https://jeeprepguide.netlify.app" aria-label="JEE Prep Guide Home"><img src="/logo-header.webp" alt="JEE Prep Guide - Free Notes for JEE Mains and Advanced" srcset=""></a>
+                    <div class="w-12 h-12 bg-primary rounded-md flex items-center justify-center text-ink font-bold text-2xl border border-hairline">
+                        <a href="../../index.html" aria-label="JEE Prep Guide Home"><img src="../../logo-header.webp" alt="JEE Prep Guide - Free Notes for JEE Mains and Advanced" srcset="" width="48" height="48"></a>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-extrabold text-ink"><a href="https://jeeprepguide.netlify.app">JEE Prep Guide — Free Notes</a></h1>
-                        <p class="text-sm text-ink-tertiary">Path to IIT</p>
+                        <a href="../../index.html" class="text-2xl font-extrabold text-ink">JEE Prep Guide</a>
+                        <p class="text-xs text-ink-tertiary">Path to IIT</p>
                     </div>
                 </div>
                 <nav class="hidden md:flex space-x-8 text-base font-semibold">
-                   <a href="https://jeeprepguide.netlify.app/" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-ink font-medium transition">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
-                    <a href="#" class="bg-primary text-ink px-4 py-2 rounded-md hover:bg-primary-hover transition">Download PDF</a>
+                   <a href="../../index.html" class="text-ink-muted hover:text-ink font-medium transition">Home</a>
+                    <a href="./index.html" class="text-primary font-bold">Physics</a>
+                    <a href="../chemistry/index.html" class="text-ink-muted hover:text-ink font-medium transition">Chemistry</a>
+                    <a href="../maths/index.html" class="text-ink-muted hover:text-ink font-medium transition">Maths</a>
+                    <a href="../../blog/index.html" class="text-ink-muted hover:text-ink font-medium transition">Blog</a>
                 </nav>
                 <!-- Mobile Menu Button -->
                 <button class="md:hidden text-ink-muted" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
@@ -470,12 +524,11 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-3 pt-2">
-                    <a href="https://jeeprepguide.netlify.app" class="text-ink-muted hover:text-primary font-semibold">Home</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-ink-muted hover:text-primary font-semibold">Physics</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/chemistry" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
-                    <a href="https://jeeprepguide.netlify.app/jee/maths" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
-                    <a href="https://jeeprepguide.netlify.app/blog" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
-                    <a href="#" class="bg-primary text-ink px-6 py-2 rounded-full text-center font-semibold">Download PDF</a>
+                    <a href="../../index.html" class="text-ink-muted hover:text-primary font-semibold">Home</a>
+                    <a href="./index.html" class="text-primary font-bold">Physics</a>
+                    <a href="../chemistry/index.html" class="text-ink-muted hover:text-primary font-semibold">Chemistry</a>
+                    <a href="../maths/index.html" class="text-ink-muted hover:text-primary font-semibold">Maths</a>
+                    <a href="../../blog/index.html" class="text-ink-muted hover:text-primary font-semibold">Blog</a>
                 </div>
             </div>
 
@@ -483,35 +536,21 @@
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="bg-surface-1 py-3 border-b">
+    <nav class="bg-surface-2 py-3 border-b border-hairline">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="/" class="text-primary hover:underline" itemprop="item">
+                    <a href="../../index.html" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Home</span>
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
                 <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="/notes" class="text-primary hover:underline" itemprop="item">
-                        <span itemprop="name">Notes</span>
-                    </a>
-                    <meta itemprop="position" content="2" />
-                </li>
-                <li class="text-ink-subtle">/</li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="/notes/jee" class="text-primary hover:underline" itemprop="item">
-                        <span itemprop="name">JEE</span>
-                    </a>
-                    <meta itemprop="position" content="3" />
-                </li>
-                <li class="text-ink-subtle">/</li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="https://jeeprepguide.netlify.app/jee/physics" class="text-primary hover:underline" itemprop="item">
+                    <a href="../../index.html" class="text-primary hover:underline" itemprop="item">
                         <span itemprop="name">Physics</span>
                     </a>
-                    <meta itemprop="position" content="4" />
+                    <meta itemprop="position" content="2" />
                 </li>
                 <li class="text-ink-subtle">/</li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -552,8 +591,8 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary via-primary to-primary text-ink py-20 overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
+    <section class="relative bg-gradient-to-br from-surface-3 via-surface-2 to-surface-1 text-ink py-20 overflow-hidden">
+        <div class="hero-part absolute inset-0 opacity-10">
             <div class="absolute top-10 left-10 w-72 h-72 bg-canvas rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
@@ -561,7 +600,7 @@
             <div class="text-center">
                 <h2 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
                     Units & Dimensions
-                    <span class="block text-primary mt-2">JEE Main & Advanced 2026</span>
+                    <span class="block text-accent mt-2">JEE Main & Advanced 2026</span>
                 </h2>
                 <p class="text-xl md:text-2xl max-w-4xl mx-auto opacity-95 leading-relaxed">
                   Complete Units & Dimensions notes for JEE Mains & Advanced 2026 — with shortcuts, solved examples, and previous year questions.
@@ -711,8 +750,8 @@
                                     <li>Area = Length²</li>
                                     <li>Volume = Length³</li>
                                     <li>Velocity = Length/Time</li>
-                                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion">Force = Mass × Acceleration</a></li>
-                                    <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power">Energy = Force × Distance</a></li>
+                                    <li><a href="./laws-of-motion.html">Force = Mass × Acceleration</a></li>
+                                    <li><a href="./work-energy-and-power.html">Energy = Force × Distance</a></li>
                                     <li>Power = Energy/Time</li>
                                 </ul>
                             </div>
@@ -1047,7 +1086,7 @@
                                         <td class="p-4 font-mono text-primary font-bold">[MLT⁻¹]</td>
                                     </tr>
                                     <tr>
-                                        <td class="p-4 font-semibold"><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power">Work/Energy</a></td>
+                                        <td class="p-4 font-semibold"><a href="./work-energy-and-power.html">Work/Energy</a></td>
                                         <td class="p-4">Force × Distance</td>
                                         <td class="p-4 font-mono text-primary font-bold">[ML²T⁻²]</td>
                                     </tr>
@@ -1082,7 +1121,7 @@
                                         <td class="p-4 font-mono text-primary font-bold">[ML²T⁰]</td>
                                     </tr>
                                     <tr>
-                                        <td class="p-4 font-semibold"><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation">Gravitational Constant (G)</a></td>
+                                        <td class="p-4 font-semibold"><a href="./gravitation.html">Gravitational Constant (G)</a></td>
                                         <td class="p-4">F = Gm₁m₂/r²</td>
                                         <td class="p-4 font-mono text-primary font-bold">[M⁻¹L³T⁻²]</td>
                                     </tr>
@@ -1092,7 +1131,7 @@
                                         <td class="p-4 font-mono text-primary font-bold">[ML²T⁻¹]</td>
                                     </tr>
                                     <tr>
-                                        <td class="p-4 font-semibold"><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics">Gas Constant (R)</a></td>
+                                        <td class="p-4 font-semibold"><a href="./thermodynamics.html">Gas Constant (R)</a></td>
                                         <td class="p-4">PV = nRT</td>
                                         <td class="p-4 font-mono text-primary font-bold">[ML²T⁻²K⁻¹mol⁻¹]</td>
                                     </tr>
@@ -1674,7 +1713,7 @@
                                 <span class="text-2xl mr-2">📝</span> Solved Example 6 (JEE Advanced Pattern)
                             </h4>
                             <p class="text-lg mb-3">
-                                Question: The period of a <a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion">pendulum</a> is T = 2π√(L/g). If L is measured with 2% error and g with 3% error, find percentage error in T.
+                                Question: The period of a <a href="./simple-harmonic-motion.html">pendulum</a> is T = 2π√(L/g). If L is measured with 2% error and g with 3% error, find percentage error in T.
                             </p>
                             <p class="text-lg mb-2">Solution:</p>
                             <div class="bg-canvas p-4 rounded-lg my-3">
@@ -1779,8 +1818,8 @@
                                 
                                 <p class="mb-2 mt-3">Step 2: Use conversion formula</p>
                                 <div class="math-display">
-                                    \[n_2 = n_1 \left[\frac{M_1}{M_2}\right]^a \left[\frac{L_1}{L_2}\right]^b \left[\frac{T_1}{T_2}\right]^c\]
-                                </div>
+\[n_2 = n_1 \left(\frac{M_1}{M_2}\right)^a \left(\frac{L_1}{L_2}\right)^b \left(\frac{T_1}{T_2}\right)^c\]
+</div>
                                 <p class="text-sm mb-2">where a=1, b=1, c=-2 (from [MLT⁻²])</p>
                                 
                                 <p class="mb-2 mt-3">Step 3: SI to CGS conversion</p>
@@ -1789,8 +1828,8 @@
                                 <p class="mb-2">T₁ = 1 s, T₂ = 1 s</p>
                                 
                                 <div class="math-display">
-                                    \[n_2 = 1 \times \left[\frac{1}{10^{-3}}\right]^1 \left[\frac{1}{10^{-2}}\right]^1 \left[\frac{1}{1}\right]^{-2}\]
-                                </div>
+\[n_2 = 1 \times \left(\frac{1}{10^{-3}}\right)^1 \left(\frac{1}{10^{-2}}\right)^1 \left(\frac{1}{1}\right)^{-2}\]
+</div>
                                 <div class="math-display">
                                     \[n_2 = 10^3 \times 10^2 \times 1 = 10^5\]
                                 </div>
@@ -1934,7 +1973,7 @@
                             <li>Using dimensional analysis, show that time period of spring-mass system depends on √(m/k).</li>
                             <li>If energy E, velocity v, and force F are fundamental, find dimensional formula of mass.</li>
                             <li>The <a href="https://en.wikipedia.org/wiki/Van_der_Waals_equation" target="_blank" rel="noopener noreferrer">Van der Waals equation</a> is (P + a/V²)(V - b) = RT. Find dimensions of a and b.</li>
-                            <li>In measurement of g by <a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion">simple pendulum</a>, if L has 2% error and T has 3% error, find error in g.</li>
+                            <li>In measurement of g by <a href="./simple-harmonic-motion.html">simple pendulum</a>, if L has 2% error and T has 3% error, find error in g.</li>
                         </ol>
                     </div>
 
@@ -1977,7 +2016,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Related Note 1 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
+                <a href="./kinematics.html" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-primary">
                     <div class="flex items-center mb-3">
                         <span class="bg-primary text-ink px-3 py-1 rounded-full text-sm font-semibold">Next Chapter</span>
                     </div>
@@ -1989,7 +2028,7 @@
                 </a>
 
                 <!-- Related Note 2 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/vectors" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
+                <a href="./vectors.html" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-success">
                     <div class="flex items-center mb-3">
                         <span class="bg-success text-ink px-3 py-1 rounded-full text-sm font-semibold">Foundation</span>
                     </div>
@@ -2001,7 +2040,7 @@
                 </a>
 
                 <!-- Related Note 3 -->
-                <a href="https://jeeprepguide.netlify.app/jee/physics/mathematical-tools" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
+                <a href="./mathematical-tools.html" class="group bg-gradient-to-br from-surface-2 to-surface-3 p-6 rounded-xl hover:border border-hairline transition duration-300 border-2 border-transparent hover:border-secondary">
                     <div class="flex items-center mb-3">
                         <span class="bg-secondary text-ink px-3 py-1 rounded-full text-sm font-semibold">Related</span>
                     </div>
@@ -2015,7 +2054,7 @@
 
             <!-- More Notes Link -->
             <div class="text-center mt-10">
-                <a href="https://jeeprepguide.netlify.app/jee/physics" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
+                <a href="./index.html" class="inline-block bg-primary text-ink px-8 py-3 rounded-full font-semibold hover:bg-secondary transition text-lg border border-hairline">
                     View All Physics Notes →
                 </a>
             </div>
@@ -2181,60 +2220,60 @@
                 <div>
                     <h4 class="text-xl font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-ink-subtle">
-                        <li><a href="https://jeeprepguide.netlify.app/" class="hover:text-ink transition">Home</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/" class="hover:text-ink transition">Physics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry" class="hover:text-ink transition">Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths" class="hover:text-ink transition">Maths</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/blog" class="hover:text-ink transition">blog</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/sitemap.xml" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="../../index.html" class="hover:text-ink transition">Home</a></li>
+                        <li><a href="./index.html" class="hover:text-ink transition">Physics</a></li>
+                        <li><a href="../chemistry/index.html" class="hover:text-ink transition">Chemistry</a></li>
+                        <li><a href="../maths/index.html" class="hover:text-ink transition">Maths</a></li>
+                        <li><a href="../../blog/index.html" class="hover:text-ink transition">blog</a></li>
+                        <li><a href="../../sitemap.xml" class="hover:text-ink transition">Sitemap</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Physics Notes</h4>
                     <ul class="space-y-2 text-ink-subtle">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/units-and-dimensions" class="hover:text-ink transition">Units and Dimensions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinematics" class="hover:text-ink transition">Kinematics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/laws-of-motion" class="hover:text-ink transition">Newton Laws of Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/work-energy-and-power" class="hover:text-ink transition">Work Energy and Power</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/centre-of-mass-and-collision" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/rotational-motion" class="hover:text-ink transition">Rotational Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/gravitation" class="hover:text-ink transition">Gravitation</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/fluid-mechanics" class="hover:text-ink transition">Fluid Mechanics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermal-properties-of-matter" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/kinetic-theory-of-gases" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/wave-motion" class="hover:text-ink transition">Wave Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/simple-harmonic-motion" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electrostatics" class="hover:text-ink transition">Electrostatics</a></li>
+                        <li><a href="./units-and-dimensions.html" class="hover:text-ink transition">Units and Dimensions</a></li>
+                        <li><a href="./kinematics.html" class="hover:text-ink transition">Kinematics</a></li>
+                        <li><a href="./laws-of-motion.html" class="hover:text-ink transition">Newton Laws of Motion</a></li>
+                        <li><a href="./work-energy-and-power.html" class="hover:text-ink transition">Work Energy and Power</a></li>
+                        <li><a href="./centre-of-mass-and-collision.html" class="hover:text-ink transition">Centre of Mass and Collision</a></li>
+                        <li><a href="./rotational-motion.html" class="hover:text-ink transition">Rotational Motion</a></li>
+                        <li><a href="./gravitation.html" class="hover:text-ink transition">Gravitation</a></li>
+                        <li><a href="./fluid-mechanics.html" class="hover:text-ink transition">Fluid Mechanics</a></li>
+                        <li><a href="./thermal-properties-of-matter.html" class="hover:text-ink transition">Thermal Properties of Matter</a></li>
+                        <li><a href="./thermodynamics.html" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="./kinetic-theory-of-gases.html" class="hover:text-ink transition">Kinetic Theory of Gases</a></li>
+                        <li><a href="./wave-motion.html" class="hover:text-ink transition">Wave Motion</a></li>
+                        <li><a href="./simple-harmonic-motion.html" class="hover:text-ink transition">Simple Harmonic Motion</a></li>
+                        <li><a href="./electrostatics.html" class="hover:text-ink transition">Electrostatics</a></li>
                     
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/capacitance" class="hover:text-ink transition">Capacitance</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/current-electricity" class="hover:text-ink transition">Current Electricity</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/magnetic-effect-of-current-and-magnetism" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/physics/electromagnetic-induction" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
+                        <li><a href="./capacitance.html" class="hover:text-ink transition">Capacitance</a></li>
+                        <li><a href="./current-electricity.html" class="hover:text-ink transition">Current Electricity</a></li>
+                        <li><a href="./magnetic-effect-of-current-and-magnetism.html" class="hover:text-ink transition">Magnetic Effect of Current and Magnetism</a></li>
+                        <li><a href="./electromagnetic-induction.html" class="hover:text-ink transition">Electromagnetic Induction</a></li></ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Chemistry Notes</h4>
                     <ul class="space-y-2 text-ink-subtle">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/some-basic-concepts-of-chemistry" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/atomic-structure" class="hover:text-ink transition">Atomic Structure</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/states-of-matter" class="hover:text-ink transition">States of Matter</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/thermodynamics" class="hover:text-ink transition">Thermodynamics</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/chemical-equilibrium" class="hover:text-ink transition">Chemical Equilibrium</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/chemistry/ionic-equilibrium" class="hover:text-ink transition">Ionic Equilibrium</a></li>
+                        <li><a href="../chemistry/some-basic-concepts-of-chemistry.html" class="hover:text-ink transition">Some Basic Concepts of Chemistry</a></li>
+                        <li><a href="../chemistry/atomic-structure.html" class="hover:text-ink transition">Atomic Structure</a></li>
+                        <li><a href="../chemistry/states-of-matter.html" class="hover:text-ink transition">States of Matter</a></li>
+                        <li><a href="../chemistry/thermodynamics.html" class="hover:text-ink transition">Thermodynamics</a></li>
+                        <li><a href="../chemistry/chemical-equilibrium.html" class="hover:text-ink transition">Chemical Equilibrium</a></li>
+                        <li><a href="../chemistry/ionic-equilibrium.html" class="hover:text-ink transition">Ionic Equilibrium</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-xl font-bold mb-4">Maths Notes</h4>
                     <ul class="space-y-2 text-ink-subtle">
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sets" class="hover:text-ink transition">Sets</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/relations-functions" class="hover:text-ink transition">Relation & Functiions</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/complex-numbers" class="hover:text-ink transition">Complex Numbers</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/sequences-and-series" class="hover:text-ink transition">Sequence and Series</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/quadratic-equations" class="hover:text-ink transition">Quadratic Equations</a></li>
-                        <li><a href="https://jeeprepguide.netlify.app/jee/maths/permutations-and-combinations" class="hover:text-ink transition">Permutation and Combinations</a></li>
+                        <li><a href="../maths/sets.html" class="hover:text-ink transition">Sets</a></li>
+                        <li><a href="../maths/relations-functions.html" class="hover:text-ink transition">Relation & Functiions</a></li>
+                        <li><a href="../maths/complex-numbers.html" class="hover:text-ink transition">Complex Numbers</a></li>
+                        <li><a href="../maths/sequences-and-series.html" class="hover:text-ink transition">Sequence and Series</a></li>
+                        <li><a href="../maths/quadratic-equations.html" class="hover:text-ink transition">Quadratic Equations</a></li>
+                        <li><a href="../maths/permutations-and-combinations.html" class="hover:text-ink transition">Permutation and Combinations</a></li>
                     </ul>
                 </div>
 
@@ -2271,21 +2310,60 @@
                     © 2024 JEE Prep Guide. All rights reserved. Made with ❤️ for JEE Aspirants
                 </p>
                 <div class="flex space-x-6 text-sm text-ink-subtle">
-                    <a href="https://jeeprepguide.netlify.app/about-us" class="hover:text-ink transition">About Us</a>
-                    <a href="https://jeeprepguide.netlify.app/contact-us" class="hover:text-ink transition">Contact</a>
-                    <a href="https://jeeprepguide.netlify.app/privacy-policy" class="hover:text-ink transition">Privacy Policy</a>
-                    <a href="https://jeeprepguide.netlify.app/terms-and-conditions" class="hover:text-ink transition">Terms and Conditions</a>
+                    <a href="../../about-us.html" class="hover:text-ink transition">About Us</a>
+                    <a href="../../contact-us.html" class="hover:text-ink transition">Contact</a>
+                    <a href="../../privacy-policy.html" class="hover:text-ink transition">Privacy Policy</a>
+                    <a href="../../terms-and-conditions.html" class="hover:text-ink transition">Terms and Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-8 right-8 bg-primary text-ink w-14 h-14 rounded-full border border-hairline hover:bg-secondary transition flex items-center justify-center text-2xl z-50">
-        ↑
-    </button>
+    <button id="scrollTop" class="fixed bottom-8 right-8 w-14 h-14 z-50 opacity-0 pointer-events-none rounded-full text-ink text-2xl flex items-center justify-center" style="background: linear-gradient(-45deg, #7c00d5 0%, #40c9ff 100%); box-shadow: 0 0 20px rgba(232, 28, 255, 0.5);">
+    ↑
+</button>
 <!-- Scripts -->
-<script src="../assets/js/notes.js"></script>
+<script>
+function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+}
+
+window.addEventListener('scroll', function() {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const bar = document.getElementById('progress-bar');
+    if (bar) bar.style.width = scrolled + '%';
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+    if (scrollTopBtn) {
+        if (winScroll > 300) {
+            scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            scrollTopBtn.classList.add('opacity-100');
+        } else {
+            scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            scrollTopBtn.classList.remove('opacity-100');
+        }
+    }
+
+    // TOC active highlight
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom >= 150) {
+            document.querySelectorAll('aside a').forEach(a => {
+                a.classList.remove('bg-primary', 'text-ink');
+            });
+            const activeLink = document.querySelector(\`aside a[href="#\${section.id}"]\`);
+            if (activeLink) activeLink.classList.add('bg-primary', 'text-ink');
+        }
+    });
+});
+
+document.getElementById('scrollTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 </body>
 </html>
