@@ -321,109 +321,70 @@
     
 
     <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
+        body {
+            font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
+
+        /* === Dark surface fallbacks (in case Tailwind tokens missing) === */
+        .bg-canvas { background-color: #010102 !important; }
+        .bg-surface-1 { background-color: #131316 !important; }
+        .bg-surface-2 { background-color: #1c1c20 !important; }
+        .bg-surface-3 { background-color: #232328 !important; }
+        .bg-surface-4 { background-color: #2c2c32 !important; }
+        .text-ink { color: #f7f8f8 !important; }
+        .text-ink-muted { color: #d0d6e0 !important; }
+        .text-ink-subtle { color: #8a8f98 !important; }
+        .text-ink-tertiary { color: #62666d !important; }
+        .border-hairline { border-color: #23252a !important; }
+        .border-hairline-strong { border-color: #34363c !important; }
+
+        /* === Hero Gradient (dark, blurred) === */
         .hero-gradient {
             position: relative;
-            isolation: isolate;
-            background: linear-gradient(135deg, #e11d48 0%, #be123c 50%, #9f1239 100%);
+            overflow: hidden;
+            background: #090909;
         }
         .hero-gradient::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg,
-                rgba(225, 29, 72, 0.15) 0%,
-                rgba(225, 29, 72, 0.08) 50%,
-                rgba(225, 29, 72, 0.12) 100%
-            ),
-            radial-gradient(ellipse at 20% 50%, rgba(225, 29, 72, 0.2) 0%, transparent 60%),
-            radial-gradient(ellipse at 80% 20%, rgba(225, 29, 72, 0.15) 0%, transparent 50%);
+            backdrop-filter: blur(80px);
+            -webkit-backdrop-filter: blur(24px);
             z-index: 0;
             pointer-events: none;
         }
+        .hero-gradient > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* === Card Hover === */
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
             border-radius: 30px !important;
             background: #1c1c20 !important;
-            box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
-                        -12px -12px 24px rgba(255, 255, 255, 0.03) !important;
+            box-shadow: 24px 24px 32px #010102,
+                        -1px -1px 1px rgba(255, 255, 255, 0.01) !important;
         }
         .card-hover:hover {
             transform: translateY(-8px) !important;
-            box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.6),
-                        -16px -16px 32px rgba(255, 255, 255, 0.04) !important;
+            box-shadow: 25px 25px 33px #010102,
+                        -2px -2px 2px rgba(255, 255, 255, 0.04) !important;
         }
+
+        /* === Progress Bar (dark) === */
         .progress-bar {
             position: fixed;
             top: 0;
             left: 0;
             height: 4px;
-            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+            background: linear-gradient(-45deg, #7c00d5 0%, #40c9ff 100%);
             z-index: 9999;
             transition: width 0.1s;
         }
 
-        /* Category Colors */
-        .cat-algebra { border-left-color: #7c3aed; }
-        .cat-algebra .cat-badge { background: #7c3aed; }
-        
-        .cat-calculus { border-left-color: #2563eb; }
-        .cat-calculus .cat-badge { background: #2563eb; }
-        
-        .cat-coordinate { border-left-color: #ef4444; }
-        .cat-coordinate .cat-badge { background: #ef4444; }
-        
-        .cat-trigonometry { border-left-color: #f59e0b; }
-        .cat-trigonometry .cat-badge { background: #f59e0b; }
-        
-        .cat-vectors { border-left-color: #10b981; }
-        .cat-vectors .cat-badge { background: #10b981; }
-
-        /* Filter Animation */
-        .chapter-card {
-            transition: all 0.4s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            background: #212121;
-            border-radius: 30px;
-            box-shadow: 15px 15px 30px rgb(25, 25, 25),
-                        -15px -15px 30px rgb(60, 60, 60);
-        }
-        .chapter-card:hover {
-            box-shadow: 20px 20px 40px rgb(20, 20, 20),
-                        -20px -20px 40px rgb(65, 65, 65);
-        }
-        .chapter-card:active {
-            box-shadow: inset 8px 8px 16px rgb(25, 25, 25),
-                        inset -8px -8px 16px rgb(60, 60, 60);
-        }
-        .chapter-card.hidden-filter {
-            opacity: 0;
-            transform: scale(0.8);
-            display: none;
-        }
-
-        /* Floating Animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Progress Ring */
-        .progress-ring__circle {
-            transition: stroke-dashoffset 0.35s;
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
-
-        /* Glow Button Style */
+        /* === Glow Button === */
         .glow-button {
             position: relative;
             display: inline-flex;
@@ -442,13 +403,13 @@
             content: '';
             position: absolute;
             inset: 0;
-            left: -4px;
+            left: -1px;
             top: -1px;
             margin: auto;
-            width: calc(100% + 8px);
-            height: calc(100% + 8px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
             border-radius: 10px;
-            background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+            background: linear-gradient(-45deg, #7c00d5 0%, #40c9ff 100%);
             z-index: -10;
             pointer-events: none;
         }
@@ -459,15 +420,156 @@
             inset: 0;
             background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
             transform: translate3d(0, 0, 0) scale(0.95);
-            filter: blur(20px);
+            filter: blur(10px);
         }
-        .glow-button:hover::after {
-            filter: blur(30px);
+        .glow-button:hover::after { filter: blur(30px); }
+        .glow-button-active { transform: scale(1.01); }
+
+        /* === Gradient Text Override === */
+        .text-primary { color: #1db7f4 !important; }
+        .group-hover\:text-primary { color: #40c9ff !important; }
+        a.text-primary:hover,
+        a .text-primary:hover { filter: brightness(1.2); }
+
+        /* === Sticky Sidebar (dark) === */
+        .sticky-nav { position: sticky; top: 90px; max-height: calc(100vh - 110px); overflow-y: auto; }
+        .sticky-nav::-webkit-scrollbar { width: 4px; }
+        .sticky-nav::-webkit-scrollbar-track { background: #1c1c20; border-radius: 4px; }
+        .sticky-nav::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 4px; }
+
+        /* === Section Cards === */
+        .topic-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background: #1c1c20;
+            border-radius: 30px;
+            box-shadow: 6px 6px 12px rgb(25, 25, 25), -6px -6px 12px rgb(45, 45, 45);
         }
-        .glow-button-active {
-            transform: scale(1.05);
+        .topic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 8px 8px 16px rgb(20, 20, 20), -8px -8px 16px rgb(50, 50, 50);
         }
-    </style>
+
+        /* === Formula/Info Boxes (dark) === */
+        .formula-box { background: linear-gradient(135deg, rgba(124,58,237,0.10) 0%, rgba(168,85,247,0.08) 100%); border: 1px solid rgba(124,58,237,0.25); }
+        .tip-box { background: linear-gradient(135deg, rgba(59,130,246,0.10) 0%, rgba(16,185,129,0.08) 100%); border: 1px solid rgba(59,130,246,0.25); }
+        .warning-box { background: linear-gradient(135deg, rgba(245,158,11,0.10) 0%, rgba(239,68,68,0.08) 100%); border: 1px solid rgba(245,158,11,0.25); }
+        .example-box { background: linear-gradient(135deg, rgba(16,185,129,0.10) 0%, rgba(52,211,153,0.08) 100%); border: 1px solid rgba(16,185,129,0.25); }
+        .danger-box { background: linear-gradient(135deg, rgba(239,68,68,0.10) 0%, rgba(244,63,94,0.08) 100%); border: 1px solid rgba(239,68,68,0.25); }
+        .info-box { background: linear-gradient(135deg, rgba(59,130,246,0.10) 0%, rgba(14,165,233,0.08) 100%); border: 1px solid rgba(59,130,246,0.25); }
+
+        /* === Tables (dark) === */
+        .custom-table { border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 12px; }
+        .custom-table thead { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); }
+        .custom-table tbody { background: #131316; color: #d0d6e0; }
+        .custom-table tbody tr:nth-child(even) { background-color: #1c1c20; }
+        .custom-table tbody tr:hover { background-color: #232328; transition: background 0.2s; }
+        .custom-table td, .custom-table th { color: #f7f8f8; border-bottom: 1px solid #23252a; }
+        .custom-table thead th { color: #ffffff; }
+
+        /* === Stat Cards (dark) === */
+        .stat-card {
+            background: #1c1c20;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 6px 6px 12px rgb(25, 25, 25), -6px -6px 12px rgb(45, 45, 45);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid;
+        }
+        .stat-card:hover { transform: translateY(-4px); box-shadow: 8px 8px 16px rgb(20, 20, 20), -8px -8px 16px rgb(50, 50, 50); }
+
+        /* === Weightage Progress Bars === */
+        .weight-bar { height: 10px; border-radius: 9999px; background: #2c2c32; overflow: hidden; }
+        .weight-fill { height: 100%; border-radius: 9999px; background: linear-gradient(to right, #7c3aed, #a855f7); transition: width 1s ease; }
+
+        /* === Subject Tabs === */
+        .tab-btn { transition: all 0.2s; }
+        .tab-btn.active { background: #7c3aed; color: white; box-shadow: 0 4px 12px rgba(124,58,237,0.4); }
+
+        /* === Anchor offset for sticky header === */
+        section[id], div[id] { scroll-margin-top: 90px; }
+
+        /* === Active nav highlight === */
+        .nav-link.active-nav { background: #7c3aed; color: white; }
+
+        /* === Glassmorphism hero cards === */
+        .glass-card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        /* === Pill badges (dark) === */
+        .badge { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 0.72rem; font-weight: 600; }
+        .badge-green { background: rgba(16,185,129,0.18); color: #34d399; }
+        .badge-red { background: rgba(239,68,68,0.18); color: #f87171; }
+        .badge-blue { background: rgba(59,130,246,0.18); color: #60a5fa; }
+        .badge-yellow { background: rgba(245,158,11,0.18); color: #fbbf24; }
+        .badge-purple { background: rgba(124,58,237,0.18); color: #c4b5fd; }
+
+        /* === Category Colors (maths chapters — purple badges, matching physics) === */
+        .cat-algebra { border-left-color: #7c3aed; }
+        .cat-algebra .cat-badge { background: #7c00d5; color: #ffffff; }
+        .cat-calculus { border-left-color: #2563eb; }
+        .cat-calculus .cat-badge { background: #7c00d5; color: #ffffff; }
+        .cat-coordinate { border-left-color: #ef4444; }
+        .cat-coordinate .cat-badge { background: #7c00d5; color: #ffffff; }
+        .cat-trigonometry { border-left-color: #f59e0b; }
+        .cat-trigonometry .cat-badge { background: #7c00d5; color: #ffffff; }
+        .cat-vectors { border-left-color: #10b981; }
+        .cat-vectors .cat-badge { background: #7c00d5; color: #ffffff; }
+
+        /* === Chapter Cards (dark, neumorphic) === */
+        .chapter-card {
+            transition: all 0.4s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: #1c1c20;
+            border-radius: 30px;
+            box-shadow: 6px 6px 12px rgb(25, 25, 25),
+                        -6px -6px 12px rgb(45, 45, 45);
+        }
+        .chapter-card:hover {
+            box-shadow: 8px 8px 16px rgb(20, 20, 20),
+                        -8px -8px 16px rgb(50, 50, 50);
+        }
+        .chapter-card:active {
+            box-shadow: inset 4px 4px 8px rgb(25, 25, 25),
+                        inset -4px -4px 8px rgb(45, 45, 45);
+        }
+        .chapter-card.hidden-filter {
+            opacity: 0;
+            transform: scale(0.8);
+            display: none;
+        }
+
+        /* === Floating Animation === */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation { animation: float 3s ease-in-out infinite; }
+
+        /* === Progress Ring === */
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        /* === Custom Scrollbar (dark) === */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #131316; }
+        ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9f75e8; }
+
+        /* === Print === */
+        @media print {
+            header, footer, aside, #progress-bar, #progressBar, button { display: none !important; }
+            main { grid-column: 1 / -1 !important; }
+        }
+     </style>
 <link rel="stylesheet" href="../../css/tailwind.min.css">
 </head>
 <body class="bg-canvas text-ink">
@@ -566,73 +668,80 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-[#0a0a1a] via-[#131316] to-[#1c1c20] text-ink py-16 md:py-20 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-72 h-72 rounded-full blur-3xl float-animation" style="background: rgba(225, 29, 72, 0.25);"></div>
-            <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full blur-3xl float-animation" style="animation-delay: 1s; background: rgba(225, 29, 72, 0.25);"></div>
+    <section class="hero-gradient text-ink py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 hero-part">
+            <div class="absolute top-10 left-10 w-72 h-72 rounded-full blur-3xl float-animation" style="background: rgba(200, 220, 255, 0.3);"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full blur-3xl float-animation" style="animation-delay: 1s; background: rgba(180, 210, 255, 0.25);"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="flex items-center mb-4">
-                        <span class="text-6xl mr-4">📐</span>
-                        <span class="backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(28, 28, 32, 0.55);">
-                            JEE Main & Advanced 2025-26
+                    <div class="flex items-center gap-3 flex-wrap mb-4">
+                        <span class="backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(255, 255, 255, 0.08);">
+                            JEE Main 2026
+                        </span>
+                        <span class="backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(255, 255, 255, 0.08);">
+                            JEE Advanced 2026
+                        </span>
+                        <span class="backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(255, 255, 255, 0.08);">
+                            Class 11 & 12
                         </span>
                     </div>
                     <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                        JEE Mathematics
-                        <span class="block text-primary">Complete Notes</span>
+                        JEE Mathematics Notes, Formulas & PYQs — <span class="text-primary">Free</span>
                     </h1>
                     <p class="text-xl opacity-95 leading-relaxed mb-8">
-                        All Maths chapters for JEE Main & Advanced 2026 — Calculus, Algebra, Coordinate Geometry, Trigonometry, Vectors, Probability and more
+                        Complete chapter-wise Mathematics preparation for JEE Main & Advanced 2026. Concise notes, formula sheets, and previous year questions — all free, no login required.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
+                            <span class="font-bold">📚 35+ Chapters Covered</span>
+                        </div>
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
+                            <span class="font-bold">📝 Formula Sheets per Chapter</span>
+                        </div>
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
+                            <span class="font-bold">🎯 PYQs with Solutions</span>
+                        </div>
+                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(255, 255, 255, 0.08);">
+                            <span class="font-bold">💯 100% Free Forever</span>
+                        </div>
+                    </div>
+                    <p class="text-sm opacity-70 mb-8">
+                        Covers Algebra, Calculus, Coordinate Geometry, Trigonometry, Vectors, Probability and more — aligned with NTA JEE Main syllabus and JEE Advanced pattern.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(28, 28, 32, 0.55);">
-                            <span class="font-bold">📚 35+ Chapters</span>
-                        </div>
-                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(28, 28, 32, 0.55);">
-                            <span class="font-bold">✍️ 1500+ Examples</span>
-                        </div>
-                        <div class="backdrop-blur-md px-6 py-3 rounded-full" style="background: rgba(28, 28, 32, 0.55);">
-                            <span class="font-bold">🎯 100% Free</span>
-                        </div>
+                        <a href="#algebra-section" class="backdrop-blur-md px-6 py-3 rounded-full font-semibold border border-white/20 hover:border-white/40 transition" style="background: rgba(255, 255, 255, 0.08);">
+                            Browse Important Chapters
+                        </a>
                     </div>
                 </div>
 
                 <!-- Progress Stats -->
-                <div class="backdrop-blur-md p-8 rounded-3xl" style="background: rgba(28, 28, 32, 0.45);">
-                    <h3 class="text-2xl font-bold mb-6">Your Progress</h3>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center">
-                            <div class="relative inline-block">
-                                <svg class="w-24 h-24">
-                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
-                                    <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#fbbf24" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="215.3"/>
-                                </svg>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <span class="text-2xl font-bold">5/35</span>
-                                </div>
-                            </div>
-                            <p class="mt-2 font-semibold">Chapters Ready</p>
+                <div class="backdrop-blur-md p-8 rounded-3xl" style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12);">
+                    <h3 class="text-2xl font-bold mb-6">Content Status</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
+                            <span class="font-semibold">Chapters with Notes</span>
+                            <span class="font-bold text-primary">5 / 35</span>
                         </div>
-                        <div class="text-center">
-                            <div class="relative inline-block">
-                                <svg class="w-24 h-24">
-                                    <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
-                                    <circle class="progress-ring__circle" cx="48" cy="48" r="40" stroke="#fbbf24" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="0"/>
-                                </svg>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <span class="text-2xl font-bold">100%</span>
-                                </div>
-                            </div>
-                            <p class="mt-2 font-semibold">Free Forever</p>
+                        <div class="flex items-center justify-between p-3 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
+                            <span class="font-semibold">Formula Sheets</span>
+                            <span class="font-bold opacity-70">Coming Soon</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
+                            <span class="font-semibold">PYQs</span>
+                            <span class="font-bold opacity-70">Coming Soon</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
+                            <span class="font-semibold">Weightage Guide</span>
+                            <span class="font-bold text-green-400">✓ Live</span>
                         </div>
                     </div>
-                    <div class="mt-6 p-4 rounded-xl" style="background: rgba(28, 28, 32, 0.6);">
+                    <div class="mt-6 p-4 rounded-xl" style="background: rgba(255, 255, 255, 0.05);">
                         <p class="text-sm opacity-90">
-                            <span class="font-bold text-primary">✨ New:</span> Quadratic Equations & Complex Numbers chapters are now live!
+                            <span class="font-bold text-primary">✨ New:</span> Quadratic Equations & Complex Numbers chapters are now live
                         </p>
                     </div>
                 </div>
