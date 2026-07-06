@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units & Dimensions Short Notes | Complete Quick Revision JEE 2026</title>
+    <meta name="description" content="Complete Units & Dimensions short notes for JEE Main & Advanced 2026 — every formula, unit system, dimensional table, error analysis rule, significant figure rule and instrument in one concise revision page.">
+    <link rel="canonical" href="./units-and-dimensions-short-notes.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    window.MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true },
+        svg: { fontCache: 'global' }
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../../css/tailwind.min.css">
+<style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .bg-canvas { background-color: #010102 !important; }
+    .bg-surface-1 { background-color: #131316 !important; }
+    .bg-surface-2 { background-color: #1c1c20 !important; }
+    .text-ink { color: #f7f8f8 !important; }
+    .text-ink-muted { color: #d0d6e0 !important; }
+    .text-ink-subtle { color: #8a8f98 !important; }
+    .border-hairline { border-color: #23252a !important; }
+    .text-primary { color: #1db7f4 !important; }
+    .topic-card { transition: transform .2s ease, box-shadow .2s ease; background:#1c1c20; border-radius:24px; box-shadow:6px 6px 12px rgb(25,25,25), -6px -6px 12px rgb(45,45,45); }
+    .topic-card:hover { transform: translateY(-4px); }
+    .formula-box { background: linear-gradient(135deg, rgba(124,58,237,0.10) 0%, rgba(168,85,247,0.08) 100%); border: 1px solid rgba(124,58,237,0.25); }
+    .tip-box { background: linear-gradient(135deg, rgba(59,130,246,0.10) 0%, rgba(16,185,129,0.08) 100%); border: 1px solid rgba(59,130,246,0.25); }
+    .warning-box { background: linear-gradient(135deg, rgba(245,158,11,0.10) 0%, rgba(239,68,68,0.08) 100%); border: 1px solid rgba(245,158,11,0.25); }
+    .example-box { background: linear-gradient(135deg, rgba(16,185,129,0.10) 0%, rgba(52,211,153,0.08) 100%); border: 1px solid rgba(16,185,129,0.25); }
+    .custom-table { border-collapse: separate; border-spacing:0; overflow:hidden; border-radius:12px; }
+    .custom-table thead { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); }
+    .custom-table tbody { background:#131316; color:#d0d6e0; }
+    .custom-table tbody tr:nth-child(even){ background:#1c1c20; }
+    .custom-table td, .custom-table th { border-bottom:1px solid #23252a; }
+    ::-webkit-scrollbar{ width:10px; } ::-webkit-scrollbar-track{background:#131316;} ::-webkit-scrollbar-thumb{background:#7c3aed;border-radius:5px;}
+    section[id]{ scroll-margin-top: 90px; }
+    .sticky-nav { position: sticky; top: 20px; max-height: calc(100vh - 40px); overflow-y:auto; }
+</style>
+</head>
+<body class="bg-canvas text-ink">
+
+<header class="bg-surface-1 border-b border-hairline">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="../../index.html" class="text-xl font-extrabold">JEE Prep Guide</a>
+        <a href="./units-and-dimensions.html" class="text-primary text-sm font-semibold">Full Notes with Solved Examples →</a>
+    </div>
+</header>
+
+<section class="py-10 text-center border-b border-hairline">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-3">Units & Dimensions <span class="text-primary">— Complete Short Notes</span></h1>
+    <p class="text-ink-muted max-w-2xl mx-auto">Every formula, unit system, dimensional table, rule & shortcut for JEE Main/Advanced 2026 — in one revision page.</p>
+</section>
+
+<div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+<!-- Sidebar -->
+<aside class="lg:col-span-1 order-2 lg:order-1">
+    <div class="bg-surface-1 rounded-2xl border border-hairline p-5 sticky-nav">
+        <h3 class="font-bold text-lg mb-3">Contents</h3>
+        <ul class="space-y-1 text-sm">
+            <li><a href="#pq" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">1. Physical Quantities</a></li>
+            <li><a href="#systems" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">2. Systems of Units</a></li>
+            <li><a href="#si" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">3. SI Base & Derived Units</a></li>
+            <li><a href="#dim" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">4. Dimensional Formulas</a></li>
+            <li><a href="#constants" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">5. Dimensional Constants</a></li>
+            <li><a href="#analysis" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">6. Dimensional Analysis</a></li>
+            <li><a href="#sf" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">7. Significant Figures</a></li>
+            <li><a href="#errors" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">8. Error Analysis</a></li>
+            <li><a href="#instruments" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">9. Instruments & Least Count</a></li>
+            <li><a href="#conversion" class="block py-1.5 px-2 rounded hover:bg-primary hover:text-black">10. Unit Conversion</a></li>
+            <li><a href="#cheatsheet" class="block py-1.5 px-2 rounded bg-accent text-black font-semibold">⚡ Final Cheat Sheet</a></li>
+        </ul>
+    </div>
+</aside>
+
+<main class="lg:col-span-3 order-1 lg:order-2 space-y-8">
+
+<!-- 1. Physical Quantities -->
+<section id="pq" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">1. Physical Quantities</h2>
+    <p class="text-ink-muted mb-3">A physical quantity = anything that can be measured, expressed as <strong>Numerical value × Unit</strong>. It stays constant regardless of the unit chosen: $n_1u_1 = n_2u_2$ (larger unit → smaller numerical value).</p>
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+        <div class="formula-box p-4 rounded-lg">
+            <h4 class="font-bold mb-2">Fundamental (Base) Quantities</h4>
+            <p class="text-sm text-ink-muted">Independent, cannot be derived: Mass, Length, Time, Current, Temperature, Amount of substance, Luminous Intensity + 2 supplementary (plane angle, solid angle).</p>
+        </div>
+        <div class="formula-box p-4 rounded-lg">
+            <h4 class="font-bold mb-2">Derived Quantities</h4>
+            <p class="text-sm text-ink-muted">Expressed via fundamentals: Area, Volume, Velocity, Force, Energy, Pressure, etc. — 99% of physics quantities.</p>
+        </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+        <div class="formula-box p-4 rounded-lg">
+            <h4 class="font-bold mb-2">Scalars</h4>
+            <p class="text-sm text-ink-muted">Magnitude only, obey ordinary algebra: mass, time, speed, energy, temperature, distance, work, potential.</p>
+        </div>
+        <div class="formula-box p-4 rounded-lg">
+            <h4 class="font-bold mb-2">Vectors</h4>
+            <p class="text-sm text-ink-muted">Magnitude + direction, obey vector algebra: displacement, velocity, acceleration, force, momentum, torque, E, B.</p>
+        </div>
+    </div>
+    <div class="tip-box p-4 rounded-lg text-sm">💡 <strong>Trick:</strong> "My Large Tiger Can Eat Little Ants" → Mass, Length, Time, Current, Temperature, Luminous Intensity, Amount of substance.</div>
+</section>
+
+<!-- 2. Systems of Units -->
+<section id="systems" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">2. Systems of Units</h2>
+    <p class="text-ink-muted mb-3">A system of units is a set where <strong>certain units are chosen fundamental</strong> and all others derived. Four historical systems matter for JEE:</p>
+    <div class="overflow-x-auto mb-4">
+    <table class="w-full custom-table text-sm">
+        <thead><tr class="text-white"><th class="p-2">System</th><th class="p-2">Length</th><th class="p-2">Mass</th><th class="p-2">Time</th></tr></thead>
+        <tbody>
+        <tr><td class="p-2 font-semibold">CGS</td><td class="p-2">centimetre</td><td class="p-2">gram</td><td class="p-2">second</td></tr>
+        <tr><td class="p-2 font-semibold">MKS</td><td class="p-2">metre</td><td class="p-2">kilogram</td><td class="p-2">second</td></tr>
+        <tr><td class="p-2 font-semibold">FPS</td><td class="p-2">foot</td><td class="p-2">pound</td><td class="p-2">second</td></tr>
+        <tr><td class="p-2 font-semibold">SI</td><td class="p-2">metre</td><td class="p-2">kilogram</td><td class="p-2">second (+4 more base units)</td></tr>
+        </tbody>
+    </table>
+    </div>
+    <p class="text-sm text-ink-muted mb-2"><!--citation:4-->In contrast to the cgs and the fps systems of units, the mks system is a coherent system of units in mechanics — coherent means all derived units are obtained by multiplying/dividing fundamental units with no numerical factors. <!--citation:4-->The units of mass, length and time in mks/cgs/fps can be used to obtain units of physical quantities in mechanics only (not electricity/heat) — that's why SI (7 base units) was adopted universally.</p>
+    <div class="warning-box p-4 rounded-lg text-sm">⚠️ SI is the only system with base units for ALL branches of physics (mechanics + heat + electricity + light + chemistry).</div>
+</section>
+
+<!-- 3. SI Units -->
+<section id="si" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">3. SI Base & Derived Units</h2>
+    <div class="overflow-x-auto mb-4">
+    <table class="w-full custom-table text-sm">
+        <thead><tr class="text-white"><th class="p-2">Quantity</th><th class="p-2">Unit</th><th class="p-2">Symbol</th><th class="p-2">Dim.</th></tr></thead>
+        <tbody>
+        <tr><td class="p-2">Length</td><td class="p-2">metre</td><td class="p-2">m</td><td class="p-2">[L]</td></tr>
+        <tr><td class="p-2">Mass</td><td class="p-2">kilogram</td><td class="p-2">kg</td><td class="p-2">[M]</td></tr>
+        <tr><td class="p-2">Time</td><td class="p-2">second</td><td class="p-2">s</td><td class="p-2">[T]</td></tr>
+        <tr><td class="p-2">Current</td><td class="p-2">ampere</td><td class="p-2">A</td><td class="p-2">[I]</td></tr>
+        <tr><td class="p-2">Temperature</td><td class="p-2">kelvin</td><td class="p-2">K</td><td class="p-2">[K]</td></tr>
+        <tr><td class="p-2">Amount</td><td class="p-2">mole</td><td class="p-2">mol</td><td class="p-2">[mol]</td></tr>
+        <tr><td class="p-2">Luminous Int.</td><td class="p-2">candela</td><td class="p-2">cd</td><td class="p-2">[cd]</td></tr>
+        <tr><td class="p-2">Plane Angle (supp.)</td><td class="p-2">radian</td><td class="p-2">rad</td><td class="p-2">dimensionless</td></tr>
+        <tr><td class="p-2">Solid Angle (supp.)</td><td class="p-2">steradian</td><td class="p-2">sr</td><td class="p-2">dimensionless</td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <h4 class="font-bold mb-2">Important Derived SI Units</h4>
+    <div class="overflow-x-auto mb-4">
+    <table class="w-full custom-table text-sm">
+        <thead><tr class="text-white"><th class="p-2">Quantity</th><th class="p-2">Unit</th><th class="p-2">Symbol</th><th class="p-2">In Base Units</th></tr></thead>
+        <tbody>
+        <tr><td class="p-2">Force</td><td class="p-2">newton</td><td class="p-2">N</td><td class="p-2 font-mono">kg m s⁻²</td></tr>
+        <tr><td class="p-2">Energy/Work</td><td class="p-2">joule</td><td class="p-2">J</td><td class="p-2 font-mono">kg m² s⁻²</td></tr>
+        <tr><td class="p-2">Power</td><td class="p-2">watt</td><td class="p-2">W</td><td class="p-2 font-mono">kg m² s⁻³</td></tr>
+        <tr><td class="p-2">Pressure</td><td class="p-2">pascal</td><td class="p-2">Pa</td><td class="p-2 font-mono">kg m⁻¹ s⁻²</td></tr>
+        <tr><td class="p-2">Frequency</td><td class="p-2">hertz</td><td class="p-2">Hz</td><td class="p-2 font-mono">s⁻¹</td></tr>
+        <tr><td class="p-2">Charge</td><td class="p-2">coulomb</td><td class="p-2">C</td><td class="p-2 font-mono">A s</td></tr>
+        <tr><td class="p-2">Potential</td><td class="p-2">volt</td><td class="p-2">V</td><td class="p-2 font-mono">kg m² s⁻³ A⁻¹</td></tr>
+        <tr><td class="p-2">Resistance</td><td class="p-2">ohm</td><td class="p-2">Ω</td><td class="p-2 font-mono">kg m² s⁻³ A⁻²</td></tr>
+        <tr><td class="p-2">Capacitance</td><td class="p-2">farad</td><td class="p-2">F</td><td class="p-2 font-mono">kg⁻¹m⁻²s⁴A²</td></tr>
+        <tr><td class="p-2">Inductance</td><td class="p-2">henry</td><td class="p-2">H</td><td class="p-2 font-mono">kg m²s⁻²A⁻²</td></tr>
+        <tr><td class="p-2">Magnetic Flux</td><td class="p-2">weber</td><td class="p-2">Wb</td><td class="p-2 font-mono">kg m²s⁻²A⁻¹</td></tr>
+        <tr><td class="p-2">Magnetic Field</td><td class="p-2">tesla</td><td class="p-2">T</td><td class="p-2 font-mono">kg s⁻²A⁻¹</td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <h4 class="font-bold mb-2">SI Prefixes</h4>
+    <div class="grid md:grid-cols-2 gap-4 text-sm mb-4">
+        <div class="formula-box p-4 rounded-lg font-mono space-y-1">
+            <div class="flex justify-between"><span>deca (da)</span><span>10¹</span></div>
+            <div class="flex justify-between"><span>hecto (h)</span><span>10²</span></div>
+            <div class="flex justify-between"><span>kilo (k)</span><span>10³</span></div>
+            <div class="flex justify-between"><span>mega (M)</span><span>10⁶</span></div>
+            <div class="flex justify-between"><span>giga (G)</span><span>10⁹</span></div>
+            <div class="flex justify-between"><span>tera (T)</span><span>10¹²</span></div>
+            <div class="flex justify-between"><span>peta (P)</span><span>10¹⁵</span></div>
+        </div>
+        <div class="formula-box p-4 rounded-lg font-mono space-y-1">
+            <div class="flex justify-between"><span>deci (d)</span><span>10⁻¹</span></div>
+            <div class="flex justify-between"><span>centi (c)</span><span>10⁻²</span></div>
+            <div class="flex justify-between"><span>milli (m)</span><span>10⁻³</span></div>
+            <div class="flex justify-between"><span>micro (μ)</span><span>10⁻⁶</span></div>
+            <div class="flex justify-between"><span>nano (n)</span><span>10⁻⁹</span></div>
+            <div class="flex justify-between"><span>pico (p)</span><span>10⁻¹²</span></div>
+            <div class="flex justify-between"><span>femto (f)</span><span>10⁻¹⁵</span></div>
+        </div>
+    </div>
+    <div class="warning-box p-4 rounded-lg text-sm">
+        ⚠️ <strong>Common traps:</strong> kg is the only base unit with a prefix • Temperature symbol is K, not °K • Case matters: m=metre vs M=mega • space needed between number & unit (5 m, not 5m) • 1 fermi=10⁻¹⁵m, 1 angstrom=10⁻¹⁰m, 1 light year≈9.46×10¹⁵ m, 1 AU≈1.496×10¹¹ m, 1 parsec≈3.08×10¹⁶ m.
+    </div>
+</section>
+
+<!-- 4. Dimensional Formulas -->
+<section id="dim" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">4. Dimensional Formulas (Complete)</h2>
+    <p class="text-ink-muted mb-3">Dimension = power to which base units are raised. Written as $[M^aL^bT^cI^dK^e\,mol^f\,cd^g]$.</p>
+
+    <h4 class="font-bold text-lg mb-2">Mechanics</h4>
+    <div class="overflow-x-auto mb-4">
+    <table class="w-full custom-table text-sm">
+        <thead><tr class="text-white"><th class="p-2">Quantity</th><th class="p-2">Formula</th></tr></thead>
+        <tbody>
+        <tr><td class="p-2">Area</td><td class="p-2 font-mono">[L²]</td></tr>
+        <tr><td class="p-2">Volume</td><td class="p-2 font-mono">[L³]</td></tr>
+        <tr><td class="p-2">Density</td><td class="p-2 font-mono">[ML⁻³]</td></tr>
+        <tr><td class="p-2">Velocity / Speed</td><td class="p-2 font-mono">[LT⁻¹]</td></tr>
+        <tr><td class="p-2">Acceleration</td><td class="p-2 font-mono">[LT⁻²]</td></tr>
+        <tr><td class="p-2">Force / Thrust</td><td class="p-2 font-mono">[MLT⁻²]</td></tr>
+        <tr><td class="p-2">Momentum / Impulse</td><td class="p-2 font-mono">[MLT⁻¹]</td></tr>
+        <tr><td class="p-2">Work / Energy / Torque / Moment of Force</td><td class="p-2 font-mono">[ML²T⁻²]</td></tr>
+        <tr><td class="p-2">Power</td><td class="p-2 font-mono">[ML²T⁻³]</td></tr>
+        <tr><td class="p-2">Pressure / Stress / Energy Density / Young's & Bulk Modulus</td><td class="p-2 font-mono">[ML⁻¹T⁻²]</td></tr>
+        <tr><td class="p-2">Surface Tension / Surface Energy density / Force constant / Spring constant</td><td class="p-2 font-mono">[ML⁰T⁻²]</td></tr>
+        <tr><td class="p-2">Angular Displacement / Strain / Refractive Index</td><td class="p-2 font-mono">[M⁰L⁰T⁰]</td></tr>
+        <tr><td class="p-2">Angular Velocity / Frequency / Velocity gradient</td><td class="p-2 font-mono">[T⁻¹]</td></tr>
+        <tr><td class="p-2">Angular Acceleration</td><td class="p-2 font-mono">[T⁻²]</td></tr>
+        <tr><td class="p-2">Moment of Inertia</td><td class="p-2 font-mono">[ML²]</td></tr>
+        <tr><td class="p-2">Angular Momentum</td><td class="p-2 font-mono">[ML²T⁻¹]</td></tr>
+        <tr><td class="p-2">Coefficient of Viscosity (η)</td><td class="p-2 font-mono">[ML⁻¹T⁻¹]</td></tr>
+        <tr><td class="p-2">Gravitational Potential</td><td class="p-2 font-mono">[L²T⁻²]</td></tr>
+        <tr><td class="p-2">Intensity of Gravitational field</td><td class="p-2 font-mono">[LT⁻²]</td></tr>
+        <tr><td class="p-2">Power of a Lens (P = 1/f)</td><td class="p-2 font-mono">[L⁻¹]</td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <h4 class="font-bold text-lg mb-2">Heat & Thermodynamics</h4>
+    <div class="overflow-x-auto mb-4">
+    <table class="w-full custom-table text-sm">
+        <thead><tr class="text-white"><th class="p-2">Quantity</th><th class="p-2">Formula</th></tr></thead>
+        <tbody>
+        <tr><td class="p-2">Heat / Internal Energy</td><td class="p-2 font-mono">[ML²T⁻²]</td></tr>
+        <tr><td class="p-2">Specific Heat Capacity</td><td class="p-2 font-mono">[L²T⁻²K⁻¹]</td></tr>
+        <tr><td class="p-2">Latent Heat</td><td class="p-2 font-mono">[L²T⁻²]</td></tr>
+        <tr><td class="p-2">Thermal Conductivity</td><td class="p-2 font-mono">[MLT⁻³K⁻¹]</td></tr>
+        <tr><td class="p-2">Gas Constant (R) / Boltzmann Constant (k)</td><td class="p-2 font-mono">[ML²T⁻²K⁻¹mol⁻¹] / [ML²T⁻²K⁻¹]</td></tr>
+        <tr><td class="p-2">Entropy</td><td class="p-2 font-mono">[ML²T⁻²K⁻¹]</td></tr>
+        <tr><td class="p-2">Coefficient of Linear Expansion (α)</td><td class="p-2 font-mono">[K⁻¹]</td></tr>
+        <tr><td class="p-2">Stefan's Constant (σ)</td><td class="p-2 font-mono">[MT⁻³K⁻⁴]</td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <h4 class="font-bold text-lg mb-2">Electricity & Magnetism</h4>
+    <div class="overflow-x-auto mb-4">
+    <table class="w-full custom-table text-sm">
+        <thead><tr class="text-white"><th class="p-2">Quantity</th><th class="p-2">Formula</th></tr></thead>
+        <tbody>
+        <tr><td class="p-2">Electric Charge (q)</td><td class="p-2 font-mono">[AT]</td></tr>
+        <tr><td class="p-2">Electric Potential (V) / EMF</td><td class="p-2 font-mono">[ML²T⁻³A⁻¹]</td></tr>
+        <tr><td class="p-2">Electric Field (E)</td><td class="p-2 font-mono">[MLT⁻³A⁻¹]</td></tr>
+        <tr><td class="p-2">Resistance (R) / Impedance</td><td class="p-2 font-mono">[ML²T⁻³A⁻²]</td></tr>
+        <tr><td class="p-2">Resistivity (ρ)</td><td class="p-2 font-mono">[ML³T⁻³A⁻²]</td></tr>
+        <tr><td class="p-2">Conductance / Conductivity</td><td class="p-2 font-mono">[M⁻¹L⁻²T³A²] / [M⁻¹L⁻³T³A²]</td></tr>
+        <tr><td class="p-2">Capacitance (C)</td><td class="p-2 font-mono">[M⁻¹L⁻²T⁴A²]</td></tr>
+        <tr><td class="p-2">Permittivity (ε₀)</td><td class="p-2 font-mono">[M⁻¹L⁻³T⁴A²]</td></tr>
+        <tr><td class="p-2">Permeability (μ₀)</td><td class="p-2 font-mono">[MLT⁻²A⁻²]</td></tr>
+        <tr><td class="p-2">Magnetic Field (B)</td><td class="p-2 font-mono">[MT⁻²A⁻¹]</td></tr>
+        <tr><td class="p-2">Magnetic Flux (Φ)</td><td class="p-2 font-mono">[ML²T⁻²A⁻¹]</td></tr>
+        <tr><td class="p-2">Inductance (L)</td><td class="p-2 font-mono">[ML²T⁻²A⁻²]</td></tr>
+        <tr><td class="p-2">Magnetic Dipole Moment</td><td class="p-2 font-mono">[L²A]</td></tr>
+        <tr><td class="p-2">Electric Dipole Moment</td><td class="p-2 font-mono">[LTA]</td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <h4 class="font-bold text-lg mb-2">Modern Physics & Others</h4>
+    <div class="overflow-x-auto mb-4">
+    <table class="w-full custom-table text-sm">
+        <thead><tr class="text-white"><th class="p-2">Quantity</th><th class="p-2">Formula</th></tr></thead>
+        <tbody>
+        <tr><td class="p-2">Planck's Constant (h) / Angular Momentum</td><td class="p-2 font-mono">[ML²T⁻¹]</td></tr>
+        <tr><td class="p-2">Gravitational Constant (G)</td><td class="p-2 font-mono">[M⁻¹L³T⁻²]</td></tr>
+        <tr><td class="p-2">Rydberg Constant</td><td class="p-2 font-mono">[L⁻¹]</td></tr>
+        <tr><td class="p-2">Decay Constant (λ)</td><td class="p-2 font-mono">[T⁻¹]</td></tr>
+        <tr><td class="p-2">Wavelength / Wavenumber</td><td class="p-2 font-mono">[L] / [L⁻¹]</td></tr>
+        <tr><td class="p-2">Dimensionless: Strain, Refractive Index, Poisson's Ratio, Relative Density, Angle, π, e, sin θ, log</td><td class="p-2 font-mono">[M⁰L⁰T⁰]</td></tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="tip-box p-4 rounded-lg text-sm">
+        🎯 <strong>Shortcuts:</strong> All energy-family terms (KE, PE, work, heat, torque) = [ML²T⁻²] • "per unit time" adds [T⁻¹] (Power) • "per unit area" adds [L⁻²] (Pressure/Intensity) • "per unit volume" adds [L⁻³] • angle/ratio-type quantities are always dimensionless.
+    </div>
+</section>
+
+<!-- 5. Dimensional Constants -->
+<section id="constants" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">5. Dimensional Constants vs Dimensionless Constants</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+        <div class="formula-box p-4 rounded-lg text-sm">
+            <h4 class="font-bold mb-2">Dimensional Constants</h4>
+            <p class="text-ink-muted">Have dimensions, fixed value: G, h, c (speed of light), R, k (Boltzmann), ε₀, μ₀, σ (Stefan's)</p>
+        </div>
+        <div class="formula-box p-4 rounded-lg text-sm">
+            <h4 class="font-bold mb-2">Dimensionless Constants</h4>
+            <p class="text-ink-muted">No dimensions: π, e, ½, 2, all pure numbers, refractive index, Reynolds number</p>
+        </div>
+    </div>
+</section>
+
+<!-- 6. Dimensional Analysis -->
+<section id="analysis" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">6. Dimensional Analysis</h2>
+    <div class="formula-box p-4 rounded-lg mb-4 text-sm">
+        <strong>Principle of Homogeneity:</strong> In a correct equation, every additive term must have the same dimensions; only like quantities add/subtract.
+    </div>
+    <p class="font-semibold mb-2">3 Applications:</p>
+    <ol class="list-decimal list-inside text-ink-muted space-y-1 mb-4 text-sm">
+        <li><strong>Checking correctness</strong> of an equation (necessary but not sufficient condition)</li>
+        <li><strong>Deriving a formula</strong> when the quantity depends on a product of powers of others (no sum of terms)</li>
+        <li><strong>Converting units</strong> between systems</li>
+    </ol>
+    <div class="tip-box p-4 rounded-lg mb-4 text-sm">
+        <strong>Method:</strong> Assume $Q = kA^aB^bC^c$ → substitute dimensions of A, B, C → equate powers of M, L, T on both sides → solve simultaneous equations for a, b, c.
+        <br>Example: pendulum period $T=k\sqrt{L/g}$ — dimensional analysis gives the form, but constant $k=2\pi$ needs calculus/experiment.
+    </div>
+    <div class="warning-box p-4 rounded-lg text-sm">
+        <strong>❌ Limitations:</strong>
+        <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Cannot find dimensionless constants (2π, ½, e)</li>
+            <li>Fails when RHS has 2+ terms of same dimension added/subtracted (e.g., $s=ut+\frac12at^2$)</li>
+            <li>Cannot handle trigonometric, exponential, logarithmic functions (their arguments must be dimensionless, but the analysis can't derive the function itself)</li>
+            <li>Cannot distinguish scalar vs vector nature</li>
+            <li>Cannot decide between quantities having identical dimensions (e.g., torque vs energy)</li>
+            <li>Dimensionally correct ≠ physically correct</li>
+        </ul>
+    </div>
+</section>
+
+<!-- 7. Significant Figures -->
+<section id="sf" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">7. Significant Figures</h2>
+    <ul class="list-disc list-inside text-ink-muted space-y-1 mb-4 text-sm">
+        <li>All non-zero digits → significant (1234 → 4 S.F.)</li>
+        <li>Zeros between non-zero digits → significant (1002 → 4 S.F.)</li>
+        <li>Leading zeros → NOT significant (0.0025 → 2 S.F.)</li>
+        <li>Trailing zeros after decimal → significant (2.500 → 4 S.F.)</li>
+        <li>Trailing zeros in integer w/o decimal → ambiguous (2500 → 2,3, or 4 S.F.; use scientific notation to clarify)</li>
+        <li>Exact/counting numbers, and constants like π (in a formula) → infinite S.F.</li>
+        <li>Changing units does NOT change number of S.F.</li>
+    </ul>
+    <div class="formula-box p-4 rounded-lg mb-4 text-sm">
+        <strong>Addition/Subtraction:</strong> keep least number of <em>decimal places</em> among terms.<br>
+        <strong>Multiplication/Division:</strong> keep least number of <em>significant figures</em> among factors.
+    </div>
+    <div class="tip-box p-4 rounded-lg text-sm">
+        <strong>Rounding off:</strong> digit &lt;5 → drop • &gt;5 → round up preceding digit • exactly 5 → round to nearest <em>even</em> digit (e.g., 3.145→3.14, 3.155→3.16).
+    </div>
+</section>
+
+<!-- 8. Errors -->
+<section id="errors" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">8. Error Analysis</h2>
+    <div class="grid md:grid-cols-3 gap-4 mb-4 text-sm">
+        <div class="formula-box p-4 rounded-lg">
+            <h4 class="font-bold mb-1">Systematic</h4>
+            <p class="text-ink-muted">One-directional: instrumental, zero error, calibration, personal — correctable</p>
+        </div>
+        <div class="formula-box p-4 rounded-lg">
+            <h4 class="font-bold mb-1">Random</h4>
+            <p class="text-ink-muted">Unpredictable fluctuations — reduced by averaging repeated readings</p>
+        </div>
+        <div class="formula-box p-4 rounded-lg">
+            <h4 class="font-bold mb-1">Gross</h4>
+            <p class="text-ink-muted">Human mistake, wrong reading/recording — avoided by care</p>
+        </div>
+    </div>
+    <div class="formula-box p-4 rounded-lg mb-4 text-sm">
+        Absolute error: $\Delta a_i=|a_{mean}-a_i|$ &nbsp;|&nbsp; Mean absolute error: $\overline{\Delta a}=\dfrac{\Sigma|\Delta a_i|}{n}$ <br>
+        Relative error: $\dfrac{\overline{\Delta a}}{a_{mean}}$ &nbsp;|&nbsp; % error: $\dfrac{\overline{\Delta a}}{a_{mean}}\times100\%$
+    </div>
+    <div class="overflow-x-auto mb-4">
+    <table class="w-full custom-table text-sm">
+        <thead><tr class="text-white"><th class="p-2">Operation</th><th class="p-2">Error Propagation</th></tr></thead>
+        <tbody>
+        <tr><td class="p-2">Z = A ± B</td><td class="p-2 font-mono">ΔZ = ΔA + ΔB</td></tr>
+        <tr><td class="p-2">Z = A × B or A/B</td><td class="p-2 font-mono">ΔZ/Z = ΔA/A + ΔB/B</td></tr>
+        <tr><td class="p-2">Z = Aⁿ</td><td class="p-2 font-mono">ΔZ/Z = n(ΔA/A)</td></tr>
+        <tr><td class="p-2">Z = AᵖBᑫ/Cʳ</td><td class="p-2 font-mono">ΔZ/Z = pΔA/A + qΔB/B + rΔC/C</td></tr>
+        </tbody>
+    </table>
+    </div>
+    <div class="warning-box p-4 rounded-lg text-sm">⚠️ Errors always ADD in multiplication/division/power (worst-case, never subtract) • never round mid-calculation • max % error decides significant figures of final result.</div>
+</section>
+
+<!-- 9. Instruments -->
+<section id="instruments" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">9. Instruments & Least Count</h2>
+    <div class="formula-box p-4 rounded-lg mb-3 text-sm">
+        <strong>Vernier Caliper:</strong> $LC = 1\,MSD - 1\,VSD$ (typically 0.01 cm). Zero error (+) if VSD zero lies right of MSD zero when jaws closed; (−) if left. Corrected reading = Observed reading − Zero error.
+    </div>
+    <div class="formula-box p-4 rounded-lg text-sm">
+        <strong>Screw Gauge (Micrometer):</strong> $LC = \dfrac{Pitch}{No.\ of\ circular\ scale\ divisions}$. Reading = MSR + (CSR × LC) − zero error. Backlash error avoided by rotating screw in one direction only.
+    </div>
+</section>
+
+<!-- 10. Unit Conversion -->
+<section id="conversion" class="topic-card p-6">
+    <h2 class="text-2xl font-bold text-primary mb-3">10. Unit Conversion Formula</h2>
+    <div class="formula-box p-4 rounded-lg text-sm">
+        $$n_2 = n_1\left[\frac{M_1}{M_2}\right]^a\left[\frac{L_1}{L_2}\right]^b\left[\frac{T_1}{T_2}\right]^c$$
+        a, b, c = powers of M, L, T for that quantity's dimensional formula; subscript 1 = old system, 2 = new system.
+        <br><br><strong>Example:</strong> Convert 1 Newton (SI) to CGS (dyne). Force = [MLT⁻²] → a=1,b=1,c=−2.
+        $$n_2 = 1\times\left[\frac{1000\,g}{1\,g}\right]^1\left[\frac{100\,cm}{1\,cm}\right]^1\left[\frac{1\,s}{1\,s}\right]^{-2}=10^5$$
+        So 1 N = 10⁵ dyne.
+    </div>
+</section>
+
+<!-- Cheat Sheet -->
+<section id="cheatsheet" class="topic-card p-6 border-2 border-primary">
+    <h2 class="text-2xl font-bold text-primary mb-3">⚡ Final 2-Minute Cheat Sheet</h2>
+    <ul class="list-disc list-inside text-ink-muted space-y-1 text-sm">
+        <li>7 base quantities + 2 supplementary (rad, sr — dimensionless)</li>
+        <li>kg = only base unit with a prefix</li>
+        <li>Homogeneity: only same-dimension terms add/subtract</li>
+        <li>Dimensional analysis: derive form, NOT numerical constants</li>
+        <li>S.F.: leading zeros never count; trailing zeros after decimal always count</li>
+        <li>Addition/Subtraction → match decimal places; Multiplication/Division → match S.F.</li>
+        <li>Errors always add (never subtract) in product/quotient/power rules</li>
+        <li>Energy family (KE, PE, Work, Torque, Heat) = [ML²T⁻²] always</li>
+        <li>Unit conversion: $n_2=n_1[M_1/M_2]^a[L_1/L_2]^b[T_1/T_2]^c$</li>
+    </ul>
+</section>
+
+<div class="text-center py-6">
+    <a href="./units-and-dimensions.html" class="inline-block bg-primary text-black font-bold px-6 py-3 rounded-full">← Back to Detailed Notes with Solved Examples & PYQs</a>
+</div>
+
+</main>
+</div>
+
+<footer class="bg-surface-1 text-ink-subtle text-center py-6 text-sm border-t border-hairline">
+    © 2026 JEE Prep Guide — Units and Dimensions Complete Short Notes
+</footer>
+
+</body>
+</html>
