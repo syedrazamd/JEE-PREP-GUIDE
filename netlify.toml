@@ -1,0 +1,18 @@
+[[redirects]]
+  from = "https://www.jeeprepguide.netlify.app/*"
+  to = "https://jeeprepguide.netlify.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://jeeprepguide.netlify.app/*"
+  to = "https://jeeprepguide.netlify.app/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
