@@ -43,9 +43,29 @@
 
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
+/* Font metric overrides — makes fallback fonts match Inter/JetBrains Mono
+   so the async font swap causes zero visible shift (fixes CLS 0.302) */
+@font-face {
+  font-family: 'Inter-fallback';
+  src: local('Arial');
+  ascent-override: 90.20%;
+  descent-override: 22.48%;
+  line-gap-override: 0%;
+  size-adjust: 107.40%;
+}
+
+@font-face {
+  font-family: 'JetBrains-Mono-fallback';
+  src: local('Courier New');
+  ascent-override: 95.00%;
+  descent-override: 25.00%;
+  line-gap-override: 0%;
+  size-adjust: 100.00%;
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Inter-fallback', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-ink);
@@ -62,7 +82,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, h4, h5, h6, p, dl, dd, figure { margin: 0; }
 summary { display: list-item; }
 
-code, kbd, pre, .font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+code, kbd, pre, .font-mono { font-family: 'JetBrains Mono', 'JetBrains-Mono-fallback', ui-monospace, monospace; }
 
 /* =====================================================================
    Custom component classes — copied verbatim from the inline <style>
@@ -92,19 +112,24 @@ code, kbd, pre, .font-mono { font-family: 'JetBrains Mono', ui-monospace, monosp
   background: var(--color-surface-1);
   border: 1px solid var(--color-hairline);
   border-radius: 16px;
-  transition: border-color .25s ease, transform .25s ease;
+  transition: box-shadow .25s ease, transform .25s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 .card:hover {
-  border-color: var(--color-hairline-strong);
+  box-shadow: 0 0 0 1px var(--color-hairline-strong);
   transform: translateY(-2px);
+}
+
+/* Reserve height on stats grid to prevent layout shift while fonts load */
+.hero-canvas dl.grid {
+  min-height: 96px;
 }
 
 /* Mono chapter rail (encodes true sequence — chapters ARE ordered) */
 .ch-rail {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono', 'JetBrains-Mono-fallback', monospace;
   letter-spacing: 0.04em;
   font-size: 0.78rem;
   color: var(--color-ink-subtle);
@@ -116,6 +141,7 @@ code, kbd, pre, .font-mono { font-family: 'JetBrains Mono', ui-monospace, monosp
   gap: 3rem;
   animation: tickerMove 28s linear infinite;
   will-change: transform;
+  font-family: 'JetBrains Mono', 'JetBrains-Mono-fallback', ui-monospace, monospace;
 }
 @keyframes tickerMove {
   from { transform: translateX(0); }
@@ -309,6 +335,7 @@ ins.adsbygoogle {
 .text-ink-tertiary { color: var(--color-ink-tertiary); }
 .text-primary      { color: var(--color-primary); }
 .text-white        { color: #fff; }
+.text-canvas       { color: var(--color-canvas); }
 
 .text-xs   { font-size: 0.75rem;  line-height: 1rem; }
 .text-sm   { font-size: 0.875rem; line-height: 1.25rem; }
@@ -336,7 +363,7 @@ ins.adsbygoogle {
 .opacity-100 { opacity: 1; }
 .pointer-events-none { pointer-events: none; }
 
-.transition          { transition: all 0.15s ease; }
+.transition          { transition: opacity 0.15s ease, transform 0.15s ease; }
 .transition-opacity  { transition: opacity 0.15s ease; }
 .transition-transform { transition: transform 0.15s ease; }
 
@@ -360,10 +387,15 @@ ins.adsbygoogle {
 /* ---------- Hover state utilities ---------- */
 .hover\:text-ink:hover         { color: var(--color-ink); }
 .hover\:text-primary:hover     { color: var(--color-primary); }
-.hover\:bg-primary-hover:hover { background-color: var(--color-primary-hover); }
+.hover\:bg-primary-hover:hover { opacity: 0.88; }
 .hover\:bg-surface-2:hover      { background-color: var(--color-surface-2); }
 .hover\:border-ink-muted:hover  { border-color: var(--color-ink-muted); }
 .hover\:underline:hover         { text-decoration: underline; }
+
+/* CTA button hover — compositable opacity fade */
+a.bg-primary:hover {
+  opacity: 0.88;
+}
 
 /* group-open:rotate-180 — used by FAQ chevrons */
 details[open] .group-open\:rotate-180 { transform: rotate(180deg); }
@@ -407,10 +439,13 @@ details[open] .group-open\:rotate-180 { transform: rotate(180deg); }
    MOBILE RESPONSIVENESS — 640px and below
    ===================================================================== */
 
-/* 1. Ticker strip — prevent overflow bleed on narrow screens */
+/* 1. Ticker strip — prevent overflow bleed on narrow screens
+   (min-height + contain reserve space and limit reflow for LCP) */
 .ticker-wrap {
     overflow: hidden;
     width: 100%;
+    min-height: 56px;
+    contain: layout style;
 }
 
 /* 2. Hero section — reduce vertical padding on mobile */
@@ -423,6 +458,7 @@ details[open] .group-open\:rotate-180 { transform: rotate(180deg); }
     /* 3. Stats grid — 2 columns on mobile is fine but ensure text doesn't overflow */
     dl.grid {
         gap: 1rem;
+        min-height: 96px;
     }
 
     /* 4. Section headings — scale down on very small screens */
