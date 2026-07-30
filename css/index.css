@@ -127,6 +127,21 @@ code, kbd, pre, .font-mono { font-family: 'JetBrains Mono', 'JetBrains-Mono-fall
   min-height: 96px;
 }
 
+/* Reserve height on the LCP h1 + hero paragraph so font metric mismatch
+   (font-display:optional still has a brief ~100ms render window where a
+   swap could occur) cannot push the stats grid down. Scoped to the hero
+   <section id="home"> only via attribute selector to avoid hitting the
+   about-material section's long <p> block. */
+section#home h1 {
+  min-height: 4.5rem;
+}
+@media (min-width: 768px) {
+  section#home h1 { min-height: 7.5rem; }
+}
+section#home .max-w-3xl > p.text-ink-muted.mb-8 {
+  min-height: 5rem;
+}
+
 /* Mono chapter rail (encodes true sequence — chapters ARE ordered) */
 .ch-rail {
   font-family: 'JetBrains Mono', 'JetBrains-Mono-fallback', monospace;
