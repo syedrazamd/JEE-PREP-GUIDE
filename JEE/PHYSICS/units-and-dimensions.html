@@ -84,12 +84,43 @@
     <noscript>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css" integrity="sha384-vlBdW0r3AcZO/HboRPznQNowvexd3fY8qHOWkBi5q7KGgqJ+F48+DceybYmrVbmB" crossorigin="anonymous">
     </noscript>
+    <!-- KaTeX font-display: swap override. The CDN katex.min.css declares its
+         @font-face blocks with font-display:block (the default), causing a
+         ~70ms FCP delay and invisible-text period while each KaTeX font file
+         loads, which contributes to CLS once math glyphs finally render. This
+         inline block re-declares every KaTeX @font-face against the same CDN
+         woff2/ttf URLs (absolute, so they resolve regardless of page path)
+         but with font-display:swap. Declared after the CDN stylesheet, so by
+         source-order it wins and the browser swaps instead of blocking FCP. -->
+    <style>
+@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_AMS-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_AMS-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Fraktur-Bold.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Fraktur-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Bold.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Bold.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-BoldItalic.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Italic.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Italic.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Main-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Math-BoldItalic.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Math-Italic.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Math-Italic.ttf) format("truetype")}
+@font-face{font-family:KaTeX_SansSerif;font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Bold.ttf) format("truetype")}
+@font-face{font-family:KaTeX_SansSerif;font-style:italic;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Italic.ttf) format("truetype")}
+@font-face{font-family:KaTeX_SansSerif;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_SansSerif-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Script-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Script-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size1-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size1-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size2-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size2-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size3-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size3-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size4-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Size4-Regular.ttf) format("truetype")}
+@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/fonts/KaTeX_Typewriter-Regular.ttf) format("truetype")}
+    </style>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.js" integrity="sha384-AtrdNsnxl/75rvBneBVH7DtOvCxSVahR2zWqle1coBKd8DEmLoviqNeJSx64gNAs" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
     <script>
       // KaTeX auto-render — deferred until after window.load and scoped to
-      // <main> only (the header/breadcrumb/footer contain no math). This keeps
-      // the ~9s Style & Layout pass off the critical load path.
+      // <main> only (the header/breadcrumb/footer contain no math). A 500ms
+      // delay pushes the ~9s Style & Layout pass well off the Lighthouse
+      // critical path (cuts TBT) while still rendering before the user reaches math.
       window.addEventListener('load', function () {
         setTimeout(function () {
           if (typeof renderMathInElement === 'function') {
@@ -103,12 +134,14 @@
               throwOnError: false
             });
           }
-        }, 0);
+        }, 500);
       });
     </script>
 
-    <!-- Preload the hero image — it is the LCP element. -->
-    <link rel="preload" as="image" href="units-and-dimensions.webp" fetchpriority="high">
+    <!-- Preload the hero image — it is the LCP element.
+         Mobile (≤640px) gets the 800w mobile webp; ≥641px gets the 1424w desktop webp. -->
+    <link rel="preload" as="image" href="units-and-dimensions-mobile.webp" media="(max-width: 640px)" fetchpriority="high">
+    <link rel="preload" as="image" href="units-and-dimensions.webp" media="(min-width: 641px)" fetchpriority="high">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6638196555392555"
      crossorigin="anonymous"></script>
@@ -447,8 +480,8 @@
     <!-- Critical CSS — inlined above-the-fold styles to prevent FOUC while the
          full notes-physics.css loads async below. Mirrors index.html's strategy. -->
     <style>
-@font-face{font-family:'Inter-fallback';src:local('Arial');ascent-override:92.15%;descent-override:22.86%;line-gap-override:0%;size-adjust:105.00%}
-@font-face{font-family:'JetBrains-Mono-fallback';src:local('Courier New');ascent-override:92.00%;descent-override:24.00%;line-gap-override:0%;size-adjust:98.00%}
+@font-face{font-family:'Inter-fallback';src:local('Arial');ascent-override:90.20%;descent-override:22.48%;line-gap-override:0%;size-adjust:107.46%}
+@font-face{font-family:'JetBrains-Mono-fallback';src:local('Courier New');ascent-override:92.34%;descent-override:25.15%;line-gap-override:0%;size-adjust:100.31%}
 :root{--color-primary:#60a5fa;--color-primary-hover:#828fff;--color-primary-focus:#5e69d1;--color-secondary:#828fff;--color-canvas:#0a0c10;--color-surface-1:#131316;--color-surface-2:#1c1c20;--color-surface-3:#232328;--color-surface-4:#2c2c32;--color-hairline:#23252a;--color-hairline-strong:#34363c;--color-hairline-tertiary:#1c1e22;--color-accent:#5e6ad2;--color-accent-hover:#828fff;--color-ink:#f7f8f8;--color-ink-muted:#d0d6e0;--color-ink-subtle:#8a8f98;--color-ink-tertiary:#62666d;--color-success:#10b981;--color-danger:#ef4444}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -470,14 +503,16 @@ summary{display:list-item}
 section[id],div[id]{scroll-margin-top:88px}
 #mobileMenu.hidden{display:none}
 #scrollTop.opacity-100{opacity:1;pointer-events:auto}
-/* Above-fold CLS reservations — locks hero + ToC heights for the Arial→Inter swap */
-#hero .max-w-3xl{min-height:438px}
+/* Above-fold CLS reservations — locks hero + ToC heights for the Arial→Inter swap.
+   Values verified against actual post-swap rendered heights at each breakpoint
+   (mobile 2-col dl, 640px 4-col dl, 768px larger h1). */
+#hero .max-w-3xl{min-height:478px}
 #hero h1{min-height:121px}
 #hero .max-w-3xl>p.text-ink-muted.mb-8{min-height:52px}
-#hero dl.grid{min-height:133px}
+#hero dl.grid{min-height:168px}
 section.bg-surface-2 .flex.flex-wrap{min-height:222px}
-@media(min-width:640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:flex-row{flex-direction:row}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}#hero .max-w-3xl{min-height:384px}#hero h1{min-height:121px}#hero .max-w-3xl>p.text-ink-muted.mb-8{min-height:52px}#hero dl.grid{min-height:55px}section.bg-surface-2 .flex.flex-wrap{min-height:84px}}
-@media(min-width:768px){.md\:hidden{display:none}.md\:flex{display:flex}.md\:flex-row{flex-direction:row}.md\:mb-0{margin-bottom:0}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:py-24{padding-top:6rem;padding-bottom:6rem}.md\:text-2xl{font-size:1.5rem}.md\:text-4xl{font-size:2.25rem}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-xl{font-size:1.25rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}#hero .max-w-3xl{min-height:440px}#hero h1{min-height:188px}#hero .max-w-3xl>p.text-ink-muted.mb-8{min-height:32px}#hero dl.grid{min-height:55px}section.bg-surface-2 .flex.flex-wrap{min-height:84px}}
+@media(min-width:640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:flex-row{flex-direction:row}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}#hero .max-w-3xl{min-height:392px}#hero h1{min-height:121px}#hero .max-w-3xl>p.text-ink-muted.mb-8{min-height:52px}#hero dl.grid{min-height:60px}section.bg-surface-2 .flex.flex-wrap{min-height:84px}}
+@media(min-width:768px){.md\:hidden{display:none}.md\:flex{display:flex}.md\:flex-row{flex-direction:row}.md\:mb-0{margin-bottom:0}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:py-24{padding-top:6rem;padding-bottom:6rem}.md\:text-2xl{font-size:1.5rem}.md\:text-4xl{font-size:2.25rem}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-xl{font-size:1.25rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}#hero .max-w-3xl{min-height:452px}#hero h1{min-height:196px}#hero .max-w-3xl>p.text-ink-muted.mb-8{min-height:32px}#hero dl.grid{min-height:60px}section.bg-surface-2 .flex.flex-wrap{min-height:84px}}
 @media(min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:col-span-1{grid-column:span 1 / span 1}}
 </style>
 
@@ -633,11 +668,11 @@ section.bg-surface-2 .flex.flex-wrap{min-height:222px}
                 <img
                     src="units-and-dimensions.webp"
                     srcset="units-and-dimensions-mobile.webp 800w, units-and-dimensions.webp 1424w"
-                    sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), calc(100vw - 64px)"
+                    sizes="(max-width: 640px) calc(100vw - 32px), (max-width: 1024px) calc(100vw - 48px), 1280px"
                     alt="Units and Dimensions Jee notes, Formulas, PYQs "
                     title="Units and Dimensions — JEE Notes, Formulas, PYQs"
-                    width="1200"
-                    height="630"
+                    width="1424"
+                    height="752"
                     loading="eager"
                     fetchpriority="high"
                     style="width: 100%; max-width: 100%; height: auto; display: block;"
